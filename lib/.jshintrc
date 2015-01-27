@@ -4,6 +4,7 @@
   "devel": true,
   "eqeqeq": true,
   "eqnull": true,
+  "esnext": true,
   "expr": true,
   "globals": {
     "chrome": false,
