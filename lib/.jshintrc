@@ -9,6 +9,7 @@
     "chrome": false,
     "FileList": false
   },
+  "globalstrict": true,
   "immed": true,
   "latedef": "nofunc",
   "laxbreak": true,
