@@ -70,9 +70,6 @@ Error: Code style check failed:
   /Users/feross/code/webtorrent/lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-The paths `node_modules/`, `.git/`, `*.min.js`, and `bundle.js` are automatically excluded
-when looking for `.js` files to style check.
-
 ### What you might do if you're clever
 
 1. Add it to `package.json`
@@ -99,6 +96,20 @@ when looking for `.js` files to style check.
 
 3. Never give style feedback on a pull request again!
 
+### Ignore files
+
+The paths `node_modules/`, `.git/`, `*.min.js`, and `bundle.js` are automatically excluded
+when looking for `.js` files to style check.
+
+Sometimes you need to ignore additional folders or specific minfied files. To do that, add
+a `standard.ignore` property to `package.json`:
+
+```json
+"standard": {
+  "ignore": ["**/out/**", "**/lib/select2/**", "**/lib/ckeditor/**"]
+}
+```
+
 ## FAQ
 
 ### Why would I use `standard`?
@@ -115,7 +126,7 @@ This module saves you time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-### Can you please add config options?
+### Can you please add more config options?
 
 No. Use `jshint` or `jscs` directly if you want that.
 
