@@ -122,7 +122,11 @@ a `standard.ignore` property to `package.json`:
 
 ```json
 "standard": {
-  "ignore": ["**/out/**", "**/lib/select2/**", "**/lib/ckeditor/**"]
+  "ignore": [
+    "**/out/**",
+    "**/lib/select2/**",
+    "**/lib/ckeditor/**"
+  ]
 }
 ```
 
