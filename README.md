@@ -10,7 +10,7 @@
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
 
-### One JavaScript style to rule them all
+### One Style to Rule Them All
 
 No decisions to make, no `.jshintrc` or `.jscs` files to manage. It just works.
 
