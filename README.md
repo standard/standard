@@ -99,6 +99,29 @@ when looking for `.js` files to style check.
 
 3. Never give style feedback on a pull request again!
 
+## FAQ
+
+### Why would I use `standard`?
+
+The beauty of `standard` is that it's simple. Most `jshint` and `jscs` options are
+actually bad ideas. Furthermore, no one wants to maintain multiple hundred-line
+`.jshintrc` and `.jscs` config files in every module/project they maintain. Enough of this
+madness!
+
+This module saves you time in two ways:
+
+- No configuration; just drop it in. The easiest way to enforce consistent style in your
+  module/project.
+- Save precious code review time by catching style errors before they're submitted as PRs.
+  Eliminate back-and-forth. Saves time for the maintainer and submitter.
+
+### Can you please add config options?
+
+No. Use `jshint` or `jscs` directly if you want that.
+
+Pro tip: Just use `standard` and move on. There are actual real problems that you could
+spend your time solving :p
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
