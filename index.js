@@ -11,6 +11,7 @@ var JSHINTRC = path.join(__dirname, 'lib', '.jshintrc')
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
 var JSCSRC = path.join(__dirname, 'lib', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
+var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
 
 if (/^win/.test(process.platform)) {
   JSHINT += '.cmd'
@@ -29,25 +30,23 @@ var LINE_RE = /.*?:(\d+)/
 var COL_RE = /.*?:\d+:(\d+)/
 
 module.exports = function (opts) {
+  if (!opts) opts = {}
   var errors = []
+
   var root
   try {
     root = findRoot(process.cwd())
   } catch (e) {}
 
   var ignore = [].concat(DEFAULT_IGNORE) // globs to ignore
+
   if (root) {
     var packageOpts = require(path.join(root, 'package.json')).standard
-    if (packageOpts) {
-      if (typeof packageOpts.ignore === 'string') {
-        ignore.push(packageOpts.ignore)
-      } else if (Array.isArray(packageOpts.ignore)) {
-        ignore = ignore.concat(packageOpts.ignore)
-      } else {
-        throw new Error('`standard.ignore` package.json property should be string or array')
-      }
-    }
+    if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
   }
+
+  if (opts.ignore) ignore = ignore.concat(opts.ignore)
+
   ignore = ignore.map(function (pattern) {
     return new Minimatch(pattern)
   })
@@ -62,8 +61,18 @@ module.exports = function (opts) {
       })
     })
 
-    var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix'].concat(files)
-    var jscsArgs = ['--config', JSCSRC, '--reporter', JSCS_REPORTER].concat(files)
+    var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix']
+
+    var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
+    var jscsArgs = ['--config', JSCSRC, '--reporter', jscsReporter]
+
+    if (opts.verbose) {
+      jshintArgs.push('--verbose')
+      jscsArgs.push('--verbose')
+    }
+
+    jshintArgs = jshintArgs.concat(files)
+    jscsArgs = jscsArgs.concat(files)
 
     var jshint = spawn(JSHINT, jshintArgs, function (jshintErr) {
       var jscs = spawn(JSCS, jscsArgs, function (jscsErr) {
