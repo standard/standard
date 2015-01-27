@@ -1,4 +1,7 @@
-# standard [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+# JavaScript Standard Style
+[![travis][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+[![downloads][downloads-image]][downloads-url]
 
 [travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat
 [travis-url]: https://travis-ci.org/feross/standard
@@ -7,14 +10,16 @@
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
 
-### JavaScript Standard Style
-
 ## Rules
 
-- No semicolons ([it's fine][1] – *[really][2]!*)
 - Indentation is 2 spaces
 - Strings use single quotes
 - Unix-style line breaks (LF)
+- No semicolons
+  - [It's totally fine.][1] *[Really!][2]*
+- Never start a line with `(` or `[`:
+  - This is the *one* gotcha with omitting semicolons – *automatically checked* for you!
+  - Always prefix with `;` like this `;[1, 2, 3].join(' ')`
 - Spaces after keywords:
   - `if (condition) { ... }`
 - Spaces before/after function definitions:, like this:
@@ -28,13 +33,13 @@
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js).
 
-## install
+## Install
 
 ```bash
 npm install standard
 ```
 
-## usage
+## Usage
 
 The easiest way to use `standard` is to install it globally as a Node command line
 program. To do so, simply run the following command in your terminal (flag `-g` installs
@@ -57,7 +62,7 @@ Error: Code style check failed:
 The `node_modules` and `.git` folders are automatically excluded when looking for `.js`
 files to style check.
 
-### what you might do if you're clever
+### What you might do if you're clever
 
 1. Add it to `package.json`
 
@@ -83,6 +88,6 @@ files to style check.
 
 3. Never give style feedback on a pull request again!
 
-## license
+## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
