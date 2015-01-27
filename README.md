@@ -67,8 +67,8 @@ Error: Code style check failed:
   /Users/feross/code/webtorrent/lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-The `node_modules` and `.git` folders are automatically excluded when looking for `.js`
-files to style check.
+The paths `node_modules/`, `.git/`, `*.min.js`, and `bundle.js` are automatically excluded
+when looking for `.js` files to style check.
 
 ### What you might do if you're clever
 

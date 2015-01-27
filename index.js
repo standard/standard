@@ -13,7 +13,7 @@ var JSCS_REPORTER = path.join(__dirname, 'jscs-reporter.js')
 module.exports = function (dir) {
   find.file(/\.js$/, dir || process.cwd(), function (files) {
     files = files.filter(function (file) {
-      return !/\/node_modules\/|\/.git\/|\.min.js$/.test(file)
+      return !/\/node_modules\/|\/.git\/|\.min.js$|\/bundle.js$/.test(file)
     })
 
     var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix'].concat(files)
