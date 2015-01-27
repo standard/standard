@@ -12,9 +12,9 @@
 
 ## Rules
 
-- Indentation is 2 spaces
-- Strings use single quotes
-- Unix-style line breaks (LF)
+- 2 space indentation
+- Single quotes for strings
+- Unix line breaks (LF)
 - No semicolons
   - [It's totally fine.][1] *[Really!][2]*
 - Never start a line with `(` or `[`:
