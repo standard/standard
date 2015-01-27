@@ -27,21 +27,24 @@ npm install standard
   - Except to avoid escaping like `"in this lil' string"`
 - **Unix line breaks** (LF)
 - **No semicolons**
-  - [It's totally fine.][1] *[Really!][2]*
-- Never start a line with `(` or `[`:
-  - This is the *one* gotcha with omitting semicolons – *automatically checked* for you!
+  - [It's totally][1] [fine.][2] *[Really!][3]*
+- Never start a line with `(` or `[`
+  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
   - Always prefix with `;` like this `;[1, 2, 3].join(' ')`
-- Spaces after keywords:
+- Spaces after keywords
   - `if (condition) { ... }`
-- Spaces before/after function definitions:, like this:
+- Spaces before/after function definitions
   - `function name (arg1, arg2) { ... }`
-- Always name the context variable `self`:
+- Always name the context variable `self`
   - `var self = this`
+  - Checks for accidental use of [`window.self`][4] if `var self = this` is omitted
 - Always use `===` instead of `==`
 - Dozens of sanity checks to catch bugs (unused variables, typos, etc.)
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[3]: https://github.com/maxogden/messages/issues/18
+[4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
