@@ -1,0 +1,25 @@
+{
+  "asi": true,
+  "browser": true,
+  "devel": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "globals": {
+    "chrome": false,
+    "FileList": false
+  },
+  "immed": true,
+  "latedef": "nofunc",
+  "laxbreak": true,
+  "loopfunc": true,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "predef": [
+    "escape",
+    "unescape"
+  ],
+  "strict": false,
+  "undef": true
+}
