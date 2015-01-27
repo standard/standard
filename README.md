@@ -37,6 +37,8 @@ npm install standard
   - `function name (arg1, arg2) { ... }`
 - Always name the context variable `self`:
   - `var self = this`
+- Always use `===` instead of `==`
+- Dozens of sanity checks to catch bugs (unused variables, typos, etc.)
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
