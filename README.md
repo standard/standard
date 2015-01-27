@@ -37,7 +37,7 @@ npm install standard
   - `function name (arg1, arg2) { ... }`
 - Always name the context variable `self`
   - `var self = this`
-  - Checks for accidental use of [`window.self`][4] if `var self = this` is omitted
+  - Checks for accidental use of [`window.self`][4] when `var self = this` is forgotten
 - Always use `===` instead of `==`
 - Dozens of sanity checks to catch bugs (unused variables, typos, etc.)
 

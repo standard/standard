@@ -24,6 +24,10 @@ var DEFAULT_IGNORE = [
   '**/bundle.js'
 ]
 
+var FILE_RE = /(.*?):/
+var LINE_RE = /.*?:(\d+)/
+var COL_RE = /.*?:\d+:(\d+)/
+
 module.exports = function (opts) {
   var errors = []
   var root
@@ -72,9 +76,23 @@ module.exports = function (opts) {
               errMap[str] = true
               return true
             })
-            .sort() // sort by line number (merges jshint and jscs output)
+            .sort(function (a, b) {
+              // sort by line number (merges jshint and jscs output)
+              var fileA = FILE_RE.exec(a)[1]
+              var fileB = FILE_RE.exec(b)[1]
+
+              var lineA = Number(LINE_RE.exec(a)[1])
+              var lineB = Number(LINE_RE.exec(b)[1])
+
+              var colA = Number(COL_RE.exec(a)[1])
+              var colB = Number(COL_RE.exec(b)[1])
+
+              if (fileA !== fileB) return fileA < fileB ? -1 : 1
+              if (lineA !== lineB) return lineA - lineB
+              return colA - colB
+            })
             .forEach(function (str) {
-              console.log('  ' + str) // indent
+              console.error('  ' + str) // indent
             })
           process.exit(1)
         }
