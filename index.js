@@ -10,10 +10,15 @@ var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
 var JSCSRC = path.join(__dirname, 'lib', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 
+if (/^win/.test(process.platform)) {
+  JSHINT += '.cmd'
+  JSCS += '.cmd'
+}
+
 module.exports = function (dir) {
   find.file(/\.js$/, dir || process.cwd(), function (files) {
     files = files.filter(function (file) {
-      return !/\/node_modules\/|\/.git\/|\.min.js$|\/bundle.js$/.test(file)
+      return !/[\/\\]node_modules[\/\\]|[\/\\].git[\/\\]|\.min.js$|\/bundle.js$/.test(file)
     })
 
     var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix'].concat(files)
