@@ -1,0 +1,50 @@
+{
+  "name": "standard",
+  "description": "Enforce code style standards",
+  "version": "1.0.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/"
+  },
+  "bin": {
+    "standard": "./bin/cmd.js"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/standard/issues"
+  },
+  "dependencies": {
+    "find": "^0.1.7",
+    "jscs": "^1.10.0",
+    "jshint": "^2.6.0",
+    "split": "^0.3.2"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/feross/standard",
+  "keywords": [
+    "policy",
+    "code style",
+    "style",
+    "code",
+    "lint",
+    "jshint",
+    "hint",
+    "enforce",
+    "check",
+    "verify",
+    "standard",
+    "quality",
+    "checker",
+    "code standards"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/standard.git"
+  },
+  "scripts": {
+    "test": "./bin/cmd.js"
+  }
+}
