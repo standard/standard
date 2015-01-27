@@ -10,12 +10,23 @@
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
 
+### One JavaScript style to rule them all
+
+No decisions to make, no `.jshintrc` or `.jscs` files to manage. It just works.
+
+## Install
+
+```bash
+npm install standard
+```
+
 ## Rules
 
-- 2 space indentation
-- Single quotes for strings
-- Unix line breaks (LF)
-- No semicolons
+- **2 spaces** for indentation
+- **Single quotes** for strings
+  - Except to avoid escaping like `"in this lil' string"`
+- **Unix line breaks** (LF)
+- **No semicolons**
   - [It's totally fine.][1] *[Really!][2]*
 - Never start a line with `(` or `[`:
   - This is the *one* gotcha with omitting semicolons – *automatically checked* for you!
@@ -31,13 +42,8 @@
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 
 To get a better idea, take a look at
-[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js).
-
-## Install
-
-```bash
-npm install standard
-```
+[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
+in JavaScript Standard Style.
 
 ## Usage
 
