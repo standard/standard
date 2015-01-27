@@ -1,6 +1,6 @@
 {
   "name": "standard",
-  "description": "Enforce code style standards",
+  "description": "JavaScript Standard Style",
   "version": "1.0.0",
   "author": {
     "name": "Feross Aboukhadijeh",

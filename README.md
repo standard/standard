@@ -7,7 +7,26 @@
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
 
-### Enforce code style standards
+### JavaScript Standard Style
+
+## Rules
+
+- No semicolons ([it's fine][1] – *[really][2]!*)
+- Indentation is 2 spaces
+- Strings use single quotes
+- Unix-style line breaks (LF)
+- Spaces after keywords:
+  - `if (condition) { ... }`
+- Spaces before/after function definitions:, like this:
+  - `function name (arg1, arg2) { ... }`
+- Always name the context variable `self`:
+  - `var self = this`
+
+[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+
+To get a better idea, take a look at
+[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js).
 
 ## install
 
