@@ -65,10 +65,17 @@ module.exports = function (opts) {
       var jscs = spawn(JSCS, jscsArgs, function (jscsErr) {
         if (jshintErr || jscsErr) {
           console.error('Error: Code style check failed:')
-          errors.sort()
-          errors.forEach(function (errStr) {
-            console.log('  ' + errStr)
-          })
+          var errMap = {}
+          errors
+            .filter(function (str) { // de-duplicate errors
+              if (errMap[str]) return false
+              errMap[str] = true
+              return true
+            })
+            .sort() // sort by line number (merges jshint and jscs output)
+            .forEach(function (str) {
+              console.log('  ' + str) // indent
+            })
           process.exit(1)
         }
       })
