@@ -14,9 +14,11 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
-    "find": "^0.1.7",
+    "find-root": "^0.1.1",
+    "glob": "^4.3.5",
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
+    "minimatch": "^2.0.1",
     "split": "^0.3.2"
   },
   "devDependencies": {},

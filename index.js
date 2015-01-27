@@ -1,5 +1,7 @@
 var cp = require('child_process')
-var find = require('find')
+var findRoot = require('find-root')
+var glob = require('glob')
+var Minimatch = require('minimatch').Minimatch
 var path = require('path')
 var split = require('split')
 
@@ -15,10 +17,45 @@ if (/^win/.test(process.platform)) {
   JSCS += '.cmd'
 }
 
-module.exports = function (dir) {
-  find.file(/\.js$/, dir || process.cwd(), function (files) {
+var DEFAULT_IGNORE = [
+  'node_modules/**',
+  '.git/**',
+  '**/*.min.js',
+  '**/bundle.js'
+]
+
+module.exports = function (opts) {
+  var errors = []
+  var root
+  try {
+    root = findRoot(process.cwd())
+  } catch (e) {}
+
+  var ignore = [].concat(DEFAULT_IGNORE) // globs to ignore
+  if (root) {
+    var packageOpts = require(path.join(root, 'package.json')).standard
+    if (packageOpts) {
+      if (typeof packageOpts.ignore === 'string') {
+        ignore.push(packageOpts.ignore)
+      } else if (Array.isArray(packageOpts.ignore)) {
+        ignore = ignore.concat(packageOpts.ignore)
+      } else {
+        throw new Error('`standard.ignore` package.json property should be string or array')
+      }
+    }
+  }
+  ignore = ignore.map(function (pattern) {
+    return new Minimatch(pattern)
+  })
+
+  glob('**/*.js', {
+    cwd: opts.cwd || process.cwd()
+  }, function (err, files) {
+    if (err) return error(err)
     files = files.filter(function (file) {
-      return !/[\/\\]node_modules[\/\\]|[\/\\].git[\/\\]|\.min.js$|\/bundle.js$/.test(file)
+      return !ignore.some(function (mm) {
+        return mm.match(file)
+      })
     })
 
     var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix'].concat(files)
@@ -27,6 +64,11 @@ module.exports = function (dir) {
     var jshint = spawn(JSHINT, jshintArgs, function (jshintErr) {
       var jscs = spawn(JSCS, jscsArgs, function (jscsErr) {
         if (jshintErr || jscsErr) {
+          console.error('Error: Code style check failed:')
+          errors.sort()
+          errors.forEach(function (errStr) {
+            console.log('  ' + errStr)
+          })
           process.exit(1)
         }
       })
@@ -38,9 +80,16 @@ module.exports = function (dir) {
     stderrPipe(jshint.stdout)
     stderrPipe(jshint.stderr)
   })
-  .error(function (err) {
-    if (err) error(err)
-  })
+
+  function stderrPipe (readable) {
+    readable
+      .pipe(split())
+      .on('data', function (line) {
+        if (line === '') return
+        if (/^\d+ errors?/.test(line)) return
+        errors.push(line)
+      })
+  }
 }
 
 function spawn (command, args, cb) {
@@ -56,19 +105,4 @@ function spawn (command, args, cb) {
 function error (err) {
   console.error(err.stack || err.message || err)
   process.exit(1)
-}
-
-var errored = false
-function stderrPipe (readable) {
-  readable
-    .pipe(split())
-    .on('data', function (line) {
-      if (line === '') return
-      if (/^\d+ errors?/.test(line)) return
-      if (!errored) {
-        errored = true
-        console.error('Error: Code style check failed:')
-      }
-      console.error('  ' + line)
-    })
 }

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 var standard = require('../')
-standard(process.cwd())
+standard({ cwd: process.cwd() })
