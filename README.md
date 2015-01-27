@@ -110,10 +110,10 @@ madness!
 
 This module saves you time in two ways:
 
-- No configuration; just drop it in. The easiest way to enforce consistent style in your
-  module/project.
-- Save precious code review time by catching style errors before they're submitted as PRs.
-  Eliminate back-and-forth. Saves time for the maintainer and submitter.
+- **No configuration.** Just drop it in. The easiest way to enforce consistent style in
+  your module/project.
+- **Catch style errors before they're submitted in PRs.** Saves precious code review time
+  by eliminating back-and-forth between maintainer and contributor.
 
 ### Can you please add config options?
 
