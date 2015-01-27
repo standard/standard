@@ -4,11 +4,11 @@ var path = require('path')
 var split = require('split')
 
 var JSHINT = path.join(__dirname, 'node_modules', '.bin', 'jshint')
-var JSHINTRC = path.join(__dirname, '.jshintrc')
+var JSHINTRC = path.join(__dirname, 'lib', '.jshintrc')
 
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
-var JSCSRC = path.join(__dirname, '.jscsrc')
-var JSCS_REPORTER = path.join(__dirname, 'jscs-reporter.js')
+var JSCSRC = path.join(__dirname, 'lib', '.jscsrc')
+var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 
 module.exports = function (dir) {
   find.file(/\.js$/, dir || process.cwd(), function (files) {
