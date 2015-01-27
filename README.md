@@ -48,7 +48,7 @@ npm install standard -g
 After you've done that you should be able to use the `standard` program. The simplest use
 case would be checking the style of all JavaScript files in the current working directory:
 
-```bash
+```
 $ standard
 Error: Code style check failed:
   /Users/feross/code/webtorrent/lib/torrent.js:950:11: Expected '===' and instead saw '=='.
@@ -72,7 +72,7 @@ Error: Code style check failed:
 
 2. Check style automatically when you run `npm test`
 
-  ```bash
+  ```
   $ npm test
   Error: Code style check failed:
     /Users/feross/code/webtorrent/lib/torrent.js:950:11: Expected '===' and instead saw '=='.
