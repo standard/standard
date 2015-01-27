@@ -45,6 +45,6 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "./bin/cmd.js"
+    "test": "node ./bin/cmd.js"
   }
 }
