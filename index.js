@@ -74,53 +74,24 @@ module.exports = function (opts) {
     jshintArgs = jshintArgs.concat(files)
     jscsArgs = jscsArgs.concat(files)
 
-    var jshint = spawn(JSHINT, jshintArgs, function (jshintErr) {
-      var jscs = spawn(JSCS, jscsArgs, function (jscsErr) {
-        if (jshintErr || jscsErr) {
-          if (opts.bare) {
-            errors.forEach(function (str) {
-              console.error(str)
-            })
-            return
-          }
-
-          console.error('Error: Code style check failed:')
-          var errMap = {}
-          errors
-            .filter(function (str) { // de-duplicate errors
-              if (errMap[str]) return false
-              errMap[str] = true
-              return true
-            })
-            .sort(function (a, b) {
-              // sort by line number (merges jshint and jscs output)
-              var fileA = FILE_RE.exec(a)[1]
-              var fileB = FILE_RE.exec(b)[1]
-
-              var lineA = Number(LINE_RE.exec(a)[1])
-              var lineB = Number(LINE_RE.exec(b)[1])
-
-              var colA = Number(COL_RE.exec(a)[1])
-              var colB = Number(COL_RE.exec(b)[1])
-
-              if (fileA !== fileB) return fileA < fileB ? -1 : 1
-              if (lineA !== lineB) return lineA - lineB
-              return colA - colB
-            })
-            .forEach(function (str) {
-              console.error('  ' + str) // indent
-            })
-          process.exit(1)
-        }
+    spawn(JSHINT, jshintArgs, function (err1) {
+      spawn(JSCS, jscsArgs, function (err2) {
+        done(err1 || err2)
       })
-
-      stderrPipe(jscs.stdout)
-      stderrPipe(jscs.stderr)
     })
-
-    stderrPipe(jshint.stdout)
-    stderrPipe(jshint.stderr)
   })
+
+  function spawn (command, args, cb) {
+    var child = cp.spawn(command, args)
+    child.on('error', error)
+    child.on('close', function (code) {
+      if (code !== 0) cb(new Error('non-zero exit code: ' + code))
+      else cb(null)
+    })
+    stderrPipe(child.stdout)
+    stderrPipe(child.stderr)
+    return child
+  }
 
   function stderrPipe (readable) {
     readable
@@ -131,16 +102,44 @@ module.exports = function (opts) {
         errors.push(line)
       })
   }
-}
 
-function spawn (command, args, cb) {
-  var child = cp.spawn(command, args)
-  child.on('error', error)
-  child.on('close', function (code) {
-    if (code !== 0) cb(new Error('non-zero exit code: ' + code))
-    else cb(null)
-  })
-  return child
+  function done (err) {
+    if (!err) return
+    if (opts.bare) {
+      errors.forEach(function (str) {
+        console.error(str)
+      })
+      return
+    }
+
+    console.error('Error: Code style check failed:')
+    var errMap = {}
+    errors
+      .filter(function (str) { // de-duplicate errors
+        if (errMap[str]) return false
+        errMap[str] = true
+        return true
+      })
+      .sort(function (a, b) {
+        // sort by line number (merges jshint and jscs output)
+        var fileA = FILE_RE.exec(a)[1]
+        var fileB = FILE_RE.exec(b)[1]
+
+        var lineA = Number(LINE_RE.exec(a)[1])
+        var lineB = Number(LINE_RE.exec(b)[1])
+
+        var colA = Number(COL_RE.exec(a)[1])
+        var colB = Number(COL_RE.exec(b)[1])
+
+        if (fileA !== fileB) return fileA < fileB ? -1 : 1
+        if (lineA !== lineB) return lineA - lineB
+        return colA - colB
+      })
+      .forEach(function (str) {
+        console.error('  ' + str) // indent
+      })
+    process.exit(1)
+  }
 }
 
 function error (err) {
