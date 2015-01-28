@@ -64,7 +64,7 @@ module.exports = function (opts) {
     var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix']
 
     var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
-    var jscsArgs = ['--config', JSCSRC, '--reporter', jscsReporter]
+    var jscsArgs = ['--config', JSCSRC, '--reporter', jscsReporter, '--esnext']
 
     if (opts.verbose) {
       jshintArgs.push('--verbose')
