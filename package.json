@@ -21,7 +21,11 @@
     "minimatch": "^2.0.1",
     "split": "^0.3.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8",
+    "run-series": "^1.0.2"
+  },
   "homepage": "https://github.com/feross/standard",
   "keywords": [
     "policy",
@@ -47,6 +51,6 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "node ./bin/cmd.js"
+    "test": "node ./bin/test.js"
   }
 }
