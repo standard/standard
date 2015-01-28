@@ -17,9 +17,9 @@ var TMP = path.join(__dirname, '..', 'tmp')
 var STANDARD = path.join(__dirname, 'cmd.js')
 
 var URLS = [
-  'git@github.com:feross/webtorrent.git',
-  'git@github.com:feross/bittorrent-tracker.git',
-  'git@github.com:feross/bittorrent-dht.git'
+  'https://github.com/feross/webtorrent.git',
+  'https://github.com/feross/bittorrent-tracker.git',
+  'https://github.com/feross/bittorrent-dht.git'
 ]
 
 rimraf.sync(TMP)
