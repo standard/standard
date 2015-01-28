@@ -6,10 +6,10 @@ var path = require('path')
 var split = require('split')
 
 var JSHINT = path.join(__dirname, 'node_modules', '.bin', 'jshint')
-var JSHINTRC = path.join(__dirname, 'lib', '.jshintrc')
+var JSHINTRC = path.join(__dirname, 'rc', '.jshintrc')
 
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
-var JSCSRC = path.join(__dirname, 'lib', '.jscsrc')
+var JSCSRC = path.join(__dirname, 'rc', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
 
