@@ -11,5 +11,6 @@ if (flag === '--version') {
 
 standard({
   cwd: process.cwd(),
+  bare: flag === '--bare' || flag === '-b',
   verbose: flag === '--verbose' || flag === '-v'
 })

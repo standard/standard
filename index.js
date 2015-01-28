@@ -77,6 +77,13 @@ module.exports = function (opts) {
     var jshint = spawn(JSHINT, jshintArgs, function (jshintErr) {
       var jscs = spawn(JSCS, jscsArgs, function (jscsErr) {
         if (jshintErr || jscsErr) {
+          if (opts.bare) {
+            errors.forEach(function (str) {
+              console.error(str)
+            })
+            return
+          }
+
           console.error('Error: Code style check failed:')
           var errMap = {}
           errors
