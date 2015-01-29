@@ -54,7 +54,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "standard && node ./bin/test.js"
+    "test": "./bin/cmd.js && node ./bin/test.js"
   },
   "standard": {
     "ignore": "tmp/**"
