@@ -41,6 +41,7 @@ npm install standard
   - Checks for accidental use of [`window.self`][4] when `var self = this` is omitted
 - Always use `===` instead of `==`
   - `obj == null` is allowed for succinctness (`obj === null || obj === undefined`)
+- Always handle the node.js `err` function parameter
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
