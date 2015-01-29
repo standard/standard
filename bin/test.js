@@ -23,6 +23,7 @@ var urls = [
   'https://github.com/feross/bittorrent-tracker.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/buffer.git',
+  'https://github.com/feross/studynotes.git',
   'https://github.com/mafintosh/level-temp.git'
 ]
 
