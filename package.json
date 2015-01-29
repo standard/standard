@@ -20,6 +20,7 @@
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
     "minimatch": "^2.0.1",
+    "minimist": "^1.1.0",
     "split": "^0.3.2"
   },
   "devDependencies": {
