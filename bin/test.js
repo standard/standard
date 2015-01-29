@@ -28,7 +28,7 @@ mkdirp.sync(TMP)
 
 series(URLS.map(function (url) {
   return function (cb) {
-    var name = /\/([^.]+)\.git$/.exec(url)[1]
+    var name = /\/([^.\/]+)\.git$/.exec(url)[1]
     var args = [ 'clone', url, path.join(TMP, name) ]
     // TODO: Start `git` in a way that works on Windows – PR welcome!
     spawn('git', args, cb)
