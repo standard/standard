@@ -25,18 +25,9 @@
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireParenthesesAroundIIFE": true,
-  "requireSpaceAfterBinaryOperators": true,
-  "requireSpaceAfterKeywords": true,
   "requireSpaceAfterLineComment": true,
-  "requireSpaceBeforeBinaryOperators": true,
-  "requireSpaceBeforeBlockStatements": true,
-  "requireSpaceBeforeKeywords": ["else", "while", "catch"],
   "requireSpaceBeforeObjectValues": true,
   "requireSpaceBetweenArguments": true,
-  "requireSpacesInAnonymousFunctionExpression": {
-      "beforeOpeningRoundBrace": true,
-      "beforeOpeningCurlyBrace": true
-  },
   "requireSpacesInConditionalExpression": {
       "afterTest": true,
       "beforeConsequent": true,
@@ -48,15 +39,7 @@
       "beforeOpeningRoundBrace": true,
       "beforeOpeningCurlyBrace": true
   },
-  "requireSpacesInFunctionExpression": {
-      "beforeOpeningRoundBrace": true,
-      "beforeOpeningCurlyBrace": true
-  },
   "requireSpacesInFunction": {
-      "beforeOpeningRoundBrace": true,
-      "beforeOpeningCurlyBrace": true
-  },
-  "requireSpacesInNamedFunctionExpression": {
       "beforeOpeningRoundBrace": true,
       "beforeOpeningCurlyBrace": true
   },
