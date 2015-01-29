@@ -19,7 +19,8 @@ var STANDARD = path.join(__dirname, 'cmd.js')
 var URLS = [
   'https://github.com/feross/webtorrent.git',
   'https://github.com/feross/bittorrent-tracker.git',
-  'https://github.com/feross/bittorrent-dht.git'
+  'https://github.com/feross/bittorrent-dht.git',
+  'https://github.com/feross/buffer.git'
   // 'https://github.com/mafintosh/level-temp.git'
 ]
 
