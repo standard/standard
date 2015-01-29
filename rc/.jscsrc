@@ -21,7 +21,6 @@
   "requireBlocksOnNewline": 1,
   "requireCapitalizedConstructors": true,
   "requireCommaBeforeLineBreak": true,
-  "requireDotNotation": true,
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireParenthesesAroundIIFE": true,

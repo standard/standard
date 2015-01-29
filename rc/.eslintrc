@@ -113,7 +113,7 @@
         "consistent-this": [2, "self"],
         "curly": 0,
         "default-case": 2,
-        "dot-notation": 2,
+        "dot-notation": 0,
         "eol-last": 0,
         "eqeqeq": 2,
         "func-style": [0, "declaration"],

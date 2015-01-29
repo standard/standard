@@ -23,6 +23,7 @@
     "unescape"
   ],
   "strict": false,
+  "sub": true,
   "undef": true,
   "unused": "vars"
 }
