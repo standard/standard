@@ -8,9 +8,7 @@
   "expr": true,
   "globals": {
     "chrome": false,
-    "describe": false,
-    "FileList": false,
-    "it": false
+    "FileList": false
   },
   "globalstrict": true,
   "immed": true,
