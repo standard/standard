@@ -6,12 +6,18 @@ var path = require('path')
 var split = require('split')
 
 var JSHINT = path.join(__dirname, 'node_modules', '.bin', 'jshint')
-var JSHINTRC = path.join(__dirname, 'rc', '.jshintrc')
+var JSHINT_RC = path.join(__dirname, 'rc', '.jshintrc')
+var JSHINT_REPORTER = path.join(__dirname, 'lib', 'jshint-reporter.js')
 
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
-var JSCSRC = path.join(__dirname, 'rc', '.jscsrc')
+var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
+
+var ESLINT = path.join(__dirname, 'node_modules', '.bin', 'eslint')
+var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
+var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
+var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
 if (/^win/.test(process.platform)) {
   JSHINT += '.cmd'
@@ -61,10 +67,11 @@ module.exports = function (opts) {
       })
     })
 
-    var jshintArgs = ['--config', JSHINTRC, '--reporter', 'unix']
-
+    var jshintArgs = ['--config', JSHINT_RC, '--reporter', JSHINT_REPORTER]
     var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
-    var jscsArgs = ['--config', JSCSRC, '--reporter', jscsReporter, '--esnext']
+    var jscsArgs = ['--config', JSCS_RC, '--reporter', jscsReporter]
+    var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
+    var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
 
     if (opts.verbose) {
       jshintArgs.push('--verbose')
@@ -73,10 +80,13 @@ module.exports = function (opts) {
 
     jshintArgs = jshintArgs.concat(files)
     jscsArgs = jscsArgs.concat(files)
+    eslintArgs = eslintArgs.concat(files)
 
     spawn(JSHINT, jshintArgs, function (err1) {
       spawn(JSCS, jscsArgs, function (err2) {
-        done(err1 || err2)
+        spawn(ESLINT, eslintArgs, function (err3) {
+          done(err1 || err2 || err3)
+        })
       })
     })
   })
@@ -98,7 +108,6 @@ module.exports = function (opts) {
       .pipe(split())
       .on('data', function (line) {
         if (line === '') return
-        if (/^\d+ errors?/.test(line)) return
         errors.push(line)
       })
   }

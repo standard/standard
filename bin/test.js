@@ -35,7 +35,7 @@ series(URLS.map(function (url) {
   }
 }), function (err) {
   if (err) return error(err)
-  spawn(STANDARD, [], function (err) {
+  spawn(STANDARD, ['--verbose'], function (err) {
     if (err) return error(err)
     console.log('ok')
   })
