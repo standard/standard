@@ -60,7 +60,6 @@
       "beforeOpeningRoundBrace": true,
       "beforeOpeningCurlyBrace": true
   },
-  "safeContextKeyword": ["self"],
   "validateIndentation": 2,
   "validateLineBreaks": "LF",
   "validateParameterSeparator": ", ",
