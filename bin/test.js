@@ -22,8 +22,8 @@ var urls = [
   'https://github.com/feross/webtorrent.git',
   'https://github.com/feross/bittorrent-tracker.git',
   'https://github.com/feross/bittorrent-dht.git',
-  'https://github.com/feross/buffer.git'
-  // 'https://github.com/mafintosh/level-temp.git'
+  'https://github.com/feross/buffer.git',
+  'https://github.com/mafintosh/level-temp.git'
 ]
 
 var modules = {}
