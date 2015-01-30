@@ -2,6 +2,7 @@ var cp = require('child_process')
 var findRoot = require('find-root')
 var glob = require('glob')
 var Minimatch = require('minimatch').Minimatch
+var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
 var fs = require('fs')
@@ -38,7 +39,16 @@ var FILE_RE = /(.*?):/
 var LINE_RE = /.*?:(\d+)/
 var COL_RE = /.*?:\d+:(\d+)/
 
-module.exports = function (opts) {
+/**
+ * JavaScript Standard Style
+ * @param {Object} opts                        options object
+ * @param {string|Array.<String>} opts.ignore  files to ignore
+ * @param {string} opts.cwd                    current working directory
+ * @param {boolean} opts.verbose               show error codes
+ * @param {boolean} opts.bare                  show raw linter output (for debugging)
+ * @param {boolean} opts.stdin                 check text from stdin instead of filesystem
+ */
+module.exports = function standard (opts) {
   if (!opts) opts = {}
   var errors = []
 
@@ -54,7 +64,7 @@ module.exports = function (opts) {
     if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
   }
 
-  if (opts.ignore) ignore = ignore.concat(opts.ignore)
+  var jshintArgs = ['--config', JSHINT_RC, '--reporter', JSHINT_REPORTER]
 
   var rcpath = opts.rcpath || DEFAULT_RCPATH
   var jshintPath = usePathOrFallback(rcpath, JSHINT_RC)
@@ -81,23 +91,54 @@ module.exports = function (opts) {
     var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
     var eslintArgs = ['--config', eslintPath, '--format', eslintReporter]
 
-    if (opts.verbose) {
-      jshintArgs.push('--verbose')
-      jscsArgs.push('--verbose')
-    }
+  var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
+  var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
+>>>>>>> 175eb77... Support stdin [usage: standard < file.js]
 
-    jshintArgs = jshintArgs.concat(files)
-    jscsArgs = jscsArgs.concat(files)
-    eslintArgs = eslintArgs.concat(files)
+  if (opts.verbose) {
+    jshintArgs.push('--verbose')
+    jscsArgs.push('--verbose')
+  }
 
-    spawn(JSHINT, jshintArgs, function (err1) {
-      spawn(JSCS, jscsArgs, function (err2) {
-        spawn(ESLINT, eslintArgs, function (err3) {
-          done(err1 || err2 || err3)
+  if (opts.stdin) {
+    // stdin
+    jshintArgs.push('-')
+    eslintArgs.push('--stdin')
+    lint()
+  } else {
+    // traverse filesystem
+    if (opts.ignore) ignore = ignore.concat(opts.ignore)
+
+    ignore = ignore.map(function (pattern) {
+      return new Minimatch(pattern)
+    })
+
+    glob('**/*.js', {
+      cwd: opts.cwd || process.cwd()
+    }, function (err, files) {
+      if (err) return error(err)
+      files = files.filter(function (file) {
+        return !ignore.some(function (mm) {
+          return mm.match(file)
         })
       })
+      jshintArgs = jshintArgs.concat(files)
+      jscsArgs = jscsArgs.concat(files)
+      eslintArgs = eslintArgs.concat(files)
+      lint()
     })
-  })
+  }
+
+  function lint () {
+    parallel([
+      spawn.bind(undefined, JSHINT, jshintArgs),
+      spawn.bind(undefined, JSCS, jscsArgs),
+      spawn.bind(undefined, ESLINT, eslintArgs)
+    ], function (err, r) {
+      if (err) return error(err)
+      if (r.some(Boolean)) printErrors()
+    })
+  }
 
   function usePathOrFallback (rcpath, file) {
     var customPath = path.join(rcpath, file)
@@ -107,14 +148,13 @@ module.exports = function (opts) {
 
   function spawn (command, args, cb) {
     var child = cp.spawn(command, args)
-    child.on('error', error)
+    child.on('error', cb)
     child.on('close', function (code) {
-      if (code !== 0) cb(new Error('non-zero exit code: ' + code))
-      else cb(null)
+      cb(null, code)
     })
+    if (opts.stdin) process.stdin.pipe(child.stdin)
     stderrPipe(child.stdout)
     stderrPipe(child.stderr)
-    return child
   }
 
   function stderrPipe (readable) {
@@ -126,8 +166,7 @@ module.exports = function (opts) {
       })
   }
 
-  function done (err) {
-    if (!err) return
+  function printErrors () {
     if (opts.bare) {
       errors.forEach(function (str) {
         console.error(str)
@@ -138,6 +177,9 @@ module.exports = function (opts) {
     console.error('Error: Code style check failed:')
     var errMap = {}
     errors
+      .map(function (str) { // normalize stdin "filename"
+        return str.replace(/^(<text>|input)/, 'stdin')
+      })
       .filter(function (str) { // de-duplicate errors
         if (errMap[str]) return false
         errMap[str] = true
