@@ -1,10 +1,7 @@
 {
     "env": {
-        "browser": false,
-        "node": true,
-        "amd": false,
-        "mocha": false,
-        "jasmine": false
+        "browser": true,
+        "node": true
     },
 
     "globals": {
