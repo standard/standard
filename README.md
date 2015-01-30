@@ -103,7 +103,7 @@ Error: Code style check failed:
 ### Why would I use JavaScript Standard Style?
 
 The beauty of JavaScript Standard Style is that it's simple. No one wants to maintain
-multiple hundred-line `.jshintrc` and `.jscs` for every module/project they maintain.
+multiple hundred-line `.jshintrc` and `.jscs` for every module/project they work on.
 Enough of this madness!
 
 This module saves you time in two ways:

@@ -18,6 +18,7 @@ var TMP = path.join(__dirname, '..', 'tmp')
 var STANDARD = path.join(__dirname, 'cmd.js')
 
 var urls = [
+  'https://github.com/beatgammit/base64-js.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/bittorrent-tracker.git',
   'https://github.com/feross/buffer.git',
