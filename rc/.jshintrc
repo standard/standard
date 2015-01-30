@@ -1,21 +1,12 @@
 {
   "asi": true,
-  "browser": true,
   "devel": true,
-  "eqeqeq": true,
-  "eqnull": true,
   "esnext": true,
   "expr": true,
-  "globals": {
-    "chrome": false,
-    "FileList": false
-  },
   "globalstrict": true,
-  "immed": true,
   "latedef": "nofunc",
   "laxbreak": true,
   "loopfunc": true,
-  "newcap": true,
   "noarg": true,
   "node": true,
   "predef": [
@@ -23,7 +14,5 @@
     "unescape"
   ],
   "strict": false,
-  "sub": true,
-  "undef": true,
-  "unused": "vars"
+  "sub": true
 }

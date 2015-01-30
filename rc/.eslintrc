@@ -8,11 +8,7 @@
     },
 
     "globals": {
-        "chrome": false,
-        "crypto": true,
-        "escape": false,
-        "FileList": false,
-        "unescape": false
+        "crypto": true
     },
 
     "rules": {
@@ -98,7 +94,7 @@
         "no-underscore-dangle": 0,
         "no-unreachable": 2,
         "no-unused-expressions": 0,
-        "no-unused-vars": 0,
+        "no-unused-vars": [2, {"vars": "all", "args": "none"}],
         "no-use-before-define": 0,
         "no-void": 0,
         "no-warning-comments": [0, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
@@ -114,8 +110,8 @@
         "curly": 0,
         "default-case": 2,
         "dot-notation": 0,
-        "eol-last": 0,
-        "eqeqeq": 2,
+        "eol-last": 2,
+        "eqeqeq": [2, "allow-null"],
         "func-style": [0, "declaration"],
         "guard-for-in": 0,
         "handle-callback-err": [2, "^(err|error|anySpecificError)$" ],
@@ -141,7 +137,7 @@
         "use-isnan": 2,
         "valid-typeof": 2,
         "vars-on-top": 0,
-        "wrap-iife": 0,
+        "wrap-iife": [2, "any"],
         "wrap-regex": 0,
         "yoda": [2, "never"]
     }
