@@ -2,7 +2,6 @@
   "disallowKeywordsOnNewLine": ["else"],
   "disallowKeywords": ["with"],
   "disallowMixedSpacesAndTabs": true,
-  "disallowMultipleLineBreaks": true,
   "disallowMultipleLineStrings": true,
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowNewlineBeforeBlockStatements": true,
