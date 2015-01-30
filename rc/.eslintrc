@@ -126,7 +126,7 @@
         "operator-assignment": [0, "always"],
         "padded-blocks": 0,
         "quote-props": 0,
-        "quotes": [2, "single"],
+        "quotes": [2, "single", "avoid-escape"],
         "radix": 2,
         "semi": 0,
         "sort-vars": 0,

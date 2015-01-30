@@ -42,9 +42,5 @@
   },
   "validateIndentation": 2,
   "validateLineBreaks": "LF",
-  "validateParameterSeparator": ", ",
-  "validateQuoteMarks": {
-      "mark": "'",
-      "escape": true
-  }
+  "validateParameterSeparator": ", "
 }
