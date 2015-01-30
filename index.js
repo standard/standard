@@ -4,18 +4,21 @@ var glob = require('glob')
 var Minimatch = require('minimatch').Minimatch
 var path = require('path')
 var split = require('split')
+var fs = require('fs')
+
+var DEFAULT_RCPATH = path.join(__dirname, 'rc')
 
 var JSHINT = path.join(__dirname, 'node_modules', '.bin', 'jshint')
-var JSHINT_RC = path.join(__dirname, 'rc', '.jshintrc')
+var JSHINT_RC = '.jshintrc'
 var JSHINT_REPORTER = path.join(__dirname, 'lib', 'jshint-reporter.js')
 
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
-var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
+var JSCS_RC = '.jscsrc'
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
 
 var ESLINT = path.join(__dirname, 'node_modules', '.bin', 'eslint')
-var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
+var ESLINT_RC = '.eslintrc'
 var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
@@ -53,6 +56,11 @@ module.exports = function (opts) {
 
   if (opts.ignore) ignore = ignore.concat(opts.ignore)
 
+  var rcpath = opts.rcpath || DEFAULT_RCPATH
+  var jshintPath = usePathOrFallback(rcpath, JSHINT_RC)
+  var jscsPath = usePathOrFallback(rcpath, JSCS_RC)
+  var eslintPath = usePathOrFallback(rcpath, ESLINT_RC)
+
   ignore = ignore.map(function (pattern) {
     return new Minimatch(pattern)
   })
@@ -67,11 +75,11 @@ module.exports = function (opts) {
       })
     })
 
-    var jshintArgs = ['--config', JSHINT_RC, '--reporter', JSHINT_REPORTER]
+    var jshintArgs = ['--config', jshintPath, '--reporter', JSHINT_REPORTER]
     var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
-    var jscsArgs = ['--config', JSCS_RC, '--reporter', jscsReporter]
+    var jscsArgs = ['--config', jscsPath, '--reporter', jscsReporter]
     var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
-    var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
+    var eslintArgs = ['--config', eslintPath, '--format', eslintReporter]
 
     if (opts.verbose) {
       jshintArgs.push('--verbose')
@@ -90,6 +98,12 @@ module.exports = function (opts) {
       })
     })
   })
+
+  function usePathOrFallback (rcpath, file) {
+    var customPath = path.join(rcpath, file)
+    if (fs.existsSync(customPath)) return customPath
+    return path.join(DEFAULT_RCPATH, file)
+  }
 
   function spawn (command, args, cb) {
     var child = cp.spawn(command, args)

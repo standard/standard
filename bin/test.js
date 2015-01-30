@@ -40,25 +40,41 @@ series(Object.keys(modules).map(function (name) {
   return function (cb) {
     var args = [ 'clone', url, path.join(TMP, name) ]
     // TODO: Start `git` in a way that works on Windows – PR welcome!
-    spawn('git', args, {}, cb)
+    spawn('git', args, {}, 'inherit', cb)
   }
 }), runTests)
 
 function runTests (err) {
   if (err) return error(err)
+  parallel([runTestsPlain, runTestsAltRc])
+}
+
+function runTestsPlain (cb) {
   parallel(Object.keys(modules).map(function (name) {
     return function (cb) {
       var cwd = path.join(TMP, name)
-      spawn(STANDARD, ['--verbose'], { cwd: cwd }, cb)
+      spawn(STANDARD, ['--verbose'], { cwd: cwd }, 'inherit', cb)
     }
   }), function (err) {
     if (err) return error(err)
-    console.log('ok')
+    console.log('runTestsPlain ok')
   })
 }
 
-function spawn (command, args, opts, cb) {
-  var child = cp.spawn(command, args, extend({ stdio: 'inherit' }, opts))
+function runTestsAltRc (cb) {
+  parallel(Object.keys(modules).map(function (name) {
+    return function (cb) {
+      var cwd = path.join(TMP, name)
+      spawn(STANDARD, ['--rcpath', path.join(__dirname, 'altrc')], { cwd: cwd }, 'ignore', cb)
+    }
+  }), function (err) {
+    if (!err) return error('should return errors')
+    console.log('runTestsAltRc ok')
+  })
+}
+
+function spawn (command, args, opts, stdio, cb) {
+  var child = cp.spawn(command, args, extend({ stdio: stdio }, opts))
   child.on('error', error)
   child.on('close', function (code) {
     if (code !== 0) cb(new Error('non-zero exit code: ' + code))
