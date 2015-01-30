@@ -32,8 +32,13 @@
   },
   "homepage": "https://github.com/feross/standard",
   "keywords": [
-    "policy",
+    "style checker",
     "code style",
+    "code checker",
+    "code linter",
+    "style linter",
+    "simple",
+    "policy",
     "style",
     "code",
     "lint",
@@ -45,7 +50,9 @@
     "standard",
     "quality",
     "checker",
-    "code standards"
+    "code standards",
+    "JavaScript Standard Style",
+    "standard style"
   ],
   "license": "MIT",
   "main": "index.js",
