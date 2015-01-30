@@ -22,7 +22,6 @@
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireParenthesesAroundIIFE": true,
-  "requireSpaceAfterLineComment": true,
   "requireSpaceBeforeObjectValues": true,
   "requireSpaceBetweenArguments": true,
   "requireSpacesInConditionalExpression": {
