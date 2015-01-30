@@ -1,6 +1,7 @@
 {
   "asi": true,
   "devel": true,
+  "eqnull": true,
   "esnext": true,
   "expr": true,
   "globalstrict": true,

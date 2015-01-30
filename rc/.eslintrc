@@ -1,6 +1,6 @@
 {
     "env": {
-        "browser": true,
+        "browser": false,
         "node": true,
         "amd": false,
         "mocha": false,
@@ -8,7 +8,9 @@
     },
 
     "globals": {
-        "crypto": true
+        "crypto": true,
+        "escape": false,
+        "unescape": false
     },
 
     "rules": {
@@ -110,7 +112,7 @@
         "curly": 0,
         "default-case": 2,
         "dot-notation": 0,
-        "eol-last": 2,
+        "eol-last": 0,
         "eqeqeq": [2, "allow-null"],
         "func-style": [0, "declaration"],
         "guard-for-in": 0,
@@ -124,7 +126,7 @@
         "quote-props": 0,
         "quotes": [2, "single", "avoid-escape"],
         "radix": 2,
-        "semi": 0,
+        "semi": [2, "never"],
         "sort-vars": 0,
         "space-after-function-name": [2, "always"],
         "space-after-keywords": [2, "always"],
