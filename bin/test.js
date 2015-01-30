@@ -4,7 +4,8 @@
  * Clones several projects that are known to follow "JavaScript Standard Style" and runs
  * the `standard` style checker to verify that it passes without warnings. This helps
  * ensure we don't accidentally introduce new style rules that cause previously "good"
- * code to start failing with new warnings!
+ * code to start failing with new warnings! (And if we do, then that needs to be a MAJOR
+ * VERSION BUMP.)
  */
 
 var cp = require('child_process')
@@ -25,7 +26,8 @@ var urls = [
   'https://github.com/feross/parse-torrent.git',
   'https://github.com/feross/studynotes.git',
   'https://github.com/feross/webtorrent.git',
-  'https://github.com/mafintosh/level-temp.git'
+  'https://github.com/mafintosh/level-temp.git',
+  'https://github.com/mafintosh/peerflix.git'
 ]
 
 var modules = {}
