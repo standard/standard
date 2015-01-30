@@ -93,7 +93,30 @@ module.exports = function standard (opts) {
 
   var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
   var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
+<<<<<<< HEAD
 >>>>>>> 175eb77... Support stdin [usage: standard < file.js]
+=======
+  
+  var rcpath = opts.rcpath || DEFAULT_RCPATH
+  var jshintPath = usePathOrFallback(rcpath, JSHINT_RC)
+  var jscsPath = usePathOrFallback(rcpath, JSCS_RC)
+  var eslintPath = usePathOrFallback(rcpath, ESLINT_RC)
+
+  ignore = ignore.map(function (pattern) {
+    return new Minimatch(pattern)
+  })
+
+  glob('**/*.js', {
+    cwd: opts.cwd || process.cwd()
+  }, function (err, files) {
+    if (err) return error(err)
+    files = files.filter(function (file) {
+      return !ignore.some(function (mm) {
+        return mm.match(file)
+      })
+    })
+
+>>>>>>> d0529a6... add --rcpath option
 
   if (opts.verbose) {
     jshintArgs.push('--verbose')

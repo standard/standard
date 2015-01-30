@@ -22,7 +22,11 @@ if (argv.help) {
       -v, --verbose    Show error codes (so you can ignore specific rules)
           --version    Display the current version
       -h, --help       Display the help and usage details
+<<<<<<< HEAD
       -r, --rcpath     Provide an alternative directory of rc files
+=======
+      -r  --rcpath     Provide an alternate directory of .rc files
+>>>>>>> d0529a6... add --rcpath option
 
   Report bugs:  https://github.com/feross/standard/issues
 
