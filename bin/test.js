@@ -13,7 +13,6 @@ var mkdirp = require('mkdirp')
 var path = require('path')
 var rimraf = require('rimraf')
 var series = require('run-series')
-var parallel = require('run-parallel')
 
 var TMP = path.join(__dirname, '..', 'tmp')
 var STANDARD = path.join(__dirname, 'cmd.js')
@@ -48,14 +47,18 @@ series(Object.keys(modules).map(function (name) {
 
 function runTests (err) {
   if (err) return error(err)
-  parallel(Object.keys(modules).map(function (name) {
+  series(Object.keys(modules).map(function (name) {
     return function (cb) {
+      process.stderr.write(name + ': ')
       var cwd = path.join(TMP, name)
-      spawn(STANDARD, ['--verbose'], { cwd: cwd }, cb)
+      spawn(STANDARD, ['--verbose'], { cwd: cwd }, function (err) {
+        if (err) return cb(err)
+        console.error('ok')
+        cb(null)
+      })
     }
   }), function (err) {
     if (err) return error(err)
-    console.log('ok')
   })
 }
 
