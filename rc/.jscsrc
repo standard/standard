@@ -7,7 +7,6 @@
   "disallowNewlineBeforeBlockStatements": true,
   "disallowOperatorBeforeLineBreak": ["."],
   "disallowPaddingNewlinesInBlocks": true,
-  "disallowQuotedKeysInObjects": "allButReserved",
   "disallowSpaceAfterObjectKeys": true,
   "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
