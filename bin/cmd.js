@@ -36,6 +36,7 @@ if (argv.version) {
 
 standard({
   cwd: process.cwd(),
-  bare: argv.bare, // undocumented: show raw, unprocessed linter output (for debugging)
+  bare: argv.bare,
+  stdin: !process.stdin.isTTY,
   verbose: argv.verbose
 })
