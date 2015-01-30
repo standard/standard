@@ -15,7 +15,6 @@
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
   "disallowSpacesInCallExpression": true,
   "disallowSpacesInsideParentheses": true,
-  "disallowTrailingWhitespace": true,
   "esnext": true,
   "requireBlocksOnNewline": 1,
   "requireCapitalizedConstructors": true,
