@@ -6,10 +6,6 @@ var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
 
-var JSHINT = path.join(__dirname, 'node_modules', '.bin', 'jshint')
-var JSHINT_RC = path.join(__dirname, 'rc', '.jshintrc')
-var JSHINT_REPORTER = path.join(__dirname, 'lib', 'jshint-reporter.js')
-
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
 var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
@@ -21,8 +17,8 @@ var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
 if (/^win/.test(process.platform)) {
-  JSHINT += '.cmd'
   JSCS += '.cmd'
+  ESLINT += '.cmd'
 }
 
 var DEFAULT_IGNORE = [
@@ -61,8 +57,6 @@ module.exports = function standard (opts) {
     if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
   }
 
-  var jshintArgs = ['--config', JSHINT_RC, '--reporter', JSHINT_REPORTER]
-
   var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
   var jscsArgs = ['--config', JSCS_RC, '--reporter', jscsReporter]
 
@@ -70,13 +64,11 @@ module.exports = function standard (opts) {
   var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
 
   if (opts.verbose) {
-    jshintArgs.push('--verbose')
     jscsArgs.push('--verbose')
   }
 
   if (opts.stdin) {
     // stdin
-    jshintArgs.push('-')
     eslintArgs.push('--stdin')
     lint()
   } else {
@@ -96,7 +88,6 @@ module.exports = function standard (opts) {
           return mm.match(file)
         })
       })
-      jshintArgs = jshintArgs.concat(files)
       jscsArgs = jscsArgs.concat(files)
       eslintArgs = eslintArgs.concat(files)
       lint()
@@ -105,7 +96,6 @@ module.exports = function standard (opts) {
 
   function lint () {
     parallel([
-      spawn.bind(undefined, JSHINT, jshintArgs),
       spawn.bind(undefined, JSCS, jscsArgs),
       spawn.bind(undefined, ESLINT, eslintArgs)
     ], function (err, r) {
@@ -154,7 +144,7 @@ module.exports = function standard (opts) {
         return true
       })
       .sort(function (a, b) {
-        // sort by line number (merges jshint and jscs output)
+        // sort by line number (merges output from all linters)
         var fileA = FILE_RE.exec(a)[1]
         var fileB = FILE_RE.exec(b)[1]
 
