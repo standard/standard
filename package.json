@@ -1,7 +1,7 @@
 {
   "name": "standard",
   "description": "JavaScript Standard Style",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
