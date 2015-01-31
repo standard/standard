@@ -5,10 +5,8 @@
   "esnext": true,
   "expr": true,
   "globalstrict": true,
-  "latedef": "nofunc",
   "laxbreak": true,
   "loopfunc": true,
-  "noarg": true,
   "node": true,
   "laxcomma": true,
   "predef": [
