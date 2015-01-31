@@ -10,6 +10,7 @@
   "loopfunc": true,
   "noarg": true,
   "node": true,
+  "laxcomma": true,
   "predef": [
     "escape",
     "unescape"
