@@ -15,8 +15,8 @@ var path = require('path')
 var rimraf = require('rimraf')
 var series = require('run-series')
 
-var TMP = path.join(__dirname, '..', 'tmp')
-var STANDARD = path.join(__dirname, 'cmd.js')
+var TMP = path.join(__dirname, 'tmp')
+var STANDARD = path.join(__dirname, 'bin', 'cmd.js')
 
 var urls = [
   'https://github.com/beatgammit/base64-js.git',
