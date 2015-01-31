@@ -109,7 +109,7 @@
         "curly": 0,
         "default-case": 2,
         "dot-notation": 0,
-        "eol-last": 0,
+        "eol-last": 2,
         "eqeqeq": [2, "allow-null"],
         "func-style": [0, "declaration"],
         "guard-for-in": 0,

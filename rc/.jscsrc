@@ -15,7 +15,6 @@
   "esnext": true,
   "requireBlocksOnNewline": 1,
   "requireCapitalizedConstructors": true,
-  "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireSpacesInConditionalExpression": {
       "afterTest": true,
