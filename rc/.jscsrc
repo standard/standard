@@ -17,7 +17,6 @@
   "requireCapitalizedConstructors": true,
   "requireLineFeedAtFileEnd": true,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-  "requireSpaceBetweenArguments": true,
   "requireSpacesInConditionalExpression": {
       "afterTest": true,
       "beforeConsequent": true,
