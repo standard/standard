@@ -80,6 +80,8 @@ Error: Code style check failed:
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
+Sublime Text users can also install [Sublimelinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard) via package control to enable `standard` checking.
+
 ### What you might do if you're clever
 
 1. Add it to `package.json`
