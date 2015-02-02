@@ -21,9 +21,12 @@ var STANDARD = path.join(__dirname, 'bin', 'cmd.js')
 var urls = [
   'https://github.com/beatgammit/base64-js.git',
   'https://github.com/feross/bittorrent-dht.git',
+  'https://github.com/feross/bittorrent-protocol.git',
   'https://github.com/feross/bittorrent-tracker.git',
   'https://github.com/feross/buffer.git',
+  'https://github.com/feross/magnet-uri.git',
   'https://github.com/feross/parse-torrent.git',
+  'https://github.com/feross/simple-peer.git',
   'https://github.com/feross/studynotes.git',
   'https://github.com/feross/webtorrent.git',
   'https://github.com/mafintosh/level-temp.git',
