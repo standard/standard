@@ -112,10 +112,11 @@ module.exports = function standard (opts) {
 
       // de-dupe
       files = uniq(files)
-
-      jscsArgs = jscsArgs.concat(files)
-      eslintArgs = eslintArgs.concat(files)
-      lint()
+      if (files.length > 0) {
+        jscsArgs = jscsArgs.concat(files)
+        eslintArgs = eslintArgs.concat(files)
+        lint()
+      }
     })
   }
 
