@@ -5,6 +5,7 @@ var Minimatch = require('minimatch').Minimatch
 var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
+var uniq = require('uniq')
 
 var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
 var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
@@ -36,10 +37,11 @@ var COL_RE = /.*?:\d+:(\d+)/
  * JavaScript Standard Style
  * @param {Object} opts                        options object
  * @param {string|Array.<String>} opts.ignore  files to ignore
- * @param {string} opts.cwd                    current working directory
- * @param {boolean} opts.verbose               show error codes
  * @param {boolean} opts.bare                  show raw linter output (for debugging)
+ * @param {string} opts.cwd                    current working directory
+ * @param {Array.<string>} files               files to check
  * @param {boolean} opts.stdin                 check text from stdin instead of filesystem
+ * @param {boolean} opts.verbose               show error codes
  */
 module.exports = function standard (opts) {
   if (!opts) opts = {}
@@ -72,6 +74,10 @@ module.exports = function standard (opts) {
     eslintArgs.push('--stdin')
     lint()
   } else {
+    var patterns = (Array.isArray(opts.files) && opts.files.length > 0)
+      ? opts.files
+      : [ '**/*.js' ]
+
     // traverse filesystem
     if (opts.ignore) ignore = ignore.concat(opts.ignore)
 
@@ -79,15 +85,34 @@ module.exports = function standard (opts) {
       return new Minimatch(pattern)
     })
 
-    glob('**/*.js', {
-      cwd: opts.cwd || process.cwd()
-    }, function (err, files) {
+    parallel(patterns.map(function (pattern) {
+      return function (cb) {
+        glob(pattern, {
+          cwd: opts.cwd || process.cwd(),
+          nodir: true
+        }, cb)
+      }
+    }), function (err, results) {
       if (err) return error(err)
+
+      // flatten nested arrays
+      var files = results.reduce(function (files, result) {
+        result.forEach(function (file) {
+          files.push(file)
+        })
+        return files
+      }, [])
+
+      // apply ignore patterns
       files = files.filter(function (file) {
         return !ignore.some(function (mm) {
           return mm.match(file)
         })
       })
+
+      // de-dupe
+      files = uniq(files)
+
       jscsArgs = jscsArgs.concat(files)
       eslintArgs = eslintArgs.concat(files)
       lint()

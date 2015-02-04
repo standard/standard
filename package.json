@@ -21,7 +21,8 @@
     "minimatch": "^2.0.1",
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
-    "split": "^0.3.2"
+    "split": "^0.3.2",
+    "uniq": "^1.0.1"
   },
   "devDependencies": {
     "extend.js": "0.0.2",

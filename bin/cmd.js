@@ -35,8 +35,9 @@ if (argv.version) {
 }
 
 standard({
-  cwd: process.cwd(),
   bare: argv.bare,
+  cwd: process.cwd(),
+  files: argv._,
   stdin: !process.stdin.isTTY,
   verbose: argv.verbose
 })
