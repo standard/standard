@@ -32,7 +32,8 @@ var urls = [
   'https://github.com/mafintosh/level-temp.git',
   'https://github.com/mafintosh/peerflix.git',
   'https://github.com/mafintosh/what-line-is-this.git',
-  'https://github.com/brandonhorst/coverage-test.git'
+  'https://github.com/brandonhorst/coverage-test.git',
+  'https://github.com/brandonhorst/empty.git'
 ]
 
 var modules = {}
