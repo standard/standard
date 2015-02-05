@@ -20,6 +20,8 @@ var STANDARD = path.join(__dirname, 'bin', 'cmd.js')
 
 var urls = [
   'https://github.com/beatgammit/base64-js.git',
+  'https://github.com/brandonhorst/coverage-test.git',
+  'https://github.com/brandonhorst/empty.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/bittorrent-protocol.git',
   'https://github.com/feross/bittorrent-tracker.git',
@@ -31,9 +33,7 @@ var urls = [
   'https://github.com/feross/webtorrent.git',
   'https://github.com/mafintosh/level-temp.git',
   'https://github.com/mafintosh/peerflix.git',
-  'https://github.com/mafintosh/what-line-is-this.git',
-  'https://github.com/brandonhorst/coverage-test.git',
-  'https://github.com/brandonhorst/empty.git'
+  'https://github.com/mafintosh/what-line-is-this.git'
 ]
 
 var modules = {}
