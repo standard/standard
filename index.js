@@ -26,7 +26,8 @@ var DEFAULT_IGNORE = [
   'node_modules/**',
   '.git/**',
   '**/*.min.js',
-  '**/bundle.js'
+  '**/bundle.js',
+  'coverage/**'
 ]
 
 var FILE_RE = /(.*?):/
