@@ -46,7 +46,7 @@ mkdirp.sync(TMP)
 series(Object.keys(modules).map(function (name) {
   var url = modules[name]
   return function (cb) {
-    var args = [ 'clone', url, path.join(TMP, name) ]
+    var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
     // TODO: Start `git` in a way that works on Windows – PR welcome!
     spawn('git', args, {}, cb)
   }
