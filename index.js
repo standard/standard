@@ -30,6 +30,7 @@ var DEFAULT_IGNORE = [
   'coverage/**'
 ]
 
+var ERROR_RE = /.*?:\d+:\d+/
 var FILE_RE = /(.*?):/
 var LINE_RE = /.*?:(\d+)/
 var COL_RE = /.*?:\d+:(\d+)/
@@ -160,12 +161,20 @@ module.exports = function standard (opts) {
     }
 
     console.error('Error: Code style check failed:')
+    var unexpectedOutput = []
     var errMap = {}
     errors
       .map(function (str) { // normalize stdin "filename"
         return str.replace(/^(<text>|input)/, 'stdin')
       })
-      .filter(function (str) { // de-duplicate errors
+      .filter(function (str) {
+        // don't process unexpected/malformed output, just print it at the end
+        if (!ERROR_RE.test(str)) {
+          unexpectedOutput.push(str)
+          return false
+        }
+
+        // de-duplicate errors
         if (errMap[str]) return false
         errMap[str] = true
         return true
@@ -188,6 +197,12 @@ module.exports = function standard (opts) {
       .forEach(function (str) {
         console.error('  ' + str) // indent
       })
+
+    if (unexpectedOutput.length) console.error('\nUnexpected Linter Output:')
+    unexpectedOutput.forEach(function (str) {
+      console.error(str)
+    })
+
     process.exit(1)
   }
 }
