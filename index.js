@@ -7,20 +7,13 @@ var path = require('path')
 var split = require('split')
 var uniq = require('uniq')
 
-var JSCS = path.join(__dirname, 'node_modules', '.bin', 'jscs')
 var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
 var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
 var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
 
-var ESLINT = path.join(__dirname, 'node_modules', '.bin', 'eslint')
 var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
 var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
-
-if (/^win/.test(process.platform)) {
-  JSCS += '.cmd'
-  ESLINT += '.cmd'
-}
 
 var DEFAULT_IGNORE = [
   'node_modules/**',
@@ -123,12 +116,30 @@ module.exports = function standard (opts) {
   }
 
   function lint () {
-    parallel([
-      spawn.bind(undefined, JSCS, jscsArgs),
-      spawn.bind(undefined, ESLINT, eslintArgs)
-    ], function (err, r) {
+    findBinPaths(function (err, paths) {
       if (err) return error(err)
-      if (r.some(Boolean)) printErrors()
+      parallel([
+        spawn.bind(undefined, paths.jscs, jscsArgs),
+        spawn.bind(undefined, paths.eslint, eslintArgs)
+      ], function (err, r) {
+        if (err) return error(err)
+        if (r.some(Boolean)) printErrors()
+      })
+    })
+  }
+
+  function findBinPaths (cb) {
+    parallel({
+      eslint: findBinPath.bind(undefined, 'eslint'),
+      jscs: findBinPath.bind(undefined, 'jscs')
+    }, cb)
+  }
+
+  function findBinPath (bin, cb) {
+    var opts = { cwd: __dirname }
+    cp.exec('npm run --silent which-' + bin, opts, function (err, stdout, stderr) {
+      if (err) return cb(err)
+      cb(null, stdout.toString().replace(/\n/g, ''))
     })
   }
 
