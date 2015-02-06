@@ -187,9 +187,11 @@ No. Use `eslint` or `jscs` directly if you want that.
 Pro tip: Just use `standard` and move on. There are actual real problems that you could
 spend your time solving :p
 
-## Why can't I pipe standard to other tools?
-`standard` prints to `stderr`. This means that tools that read from `stdout` won't be 
+### Why can't I pipe standard to other tools?
+
+`standard` prints to `stderr`. This means that tools that read from `stdout` won't be
 able to read its output. The solution is to make `standard` print to `stdout` instead:
+
 ```sh
 standard 2>&1 | grep variable
 ```
