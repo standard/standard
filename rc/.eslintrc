@@ -10,6 +10,26 @@
         "unescape": false
     },
 
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "binaryLiterals": true,
+        "blockBindings": true,
+        "defaultParams": true,
+        "forOf": true,
+        "generators": true,
+        "objectLiteralComputedProperties": true,
+        "objectLiteralDuplicateProperties": false,
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        "octalLiterals": false,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "superInFunctions": true,
+        "templateStrings": true,
+        "unicodeCodePointEscapes": true,
+        "globalReturn": true
+    },
+
     "rules": {
         "block-scoped-var": 0,
         "brace-style": 0,
