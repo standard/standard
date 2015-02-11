@@ -80,7 +80,12 @@ Error: Code style check failed:
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-Sublime Text users can also install [Sublimelinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard) via package control to enable `standard` checking.
+### Editor plugins
+
+First, install `standard`. Then, install the appropriate plugin for your editor:
+
+- **[Vim](https://github.com/scrooloose/syntastic)** - Just install [Syntastic](https://github.com/scrooloose/syntastic).
+- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install (1) [Package Control](https://packagecontrol.io/), (2) [SublimeLinter](http://www.sublimelinter.com/en/latest/), and (3) [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
 
 ### What you might do if you're clever
 
