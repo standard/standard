@@ -64,11 +64,7 @@ module.exports = function standard (opts) {
     jscsArgs.push('--verbose')
   }
 
-  if (opts.stdin) {
-    // stdin
-    eslintArgs.push('--stdin')
-    lint()
-  } else {
+  if ((Array.isArray(opts.files) && opts.files.length > 0) || !opts.stdin) {
     var patterns = (Array.isArray(opts.files) && opts.files.length > 0)
       ? opts.files
       : [ '**/*.js' ]
@@ -113,6 +109,10 @@ module.exports = function standard (opts) {
         lint()
       }
     })
+  } else {
+    // stdin
+    eslintArgs.push('--stdin')
+    lint()
   }
 
   function lint () {
