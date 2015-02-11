@@ -5,18 +5,10 @@
   "disallowNewlineBeforeBlockStatements": true,
   "disallowOperatorBeforeLineBreak": ["."],
   "disallowPaddingNewlinesInBlocks": true,
-  "disallowSpacesInCallExpression": true,
   "esnext": true,
   "requireBlocksOnNewline": 1,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-  "requireSpacesInConditionalExpression": {
-      "afterTest": true,
-      "beforeConsequent": true,
-      "afterConsequent": true,
-      "beforeAlternate": true
-  },
   "requireSpacesInForStatement": true,
   "validateIndentation": 2,
-  "validateLineBreaks": "LF",
-  "validateParameterSeparator": ", "
+  "validateLineBreaks": "LF"
 }
