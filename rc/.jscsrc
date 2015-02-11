@@ -1,8 +1,6 @@
 {
-  "disallowKeywordsOnNewLine": ["else"],
   "disallowKeywords": ["with"],
   "disallowMultipleVarDecl": "exceptUndefined",
-  "disallowNewlineBeforeBlockStatements": true,
   "disallowOperatorBeforeLineBreak": ["."],
   "disallowPaddingNewlinesInBlocks": true,
   "esnext": true,
