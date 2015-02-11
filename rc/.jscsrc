@@ -6,7 +6,6 @@
   "disallowOperatorBeforeLineBreak": ["."],
   "disallowPaddingNewlinesInBlocks": true,
   "disallowSpacesInCallExpression": true,
-  "disallowSpacesInsideParentheses": true,
   "esnext": true,
   "requireBlocksOnNewline": 1,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
