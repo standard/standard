@@ -16,7 +16,7 @@ var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
 var DEFAULT_IGNORE = [
-  'node_modules/**',
+  '**/node_modules/**',
   '.git/**',
   '**/*.min.js',
   '**/bundle.js',
