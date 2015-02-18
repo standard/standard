@@ -33,9 +33,17 @@ var urls = [
   'https://github.com/feross/webtorrent.git',
   'https://github.com/Flet/dailyconnect.git',
   'https://github.com/Flet/exitzero.git',
+  'https://github.com/mafintosh/hms-protocol.git',
+  'https://github.com/mafintosh/hms.git',
+  'https://github.com/mafintosh/json-format-stream.git',
+  'https://github.com/mafintosh/level-enumerate.git',
+  'https://github.com/mafintosh/level-logs.git',
   'https://github.com/mafintosh/level-temp.git',
+  'https://github.com/mafintosh/node-gyp-install.git',
   'https://github.com/mafintosh/peerflix.git',
-  'https://github.com/mafintosh/what-line-is-this.git'
+  'https://github.com/mafintosh/swap-to-level.git',
+  'https://github.com/mafintosh/telephone.git',
+  'https://github.com/mafintosh/what-line-is-this.git',
 ]
 
 var modules = {}
