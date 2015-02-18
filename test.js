@@ -45,6 +45,7 @@ var urls = [
   'https://github.com/mafintosh/telephone.git',
   'https://github.com/mafintosh/what-line-is-this.git',
   'https://github.com/maxogden/standard-format.git',
+  'https://github.com/npm/fstream.git'
 ]
 
 var modules = {}
