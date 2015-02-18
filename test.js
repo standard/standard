@@ -31,6 +31,8 @@ var urls = [
   'https://github.com/feross/simple-peer.git',
   'https://github.com/feross/studynotes.git',
   'https://github.com/feross/webtorrent.git',
+  'https://github.com/Flet/dailyconnect.git',
+  'https://github.com/Flet/exitzero.git',
   'https://github.com/mafintosh/level-temp.git',
   'https://github.com/mafintosh/peerflix.git',
   'https://github.com/mafintosh/what-line-is-this.git'
