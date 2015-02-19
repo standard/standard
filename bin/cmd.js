@@ -13,6 +13,8 @@ var argv = minimist(process.argv.slice(2), {
     'verbose',
     'version'
   ],
+  default: {
+    stdin: !process.stdin.isTTY
   }
 })
 
@@ -42,6 +44,6 @@ if (argv.version) {
 standard({
   cwd: process.cwd(),
   files: argv._,
-  stdin: !process.stdin.isTTY,
+  stdin: argv.stdin,
   verbose: argv.verbose
 })
