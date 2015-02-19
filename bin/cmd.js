@@ -26,6 +26,7 @@ if (argv.help) {
 
   Flags:
       -v, --verbose    Show error codes (so you can ignore specific rules)
+          --stdin      Force processing input from stdin
           --version    Display the current version
       -h, --help       Display the help and usage details
 
