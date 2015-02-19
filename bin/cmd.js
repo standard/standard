@@ -7,6 +7,7 @@ var argv = minimist(process.argv.slice(2), {
   alias: {
     help: 'h',
     verbose: 'v'
+  },
   boolean: [
     'help',
     'stdin',
