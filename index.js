@@ -171,7 +171,7 @@ module.exports = function standard (opts) {
       return
     }
 
-    console.error('Error: Code style check failed:')
+    console.error('Error: Use JavaScript Standard Style (https://github.com/feross/standard)')
     var unexpectedOutput = []
     var errMap = {}
     errors
