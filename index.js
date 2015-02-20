@@ -2,11 +2,13 @@ module.exports = standard
 
 var cp = require('child_process')
 var findRoot = require('find-root')
+var fs = require('fs')
 var glob = require('glob')
 var Minimatch = require('minimatch').Minimatch
 var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
+var standardFormat = require('standard-format')
 var uniq = require('uniq')
 
 var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
@@ -39,6 +41,7 @@ var COL_RE = /.*?:\d+:(\d+)/
  * @param {Array.<string>} opts.files          files to check
  * @param {boolean} opts.stdin                 check text from stdin instead of filesystem
  * @param {boolean} opts.verbose               show error codes
+ * @param {boolean} opts.format                format code using standard-format before linting
  */
 function standard (opts) {
   if (!opts) opts = {}
@@ -106,6 +109,9 @@ function standard (opts) {
       // de-dupe
       files = uniq(files)
       if (files.length > 0) {
+        if (opts.format) {
+          format(files)
+        }
         jscsArgs = jscsArgs.concat(files)
         eslintArgs = eslintArgs.concat(files)
         lint()
@@ -115,6 +121,13 @@ function standard (opts) {
     // stdin
     eslintArgs.push('--stdin')
     lint()
+  }
+
+  function format (files) {
+    files.forEach(function (file) {
+      var data = fs.readFileSync(file).toString()
+      fs.writeFileSync(file, standardFormat.transform(data))
+    })
   }
 
   function lint () {
