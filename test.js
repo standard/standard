@@ -44,13 +44,16 @@ var urls = [
   'https://github.com/mafintosh/swap-to-level.git',
   'https://github.com/mafintosh/telephone.git',
   'https://github.com/mafintosh/what-line-is-this.git',
-  'https://github.com/maxogden/standard-format.git'
+  'https://github.com/maxogden/standard-format.git',
+  // 'https://github.com/ngoldman/gh-release.git',
+  'https://github.com/ngoldman/magnet-link.git',
+  'https://github.com/ngoldman/wireframe.css.git'
   // 'https://github.com/npm/fstream.git'
 ]
 
 var modules = {}
 urls.forEach(function (url) {
-  var name = /\/([^.\/]+)\.git$/.exec(url)[1]
+  var name = /\/([^\/]+)\.git$/.exec(url)[1]
   modules[name] = url
 })
 
