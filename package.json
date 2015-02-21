@@ -22,6 +22,7 @@
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
     "split": "^0.3.2",
+    "standard-format": "^1.2.0",
     "uniq": "^1.0.1",
     "which": "^1.0.8"
   },

@@ -5,10 +5,12 @@ var standard = require('../')
 
 var argv = minimist(process.argv.slice(2), {
   alias: {
+    format: 'F',
     help: 'h',
     verbose: 'v'
   },
   boolean: [
+    'format',
     'help',
     'stdin',
     'verbose',
@@ -29,6 +31,8 @@ if (argv.help) {
       -v, --verbose    Show error codes (so you can ignore specific rules)
           --stdin      Force processing input from stdin
           --version    Display the current version
+      -F  --format     EXPERIMENTIAL: format code using standard-format before linting
+                       (will not work with stdin)
       -h, --help       Display the help and usage details
 
   Report bugs:  https://github.com/feross/standard/issues
@@ -46,6 +50,7 @@ if (argv.version) {
 standard({
   cwd: process.cwd(),
   files: argv._,
+  format: argv.format,
   stdin: argv.stdin,
   verbose: argv.verbose
 })
