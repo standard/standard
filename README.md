@@ -12,7 +12,7 @@
 
 ### One Style to Rule Them All
 
-No decisions to make. No `.eslintrc`, `.jscsrc`, or `.jscsrc` files to manage. It just
+No decisions to make. No `.jshintrc`, `.jscsrc`, or `.eslintrc` files to manage. It just
 works.
 
 This module saves you time in two ways:
