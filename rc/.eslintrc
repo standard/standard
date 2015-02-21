@@ -6,6 +6,7 @@
 
     "globals": {
         "crypto": true,
+        "Buffer": true,
         "escape": false,
         "unescape": false
     },
