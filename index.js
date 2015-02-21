@@ -1,6 +1,7 @@
 module.exports = standard
 
 var cp = require('child_process')
+var debug = require('debug')('standard')
 var findRoot = require('find-root')
 var fs = require('fs')
 var glob = require('glob')
@@ -133,6 +134,8 @@ function standard (opts) {
   function lint () {
     findBinPaths(function (err, paths) {
       if (err) return error(err)
+      debug(paths.jscs + ' ' + jscsArgs.join(' '))
+      debug(paths.eslint + ' ' + eslintArgs.join(' '))
       parallel([
         spawn.bind(undefined, paths.jscs, jscsArgs),
         spawn.bind(undefined, paths.eslint, eslintArgs)

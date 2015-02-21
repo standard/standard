@@ -14,6 +14,7 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
+    "debug": "^2.1.1",
     "eslint": "^0.14.1",
     "find-root": "^0.1.1",
     "glob": "^4.3.5",
