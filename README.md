@@ -148,7 +148,7 @@ a `standard.ignore` property to `package.json`:
 
 ### Is there an automatic formatter?
 
-Yes, try using [Max Ogden](https://github.com/maxogden)'s experimental auto formatter
+Yes, try using the `--format` option. This uses [Max Ogden](https://github.com/maxogden)'s experimental auto formatter
 **[`standard-format`](https://github.com/maxogden/standard-format)** to fix the easier
 cases.
 
