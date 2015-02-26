@@ -27,6 +27,7 @@
         "regexUFlag": true,
         "regexYFlag": true,
         "restParams": true,
+        "spread": true,
         "superInFunctions": true,
         "templateStrings": true,
         "unicodeCodePointEscapes": true,
