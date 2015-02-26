@@ -6,6 +6,5 @@
   "requireBlocksOnNewline": 1,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireSpacesInForStatement": true,
-  "validateIndentation": 2,
   "validateLineBreaks": "LF"
 }

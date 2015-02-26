@@ -54,7 +54,7 @@
         "global-strict": 0,
         "guard-for-in": 0,
         "handle-callback-err": [2, "^(err|error|anySpecificError)$" ],
-        "indent": 0,
+        "indent": [2, 2],
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
         "max-depth": 0,
         "max-len": 0,
