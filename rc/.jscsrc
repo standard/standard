@@ -1,7 +1,6 @@
 {
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowOperatorBeforeLineBreak": ["."],
-  "disallowPaddingNewlinesInBlocks": true,
   "esnext": true,
   "requireBlocksOnNewline": 1,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
