@@ -21,6 +21,7 @@
     "jscs": "^1.10.0",
     "minimatch": "^2.0.1",
     "minimist": "^1.1.0",
+    "run-auto": "^1.0.0",
     "run-parallel": "^1.0.0",
     "split": "^0.3.2",
     "standard-format": "^1.2.0",

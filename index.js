@@ -1,5 +1,6 @@
 module.exports = standard
 
+var auto = require('run-auto')
 var cp = require('child_process')
 var debug = require('debug')('standard')
 var findRoot = require('find-root')
@@ -132,36 +133,31 @@ function standard (opts) {
   }
 
   function lint () {
-    findBinPaths(function (err, paths) {
+    auto({
+      eslintPath: findBinPath.bind(undefined, 'eslint'),
+      jscsPath: findBinPath.bind(undefined, 'jscs'),
+      eslint: ['eslintPath', function (cb, r) {
+        spawn(r.eslintPath, eslintArgs, cb)
+      }],
+      jscs: ['jscsPath', function (cb, r) {
+        spawn(r.jscsPath, jscsArgs, cb)
+      }]
+    }, function (err, r) {
       if (err) return error(err)
-      debug(paths.jscs + ' ' + jscsArgs.join(' '))
-      debug(paths.eslint + ' ' + eslintArgs.join(' '))
-      parallel([
-        spawn.bind(undefined, paths.jscs, jscsArgs),
-        spawn.bind(undefined, paths.eslint, eslintArgs)
-      ], function (err, r) {
-        if (err) return error(err)
-        if (r.some(Boolean)) printErrors()
-      })
+      if (r.eslint !== 0 || r.jscs !== 0) printErrors()
     })
-  }
-
-  function findBinPaths (cb) {
-    parallel({
-      eslint: findBinPath.bind(undefined, 'eslint'),
-      jscs: findBinPath.bind(undefined, 'jscs')
-    }, cb)
   }
 
   function findBinPath (bin, cb) {
     var opts = { cwd: __dirname }
-    cp.exec('npm run --silent which-' + bin, opts, function (err, stdout, stderr) {
+    cp.exec('npm run --silent which-' + bin, opts, function (err, stdout) {
       if (err) return cb(err)
       cb(null, stdout.toString().replace(/\n/g, ''))
     })
   }
 
   function spawn (command, args, cb) {
+    debug(command + ' ' + args.join(' '))
     var child = cp.spawn(command, args)
     child.on('error', cb)
     child.on('close', function (code) {
