@@ -16,6 +16,7 @@
         "binaryLiterals": true,
         "blockBindings": true,
         "defaultParams": true,
+        "destructuring": true,
         "forOf": true,
         "generators": true,
         "objectLiteralComputedProperties": true,
