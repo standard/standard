@@ -26,6 +26,7 @@
         "octalLiterals": false,
         "regexUFlag": true,
         "regexYFlag": true,
+        "restParams": true,
         "superInFunctions": true,
         "templateStrings": true,
         "unicodeCodePointEscapes": true,
