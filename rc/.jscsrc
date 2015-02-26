@@ -2,7 +2,6 @@
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowOperatorBeforeLineBreak": ["."],
   "esnext": true,
-  "requireBlocksOnNewline": 1,
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireSpacesInForStatement": true,
   "validateLineBreaks": "LF"
