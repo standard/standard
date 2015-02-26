@@ -10,10 +10,15 @@
 
 var cp = require('child_process')
 var extend = require('extend.js')
+var minimist = require('minimist')
 var mkdirp = require('mkdirp')
 var path = require('path')
 var rimraf = require('rimraf')
 var series = require('run-series')
+
+var argv = minimist(process.argv.slice(2), {
+  boolean: [ 'skip-clone' ]
+})
 
 var TMP = path.join(__dirname, 'tmp')
 var STANDARD = path.join(__dirname, 'bin', 'cmd.js')
@@ -57,17 +62,21 @@ urls.forEach(function (url) {
   modules[name] = url
 })
 
-rimraf.sync(TMP)
-mkdirp.sync(TMP)
+if (!argv['skip-clone']) {
+  rimraf.sync(TMP)
+  mkdirp.sync(TMP)
 
-series(Object.keys(modules).map(function (name) {
-  var url = modules[name]
-  return function (cb) {
-    var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-    // TODO: Start `git` in a way that works on Windows – PR welcome!
-    spawn('git', args, {}, cb)
-  }
-}), runTests)
+  series(Object.keys(modules).map(function (name) {
+    var url = modules[name]
+    return function (cb) {
+      var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+      // TODO: Start `git` in a way that works on Windows – PR welcome!
+      spawn('git', args, {}, cb)
+    }
+  }), runTests)
+} else {
+  runTests()
+}
 
 function runTests (err) {
   if (err) return error(err)
