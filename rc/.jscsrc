@@ -1,5 +1,4 @@
 {
-  "disallowKeywords": ["with"],
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowOperatorBeforeLineBreak": ["."],
   "disallowPaddingNewlinesInBlocks": true,
