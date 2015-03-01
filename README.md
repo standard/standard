@@ -98,7 +98,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
       "standard": "*"
     },
     "scripts": {
-      "test": "standard && node my-normal-tests.js"
+      "test": "node my-normal-tests.js && standard"
     }
   }
   ```
