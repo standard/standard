@@ -60,6 +60,16 @@ To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
 in JavaScript Standard Style.
 
+## Badge
+
+Use this in one of your projects? Include this badge in your readme to let people know that your code is using the standard style.
+
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+
+```
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+```
+
 ## Usage
 
 The easiest way to use JavaScript Standard Style to check your code is to install it
