@@ -77,6 +77,7 @@
         "no-debugger": 2,
         "no-delete-var": 2,
         "no-div-regex": 0,
+        "no-dupe-args": 2,
         "no-dupe-keys": 2,
         "no-else-return": 0,
         "no-empty": 0,
