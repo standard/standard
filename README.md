@@ -96,6 +96,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
 - **[Vim](https://github.com/scrooloose/syntastic)** - Just install [Syntastic](https://github.com/scrooloose/syntastic).
 - **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install (1) [Package Control](https://packagecontrol.io/), (2) [SublimeLinter](http://www.sublimelinter.com/en/latest/), and (3) [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
+- **[Atom](https://atom.io)** - Install (1) [Linter](https://github.com/AtomLinter/Linter) and (2) [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
 
 ### What you might do if you're clever
 
