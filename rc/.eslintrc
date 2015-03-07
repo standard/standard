@@ -69,7 +69,7 @@
         "no-bitwise": 0,
         "no-caller": 2,
         "no-catch-shadow": 0,
-        "no-comma-dangle": 2,
+        "comma-dangle": [2, "never"],
         "no-cond-assign": 2,
         "no-console": 0,
         "no-constant-condition": 0,
