@@ -58,7 +58,7 @@ in JavaScript Standard Style.
 
 ## Badge
 
-Use this in one of your projects? Include one of these badges in your readme to 
+Use this in one of your projects? Include one of these badges in your readme to
 let people know that your code is using the standard style.
 
 [![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
@@ -185,14 +185,24 @@ Error: Code style check failed:
   routes/submit.js:85:2: Expected indentation of 2 characters (jscs/validateIndentation)
 ```
 
-The first error is from `eslint`. In this case, the rule name is "no-use-before-define".
-You can hide it with a `/*eslint-disable no-use-before-define */` comment. Re-enable with
-a `/*eslint-enable no-use-before-define */` comment.
+The first error is from `eslint`. Disable all checks on a specific line:
 
-Example:
+```js
+file = 'I know what I am doing' // eslint-disable-line
+```
+
+Or, just disable the "no-use-before-define" rule:
+
+```js
+file = 'I know what I am doing' // eslint-disable-line no-use-before-define
+```
+
+Or, disable the rule for multiple lines:
 
 ```js
 /*eslint-disable no-use-before-define */
+// offending code here...
+// offending code here...
 // offending code here...
 /*eslint-enable no-use-before-define */
 ```
