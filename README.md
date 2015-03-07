@@ -30,26 +30,22 @@ npm install standard
 
 ## Rules
 
-- **2 spaces** for indentation
-- **Single quotes** for strings
-  - Except to avoid escaping like `"in this lil' string"`
-- **Unix line breaks** (LF)
-- **No unused variables** (this one catches *so many* bugs and typos!)
-- **No semicolons**
-  - [It's totally][1] [fine.][2] *[Really!][3]*
+- **2 spaces** – for indentation
+- **Single quotes for strings** – except to avoid escaping
+- **No unused variables** – this one catches *tons* of bugs!
+- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
+  - Instead, use `;[1, 2, 3].join(' ')`
   - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-  - Always prefix with `;` like this `;[1, 2, 3].join(' ')`
-- Spaces after keywords
-  - `if (condition) { ... }`
-- Spaces before/after function definitions
-  - `function name (arg1, arg2) { ... }`
-- Always name the context variable `self`
+- **Space after keywords** `if (condition) { ... }`
+- **Space after function name** `function name (arg) { ... }`
+- Name the context variable `self`
   - `var self = this`
-  - Checks for accidental use of [`window.self`][4] when `var self = this` is omitted
+  - Accidental use of [`window.self`][4] is dissallowed (happens when `var self = this` is omitted)
 - Always use `===` instead of `==`
-  - `obj == null` is allowed for succinctness (`obj === null || obj === undefined`)
+  - Except `obj == null` is allowed to check for `null` or `undefined`.
 - Always handle the node.js `err` function parameter
+- **And more goodness** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
@@ -101,8 +97,8 @@ Error: Code style check failed:
 First, install `standard`. Then, install the appropriate plugin for your editor:
 
 - **[Vim](https://github.com/scrooloose/syntastic)** - Just install [Syntastic](https://github.com/scrooloose/syntastic).
-- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install (1) [Package Control](https://packagecontrol.io/), (2) [SublimeLinter](http://www.sublimelinter.com/en/latest/), and (3) [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
-- **[Atom](https://atom.io)** - Install (1) [Linter](https://github.com/AtomLinter/Linter) and (2) [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
+- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install [Package Control](https://packagecontrol.io/), [SublimeLinter](http://www.sublimelinter.com/en/latest/), and [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
+- **[Atom](https://atom.io)** - Install [Linter](https://github.com/AtomLinter/Linter) and [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
 
 ### What you might do if you're clever
 
