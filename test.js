@@ -45,15 +45,16 @@ var urls = [
   'https://github.com/mafintosh/level-logs.git',
   'https://github.com/mafintosh/level-temp.git',
   'https://github.com/mafintosh/node-gyp-install.git',
-  'https://github.com/mafintosh/peerflix.git',
+  // 'https://github.com/mafintosh/peerflix.git', // standard v2
   'https://github.com/mafintosh/swap-to-level.git',
   'https://github.com/mafintosh/telephone.git',
   'https://github.com/mafintosh/what-line-is-this.git',
-  'https://github.com/maxogden/standard-format.git',
+  // 'https://github.com/maxogden/standard-format.git', // standard v2
   'https://github.com/ngoldman/gh-release.git',
   'https://github.com/ngoldman/magnet-link.git',
   'https://github.com/ngoldman/wireframe.css.git'
-  // 'https://github.com/npm/fstream.git'
+  // 'https://github.com/npm/fstream.git', // standard v2
+  // 'https://github.com/npm/npm.git' // in progress
 ]
 
 var modules = {}
