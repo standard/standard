@@ -17,8 +17,8 @@ works.
 
 This module saves you time in two ways:
 
-- **No configuration.** Just drop it in. The easiest way to enforce consistent style in
-  your module/project.
+- **No configuration.** The easiest way to enforce consistent style in your
+  module/project. Just drop it in.
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
@@ -108,10 +108,10 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
   {
     "name": "my-cool-package",
     "devDependencies": {
-      "standard": "*"
+      "standard": "^3.0.0"
     },
     "scripts": {
-      "test": "standard && node my-normal-tests.js"
+      "test": "standard && node my-tests.js"
     }
   }
   ```
@@ -131,13 +131,13 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 ### Why would I use JavaScript Standard Style?
 
 The beauty of JavaScript Standard Style is that it's simple. No one wants to maintain
-multiple hundred-line `.jshintrc` and `.jscsrc` for every module/project they work on.
+multiple hundred-line style configuration files for every module/project they work on.
 Enough of this madness!
 
 This module saves you time in two ways:
 
-- **No configuration.** Just drop it in. The easiest way to enforce consistent style in
-  your module/project.
+- **No configuration.** The easiest way to enforce consistent style in your
+  module/project. Just drop it in.
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
@@ -161,9 +161,12 @@ a `standard.ignore` property to `package.json`:
 
 ### Is there an automatic formatter?
 
-Yes, try using the `--format` option. This uses [Max Ogden](https://github.com/maxogden)'s experimental auto formatter
-**[`standard-format`](https://github.com/maxogden/standard-format)** to fix the easier
-cases.
+Yes! Just run `standard --format filename.js`. This uses
+[Max Ogden](https://github.com/maxogden)'s automatic formatter
+**[`standard-format`](https://github.com/maxogden/standard-format)**, which can
+automatically fix most code style issues.
+
+While most issues can be fixed, some, like not handling errors, must be fixed manually.
 
 ### How do I hide a certain warning?
 
