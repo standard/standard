@@ -31,7 +31,8 @@
         "superInFunctions": true,
         "templateStrings": true,
         "unicodeCodePointEscapes": true,
-        "globalReturn": true
+        "globalReturn": true,
+        "jsx": true
     },
 
     "rules": {
