@@ -12,6 +12,12 @@
         "window": false
     },
 
+    "ecmaFeatures": {
+        "globalReturn": true,
+        "jsx": true,
+        "modules": true
+    },
+
     "rules": {
         "block-scoped-var": 0,
         "brace-style": [2, "1tbs", { "allowSingleLine": true }],
