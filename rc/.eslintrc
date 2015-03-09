@@ -1,15 +1,15 @@
 {
     "env": {
-        "browser": true,
+        "browser": false,
         "es6": true,
-        "node": true
+        "node": true,
     },
 
     "globals": {
-        "crypto": true,
-        "Buffer": true,
+        "document": false,
         "escape": false,
-        "unescape": false
+        "unescape": false,
+        "window": false
     },
 
     "rules": {

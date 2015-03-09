@@ -41,10 +41,14 @@ npm install standard
 - **Space after function name** `function name (arg) { ... }`
 - Name the context variable `self`
   - `var self = this`
-  - Accidental use of [`window.self`][4] is dissallowed (happens when `var self = this` is omitted)
+  - Accidental use of [`window.self`][4] is dissallowed (happens when `var self = this` is
+    omitted)
 - Always use `===` instead of `==`
   - Except `obj == null` is allowed to check for `null` or `undefined`.
 - Always handle the node.js `err` function parameter
+- Always prefix browser globals with `window` – except for `document`
+  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
+    `event`, and `name`.
 - **And more goodness** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
