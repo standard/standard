@@ -156,6 +156,7 @@
         "space-unary-ops": [2, { "words": true, "nonwords": false }],
         "spaced-line-comment": [2, "always"],
         "strict": 0,
+        "no-extra-strict": 0,
         "use-isnan": 2,
         "valid-jsdoc": 0,
         "valid-typeof": 2,
