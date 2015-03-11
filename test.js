@@ -53,9 +53,9 @@ var urls = [
   // 'https://github.com/ngoldman/gh-release.git', // standard v2
   'https://github.com/ngoldman/magnet-link.git',
   'https://github.com/ngoldman/wireframe.css.git',
-  'https://github.com/npm/fstream.git',
+  'https://github.com/npm/fstream.git'
   // 'https://github.com/npm/npm.git' // in progress
-  'https://github.com/othiym23/packard.git'
+  // 'https://github.com/othiym23/packard.git' // eslint class bug (issue #59)
 ]
 
 var modules = {}
