@@ -6,7 +6,6 @@ var debug = require('debug')('standard')
 var findRoot = require('find-root')
 var fs = require('fs')
 var glob = require('glob')
-var Minimatch = require('minimatch').Minimatch
 var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
@@ -56,7 +55,7 @@ function standard (opts) {
     root = findRoot(process.cwd())
   } catch (e) {}
 
-  var ignore = [].concat(DEFAULT_IGNORE) // globs to ignore
+  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE) // globs to ignore
 
   if (root) {
     var packageOpts = require(path.join(root, 'package.json')).standard
@@ -81,17 +80,12 @@ function standard (opts) {
       : [ '**/*.js' ]
 
     // traverse filesystem
-    if (opts.ignore) ignore = ignore.concat(opts.ignore)
-
-    ignore = ignore.map(function (pattern) {
-      return new Minimatch(pattern)
-    })
-
     parallel(patterns.map(function (pattern) {
       return function (cb) {
         glob(pattern, {
           cwd: opts.cwd || process.cwd(),
-          nodir: true
+          nodir: true,
+          ignore: ignore
         }, cb)
       }
     }), function (err, results) {
@@ -104,13 +98,6 @@ function standard (opts) {
         })
         return files
       }, [])
-
-      // apply ignore patterns
-      files = files.filter(function (file) {
-        return !ignore.some(function (mm) {
-          return mm.match(file)
-        })
-      })
 
       // de-dupe
       files = uniq(files)
