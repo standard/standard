@@ -29,10 +29,10 @@ if (argv.help) {
 
   Flags:
       -v, --verbose    Show error codes (so you can ignore specific rules)
+      -F  --format     Automatically format code before linting (using standard-format)
           --stdin      Force processing input from stdin
-          --version    Display the current version
-      -F  --format     format code using standard-format before linting
       -h, --help       Display the help and usage details
+          --version    Display the current version
 
   Report bugs:  https://github.com/feross/standard/issues
 
