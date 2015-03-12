@@ -17,6 +17,7 @@
     "debug": "^2.1.1",
     "eslint": "^0.15.0",
     "find-root": "^0.1.1",
+    "get-stdin": "^4.0.1",
     "glob": "^4.3.5",
     "jscs": "^1.10.0",
     "minimatch": "^2.0.1",
@@ -24,7 +25,8 @@
     "run-auto": "^1.0.0",
     "run-parallel": "^1.0.0",
     "split": "^0.3.2",
-    "standard-format": "^1.2.0",
+    "standard-format": "^1.3.3",
+    "string-to-stream": "^1.0.0",
     "uniq": "^1.0.1",
     "which": "^1.0.8"
   },
