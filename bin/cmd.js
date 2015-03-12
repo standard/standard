@@ -31,8 +31,7 @@ if (argv.help) {
       -v, --verbose    Show error codes (so you can ignore specific rules)
           --stdin      Force processing input from stdin
           --version    Display the current version
-      -F  --format     EXPERIMENTIAL: format code using standard-format before linting
-                       (will not work with stdin)
+      -F  --format     format code using standard-format before linting
       -h, --help       Display the help and usage details
 
   Report bugs:  https://github.com/feross/standard/issues

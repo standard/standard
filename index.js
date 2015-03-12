@@ -11,6 +11,8 @@ var parallel = require('run-parallel')
 var path = require('path')
 var split = require('split')
 var standardFormat = require('standard-format')
+var stdin = require('get-stdin')
+var str = require('string-to-stream')
 var uniq = require('uniq')
 
 var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
@@ -28,6 +30,8 @@ var DEFAULT_IGNORE = [
   '**/bundle.js',
   'coverage/**'
 ]
+
+var stdinData
 
 var ERROR_RE = /.*?:\d+:\d+/
 var FILE_RE = /(.*?):/
@@ -122,7 +126,26 @@ function standard (opts) {
   } else {
     // stdin
     eslintArgs.push('--stdin')
-    lint()
+
+    auto({
+      fetchStdinData: function (cb) {
+        stdin(function (data) {
+          stdinData = data
+          cb(null, data)
+        })
+      },
+      format: ['fetchStdinData', function (cb, r) {
+        if (opts.format) {
+          stdinData = standardFormat.transform(r.fetchStdinData)
+          process.stdout.write(stdinData)
+        }
+        cb(null)
+      }],
+      runlint: ['fetchStdinData', 'format', function (cb, r) {
+        lint()
+        cb(null)
+      }]
+    })
   }
 
   function format (files) {
@@ -163,7 +186,9 @@ function standard (opts) {
     child.on('close', function (code) {
       cb(null, code)
     })
-    if (opts.stdin) process.stdin.pipe(child.stdin)
+    if (opts.stdin) {
+      str(stdinData).pipe(child.stdin)
+    }
     stderrPipe(child.stdout)
     stderrPipe(child.stderr)
   }
