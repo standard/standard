@@ -31,8 +31,6 @@ var DEFAULT_IGNORE = [
   'coverage/**'
 ]
 
-var stdinData
-
 var ERROR_RE = /.*?:\d+:\d+/
 var FILE_RE = /(.*?):/
 var LINE_RE = /.*?:(\d+)/
@@ -74,6 +72,8 @@ function standard (opts) {
   if (opts.verbose) {
     jscsArgs.push('--verbose')
   }
+
+  var stdinData
 
   if ((Array.isArray(opts.files) && opts.files.length > 0) || !opts.stdin) {
     var patterns = (Array.isArray(opts.files) && opts.files.length > 0)
@@ -127,24 +127,16 @@ function standard (opts) {
     // stdin
     eslintArgs.push('--stdin')
 
-    auto({
-      fetchStdinData: function (cb) {
-        stdin(function (data) {
-          stdinData = data
-          cb(null, data)
-        })
-      },
-      format: ['fetchStdinData', function (cb, r) {
-        if (opts.format) {
-          stdinData = standardFormat.transform(r.fetchStdinData)
-          process.stdout.write(stdinData)
-        }
-        cb(null)
-      }],
-      runlint: ['fetchStdinData', 'format', function (cb, r) {
-        lint()
-        cb(null)
-      }]
+    stdin(function (data) {
+      stdinData = data
+
+      if (opts.format) {
+        stdinData = standardFormat.transform(stdinData)
+        process.stdout.write(stdinData)
+        process.stderr.write('\n')
+      }
+
+      lint()
     })
   }
 
