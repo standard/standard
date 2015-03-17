@@ -22,7 +22,12 @@ var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
 var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
-var DEFAULT_IGNORE = [
+var DEFAULT_PATTERNS = [
+  '**/*.js',
+  '**/*.jsx'
+]
+
+var DEFAULT_IGNORE_PATTERNS = [
   '**/node_modules/**',
   '.git/**',
   '**/*.min.js',
@@ -55,7 +60,8 @@ function standard (opts) {
     root = findRoot(process.cwd())
   } catch (e) {}
 
-  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE) // globs to ignore
+  // Merge user ignore patterns and default ignore patterns
+  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
 
   if (root) {
     var packageOpts = require(path.join(root, 'package.json')).standard
@@ -77,7 +83,7 @@ function standard (opts) {
   if ((Array.isArray(opts.files) && opts.files.length > 0) || !opts.stdin) {
     var patterns = (Array.isArray(opts.files) && opts.files.length > 0)
       ? opts.files
-      : [ '**/*.js' ]
+      : DEFAULT_PATTERNS
 
     // traverse filesystem
     parallel(patterns.map(function (pattern) {
