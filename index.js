@@ -30,7 +30,7 @@ var DEFAULT_IGNORE = [
   'coverage/**'
 ]
 
-var ERROR_RE = /.*?:\d+:\d+/
+var ERROR_RE = /.*?:\d+:\d+:/
 var FILE_RE = /(.*?):/
 var LINE_RE = /.*?:(\d+)/
 var COL_RE = /.*?:\d+:(\d+)/
@@ -220,10 +220,15 @@ function standard (opts) {
         console.error('  ' + str) // indent
       })
 
-    if (unexpectedOutput.length) console.error('\nUnexpected Linter Output:')
+    if (unexpectedOutput.length) {
+      console.error('\nUnexpected Linter Output:')
+    }
     unexpectedOutput.forEach(function (str) {
       console.error(str)
     })
+    if (unexpectedOutput.length) {
+      console.error('\nIf you think this is a bug in `standard`, open an issue: https://github.com/feross/standard')
+    }
 
     process.exit(1)
   }
