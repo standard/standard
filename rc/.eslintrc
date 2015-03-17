@@ -1,4 +1,10 @@
 {
+    "ecmaFeatures": {
+        "globalReturn": true,
+        "jsx": true,
+        "modules": true
+    },
+
     "env": {
         "browser": false,
         "es6": true,
@@ -13,11 +19,6 @@
         "window": false
     },
 
-    "ecmaFeatures": {
-        "globalReturn": true,
-        "jsx": true,
-        "modules": true
-    },
 
     "rules": {
         "block-scoped-var": 0,
