@@ -15,12 +15,17 @@
 No decisions to make. No `.jshintrc`, `.jscsrc`, or `.eslintrc` files to manage. It just
 works.
 
-This module saves you time in two ways:
+This module saves you (and others!) time in two ways:
 
 - **No configuration.** The easiest way to enforce consistent style in your
   module/project. Just drop it in.
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
+
+Adopting `standard` style means ranking the importance of community conventions
+higher than personal style, which does not make sense for 100% of projects and development
+cultures. At the same time, open source can be a hostile place for newbies. Setting up 
+clear, automated contributor expectations makes a project healthier.
 
 ## Install
 
