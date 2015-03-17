@@ -2,6 +2,7 @@
   "disallowMultipleVarDecl": "exceptUndefined",
   "disallowOperatorBeforeLineBreak": ["."],
   "esnext": true,
+  "esprima" : "esprima-fb",
   "requireOperatorBeforeLineBreak": ["=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "requireSpacesInForStatement": true,
   "validateLineBreaks": "LF"
