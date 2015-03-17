@@ -46,7 +46,7 @@ npm install standard
 - Always use `===` instead of `==`
   - Except `obj == null` is allowed to check for `null` or `undefined`.
 - Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except for `document`
+- Always prefix browser globals with `window` – except `document` and `navigator` are okay
   - Prevents accidental use of poorly-named browser globals like `open`, `length`,
     `event`, and `name`.
 - **And more goodness** – *give `standard` a try today!*
