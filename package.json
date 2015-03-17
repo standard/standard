@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "debug": "^2.1.1",
-    "eslint": "^0.16.0",
+    "eslint": "^0.17.0",
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
     "glob": "^5.0.0",
