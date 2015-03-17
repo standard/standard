@@ -24,7 +24,7 @@ var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
 var DEFAULT_IGNORE = [
-  '**/node_modules/**',
+  '**/package.json',
   '.git/**',
   '**/*.min.js',
   '**/bundle.js',
@@ -80,12 +80,10 @@ function standard (opts) {
       ? opts.files
       : [ '**/*.js' ]
 
+    patterns.push('**/package.json')
+
     // traverse filesystem
     if (opts.ignore) ignore = ignore.concat(opts.ignore)
-
-    ignore = ignore.map(function (pattern) {
-      return new Minimatch(pattern)
-    })
 
     parallel(patterns.map(function (pattern) {
       return function (cb) {
@@ -105,6 +103,21 @@ function standard (opts) {
         return files
       }, [])
 
+      // de-dupe
+      files = uniq(files)
+
+      // add dir/node_modules/** ignore for any dir with package.json
+      files.forEach(function (file) {
+        if (path.basename(file) === 'package.json') {
+          ignore.push(path.join(path.dirname(file), 'node_modules/**'))
+        }
+      })
+
+      // regexify ignore globs
+      ignore = ignore.map(function (pattern) {
+        return new Minimatch(pattern)
+      })
+
       // apply ignore patterns
       files = files.filter(function (file) {
         return !ignore.some(function (mm) {
@@ -112,8 +125,6 @@ function standard (opts) {
         })
       })
 
-      // de-dupe
-      files = uniq(files)
       if (files.length > 0) {
         if (opts.format) {
           format(files)
