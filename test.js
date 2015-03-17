@@ -45,17 +45,17 @@ var urls = [
   'https://github.com/mafintosh/level-logs.git',
   'https://github.com/mafintosh/level-temp.git',
   'https://github.com/mafintosh/node-gyp-install.git',
-  // 'https://github.com/mafintosh/peerflix.git', // standard v2
+  // 'https://github.com/mafintosh/peerflix.git', // still using standard v2
   'https://github.com/mafintosh/swap-to-level.git',
   'https://github.com/mafintosh/telephone.git',
   'https://github.com/mafintosh/what-line-is-this.git',
   'https://github.com/maxogden/standard-format.git',
-  // 'https://github.com/ngoldman/gh-release.git', // standard v2
+  // 'https://github.com/ngoldman/gh-release.git', // still using standard v2
   'https://github.com/ngoldman/magnet-link.git',
   'https://github.com/ngoldman/wireframe.css.git',
-  'https://github.com/npm/fstream.git'
+  'https://github.com/npm/fstream.git',
   // 'https://github.com/npm/npm.git' // in progress
-  // 'https://github.com/othiym23/packard.git' // eslint class bug (issue #59)
+  'https://github.com/othiym23/packard.git'
 ]
 
 var modules = {}
