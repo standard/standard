@@ -29,7 +29,7 @@ var urls = [
   'https://github.com/brandonhorst/empty.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/bittorrent-protocol.git',
-  // 'https://github.com/feross/bittorrent-tracker.git', // needs eslint 0.17.1+
+  'https://github.com/feross/bittorrent-tracker.git',
   'https://github.com/feross/buffer.git',
   'https://github.com/feross/magnet-uri.git',
   'https://github.com/feross/parse-torrent.git',
