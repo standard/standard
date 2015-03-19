@@ -2,6 +2,7 @@
 
 var minimist = require('minimist')
 var standard = require('../')
+var stdin = require('get-stdin')
 
 var argv = minimist(process.argv.slice(2), {
   alias: {
@@ -45,6 +46,7 @@ if (argv.help) {
           --version   Show current version.
       -h, --help      Show usage information.
 
+  Readme:  https://github.com/feross/standard
   Report bugs:  https://github.com/feross/standard/issues
 
   */
@@ -57,13 +59,20 @@ if (argv.version) {
   process.exit(0)
 }
 
-standard({
+var lintOpts = {
   cwd: process.cwd(),
-  files: argv._,
-  format: argv.format,
-  stdin: argv.stdin,
-  verbose: argv.verbose
-}, function (err, result) {
+  format: argv.format
+}
+
+if (argv.stdin) {
+  stdin(function (text) {
+    standard.lintText(text, lintOpts, onResult)
+  })
+} else {
+  standard.lintFiles(argv._, lintOpts, onResult)
+}
+
+function onResult (err, result) {
   if (err) return error(err)
   if (result.errorCount === 0) process.exit(0)
 

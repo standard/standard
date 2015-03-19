@@ -1,5 +1,7 @@
-module.exports = standard
+module.exports.lintText = lintText
+module.exports.lintFiles = lintFiles
 
+var dezalgo = require('dezalgo')
 var eslint = require('eslint')
 var findRoot = require('find-root')
 var fs = require('fs')
@@ -7,10 +9,7 @@ var glob = require('glob')
 var parallel = require('run-parallel')
 var path = require('path')
 var standardFormat = require('standard-format')
-var stdin = require('get-stdin')
 var uniq = require('uniq')
-
-var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
 
 var DEFAULT_PATTERNS = [
   '**/*.js',
@@ -25,99 +24,116 @@ var DEFAULT_IGNORE_PATTERNS = [
   '**/bundle.js'
 ]
 
+var ESLINT_CONFIG = { configFile: path.join(__dirname, 'rc', '.eslintrc') }
+
 /**
- * JavaScript Standard Style
+ * Lint text to enforce JavaScript Standard Style.
  *
- * @param {Object} opts                        options object
- * @param {string|Array.<String>} opts.ignore  files to ignore
- * @param {string} opts.cwd                    current working directory
- * @param {Array.<string>} opts.files          files to check
- * @param {boolean} opts.stdin                 read file text from stdin
- * @param {boolean} opts.format                automatically format code
+ * @param {string} text                 file text to lint
+ * @param {Object} opts                 options object
+ * @param {Array.<String>} opts.ignore  files to ignore
+ * @param {string} opts.cwd             current working directory
+ * @param {boolean} opts.format         automatically format code
  */
-function standard (opts, cb) {
-  var root, result
-  if (!opts) opts = {}
+function lintText (text, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+  opts = parseOpts(opts)
+  cb = dezalgo(cb)
 
-  try {
-    root = findRoot(process.cwd())
-  } catch (e) {}
-
-  // Merge user ignore patterns and default ignore patterns
-  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
-
-  if (root) {
-    var packageOpts = require(path.join(root, 'package.json')).standard
-    if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
+  // TODO: Move format into its own function
+  if (opts.format) {
+    text = standardFormat.transform(text)
+    process.stdout.write(text)
   }
 
-  if (opts.stdin) {
-    stdin(function (text) {
-      if (opts.format) {
-        text = standardFormat.transform(text)
-        process.stdout.write(text)
-      }
-      try {
-        result = lintText(text)
-      } catch (err) {
-        return cb(err)
-      }
-      return cb(null, result)
-    })
+  var result
+  try {
+    result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnText(text)
+  } catch (err) {
+    return cb(err)
+  }
+  return cb(null, result)
+}
 
-  } else {
-    if (!Array.isArray(opts.files) || opts.files.length === 0) {
-      opts.files = DEFAULT_PATTERNS
+/**
+ * Lint files to enforce JavaScript Standard Style.
+ *
+ * @param {Array.<string>} files        file globs to lint
+ * @param {Object} opts                 options object
+ * @param {Array.<String>} opts.ignore  files to ignore
+ * @param {string} opts.cwd             current working directory
+ * @param {boolean} opts.format         automatically format code
+ */
+function lintFiles (files, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+  opts = parseOpts(opts)
+  cb = dezalgo(cb)
+
+  if (typeof files === 'string') files = [ files ]
+  if (files.length === 0) files = DEFAULT_PATTERNS
+
+  // traverse filesystem
+  parallel(files.map(function (pattern) {
+    return function (cb) {
+      glob(pattern, {
+        cwd: opts.cwd,
+        ignore: opts.ignore,
+        nodir: true
+      }, cb)
+    }
+  }), function (err, results) {
+    if (err) return cb(err)
+
+    // flatten nested arrays
+    var files = results.reduce(function (files, result) {
+      result.forEach(function (file) {
+        files.push(file)
+      })
+      return files
+    }, [])
+
+    // de-dupe
+    files = uniq(files)
+
+    // TODO: Move format into its own function
+    if (opts.format) {
+      files.forEach(function (file) {
+        // TODO: remove sync call
+        var data = fs.readFileSync(file).toString()
+        fs.writeFileSync(file, standardFormat.transform(data))
+      })
     }
 
-    // traverse filesystem
-    parallel(opts.files.map(function (pattern) {
-      return function (cb) {
-        glob(pattern, {
-          cwd: opts.cwd || process.cwd(),
-          nodir: true,
-          ignore: ignore
-        }, cb)
-      }
-    }), function (err, results) {
-      if (err) return cb(err)
+    var result
+    try {
+      result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnFiles(files)
+    } catch (err) {
+      return cb(err)
+    }
+    return cb(null, result)
+  })
+}
 
-      // flatten nested arrays
-      var files = results.reduce(function (files, result) {
-        result.forEach(function (file) {
-          files.push(file)
-        })
-        return files
-      }, [])
+function parseOpts (opts) {
+  if (!opts) opts = {}
 
-      // de-dupe
-      files = uniq(files)
+  if (!opts.cwd) opts.cwd = process.cwd()
 
-      if (files.length > 0) {
-        if (opts.format) format(files)
-        try {
-          result = lintFiles(files)
-        } catch (err) {
-          return cb(err)
-        }
-        return cb(null, result)
-      }
-    })
-  }
+  // Add user ignore patterns to default ignore patterns
+  opts.ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
 
-  function format (files) {
-    files.forEach(function (file) {
-      // TODO: remove sync call
-      var data = fs.readFileSync(file).toString()
-      fs.writeFileSync(file, standardFormat.transform(data))
-    })
-  }
+  // Add additional ignore patterns from the closest `package.json`
+  try {
+    var root = findRoot(opts.cwd)
+    var packageOpts = require(path.join(root, 'package.json')).standard
+    if (packageOpts) opts.ignore = opts.ignore.concat(packageOpts.ignore)
+  } catch (e) {}
 
-  function lintText (text) {
-    return new eslint.CLIEngine({ configFile: ESLINT_RC }).executeOnText(text)
-  }
-
-  function lintFiles (files) {
-    return new eslint.CLIEngine({ configFile: ESLINT_RC }).executeOnFiles(files)
-  }
+  return opts
 }
