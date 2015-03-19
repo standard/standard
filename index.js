@@ -2,7 +2,6 @@ module.exports = standard
 
 var auto = require('run-auto')
 var cp = require('child_process')
-var debug = require('debug')('standard')
 var findRoot = require('find-root')
 var fs = require('fs')
 var glob = require('glob')
@@ -149,7 +148,6 @@ function standard (opts) {
   }
 
   function spawn (command, args, cb) {
-    debug(command + ' ' + args.join(' '))
     var child = cp.spawn(command, args)
     child.on('error', cb)
     child.on('close', function (code) {
