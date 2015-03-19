@@ -1,21 +1,16 @@
 module.exports = standard
 
-var auto = require('run-auto')
-var cp = require('child_process')
+var eslint = require('eslint')
 var findRoot = require('find-root')
 var fs = require('fs')
 var glob = require('glob')
 var parallel = require('run-parallel')
 var path = require('path')
-var split = require('split')
 var standardFormat = require('standard-format')
 var stdin = require('get-stdin')
-var str = require('string-to-stream')
 var uniq = require('uniq')
 
 var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
-var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
-var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
 
 var DEFAULT_PATTERNS = [
   '**/*.js',
@@ -25,15 +20,10 @@ var DEFAULT_PATTERNS = [
 var DEFAULT_IGNORE_PATTERNS = [
   '**/node_modules/**',
   '.git/**',
+  'coverage/**',
   '**/*.min.js',
-  '**/bundle.js',
-  'coverage/**'
+  '**/bundle.js'
 ]
-
-var ERROR_RE = /.*?:\d+:\d+:/
-var FILE_RE = /(.*?):/
-var LINE_RE = /.*?:(\d+)/
-var COL_RE = /.*?:\d+:(\d+)/
 
 /**
  * JavaScript Standard Style
@@ -42,15 +32,13 @@ var COL_RE = /.*?:\d+:(\d+)/
  * @param {string|Array.<String>} opts.ignore  files to ignore
  * @param {string} opts.cwd                    current working directory
  * @param {Array.<string>} opts.files          files to check
- * @param {boolean} opts.stdin                 check text from stdin instead of filesystem
- * @param {boolean} opts.verbose               show error codes
- * @param {boolean} opts.format                format code using standard-format before linting
+ * @param {boolean} opts.stdin                 read file text from stdin
+ * @param {boolean} opts.format                automatically format code
  */
-function standard (opts) {
+function standard (opts, cb) {
+  var root, result
   if (!opts) opts = {}
-  var errors = []
 
-  var root
   try {
     root = findRoot(process.cwd())
   } catch (e) {}
@@ -63,18 +51,27 @@ function standard (opts) {
     if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
   }
 
-  var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
-  var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
+  if (opts.stdin) {
+    stdin(function (text) {
+      if (opts.format) {
+        text = standardFormat.transform(text)
+        process.stdout.write(text)
+      }
+      try {
+        result = lintText(text)
+      } catch (err) {
+        return cb(err)
+      }
+      return cb(null, result)
+    })
 
-  var stdinData
-
-  if ((Array.isArray(opts.files) && opts.files.length > 0) || !opts.stdin) {
-    var patterns = (Array.isArray(opts.files) && opts.files.length > 0)
-      ? opts.files
-      : DEFAULT_PATTERNS
+  } else {
+    if (!Array.isArray(opts.files) || opts.files.length === 0) {
+      opts.files = DEFAULT_PATTERNS
+    }
 
     // traverse filesystem
-    parallel(patterns.map(function (pattern) {
+    parallel(opts.files.map(function (pattern) {
       return function (cb) {
         glob(pattern, {
           cwd: opts.cwd || process.cwd(),
@@ -83,7 +80,7 @@ function standard (opts) {
         }, cb)
       }
     }), function (err, results) {
-      if (err) return error(err)
+      if (err) return cb(err)
 
       // flatten nested arrays
       var files = results.reduce(function (files, result) {
@@ -95,134 +92,32 @@ function standard (opts) {
 
       // de-dupe
       files = uniq(files)
+
       if (files.length > 0) {
-        if (opts.format) {
-          format(files)
+        if (opts.format) format(files)
+        try {
+          result = lintFiles(files)
+        } catch (err) {
+          return cb(err)
         }
-        eslintArgs = eslintArgs.concat(files)
-        lint()
+        return cb(null, result)
       }
-    })
-  } else {
-    // stdin
-    eslintArgs.push('--stdin')
-
-    stdin(function (data) {
-      stdinData = data
-
-      if (opts.format) {
-        stdinData = standardFormat.transform(stdinData)
-        process.stdout.write(stdinData)
-        process.stderr.write('\n')
-      }
-
-      lint()
     })
   }
 
   function format (files) {
     files.forEach(function (file) {
+      // TODO: remove sync call
       var data = fs.readFileSync(file).toString()
       fs.writeFileSync(file, standardFormat.transform(data))
     })
   }
 
-  function lint () {
-    auto({
-      eslintPath: findBinPath.bind(undefined, 'eslint'),
-      eslint: ['eslintPath', function (cb, r) {
-        spawn(r.eslintPath, eslintArgs, cb)
-      }]
-    }, function (err, r) {
-      if (err) return error(err)
-      if (r.eslint !== 0) printErrors()
-    })
+  function lintText (text) {
+    return new eslint.CLIEngine({ configFile: ESLINT_RC }).executeOnText(text)
   }
 
-  function findBinPath (bin, cb) {
-    var opts = { cwd: __dirname }
-    cp.exec('npm run --silent which-' + bin, opts, function (err, stdout) {
-      if (err) return cb(err)
-      cb(null, stdout.toString().replace(/\n/g, ''))
-    })
+  function lintFiles (files) {
+    return new eslint.CLIEngine({ configFile: ESLINT_RC }).executeOnFiles(files)
   }
-
-  function spawn (command, args, cb) {
-    var child = cp.spawn(command, args)
-    child.on('error', cb)
-    child.on('close', function (code) {
-      cb(null, code)
-    })
-    if (opts.stdin) {
-      str(stdinData).pipe(child.stdin)
-    }
-    stderrPipe(child.stdout)
-    stderrPipe(child.stderr)
-  }
-
-  function stderrPipe (readable) {
-    readable
-      .pipe(split())
-      .on('data', function (line) {
-        if (line === '') return
-        errors.push(line)
-      })
-  }
-
-  function printErrors () {
-    console.error('Error: Use JavaScript Standard Style (https://github.com/feross/standard)')
-    var unexpectedOutput = []
-    var errMap = {}
-    errors
-      .map(function (str) { // normalize stdin "filename"
-        return str.replace(/^(<text>|input)/, 'stdin')
-      })
-      .filter(function (str) {
-        // don't process unexpected/malformed output, just print it at the end
-        if (!ERROR_RE.test(str)) {
-          unexpectedOutput.push(str)
-          return false
-        }
-
-        // de-duplicate errors
-        if (errMap[str]) return false
-        errMap[str] = true
-        return true
-      })
-      .sort(function (a, b) {
-        // sort by line number (merges output from all linters)
-        var fileA = FILE_RE.exec(a)[1]
-        var fileB = FILE_RE.exec(b)[1]
-
-        var lineA = Number(LINE_RE.exec(a)[1])
-        var lineB = Number(LINE_RE.exec(b)[1])
-
-        var colA = Number(COL_RE.exec(a)[1])
-        var colB = Number(COL_RE.exec(b)[1])
-
-        if (fileA !== fileB) return fileA < fileB ? -1 : 1
-        if (lineA !== lineB) return lineA - lineB
-        return colA - colB
-      })
-      .forEach(function (str) {
-        console.error('  ' + str) // indent
-      })
-
-    if (unexpectedOutput.length) {
-      console.error('\nUnexpected Linter Output:')
-    }
-    unexpectedOutput.forEach(function (str) {
-      console.error(str)
-    })
-    if (unexpectedOutput.length) {
-      console.error('\nIf you think this is a bug in `standard`, open an issue: https://github.com/feross/standard')
-    }
-
-    process.exit(1)
-  }
-}
-
-function error (err) {
-  console.error(err.stack || err.message || err)
-  process.exit(1)
 }

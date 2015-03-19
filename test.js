@@ -87,7 +87,7 @@ function runTests (err) {
     return function (cb) {
       process.stderr.write(name + ': ')
       var cwd = path.join(TMP, name)
-      spawn(STANDARD, ['--verbose'], { cwd: cwd }, function (err) {
+      spawn(STANDARD, [], { cwd: cwd }, function (err) {
         if (err) {
           console.error('not ok')
           errored = true

@@ -96,7 +96,7 @@ case would be checking the style of all JavaScript files in the current working 
 
 ```
 $ standard
-Error: Code style check failed:
+Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
@@ -128,7 +128,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
   ```
   $ npm test
-  Error: Code style check failed:
+  Error: Use JavaScript Standard Style
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
@@ -171,8 +171,8 @@ a `standard.ignore` property to `package.json`:
 
 Yes! Just run `standard --format filename.js`. This uses
 [Max Ogden](https://github.com/maxogden)'s automatic formatter
-**[`standard-format`](https://github.com/maxogden/standard-format)**, which can
-automatically fix most code style issues.
+[`standard-format`](https://github.com/maxogden/standard-format), which can automatically
+fix most code issues.
 
 While most issues can be fixed, some, like not handling errors, must be fixed manually.
 
@@ -187,8 +187,8 @@ To get verbose output (so you can find the particular rule name to ignore), run:
 
 ```bash
 $ standard --verbose
-Error: Code style check failed:
-  routes/error.js:20:36: 'file' was used before it was defined. (eslint/no-use-before-define)
+Error: Use JavaScript Standard Style
+  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
 Disable **all rules** on a specific line:
