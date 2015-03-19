@@ -17,11 +17,9 @@
     "debug": "^2.1.1",
     "eslint": "^0.17.0",
     "eslint-plugin-react": "^1.5.0",
-    "esprima-fb": "^13001.1001.0-dev-harmony-fb",
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
     "glob": "^5.0.0",
-    "jscs": "git://github.com/jscs-dev/node-jscs.git#5503c334065f27d7ff227c33c5db2746db863dcd",
     "minimist": "^1.1.0",
     "run-auto": "^1.0.0",
     "run-parallel": "^1.0.0",
@@ -39,6 +37,7 @@
   },
   "homepage": "https://github.com/feross/standard",
   "keywords": [
+    "standard",
     "style checker",
     "code style",
     "code checker",
@@ -49,14 +48,13 @@
     "style",
     "code",
     "lint",
-    "jshint",
     "eslint",
+    "jshint",
     "jscs",
     "hint",
     "enforce",
     "check",
     "verify",
-    "standard",
     "quality",
     "checker",
     "code standards",
@@ -72,8 +70,7 @@
   },
   "scripts": {
     "test": "node ./bin/cmd.js && node ./test.js",
-    "which-eslint": "which eslint",
-    "which-jscs": "which jscs"
+    "which-eslint": "which eslint"
   },
   "standard": {
     "ignore": "tmp/**"

@@ -14,10 +14,6 @@ var stdin = require('get-stdin')
 var str = require('string-to-stream')
 var uniq = require('uniq')
 
-var JSCS_RC = path.join(__dirname, 'rc', '.jscsrc')
-var JSCS_REPORTER = path.join(__dirname, 'lib', 'jscs-reporter.js')
-var JSCS_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'jscs-reporter-verbose.js')
-
 var ESLINT_RC = path.join(__dirname, 'rc', '.eslintrc')
 var ESLINT_REPORTER = path.join(__dirname, 'lib', 'eslint-reporter.js')
 var ESLINT_REPORTER_VERBOSE = path.join(__dirname, 'lib', 'eslint-reporter-verbose.js')
@@ -68,15 +64,8 @@ function standard (opts) {
     if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
   }
 
-  var jscsReporter = opts.verbose ? JSCS_REPORTER_VERBOSE : JSCS_REPORTER
-  var jscsArgs = ['--config', JSCS_RC, '--reporter', jscsReporter]
-
   var eslintReporter = opts.verbose ? ESLINT_REPORTER_VERBOSE : ESLINT_REPORTER
   var eslintArgs = ['--config', ESLINT_RC, '--format', eslintReporter]
-
-  if (opts.verbose) {
-    jscsArgs.push('--verbose')
-  }
 
   var stdinData
 
@@ -111,7 +100,6 @@ function standard (opts) {
         if (opts.format) {
           format(files)
         }
-        jscsArgs = jscsArgs.concat(files)
         eslintArgs = eslintArgs.concat(files)
         lint()
       }
@@ -143,16 +131,12 @@ function standard (opts) {
   function lint () {
     auto({
       eslintPath: findBinPath.bind(undefined, 'eslint'),
-      jscsPath: findBinPath.bind(undefined, 'jscs'),
       eslint: ['eslintPath', function (cb, r) {
         spawn(r.eslintPath, eslintArgs, cb)
-      }],
-      jscs: ['jscsPath', function (cb, r) {
-        spawn(r.jscsPath, jscsArgs, cb)
       }]
     }, function (err, r) {
       if (err) return error(err)
-      if (r.eslint !== 0 || r.jscs !== 0) printErrors()
+      if (r.eslint !== 0) printErrors()
     })
   }
 
