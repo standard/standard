@@ -15,11 +15,14 @@ var argv = minimist(process.argv.slice(2), {
     'stdin',
     'verbose',
     'version'
-  ],
-  default: {
-    stdin: !process.stdin.isTTY
-  }
+  ]
 })
+
+// running `standard -` is equivalent to `standard --stdin`
+if (argv._[0] === '-') {
+  argv.stdin = true
+  argv._.shift()
+}
 
 if (argv.help) {
   console.log(function () {
