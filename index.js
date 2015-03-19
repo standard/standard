@@ -31,6 +31,7 @@ var ESLINT_CONFIG = { configFile: path.join(__dirname, 'rc', '.eslintrc') }
  * @param {Object} opts                 options object
  * @param {Array.<String>} opts.ignore  files to ignore
  * @param {string} opts.cwd             current working directory
+ * @param {function(Error, Object)} cb  callback
  */
 function lintText (text, opts, cb) {
   if (typeof opts === 'function') {
@@ -56,6 +57,7 @@ function lintText (text, opts, cb) {
  * @param {Object} opts                 options object
  * @param {Array.<String>} opts.ignore  files to ignore
  * @param {string} opts.cwd             current working directory
+ * @param {function(Error, Object)} cb  callback
  */
 function lintFiles (files, opts, cb) {
   if (typeof opts === 'function') {
