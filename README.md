@@ -43,12 +43,10 @@ npm install standard
     - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
-- Name the context variable `self`
-  - `var self = this`
-  - Accidental use of [`window.self`][4] is dissallowed (happens when `var self = this` is
+- Name the context variable `self` – `var self = this`
+  - Accidental [`window.self`][4] usage is dissallowed (happens when `var self = this` is
     omitted)
-- Always use `===` instead of `==`
-  - Except `obj == null` is allowed to check for `null` or `undefined`.
+- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
 - Always prefix browser globals with `window` – except `document` and `navigator` are okay
   - Prevents accidental use of poorly-named browser globals like `open`, `length`,
