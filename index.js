@@ -4,11 +4,9 @@ module.exports.lintFiles = lintFiles
 var dezalgo = require('dezalgo')
 var eslint = require('eslint')
 var findRoot = require('find-root')
-var fs = require('fs')
 var glob = require('glob')
 var parallel = require('run-parallel')
 var path = require('path')
-var standardFormat = require('standard-format')
 var uniq = require('uniq')
 
 var DEFAULT_PATTERNS = [
@@ -33,7 +31,6 @@ var ESLINT_CONFIG = { configFile: path.join(__dirname, 'rc', '.eslintrc') }
  * @param {Object} opts                 options object
  * @param {Array.<String>} opts.ignore  files to ignore
  * @param {string} opts.cwd             current working directory
- * @param {boolean} opts.format         automatically format code
  */
 function lintText (text, opts, cb) {
   if (typeof opts === 'function') {
@@ -42,12 +39,6 @@ function lintText (text, opts, cb) {
   }
   opts = parseOpts(opts)
   cb = dezalgo(cb)
-
-  // TODO: Move format into its own function
-  if (opts.format) {
-    text = standardFormat.transform(text)
-    process.stdout.write(text)
-  }
 
   var result
   try {
@@ -65,7 +56,6 @@ function lintText (text, opts, cb) {
  * @param {Object} opts                 options object
  * @param {Array.<String>} opts.ignore  files to ignore
  * @param {string} opts.cwd             current working directory
- * @param {boolean} opts.format         automatically format code
  */
 function lintFiles (files, opts, cb) {
   if (typeof opts === 'function') {
@@ -101,14 +91,8 @@ function lintFiles (files, opts, cb) {
     // de-dupe
     files = uniq(files)
 
-    // TODO: Move format into its own function
-    if (opts.format) {
-      files.forEach(function (file) {
-        // TODO: remove sync call
-        var data = fs.readFileSync(file).toString()
-        fs.writeFileSync(file, standardFormat.transform(data))
-      })
-    }
+    // undocumented – do not use (used by bin/cmd.js)
+    if (opts._onFiles) opts._onFiles(files)
 
     var result
     try {

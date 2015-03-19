@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+var fs = require('fs')
 var minimist = require('minimist')
 var standard = require('../')
+var standardFormat = require('standard-format')
 var stdin = require('get-stdin')
 
 var argv = minimist(process.argv.slice(2), {
@@ -59,16 +61,24 @@ if (argv.version) {
   process.exit(0)
 }
 
-var lintOpts = {
-  cwd: process.cwd(),
-  format: argv.format
-}
-
 if (argv.stdin) {
   stdin(function (text) {
-    standard.lintText(text, lintOpts, onResult)
+    if (argv.format) {
+      text = standardFormat.transform(text)
+      process.stdout.write(text)
+    }
+    standard.lintText(text, onResult)
   })
 } else {
+  var lintOpts = {}
+  if (argv.format) {
+    lintOpts._onFiles = function (files) {
+      files.forEach(function (file) {
+        var data = fs.readFileSync(file).toString()
+        fs.writeFileSync(file, standardFormat.transform(data))
+      })
+    }
+  }
   standard.lintFiles(argv._, lintOpts, onResult)
 }
 
@@ -92,7 +102,7 @@ function onResult (err, result) {
   })
 
   process.exit(1)
-})
+}
 
 function error (err) {
   console.error('Unexpected Linter Output:\n')
