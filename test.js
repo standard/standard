@@ -9,7 +9,7 @@
  */
 
 var cp = require('child_process')
-var extend = require('extend.js')
+var extend = require('xtend')
 var minimist = require('minimist')
 var mkdirp = require('mkdirp')
 var path = require('path')

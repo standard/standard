@@ -30,10 +30,10 @@
     "which": "^1.0.8"
   },
   "devDependencies": {
-    "extend.js": "0.0.2",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
-    "run-series": "^1.0.2"
+    "run-series": "^1.0.2",
+    "xtend": "^4.0.0"
   },
   "homepage": "https://github.com/feross/standard",
   "keywords": [
