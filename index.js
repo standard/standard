@@ -22,7 +22,10 @@ var DEFAULT_IGNORE_PATTERNS = [
   '**/bundle.js'
 ]
 
-var ESLINT_CONFIG = { configFile: path.join(__dirname, 'rc', '.eslintrc') }
+var ESLINT_CONFIG = {
+  configFile: path.join(__dirname, 'rc', '.eslintrc'),
+  useEslintrc: false
+}
 
 /**
  * Lint text to enforce JavaScript Standard Style.
