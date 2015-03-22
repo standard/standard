@@ -21,7 +21,7 @@
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
     "glob": "^5.0.0",
-    "jscs": "jscs-dev/node-jscs#5503c334065f27d7ff227c33c5db2746db863dcd",
+    "jscs": "git://github.com/jscs-dev/node-jscs.git#5503c334065f27d7ff227c33c5db2746db863dcd",
     "minimist": "^1.1.0",
     "run-auto": "^1.0.0",
     "run-parallel": "^1.0.0",
