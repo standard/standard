@@ -16,7 +16,11 @@
         "escape": false,
         "navigator": false,
         "unescape": false,
-        "window": false
+        "window": false,
+        
+        "self": false,
+        "close": false,
+        "importScripts": false
     },
 
     "plugins": [
