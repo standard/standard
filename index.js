@@ -32,8 +32,8 @@ var ESLINT_CONFIG = {
  *
  * @param {string} text                 file text to lint
  * @param {Object} opts                 options object
- * @param {Array.<String>} opts.ignore  files to ignore
- * @param {string} opts.cwd             current working directory
+ * @param {Array.<String>} opts.ignore  file globs to ignore (has sane defaults)
+ * @param {string} opts.cwd             current working directory (default: process.cwd())
  * @param {function(Error, Object)} cb  callback
  */
 function lintText (text, opts, cb) {
@@ -58,8 +58,8 @@ function lintText (text, opts, cb) {
  *
  * @param {Array.<string>} files        file globs to lint
  * @param {Object} opts                 options object
- * @param {Array.<String>} opts.ignore  files to ignore
- * @param {string} opts.cwd             current working directory
+ * @param {Array.<String>} opts.ignore  file globs to ignore (has sane defaults)
+ * @param {string} opts.cwd             current working directory (default: process.cwd())
  * @param {function(Error, Object)} cb  callback
  */
 function lintFiles (files, opts, cb) {
