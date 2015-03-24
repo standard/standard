@@ -40,8 +40,7 @@ npm install standard
 - **No unused variables** – this one catches *tons* of bugs!
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
-  - Instead, use `;[1, 2, 3].join(' ')`
-  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
+    - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
 - Name the context variable `self`
