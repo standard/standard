@@ -235,6 +235,19 @@ able to read its output. The solution is to make `standard` print to `stdout` in
 standard 2>&1 | grep variable
 ```
 
+### What about Web Workers?
+
+Web workers have a magic global variable called `self`. In regular JS files, `standard`
+won't let you use `self` directly, as it wants to prevent accidental use of
+`window.self`. But `standard` has no way of knowing when you are in a `worker` and
+therefore does not know when to allow usage of `self` directly.
+
+Until we figure out a better solution, we recommend adding this to the top of workers:
+
+```
+/* global self */
+```
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
