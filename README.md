@@ -134,6 +134,14 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
 3. Never give style feedback on a pull request again!
 
+### Git `pre-commit` hook
+```sh
+#!/bin/sh
+# Ensure all javascript files staged for commit pass standard code style
+git diff --name-only --cached --relative | grep '\.js$' | xargs standard
+exit $?
+```
+
 ## FAQ
 
 ### Why would I use JavaScript Standard Style?
