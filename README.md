@@ -248,6 +248,9 @@ Until we figure out a better solution, we recommend adding this to the top of wo
 /* global self */
 ```
 
+This lets `standard` (as well as humans reading your code) know that `self` is a global
+in web worker code.
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
