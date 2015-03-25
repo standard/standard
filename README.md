@@ -62,7 +62,7 @@ npm install standard
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style.
+in JavaScript Standard Style, or check out some of [the repositories](https://github.com/feross/standard/blob/master/test.js) that use `standard`.
 
 ## Badge
 
