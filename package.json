@@ -65,8 +65,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "node ./bin/cmd.js && node ./test.js",
-    "which-eslint": "which eslint"
+    "test": "node ./bin/cmd.js && node ./test.js"
   },
   "standard": {
     "ignore": "tmp/**"
