@@ -165,7 +165,7 @@
         "sort-vars": 0,
         "space-after-keywords": [2, "always"],
         "space-before-blocks": [2, "always"],
-        "space-before-function-parentheses": [2, "always"],
+        "space-before-function-paren": [2, "always"],
         "space-in-brackets": 0,
         "space-in-parens": [2, "never"],
         "space-infix-ops": 2,
