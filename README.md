@@ -2,13 +2,16 @@
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
+[![code-style][code-style-image]][code-style-url]
 
-[travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat
+[travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat-square
 [travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
+[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/standard
+[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[code-style-url]: https://github.com/feross/standard
 
 ### One Style to Rule Them All
 
