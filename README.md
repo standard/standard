@@ -22,12 +22,7 @@ This module saves you (and others!) time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-Adopting `standard` style means ranking the importance of community conventions
-higher than personal style, which does not make sense for 100% of projects and development
-cultures. At the same time, open source can be a hostile place for newbies. Setting up
-clear, automated contributor expectations makes a project healthier.
-
-Those of us who use `standard` find it helps hold our code to a high *standard of quality* and ensures that new contributors follow our module's *style standards*. The standard style laid out here is not affiliated with any official web standards groups, which is why this repo is called `feross/standard` and not `ECMA/standard`.
+Users of `standard` don't want to argue with you about your opinions about `standard`. That's the whole point of `standard` -- to avoid bikeshedding about style. Those of us who use `standard` find it helps hold our code to a high *standard of quality* and ensures that new contributors follow our module's *style standards*. The standard style laid out here is not affiliated with any official web standards groups, which is why this repo is called `feross/standard` and not `ECMA/standard`.
 
 ## Install
 
