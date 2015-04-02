@@ -27,6 +27,8 @@ higher than personal style, which does not make sense for 100% of projects and d
 cultures. At the same time, open source can be a hostile place for newbies. Setting up
 clear, automated contributor expectations makes a project healthier.
 
+Those of us who use `standard` find it helps hold our code to a high *standard of quality* and ensures that new contributors follow our module's *style standards*. The standard style laid out here is not affiliated with any official web standards groups, which is why this repo is called `feross/standard` and not `ECMA/standard`.
+
 ## Install
 
 ```bash
