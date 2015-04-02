@@ -10,20 +10,16 @@
 
 var cp = require('child_process')
 var extend = require('xtend')
-var minimist = require('minimist')
 var mkdirp = require('mkdirp')
 var path = require('path')
 var rimraf = require('rimraf')
 var series = require('run-series')
+var test = require('tape')
 
-var argv = minimist(process.argv.slice(2), {
-  boolean: [ 'skip-clone' ]
-})
+var TMP = path.join(__dirname, '..', 'tmp')
+var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
 
-var TMP = path.join(__dirname, 'tmp')
-var STANDARD = path.join(__dirname, 'bin', 'cmd.js')
-
-var urls = [
+var URLS = [
   'https://github.com/beatgammit/base64-js.git',
   'https://github.com/brandonhorst/coverage-test.git',
   'https://github.com/brandonhorst/empty.git',
@@ -58,62 +54,49 @@ var urls = [
   'https://github.com/othiym23/packard.git'
 ]
 
-var modules = {}
-urls.forEach(function (url) {
+var MODULES = {}
+URLS.forEach(function (url) {
   var name = /\/([^\/]+)\.git$/.exec(url)[1]
-  modules[name] = url
+  MODULES[name] = url
 })
 
-if (!argv['skip-clone']) {
+test('clone repos from github', function (t) {
+  t.plan(1)
   rimraf.sync(TMP)
   mkdirp.sync(TMP)
 
-  series(Object.keys(modules).map(function (name) {
-    var url = modules[name]
+  series(Object.keys(MODULES).map(function (name) {
+    var url = MODULES[name]
     return function (cb) {
       var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
       // TODO: Start `git` in a way that works on Windows – PR welcome!
       spawn('git', args, {}, cb)
     }
-  }), runTests)
-} else {
-  runTests()
-}
+  }), function (err) {
+    if (err) throw err
+    t.pass('cloned repos')
+  })
+})
 
-function runTests (err) {
-  if (err) return error(err)
-  var errored = false
-  series(Object.keys(modules).map(function (name) {
+test('lint repos', function (t) {
+  t.plan(URLS.length)
+  series(Object.keys(MODULES).map(function (name) {
     return function (cb) {
-      process.stderr.write(name + ': ')
       var cwd = path.join(TMP, name)
       spawn(STANDARD, [], { cwd: cwd }, function (err) {
-        if (err) {
-          console.error('not ok')
-          errored = true
-        } else {
-          console.error('ok')
-        }
+        t.error(err, name)
         cb(null)
       })
     }
-  }), function (err) {
-    if (err) return error(err)
-    if (errored) process.exit(1)
-  })
-}
+  }))
+})
 
 function spawn (command, args, opts, cb) {
   var child = cp.spawn(command, args, extend({ stdio: 'inherit' }, opts))
-  child.on('error', error)
+  child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) cb(new Error('non-zero exit code: ' + code))
     else cb(null)
   })
   return child
-}
-
-function error (err) {
-  console.error(err.stack || err.message || err)
-  process.exit(1)
 }
