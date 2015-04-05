@@ -2,16 +2,13 @@
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
-[![code-style][code-style-image]][code-style-url]
 
-[travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat
 [travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
 [npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat-square
+[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
 [downloads-url]: https://npmjs.org/package/standard
-[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[code-style-url]: https://github.com/feross/standard
 
 ### One Style to Rule Them All
 
@@ -26,6 +23,8 @@ This module saves you (and others!) time in two ways:
   by eliminating back-and-forth between maintainer and contributor.
 
 Users of `standard` don't want to argue with you about your opinions about `standard`. That's the whole point of `standard` -- to avoid bikeshedding about style. Those of us who use `standard` find it helps hold our code to a high *standard of quality* and ensures that new contributors follow our module's *style standards*. The standard style laid out here is not affiliated with any official web standards groups, which is why this repo is called `feross/standard` and not `ECMA/standard`.
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## Install
 
@@ -73,10 +72,10 @@ let people know that your code is using the standard style.
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ```
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ```markdown
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 ```
 
 ## Usage
