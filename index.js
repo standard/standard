@@ -17,9 +17,9 @@ var DEFAULT_PATTERNS = [
 ]
 
 var DEFAULT_IGNORE_PATTERNS = [
-  '**/node_modules/**',
   '.git/**',
   'coverage/**',
+  'node_modules/**',
   '**/*.min.js',
   '**/bundle.js'
 ]
