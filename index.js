@@ -2,8 +2,10 @@ module.exports.lintText = lintText
 module.exports.lintFiles = lintFiles
 
 var dezalgo = require('dezalgo')
+var dotignore = require('dotignore')
 var eslint = require('eslint')
 var findRoot = require('find-root')
+var fs = require('fs')
 var glob = require('glob')
 var parallel = require('run-parallel')
 var path = require('path')
@@ -96,6 +98,13 @@ function lintFiles (files, opts, cb) {
     // de-dupe
     files = uniq(files)
 
+    // ignore files in .gitignore
+    if (opts.ignoreMatcher) {
+      files = files.filter(function (file) {
+        return !opts.ignoreMatcher.shouldIgnore(file)
+      })
+    }
+
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
 
@@ -117,12 +126,25 @@ function parseOpts (opts) {
   // Add user ignore patterns to default ignore patterns
   opts.ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
 
-  // Add additional ignore patterns from the closest `package.json`
+  var root
   try {
-    var root = findRoot(opts.cwd)
-    var packageOpts = require(path.join(root, 'package.json')).standard
-    if (packageOpts) opts.ignore = opts.ignore.concat(packageOpts.ignore)
+    root = findRoot(opts.cwd)
   } catch (e) {}
+
+  if (root) {
+    // Add additional ignore patterns from the closest `package.json`
+    try {
+      var packageOpts = require(path.join(root, 'package.json')).standard
+      if (packageOpts) opts.ignore = opts.ignore.concat(packageOpts.ignore)
+    } catch (e) {}
+
+    // Create ignore matcher for patterns in .gitignore. These have a different
+    // format than the one supported by `glob`, so we use a special parser
+    try {
+      var gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
+      opts.ignoreMatcher = dotignore.createMatcher(gitignore)
+    } catch (e) {}
+  }
 
   return opts
 }

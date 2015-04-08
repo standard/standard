@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "dezalgo": "^1.0.1",
+    "dotignore": "^0.1.1",
     "eslint": "^0.18.0",
     "eslint-plugin-react": "^1.5.0",
     "find-root": "^0.1.1",
@@ -67,8 +68,5 @@
   },
   "scripts": {
     "test": "node ./bin/cmd.js && tape test/*.js"
-  },
-  "standard": {
-    "ignore": "tmp/**"
   }
 }
