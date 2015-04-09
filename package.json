@@ -29,7 +29,7 @@
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
     "run-series": "^1.0.2",
-    "tape": "^3.5.0",
+    "tape": "^4.0.0",
     "xtend": "^4.0.0"
   },
   "homepage": "https://github.com/feross/standard",
