@@ -2,7 +2,6 @@ module.exports.lintText = lintText
 module.exports.lintFiles = lintFiles
 
 var dezalgo = require('dezalgo')
-var dotignore = require('dotignore')
 var eslint = require('eslint')
 var findRoot = require('find-root')
 var fs = require('fs')
@@ -124,7 +123,7 @@ function parseOpts (opts) {
   if (!opts.cwd) opts.cwd = process.cwd()
 
   // Add user ignore patterns to default ignore patterns
-  opts.ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
+  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
 
   var root
   try {
@@ -132,19 +131,34 @@ function parseOpts (opts) {
   } catch (e) {}
 
   if (root) {
-    // Add additional ignore patterns from the closest `package.json`
+    // Add ignore patterns from the closest `package.json`
     try {
       var packageOpts = require(path.join(root, 'package.json')).standard
-      if (packageOpts) opts.ignore = opts.ignore.concat(packageOpts.ignore)
+      if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
     } catch (e) {}
 
-    // Create ignore matcher for patterns in .gitignore. These have a different
-    // format than the one supported by `glob`, so we use a special parser
+    // Add ignore patterns from project root `.gitignore`
     try {
       var gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
-      opts.ignoreMatcher = dotignore.createMatcher(gitignore)
+      ignore = ignore.concat(gitignore.split(/\r?\n|\r/).filter(nonEmpty))
     } catch (e) {}
   }
 
+  // Remove leading "current folder" prefix
+  ignore = ignore.map(function (pattern) {
+    return pattern.indexOf('./') === 0 ? pattern.slice(2) : pattern
+  })
+
+  // Allow "folder/" to ignore all sub-folders and files, a la .gitignore
+  opts.ignore = []
+  ignore.forEach(function (pattern) {
+    opts.ignore.push(pattern)
+    opts.ignore.push(pattern + '/**')
+  })
+
   return opts
+}
+
+function nonEmpty (line) {
+  return line.trim() !== '' && line[0] !== '#'
 }
