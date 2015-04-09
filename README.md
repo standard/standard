@@ -22,8 +22,6 @@ This module saves you (and others!) time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
 ## Install
 
 ```bash
