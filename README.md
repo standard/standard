@@ -22,8 +22,6 @@ This module saves you (and others!) time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-Users of `standard` don't want to argue with you about your opinions about `standard`. That's the whole point of `standard` -- to avoid bikeshedding about style. Those of us who use `standard` find it helps hold our code to a high *standard of quality* and ensures that new contributors follow our module's *style standards*. The standard style laid out here is not affiliated with any official web standards groups, which is why this repo is called `feross/standard` and not `ECMA/standard`.
-
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## Install
@@ -59,7 +57,9 @@ npm install standard
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style, or check out some of [the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use `standard`.
+in JavaScript Standard Style, or check out some of
+[the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use
+`standard`.
 
 ## Badge
 
@@ -102,9 +102,15 @@ Error: Use JavaScript Standard Style
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
 
-- **[Vim](https://github.com/scrooloose/syntastic)** - Install [Syntastic](https://github.com/scrooloose/syntastic) and add `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
-- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install [Package Control](https://packagecontrol.io/), [SublimeLinter](http://www.sublimelinter.com/en/latest/), and [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
-- **[Atom](https://atom.io)** - Install [Linter](https://github.com/AtomLinter/Linter) and [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
+- **[Vim](https://github.com/scrooloose/syntastic)** - Install
+  [Syntastic](https://github.com/scrooloose/syntastic) and add
+  `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
+- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install
+  [Package Control](https://packagecontrol.io/),
+  [SublimeLinter](http://www.sublimelinter.com/en/latest/), and
+  [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
+- **[Atom](https://atom.io)** - Install [Linter](https://github.com/AtomLinter/Linter)
+  and [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
 
 ### What you might do if you're clever
 
@@ -147,6 +153,46 @@ This module saves you time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
+Adopting `standard` style means ranking the importance of code clarity and community
+conventions higher than personal style. This might not make sense for 100% of projects and
+development cultures, however open source can be a hostile place for newbies. Setting up
+clear, automated contributor expectations makes a project healthier.
+
+### I disagree with rule X, can you change it?
+
+No. The the whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
+style. There are lots of debates online about tabs vs. spaces, etc. that will never be
+resolved. These debates just distract from getting stuff done. At the end of the day you
+have to 'just pick something', and that's the whole philosophy of `standard` -- its a
+bunch of sensible 'just pick something' opinions. Hopefully, users see the value in that
+over defending their own opinions.
+
+[bikeshedding]: https://www.freebsd.org/doc/en_US.ISO8859-1/books/faq/misc.html#idp60694736
+
+### But this isn't a real web standard!
+
+Of course it's not! The style laid out here is not affiliated with any official web
+standards groups, which is why this repo is called `feross/standard` and not
+`ECMA/standard`.
+
+The word "standard" has more meanings than just "web standard" :-) For example:
+
+- This module helps hold our code to a high *standard of quality*.
+- This module ensures that new contributors follow some basic *style standards*.
+
+### Is there an automatic formatter?
+
+Yes! Just run `standard --format filename.js`. This uses
+[Max Ogden][max]'s automatic formatter
+[`standard-format`][standard-format], which can automatically
+fix most code issues.
+
+While most issues can be fixed, some, like not handling errors in node-style callbacks,
+must be fixed manually.
+
+[max]: https://github.com/maxogden
+[standard-format]: https://github.com/maxogden/standard-format
+
 ### How do I ignore files?
 
 The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, and hidden
@@ -165,15 +211,6 @@ a `standard.ignore` property to `package.json`:
   ]
 }
 ```
-
-### Is there an automatic formatter?
-
-Yes! Just run `standard --format filename.js`. This uses
-[Max Ogden](https://github.com/maxogden)'s automatic formatter
-[`standard-format`](https://github.com/maxogden/standard-format), which can automatically
-fix most code issues.
-
-While most issues can be fixed, some, like not handling errors, must be fixed manually.
 
 ### How do I hide a certain warning?
 
@@ -212,10 +249,12 @@ Or, disable the `"no-use-before-define"` rule for **multiple lines**:
 /*eslint-enable no-use-before-define */
 ```
 
-### Can you please add more config options?
+### Can you make rule X configurable?
 
-No. Use `eslint` directly if you want that. Pro tip: Just use `standard` and move on.
-There are actual real problems that you could spend your time solving! :P
+No. Use `eslint` directly if you want to configure hundreds of options individually.
+
+Pro tip: Just use `standard` and move on. There are actual real problems that you could
+spend your time solving! :P
 
 ### Why can't I pipe standard to other tools?
 
