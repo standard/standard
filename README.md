@@ -149,8 +149,9 @@ This module saves you time in two ways:
 
 ### How do I ignore files?
 
-The paths `node_modules/`, `.git/`, `*.min.js`, `bundle.js`, and `coverage/` are automatically excluded
-when looking for `.js` files to style check.
+The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, and hidden
+files/folders (beginning with `.`) are automatically excluded when looking for `.js` files
+to style check.
 
 Sometimes you need to ignore additional folders or specific minfied files. To do that, add
 a `standard.ignore` property to `package.json`:
