@@ -20,7 +20,7 @@
         "no-catch-shadow": 0,
         "no-comma-dangle": 2,
         "no-cond-assign": 2,
-        "no-console": 1,
+        "no-console": 2,
         "no-constant-condition": 2,
         "no-control-regex": 2,
         "no-debugger": 2,
@@ -55,7 +55,7 @@
         "no-label-var": 2,
         "no-labels": 2,
         "no-lone-blocks": 2,
-        "no-lonely-if": 1,
+        "no-lonely-if": 2,
         "no-loop-func": 2,
         "no-mixed-requires": [
             0,
@@ -154,7 +154,7 @@
             "last"
         ],
         "complexity": [
-            1,
+            2,
             11
         ],
         "consistent-return": 2,
@@ -210,7 +210,7 @@
             4
         ],
         "max-statements": [
-            1,
+            2,
             15
         ],
         "new-cap": [
@@ -240,15 +240,15 @@
             "never"
         ],
         "space-after-keywords": [
-            1,
+            2,
             "always"
         ],
         "space-before-blocks": [
-            1,
+            2,
             "always"
         ],
         "space-in-brackets": [
-            1,
+            2,
             "never"
         ],
         "space-in-parens": [
