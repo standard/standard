@@ -25,55 +25,7 @@ This module saves you (and others!) time in two ways:
 ## Install
 
 ```bash
-npm install standard
-```
-
-## Rules
-
-- **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
-- **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(` or `[`**
-    - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-- **Space after keywords** `if (condition) { ... }`
-- **Space after function name** `function name (arg) { ... }`
-- Name the context variable `self` – `var self = this`
-  - Accidental [`window.self`][4] usage is dissallowed (happens when `var self = this` is
-    omitted)
-- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
-- Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
-    `event`, and `name`.
-- **And more goodness** – *give `standard` a try today!*
-
-[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://github.com/maxogden/messages/issues/18
-[4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
-
-To get a better idea, take a look at
-[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use
-`standard`.
-
-## Badge
-
-Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
-```markdown
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-```
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-
-```markdown
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+npm install uber-tandard
 ```
 
 ## Usage
@@ -179,6 +131,8 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 - This module ensures that new contributors follow some basic *style standards*.
 
 ### Is there an automatic formatter?
+
+**Formatter is for feross/standard, not for uber/standard**
 
 Yes! Just run `standard --format filename.js`. This uses
 [Max Ogden][max]'s automatic formatter
@@ -289,6 +243,10 @@ Funny you should ask!
 git diff --name-only --cached --relative | grep '\.js$' | xargs standard
 exit $?
 ```
+
+## TODO
+
+ - Port over the `"disallowKeywords"` feature to eslint.
 
 ## License
 
