@@ -1,4 +1,4 @@
-# JavaScript Standard Style
+# Uber JavaScript Standard Style
 [![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
