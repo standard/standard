@@ -30,7 +30,7 @@ if (argv._[0] === '-') {
 if (argv.help) {
   console.log(function () {
   /*
-  standard - JavaScript Standard Style
+  standard - Uber JavaScript Standard Style
 
   Usage:
       standard <flags> [FILES...]
@@ -48,8 +48,8 @@ if (argv.help) {
           --version   Show current version.
       -h, --help      Show usage information.
 
-  Readme:  https://github.com/feross/standard
-  Report bugs:  https://github.com/feross/standard/issues
+  Readme:  https://github.com/uber/standard
+  Report bugs:  https://github.com/uber/standard/issues
 
   */
   }.toString().split(/\n/).slice(2, -2).join('\n'))
@@ -87,8 +87,8 @@ function onResult (err, result) {
   if (result.errorCount === 0) process.exit(0)
 
   console.error(
-    'Error: Use JavaScript Standard Style ' +
-    '(https://github.com/feross/standard)'
+    'Error: Use Uber JavaScript Standard Style ' +
+    '(https://github.com/uber/standard)'
   )
 
   result.results.forEach(function (result) {
@@ -109,7 +109,7 @@ function error (err) {
   console.error(err.stack || err.message || err)
   console.error(
     '\nIf you think this is a bug in `standard`, open an issue: ' +
-    'https://github.com/feross/standard'
+    'https://github.com/uber/standard'
   )
   process.exit(1)
 }
