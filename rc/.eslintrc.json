@@ -184,6 +184,7 @@
             2,
             "^(err|error|anySpecificError)$"
         ],
+        "indent": [2, 4],
         "key-spacing": [
             2,
             {
