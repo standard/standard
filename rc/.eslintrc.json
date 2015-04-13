@@ -221,7 +221,7 @@
             }
         ],
         "new-parens": 2,
-        "one-var": 0,
+        "one-var": [2, "never"],
         "operator-assignment": [
             0,
             "always"
