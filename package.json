@@ -1,7 +1,7 @@
 {
   "name": "uber-standard",
   "description": "JavaScript Standard Style",
-  "version": "3.5.1",
+  "version": "3.6.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -32,7 +32,7 @@
     "tape": "^4.0.0",
     "xtend": "^4.0.0"
   },
-  "homepage": "https://github.com/feross/standard",
+  "homepage": "https://github.com/uber/standard",
   "keywords": [
     "standard",
     "style checker",
@@ -63,7 +63,7 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/standard.git"
+    "url": "git://github.com/uber/standard.git"
   },
   "scripts": {
     "test": "node ./bin/cmd.js && tape test/*.js"
