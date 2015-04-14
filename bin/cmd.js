@@ -94,9 +94,9 @@ function onResult (err, result) {
   result.results.forEach(function (result) {
     result.messages.forEach(function (message) {
       log(
-        '  %s:%d:%d: %s%s',
+        '  %s:%d:%d: %s %s',
         result.filePath, message.line || 0, message.column || 0, message.message,
-        argv.verbose ? ' (' + message.ruleId + ')' : ''
+        '(' + message.ruleId + ')'
       )
     })
   })
