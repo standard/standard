@@ -256,15 +256,6 @@ No. Use `eslint` directly if you want to configure hundreds of options individua
 Pro tip: Just use `standard` and move on. There are actual real problems that you could
 spend your time solving! :P
 
-### Why can't I pipe standard to other tools?
-
-`standard` prints to `stderr`. This means that tools that read from `stdout` won't be
-able to read its output. The solution is to make `standard` print to `stdout` instead:
-
-```sh
-standard 2>&1 | grep variable
-```
-
 ### What about Web Workers?
 
 Web workers have a magic global variable called `self`. In regular JS files, `standard`
