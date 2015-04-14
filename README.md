@@ -25,7 +25,7 @@ This module saves you (and others!) time in two ways:
 ## Install
 
 ```bash
-npm install uber-tandard
+npm install uber-standard
 ```
 
 ## Usage
