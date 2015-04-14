@@ -22,7 +22,7 @@
     "glob": "^5.0.0",
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
-    "standard-format": "^1.3.3",
+    "uber-standard-format": "^1.3.5",
     "uniq": "^1.0.1"
   },
   "devDependencies": {

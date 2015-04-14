@@ -3,7 +3,7 @@
 var fs = require('fs')
 var minimist = require('minimist')
 var standard = require('../')
-var standardFormat = require('standard-format')
+var standardFormat = require('uber-standard-format')
 var stdin = require('get-stdin')
 
 var argv = minimist(process.argv.slice(2), {
