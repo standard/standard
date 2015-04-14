@@ -83,17 +83,17 @@ if (argv.stdin) {
 }
 
 function onResult (err, result) {
-  if (err) return error(err)
+  if (err) return onError(err)
   if (result.errorCount === 0) process.exit(0)
 
   console.error(
-    'Error: Use JavaScript Standard Style ' +
+    'standard: Use JavaScript Standard Style ' +
     '(https://github.com/feross/standard)'
   )
 
   result.results.forEach(function (result) {
     result.messages.forEach(function (message) {
-      console.error(
+      log(
         '  %s:%d:%d: %s%s',
         result.filePath, message.line || 0, message.column || 0, message.message,
         argv.verbose ? ' (' + message.ruleId + ')' : ''
@@ -104,12 +104,26 @@ function onResult (err, result) {
   process.exit(1)
 }
 
-function error (err) {
-  console.error('Unexpected Linter Output:\n')
+function onError (err) {
+  console.error('standard: Unexpected linter output:\n')
   console.error(err.stack || err.message || err)
   console.error(
     '\nIf you think this is a bug in `standard`, open an issue: ' +
     'https://github.com/feross/standard'
   )
   process.exit(1)
+}
+
+/**
+ * Print lint errors to stdout since this is expected output from `standard`.
+ * Note: When formatting code from stdin (`standard --stdin --format`), the transformed
+ * code is printed to stdout, so print lint errors to stderr in this case.
+ */
+function log () {
+  if (argv.stdin && argv.format) {
+    arguments[0] = 'standard: ' + arguments[0]
+    console.error.apply(console, arguments)
+  } else {
+    console.log.apply(console, arguments)
+  }
 }
