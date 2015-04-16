@@ -14,7 +14,9 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
+    "commondir": "^1.0.1",
     "dezalgo": "^1.0.1",
+    "editorconfig-get-indent": "^1.0.0",
     "eslint": "0.19.0",
     "eslint-plugin-react": "^2.1.0",
     "find-root": "^0.1.1",
@@ -22,7 +24,7 @@
     "glob": "^5.0.0",
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
-    "uber-standard-format": "^1.3.5",
+    "uber-standard-format": "^1.3.6",
     "uniq": "^1.0.1"
   },
   "devDependencies": {

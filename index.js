@@ -1,7 +1,9 @@
 module.exports.lintText = lintText
 module.exports.lintFiles = lintFiles
 
+var commondir = require('commondir')
 var dezalgo = require('dezalgo')
+var editorConfigGetIndent = require('editorconfig-get-indent')
 var eslint = require('eslint')
 var findRoot = require('find-root')
 var fs = require('fs')
@@ -44,13 +46,17 @@ function lintText (text, opts, cb) {
   opts = parseOpts(opts)
   cb = dezalgo(cb)
 
-  var result
-  try {
-    result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnText(text)
-  } catch (err) {
-    return cb(err)
-  }
-  return cb(null, result)
+  editorConfigGetIndent(process.cwd(), function(err, indent) {
+    if (err) return cb(err);
+    ESLINT_CONFIG.baseConfig.rules.indent = [2, indent];
+    var result
+    try {
+      result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnText(text)
+    } catch (err) {
+      return cb(err)
+    }
+    return cb(null, result)
+  })
 }
 
 /**
@@ -106,13 +112,19 @@ function lintFiles (files, opts, cb) {
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
 
-    var result
-    try {
-      result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnFiles(files)
-    } catch (err) {
-      return cb(err)
-    }
-    return cb(null, result)
+    var root = commondir(files);
+    editorConfigGetIndent(root, function(err, indent) {
+      if (err) return cb(err);
+      var result
+      ESLINT_CONFIG.baseConfig.rules.indent = [2, indent];
+      try {
+        result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnFiles(files)
+      } catch (err) {
+        return cb(err)
+      }
+      return cb(null, result)
+    })
+
   })
 }
 

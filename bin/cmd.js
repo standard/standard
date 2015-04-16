@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var commondir = require('commondir')
+var editorConfigGetIndent = require('editorconfig-get-indent')
 var fs = require('fs')
 var minimist = require('minimist')
 var standard = require('../')
@@ -62,20 +64,26 @@ if (argv.version) {
 }
 
 if (argv.stdin) {
-  stdin(function (text) {
-    if (argv.format) {
-      text = standardFormat.transform(text)
-      process.stdout.write(text)
-    }
-    standard.lintText(text, onResult)
+  editorConfigGetIndent(process.cwd(), function (err, indent) {
+    if (err) return onError(err)
+    stdin(function (text) {
+      if (argv.format) {
+        text = standardFormat.transform(text, indent)
+        process.stdout.write(text)
+      }
+      standard.lintText(text, onResult)
+    })
   })
 } else {
   var lintOpts = {}
   if (argv.format) {
     lintOpts._onFiles = function (files) {
-      files.forEach(function (file) {
-        var data = fs.readFileSync(file).toString()
-        fs.writeFileSync(file, standardFormat.transform(data))
+      editorConfigGetIndent(commondir(files), function (err, indent) {
+        if (err) return onError(err)
+        files.forEach(function (file) {
+          var data = fs.readFileSync(file).toString()
+          fs.writeFileSync(file, standardFormat.transform(data, indent))
+        })
       })
     }
   }
