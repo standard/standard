@@ -46,9 +46,9 @@ function lintText (text, opts, cb) {
   opts = parseOpts(opts)
   cb = dezalgo(cb)
 
-  editorConfigGetIndent(process.cwd(), function(err, indent) {
-    if (err) return cb(err);
-    ESLINT_CONFIG.baseConfig.rules.indent = [2, indent];
+  editorConfigGetIndent(process.cwd(), function (err, indent) {
+    if (err) return cb(err)
+    ESLINT_CONFIG.baseConfig.rules.indent = [2, indent]
     var result
     try {
       result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnText(text)
@@ -112,11 +112,11 @@ function lintFiles (files, opts, cb) {
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
 
-    var root = commondir(files);
-    editorConfigGetIndent(root, function(err, indent) {
-      if (err) return cb(err);
+    var root = commondir(files)
+    editorConfigGetIndent(root, function (err, indent) {
+      if (err) return cb(err)
       var result
-      ESLINT_CONFIG.baseConfig.rules.indent = [2, indent];
+      ESLINT_CONFIG.baseConfig.rules.indent = [2, indent]
       try {
         result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnFiles(files)
       } catch (err) {

@@ -31,6 +31,7 @@
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
     "run-series": "^1.0.2",
+    "standard": "^3.6.1",
     "tape": "^4.0.0",
     "xtend": "^4.0.0"
   },
@@ -68,6 +69,6 @@
     "url": "git://github.com/uber/standard.git"
   },
   "scripts": {
-    "test": "node ./bin/cmd.js && tape test/*.js"
+    "test": "standard && tape test/*.js"
   }
 }

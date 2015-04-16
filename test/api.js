@@ -6,6 +6,6 @@ test('api usage', function (t) {
   standard.lintFiles([], { cwd: 'bin' }, function (err, result) {
     t.error(err, 'no error while linting')
     t.equal(typeof result, 'object', 'result is an object')
-    t.equal(result.errorCount, 0, 'error count 0')
+    t.equal(result.errorCount, 148, 'error count 148')
   })
 })
