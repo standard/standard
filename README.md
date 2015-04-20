@@ -282,6 +282,16 @@ git diff --name-only --cached --relative | grep '\.js$' | xargs standard
 exit $?
 ```
 
+Alternatively, [overcommit](https://github.com/brigade/overcommit) is a Git hook
+manager that includes support for running `standard` as a Git pre-commit hook.
+To enable this, add the following to your `.overcommit.yml` file:
+
+```yaml
+PreCommit:
+  Standard:
+    enabled: true
+```
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
