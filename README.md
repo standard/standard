@@ -52,7 +52,7 @@ npm install standard
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://github.com/maxogden/messages/issues/18
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
-[5]: RULES.md
+[5]: RULES.md#javascript-standard-style
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
