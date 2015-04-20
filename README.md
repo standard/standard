@@ -46,12 +46,13 @@ npm install standard
 - Always prefix browser globals with `window` – except `document` and `navigator` are okay
   - Prevents accidental use of poorly-named browser globals like `open`, `length`,
     `event`, and `name`.
-- **And more goodness** – *give `standard` a try today!*
+- **And [more goodness][5]** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://github.com/maxogden/messages/issues/18
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
+[5]: RULES.md
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
