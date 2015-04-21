@@ -25,7 +25,7 @@ important rules are listed here. Please send PRs!
 
 ## Automatic semicolon insertion (ASI)
 
-From ["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]:
+*Quoting from ["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]:*
 
 In general, `\n` ends a statement unless:
   1. The statement has an unclosed paren, array literal, or object literal or ends in some
@@ -42,7 +42,7 @@ The second is super weird. I’ve never seen a case (outside of these sorts of c
 
 The third is well understood, if generally despised. `if (x)\ny()` is equivalent to `if (x) { y() }`. The construct doesn’t end until it reaches either a block, or a statement.
 
-`; is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
+`;` is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
 
 The fourth is generally the fud-inducing “oh noes, you need semicolons!” case. But, as it turns out, it’s quite easy to *prefix* those lines with semicolons if you don’t mean them to be continuations of the previous line. For example, instead of this:
 
