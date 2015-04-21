@@ -4,7 +4,7 @@ module.exports.lintFiles = lintFiles
 var dezalgo = require('dezalgo')
 var eslint = require('eslint')
 var findRoot = require('find-root')
-var fs = require('fs')
+// var fs = require('fs')
 var glob = require('glob')
 var parallel = require('run-parallel')
 var path = require('path')
@@ -96,13 +96,6 @@ function lintFiles (files, opts, cb) {
     // de-dupe
     files = uniq(files)
 
-    // ignore files in .gitignore
-    if (opts.ignoreMatcher) {
-      files = files.filter(function (file) {
-        return !opts.ignoreMatcher.shouldIgnore(file)
-      })
-    }
-
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
 
@@ -136,11 +129,12 @@ function parseOpts (opts) {
       if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
     } catch (e) {}
 
+    // Temporarily disabled until this is made more reliable
     // Add ignore patterns from project root `.gitignore`
-    try {
-      var gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
-      ignore = ignore.concat(gitignore.split(/\r?\n|\r/).filter(nonEmpty))
-    } catch (e) {}
+    // try {
+    //   var gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
+    //   ignore = ignore.concat(gitignore.split(/\r?\n|\r/).filter(nonEmpty))
+    // } catch (e) {}
   }
 
   // Remove leading "current folder" prefix
@@ -158,6 +152,6 @@ function parseOpts (opts) {
   return opts
 }
 
-function nonEmpty (line) {
-  return line.trim() !== '' && line[0] !== '#'
-}
+// function nonEmpty (line) {
+//   return line.trim() !== '' && line[0] !== '#'
+// }

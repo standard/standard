@@ -67,5 +67,8 @@
   },
   "scripts": {
     "test": "node ./bin/cmd.js && tape test/*.js"
+  },
+  "standard": {
+    "ignore": "tmp/"
   }
 }
