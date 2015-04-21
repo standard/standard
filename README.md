@@ -36,23 +36,25 @@ npm install standard
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
     - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
+    - [More details][4]
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
 - Name the context variable `self` – `var self = this`
-  - Accidental [`window.self`][4] usage is dissallowed (happens when `var self = this` is
+  - Accidental [`window.self`][5] usage is dissallowed (happens when `var self = this` is
     omitted)
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
 - Always prefix browser globals with `window` – except `document` and `navigator` are okay
   - Prevents accidental use of poorly-named browser globals like `open`, `length`,
     `event`, and `name`.
-- **And [more goodness][5]** – *give `standard` a try today!*
+- **And [more goodness][6]** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://github.com/maxogden/messages/issues/18
-[4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
-[5]: RULES.md#javascript-standard-style
+[4]: RULES.md#automatic-semicolon-insertion-asi
+[5]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
+[6]: RULES.md#javascript-standard-style
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
