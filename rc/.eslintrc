@@ -91,7 +91,7 @@
         "no-iterator": 2,
         "no-label-var": 2,
         "no-labels": 2,
-        "no-lone-blocks": 2,
+        "no-lone-blocks": 0,
         "no-lonely-if": 0,
         "no-loop-func": 0,
         "no-mixed-requires": [0, false],
