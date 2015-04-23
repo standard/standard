@@ -40,7 +40,7 @@
         "eqeqeq": [2, "allow-null"],
         "func-names": 0,
         "func-style": [0, "declaration"],
-        "generator-star": [2, "middle"],
+        "generator-star-spacing": [2, "both"],
         "guard-for-in": 0,
         "handle-callback-err": [2, "^(err|error|anySpecificError)$" ],
         "indent": [2, 2],
