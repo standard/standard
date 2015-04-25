@@ -8,7 +8,8 @@
     "url": "http://feross.org/"
   },
   "bin": {
-    "standard": "./bin/cmd.js"
+    "standard": "./bin/cmd.js",
+    "lint-trap": "./bin/cmd.js"
   },
   "bugs": {
     "url": "https://github.com/feross/standard/issues"
