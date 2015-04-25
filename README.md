@@ -109,9 +109,9 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 - **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install
   [Package Control](https://packagecontrol.io/),
   [SublimeLinter](http://www.sublimelinter.com/en/latest/), and
-  [SublimeLinter-contrib-standard](https://github.com/Flet/Sublimelinter-contrib-standard).
-- **[Atom](https://atom.io)** - Install [Linter](https://github.com/AtomLinter/Linter)
-  and [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard).
+  [SublimeLinter-contrib-standard](https://packagecontrol.io/packages/SublimeLinter-contrib-standard).
+- **[Atom](https://atom.io)** - Install [Linter](https://atom.io/packages/linter)
+  and [linter-js-standard](https://atom.io/packages/linter-js-standard).
 
 ### What you might do if you're clever
 
