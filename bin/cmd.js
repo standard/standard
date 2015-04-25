@@ -7,6 +7,9 @@ var minimist = require('minimist')
 var standard = require('../')
 var standardFormat = require('uber-standard-format')
 var stdin = require('get-stdin')
+var standardReporter = require('standard-reporter')
+var fmt = require('util').format
+var reporter
 
 var argv = minimist(process.argv.slice(2), {
   alias: {
@@ -49,6 +52,8 @@ if (argv.help) {
           --stdin     Read file text from stdin.
           --version   Show current version.
       -h, --help      Show usage information.
+      -r, --reporter  Specify a reporter type. options: json, checkstyle or stylish
+          --no-colors No colored output on terminal for stylish reporter
 
   Readme:  https://github.com/uber/standard
   Report bugs:  https://github.com/uber/standard/issues
@@ -61,6 +66,14 @@ if (argv.help) {
 if (argv.version) {
   console.log(require('../package.json').version)
   process.exit(0)
+}
+
+if (argv.reporter) {
+  reporter = standardReporter({
+    type: argv.reporter,
+    sink: process.stdout,
+    colors: argv.colors || true
+  })
 }
 
 if (argv.stdin) {
@@ -109,7 +122,13 @@ function onResult (err, result) {
     })
   })
 
-  process.exit(1)
+  if (reporter) {
+    reporter.end()
+  }
+
+  process.on('exit', function () {
+    process.exit(1)
+  })
 }
 
 function onError (err) {
@@ -128,7 +147,9 @@ function onError (err) {
  * code is printed to stdout, so print lint errors to stderr in this case.
  */
 function log () {
-  if (argv.stdin && argv.format) {
+  if (reporter) {
+    reporter.write(fmt.apply(null, arguments) + '\n')
+  } else if (argv.stdin && argv.format) {
     arguments[0] = 'standard: ' + arguments[0]
     console.error.apply(console, arguments)
   } else {
