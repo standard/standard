@@ -9,7 +9,8 @@
   },
   "bin": {
     "standard": "./bin/cmd.js",
-    "lint-trap": "./bin/cmd.js"
+    "lint-trap": "./bin/cmd.js",
+    "uber-standard": "./bin/cmd.js"
   },
   "bugs": {
     "url": "https://github.com/feross/standard/issues"
