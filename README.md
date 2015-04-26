@@ -103,15 +103,15 @@ Error: Use JavaScript Standard Style
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
 
-- **[Vim](https://github.com/scrooloose/syntastic)** - Install
-  [Syntastic](https://github.com/scrooloose/syntastic) and add
-  `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
-- **[Sublime Text](https://github.com/Flet/Sublimelinter-contrib-standard)** - Install
+- **[Sublime Text](https://www.sublimetext.com/)** - Install
   [Package Control](https://packagecontrol.io/),
   [SublimeLinter](http://www.sublimelinter.com/en/latest/), and
   [SublimeLinter-contrib-standard](https://packagecontrol.io/packages/SublimeLinter-contrib-standard).
 - **[Atom](https://atom.io)** - Install [Linter](https://atom.io/packages/linter)
   and [linter-js-standard](https://atom.io/packages/linter-js-standard).
+- **[Vim](http://www.vim.org/)** - Install
+  [Syntastic](https://github.com/scrooloose/syntastic) and add
+  `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
 
 ### What you might do if you're clever
 
