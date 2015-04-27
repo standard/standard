@@ -1,14 +1,16 @@
 {
   "name": "uber-standard",
   "description": "JavaScript Standard Style",
-  "version": "3.6.0",
+  "version": "3.6.2",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
     "url": "http://feross.org/"
   },
   "bin": {
-    "standard": "./bin/cmd.js"
+    "standard": "./bin/cmd.js",
+    "lint-trap": "./bin/cmd.js",
+    "uber-standard": "./bin/cmd.js"
   },
   "bugs": {
     "url": "https://github.com/feross/standard/issues"
@@ -24,6 +26,7 @@
     "glob": "^5.0.0",
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
+    "standard-reporter": "^1.0.4",
     "uber-standard-format": "^1.3.6",
     "uniq": "^1.0.1"
   },
