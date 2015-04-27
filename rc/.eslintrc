@@ -52,7 +52,7 @@
         "max-statements": 0,
         "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
         "new-parens": 2,
-        "no-alert": 2,
+        "no-alert": 0,
         "no-array-constructor": 2,
         "no-bitwise": 0,
         "no-caller": 2,
