@@ -94,7 +94,8 @@ function lintFiles (files, opts, cb) {
     // flatten nested arrays
     var files = results.reduce(function (files, result) {
       result.forEach(function (file) {
-        files.push(path.join(opts.cwd, file))
+        var f = (file.charAt(0) === '/') ? file : path.join(opts.cwd, file)
+        files.push(f)
       })
       return files
     }, [])
