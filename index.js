@@ -113,6 +113,10 @@ function lintFiles (files, opts, cb) {
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
 
+    if (files.length === 0) {
+      return cb(null, {errorCount: 0})
+    }
+
     var root = commondir(files)
     editorConfigGetIndent(root, function (err, indent) {
       if (err) return cb(err)

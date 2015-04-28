@@ -1,7 +1,7 @@
 {
   "name": "uber-standard",
   "description": "JavaScript Standard Style",
-  "version": "3.6.3",
+  "version": "3.6.4",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -26,7 +26,7 @@
     "glob": "^5.0.0",
     "minimist": "^1.1.0",
     "run-parallel": "^1.0.0",
-    "standard-reporter": "^1.0.4",
+    "standard-reporter": "^1.0.5",
     "uber-standard-format": "^1.3.6",
     "uniq": "^1.0.1"
   },
