@@ -105,7 +105,7 @@ if (argv.stdin) {
 
 function onResult (err, result) {
   if (err) return onError(err)
-  if (result.errorCount === 0) process.exit(0)
+  if (result.errorCount === 0) return exit(0)
 
   console.error(
     'Error: Use Uber JavaScript Standard Style ' +
@@ -122,12 +122,16 @@ function onResult (err, result) {
     })
   })
 
+  exit(1)
+}
+
+function exit(code) {
   if (reporter) {
     reporter.end()
   }
 
   process.on('exit', function () {
-    process.exit(1)
+    process.exit(code)
   })
 }
 
