@@ -3,6 +3,7 @@ module.exports.lintFiles = lintFiles
 
 var dezalgo = require('dezalgo')
 var eslint = require('eslint')
+var extend = require('xtend')
 var findRoot = require('find-root')
 // var fs = require('fs')
 var glob = require('glob')
@@ -111,9 +112,7 @@ function lintFiles (files, opts, cb) {
 
 function parseOpts (opts) {
   if (!opts) opts = {}
-
-  // Clone opts -object to make sure the original opts object is not modified
-  opts = JSON.parse(JSON.stringify(opts))
+  opts = extend(opts)
 
   if (!opts.cwd) opts.cwd = process.cwd()
 
