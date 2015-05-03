@@ -112,6 +112,9 @@ function lintFiles (files, opts, cb) {
 function parseOpts (opts) {
   if (!opts) opts = {}
 
+  // Clone opts -object to make sure the original opts object is not modified
+  opts = JSON.parse(JSON.stringify(opts))
+
   if (!opts.cwd) opts.cwd = process.cwd()
 
   // Add user ignore patterns to default ignore patterns
