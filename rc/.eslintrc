@@ -138,6 +138,7 @@
         "no-undef-init": 2,
         "no-undefined": 0,
         "no-underscore-dangle": 0,
+        "no-unneeded-ternary": 2,
         "no-unreachable": 2,
         "no-unused-expressions": 0,
         "no-unused-vars": [2, { "vars": "all", "args": "none" }],
