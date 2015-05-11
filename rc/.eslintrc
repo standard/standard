@@ -150,7 +150,7 @@
         "no-wrap-func": 2,
         "one-var": 0,
         "operator-assignment": [0, "always"],
-        "padded-blocks": [2, "never"],
+        "padded-blocks": 0,
         "quote-props": 0,
         "quotes": [2, "single", "avoid-escape"],
         "radix": 2,
