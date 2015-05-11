@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "dezalgo": "^1.0.1",
-    "eslint": "^0.19.0",
+    "eslint": "^0.21.0",
     "eslint-plugin-react": "^2.1.0",
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
