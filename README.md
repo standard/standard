@@ -93,10 +93,16 @@ npm install standard -g
 After you've done that you should be able to use the `standard` program. The simplest use
 case would be checking the style of all JavaScript files in the current working directory:
 
-```
+```bash
 $ standard
 Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+```
+
+You can optionally pass in a directory using the glob pattern:
+
+```bash
+$ standard src/util/**/*.js
 ```
 
 ### Editor plugins
