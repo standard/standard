@@ -17,8 +17,8 @@ works.
 
 This module saves you (and others!) time in two ways:
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  module/project. Just drop it in.
+- **No configuration.** The easiest way to enforce consistent style in your project. Just
+  drop it in.
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
@@ -155,8 +155,8 @@ Enough of this madness!
 
 This module saves you time in two ways:
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  module/project. Just drop it in.
+- **No configuration.** The easiest way to enforce consistent style in your project. Just
+  drop it in.
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
