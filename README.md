@@ -35,8 +35,8 @@ npm install standard
 - **No unused variables** – this one catches *tons* of bugs!
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
-    - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-    - [More details][4]
+  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
+  - [More details][4]
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
 - Name the context variable `self` – `var self = this`
@@ -258,7 +258,9 @@ Or, disable the `"no-use-before-define"` rule for **multiple lines**:
 
 ### Can you make rule X configurable?
 
-No. Use `eslint` directly if you want to configure hundreds of options individually.
+No. Use `eslint` and
+[this shareable config](https://github.com/feross/eslint-config-standard) if you want to
+configure hundreds of options individually.
 
 Pro tip: Just use `standard` and move on. There are actual real problems that you could
 spend your time solving! :P
