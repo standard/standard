@@ -118,6 +118,10 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 - **[Vim](http://www.vim.org/)** - Install
   [Syntastic](https://github.com/scrooloose/syntastic) and add
   `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
+- **[Emacs](https://www.gnu.org/software/emacs/)** - Install
+  [Flycheck](http://www.flycheck.org) and check out the
+  [manual](http://www.flycheck.org/manual/latest/index.html) to learn how
+  to enable it in your projects.
 
 ### What you might do if you're clever
 
