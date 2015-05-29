@@ -139,7 +139,6 @@ function parseOpts (opts) {
           var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
           configFile.parser = packageOpts.parser
           var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + packageOpts.parser)
-          console.log(tmpFilename)
           fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
           opts._config.configFile = tmpFilename
         }
