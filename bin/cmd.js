@@ -45,8 +45,8 @@ if (argv.help) {
       -F  --format    Automatically format code. (using standard-format)
       -v, --verbose   Show error codes. (so you can ignore specific rules)
           --stdin     Read file text from stdin.
-          --version   Show current version.
-      -h, --help      Show usage information.
+          --version   Show current version
+      -h, --help      Show usage information
 
   Readme:  https://github.com/feross/standard
   Report bugs:  https://github.com/feross/standard/issues
