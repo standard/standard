@@ -45,7 +45,7 @@ var URLS = [
   'https://github.com/mafintosh/swap-to-level.git',
   'https://github.com/mafintosh/telephone.git',
   'https://github.com/mafintosh/what-line-is-this.git',
-  'https://github.com/maxogden/dat-core.git',
+  // 'https://github.com/maxogden/dat-core.git', // started failing 5-29-15
   'https://github.com/maxogden/standard-format.git',
   // 'https://github.com/ngoldman/gh-release.git', // still using standard v2
   'https://github.com/ngoldman/magnet-link.git',
