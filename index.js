@@ -5,8 +5,9 @@ var dezalgo = require('dezalgo')
 var eslint = require('eslint')
 var extend = require('xtend')
 var findRoot = require('find-root')
-// var fs = require('fs')
+var fs = require('fs')
 var glob = require('glob')
+var os = require('os')
 var parallel = require('run-parallel')
 var path = require('path')
 var uniq = require('uniq')
@@ -23,7 +24,7 @@ var DEFAULT_IGNORE_PATTERNS = [
   '**/bundle.js'
 ]
 
-var ESLINT_CONFIG = {
+var DEFAULT_CONFIG = {
   configFile: path.join(__dirname, 'rc', '.eslintrc'),
   useEslintrc: false
 }
@@ -32,9 +33,8 @@ var ESLINT_CONFIG = {
  * Lint text to enforce JavaScript Standard Style.
  *
  * @param {string} text                 file text to lint
- * @param {Object} opts                 options object
- * @param {Array.<String>} opts.ignore  file globs to ignore (has sane defaults)
- * @param {string} opts.cwd             current working directory (default: process.cwd())
+ * @param {Object=} opts                options object
+ * @param {string=} opts.parser         custom js parser (e.g. babel-eslint, esprima-fb)
  * @param {function(Error, Object)} cb  callback
  */
 function lintText (text, opts, cb) {
@@ -47,7 +47,7 @@ function lintText (text, opts, cb) {
 
   var result
   try {
-    result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnText(text)
+    result = new eslint.CLIEngine(opts._config).executeOnText(text)
   } catch (err) {
     return cb(err)
   }
@@ -57,11 +57,12 @@ function lintText (text, opts, cb) {
 /**
  * Lint files to enforce JavaScript Standard Style.
  *
- * @param {Array.<string>} files        file globs to lint
- * @param {Object} opts                 options object
- * @param {Array.<String>} opts.ignore  file globs to ignore (has sane defaults)
- * @param {string} opts.cwd             current working directory (default: process.cwd())
- * @param {function(Error, Object)} cb  callback
+ * @param {Array.<string>} files         file globs to lint
+ * @param {Object=} opts                 options object
+ * @param {Array.<String>=} opts.ignore  file globs to ignore (has sane defaults)
+ * @param {string=} opts.cwd             current working directory (default: process.cwd())
+ * @param {string=} opts.parser          custom js parser (e.g. babel-eslint, esprima-fb)
+ * @param {function(Error, Object)} cb   callback
  */
 function lintFiles (files, opts, cb) {
   if (typeof opts === 'function') {
@@ -102,7 +103,7 @@ function lintFiles (files, opts, cb) {
 
     var result
     try {
-      result = new eslint.CLIEngine(ESLINT_CONFIG).executeOnFiles(files)
+      result = new eslint.CLIEngine(opts._config).executeOnFiles(files)
     } catch (err) {
       return cb(err)
     }
@@ -113,22 +114,36 @@ function lintFiles (files, opts, cb) {
 function parseOpts (opts) {
   if (!opts) opts = {}
   opts = extend(opts)
+  opts._config = extend(DEFAULT_CONFIG)
 
   if (!opts.cwd) opts.cwd = process.cwd()
 
   // Add user ignore patterns to default ignore patterns
   var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
 
+  // Find closest package.json
   var root
   try {
     root = findRoot(opts.cwd)
   } catch (e) {}
 
   if (root) {
-    // Add ignore patterns from the closest `package.json`
     try {
       var packageOpts = require(path.join(root, 'package.json')).standard
-      if (packageOpts) ignore = ignore.concat(packageOpts.ignore)
+      if (packageOpts) {
+        // Use ignore patterns from package.json
+        ignore = ignore.concat(packageOpts.ignore)
+
+        // Use custom js parser from package.json
+        if (packageOpts.parser) {
+          var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
+          configFile.parser = packageOpts.parser
+          var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + packageOpts.parser)
+          console.log(tmpFilename)
+          fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
+          opts._config.configFile = tmpFilename
+        }
+      }
     } catch (e) {}
 
     // Temporarily disabled until this is made more reliable
