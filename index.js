@@ -7,6 +7,7 @@ var extend = require('xtend')
 var findRoot = require('find-root')
 var fs = require('fs')
 var glob = require('glob')
+var ignorePkg = require('ignore')
 var os = require('os')
 var parallel = require('run-parallel')
 var path = require('path')
@@ -80,7 +81,7 @@ function lintFiles (files, opts, cb) {
     return function (cb) {
       glob(pattern, {
         cwd: opts.cwd,
-        ignore: opts.ignore,
+        ignore: opts._ignore,
         nodir: true
       }, cb)
     }
@@ -97,6 +98,8 @@ function lintFiles (files, opts, cb) {
 
     // de-dupe
     files = uniq(files)
+
+    if (opts._gitignore) files = opts._gitignore.filter(files)
 
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
@@ -118,56 +121,48 @@ function parseOpts (opts) {
 
   if (!opts.cwd) opts.cwd = process.cwd()
 
-  // Add user ignore patterns to default ignore patterns
-  var ignore = (opts.ignore || []).concat(DEFAULT_IGNORE_PATTERNS)
+  opts._ignore = DEFAULT_IGNORE_PATTERNS.slice(0) // passed into glob
+  opts._gitignore = ignorePkg()
 
-  // Find closest package.json
+  function addIgnorePattern (patterns) {
+    opts._ignore = opts._ignore.concat(patterns)
+    opts._gitignore.addPattern(patterns)
+  }
+
+  if (opts.ignore) addIgnorePattern(opts.ignore)
+
+  // Find package.json in the project root
   var root
   try {
     root = findRoot(opts.cwd)
   } catch (e) {}
 
   if (root) {
+    var packageOpts
     try {
-      var packageOpts = require(path.join(root, 'package.json')).standard
-      if (packageOpts) {
-        // Use ignore patterns from package.json
-        ignore = ignore.concat(packageOpts.ignore)
-
-        // Use custom js parser from package.json
-        if (packageOpts.parser) {
-          var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
-          configFile.parser = packageOpts.parser
-          var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + packageOpts.parser)
-          fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
-          opts._config.configFile = tmpFilename
-        }
-      }
+      packageOpts = require(path.join(root, 'package.json')).standard
     } catch (e) {}
+    if (packageOpts) {
+      // Use ignore patterns from package.json
+      if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
 
-    // Temporarily disabled until this is made more reliable
-    // Add ignore patterns from project root `.gitignore`
-    // try {
-    //   var gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
-    //   ignore = ignore.concat(gitignore.split(/\r?\n|\r/).filter(nonEmpty))
-    // } catch (e) {}
+      // Use custom js parser from package.json
+      if (packageOpts.parser) {
+        var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
+        configFile.parser = packageOpts.parser
+        var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + packageOpts.parser)
+        fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
+        opts._config.configFile = tmpFilename
+      }
+    }
+
+    // Use ignore patterns from project root .gitignore
+    var gitignore
+    try {
+      gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
+    } catch (e) {}
+    if (gitignore) opts._gitignore.addPattern(gitignore.split(/\r?\n/))
   }
-
-  // Remove leading "current folder" prefix
-  ignore = ignore.map(function (pattern) {
-    return pattern.indexOf('./') === 0 ? pattern.slice(2) : pattern
-  })
-
-  // Allow "folder/" to ignore all sub-folders and files, a la .gitignore
-  opts.ignore = []
-  ignore.forEach(function (pattern) {
-    opts.ignore.push(pattern)
-    opts.ignore.push(pattern + '/**')
-  })
 
   return opts
 }
-
-// function nonEmpty (line) {
-//   return line.trim() !== '' && line[0] !== '#'
-// }
