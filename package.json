@@ -62,7 +62,6 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/feross/standard.git"
