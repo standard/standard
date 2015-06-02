@@ -207,7 +207,7 @@
         ],
         "max-params": [
             2,
-            4
+            5
         ],
         "max-statements": [
             2,
