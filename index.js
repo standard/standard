@@ -171,10 +171,10 @@ function parseOpts (opts) {
   return opts
 }
 
-function toWin32 (str) {
+function toUnix (str) {
   return str.replace(/\\/g, '/')
 }
 
-function toUnix (str) {
+function toWin32 (str) {
   return str.replace(/\//g, '\\')
 }
