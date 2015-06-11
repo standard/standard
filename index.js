@@ -99,7 +99,11 @@ function lintFiles (files, opts, cb) {
     // de-dupe
     files = uniq(files)
 
-    if (opts._gitignore) files = opts._gitignore.filter(files)
+    if (opts._gitignore) {
+      if (os.platform() === 'win32') files = files.map(toUnix)
+      files = opts._gitignore.filter(files)
+      if (os.platform() === 'win32') files = files.map(toWin32)
+    }
 
     // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(files)
@@ -165,4 +169,12 @@ function parseOpts (opts) {
   }
 
   return opts
+}
+
+function toUnix (str) {
+  return str.replace(/\\/g, '/')
+}
+
+function toWin32 (str) {
+  return str.replace(/\//g, '\\')
 }
