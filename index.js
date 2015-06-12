@@ -144,9 +144,7 @@ function parseOpts (opts) {
 
   if (root) {
     var packageOpts = pkgConfig('standard', { root: false, cwd: opts.cwd })
-    try {
-      packageOpts = require(path.join(root, 'package.json')).standard
-    } catch (e) {}
+
     if (packageOpts) {
       // Use ignore patterns from package.json
       if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
