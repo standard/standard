@@ -11,6 +11,7 @@ var ignorePkg = require('ignore')
 var os = require('os')
 var parallel = require('run-parallel')
 var path = require('path')
+var pkgConfig = require('pkg-config')
 var uniq = require('uniq')
 
 var DEFAULT_PATTERNS = [
@@ -142,10 +143,8 @@ function parseOpts (opts) {
   } catch (e) {}
 
   if (root) {
-    var packageOpts
-    try {
-      packageOpts = require(path.join(root, 'package.json')).standard
-    } catch (e) {}
+    var packageOpts = pkgConfig('standard', { root: false, cwd: opts.cwd })
+
     if (packageOpts) {
       // Use ignore patterns from package.json
       if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
