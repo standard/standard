@@ -105,6 +105,8 @@ You can optionally pass in a directory using the glob pattern:
 $ standard src/util/**/*.js
 ```
 
+**Note:** by default `standard` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
+
 ### Editor plugins
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
