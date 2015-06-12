@@ -105,6 +105,7 @@
         "no-sync": 0,
         "no-ternary": 0,
         "no-trailing-spaces": 2,
+        "no-try-catch": 2,
         "no-undef": 2,
         "no-undef-init": 2,
         "no-undefined": 0,
