@@ -207,7 +207,7 @@ must be fixed manually.
 ### How do I ignore files?
 
 The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, and hidden
-files/folders (beginning with `.`) are automatically excluded when looking for `.js` files
+files/folders (beginning with `.`) as well as all entries in a project's root `.gitignore` are automatically excluded when looking for `.js` files
 to style check.
 
 Sometimes you need to ignore additional folders or specific minfied files. To do that, add
