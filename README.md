@@ -208,9 +208,9 @@ must be fixed manually.
 
 ### How do I ignore files?
 
-The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, and hidden
-files/folders (beginning with `.`) as well as all entries in a project's root `.gitignore` are automatically excluded when looking for `.js` files
-to style check.
+The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden files/folders
+(beginning with `.`), and all patterns in a project's root `.gitignore` file are
+automatically excluded when looking for `.js` files to check.
 
 Sometimes you need to ignore additional folders or specific minfied files. To do that, add
 a `standard.ignore` property to `package.json`:
@@ -218,9 +218,10 @@ a `standard.ignore` property to `package.json`:
 ```json
 "standard": {
   "ignore": [
-    "**/out/**",
-    "**/lib/select2/**",
-    "**/lib/ckeditor/**"
+    "**/out/",
+    "/lib/select2/",
+    "/lib/ckeditor/",
+    "tmp.js"
   ]
 }
 ```
