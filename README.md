@@ -263,6 +263,19 @@ Or, disable the `"no-use-before-define"` rule for **multiple lines**:
 /*eslint-enable no-use-before-define */
 ```
 
+### Can I use a custom JS parser for bleeding-edge ES6 or ES7 support?
+
+`standard` supports custom JS parsers. To use a custom parser, install it from npm
+(example: `npm install babel-eslint`) and add this to your package.json:
+
+```js
+{
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
+```
+
 ### Can you make rule X configurable?
 
 No. Use `eslint` and
