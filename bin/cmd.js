@@ -18,6 +18,9 @@ var argv = minimist(process.argv.slice(2), {
     'stdin',
     'verbose',
     'version'
+  ],
+  string: [
+    'parser'
   ]
 })
 
@@ -42,9 +45,10 @@ if (argv.help) {
       automatically excluded.
 
   Flags:
-      -F  --format    Automatically format code. (using standard-format)
-      -v, --verbose   Show error codes. (so you can ignore specific rules)
-          --stdin     Read file text from stdin.
+      -F  --format    Automatically format code (using standard-format)
+      -v, --verbose   Show error codes (so you can ignore specific rules)
+          --stdin     Read file text from stdin
+          --parser    Use custom js parser (e.g. babel-eslint, esprima-fb)
           --version   Show current version
       -h, --help      Show usage information
 
@@ -67,19 +71,19 @@ if (argv.stdin) {
       text = standardFormat.transform(text)
       process.stdout.write(text)
     }
-    standard.lintText(text, onResult)
+    standard.lintText(text, { parser: argv.parser }, onResult)
   })
 } else {
-  var lintOpts = {}
+  var opts = { parser: argv.parser }
   if (argv.format) {
-    lintOpts._onFiles = function (files) {
+    opts._onFiles = function (files) {
       files.forEach(function (file) {
         var data = fs.readFileSync(file).toString()
         fs.writeFileSync(file, standardFormat.transform(data))
       })
     }
   }
-  standard.lintFiles(argv._, lintOpts, onResult)
+  standard.lintFiles(argv._, opts, onResult)
 }
 
 function onResult (err, result) {

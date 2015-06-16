@@ -135,6 +135,7 @@ function parseOpts (opts) {
   }
 
   if (opts.ignore) addIgnorePattern(opts.ignore)
+  if (opts.parser) useCustomParser(opts.parser)
 
   // Find package.json in the project root
   var root
@@ -150,13 +151,7 @@ function parseOpts (opts) {
       if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
 
       // Use custom js parser from package.json
-      if (packageOpts.parser) {
-        var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
-        configFile.parser = packageOpts.parser
-        var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + packageOpts.parser)
-        fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
-        opts._config.configFile = tmpFilename
-      }
+      if (!opts.parser && packageOpts.parser) useCustomParser(packageOpts.parser)
     }
 
     // Use ignore patterns from project root .gitignore
@@ -165,6 +160,14 @@ function parseOpts (opts) {
       gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
     } catch (e) {}
     if (gitignore) opts._gitignore.addPattern(gitignore.split(/\r?\n/))
+  }
+
+  function useCustomParser (parser) {
+    var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
+    configFile.parser = parser
+    var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + parser)
+    fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
+    opts._config.configFile = tmpFilename
   }
 
   return opts
