@@ -28,6 +28,7 @@ var DEFAULT_IGNORE_PATTERNS = [
 
 var DEFAULT_CONFIG = {
   configFile: path.join(__dirname, 'rc', '.eslintrc'),
+  reset: true,
   useEslintrc: false
 }
 
