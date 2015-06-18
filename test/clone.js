@@ -132,7 +132,24 @@ var URLS = [
   'https://github.com/ngoldman/module-init.git',
   'https://github.com/ngoldman/wireframe.css.git',
   'https://github.com/npm/fstream.git',
-  'https://github.com/othiym23/packard.git'
+  'https://github.com/othiym23/packard.git',
+  'https://github.com/yoshuawuyts/assert-npm-version.git',
+  'https://github.com/yoshuawuyts/brick-router.git',
+  'https://github.com/yoshuawuyts/brick-server.git',
+  'https://github.com/yoshuawuyts/event-bulk-attach.git',
+  'https://github.com/yoshuawuyts/fat-arrow.git',
+  'https://github.com/yoshuawuyts/from2-string.git',
+  'https://github.com/yoshuawuyts/fsm-event.git',
+  'https://github.com/yoshuawuyts/initialize.git',
+  'https://github.com/yoshuawuyts/koa-logger-ndjson.git',
+  'https://github.com/yoshuawuyts/mdjson.git',
+  'https://github.com/yoshuawuyts/promise-assert.git',
+  'https://github.com/yoshuawuyts/simple-store.git',
+  'https://github.com/yoshuawuyts/urit.git',
+  'https://github.com/yoshuawuyts/virtual-raf.git',
+  'https://github.com/yoshuawuyts/vmd.git',
+  'https://github.com/yoshuawuyts/wayfarer.git',
+  'https://github.com/yoshuawuyts/year-of-code.git'
   // 'https://github.com/npm/npm.git' // in progress
 ]
 
