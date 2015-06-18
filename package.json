@@ -16,7 +16,7 @@
   "dependencies": {
     "dezalgo": "^1.0.1",
     "eslint": "git://github.com/eslint/eslint.git#3f5cf79d65560ed69ff29b11d85047554c4d1ae1",
-    "eslint-config-standard": "3.2.0",
+    "eslint-config-standard": "3.3.0",
     "eslint-config-standard-react": "1.0.0",
     "eslint-plugin-react": "^2.1.0",
     "find-root": "^0.1.1",
