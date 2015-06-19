@@ -4,8 +4,7 @@
         "node": false,
         "amd": false,
         "mocha": false,
-        "jasmine": false,
-        "es6": true
+        "jasmine": false
     },
     "globals": {
         "__dirname": false,
