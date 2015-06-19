@@ -125,7 +125,7 @@ function onResult (err, result) {
   exit(1)
 }
 
-function exit(code) {
+function exit (code) {
   if (reporter) {
     reporter.end()
   }
