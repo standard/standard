@@ -103,7 +103,7 @@ function lintFiles (files, opts, cb) {
 
     if (opts._gitignore) {
       if (os.platform() === 'win32') files = files.map(toUnix)
-      files = opts._gitignore.filter(files)
+      files = toAbsolute(opts.cwd, opts._gitignore.filter(toRelative(opts.cwd, files)))
       if (os.platform() === 'win32') files = files.map(toWin32)
     }
 
@@ -172,6 +172,18 @@ function parseOpts (opts) {
   }
 
   return opts
+}
+
+function toAbsolute (cwd, files) {
+  return files.map(function (file) {
+    return path.join(cwd, file)
+  })
+}
+
+function toRelative (cwd, files) {
+  return files.map(function (file) {
+    return path.relative(cwd, file)
+  })
 }
 
 function toUnix (str) {
