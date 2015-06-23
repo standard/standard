@@ -13,8 +13,7 @@ var path = require('path')
 var uniq = require('uniq')
 
 var DEFAULT_PATTERNS = [
-  '**/*.js',
-  '**/*.jsx'
+  '**/*.js'
 ]
 
 var DEFAULT_IGNORE_PATTERNS = [
