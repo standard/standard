@@ -18,6 +18,7 @@ var argv = minimist(process.argv.slice(2), {
     verbose: 'v'
   },
   boolean: [
+    'es6',
     'format',
     'help',
     'stdin',
@@ -85,6 +86,8 @@ if (argv.reporter) {
 var lintOpts = {}
 if (argv['line-length'])
   lintOpts['line-length'] = parseInt(argv['line-length'], 10)
+if (argv.es6)
+  lintOpts.es6 = true
 
 if (argv.stdin) {
   editorConfigGetIndent(process.cwd(), function (err, indent) {

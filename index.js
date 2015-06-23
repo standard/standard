@@ -24,6 +24,8 @@ var DEFAULT_IGNORE_PATTERNS = [
   '**/bundle.js'
 ]
 
+var es6Config = require(path.join(__dirname, 'rc', '.eslintrc.es6.json'))
+
 var ESLINT_CONFIG = {
   baseConfig: require(path.join(__dirname, 'rc', '.eslintrc.json')),
   useEslintrc: true,
@@ -37,6 +39,14 @@ function configure(opts) {
 
   if (opts['line-length']) {
     config.baseConfig.rules['max-len'] = [2, opts['line-length'], 4]
+  }
+
+  if (opts.es6) {
+    config.baseConfig.ecmaFeatures = es6Config.ecmaFeatures
+
+    Object.keys(es6Config.rules).forEach(function onRule(ruleName) {
+      config.baseConfig.rules[ruleName] = es6Config.rules[ruleName]
+    })
   }
 
   return config;
