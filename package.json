@@ -32,8 +32,7 @@
   },
   "devDependencies": {
     "mkdirp": "^0.5.0",
-    "rimraf": "^2.2.8",
-    "run-series": "^1.0.2",
+    "run-parallel-limit": "^1.0.1",
     "tape": "^4.0.0"
   },
   "homepage": "https://github.com/feross/standard",

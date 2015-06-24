@@ -10,14 +10,17 @@
 
 var cp = require('child_process')
 var extend = require('xtend')
+var fs = require('fs')
 var mkdirp = require('mkdirp')
+var os = require('os')
+var parallelLimit = require('run-parallel-limit')
 var path = require('path')
-var rimraf = require('rimraf')
-var series = require('run-series')
 var test = require('tape')
 
 var TMP = path.join(__dirname, '..', 'tmp')
 var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
+
+var PARALLEL_LIMIT = os.cpus().length
 
 var URLS = [
   /**
@@ -39,7 +42,6 @@ var URLS = [
   'https://github.com/ahmadnassri/winston-tcp.git',
   'https://github.com/beatgammit/base64-js.git',
   'https://github.com/brandonhorst/coverage-test.git',
-  'https://github.com/brandonhorst/empty.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/bittorrent-protocol.git',
   'https://github.com/feross/bittorrent-swarm.git',
@@ -58,6 +60,7 @@ var URLS = [
   'https://github.com/feross/parse-torrent.git',
   'https://github.com/feross/run-auto.git',
   'https://github.com/feross/run-parallel.git',
+  'https://github.com/feross/run-parallel-limit.git',
   'https://github.com/feross/run-series.git',
   'https://github.com/feross/run-waterfall.git',
   'https://github.com/feross/simple-peer.git',
@@ -161,25 +164,36 @@ URLS.forEach(function (url) {
 
 test('clone repos from github', function (t) {
   t.plan(1)
-  rimraf.sync(TMP)
   mkdirp.sync(TMP)
 
-  series(Object.keys(MODULES).map(function (name) {
+  parallelLimit(Object.keys(MODULES).map(function (name) {
     var url = MODULES[name]
     return function (cb) {
-      var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-      // TODO: Start `git` in a way that works on Windows – PR welcome!
-      spawn('git', args, {}, cb)
+      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+        var args = err
+          ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+          : [ 'pull' ]
+        var opts = err
+          ? {}
+          : { cwd: path.join(TMP, name) }
+        spawn('git', args, opts, cb)
+      })
     }
-  }), function (err) {
+  }), PARALLEL_LIMIT, function (err) {
     if (err) throw err
     t.pass('cloned repos')
   })
 })
 
+test('make empty repo', function (t) {
+  mkdirp.sync(path.join(TMP, 'empty'))
+  t.pass('made empty repo')
+  t.end()
+})
+
 test('lint repos', function (t) {
   t.plan(URLS.length)
-  series(Object.keys(MODULES).map(function (name) {
+  parallelLimit(Object.keys(MODULES).map(function (name) {
     return function (cb) {
       var cwd = path.join(TMP, name)
       spawn(STANDARD, [], { cwd: cwd }, function (err) {
@@ -187,9 +201,10 @@ test('lint repos', function (t) {
         cb(null)
       })
     }
-  }))
+  }), PARALLEL_LIMIT)
 })
 
+// TODO: Spawn in a way that works on Windows – PR welcome!
 function spawn (command, args, opts, cb) {
   var child = cp.spawn(command, args, extend({ stdio: 'inherit' }, opts))
   child.on('error', cb)
