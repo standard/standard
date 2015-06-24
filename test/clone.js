@@ -17,10 +17,11 @@ var parallelLimit = require('run-parallel-limit')
 var path = require('path')
 var test = require('tape')
 
-var TMP = path.join(__dirname, '..', 'tmp')
+var GIT = 'git'
 var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
+var TMP = path.join(__dirname, '..', 'tmp')
 
-var PARALLEL_LIMIT = os.cpus().length
+var PARALLEL_LIMIT = Math.min(os.cpus().length * 1.5)
 
 var URLS = [
   /**
@@ -162,12 +163,17 @@ URLS.forEach(function (url) {
   MODULES[name] = url
 })
 
-test('clone repos from github', function (t) {
-  t.plan(1)
+test('test github repos that use `standard`', function (t) {
+  t.plan(URLS.length)
+
   mkdirp.sync(TMP)
+
+  // test an empty repo
+  mkdirp.sync(path.join(TMP, 'empty'))
 
   parallelLimit(Object.keys(MODULES).map(function (name) {
     var url = MODULES[name]
+    var folder = path.join(TMP, name)
     return function (cb) {
       fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
         var args = err
@@ -175,33 +181,20 @@ test('clone repos from github', function (t) {
           : [ 'pull' ]
         var opts = err
           ? {}
-          : { cwd: path.join(TMP, name) }
-        spawn('git', args, opts, cb)
+          : { cwd: folder }
+        spawn(GIT, args, opts, function (err) {
+          if (err) return cb(err)
+
+          spawn(STANDARD, [], { cwd: folder }, function (err) {
+            t.error(err, name)
+            cb(null)
+          })
+        })
       })
     }
   }), PARALLEL_LIMIT, function (err) {
     if (err) throw err
-    t.pass('cloned repos')
   })
-})
-
-test('make empty repo', function (t) {
-  mkdirp.sync(path.join(TMP, 'empty'))
-  t.pass('made empty repo')
-  t.end()
-})
-
-test('lint repos', function (t) {
-  t.plan(URLS.length)
-  parallelLimit(Object.keys(MODULES).map(function (name) {
-    return function (cb) {
-      var cwd = path.join(TMP, name)
-      spawn(STANDARD, [], { cwd: cwd }, function (err) {
-        t.error(err, name)
-        cb(null)
-      })
-    }
-  }), PARALLEL_LIMIT)
 })
 
 // TODO: Spawn in a way that works on Windows – PR welcome!
