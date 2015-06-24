@@ -68,6 +68,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "node ./bin/cmd.js && tape test/*.js"
+    "test": "node ./bin/cmd.js && tape test/*.js",
+    "test-quick": "node ./bin/cmd.js"
   }
 }
