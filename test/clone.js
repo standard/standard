@@ -43,6 +43,7 @@ var URLS = [
   'https://github.com/ahmadnassri/winston-tcp.git',
   'https://github.com/beatgammit/base64-js.git',
   'https://github.com/brandonhorst/coverage-test.git',
+  'https://github.com/cjb/GitTorrent.git',
   'https://github.com/feross/bittorrent-dht.git',
   'https://github.com/feross/bittorrent-protocol.git',
   'https://github.com/feross/bittorrent-swarm.git',
