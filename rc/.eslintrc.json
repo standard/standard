@@ -211,7 +211,7 @@
         ],
         "max-statements": [
             2,
-            15
+            25
         ],
         "new-cap": [
             2,
