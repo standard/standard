@@ -46,7 +46,7 @@ if (argv.help) {
   Usage:
       standard <flags> [FILES...]
 
-      If FILES is omitted, then all JavaScript source files (*.js, *.jsx) in the current
+      If FILES is omitted, then all JavaScript source files (*.js) in the current
       working directory are checked, recursively.
 
       Certain paths (node_modules/, .git/, coverage/, *.min.js, bundle.js) are

@@ -14,8 +14,7 @@ var uniq = require('uniq')
 var cloneDeep = require('clone-deep')
 
 var DEFAULT_PATTERNS = [
-  '**/*.js',
-  '**/*.jsx'
+  '**/*.js'
 ]
 
 var DEFAULT_IGNORE_PATTERNS = [
