@@ -23,7 +23,13 @@ var argv = minimist(process.argv.slice(2), {
     'stdin',
     'verbose',
     'version'
-  ]
+  ],
+  string: [
+    'line-length'
+  ],
+  default: {
+    'line-length': '80'
+  }
 })
 
 // running `standard -` is equivalent to `standard --stdin`
@@ -76,6 +82,10 @@ if (argv.reporter) {
   })
 }
 
+var lintOpts = {}
+if (argv['line-length'])
+  lintOpts['line-length'] = parseInt(argv['line-length'], 10)
+
 if (argv.stdin) {
   editorConfigGetIndent(process.cwd(), function (err, indent) {
     if (err) return onError(err)
@@ -84,11 +94,10 @@ if (argv.stdin) {
         text = standardFormat.transform(text, indent)
         process.stdout.write(text)
       }
-      standard.lintText(text, onResult)
+      standard.lintText(text, lintOpts, onResult)
     })
   })
 } else {
-  var lintOpts = {}
   if (argv.format) {
     lintOpts._onFiles = function (files) {
       editorConfigGetIndent(commondir(files), function (err, indent) {
