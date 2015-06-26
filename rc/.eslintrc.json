@@ -1,10 +1,13 @@
 {
+    "ecmaFeatures": {},
+    "parser": "espree",
     "env": {
         "browser": false,
         "node": false,
         "amd": false,
         "mocha": false,
-        "jasmine": false
+        "jasmine": false,
+        "es6": false
     },
     "globals": {
         "__dirname": false,
@@ -22,14 +25,18 @@
         "no-cond-assign": 2,
         "no-console": 2,
         "no-constant-condition": 2,
+        "no-continue": 0,
         "no-control-regex": 2,
         "no-debugger": 2,
         "no-delete-var": 2,
         "no-div-regex": 0,
         "no-dupe-keys": 2,
+        "no-dupe-args": 2,
+        "no-duplicate-case": 2,
         "no-else-return": 0,
         "no-empty": 2,
         "no-empty-class": 2,
+        "no-empty-character-class": 2,
         "no-empty-label": 2,
         "no-eq-null": 0,
         "no-eval": 2,
@@ -65,6 +72,7 @@
             2,
             false
         ],
+        "linebreak-style": [2, "unix"],
         "no-multi-spaces": 2,
         "no-multi-str": 2,
         "no-multiple-empty-lines": [
@@ -84,6 +92,7 @@
         "no-obj-calls": 2,
         "no-octal": 2,
         "no-octal-escape": 2,
+        "no-param-reassign": 0,
         "no-path-concat": 2,
         "no-plusplus": 0,
         "no-process-env": 2,
@@ -105,11 +114,15 @@
         "no-sync": 0,
         "no-ternary": 0,
         "no-trailing-spaces": 2,
+        "no-this-before-super": 0,
+        "no-throw-literal": 0,
         "no-try-catch": 2,
         "no-undef": 2,
         "no-undef-init": 2,
         "no-undefined": 0,
+        "no-unexpected-multiline": 0,
         "no-underscore-dangle": 0,
+        "no-unneeded-ternary": 0,
         "no-unreachable": 2,
         "no-unused-expressions": 2,
         "no-unused-vars": [
@@ -124,6 +137,8 @@
             "nofunc"
         ],
         "no-void": 0,
+        "no-var": 0,
+        "prefer-const": 0,
         "no-warning-comments": [
             0,
             {
@@ -137,12 +152,16 @@
         ],
         "no-with": 2,
         "no-wrap-func": 2,
+
+        "array-bracket-spacing": [0, "never"],
+        "accessor-pairs": 0,
         "block-scoped-var": 0,
         "brace-style": [
             2,
             "1tbs"
         ],
         "camelcase": 2,
+        "comma-dangle": [2, "never"],
         "comma-spacing": [
             2,
             {
@@ -158,17 +177,20 @@
             2,
             11
         ],
+        "computed-property-spacing": [0, "never"],
         "consistent-return": 2,
         "consistent-this": [
             2,
             "self"
         ],
+        "constructor-super": 0,
         "curly": [
             2,
             "all"
         ],
         "default-case": 2,
-        "dot-notation": 2,
+        "dot-location": 0,
+        "dot-notation": [2, { "allowKeywords": true }],
         "eol-last": 2,
         "eqeqeq": 2,
         "func-names": 2,
@@ -176,6 +198,7 @@
             0,
             "declaration"
         ],
+        "generator-star-spacing": 0,
         "global-strict": [
             2,
             "always"
@@ -193,6 +216,7 @@
                 "afterColon": true
             }
         ],
+        "lines-around-comment": 0,
         "max-depth": [
             2,
             4
@@ -222,11 +246,15 @@
             }
         ],
         "new-parens": 2,
+        "newline-after-var": 0,
+        "object-curly-spacing": [0, "never"],
+        "object-shorthand": 0,
         "one-var": [2, "never"],
         "operator-assignment": [
             0,
             "always"
         ],
+        "operator-linebreak": 0,
         "padded-blocks": 0,
         "quote-props": 0,
         "quotes": [
@@ -235,6 +263,7 @@
         ],
         "radix": 2,
         "semi": 2,
+        "semi-spacing": [2, {"before": false, "after": true}],
         "sort-vars": 0,
         "space-after-function-name": [
             2,
@@ -248,6 +277,7 @@
             2,
             "always"
         ],
+        "space-before-function-paren": [0, "always"],
         "space-in-brackets": [
             2,
             "never"
@@ -265,6 +295,7 @@
                 "nonwords": false
             }
         ],
+        "spaced-comment": 0,
         "spaced-line-comment": [
             2,
             "always"
