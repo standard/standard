@@ -26,7 +26,8 @@ var DEFAULT_IGNORE_PATTERNS = [
 
 var ESLINT_CONFIG = {
   baseConfig: require(path.join(__dirname, 'rc', '.eslintrc.json')),
-  useEslintrc: true
+  useEslintrc: true,
+  rulePaths: [path.join(__dirname, 'rules')]
 }
 
 /**
