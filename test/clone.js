@@ -177,16 +177,19 @@ test('test github repos that use `standard`', function (t) {
     var folder = path.join(TMP, name)
     return function (cb) {
       fsAccess(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
-        var args = err
+        var gitArgs = err
           ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           : [ 'pull' ]
-        var opts = err
+        var gitOpts = err
           ? {}
           : { cwd: folder }
-        spawn(GIT, args, opts, function (err) {
-          if (err) return cb(err)
+        spawn(GIT, gitArgs, gitOpts, function (err) {
+          if (err) {
+            err.message += ' (' + name + ')'
+            return cb(err)
+          }
 
-          spawn(STANDARD, [], { cwd: folder }, function (err) {
+          spawn(STANDARD, [ '--verbose' ], { cwd: folder }, function (err) {
             t.error(err, name)
             cb(null)
           })
