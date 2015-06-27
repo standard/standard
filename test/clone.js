@@ -139,6 +139,8 @@ var URLS = [
   'https://github.com/npm/fstream.git',
   'https://github.com/othiym23/packard.git',
   'https://github.com/npm/npm.git',
+  'https://github.com/npm/docs.git',
+  'https://github.com/npm/fstream-npm.git',
   'https://github.com/yoshuawuyts/assert-npm-version.git',
   'https://github.com/yoshuawuyts/brick-router.git',
   'https://github.com/yoshuawuyts/brick-server.git',
