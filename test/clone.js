@@ -138,6 +138,7 @@ var URLS = [
   'https://github.com/ngoldman/wireframe.css.git',
   'https://github.com/npm/fstream.git',
   'https://github.com/othiym23/packard.git',
+  'https://github.com/npm/npm.git',
   'https://github.com/yoshuawuyts/assert-npm-version.git',
   'https://github.com/yoshuawuyts/brick-router.git',
   'https://github.com/yoshuawuyts/brick-server.git',
@@ -155,7 +156,6 @@ var URLS = [
   'https://github.com/yoshuawuyts/vmd.git',
   'https://github.com/yoshuawuyts/wayfarer.git',
   'https://github.com/yoshuawuyts/year-of-code.git'
-  // 'https://github.com/npm/npm.git' // in progress
 ]
 
 var MODULES = {}
