@@ -102,9 +102,11 @@ function lintFiles (files, opts, cb) {
     files = uniq(files)
 
     if (opts._gitignore) {
-      if (os.platform() === 'win32') files = files.map(toUnix)
-      files = toAbsolute(opts.cwd, opts._gitignore.filter(toRelative(opts.cwd, files)))
-      if (os.platform() === 'win32') files = files.map(toWin32)
+      files = toRelative(opts.cwd, files)
+      if (os.platform() === 'win32') files = toUnix(files)
+      files = opts._gitignore.filter(files)
+      files = toAbsolute(opts.cwd, files)
+      if (os.platform() === 'win32') files = toWin32(files)
     }
 
     // undocumented – do not use (used by bin/cmd.js)
@@ -186,10 +188,14 @@ function toRelative (cwd, files) {
   })
 }
 
-function toUnix (str) {
-  return str.replace(/\\/g, '/')
+function toUnix (files) {
+  return files.map(function (file) {
+    return file.replace(/\\/g, '/')
+  })
 }
 
-function toWin32 (str) {
-  return str.replace(/\//g, '\\')
+function toWin32 (files) {
+  return files.map(function (file) {
+    return file.replace(/\//g, '\\')
+  })
 }
