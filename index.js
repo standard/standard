@@ -150,10 +150,17 @@ function parseOpts (opts) {
     var packageOpts = pkgConfig('standard', { root: false, cwd: opts.cwd })
 
     if (packageOpts) {
-      // Use ignore patterns from package.json
+      // Use ignore patterns from package.json ("standard.ignore" property)
       if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
 
-      // Use custom js parser from package.json
+      // Use globals from package.json ("standard.globals" property)
+      if (packageOpts.globals) {
+        opts._config.globals = Array.isArray(packageOpts.globals)
+          ? packageOpts.globals
+          : [ packageOpts.globals ]
+      }
+
+      // Use custom js parser from package.json ("standard.parser" property)
       if (!opts.parser && packageOpts.parser) useCustomParser(packageOpts.parser)
     }
 

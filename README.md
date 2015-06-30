@@ -263,10 +263,36 @@ Or, disable the `"no-use-before-define"` rule for **multiple lines**:
 /*eslint-enable no-use-before-define */
 ```
 
+### I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
+
+Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the global
+object (poor form!). Since these functions are not defined or `require`d anywhere in your
+code, `standard` will warn that you're using a variable that is not defined (usually, this
+rule is really useful for catching typos!). But we want to disable it for these global
+variables.
+
+To let `standard` (as well as humans reading your code) know that certain variables are
+global in your code, add this to the top of your file:
+
+```
+/* global myVar1, myVar2 */
+```
+
+If you have hundreds of files, adding comments to every file can be tedious. In these
+cases, you can add this to `package.json`:
+
+```js
+{
+  "standard": {
+    "global": [ "myVar1", "myVar2" ]
+  }
+}
+```
+
 ### Can I use a custom JS parser for bleeding-edge ES6 or ES7 support?
 
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
-(example: `npm install babel-eslint`) and add this to your package.json:
+(example: `npm install babel-eslint`) and add this to your `package.json`:
 
 ```js
 {
