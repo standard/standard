@@ -153,11 +153,12 @@ function parseOpts (opts) {
       // Use ignore patterns from package.json ("standard.ignore" property)
       if (packageOpts.ignore) addIgnorePattern(packageOpts.ignore)
 
-      // Use globals from package.json ("standard.globals" property)
-      if (packageOpts.globals) {
-        opts._config.globals = Array.isArray(packageOpts.globals)
-          ? packageOpts.globals
-          : [ packageOpts.globals ]
+      // Use globals from package.json ("standard.global" property)
+      var globals = packageOpts.globals || packageOpts.global
+      if (globals) {
+        opts._config.globals = Array.isArray(globals)
+          ? globals
+          : [ globals ]
       }
 
       // Use custom js parser from package.json ("standard.parser" property)
