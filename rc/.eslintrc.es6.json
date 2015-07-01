@@ -22,6 +22,12 @@
             2,
             "never"
         ],
+        "accessor-pairs": [
+            2,
+            {
+                "getWithoutSet": true
+            }
+        ],
         "block-scoped-var": 2,
         "computed-property-spacing": [
             2,
@@ -69,7 +75,7 @@
         ],
         "object-shorthand": [
             2,
-            "never"
+            "always"
         ],
         "operator-linebreak": [
             2,
