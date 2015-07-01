@@ -348,6 +348,19 @@ PreCommit:
     enabled: true
 ```
 
+### I want to hack on `standard`. What packages should I know about?
+
+- [eslint](https://github.com/eslint/eslint)
+- [standard](https://github.com/feross/standard)
+  - [eslint-config-standard](https://github.com/feross/eslint-config-standard)
+  - [eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)
+- [semistandard](https://github.com/Flet/semistandard)
+  - [eslint-config-semistandard](https://github.com/Flet/eslint-config-semistandard)
+- [standard-format](https://github.com/maxogden/standard-format)
+- [standard-engine](https://github.com/flet/standard-engine)
+
+There are also many [editor plugins](https://github.com/feross/standard#editor-plugins).
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
