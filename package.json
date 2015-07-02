@@ -16,7 +16,7 @@
   "dependencies": {
     "dezalgo": "^1.0.1",
     "eslint": "^0.24.0",
-    "eslint-config-standard": "3.4.0",
+    "eslint-config-standard": "3.4.1",
     "eslint-config-standard-react": "1.0.1",
     "eslint-plugin-react": "^2.1.0",
     "find-root": "^0.1.1",
