@@ -1,0 +1,130 @@
+{
+    "rules": {
+        "no-catch-shadow": 2,
+        "no-continue": 2,
+        "no-div-regex": 2,
+        "no-else-return": 2,
+        "no-eq-null": 2,
+        "no-extra-parens": 2,
+        "no-inline-comments": 2,
+        "no-mixed-requires": 2,
+        "no-this-before-super": 2,
+        "no-throw-literal": 2,
+        "no-unexpected-multiline": 2,
+        "no-unneeded-ternary": 2,
+        "newline-after-var": [
+            2,
+            "always"
+        ],
+        "no-var": 2,
+        "prefer-const": 2,
+        "array-bracket-spacing": [
+            2,
+            "never"
+        ],
+        "accessor-pairs": [
+            2,
+            {
+                "getWithoutSet": true
+            }
+        ],
+        "block-scoped-var": 2,
+        "computed-property-spacing": [
+            2,
+            "never"
+        ],
+        "constructor-super": 0,
+        "dot-location": [
+            2,
+            "property"
+        ],
+        "func-style": [
+            2,
+            "declaration"
+        ],
+        "generator-star-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "lines-around-comment": [
+            0,
+            {
+                "beforeBlockComment": true,
+                "afterBlockComment": false,
+                "beforeLineComment": false,
+                "afterLineComment": false,
+                "allowBlockStart": true,
+                "allowBlockEnd": true
+            }
+        ],
+        "max-depth": [
+            2,
+            3
+        ],
+        "max-statements": [
+            2,
+            15
+        ],
+        "newline-after-var": 2,
+        "object-curly-spacing": [
+            2,
+            "never"
+        ],
+        "object-shorthand": [
+            2,
+            "always"
+        ],
+        "operator-linebreak": [
+            2,
+            "before"
+        ],
+        "quote-props": [
+            2,
+            "as-needed"
+        ],
+        "sort-vars": 2,
+        "space-before-function-paren": [
+            2,
+            "never"
+        ],
+        "spaced-comment": [
+            2,
+            [
+                "never",
+                {
+                  "exceptions":[
+                      "-",
+                      "=",
+                      "+",
+                      "*"
+                  ]
+                }
+            ]
+        ],
+        "wrap-regex": 2
+    },
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "blockBindings": true,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "templateStrings": true,
+        "binaryLiterals": true,
+        "octalLiterals": true,
+        "unicodeCodePointEscapes": true,
+        "superInFunctions": true,
+        "defaultParams": true,
+        "restParams": true,
+        "forOf": true,
+        "objectLiteralComputedProperties": true,
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        "objectLiteralDuplicateProperties": true,
+        "generators": true,
+        "destructuring": true,
+        "classes": true
+    }
+}
