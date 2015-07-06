@@ -280,7 +280,10 @@
             0,
             "always"
         ],
-        "operator-linebreak": 2,
+        "operator-linebreak": [
+            2,
+            "after"
+        ],
         "padded-blocks": 0,
         "quote-props": 0,
         "quotes": [
