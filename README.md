@@ -6,9 +6,9 @@
 [travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat
 [travis-url]: https://travis-ci.org/feross/standard
 [npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
-[npm-url]: https://npmjs.org/package/standard
+[npm-url]: https://npmjs.org/package/uber-standard
 [downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
-[downloads-url]: https://npmjs.org/package/standard
+[downloads-url]: https://npmjs.org/package/uber-standard
 
 ### One Style to Rule Them All
 
