@@ -25,7 +25,7 @@
         "no-cond-assign": 2,
         "no-console": 2,
         "no-constant-condition": 2,
-        "no-continue": 2,
+        "no-continue": 0,
         "no-control-regex": 2,
         "no-debugger": 2,
         "no-delete-var": 2,
@@ -117,7 +117,6 @@
         "no-sync": 0,
         "no-ternary": 0,
         "no-trailing-spaces": 2,
-        "no-this-before-super": 2,
         "no-throw-literal": 2,
         "no-try-catch": 2,
         "no-undef": 2,
@@ -269,7 +268,7 @@
         "newline-after-var": 0,
         "object-curly-spacing": [
             2,
-            "never"
+            "always"
         ],
         "object-shorthand": 0,
         "one-var": [
@@ -314,7 +313,7 @@
         ],
         "space-before-function-paren": [
             2,
-            "always"
+            "never"
         ],
         "space-in-brackets": [
             2,
