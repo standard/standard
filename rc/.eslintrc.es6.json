@@ -79,7 +79,7 @@
         ],
         "operator-linebreak": [
             2,
-            "before"
+            "after"
         ],
         "quote-props": [
             2,
