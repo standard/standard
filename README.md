@@ -170,7 +170,7 @@ clear, automated contributor expectations makes a project healthier.
 
 ### I disagree with rule X, can you change it?
 
-No. The the whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
+No. The whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
 style. There are lots of debates online about tabs vs. spaces, etc. that will never be
 resolved. These debates just distract from getting stuff done. At the end of the day you
 have to 'just pick something', and that's the whole philosophy of `standard` -- its a
