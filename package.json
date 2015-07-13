@@ -14,6 +14,7 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
+    "deglob": "^1.0.0",
     "dezalgo": "^1.0.1",
     "eslint": "0.24.1",
     "eslint-config-standard": "3.4.1",
@@ -21,13 +22,9 @@
     "eslint-plugin-react": "^2.1.0",
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
-    "glob": "^5.0.0",
-    "ignore": "^2.2.15",
     "minimist": "^1.1.0",
     "pkg-config": "^1.0.1",
-    "run-parallel": "^1.0.0",
     "standard-format": "^1.3.3",
-    "uniq": "^1.0.1",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
