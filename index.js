@@ -29,12 +29,6 @@ var DEFAULT_CONFIG = {
   useEslintrc: false
 }
 
-var DEGLOB_OPTIONS = {
-  useGitIgnore: true,
-  usePackageJson: true,
-  configKey: 'standard'
-}
-
 /**
  * Lint text to enforce JavaScript Standard Style.
  *
@@ -81,7 +75,15 @@ function lintFiles (files, opts, cb) {
   if (typeof files === 'string') files = [ files ]
   if (files.length === 0) files = DEFAULT_PATTERNS
 
-  deglob(files, opts, function (err, allFiles) {
+  var deglobOpts = {
+    ignore: opts.ignore,
+    cwd: opts.cwd,
+    useGitIgnore: true,
+    usePackageJson: true,
+    configKey: 'standard'
+  }
+
+  deglob(files, deglobOpts, function (err, allFiles) {
     if (err) return cb(err)
      // undocumented – do not use (used by bin/cmd.js)
     if (opts._onFiles) opts._onFiles(allFiles)
@@ -99,7 +101,7 @@ function lintFiles (files, opts, cb) {
 
 function parseOpts (opts) {
   if (!opts) opts = {}
-  opts = extend(opts, DEGLOB_OPTIONS)
+  opts = extend(opts)
   opts._config = extend(DEFAULT_CONFIG)
   opts.configKey = 'standard'
 
