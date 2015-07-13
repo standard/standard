@@ -55,20 +55,6 @@
             "as-needed"
         ],
         "sort-vars": 2,
-        "spaced-comment": [
-            2,
-            [
-                "never",
-                {
-                  "exceptions":[
-                      "-",
-                      "=",
-                      "+",
-                      "*"
-                  ]
-                }
-            ]
-        ],
         "wrap-regex": 2
     },
     "ecmaFeatures": {

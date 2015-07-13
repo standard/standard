@@ -35,7 +35,6 @@
         "no-duplicate-case": 2,
         "no-else-return": 2,
         "no-empty": 2,
-        "no-empty-class": 2,
         "no-empty-character-class": 2,
         "no-empty-label": 2,
         "no-eq-null": 2,
@@ -46,7 +45,6 @@
         "no-extra-boolean-cast": 2,
         "no-extra-parens": 2,
         "no-extra-semi": 2,
-        "no-extra-strict": 2,
         "no-fallthrough": 2,
         "no-floating-decimal": 2,
         "no-func-assign": 2,
@@ -111,7 +109,6 @@
         "no-sequences": 2,
         "no-shadow": 2,
         "no-shadow-restricted-names": 2,
-        "no-space-before-semi": 2,
         "no-spaced-func": 2,
         "no-sparse-arrays": 2,
         "no-sync": 0,
@@ -153,7 +150,6 @@
             }
         ],
         "no-with": 2,
-        "no-wrap-func": 2,
 
         "array-bracket-spacing": [
             2,
@@ -218,10 +214,6 @@
             "declaration"
         ],
         "generator-star-spacing": 0,
-        "global-strict": [
-            2,
-            "always"
-        ],
         "guard-for-in": 2,
         "handle-callback-err": [
             2,
@@ -299,10 +291,6 @@
             }
         ],
         "sort-vars": 0,
-        "space-after-function-name": [
-            2,
-            "never"
-        ],
         "space-after-keywords": [
             2,
             "always"
@@ -312,10 +300,6 @@
             "always"
         ],
         "space-before-function-paren": [
-            2,
-            "never"
-        ],
-        "space-in-brackets": [
             2,
             "never"
         ],
@@ -332,12 +316,21 @@
                 "nonwords": false
             }
         ],
-        "spaced-comment": 0,
-        "spaced-line-comment": [
+        "spaced-comment": [
             2,
-            "always"
+            [
+                "always",
+                {
+                  "exceptions":[
+                      "-",
+                      "=",
+                      "+",
+                      "*"
+                  ]
+                }
+            ]
         ],
-        "strict": 2,
+        "strict": [2, "global"],
         "use-isnan": 2,
         "valid-jsdoc": [
             2,
