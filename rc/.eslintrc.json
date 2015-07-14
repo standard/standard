@@ -268,7 +268,7 @@
         "newline-after-var": 0,
         "object-curly-spacing": [
             2,
-            "always"
+            "never"
         ],
         "object-shorthand": 0,
         "one-var": [
