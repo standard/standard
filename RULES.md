@@ -9,7 +9,7 @@ important rules are listed here. Please send PRs!
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
+- **No semicolons** – [It's][1] [totally][2] [fine.][3] [Really!][4]
 - **Never start a line with `(` or `[`**
     - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
 - **Space after keywords** `if (condition) { ... }`
@@ -22,7 +22,16 @@ important rules are listed here. Please send PRs!
 
 ## Automatic semicolon insertion (ASI)
 
-*Quoting from ["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]:*
+##### Required reading:
+
+- [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
+- [JavaScript Semicolon Insertion – Everything you need to know][2]
+
+##### And a helpful video:
+
+- [Are Semicolons Necessary in JavaScript? - YouTube][3]
+
+##### Excerpt from *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
 [Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
 
@@ -81,5 +90,4 @@ nums.forEach(bar)
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://github.com/maxogden/messages/issues/18
-[4]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
+[3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
