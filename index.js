@@ -103,7 +103,6 @@ function parseOpts (opts) {
   if (!opts) opts = {}
   opts = extend(opts)
   opts._config = extend(DEFAULT_CONFIG)
-  opts.configKey = 'standard'
 
   if (!opts.cwd) opts.cwd = process.cwd()
 
