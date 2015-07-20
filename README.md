@@ -120,6 +120,8 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
   [Flycheck](http://www.flycheck.org) and check out the
   [manual](http://www.flycheck.org/manual/latest/index.html) to learn how
   to enable it in your projects.
+- **[Brackets](http://brackets.io/)** - Search the extension registry for
+  [Standard Code Style](https://github.com/ishamf/brackets-standard/).
 
 ### What you might do if you're clever
 
