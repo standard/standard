@@ -5,6 +5,7 @@ var minimist = require('minimist')
 var standard = require('../')
 var standardFormat = require('standard-format')
 var stdin = require('get-stdin')
+var eslint = require('eslint')
 
 var argv = minimist(process.argv.slice(2), {
   alias: {
@@ -20,7 +21,8 @@ var argv = minimist(process.argv.slice(2), {
     'version'
   ],
   string: [
-    'parser'
+    'parser',
+    'formatter'
   ]
 })
 
@@ -49,6 +51,7 @@ if (argv.help) {
       -v, --verbose   Show error codes (so you can ignore specific rules)
           --stdin     Read file text from stdin
           --parser    Use custom js parser (e.g. babel-eslint, esprima-fb)
+          --formatter Name of formatter you wish to use (see http://eslint.org/docs/developer-guide/nodejs-api#getformatter)
           --version   Show current version
       -h, --help      Show usage information
 
@@ -95,15 +98,21 @@ function onResult (err, result) {
     '(https://github.com/feross/standard)'
   )
 
-  result.results.forEach(function (result) {
-    result.messages.forEach(function (message) {
-      log(
-        '  %s:%d:%d: %s%s',
-        result.filePath, message.line || 0, message.column || 0, message.message,
-        argv.verbose ? ' (' + message.ruleId + ')' : ''
-      )
+  if (argv.formatter) {
+    var formatter = new eslint.CLIEngine().getFormatter(argv.formatter)
+
+    log(formatter(result.results))
+  } else {
+    result.results.forEach(function (result) {
+      result.messages.forEach(function (message) {
+        log(
+          '  %s:%d:%d: %s%s',
+          result.filePath, message.line || 0, message.column || 0, message.message,
+          argv.verbose ? ' (' + message.ruleId + ')' : ''
+        )
+      })
     })
-  })
+  }
 
   process.exit(1)
 }
