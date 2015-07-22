@@ -346,6 +346,14 @@ PreCommit:
     enabled: true
 ```
 
+### How do I make the output all colorful and *pretty*?
+
+Install the [`snazzy`](https://github.com/feross/snazzy) package and run:
+
+```bash
+$ standard --verbose | snazzy
+```
+
 ### I want to hack on `standard`. What packages should I know about?
 
 - [eslint](https://github.com/eslint/eslint)
@@ -354,6 +362,7 @@ PreCommit:
   - [eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)
 - [semistandard](https://github.com/Flet/semistandard)
   - [eslint-config-semistandard](https://github.com/Flet/eslint-config-semistandard)
+- [snazzy](https://github.com/feross/snazzy)
 - [standard-format](https://github.com/maxogden/standard-format)
 - [standard-engine](https://github.com/flet/standard-engine)
 
