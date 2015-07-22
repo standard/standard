@@ -33,30 +33,25 @@ if (argv._[0] === '-') {
 if (argv.help) {
   console.log(function () {
   /*
-  standard - JavaScript Standard Style
+standard - JavaScript Standard Style (https://github.com/feross/standard)
 
-  Usage:
-      standard <flags> [FILES...]
+Usage:
+    standard <flags> [FILES...]
 
-      If FILES is omitted, then all JavaScript source files (*.js, *.jsx) in the current
-      working directory are checked, recursively.
+    If FILES is omitted, then all JavaScript source files (*.js, *.jsx) in the current
+    working directory are checked, recursively.
 
-      Certain paths (node_modules/, .git/, coverage/, *.min.js, bundle.js) are
-      automatically excluded.
+    Certain paths (node_modules/, .git/, coverage/, *.min.js, bundle.js) are
+    automatically ignored.
 
-  Flags:
-      -F  --format    Automatically format code (using standard-format)
-      -v, --verbose   Show error codes (so you can ignore specific rules)
-          --stdin     Read file text from stdin
-          --parser    Custom js parser (e.g. babel-eslint)
-          --global    Declare global variable
-
-          --version   Show current version
-      -h, --help      Show usage information
-
-  Readme:  https://github.com/feross/standard
-  Report bugs:  https://github.com/feross/standard/issues
-
+Flags:
+    -F, --format    Automatically format code (using standard-format)
+    -v, --verbose   Show error codes (so you can ignore specific rules)
+        --stdin     Check source text on stdin
+        --global    Declare global variable
+        --parser    Custom js parser (e.g. babel-eslint)
+        --version   Show current version
+    -h, --help      Show usage information
   */
   }.toString().split(/\n/).slice(2, -2).join('\n'))
   process.exit(0)
