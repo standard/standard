@@ -48,7 +48,9 @@ if (argv.help) {
       -F  --format    Automatically format code (using standard-format)
       -v, --verbose   Show error codes (so you can ignore specific rules)
           --stdin     Read file text from stdin
-          --parser    Use custom js parser (e.g. babel-eslint, esprima-fb)
+          --parser    Custom js parser (e.g. babel-eslint)
+          --global    Declare global variable
+
           --version   Show current version
       -h, --help      Show usage information
 
