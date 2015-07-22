@@ -110,7 +110,7 @@ function parseOpts (opts) {
   if (!opts.ignore) opts.ignore = []
   opts.ignore = opts.ignore.concat(DEFAULT_IGNORE)
 
-  setGlobals(opts.globals || opts.global)
+  setGlobals(opts.global)
   setParser(opts.parser)
 
   var root
