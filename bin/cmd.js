@@ -9,6 +9,7 @@ var stdin = require('get-stdin')
 var argv = minimist(process.argv.slice(2), {
   alias: {
     format: 'F',
+    global: 'globals',
     help: 'h',
     verbose: 'v'
   },
@@ -20,9 +21,8 @@ var argv = minimist(process.argv.slice(2), {
     'version'
   ],
   string: [
-    'parser',
     'global',
-    'globals'
+    'parser'
   ]
 })
 
@@ -73,7 +73,7 @@ if (argv.stdin) {
     standard.lintText(text, { parser: argv.parser }, onResult)
   })
 } else {
-  var opts = { parser: argv.parser, global: argv.global || argv.globals }
+  var opts = { parser: argv.parser, global: argv.global }
   if (argv.format) {
     opts._onFiles = function (files) {
       files.forEach(function (file) {
@@ -82,7 +82,6 @@ if (argv.stdin) {
       })
     }
   }
-
   standard.lintFiles(argv._, opts, onResult)
 }
 
