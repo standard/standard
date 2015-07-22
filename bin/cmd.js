@@ -20,9 +20,13 @@ var argv = minimist(process.argv.slice(2), {
     'version'
   ],
   string: [
-    'parser'
+    'parser',
+    'global',
+    'globals'
   ]
 })
+
+console.log(argv)
 
 // running `standard -` is equivalent to `standard --stdin`
 if (argv._[0] === '-') {
@@ -76,7 +80,7 @@ if (argv.stdin) {
     standard.lintText(text, { parser: argv.parser }, onResult)
   })
 } else {
-  var opts = { parser: argv.parser }
+  var opts = { parser: argv.parser, global: argv.global || argv.globals }
   if (argv.format) {
     opts._onFiles = function (files) {
       files.forEach(function (file) {
@@ -85,6 +89,7 @@ if (argv.stdin) {
       })
     }
   }
+
   standard.lintFiles(argv._, opts, onResult)
 }
 
