@@ -26,8 +26,6 @@ var argv = minimist(process.argv.slice(2), {
   ]
 })
 
-console.log(argv)
-
 // running `standard -` is equivalent to `standard --stdin`
 if (argv._[0] === '-') {
   argv.stdin = true
