@@ -123,15 +123,24 @@ function parseOpts (opts) {
 
     if (packageOpts) {
       // Use globals from package.json ("standard.global" property)
-      var globals = packageOpts.globals || packageOpts.global
-      if (globals) {
-        opts._config.globals = Array.isArray(globals)
-          ? globals
-          : [ globals ]
-      }
-
+      useGlobals(packageOpts)
       // Use custom js parser from package.json ("standard.parser" property)
       if (!opts.parser && packageOpts.parser) useCustomParser(packageOpts.parser)
+    }
+  }
+  
+  // Use globals from options
+  useGlobals(opts)
+  
+  function useGlobals (_opts) {
+    var globals = _opts.globals || _opts.global
+    if (globals) {
+      globals = Array.isArray(globals)
+        ? globals
+        : [ globals ]
+      opts._config.globals = opts._config.globals
+        ? globals.concat(opts._config.globals)
+        : globals
     }
   }
 
