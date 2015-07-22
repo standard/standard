@@ -16,7 +16,7 @@ var DEFAULT_PATTERNS = [
   '**/*.jsx'
 ]
 
-var DEFAULT_IGNORE_PATTERNS = [
+var DEFAULT_IGNORE = [
   'coverage/**',
   'node_modules/**',
   '**/*.min.js',
@@ -25,6 +25,7 @@ var DEFAULT_IGNORE_PATTERNS = [
 
 var DEFAULT_CONFIG = {
   configFile: path.join(__dirname, 'rc', '.eslintrc'),
+  globals: [],
   useEslintrc: false
 }
 
@@ -101,57 +102,43 @@ function lintFiles (files, opts, cb) {
 }
 
 function parseOpts (opts) {
-  if (!opts) opts = {}
   opts = extend(opts)
   opts._config = extend(DEFAULT_CONFIG)
 
   if (!opts.cwd) opts.cwd = process.cwd()
 
-  var ignore = DEFAULT_IGNORE_PATTERNS.slice(0) // passed into glob
+  if (!opts.ignore) opts.ignore = []
+  opts.ignore = opts.ignore.concat(DEFAULT_IGNORE)
 
-  if (opts.ignore) ignore.concat(opts.ignore)
-  opts.ignore = ignore
+  setGlobals(opts.globals || opts.global)
+  setParser(opts.parser)
 
-  if (opts.parser) useCustomParser(opts.parser)
-
-  // Find package.json in the project root
   var root
-  try {
-    root = findRoot(opts.cwd)
-  } catch (e) {}
-
+  try { root = findRoot(opts.cwd) } catch (e) {}
   if (root) {
-    var packageOpts = pkgConfig('standard', { root: false, cwd: opts.cwd })
-
-    if (packageOpts) {
-      // Use globals from package.json ("standard.global" property)
-      useGlobals(packageOpts)
-      // Use custom js parser from package.json ("standard.parser" property)
-      if (!opts.parser && packageOpts.parser) useCustomParser(packageOpts.parser)
-    }
-  }
-  
-  // Use globals from options
-  useGlobals(opts)
-  
-  function useGlobals (_opts) {
-    var globals = _opts.globals || _opts.global
-    if (globals) {
-      globals = Array.isArray(globals)
-        ? globals
-        : [ globals ]
-      opts._config.globals = opts._config.globals
-        ? globals.concat(opts._config.globals)
-        : globals
+    var pkg = pkgConfig('standard', { root: false, cwd: opts.cwd })
+    if (pkg) {
+      setGlobals(pkg.globals || pkg.global)
+      if (!opts.parser) setParser(pkg.parser)
     }
   }
 
-  function useCustomParser (parser) {
+  function setParser (parser) {
+    if (!parser) return
     var configFile = JSON.parse(fs.readFileSync(DEFAULT_CONFIG.configFile, 'utf8'))
     configFile.parser = parser
-    var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + parser)
+    var tmpFilename = path.join(os.tmpdir(), '.eslintrc-' + randomNumber())
     fs.writeFileSync(tmpFilename, JSON.stringify(configFile))
     opts._config.configFile = tmpFilename
+  }
+
+  function setGlobals (globals) {
+    if (!globals) return
+    opts._config.globals = opts._config.globals.concat(globals)
+  }
+
+  function randomNumber () {
+    return Math.random().toString().substring(2, 10)
   }
 
   return opts
