@@ -1,3 +1,10 @@
 {
-  "extends": ["standard", "standard-react"]
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "standard/object-curly-even-spacing": [2, "either"],
+    "standard/array-bracket-even-spacing": [2, "either"]
+  },
+  "plugins": [
+    "standard"
+  ]
 }

@@ -20,6 +20,7 @@
     "eslint-config-standard": "4.0.0-1",
     "eslint-config-standard-react": "1.0.2",
     "eslint-plugin-react": "^2.1.0",
+    "eslint-plugin-standard": "^1.0.0",
     "find-root": "^0.1.1",
     "get-stdin": "^4.0.1",
     "minimist": "^1.1.0",
