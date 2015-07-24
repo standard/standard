@@ -103,25 +103,52 @@ $ standard src/util/**/*.js
 
 **Note:** by default `standard` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
 
-### Editor plugins
+### Text editor plugins
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
 
-- **[Sublime Text](https://www.sublimetext.com/)** - Install
-  [Package Control](https://packagecontrol.io/),
-  [SublimeLinter](http://www.sublimelinter.com/en/latest/), and
-  [SublimeLinter-contrib-standard](https://packagecontrol.io/packages/SublimeLinter-contrib-standard).
-- **[Atom](https://atom.io)** - Install [Linter](https://atom.io/packages/linter)
-  and [linter-js-standard](https://atom.io/packages/linter-js-standard).
-- **[Vim](http://www.vim.org/)** - Install
-  [Syntastic](https://github.com/scrooloose/syntastic) and add
-  `let g:syntastic_javascript_checkers = ['standard']` to your `.vimrc`.
-- **[Emacs](https://www.gnu.org/software/emacs/)** - Install
-  [Flycheck](http://www.flycheck.org) and check out the
-  [manual](http://www.flycheck.org/manual/latest/index.html) to learn how
-  to enable it in your projects.
-- **[Brackets](http://brackets.io/)** - Search the extension registry for
-  [Standard Code Style](https://github.com/ishamf/brackets-standard/).
+#### [Sublime Text](https://www.sublimetext.com/)
+
+Using **[Package Control][sublime-1]**, install **[SublimeLinter][sublime-2]** and
+**[SublimeLinter-contrib-standard][sublime-3]**.
+
+For automatic formatting, install **[StandardFormat][sublime-4]**.
+
+[sublime-1]: https://packagecontrol.io/
+[sublime-2]: http://www.sublimelinter.com/en/latest/
+[sublime-3]: https://packagecontrol.io/packages/SublimeLinter-contrib-standard
+[sublime-4]: https://packagecontrol.io/packages/StandardFormat
+
+#### [Atom](https://atom.io)
+
+Install **[Linter][atom-1]** and **[linter-js-standard][atom-2]**.
+
+[atom-1]: https://atom.io/packages/linter
+[atom-2]: https://atom.io/packages/linter-js-standard
+
+#### [Vim](http://www.vim.org/)
+
+Install **[Syntastic][vim-1]** and add this line to your `.vimrc`:
+
+```vim
+let g:syntastic_javascript_checkers = ['standard']
+```
+
+[vim-1]: https://github.com/scrooloose/syntastic
+
+#### [Emacs](https://www.gnu.org/software/emacs/)
+
+Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn how to
+enable it in your projects.
+
+[emacs-1]: http://www.flycheck.org
+[emacs-2]: http://www.flycheck.org/manual/latest/index.html
+
+#### [Brackets](http://brackets.io/)
+
+Search the extension registry for **["Standard Code Style"][brackets-1]**.
+
+[brackets-1]: https://github.com/ishamf/brackets-standard/
 
 ### What you might do if you're clever
 
@@ -356,15 +383,16 @@ $ standard --verbose | snazzy
 
 ### I want to hack on `standard`. What packages should I know about?
 
-- [eslint](https://github.com/eslint/eslint)
-- [standard](https://github.com/feross/standard)
-  - [eslint-config-standard](https://github.com/feross/eslint-config-standard)
-  - [eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)
-- [semistandard](https://github.com/Flet/semistandard)
-  - [eslint-config-semistandard](https://github.com/Flet/eslint-config-semistandard)
-- [snazzy](https://github.com/feross/snazzy)
-- [standard-format](https://github.com/maxogden/standard-format)
-- [standard-engine](https://github.com/flet/standard-engine)
+- [eslint](https://github.com/eslint/eslint) - an awesome JavaScript linter
+- [standard](https://github.com/feross/standard) - this repo
+  - [eslint-config-standard](https://github.com/feross/eslint-config-standard) - eslint rules for standard
+  - [eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react) - eslint rules for React users
+  - [eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard) - custom rules for standard, not built into eslint
+- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons (if you must)
+  - [eslint-config-semistandard](https://github.com/Flet/eslint-config-semistandard) - eslint rules for semistandard
+- [snazzy](https://github.com/feross/snazzy) - pretty terminal output
+- [standard-format](https://github.com/maxogden/standard-format) - automatic code formatter
+- [standard-engine](https://github.com/flet/standard-engine) - cli engine for eslint rules
 
 There are also many [editor plugins](https://github.com/feross/standard#editor-plugins).
 
