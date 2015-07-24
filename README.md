@@ -112,7 +112,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 Using **[Package Control][sublime-1]**, install **[SublimeLinter][sublime-2]** and
 **[SublimeLinter-contrib-standard][sublime-3]**.
 
-For automatic formatting, install **[StandardFormat][sublime-4]**.
+For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -128,10 +128,17 @@ Install **[Linter][atom-1]** and **[linter-js-standard][atom-2]**.
 
 #### [Vim](http://www.vim.org/)
 
-Install **[Syntastic][vim-1]** and add this line to your `.vimrc`:
+Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
 
 ```vim
 let g:syntastic_javascript_checkers = ['standard']
+```
+
+For automatic formatting on save, add these two lines to `.vimrc`:
+
+```vim
+autocmd bufwritepost *.js silent !standard % --format
+set autoread
 ```
 
 [vim-1]: https://github.com/scrooloose/syntastic
@@ -329,9 +336,13 @@ cases, you can add this to `package.json`:
 
 ### Can you make rule X configurable?
 
-No. Use `eslint` and
-[this shareable config](https://github.com/feross/eslint-config-standard) if you want to
-configure hundreds of options individually.
+No. The point of `standard` is to save you time by picking reasonable rules so you can
+spend your time solving actual problems. If you really do want to configure hundreds of
+eslint rules individually, you can always use `eslint` directly.
+
+If you just want to tweak a couple rules, consider using
+[this shareable config](https://github.com/feross/eslint-config-standard) and layering
+your changes on top.
 
 Pro tip: Just use `standard` and move on. There are actual real problems that you could
 spend your time solving! :P
@@ -352,7 +363,7 @@ Until we figure out a better solution, we recommend adding this to the top of wo
 This lets `standard` (as well as humans reading your code) know that `self` is a global
 in web worker code.
 
-### Is there a Git `pre-commit` hook for `standard`?
+### Is there a Git `pre-commit` hook?
 
 Funny you should ask!
 
@@ -375,24 +386,29 @@ PreCommit:
 
 ### How do I make the output all colorful and *pretty*?
 
-Install the [`snazzy`](https://github.com/feross/snazzy) package and run:
+Install **[snazzy](https://github.com/feross/snazzy)**:
+
+```
+npm install snazzy
+```
+
+And run:
 
 ```bash
 $ standard --verbose | snazzy
 ```
 
-### I want to hack on `standard`. What packages should I know about?
+### I want to contribute to `standard`. What packages should I know about?
 
-- [eslint](https://github.com/eslint/eslint) - an awesome JavaScript linter
-- [standard](https://github.com/feross/standard) - this repo
-  - [eslint-config-standard](https://github.com/feross/eslint-config-standard) - eslint rules for standard
-  - [eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react) - eslint rules for React users
-  - [eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard) - custom rules for standard, not built into eslint
-- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons (if you must)
-  - [eslint-config-semistandard](https://github.com/Flet/eslint-config-semistandard) - eslint rules for semistandard
-- [snazzy](https://github.com/feross/snazzy) - pretty terminal output
-- [standard-format](https://github.com/maxogden/standard-format) - automatic code formatter
-- [standard-engine](https://github.com/flet/standard-engine) - cli engine for eslint rules
+- **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
+- **[standard](https://github.com/feross/standard)** - this repo
+  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
+  - **[eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)** - eslint rules for React and JSX
+  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
+  - **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
+- **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
+- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
+- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
 There are also many [editor plugins](https://github.com/feross/standard#editor-plugins).
 
