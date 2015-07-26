@@ -89,7 +89,7 @@ function onResult (err, result) {
   if (err) return onError(err)
   if (result.errorCount === 0) process.exit(0)
 
-  console.error(
+  console.log(
     'standard: Use JavaScript Standard Style ' +
     '(https://github.com/feross/standard)'
   )
@@ -119,8 +119,8 @@ function onError (err) {
 
 /**
  * Print lint errors to stdout since this is expected output from `standard`.
- * Note: When formatting code from stdin (`standard --stdin --format`), the transformed
- * code is printed to stdout, so print lint errors to stderr in this case.
+ * Note: When formatting code from stdin (`standard --stdin --format`), print lint errors
+ * to stderr, since the transformed code is printed to stdout.
  */
 function log () {
   if (argv.stdin && argv.format) {
