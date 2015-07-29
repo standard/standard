@@ -410,7 +410,7 @@ $ standard --verbose | snazzy
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
-There are also many [editor plugins](https://github.com/feross/standard#editor-plugins).
+There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins).
 
 ## License
 
