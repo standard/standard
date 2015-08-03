@@ -94,15 +94,7 @@ function onResult (err, result) {
     '(https://github.com/feross/standard)'
   )
 
-  result.results.forEach(function (result) {
-    result.messages.forEach(function (message) {
-      log(
-        '  %s:%d:%d: %s%s',
-        result.filePath, message.line || 0, message.column || 0, message.message,
-        argv.verbose ? ' (' + message.ruleId + ')' : ''
-      )
-    })
-  })
+  log(result._getFormatter()(result.results))
 
   process.exit(1)
 }
