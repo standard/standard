@@ -412,6 +412,54 @@ $ standard --verbose | snazzy
 
 There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins).
 
+## API Usage
+
+### `standard.lintText(text, [opts], callback)`
+
+Lint the provided source `text` to enforce JavaScript Standard Style. An `opts` object may
+be provided:
+
+```js
+{
+  globals: [],  // global variables to declare
+  parser: ''    // custom js parser (e.g. babel-eslint)
+}
+```
+
+The `callback` will be called with an `Error` and `results` object:
+
+```js
+{
+  results: [
+    {
+      filePath: '',
+      messages: [
+        { ruleId: '', message: '', line: 0, column: 0 }
+      ],
+      errorCount: 0,
+      warningCount: 0
+    }
+  ],
+  errorCount: 0,
+  warningCount: 0
+}
+```
+
+### `standard.lintFiles(files, [opts], callback)`
+
+Lint the provided `files` globs. An `opts` object may be provided:
+
+```js
+{
+  globals: [],  // global variables to declare
+  parser: '',   // custom js parser (e.g. babel-eslint)
+  ignore: [],   // file globs to ignore (has sane defaults)
+  cwd: ''       // current working directory (default: process.cwd())
+}
+```
+
+The `callback` will be called with an `Error` and `results` object (same as above).
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).

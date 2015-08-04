@@ -32,11 +32,11 @@ var DEFAULT_CONFIG = {
 /**
  * Lint text to enforce JavaScript Standard Style.
  *
- * @param {string} text                 file text to lint
- * @param {Object=} opts                options object
- * @param {string=} opts.globals        global variables to declare
- * @param {string=} opts.parser         custom js parser (e.g. babel-eslint)
- * @param {function(Error, Object)} cb  callback
+ * @param {string} text                   file text to lint
+ * @param {Object=} opts                  options object
+ * @param {Array.<string>=} opts.globals  global variables to declare
+ * @param {string=} opts.parser           custom js parser (e.g. babel-eslint)
+ * @param {function(Error, Object)} cb    callback
  */
 function lintText (text, opts, cb) {
   if (typeof opts === 'function') {
@@ -58,13 +58,13 @@ function lintText (text, opts, cb) {
 /**
  * Lint files to enforce JavaScript Standard Style.
  *
- * @param {Array.<string>} files        file globs to lint
- * @param {Object=} opts                options object
- * @param {Array.<String>=} opts.ignore file globs to ignore (has sane defaults)
- * @param {string=} opts.cwd            current working directory (default: process.cwd())
- * @param {string=} opts.globals        global variables to declare
- * @param {string=} opts.parser         custom js parser (e.g. babel-eslint)
- * @param {function(Error, Object)} cb  callback
+ * @param {Array.<string>} files          file globs to lint
+ * @param {Object=} opts                  options object
+ * @param {Array.<string>=} opts.ignore   file globs to ignore (has sane defaults)
+ * @param {string=} opts.cwd              current working directory (default: process.cwd())
+ * @param {Array.<string>=} opts.globals  global variables to declare
+ * @param {string=} opts.parser           custom js parser (e.g. babel-eslint)
+ * @param {function(Error, Object)} cb    callback
  */
 function lintFiles (files, opts, cb) {
   if (typeof opts === 'function') {
