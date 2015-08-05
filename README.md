@@ -418,7 +418,7 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
 
 There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins).
 
-## API Usage
+## Node.js API
 
 ### `standard.lintText(text, [opts], callback)`
 
