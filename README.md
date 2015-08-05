@@ -334,6 +334,9 @@ cases, you can add this to `package.json`:
 }
 ```
 
+If you're using `standard` globally (you installed it with `-g`), then you also need to
+install `babel-eslint` globally with `npm install babel-eslint -g`.
+
 ### Can you make rule X configurable?
 
 No. The point of `standard` is to save you time by picking reasonable rules so you can
