@@ -318,17 +318,15 @@
         ],
         "spaced-comment": [
             2,
-            [
-                "always",
-                {
-                  "exceptions":[
-                      "-",
-                      "=",
-                      "+",
-                      "*"
-                  ]
-                }
-            ]
+            "always",
+            {
+              "exceptions":[
+                  "-",
+                  "=",
+                  "+",
+                  "*"
+              ]
+            }
         ],
         "strict": [2, "global"],
         "use-isnan": 2,
