@@ -389,7 +389,8 @@ PreCommit:
 
 ### How do I make the output all colorful and *pretty*?
 
-Install **[snazzy](https://github.com/feross/snazzy)**:
+The built-in output is simple and straightforward, but if you like shiny things,
+install [snazzy](https://www.npmjs.com/package/snazzy):
 
 ```
 npm install snazzy
@@ -400,6 +401,8 @@ And run:
 ```bash
 $ standard --verbose | snazzy
 ```
+
+There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json), and [standard-reporter](https://www.npmjs.com/package/standard-reporter)
 
 ### I want to contribute to `standard`. What packages should I know about?
 
