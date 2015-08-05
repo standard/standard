@@ -47,11 +47,13 @@ function lintText (text, opts, cb) {
   cb = dezalgo(cb)
 
   var result
+  var engine = new eslint.CLIEngine(opts._config)
   try {
-    result = new eslint.CLIEngine(opts._config).executeOnText(text)
+    result = engine.executeOnText(text)
   } catch (err) {
     return cb(err)
   }
+  result._getFormatter = engine.getFormatter
   return cb(null, result)
 }
 
@@ -91,11 +93,13 @@ function lintFiles (files, opts, cb) {
     if (opts._onFiles) opts._onFiles(allFiles)
 
     var result
+    var engine = new eslint.CLIEngine(opts._config)
     try {
-      result = new eslint.CLIEngine(opts._config).executeOnFiles(allFiles)
+      result = engine.executeOnFiles(allFiles)
     } catch (err) {
       return cb(err)
     }
+    result._getFormatter = engine.getFormatter
     return cb(null, result)
   })
 
