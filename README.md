@@ -406,13 +406,13 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
 
 ### I want to contribute to `standard`. What packages should I know about?
 
-- **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
 - **[standard](https://github.com/feross/standard)** - this repo
+  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
   - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
   - **[eslint-config-standard-react](https://github.com/feross/eslint-config-standard-react)** - eslint rules for React and JSX
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
-- **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
+  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
