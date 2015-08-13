@@ -212,7 +212,7 @@ have to 'just pick something', and that's the whole philosophy of `standard` -- 
 bunch of sensible 'just pick something' opinions. Hopefully, users see the value in that
 over defending their own opinions.
 
-[bikeshedding]: https://www.freebsd.org/doc/en_US.ISO8859-1/books/faq/misc.html#idp60694736
+[bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
 ### But this isn't a real web standard!
 
