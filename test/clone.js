@@ -84,7 +84,7 @@ var URLS = [
   'https://github.com/Flet/dailyconnect.git',
   'https://github.com/Flet/exitzero.git',
   'https://github.com/Flet/standard-engine.git',
-  'https://github.com/karma-runner/karma-coverage.git',
+  // 'https://github.com/karma-runner/karma-coverage.git',
   'https://github.com/mafintosh/airpaste.git',
   'https://github.com/mafintosh/chromecasts.git',
   'https://github.com/mafintosh/cyclist.git',
