@@ -9,7 +9,7 @@ important rules are listed here. Please send PRs!
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [totally][2] [fine.][3] [Really!][4]
+- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
     - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
 - **Space after keywords** `if (condition) { ... }`
