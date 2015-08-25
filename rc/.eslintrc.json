@@ -319,7 +319,7 @@
             2,
             "always",
             {
-              "exceptions":[
+              "exceptions": [
                   "-",
                   "=",
                   "+",
