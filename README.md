@@ -313,7 +313,7 @@ global in your code, add this to the top of your file:
 If you have hundreds of files, adding comments to every file can be tedious. In these
 cases, you can add this to `package.json`:
 
-```js
+```json
 {
   "standard": {
     "global": [ "myVar1", "myVar2" ]
@@ -326,7 +326,7 @@ cases, you can add this to `package.json`:
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
 (example: `npm install babel-eslint`) and add this to your `package.json`:
 
-```js
+```json
 {
   "standard": {
     "parser": "babel-eslint"
@@ -426,7 +426,7 @@ Lint the provided source `text` to enforce JavaScript Standard Style. An `opts` 
 be provided:
 
 ```js
-{
+var opts = {
   globals: [],  // global variables to declare
   parser: ''    // custom js parser (e.g. babel-eslint)
 }
@@ -435,7 +435,7 @@ be provided:
 The `callback` will be called with an `Error` and `results` object:
 
 ```js
-{
+var results = {
   results: [
     {
       filePath: '',
@@ -456,7 +456,7 @@ The `callback` will be called with an `Error` and `results` object:
 Lint the provided `files` globs. An `opts` object may be provided:
 
 ```js
-{
+var opts = {
   globals: [],  // global variables to declare
   parser: '',   // custom js parser (e.g. babel-eslint)
   ignore: [],   // file globs to ignore (has sane defaults)
