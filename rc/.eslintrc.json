@@ -225,6 +225,7 @@
         ],
         "id-length": 0,
         "id-match": 0,
+        "indent": [2, 4],
         "init-declarations": 0,
         "key-spacing": [
             2,
