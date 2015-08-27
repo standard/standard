@@ -47,6 +47,7 @@
         "no-fallthrough": 2,
         "no-floating-decimal": 2,
         "no-func-assign": 2,
+        "no-implicit-coercion": 2,
         "no-implied-eval": 2,
         "no-inline-comments": 2,
         "no-inner-declarations": [
@@ -54,6 +55,7 @@
             "functions"
         ],
         "no-invalid-regexp": 2,
+        "no-invalid-this": 2,
         "no-irregular-whitespace": 2,
         "no-iterator": 2,
         "no-label-var": 2,
@@ -134,6 +136,7 @@
             2,
             "nofunc"
         ],
+        "no-useless-call": 2,
         "no-void": 0,
         "no-var": 0,
         "prefer-const": 0,
@@ -156,10 +159,12 @@
         ],
         "accessor-pairs": 0,
         "block-scoped-var": 2,
+        "block-spacing": [2, "always"],
         "brace-style": [
             2,
             "1tbs"
         ],
+        "callback-return": [2, ["callback", "cb", "next", "done"]],
         "camelcase": 2,
         "comma-dangle": [
             2,
@@ -218,7 +223,9 @@
             2,
             "^(err|error|anySpecificError)$"
         ],
-        "indent": [2, 4],
+        "id-length": 0,
+        "id-match": 0,
+        "init-declarations": 0,
         "key-spacing": [
             2,
             {
