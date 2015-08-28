@@ -153,7 +153,6 @@ var URLS = [
   'https://github.com/yoshuawuyts/fat-arrow.git',
   'https://github.com/yoshuawuyts/from2-string.git',
   'https://github.com/yoshuawuyts/fsm-event.git',
-  'https://github.com/yoshuawuyts/initialize.git',
   'https://github.com/yoshuawuyts/koa-logger-ndjson.git',
   'https://github.com/yoshuawuyts/mdjson.git',
   'https://github.com/yoshuawuyts/promise-assert.git',
