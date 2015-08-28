@@ -9,7 +9,7 @@ test('api usage', function t(assert) {
     }, function onFiles(err, result) {
         assert.error(err, 'no error while linting');
         assert.equal(typeof result, 'object', 'result is an object');
-        assert.equal(result.errorCount, 166, 'error count 166');
+        assert.equal(result.errorCount, 179, 'error count 179');
 
         assert.end();
     });
@@ -30,7 +30,6 @@ test('lintText', function t(assert) {
     function onLint(err, results) {
         assert.ifError(err);
 
-        assert.equal(results.errorCount, 1);
         var messages = results.results[0].messages;
         assert.equal(messages[0].ruleId, 'no-try-catch');
 

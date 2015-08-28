@@ -1,13 +1,22 @@
 {
     "rules": {
+        "no-class-assign": 2,
+        "no-const-assign": 2,
         "no-continue": 2,
+        "no-dupe-class-members": 2,
         "no-this-before-super": 2,
         "newline-after-var": [
             2,
             "always"
         ],
         "no-var": 2,
+        "prefer-arrow-callback": 0,
         "prefer-const": 2,
+        "prefer-reflect": 0,
+        "prefer-spread": 2,
+        "prefer-template": 2,
+        "arrow-parens": [2, "as-needed"],
+        "arrow-spacing": [2, {"before": true, "after": true }],
         "accessor-pairs": [
             2,
             {
@@ -54,28 +63,31 @@
             2,
             "as-needed"
         ],
+        "require-yield": 2,
         "sort-vars": 2,
         "wrap-regex": 2
     },
     "ecmaFeatures": {
         "arrowFunctions": true,
-        "blockBindings": true,
-        "regexUFlag": true,
-        "regexYFlag": true,
-        "templateStrings": true,
         "binaryLiterals": true,
-        "octalLiterals": true,
-        "unicodeCodePointEscapes": true,
-        "superInFunctions": true,
+        "blockBindings": true,
+        "classes": true,
         "defaultParams": true,
-        "restParams": true,
+        "destructuring": true,
         "forOf": true,
+        "generators": true,
+        "modules": true,
         "objectLiteralComputedProperties": true,
+        "objectLiteralDuplicateProperties": true,
         "objectLiteralShorthandMethods": true,
         "objectLiteralShorthandProperties": true,
-        "objectLiteralDuplicateProperties": true,
-        "generators": true,
-        "destructuring": true,
-        "classes": true
+        "octalLiterals": true,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "restParams": true,
+        "spread": true,
+        "superInFunctions": true,
+        "templateStrings": true,
+        "unicodeCodePointEscapes": true
     }
 }
