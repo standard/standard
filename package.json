@@ -16,8 +16,10 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
+    "babel-eslint": "^4.1.1",
     "clone-deep": "^0.1.1",
     "commondir": "^1.0.1",
+    "deep-extend": "^0.4.0",
     "dezalgo": "^1.0.1",
     "editorconfig-get-indent": "^1.0.0",
     "eslint": "^1.2.1",
