@@ -454,6 +454,8 @@ var results = {
 }
 ```
 
+Note that `callback` is not optional.
+
 ### `standard.lintFiles(files, [opts], callback)`
 
 Lint the provided `files` globs. An `opts` object may be provided:
@@ -468,6 +470,8 @@ var opts = {
 ```
 
 The `callback` will be called with an `Error` and `results` object (same as above).
+
+Note that `callback` is not optional.
 
 ## License
 
