@@ -142,7 +142,7 @@ var URLS = [
   'https://github.com/ngoldman/wireframe.css.git',
   'https://github.com/npm/fstream.git',
   // 'https://github.com/npm/npm.git',
-  'https://github.com/npm/docs.git',
+  // 'https://github.com/npm/docs.git',
   'https://github.com/npm/fstream-npm.git',
   'https://github.com/othiym23/nothingness-level.git',
   'https://github.com/othiym23/nothingness.git',
