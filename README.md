@@ -319,7 +319,7 @@ cases, you can add this to `package.json`:
 ```json
 {
   "standard": {
-    "global": [ "myVar1", "myVar2" ]
+    "globals": [ "myVar1", "myVar2" ]
   }
 }
 ```
