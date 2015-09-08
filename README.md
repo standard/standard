@@ -121,11 +121,10 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 #### [Atom](https://atom.io)
 
-Install **[Linter][atom-1]** and **[linter-js-standard][atom-2]**.
+Install **[linter-js-standard][atom-2]**.
 
 For automatic formatting, install **[standard-formatter][atom-3]**.
 
-[atom-1]: https://atom.io/packages/linter
 [atom-2]: https://atom.io/packages/linter-js-standard
 [atom-3]: https://atom.io/packages/standard-formatter
 
