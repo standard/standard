@@ -11,6 +11,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## unreleased
   * Nothing yet!
 
+## 5.2.2
+[view diff](https://github.com/feross/standard/compare/v5.2.1...v5.2.2)
+
+## Fixed
+ * We have a changelog now, and you're reading it!
+ * Minor README update
+ * Removed direct dependency on `eslint` (its now moved to[standard-engine](https://github.com/flet/standard-engine))
+ 
 ## 5.2.1 - 2015-09-03 
 [view diff](https://github.com/feross/standard/compare/v5.2.0...v5.2.1)
 
