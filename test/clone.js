@@ -18,6 +18,8 @@ var path = require('path')
 var test = require('tape')
 var testPackages = require('standard-packages/test')
 
+testPackages = testPackages.filter(function (pkg) { return !pkg.disable })
+
 var GIT = 'git'
 var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
 var TMP = path.join(__dirname, '..', 'tmp')
