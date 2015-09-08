@@ -24,6 +24,7 @@
   "devDependencies": {
     "mkdirp": "^0.5.0",
     "run-parallel-limit": "^1.0.1",
+    "standard-packages": "^1.2.0",
     "tape": "^4.0.0",
     "xtend": "^4.0.0"
   },
