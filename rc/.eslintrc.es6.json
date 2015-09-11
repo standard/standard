@@ -54,7 +54,6 @@
             2,
             15
         ],
-        "newline-after-var": 2,
         "object-shorthand": [
             2,
             "always"
