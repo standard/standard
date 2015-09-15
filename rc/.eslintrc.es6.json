@@ -5,10 +5,6 @@
         "no-continue": 2,
         "no-dupe-class-members": 2,
         "no-this-before-super": 2,
-        "newline-after-var": [
-            2,
-            "always"
-        ],
         "no-var": 2,
         "prefer-arrow-callback": 0,
         "prefer-const": 2,
