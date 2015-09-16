@@ -170,7 +170,7 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
       "standard": "^3.0.0"
     },
     "scripts": {
-      "test": "standard && node my-tests.js"
+      "test": "node my-tests.js && standard"
     }
   }
   ```
