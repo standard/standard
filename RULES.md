@@ -77,7 +77,7 @@ your code.
   var message = 'hello, '+name+'!';
   ```
 
-* **Commas should have a space** after it.
+* **Commas should have a space** after them.
 
   ```js
   // ✓ ok
@@ -91,7 +91,7 @@ your code.
   function greet (name,options) { ... }
   ```
 
-* **Keep else statements** in the same line as its curly braces.
+* **Keep else statements** on the same line as their curly braces.
 
   ```js
   // ✓ ok
