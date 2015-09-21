@@ -171,7 +171,7 @@ your code.
   }())
   ```
 
-##### Required reading:
+##  Required reading
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
@@ -220,6 +220,8 @@ foo()
 The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
 
 *End quote from "An Open Letter to JavaScript Leaders Regarding Semicolons".*
+
+## Tips
 
 ### Avoid clever short-hands
 
