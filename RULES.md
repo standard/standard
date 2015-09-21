@@ -140,7 +140,9 @@ your code.
     if (err) throw err
     window.alert('done')
   })
+  ```
 
+  ```js
   // ✗ avoid
   run(function (err) {
     window.alert('done')
@@ -152,6 +154,22 @@ your code.
 
   ```js
   window.alert('hi')   // ✓ ok
+  ```
+
+* **Multiple blank lines not allowed.**
+
+  ```js
+  // ✓ ok
+  var value = 'hello world'
+  console.log(value)
+  ```
+  
+  ```js
+  // ✗ avoid
+  var value = 'hello world'
+
+
+  console.log(value)
   ```
 
 ## Semicolons
