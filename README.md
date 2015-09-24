@@ -246,7 +246,7 @@ The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden file
 (beginning with `.`), and all patterns in a project's root `.gitignore` file are
 automatically ignored.
 
-Sometimes you need to ignore additional folders or specific minfied files. To do that, add
+Sometimes you need to ignore additional folders or specific minified files. To do that, add
 a `standard.ignore` property to `package.json`:
 
 ```json
