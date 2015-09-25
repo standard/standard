@@ -55,7 +55,7 @@ npm install standard
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
 in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use
+[the repositories](https://github.com/feross/standard-packages/blob/master/standard.json) that use
 `standard`.
 
 ## Badge
