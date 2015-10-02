@@ -128,7 +128,7 @@ For snippets, install **[atom-standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
-[atom-2]: https://atom.io/packages/standardjs-snippets
+[atom-3]: https://atom.io/packages/standardjs-snippets
 
 #### [Vim](http://www.vim.org/)
 
