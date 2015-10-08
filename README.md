@@ -123,10 +123,12 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 Install **[linter-js-standard][atom-1]**.
 
-For automatic formatting, install **[standard-formatter][atom-2]**.
+For automatic formatting, install **[standard-formatter][atom-2]**. 
+For snippets, install **[atom-standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
+[atom-3]: https://atom.io/packages/standardjs-snippets
 
 #### [Vim](http://www.vim.org/)
 
