@@ -418,7 +418,7 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
-There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins).
+There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins) and other [awesome standard packages](https://github.com/feross/awesome-standard).
 
 ## Node.js API
 
