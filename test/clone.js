@@ -8,7 +8,6 @@
  * VERSION BUMP.)
  */
 
-var cp = require('child_process')
 var extend = require('xtend')
 var fs = require('fs')
 var mkdirp = require('mkdirp')
@@ -17,6 +16,7 @@ var parallelLimit = require('run-parallel-limit')
 var path = require('path')
 var test = require('tape')
 var testPackages = require('standard-packages/test')
+var winSpawn = require('win-spawn')
 
 testPackages = testPackages.filter(function (pkg) { return !pkg.disable })
 
@@ -64,9 +64,8 @@ test('test github repos that use `standard`', function (t) {
   })
 })
 
-// TODO: Spawn in a way that works on Windows – PR welcome!
 function spawn (command, args, opts, cb) {
-  var child = cp.spawn(command, args, extend({ stdio: 'inherit' }, opts))
+  var child = winSpawn(command, args, extend({ stdio: 'inherit' }, opts))
   child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) cb(new Error('non-zero exit code: ' + code))
