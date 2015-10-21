@@ -12,6 +12,7 @@ var parallel = require('run-parallel')
 var path = require('path')
 var uniq = require('uniq')
 var cloneDeep = require('clone-deep')
+var deepExtend = require('deep-extend')
 
 var DEFAULT_PATTERNS = [
   '**/*.js'
@@ -25,6 +26,7 @@ var DEFAULT_IGNORE_PATTERNS = [
 ]
 
 var es6Config = require(path.join(__dirname, 'rc', '.eslintrc.es6.json'))
+var babelConfig = require(path.join(__dirname, 'rc', '.eslintrc.babel.json'))
 
 var ESLINT_CONFIG = {
   baseConfig: require(path.join(__dirname, 'rc', '.eslintrc.json')),
@@ -42,11 +44,9 @@ function configure(opts) {
   }
 
   if (opts.es6) {
-    config.baseConfig.ecmaFeatures = es6Config.ecmaFeatures
-
-    Object.keys(es6Config.rules).forEach(function onRule(ruleName) {
-      config.baseConfig.rules[ruleName] = es6Config.rules[ruleName]
-    })
+    deepExtend(config.baseConfig, es6Config)
+  } else if (opts.babel) {
+    deepExtend(config.baseConfig, es6Config, babelConfig)
   }
 
   return config;

@@ -1,0 +1,7 @@
+{
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true
+    }
+}
