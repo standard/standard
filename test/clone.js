@@ -18,13 +18,24 @@ var test = require('tape')
 var testPackages = require('standard-packages/test')
 var winSpawn = require('win-spawn')
 
-testPackages = testPackages.filter(function (pkg) { return !pkg.disable })
+var disabledPackages = []
+testPackages = testPackages.filter(function (pkg) {
+  if (pkg.disable) disabledPackages.push(pkg)
+  return !pkg.disable
+})
 
 var GIT = 'git'
 var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
 var TMP = path.join(__dirname, '..', 'tmp')
 
 var PARALLEL_LIMIT = Math.min(os.cpus().length * 1.5)
+
+test('Disabled Packages', function (t) {
+  t.plan(disabledPackages.length)
+  disabledPackages.forEach(function (pkg) {
+    t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
+  })
+})
 
 test('test github repos that use `standard`', function (t) {
   t.plan(testPackages.length)
@@ -45,7 +56,7 @@ test('test github repos that use `standard`', function (t) {
           : [ 'pull' ]
         var gitOpts = err
           ? {}
-          : { cwd: folder }
+          : { stdio: ['inherit', 'ignore', 'inherit'], cwd: folder }
         spawn(GIT, gitArgs, gitOpts, function (err) {
           if (err) {
             err.message += ' (' + name + ')'
@@ -53,7 +64,7 @@ test('test github repos that use `standard`', function (t) {
           }
 
           spawn(STANDARD, [ '--verbose' ], { cwd: folder }, function (err) {
-            t.error(err, name)
+            t.error(err, name + ' (' + pkg.repo + ')')
             cb(null)
           })
         })
