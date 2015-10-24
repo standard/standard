@@ -54,9 +54,10 @@ test('test github repos that use `standard`', function (t) {
         var gitArgs = err
           ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           : [ 'pull' ]
-        var gitOpts = err
-          ? {}
-          : { stdio: ['inherit', 'ignore', 'inherit'], cwd: folder }
+        var gitOpts = { stdio: 'ignore' }
+        gitOpts = err
+          ? gitOpts
+          : extend(gitOpts, { cwd: folder })
         spawn(GIT, gitArgs, gitOpts, function (err) {
           if (err) {
             err.message += ' (' + name + ')'
