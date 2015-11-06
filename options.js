@@ -6,7 +6,7 @@ module.exports = {
   version: pkg.version,
   homepage: pkg.homepage,
   bugs: pkg.bugs.url,
-  tagline: 'JavaScript Standard Style',
+  tagline: 'Use JavaScript Standard Style',
   eslintConfig: {
     configFile: path.join(__dirname, 'rc', '.eslintrc')
   },
