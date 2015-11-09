@@ -176,6 +176,8 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
     }
   }
   ```
+  
+  Or set the version to `"*"` to encourage using the latest version.
 
 2. Check style automatically when you run `npm test`
 
