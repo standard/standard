@@ -123,7 +123,7 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 Install **[linter-js-standard][atom-1]**.
 
-For automatic formatting, install **[standard-formatter][atom-2]**. 
+For automatic formatting, install **[standard-formatter][atom-2]**.
 For snippets, install **[atom-standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
@@ -418,9 +418,13 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
   - **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
   - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
+- **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
-There are also many [editor plugins](https://github.com/feross/standard#text-editor-plugins) and other [awesome standard packages](https://github.com/feross/awesome-standard).
+There are also many **[editor plugins](#text-editor-plugins)**, a list of
+**[npm packages that use `standard`](https://github.com/feross/standard-packages)**, and
+an awesome list of
+**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
 
 ## Node.js API
 
