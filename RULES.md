@@ -279,13 +279,13 @@ Clever short-hands are discouraged, in favor of clear and readable expressions, 
 possible. So, while this is allowed:
 
 ```js
-;[1,2,3].forEach(bar)
+;[1, 2, 3].forEach(bar)
 ```
 
 This is much preferred:
 
 ```js
-var nums = [1,2,3]
+var nums = [1, 2, 3]
 nums.forEach(bar)
 ```
 
