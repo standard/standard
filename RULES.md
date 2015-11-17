@@ -40,7 +40,7 @@ your code.
   if(condition) { ... }    // ✗ avoid
   ```
 
-* **Add a space after function names.**
+* **Add a space* before a function declaration's parentheses.
 
   ```js
   function name (arg) { ... }   // ✓ ok
