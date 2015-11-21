@@ -163,7 +163,7 @@ your code.
   var value = 'hello world'
   console.log(value)
   ```
-  
+
   ```js
   // ✗ avoid
   var value = 'hello world'
@@ -211,13 +211,13 @@ your code.
   while ((m = text.match(expr))) {
     // ...
   }
-  
+
   // ✗ avoid
   while (m = text.match(expr)) {
     // ...
   }
   ```
-* 
+*
 ## Semicolons
 
 * No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
@@ -227,7 +227,7 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons. (see: [1](https://github.com/feross/standard/blob/master/RULES.md#automatic-semicolon-insertion-asi))
+* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons.
 
   ```js
   ;(function () {
@@ -235,7 +235,7 @@ your code.
   }())
   ```
 
-##  Required reading
+## Helpful reading
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
@@ -243,6 +243,10 @@ your code.
 ##### And a helpful video:
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
+
+All popular code minifiers in use today use AST-based minification, so they can
+handle semicolon-less JavaScript with no issues (since semicolons are not required
+in JavaScript).
 
 ##### Excerpt from *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
