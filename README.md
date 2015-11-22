@@ -161,6 +161,15 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
+#### [Visual Studio Code](https://code.visualstudio.com/)
+
+Install **[vscode-standardjs][vscode-1]**.
+
+For automatic formatting, install **[vscode-standard-format][vscode-2]**.
+
+[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-2]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standard-format
+
 ### What you might do if you're clever
 
 1. Add it to `package.json`
