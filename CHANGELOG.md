@@ -8,18 +8,48 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## unreleased
-  * Nothing yet!
+## 5.4.1 - 2015-11-16
+[view diff](https://github.com/feross/standard/compare/v5.4.0...v5.4.1)
+
+### Fixed
+
+* Fix for `standard-engine` change. Fix error tagline.
+
+## 5.4.0 - 2015-11-16
+[view diff](https://github.com/feross/standard/compare/v5.3.1...v5.4.0)
+
+### Added
+
+* eslint-config-standard-react@1.2.0 ([history](eslint-config-standard-react))
+  * Disallow duplicate JSX properties
+
+## 5.3.1 - 2015-09-18
+[view diff](https://github.com/feross/standard/compare/v5.3.0...v5.3.1)
+
+### Changed
+* eslint-plugin-react@3.4.2 ([history](eslint-plugin-react))
+
+## 5.3.0 - 2015-09-16
+[view diff](https://github.com/feross/standard/compare/v5.2.2...v5.3.0)
+
+### Changed
+* eslint-config-standard@4.4.0 ([history][eslint-config-standard])
+  * **New rule:** must have space after semicolon in for-loop ([commit](https://github.com/feross/eslint-config-standard/commit/6e5025eef8900f686e19b4a31836743d98323119))
+  * **New rule:** No default assignment with ternary operator ([commit](https://github.com/feross/eslint-config-standard/commit/0903c19ca6a8bc0c8625c41ca844ee69968bf948))
+  * **New rule:** Require spaces before keywords ([commit](https://github.com/feross/eslint-config-standard/commit/656ba93cda9cd4ab38e032649aafb795993d5176))
+* eslint-config-standard-react@1.1.0 ([history][eslint-config-standard-react])
+* eslint-plugin-react@3.4.0 ([history][eslint-plugin-react])
+* eslint-plugin-standard@1.3.1 ([history][eslint-plugin-standard])
 
 ## 5.2.2
 [view diff](https://github.com/feross/standard/compare/v5.2.1...v5.2.2)
 
 ### Fixed
- * We have a changelog now, and you're reading it!
- * Minor README update
- * Removed direct dependency on `eslint` (its now moved to [standard-engine](https://github.com/flet/standard-engine))
- 
-## 5.2.1 - 2015-09-03 
+* We have a changelog now, and you're reading it!
+* Minor README update
+* Removed direct dependency on `eslint` (its now moved to [standard-engine](https://github.com/flet/standard-engine))
+
+## 5.2.1 - 2015-09-03
 [view diff](https://github.com/feross/standard/compare/v5.2.0...v5.2.1)
 
 ### Changed
