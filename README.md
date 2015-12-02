@@ -483,6 +483,10 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
+## IRC channel
+
+Join us in `#standard` on freenode.
+
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
