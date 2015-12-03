@@ -67,27 +67,27 @@ your code.
 
   ```js
   // ✓ ok
-  var x = 2;
-  var message = 'hello, ' + name + '!';
+  var x = 2
+  var message = 'hello, ' + name + '!'
   ```
 
   ```js
   // ✗ avoid
-  var x=2;
-  var message = 'hello, '+name+'!';
+  var x=2
+  var message = 'hello, '+name+'!'
   ```
 
 * **Commas should have a space** after them.
 
   ```js
   // ✓ ok
-  var list = [1, 2, 3, 4];
+  var list = [1, 2, 3, 4]
   function greet (name, options) { ... }
   ```
 
   ```js
   // ✗ avoid
-  var list = [1,2,3,4];
+  var list = [1,2,3,4]
   function greet (name,options) { ... }
   ```
 
