@@ -29,7 +29,7 @@
     "win-spawn": "^2.0.0",
     "xtend": "^4.0.0"
   },
-  "homepage": "https://github.com/feross/standard",
+  "homepage": "http://standardjs.com",
   "keywords": [
     "JavaScript Standard Style",
     "check",
