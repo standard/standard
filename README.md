@@ -170,6 +170,13 @@ For automatic formatting, install **[vscode-standard-format][vscode-2]**.
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standard-format
 
+#### [WebStorm/PhpStorm][webstorm-1]
+
+Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
+
+[webstorm-1]: https://www.jetbrains.com/webstorm/
+[webstorm-2]: docs/webstorm.md
+
 ### What you might do if you're clever
 
 1. Add it to `package.json`
