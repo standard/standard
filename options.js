@@ -1,7 +1,9 @@
+var eslint = require('eslint')
 var path = require('path')
 var pkg = require('./package.json')
 
 module.exports = {
+  eslint: eslint,
   cmd: 'standard',
   version: pkg.version,
   homepage: pkg.homepage,
