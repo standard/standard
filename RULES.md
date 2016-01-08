@@ -227,12 +227,16 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons.
+* Never start a line with `(`, `[` or `````. This is the only gotcha with omitting semicolons.
 
   ```js
-  ;(function () {
+  ;(function () {        // ✓ ok
     window.alert('ok')
   }())
+  
+  ;[item].forEach(...)   // ✓ ok
+  
+  ;`hello`               // ✓ ok
   ```
 
 ## Helpful reading
