@@ -80,8 +80,8 @@ function spawn (command, args, opts, cb) {
   var child = winSpawn(command, args, extend({ stdio: 'inherit' }, opts))
   child.on('error', cb)
   child.on('close', function (code) {
-    if (code !== 0) cb(new Error('non-zero exit code: ' + code))
-    else cb(null)
+    if (code !== 0) return cb(new Error('non-zero exit code: ' + code))
+    cb(null)
   })
   return child
 }
