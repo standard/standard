@@ -5,9 +5,9 @@
 
 [travis-image]: https://travis-ci.org/feross/standard.svg?branch=master
 [travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/standard.svg
 [npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
+[downloads-image]: https://img.shields.io/npm/dm/standard.svg
 [downloads-url]: https://npmjs.org/package/standard
 
 ### One Style to Rule Them All
