@@ -227,13 +227,46 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons - standard will complain if you do this.
+* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
 
   ```js
+  // ✓ ok
   ;(function () {
     window.alert('ok')
   }())
+
+  // ✗ avoid
+  (function () {
+    window.alert('ok')
+  }())
   ```
+
+  ```js
+  // ✓ ok
+  ;[1, 2, 3].forEach(bar)
+
+  // ✗ avoid
+  [1, 2, 3].forEach(bar)
+  ```
+
+  Note: If you're often writing code like this, you may be trying to be too clever.
+
+  Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
+  possible.
+
+  Instead of this:
+
+  ```js
+  ;[1, 2, 3].forEach(bar)
+  ```
+
+  This is much preferred:
+
+  ```js
+  var nums = [1, 2, 3]
+  nums.forEach(bar)
+  ```
+
 
 ## Helpful reading
 
@@ -288,24 +321,6 @@ foo()
 The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
 
 *End quote from "An Open Letter to JavaScript Leaders Regarding Semicolons".*
-
-## Tips
-
-### Avoid clever short-hands
-
-Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
-possible. So, while this is allowed:
-
-```js
-;[1, 2, 3].forEach(bar)
-```
-
-This is much preferred:
-
-```js
-var nums = [1, 2, 3]
-nums.forEach(bar)
-```
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
