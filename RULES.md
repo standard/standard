@@ -227,7 +227,7 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons.
+* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons - standard will complain if you do this.
 
   ```js
   ;(function () {
