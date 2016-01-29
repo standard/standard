@@ -19,7 +19,7 @@ var test = require('tape')
 var winSpawn = require('win-spawn')
 
 var argv = minimist(process.argv.slice(2), {
-  boolean: [ 'offline', 'quick' ]
+  boolean: [ 'offline', 'quick', 'quiet' ]
 })
 
 var testPackages = argv.quick
@@ -93,7 +93,8 @@ test('test github repos that use `standard`', function (t) {
 
         function runStandard (cb) {
           spawn(STANDARD, [ '--verbose' ], { cwd: folder }, function (err) {
-            t.error(err, name + ' (' + pkg.repo + ')')
+            var str = name + ' (' + pkg.repo + ')'
+            if (err) { t.fail(str) } else { t.pass(str) }
             cb(null)
           })
         }
@@ -105,7 +106,10 @@ test('test github repos that use `standard`', function (t) {
 })
 
 function spawn (command, args, opts, cb) {
-  var child = winSpawn(command, args, extend({ stdio: 'inherit' }, opts))
+  if (!argv.quiet) {
+    opts = extend({ stdio: 'inherit' }, opts)
+  }
+  var child = winSpawn(command, args, opts)
   child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) return cb(new Error('non-zero exit code: ' + code))
