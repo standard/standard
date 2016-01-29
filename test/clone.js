@@ -10,13 +10,21 @@
 
 var extend = require('xtend')
 var fs = require('fs')
+var minimist = require('minimist')
 var mkdirp = require('mkdirp')
 var os = require('os')
 var parallelLimit = require('run-parallel-limit')
 var path = require('path')
 var test = require('tape')
-var testPackages = require('standard-packages/test')
 var winSpawn = require('win-spawn')
+
+var argv = minimist(process.argv.slice(2), {
+  boolean: [ 'offline', 'quick' ]
+})
+
+var testPackages = argv.quick
+  ? require('standard-packages/test')
+  : require('standard-packages/test-top')
 
 var disabledPackages = []
 testPackages = testPackages.filter(function (pkg) {
@@ -31,10 +39,15 @@ var TMP = path.join(__dirname, '..', 'tmp')
 var PARALLEL_LIMIT = os.cpus().length
 
 test('Disabled Packages', function (t) {
-  t.plan(disabledPackages.length)
-  disabledPackages.forEach(function (pkg) {
-    t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
-  })
+  if (disabledPackages.length === 0) {
+    t.pass('no disabled packages')
+    t.end()
+  } else {
+    t.plan(disabledPackages.length)
+    disabledPackages.forEach(function (pkg) {
+      t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
+    })
+  }
 })
 
 test('test github repos that use `standard`', function (t) {
@@ -51,24 +64,39 @@ test('test github repos that use `standard`', function (t) {
     var folder = path.join(TMP, name)
     return function (cb) {
       fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
-        var gitArgs = err
-          ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-          : [ 'pull' ]
-        var gitOpts = { stdio: 'ignore' }
-        gitOpts = err
-          ? gitOpts
-          : extend(gitOpts, { cwd: folder })
-        spawn(GIT, gitArgs, gitOpts, function (err) {
+        if (argv.offline) {
           if (err) {
-            err.message += ' (' + name + ')'
-            return cb(err)
+            t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
+            return cb(null)
           }
+          runStandard(cb)
+        } else {
+          gitFetch(function (err) {
+            if (err) return cb(err)
+            runStandard(cb)
+          })
+        }
 
+        function gitFetch (cb) {
+          var gitArgs = err
+            ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+            : [ 'pull' ]
+          var gitOpts = { stdio: 'ignore' }
+          gitOpts = err
+            ? gitOpts
+            : extend(gitOpts, { cwd: folder })
+          spawn(GIT, gitArgs, gitOpts, function (err) {
+            if (err) err.message += ' (' + name + ')'
+            cb(err)
+          })
+        }
+
+        function runStandard (cb) {
           spawn(STANDARD, [ '--verbose' ], { cwd: folder }, function (err) {
             t.error(err, name + ' (' + pkg.repo + ')')
             cb(null)
           })
-        })
+        }
       })
     }
   }), PARALLEL_LIMIT, function (err) {

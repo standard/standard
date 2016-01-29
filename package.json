@@ -23,6 +23,7 @@
     "standard-format": "^1.3.3"
   },
   "devDependencies": {
+    "minimist": "^1.2.0",
     "mkdirp": "^0.5.0",
     "run-parallel-limit": "^1.0.1",
     "standard-packages": "^1.2.0",
@@ -63,7 +64,9 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "node ./bin/cmd.js && tape test/*.js",
-    "test-quick": "node ./bin/cmd.js"
+    "test": "tape test/*.js",
+    "test-offline": "npm test -- --offline",
+    "test-quick": "npm test -- --quick",
+    "test-offline-quick": "npm test -- --offline --quick"
   }
 }
