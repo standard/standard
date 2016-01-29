@@ -50,7 +50,7 @@ test('test github repos that use `standard`', function (t) {
     var url = pkg.repo + '.git'
     var folder = path.join(TMP, name)
     return function (cb) {
-      fsAccess(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
         var gitArgs = err
           ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           : [ 'pull' ]
@@ -84,12 +84,4 @@ function spawn (command, args, opts, cb) {
     cb(null)
   })
   return child
-}
-
-function fsAccess (path, mode, cb) {
-  if (typeof fs.access === 'function') {
-    fs.access(path, mode, cb)
-  } else {
-    fs.stat(path, cb)
-  }
 }
