@@ -11,7 +11,5 @@ module.exports = {
   tagline: 'Use JavaScript Standard Style',
   eslintConfig: {
     configFile: path.join(__dirname, 'rc', '.eslintrc')
-  },
-  formatter: require('standard-format'),
-  formatterName: 'standard-format'
+  }
 }
