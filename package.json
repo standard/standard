@@ -7,9 +7,7 @@
     "name": "Feross Aboukhadijeh",
     "url": "http://feross.org/"
   },
-  "bin": {
-    "standard": "./bin/cmd.js"
-  },
+  "bin": "./bin/cmd.js",
   "bugs": {
     "url": "https://github.com/feross/standard/issues"
   },
