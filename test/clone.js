@@ -81,7 +81,7 @@ test('test github repos that use `standard`', function (t) {
 
         function gitClone (cb) {
           var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-          spawn(GIT, args, {}, function (err) {
+          spawn(GIT, args, { stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (' + name + ')'
             cb(err)
           })
@@ -89,7 +89,7 @@ test('test github repos that use `standard`', function (t) {
 
         function gitPull (cb) {
           var args = [ 'pull' ]
-          spawn(GIT, args, { cwd: folder }, function (err) {
+          spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (' + name + ')'
             cb(err)
           })
@@ -112,7 +112,7 @@ test('test github repos that use `standard`', function (t) {
 })
 
 function spawn (command, args, opts, cb) {
-  opts.stdio = argv.quiet ? 'ignore' : 'inherit'
+  if (!opts.stdio) opts.stdio = argv.quiet ? 'ignore' : 'inherit'
 
   var child = crossSpawnAsync(command, args, opts)
   child.on('error', cb)
