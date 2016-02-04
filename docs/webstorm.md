@@ -2,7 +2,8 @@
 
 1. Turn off your IDE
 2. [Figure out where your configuration lives][webstorm-2] (_IDE Settings_ section)
-3. Navigate to `your-config-dir/codestyles`
+3. Navigate to `your-config-dir/codestyles`. If this directory doesn't exist, create it in the WebStorm
+config settings directory.
 4. Create a `Standard.xml` file:
 
    ```xml
