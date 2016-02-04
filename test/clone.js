@@ -8,6 +8,7 @@
  * VERSION BUMP.)
  */
 
+var crossSpawnAsync = require('cross-spawn-async')
 var fs = require('fs')
 var minimist = require('minimist')
 var mkdirp = require('mkdirp')
@@ -16,7 +17,6 @@ var parallelLimit = require('run-parallel-limit')
 var path = require('path')
 var standardPackages = require('standard-packages')
 var test = require('tape')
-var winSpawn = require('win-spawn')
 
 var argv = minimist(process.argv.slice(2), {
   boolean: [ 'offline', 'quick', 'quiet' ]
@@ -114,7 +114,7 @@ test('test github repos that use `standard`', function (t) {
 function spawn (command, args, opts, cb) {
   opts.stdio = argv.quiet ? 'ignore' : 'inherit'
 
-  var child = winSpawn(command, args, opts)
+  var child = crossSpawnAsync(command, args, opts)
   child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) return cb(new Error('non-zero exit code: ' + code))
