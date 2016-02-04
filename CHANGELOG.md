@@ -1,9 +1,4 @@
 # Change Log
-[eslint-config-standard-react]: https://github.com/feross/eslint-config-standard-react/commits/master
-[eslint-config-standard]: https://github.com/feross/eslint-config-standard/commits/master
-[eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md
-[eslint-plugin-standard]: https://github.com/xjamundx/eslint-plugin-standard/commits/master
-[eslint]: https://github.com/eslint/eslint/blob/master/CHANGELOG.md
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
@@ -169,3 +164,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 4.0.0 - 2015-05-30
 [view diff](https://github.com/feross/standard/compare/v3.9.0...v4.0.0)
+
+[eslint-config-standard-react]: https://github.com/feross/eslint-config-standard-react/commits/master
+[eslint-config-standard]: https://github.com/feross/eslint-config-standard/commits/master
+[eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md
+[eslint-plugin-standard]: https://github.com/xjamundx/eslint-plugin-standard/commits/master
+[eslint]: https://github.com/eslint/eslint/blob/master/CHANGELOG.md
