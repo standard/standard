@@ -8,7 +8,6 @@
  * VERSION BUMP.)
  */
 
-var extend = require('xtend')
 var fs = require('fs')
 var minimist = require('minimist')
 var mkdirp = require('mkdirp')
@@ -55,9 +54,6 @@ test('test github repos that use `standard`', function (t) {
 
   mkdirp.sync(TMP)
 
-  // test an empty repo
-  mkdirp.sync(path.join(TMP, 'empty'))
-
   parallelLimit(testPackages.map(function (pkg) {
     var name = pkg.name
     var url = pkg.repo + '.git'
@@ -71,28 +67,37 @@ test('test github repos that use `standard`', function (t) {
           }
           runStandard(cb)
         } else {
-          gitFetch(function (err) {
+          downloadPackage(function (err) {
             if (err) return cb(err)
             runStandard(cb)
           })
         }
 
-        function gitFetch (cb) {
-          var gitArgs = err
-            ? [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-            : [ 'pull' ]
-          var gitOpts = { stdio: 'ignore' }
-          gitOpts = err
-            ? gitOpts
-            : extend(gitOpts, { cwd: folder })
-          spawn(GIT, gitArgs, gitOpts, function (err) {
+        function downloadPackage (cb) {
+          if (err) gitClone(cb)
+          else gitPull(cb)
+        }
+
+        function gitClone (cb) {
+          var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+          spawn(GIT, args, {}, function (err) {
+            if (err) err.message += ' (' + name + ')'
+            cb(err)
+          })
+        }
+
+        function gitPull (cb) {
+          var args = [ 'pull' ]
+          spawn(GIT, args, { cwd: folder }, function (err) {
             if (err) err.message += ' (' + name + ')'
             cb(err)
           })
         }
 
         function runStandard (cb) {
-          spawn(STANDARD, [ '--verbose' ], { cwd: folder }, function (err) {
+          var args = [ '--verbose' ]
+          if (pkg.args) args.push.apply(args, pkg.args)
+          spawn(STANDARD, args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ')'
             if (err) { t.fail(str) } else { t.pass(str) }
             cb(null)
@@ -106,9 +111,8 @@ test('test github repos that use `standard`', function (t) {
 })
 
 function spawn (command, args, opts, cb) {
-  if (!argv.quiet) {
-    opts = extend({ stdio: 'inherit' }, opts)
-  }
+  opts.stdio = argv.quiet ? 'ignore' : 'inherit'
+
   var child = winSpawn(command, args, opts)
   child.on('error', cb)
   child.on('close', function (code) {
