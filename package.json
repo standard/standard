@@ -25,9 +25,9 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.0",
     "run-parallel-limit": "^1.0.1",
-    "standard-packages": "^1.2.0",
+    "standard-packages": "^3.0.0",
     "tape": "^4.0.0",
-    "win-spawn": "^2.0.0",
+    "win-spawn": "^2.0.0"
   },
   "homepage": "http://standardjs.com",
   "keywords": [

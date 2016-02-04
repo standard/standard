@@ -14,6 +14,7 @@ var mkdirp = require('mkdirp')
 var os = require('os')
 var parallelLimit = require('run-parallel-limit')
 var path = require('path')
+var standardPackages = require('standard-packages')
 var test = require('tape')
 var winSpawn = require('win-spawn')
 
@@ -22,8 +23,8 @@ var argv = minimist(process.argv.slice(2), {
 })
 
 var testPackages = argv.quick
-  ? require('standard-packages/test')
-  : require('standard-packages/test-top')
+  ? standardPackages.test.slice(0, 20)
+  : standardPackages.test
 
 var disabledPackages = []
 testPackages = testPackages.filter(function (pkg) {
