@@ -1,13 +1,13 @@
 var path = require('path')
 var test = require('tape')
-var winSpawn = require('win-spawn')
+var crossSpawnAsync = require('cross-spawn-async')
 
 var CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
 
 test('command line usage: --help', function (t) {
   t.plan(1)
 
-  var child = winSpawn(CMD_PATH, ['--help'])
+  var child = crossSpawnAsync(CMD_PATH, ['--help'])
   child.on('error', function (err) {
     t.fail(err)
   })
