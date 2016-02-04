@@ -227,7 +227,7 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(` or `[`. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
+* Never start a line with `(`, `[`, or `` ` ``. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
 
   ```js
   // ✓ ok
@@ -247,6 +247,14 @@ your code.
 
   // ✗ avoid
   [1, 2, 3].forEach(bar)
+  ```
+
+  ```js
+  // ✓ ok
+  ;`hello`.indexOf('o')
+
+  // ✗ avoid
+  `hello`.indexOf('o')
   ```
 
   Note: If you're often writing code like this, you may be trying to be too clever.
