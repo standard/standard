@@ -61,8 +61,9 @@
   },
   "scripts": {
     "test": "tape test/*.js",
+    "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
-    "test-quick": "npm test -- --quick",
-    "test-offline-quick": "npm test -- --offline --quick"
+    "test-offline-quick": "npm test -- --offline --quick",
+    "test-quick": "npm test -- --quick"
   }
 }
