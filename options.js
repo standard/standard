@@ -10,7 +10,7 @@ module.exports = {
   bugs: pkg.bugs.url,
   tagline: 'Use JavaScript Standard Style',
   eslintConfig: {
-    configFile: path.join(__dirname, 'rc', '.eslintrc')
+    configFile: path.join(__dirname, '.eslintrc')
   },
   formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g standard-format"'
 }
