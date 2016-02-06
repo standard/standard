@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.0 - 2016-02-05
+
+The goal of this release is to make `standard` faster to install, and simpler to use.
+
+### Remove `standard-format` ([#340](https://github.com/feross/standard/issues/340)) ([#397](https://github.com/feross/standard/issues/397))
+
+- Eliminates 250 packages, and cuts install time in half!
+- For npm 2, install time goes from 20 secs —> 10 secs.
+- For npm 3, install time goes from 24 secs —> 12 secs.
+- To continue using `standard-format`, just install it separately: `npm install -g standard-format`
+
+### React-specific linting rules are removed ([#351](https://github.com/feross/standard/issues/351)) ([#367](https://github.com/feross/standard/issues/367)) ([eslint-config-standard-react/#13](https://github.com/feross/eslint-config-standard-react/pull/13))
+
+- JSX is still supported, and it continues to be checked for style.
+- There were only a few React-specific rules, but they made it extremely difficult for users of alternatives like `virtual-dom` or `deku`, and unecessarily tied `standard` to a single library.
+- JSX rules come from `eslint-config-standard-jsx`. The `eslint-config-standard-react` dependency was removed.
+
+### Expose eslint configuration via command line options and `package.json`
+
+For power users, it might be easier to use one of these new hooks instead of forking
+`standard`, though that's still encouraged, too!
+
+- Set eslint "plugins" ([#386](https://github.com/feross/standard/issues/386))
+- Set eslint "rules" ([#367](https://github.com/feross/standard/issues/367))
+- Set eslint "env" ([#371](https://github.com/feross/standard/issues/371))
+
+To set custom ESLint plugins, rules, or envs, use the command line `--plugin`, `--rules`, and `--env` flags.
+
+In `package.json`, use the "standard" property:
+
+```json
+{
+  "standard": {
+    "plugins": [ "my-plugin" ]
+  }
+}
+```
+
+### Upgrade to ESLint v2
+- There may be slight behavior changes to existing rules. When possible, we've noted these in the "Rule changes" section.
+
+### New Rules
+
+*The percentage (%) of users that rule changes will effect, based on real-world testing of the top ~400 npm packages is denoted in brackets.*
+
+- Disallow `__dirname`/`__filename` string concatenation ([#403](https://github.com/feross/standard/issues/403)) ([no-path-concat](http://eslint.org/docs/2.0.0/rules/no-path-concat)) [5%]
+- Require parens in arrow function arguments  ([#309](https://github.com/feross/standard/issues/309)) ([arrow-parens](http://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
+- Ensure that `new Promise()` is instantiated with the parameter names
+`resolve`, `reject` ([#282](https://github.com/feross/standard/issues/282)) ([promise/param-names](https://github.com/xjamundx/eslint-plugin-promise#param-names)) [1%]
+- Enforce Usage of Spacing in Template Strings ([template-curly-spacing](http://eslint.org/docs/2.0.0/rules/template-curly-spacing)) [1%]
+- Template strings are only allowed when necessary, i.e. template string features are being used (eslint got stricter: https://github.com/eslint/eslint/issues/5147) [1%]
+- Better dead code detection after conditional statements (eslint got stricter) [1%]
+- Enforce spaces around `*` in `yield * something` ([#335](https://github.com/feross/standard/issues/335)) ([yield-star-spacing](http://eslint.org/docs/2.0.0/rules/yield-star-spacing)) [0%]
+- Disallow labels on loops/switch statements too (made rule stricter) ([no-labels](http://eslint.org/docs/2.0.0/rules/no-labels.html)) [0%]
+- Disallow unnecessary constructor ([no-useless-constructor](http://eslint.org/docs/2.0.0/rules/no-useless-constructor)) [0%]
+- Disallow empty destructuring patterns ([no-empty-pattern](http://eslint.org/docs/2.0.0/rules/no-empty-pattern)) [0%]
+- Disallow Symbol Constructor ([no-new-symbol](http://eslint.org/docs/2.0.0/rules/no-new-symbol)) [0%]
+- Disallow Self Assignment ([no-self-assign](http://eslint.org/docs/2.0.0/rules/no-self-assign)) [0%]
+
+### Removed Rules
+
+- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/feross/standard/issues/384))  ([radix](http://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
+
+### Improve test suite
+
+- Rule changes can be tested against every package on npm. For sanity, this is limited to packages with at least 4 dependents. Around ~400 packages.
+
+### Known Issues
+
+- Using prerelease eslint version (2.0.0-rc.0). There may be breaking changes before the stable release.
+- `no-return-assign` behavior changed with arrow functions (https://github.com/eslint/eslint/issues/5150)
+
+### Relevant diffs
+
+- standard ([v5.4.1...v6.0.0](https://github.com/feross/standard/compare/v5.4.1...v6.0.0))
+- eslint-config-standard ([v4.4.0...v5.0.0](https://github.com/feross/eslint-config-standard/compare/v4.4.0...v5.0.0))
+- eslint-config-standard-jsx ([v1.0.0](https://github.com/feross/eslint-config-standard-jsx/commit/47d5e248e2e078eb87619493999e3e74d4b7e70e))
+- standard-engine ([v2.2.4...v3.2.1](https://github.com/Flet/standard-engine/compare/v2.2.4...v3.2.1))
+
 ## 5.4.1 - 2015-11-16
 [view diff](https://github.com/feross/standard/compare/v5.4.0...v5.4.1)
 
