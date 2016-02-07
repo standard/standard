@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.4 - 2016-02-07
+
+- Relax rule: Validate closing bracket location in JSX ([jsx-closing-bracket-location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md))
+
+## 6.0.3 - 2016-02-06
+
+- Fix "Error: Cannot find module 'eslint-config-standard-jsx'" with npm 2 (node 0.10, 0.12, 4)
+
+## 6.0.2 - 2016-02-06
+
+- Internal change: Remove .eslintrc file, and use inline config
+
+## 6.0.1 - 2016-02-05
+
+- Internal change: Move .eslintrc file to root folder
+
 ## 6.0.0 - 2016-02-05
 
 The goal of this release is to make `standard` faster to install, and simpler to use.
