@@ -1,5 +1,4 @@
 var eslint = require('eslint')
-var path = require('path')
 var pkg = require('./package.json')
 
 module.exports = {
@@ -10,7 +9,9 @@ module.exports = {
   bugs: pkg.bugs.url,
   tagline: 'Use JavaScript Standard Style',
   eslintConfig: {
-    configFile: path.join(__dirname, '.eslintrc')
+    baseConfig: {
+      'extends': ['eslint-config-standard', 'eslint-config-standard-jsx']
+    }
   },
   formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g standard-format"'
 }
