@@ -32,7 +32,7 @@ config settings directory.
 
 5. If you don't want to clutter your project with extra dependencies and config files, then go global:
 
-   - `npm install -g eslint eslint-config-standard eslint-plugin-standard` (`sudo` might be required)
+   - `npm install -g eslint@next eslint-config-standard eslint-plugin-standard` (`sudo` might be required)
    - `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
 
 6. If you're OK with local dependencies and config, do (5) without `-g` and `~/`
