@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.6 - 2016-02-18
+
+- Use eslint 2.1.0
+- Fix: Use install location of standard as eslint `cwd` (fixes [snazzy/#8](https://github.com/feross/snazzy/issues/8))
+
+## 6.0.5 - 2016-02-12
+
+- Use eslint 2.0.0 stable
+
 ## 6.0.4 - 2016-02-07
 
 - Relax rule: Validate closing bracket location in JSX ([jsx-closing-bracket-location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md))
