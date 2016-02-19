@@ -1,26 +1,17 @@
 var eslint = require('eslint')
-var extend = require('xtend')
+var path = require('path')
 var pkg = require('./package.json')
 
-var configStandard = require('eslint-config-standard')
-var configStandardJsx = require('eslint-config-standard-jsx')
-
-var config = extend(configStandard)
-config.plugins.push.apply(config.plugins, configStandardJsx.plugins)
-
-Object.keys(configStandardJsx.rules).forEach(function (key) {
-  config.rules[key] = configStandardJsx.rules[key]
-})
-
 module.exports = {
-  eslint: eslint,
-  cmd: 'standard',
-  version: pkg.version,
-  homepage: pkg.homepage,
   bugs: pkg.bugs.url,
-  tagline: 'Use JavaScript Standard Style',
+  cmd: 'standard',
+  cwd: __dirname,
+  eslint: eslint,
   eslintConfig: {
-    baseConfig: config
+    configFile: path.join(__dirname, 'eslintrc.json')
   },
-  formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g standard-format"'
+  formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g standard-format"',
+  homepage: pkg.homepage,
+  tagline: 'Use JavaScript Standard Style',
+  version: pkg.version
 }
