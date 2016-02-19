@@ -22,6 +22,5 @@ module.exports = {
   eslintConfig: {
     baseConfig: config
   },
-  cwd: __dirname,
   formatter: 'Formatting is no longer included with standard. Install it separately: "npm install -g standard-format"'
 }
