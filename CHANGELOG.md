@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.7 - 2016-02-18
+
+- Revert: Use install location of standard as eslint `cwd` (fixes [#429](https://github.com/feross/standard/issues/429))
+
 ## 6.0.6 - 2016-02-18
 
 - Use eslint 2.1.0
