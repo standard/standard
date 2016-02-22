@@ -247,13 +247,9 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! Just run `standard --format filename.js`. This uses
-[Max Ogden][max]'s automatic formatter
-[`standard-format`][standard-format], which can automatically
-fix most code issues.
+Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`. 
 
-While most issues can be fixed, some, like not handling errors in node-style callbacks,
-must be fixed manually.
+ `standard-format filename.js` will automatically fix most issues though some, like not handling errors in node-style callbacks, must be fixed manually.
 
 [max]: https://github.com/maxogden
 [standard-format]: https://github.com/maxogden/standard-format
