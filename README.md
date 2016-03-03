@@ -138,10 +138,16 @@ Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
 let g:syntastic_javascript_checkers = ['standard']
 ```
 
-For automatic formatting on save, add these two lines to `.vimrc`:
+For automatic formatting on save, install [standard-format](https://github.com/maxogden/standard-format)
+
+```bash
+npm install -g standard-format
+```
+
+and add these two lines to `.vimrc`:
 
 ```vim
-autocmd bufwritepost *.js silent !standard % --format
+autocmd bufwritepost *.js silent !standard-format -w %
 set autoread
 ```
 
