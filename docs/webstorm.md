@@ -6,7 +6,7 @@
 config settings directory.
 4. Create a `Standard.xml` file:
 
-   ```xml
+```xml
   <code_scheme name="Standard">
     <JSCodeStyleSettings>
       <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
@@ -28,7 +28,7 @@ config settings directory.
       </indentOptions>
     </codeStyleSettings>
   </code_scheme>
-  ```
+```
 
 5. If you don't want to clutter your project with extra dependencies and config files, then go global:
 
