@@ -63,6 +63,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
+    "update-authors": "./bin/update-authors.sh",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
