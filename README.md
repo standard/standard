@@ -15,12 +15,12 @@
          alt="Travis Build">
   </a>
   <a href="https://www.npmjs.com/package/standard">
-    <img src="https://img.shields.io/npm/v/standard.svg"
-         alt="NPM Version">
-  </a>
-  <a href="https://www.npmjs.com/package/standard">
     <img src="https://img.shields.io/npm/dm/standard.svg"
          alt="NPM Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/standard">
+    <img src="https://img.shields.io/npm/v/standard.svg"
+         alt="NPM Version">
   </a>
 </p>
 <br>
