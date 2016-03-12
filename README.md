@@ -1,16 +1,29 @@
-# JavaScript Standard Style
-[![travis][travis-image]][travis-url]
-[![npm][npm-image]][npm-url]
-[![downloads][downloads-image]][downloads-url]
+<h1 align="center">
+  <br>
+  <img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="WebTorrent" width="200">
+  <br>
+  JavaScript Standard Style
+  <br>
+  <br>
+</h1>
 
-[travis-image]: https://travis-ci.org/feross/standard.svg?branch=master
-[travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg
-[npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg
-[downloads-url]: https://npmjs.org/package/standard
+<h4 align="center">One Style to Rule Them All</h4>
 
-### One Style to Rule Them All
+<p align="center">
+  <a href="https://travis-ci.org/feross/standard">
+    <img src="https://travis-ci.org/feross/standard.svg?branch=master"
+         alt="Travis Build">
+  </a>
+  <a href="https://www.npmjs.com/package/standard">
+    <img src="https://img.shields.io/npm/v/standard.svg"
+         alt="NPM Version">
+  </a>
+  <a href="https://www.npmjs.com/package/standard">
+    <img src="https://img.shields.io/npm/dm/standard.svg"
+         alt="NPM Downloads">
+  </a>
+</p>
+<br>
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
@@ -253,7 +266,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`. 
+Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`.
 
  `standard-format filename.js` will automatically fix most issues though some, like not handling errors in node-style callbacks, must be fixed manually.
 
