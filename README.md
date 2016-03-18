@@ -514,6 +514,8 @@ The `callback` will be called with an `Error` and `results` object (same as abov
 
 ## IRC channel
 
+I love standard!
+
 Join us in `#standard` on freenode.
 
 ## License
