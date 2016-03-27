@@ -41,5 +41,5 @@ config settings directory.
 9. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
 10. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`, only in rare cases you'll have to configure `ESLint package` path
 
-[webstorm-1]: https://www.jetbrains.com/webstorm/
+[webstorm-1]: https://www.jetbrains.com/help/phpstorm/2016.1/directories-used-by-phpstorm-to-store-settings-caches-plugins-and-logs.html?origin=old_help#d66583e60
 [webstorm-2]: https://www.jetbrains.com/webstorm/help/project-and-ide-settings.html
