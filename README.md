@@ -108,10 +108,10 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-You can optionally pass in a directory using the glob pattern:
+You can optionally pass in a directory (or directories) using the glob pattern. Be sure to quote paths containing glob patterns so that they are expanded by standard instead of your shell:
 
 ```bash
-$ standard src/util/**/*.js
+$ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
 **Note:** by default `standard` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
