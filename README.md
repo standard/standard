@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="WebTorrent" width="200">
+  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="WebTorrent" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
