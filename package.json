@@ -26,7 +26,7 @@
     "cross-spawn-async": "^2.1.8",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "run-parallel-limit": "^1.0.2",
+    "run-parallel-limit": "^1.0.3",
     "standard-packages": "^3.0.5",
     "tape": "^4.4.0"
   },
