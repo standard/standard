@@ -22,7 +22,7 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^5.0.0",
+    "babel-eslint": "^6.0.0",
     "cross-spawn-async": "^2.1.8",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
