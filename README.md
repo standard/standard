@@ -445,7 +445,8 @@ And run:
 $ standard --verbose | snazzy
 ```
 
-There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json), and [standard-reporter](https://www.npmjs.com/package/standard-reporter)
+There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json),  [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
+[standard-summary](https://www.npmjs.com/package/standard-summary).
 
 ### I want to contribute to `standard`. What packages should I know about?
 
