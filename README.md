@@ -10,18 +10,9 @@
 <h4 align="center">One Style to Rule Them All</h4>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard">
-    <img src="https://travis-ci.org/feross/standard.svg?branch=master"
-         alt="Travis Build">
-  </a>
-  <a href="https://www.npmjs.com/package/standard">
-    <img src="https://img.shields.io/npm/dm/standard.svg"
-         alt="NPM Downloads">
-  </a>
-  <a href="https://www.npmjs.com/package/standard">
-    <img src="https://img.shields.io/npm/v/standard.svg"
-         alt="NPM Version">
-  </a>
+  <a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 <br>
 
