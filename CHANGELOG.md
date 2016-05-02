@@ -18,12 +18,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Disallow unnecessary escape usage ([no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)) [4% -- but, including many bugs]
 - Disallow duplicate imports ([no-duplicate-imports](http://eslint.org/docs/rules/no-duplicate-imports)) [0%]
 - Disallow unmodified conditions of loops ([no-unmodified-loop-condition](http://eslint.org/docs/2.0.0/rules/no-unmodified-loop-condition)) [0%]
-    - ~~Blocked on: https://github.com/eslint/eslint/issues/5166~~
 - Disallow whitespace before properties ([no-whitespace-before-property](http://eslint.org/docs/2.0.0/rules/no-whitespace-before-property)) [0%]
-    - ~~Blocked on: https://github.com/eslint/eslint/issues/5167~~
-- Validate spacing before closing bracket in JSX ([react/jsx-space-before-closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)) [0%]
 - Disallow control flow statements in `finally` blocks ([no-unsafe-finally](http://eslint.org/docs/rules/no-unsafe-finally)) [0%]
 - Disallow unnecessary computed property keys on objects ([no-useless-computed-key](http://eslint.org/docs/rules/no-useless-computed-key)) [0%]
+- Validate spacing before closing bracket in JSX ([react/jsx-space-before-closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)) [0%]
 
 ## Removed rules
 
