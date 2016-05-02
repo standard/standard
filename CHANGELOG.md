@@ -5,12 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 7.0.0 - 2016-05-02
 
-## Changes
+### Changes
 
 - Upgrade eslint to version ~2.9.0
 - Remove "rules" configuration option (https://github.com/feross/standard/issues/367) from `package.json` (Reasoning is [here](https://github.com/feross/standard/issues/399#issuecomment-180961891))
 
-## New rules
+### New rules
 
 *Estimated % of affected standard users, based on test suite*
 
@@ -23,7 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Disallow unnecessary computed property keys on objects ([no-useless-computed-key](http://eslint.org/docs/rules/no-useless-computed-key)) [0%]
 - Validate spacing before closing bracket in JSX ([react/jsx-space-before-closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)) [0%]
 
-## Removed rules
+### Removed rules
 
 - Require parens in arrow function arguments ([arrow-parens](http://eslint.org/docs/rules/arrow-parens))
 
