@@ -163,7 +163,7 @@ Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
 enable it in your projects.
 
 [emacs-1]: http://www.flycheck.org
-[emacs-2]: http://www.flycheck.org/manual/latest/index.html
+[emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 #### [Brackets](http://brackets.io/)
 
