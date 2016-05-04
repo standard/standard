@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.0.1 - 2016-05-04
+
+- Relax "no-duplicate-imports" rule to not include `export` so the following is allowed:
+
+```js
+import { foo } from 'bar'
+export * from 'bar'
+```
+
 ## 7.0.0 - 2016-05-02
 
 ### Changes
