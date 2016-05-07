@@ -10,6 +10,7 @@ config settings directory.
   <code_scheme name="Standard">
     <JSCodeStyleSettings>
       <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
+      <option name="USE_DOUBLE_QUOTES" value="false" />
       <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
     </JSCodeStyleSettings>
     <XML>
