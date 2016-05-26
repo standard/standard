@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^6.0.0",
-    "cross-spawn": "^3.0.1",
+    "cross-spawn": "^4.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.2",
