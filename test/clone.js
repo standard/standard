@@ -8,7 +8,7 @@
  * VERSION BUMP.)
  */
 
-var crossSpawnAsync = require('cross-spawn-async')
+var crossSpawn = require('cross-spawn')
 var fs = require('fs')
 var minimist = require('minimist')
 var mkdirp = require('mkdirp')
@@ -68,7 +68,7 @@ test('test github repos that use `standard`', function (t) {
     var url = pkg.repo + '.git'
     var folder = path.join(TMP, name)
     return function (cb) {
-      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+      access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
         if (argv.offline) {
           if (err) {
             t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
@@ -122,11 +122,24 @@ test('test github repos that use `standard`', function (t) {
 function spawn (command, args, opts, cb) {
   if (!opts.stdio) opts.stdio = argv.quiet ? 'ignore' : 'inherit'
 
-  var child = crossSpawnAsync(command, args, opts)
+  var child = crossSpawn(command, args, opts)
   child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) return cb(new Error('non-zero exit code: ' + code))
     cb(null)
   })
   return child
+}
+
+function access (path, mode, callback) {
+  if (typeof mode === 'function') {
+    return access(path, null, callback)
+  }
+
+  // Node v0.10 lacks `fs.access`, which is faster, so fallback to `fs.stat`
+  if (typeof fs.access === 'function') {
+    fs.access(path, mode, callback)
+  } else {
+    fs.stat(path, callback)
+  }
 }
