@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 7.1.2 - 2016-06-03
+
+- Fix install errors for some users by updating eslint peer dependency
+
 ## 7.1.1 - 2016-05-26
 
 - Add back full node 0.10, 0.12 support
