@@ -14,7 +14,6 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
-<br>
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
