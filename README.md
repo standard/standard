@@ -37,7 +37,7 @@ npm install standard
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(` or `[`**
+- **Never start a line with `(`, `[`, or `` ` ``**
   - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
   - [More details][4]
 - **Space after keywords** `if (condition) { ... }`
