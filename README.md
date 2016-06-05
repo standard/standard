@@ -194,7 +194,7 @@ Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
   {
     "name": "my-cool-package",
     "devDependencies": {
-      "standard": "^3.0.0"
+      "standard": "*"
     },
     "scripts": {
       "test": "standard && node my-tests.js"
