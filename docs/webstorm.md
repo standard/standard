@@ -32,20 +32,23 @@ config settings directory.
     </code_scheme>
   ```
 
-5. If you don't want to clutter your project with extra dependencies and config files, then go global:
-
+5. You may install dependencies and config globaly or localy and with support of ES7 or without it.<br />
+  * **Local** install **with** support of ES7
+    * `npm install eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise babel-eslint` (`sudo` might be required)
+    * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > .eslintrc` (be warned: it overrides an existing file)
+  * **Local** install **without** support of ES7
+    * `npm install eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise` (`sudo` might be required)
+    * `echo '{"extends": ["standard"]}' > .eslintrc` (be warned: it overrides an existing file)<br />
+  * **Global** install **with** support of ES7
+      * `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise babel-eslint` (`sudo` might be required)
+      * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > ~/.eslintrc` (be warned: it overrides an existing
+  * **Global** install **without** support of ES7
   * `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise` (`sudo` might be required)
-  * If you don't need support of ES7 features
-    * `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
-  * If you need support of ES7 features
-    * `npm install -g babel-eslint`
-    * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > ~/.eslintrc` (be warned: it overrides an existing file)
-
-6. If you're OK with local dependencies and config, do (5) without `-g` and `~/`
-7. Fire up the IDE and open a _Settings_/_Preferences_ screen (choose between project and default settings accordingly to your preference)
-8. Under `Editor > Code Style > JavaScript` change `Scheme` to `Standard`
-9. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
-10. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`, only in rare cases you'll have to configure `ESLint package` path
+  * `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
+6. Fire up the IDE and open a _Settings_/_Preferences_ screen (choose between project and default settings accordingly to your preference)
+7. Under `Editor > Code Style > JavaScript` change `Scheme` to `Standard`
+8. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
+9. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`, only in rare cases you'll have to configure `ESLint package` path
 
 ---
 
