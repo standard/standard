@@ -3,7 +3,7 @@
 1. Turn off your IDE
 2. [Figure out where your configuration lives][webstorm-2] (_IDE Settings_ section)
 3. Navigate to `your-config-dir/codestyles`. If this directory doesn't exist, create it in the WebStorm
-config settings directory.
+config settings directory
 4. Create a `Standard.xml` file:
 
   ```xml
@@ -32,7 +32,7 @@ config settings directory.
     </code_scheme>
   ```
 
-5. You may install dependencies and config globaly or localy and with support of ES7 or without it.<br />
+5. You may install dependencies and config globaly or localy and with support of ES7 or without it.
   * **Local** install **with** support of ES7
     * `npm install eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise babel-eslint` (`sudo` might be required)
     * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > .eslintrc` (be warned: it overrides an existing file)
@@ -43,8 +43,8 @@ config settings directory.
       * `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise babel-eslint` (`sudo` might be required)
       * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > ~/.eslintrc` (be warned: it overrides an existing
   * **Global** install **without** support of ES7
-  * `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise` (`sudo` might be required)
-  * `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
+    * `npm install -g eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise` (`sudo` might be required)
+    * `echo '{"extends": ["standard"]}' > ~/.eslintrc` (be warned: it overrides an existing file)
 6. Fire up the IDE and open a _Settings_/_Preferences_ screen (choose between project and default settings accordingly to your preference)
 7. Under `Editor > Code Style > JavaScript` change `Scheme` to `Standard`
 8. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
