@@ -32,7 +32,7 @@ config settings directory
     </code_scheme>
   ```
 
-5. You may install dependencies and config globaly or localy and with support of ES7 or without it.
+5. You may install dependencies and config globaly or localy and with support of ES7 or without it
   * **Local** install **with** support of ES7
     * `npm install eslint eslint-config-standard eslint-plugin-standard eslint-plugin-promise babel-eslint` (`sudo` might be required)
     * `echo '{"extends": ["standard"], "parser": "babel-eslint"}' > .eslintrc` (be warned: it overrides an existing file)
