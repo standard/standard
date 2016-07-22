@@ -90,7 +90,7 @@ test('test github repos that use `standard`', function (t) {
         function gitClone (cb) {
           var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           spawn(GIT, args, { stdio: 'ignore' }, function (err) {
-            if (err) err.message += ' (' + name + ')'
+            if (err) err.message += ' (git clone) (' + name + ')'
             cb(err)
           })
         }
@@ -98,7 +98,7 @@ test('test github repos that use `standard`', function (t) {
         function gitPull (cb) {
           var args = [ 'pull' ]
           spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
-            if (err) err.message += ' (' + name + ')'
+            if (err) err.message += ' (git pull) (' + name + ')'
             cb(err)
           })
         }
