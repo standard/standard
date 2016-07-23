@@ -313,11 +313,11 @@ file = 'I know what I am doing' // eslint-disable-line no-use-before-define
 Or, disable the `"no-use-before-define"` rule for **multiple lines**:
 
 ```js
-/*eslint-disable no-use-before-define */
-// offending code here...
-// offending code here...
-// offending code here...
-/*eslint-enable no-use-before-define */
+/* eslint-disable no-use-before-define */
+console.log('offending code goes here...')
+console.log('offending code goes here...')
+console.log('offending code goes here...')
+/* eslint-enable no-use-before-define */
 ```
 
 ### I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
