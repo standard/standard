@@ -176,8 +176,11 @@ Install **[vscode-standardjs][vscode-1]**.
 
 For automatic formatting, install **[vscode-standard-format][vscode-2]**.
 
+For React snippets using Standard style, install **[vscode-react-standard](vscode-3)**.
+
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standard-format
+[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
 #### [WebStorm/PhpStorm][webstorm-1]
 
