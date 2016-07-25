@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard" width="200"></a>
+  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -20,10 +20,10 @@ works.
 
 This module saves you (and others!) time in two ways:
 
-- **No configuration.** The easiest way to enforce consistent style in your project. Just
-  drop it in.
-- **Catch style errors before they're submitted in PRs.** Saves precious code review time
-  by eliminating back-and-forth between maintainer and contributor.
+- **No configuration.** The easiest way to enforce consistent style in your
+  project. Just drop it in.
+- **Catch style errors before they're submitted in PRs.** Saves precious code
+  review time by eliminating back-and-forth between maintainer and contributor.
 
 ## Install
 
@@ -80,17 +80,18 @@ let people know that your code is using the standard style.
 
 ## Usage
 
-The easiest way to use JavaScript Standard Style to check your code is to install it
-globally as a Node command line program. To do so, simply run the following command in
-your terminal (flag `-g` installs `standard` globally on your system, omit it if you want
-to install in the current working directory):
+The easiest way to use JavaScript Standard Style to check your code is to install
+it globally as a Node command line program. To do so, simply run the following
+command in your terminal (flag `-g` installs `standard` globally on your system,
+omit it if you want to install in the current working directory):
 
 ```bash
 npm install standard -g
 ```
 
-After you've done that you should be able to use the `standard` program. The simplest use
-case would be checking the style of all JavaScript files in the current working directory:
+After you've done that you should be able to use the `standard` program. The
+simplest use case would be checking the style of all JavaScript files in the
+current working directory:
 
 ```bash
 $ standard
@@ -98,13 +99,16 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-You can optionally pass in a directory (or directories) using the glob pattern. Be sure to quote paths containing glob patterns so that they are expanded by standard instead of your shell:
+You can optionally pass in a directory (or directories) using the glob pattern. Be
+sure to quote paths containing glob patterns so that they are expanded by standard
+instead of your shell:
 
 ```bash
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**Note:** by default `standard` will look for all files matching the patterns: `**/*.js`, `**/*.jsx`.
+**Note:** by default `standard` will look for all files matching the patterns:
+`**/*.js`, `**/*.jsx`.
 
 ### Text editor plugins
 
@@ -126,8 +130,8 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 Install **[linter-js-standard][atom-1]**.
 
-For automatic formatting, install **[standard-formatter][atom-2]**.
-For snippets, install **[standardjs-snippets][atom-3]**.
+For automatic formatting, install **[standard-formatter][atom-2]**. For snippets,
+install **[standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -158,8 +162,8 @@ set autoread
 
 #### [Emacs](https://www.gnu.org/software/emacs/)
 
-Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn how to
-enable it in your projects.
+Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
+how to enable it in your projects.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
@@ -174,9 +178,8 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
 
 Install **[vscode-standardjs][vscode-1]**.
 
-For automatic formatting, install **[vscode-standard-format][vscode-2]**.
-
-For React snippets using Standard style, install **[vscode-react-standard](vscode-3)**.
+For automatic formatting, install **[vscode-standard-format][vscode-2]**. For React
+snippets, install **[vscode-react-standard](vscode-3)**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standard-format
@@ -219,30 +222,31 @@ Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
 
 ### Why would I use JavaScript Standard Style?
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to maintain
-multiple hundred-line style configuration files for every module/project they work on.
-Enough of this madness!
+The beauty of JavaScript Standard Style is that it's simple. No one wants to
+maintain multiple hundred-line style configuration files for every module/project
+they work on. Enough of this madness!
 
 This module saves you time in two ways:
 
-- **No configuration.** The easiest way to enforce consistent style in your project. Just
-  drop it in.
-- **Catch style errors before they're submitted in PRs.** Saves precious code review time
-  by eliminating back-and-forth between maintainer and contributor.
+- **No configuration.** The easiest way to enforce consistent style in your
+  project. Just drop it in.
+- **Catch style errors before they're submitted in PRs.** Saves precious code
+  review time by eliminating back-and-forth between maintainer and contributor.
 
-Adopting `standard` style means ranking the importance of code clarity and community
-conventions higher than personal style. This might not make sense for 100% of projects and
-development cultures, however open source can be a hostile place for newbies. Setting up
-clear, automated contributor expectations makes a project healthier.
+Adopting `standard` style means ranking the importance of code clarity and
+community conventions higher than personal style. This might not make sense for
+100% of projects and development cultures, however open source can be a hostile
+place for newbies. Setting up clear, automated contributor expectations makes a
+project healthier.
 
 ### I disagree with rule X, can you change it?
 
 No. The whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
-style. There are lots of debates online about tabs vs. spaces, etc. that will never be
-resolved. These debates just distract from getting stuff done. At the end of the day you
-have to 'just pick something', and that's the whole philosophy of `standard` -- its a
-bunch of sensible 'just pick something' opinions. Hopefully, users see the value in that
-over defending their own opinions.
+style. There are lots of debates online about tabs vs. spaces, etc. that will never
+be resolved. These debates just distract from getting stuff done. At the end of the
+day you have to 'just pick something', and that's the whole philosophy of
+`standard` -- its a bunch of sensible 'just pick something' opinions. Hopefully,
+users see the value in that over defending their own opinions.
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
@@ -259,21 +263,23 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module with `npm install -g standard-format`.
+Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module
+with `npm install -g standard-format`.
 
- `standard-format filename.js` will automatically fix most issues though some, like not handling errors in node-style callbacks, must be fixed manually.
+ `standard-format filename.js` will automatically fix most issues though some,
+ like not handling errors in node-style callbacks, must be fixed manually.
 
 [max]: https://github.com/maxogden
 [standard-format]: https://github.com/maxogden/standard-format
 
 ### How do I ignore files?
 
-The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden files/folders
-(beginning with `.`), and all patterns in a project's root `.gitignore` file are
-automatically ignored.
+The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden
+files/folders (beginning with `.`), and all patterns in a project's root
+`.gitignore` file are automatically ignored.
 
-Sometimes you need to ignore additional folders or specific minified files. To do that, add
-a `standard.ignore` property to `package.json`:
+Sometimes you need to ignore additional folders or specific minified files. To do
+that, add a `standard.ignore` property to `package.json`:
 
 ```json
 "standard": {
@@ -288,10 +294,11 @@ a `standard.ignore` property to `package.json`:
 
 ### How do I hide a certain warning?
 
-In rare cases, you'll need to break a rule and hide the warning generated by `standard`.
+In rare cases, you'll need to break a rule and hide the warning generated by
+`standard`.
 
-JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and you can
-hide warnings as you normally would if you used `eslint` directly.
+JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and
+you can hide warnings as you normally would if you used `eslint` directly.
 
 To get verbose output (so you can find the particular rule name to ignore), run:
 
@@ -325,21 +332,21 @@ console.log('offending code goes here...')
 
 ### I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
 
-Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the global
-object (poor form!). Since these functions are not defined or `require`d anywhere in your
-code, `standard` will warn that you're using a variable that is not defined (usually, this
-rule is really useful for catching typos!). But we want to disable it for these global
-variables.
+Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the
+global object (poor form!). Since these functions are not defined or `require`d
+anywhere in your code, `standard` will warn that you're using a variable that is
+not defined (usually, this rule is really useful for catching typos!). But we want
+to disable it for these global variables.
 
-To let `standard` (as well as humans reading your code) know that certain variables are
-global in your code, add this to the top of your file:
+To let `standard` (as well as humans reading your code) know that certain variables
+are global in your code, add this to the top of your file:
 
 ```
 /* global myVar1, myVar2 */
 ```
 
-If you have hundreds of files, adding comments to every file can be tedious. In these
-cases, you can add this to `package.json`:
+If you have hundreds of files, adding comments to every file can be tedious. In
+these cases, you can add this to `package.json`:
 
 ```json
 {
@@ -362,21 +369,21 @@ cases, you can add this to `package.json`:
 }
 ```
 
-If you're using `standard` globally (you installed it with `-g`), then you also need to
-install `babel-eslint` globally with `npm install babel-eslint -g`.
+If you're using `standard` globally (you installed it with `-g`), then you also
+need to install `babel-eslint` globally with `npm install babel-eslint -g`.
 
 ### Can you make rule X configurable?
 
-No. The point of `standard` is to save you time by picking reasonable rules so you can
-spend your time solving actual problems. If you really do want to configure hundreds of
-eslint rules individually, you can always use `eslint` directly.
+No. The point of `standard` is to save you time by picking reasonable rules so you
+can spend your time solving actual problems. If you really do want to configure
+hundreds of eslint rules individually, you can always use `eslint` directly.
 
 If you just want to tweak a couple rules, consider using
-[this shareable config](https://github.com/feross/eslint-config-standard) and layering
-your changes on top.
+[this shareable config](https://github.com/feross/eslint-config-standard) and
+layering your changes on top.
 
-Pro tip: Just use `standard` and move on. There are actual real problems that you could
-spend your time solving! :P
+Pro tip: Just use `standard` and move on. There are actual real problems that you
+could spend your time solving! :P
 
 ### What about Web Workers?
 
@@ -386,8 +393,8 @@ Add this to the top of your files:
 /* eslint-env serviceworker */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a global
-in web worker code.
+This lets `standard` (as well as humans reading your code) know that `self` is a
+global in web worker code.
 
 ### What about Mocha, Jasmine, QUnit, etc?
 
@@ -397,10 +404,13 @@ To support mocha in your test files, add this to the beginning of your test file
 /* eslint-env mocha */
 ```
 
-Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a full list,
-check ESLint's [specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
-documentation. For a list of what globals are available for these environments, check
-the [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm module.
+Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
+full list, check ESLint's
+[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
+documentation. For a list of what globals are available for these environments,
+check the
+[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
+module.
 
 ### Is there a Git `pre-commit` hook?
 
@@ -438,7 +448,9 @@ And run:
 $ standard --verbose | snazzy
 ```
 
-There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standard-json](https://www.npmjs.com/package/standard-json),  [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
+There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
+[standard-json](https://www.npmjs.com/package/standard-json), 
+[standard-reporter](https://www.npmjs.com/package/standard-reporter), and
 [standard-summary](https://www.npmjs.com/package/standard-summary).
 
 ### I want to contribute to `standard`. What packages should I know about?
@@ -454,8 +466,8 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap), [standa
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
 There are also many **[editor plugins](#text-editor-plugins)**, a list of
-**[npm packages that use `standard`](https://github.com/feross/standard-packages)**, and
-an awesome list of
+**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
+and an awesome list of
 **[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
 
 ## Node.js API
