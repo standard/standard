@@ -81,11 +81,7 @@ in JavaScript Standard Style, or check out some of
 
 ## Install
 
-```bash
-npm install standard
-```
-
-## Usage
+This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
 The easiest way to use JavaScript Standard Style to check your code is to install
 it globally as a Node command line program. To do so, simply run the following
@@ -96,7 +92,15 @@ omit it if you want to install in the current working directory):
 npm install standard -g
 ```
 
-After you've done that you should be able to use the `standard` program. The
+Or, you can run this command to install `standard` locally, for use in your module:
+
+```bash
+npm install standard
+```
+
+## Usage
+
+After you've installed `standard`, that you should be able to use the `standard` program. The
 simplest use case would be checking the style of all JavaScript files in the
 current working directory:
 
