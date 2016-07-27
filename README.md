@@ -1,6 +1,8 @@
-# standard
+<p align="center">
+  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
+</p>
 
-<a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
+# standard
 
 <a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
 <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
