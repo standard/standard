@@ -179,7 +179,7 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
 Install **[vscode-standardjs][vscode-1]**.
 
 For automatic formatting, install **[vscode-standard-format][vscode-2]**. For React
-snippets, install **[vscode-react-standard](vscode-3)**.
+snippets, install **[vscode-react-standard][vscode-3]**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standard-format
