@@ -21,6 +21,12 @@ This module saves you (and others!) time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code
   review time by eliminating back-and-forth between maintainer and contributor.
 
+Install with:
+
+```
+npm install standard
+```
+
 ### The Rules
 
 - **2 spaces** – for indentation
@@ -81,26 +87,26 @@ in JavaScript Standard Style, or check out some of
 
 ## Install
 
-This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
-
 The easiest way to use JavaScript Standard Style to check your code is to install
 it globally as a Node command line program. To do so, simply run the following
 command in your terminal (flag `-g` installs `standard` globally on your system,
 omit it if you want to install in the current working directory):
 
 ```bash
-npm install standard -g
+npm install standard --global
 ```
 
 Or, you can run this command to install `standard` locally, for use in your module:
 
 ```bash
-npm install standard
+npm install standard --save-dev
 ```
+
+[Node.js](http://nodejs.org) and [npm](https://npmjs.com) are required to run the preceding commands.
 
 ## Usage
 
-After you've installed `standard`, that you should be able to use the `standard` program. The
+After you've installed `standard`, you should be able to use the `standard` program. The
 simplest use case would be checking the style of all JavaScript files in the
 current working directory:
 
