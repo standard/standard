@@ -4,9 +4,9 @@
 
 # standard
 
-<a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
-<a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
-<a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+[![Travis](https://travis-ci.org/feross/standard.svg?branch=master)](https://travis-ci.org/feross/standard)
+[![npm downloads](https://img.shields.io/npm/dm/standard.svg)](https://www.npmjs.com/package/standard)
+[![npm version](https://img.shields.io/npm/v/standard.svg)](https://www.npmjs.com/package/standard)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
 > JavaScript Standard Style Guide http://standardjs.com
@@ -483,7 +483,7 @@ $ standard --verbose | snazzy
 ```
 
 There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
-[standard-json](https://www.npmjs.com/package/standard-json), 
+[standard-json](https://www.npmjs.com/package/standard-json),
 [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
 [standard-summary](https://www.npmjs.com/package/standard-summary).
 
