@@ -1,8 +1,9 @@
-<p align="center">
+<h1 align="center">
   <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
+  <br>
+  JavaScript Standard Style
+  <br>
 </p>
-
-# standard
 
 [![Travis](https://travis-ci.org/feross/standard.svg?branch=master)](https://travis-ci.org/feross/standard)
 [![npm downloads](https://img.shields.io/npm/dm/standard.svg)](https://www.npmjs.com/package/standard)
@@ -534,7 +535,6 @@ var opts = {
 ```
 
 The `callback` will be called with an `Error` and `results` object (same as above).
-
 
 ## IRC channel
 
