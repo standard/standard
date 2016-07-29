@@ -1,19 +1,15 @@
-<h1 align="center">
-  <br>
-  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
-  <br>
-  JavaScript Standard Style
-  <br>
-  <br>
-</h1>
-
-<h4 align="center">One Style to Rule Them All</h4>
-
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
-  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
-  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="JavaScript Style Guide - JavaScript Standard Style" width="200"></a>
 </p>
+
+# standard
+
+<a href="https://travis-ci.org/feross/standard"><img src="https://travis-ci.org/feross/standard.svg?branch=master" alt="Travis"></a>
+<a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
+<a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
+
+> JavaScript Standard Style Guide http://standardjs.com
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
@@ -25,13 +21,13 @@ This module saves you (and others!) time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code
   review time by eliminating back-and-forth between maintainer and contributor.
 
-## Install
+Install with:
 
-```bash
+```
 npm install standard
 ```
 
-## Rules
+### The Rules
 
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
@@ -61,24 +57,35 @@ in JavaScript Standard Style, or check out some of
 [the repositories](https://github.com/feross/standard-packages/blob/master/all.json) that use
 `standard`.
 
-## Badge
+## Table of Contents
 
-Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
+- [Install](#install)
+- [Usage](#usage)
+  - [Badge](#badge)
+  - [Text editor plugins](#text-editor-plugins)
+  - [What you might do if you're clever](#what-you-might-do-if-youre-clever)
+- [FAQ](#faq)
+  - [Why would I use JavaScript Standard Style?](#why-would-i-use-javascript-standard-style)
+  - [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
+  - [But this isn't a real web standard!](#but-this-isnt-a-real-web-standard)
+  - [Is there an automatic formatter?](#is-there-an-automatic-formatter)
+  - [How do I ignore files?](#how-do-i-ignore-files)
+  - [How do I hide a certain warning?](#how-do-i-hide-a-certain-warning)
+  - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
+  - [Can I use a custom JS parser for bleeding-edge ES6 or ES7 support?](#can-i-use-a-custom-js-parser-for-bleeding-edge-es6-or-es7-support)
+  - [Can you make rule X configurable?](#can-you-make-rule-x-configurable)
+  - [What about Web Workers?](#what-about-web-workers)
+  - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
+  - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
+  - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [I want to contribute to `standard`. What packages should I know about?](#i-want-to-contribute-to-standard-what-packages-should-i-know-about)
+- [Node.js API](#nodejs-api)
+  - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
+  - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
+- [IRC channel](#irc-channel)
+- [License](#license)
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
-```markdown
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-```
-
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
-```markdown
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-```
-
-## Usage
+## Install
 
 The easiest way to use JavaScript Standard Style to check your code is to install
 it globally as a Node command line program. To do so, simply run the following
@@ -86,10 +93,20 @@ command in your terminal (flag `-g` installs `standard` globally on your system,
 omit it if you want to install in the current working directory):
 
 ```bash
-npm install standard -g
+npm install standard --global
 ```
 
-After you've done that you should be able to use the `standard` program. The
+Or, you can run this command to install `standard` locally, for use in your module:
+
+```bash
+npm install standard --save-dev
+```
+
+[Node.js](http://nodejs.org) and [npm](https://npmjs.com) are required to run the preceding commands.
+
+## Usage
+
+After you've installed `standard`, you should be able to use the `standard` program. The
 simplest use case would be checking the style of all JavaScript files in the
 current working directory:
 
@@ -109,6 +126,23 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 **Note:** by default `standard` will look for all files matching the patterns:
 `**/*.js`, `**/*.jsx`.
+
+### Badge
+
+Use this in one of your projects? Include one of these badges in your readme to
+let people know that your code is using the standard style.
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+```markdown
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+```
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+```markdown
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+```
 
 ### Text editor plugins
 
@@ -453,23 +487,6 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
 [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
 [standard-summary](https://www.npmjs.com/package/standard-summary).
 
-### I want to contribute to `standard`. What packages should I know about?
-
-- **[standard](https://github.com/feross/standard)** - this repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
-  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-- **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
-- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
-- **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
-
-There are also many **[editor plugins](#text-editor-plugins)**, a list of
-**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
-and an awesome list of
-**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
-
 ## Node.js API
 
 ### `standard.lintText(text, [opts], callback)`
@@ -518,10 +535,32 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
+
 ## IRC channel
 
 Join us in `#standard` on freenode.
 
+## Contribute
+
+Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
+
+### I want to contribute to `standard`. What packages should I know about?
+
+- **[standard](https://github.com/feross/standard)** - this repo
+  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
+  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
+  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
+  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
+- **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
+- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
+- **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
+- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+
+There are also many **[editor plugins](#text-editor-plugins)**, a list of
+**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
+and an awesome list of
+**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
+
 ## License
 
-MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+[MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](http://feross.org).
