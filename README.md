@@ -3,7 +3,7 @@
   <br>
   JavaScript Standard Style
   <br>
-</p>
+</h1>
 
 [![Travis](https://travis-ci.org/feross/standard.svg?branch=master)](https://travis-ci.org/feross/standard)
 [![npm downloads](https://img.shields.io/npm/dm/standard.svg)](https://www.npmjs.com/package/standard)
