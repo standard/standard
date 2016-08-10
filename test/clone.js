@@ -68,7 +68,7 @@ test('test github repos that use `standard`', function (t) {
     var url = pkg.repo + '.git'
     var folder = path.join(TMP, name)
     return function (cb) {
-      access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
         if (argv.offline) {
           if (err) {
             t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
@@ -129,17 +129,4 @@ function spawn (command, args, opts, cb) {
     cb(null)
   })
   return child
-}
-
-function access (path, mode, callback) {
-  if (typeof mode === 'function') {
-    return access(path, null, callback)
-  }
-
-  // Node v0.10 lacks `fs.access`, which is faster, so fallback to `fs.stat`
-  if (typeof fs.access === 'function') {
-    fs.access(path, mode, callback)
-  } else {
-    fs.stat(path, callback)
-  }
 }
