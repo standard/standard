@@ -9,7 +9,6 @@ module.exports = {
   eslintConfig: {
     configFile: path.join(__dirname, 'eslintrc.json')
   },
-  formatter: '`standard-format` is no longer included with `standard`. Try using --fix instead. Or, install `standard-format` separately: "npm install -g standard-format"',
   homepage: pkg.homepage,
   tagline: 'Use JavaScript Standard Style',
   version: pkg.version
