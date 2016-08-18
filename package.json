@@ -29,6 +29,9 @@
     "standard-packages": "^3.1.9",
     "tape": "^4.6.0"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "homepage": "http://standardjs.com",
   "keywords": [
     "JavaScript Standard Style",
