@@ -29,6 +29,9 @@
     "standard-packages": "^3.1.9",
     "tape": "^4.6.0"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "homepage": "http://standardjs.com",
   "keywords": [
     "JavaScript Standard Style",
@@ -62,11 +65,11 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "update-authors": "./bin/update-authors.sh",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
     "test-offline-quick": "npm test -- --offline --quick",
-    "test-quick": "npm test -- --quick"
+    "test-quick": "npm test -- --quick",
+    "update-authors": "./bin/update-authors.sh"
   }
 }
