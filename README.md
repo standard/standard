@@ -3,14 +3,17 @@
   <br>
   JavaScript Standard Style
   <br>
+  <br>
 </h1>
 
-[![Travis](https://travis-ci.org/feross/standard.svg?branch=master)](https://travis-ci.org/feross/standard)
-[![npm downloads](https://img.shields.io/npm/dm/standard.svg)](https://www.npmjs.com/package/standard)
-[![npm version](https://img.shields.io/npm/v/standard.svg)](https://www.npmjs.com/package/standard)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
+<h4 align="center">One JavaScript Style Guide to Rule Them All</h4>
 
-> JavaScript Standard Style Guide http://standardjs.com
+<p align="center">
+  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+</p>
+<br>
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
