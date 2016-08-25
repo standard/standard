@@ -76,7 +76,7 @@ in JavaScript Standard Style, or check out some of
   - [How do I ignore files?](#how-do-i-ignore-files)
   - [How do I hide a certain warning?](#how-do-i-hide-a-certain-warning)
   - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-  - [Can I use a custom JS parser for bleeding-edge ES6 or ES7 support?](#can-i-use-a-custom-js-parser-for-bleeding-edge-es6-or-es7-support)
+  - [Can I use a custom JS parser for bleeding-edge ES next support?](#can-i-use-a-custom-js-parser-for-bleeding-edge-es-next-support)
   - [Can you make rule X configurable?](#can-you-make-rule-x-configurable)
   - [What about Web Workers?](#what-about-web-workers)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
@@ -301,13 +301,20 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ### Is there an automatic formatter?
 
-Yes! you can install [Max Ogden][max]'s [`standard-format`][standard-format] module
-with `npm install -g standard-format`.
+Yes! You can use `standard --fix` to automatically fix most issues automatically.
 
- `standard-format filename.js` will automatically fix most issues though some,
- like not handling errors in node-style callbacks, must be fixed manually.
+`standard --fix` is built into `standard` (since v8.0.0) for maximum convenience.
+Lots of problems are fixable, but some errors, like not handling errors in
+node-style callbacks, must be fixed manually.
 
-[max]: https://github.com/maxogden
+To save you time, `standard` outputs a message ("Run `standard --fix` to automatically fix some
+problems.") when it detects problems that can be fixed automatically.
+
+Alternatively, if you have an ES5-only codebase, you can try
+[`standard-format`][standard-format] (a separate package), but it likely will not
+be maintained going forward since `standard --fix` works so well, and does not
+require us to maintain two tools with separate rule configurations.
+
 [standard-format]: https://github.com/maxogden/standard-format
 
 ### How do I ignore files?
@@ -394,7 +401,7 @@ these cases, you can add this to `package.json`:
 }
 ```
 
-### Can I use a custom JS parser for bleeding-edge ES6 or ES7 support?
+### Can I use a custom JS parser for bleeding-edge ES next support?
 
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
 (example: `npm install babel-eslint`) and add this to your `package.json`:
