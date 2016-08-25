@@ -401,6 +401,20 @@ these cases, you can add this to `package.json`:
 }
 ```
 
+### How do I add an `eslint-plugin-whatever` on top of standard?
+
+You can use the command line argument: `--plugin whatever` after `npm install --save-dev eslint-plugin-whatever`, or in your `package.json`:
+
+```json
+{
+  "standard": {
+    "plugins": [
+      "whatever"
+    ]
+  }
+}
+```
+
 ### Can I use a custom JS parser for bleeding-edge ES next support?
 
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
