@@ -77,6 +77,7 @@ in JavaScript Standard Style, or check out some of
   - [How do I hide a certain warning?](#how-do-i-hide-a-certain-warning)
   - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [Can I use a custom JS parser for bleeding-edge ES next support?](#can-i-use-a-custom-js-parser-for-bleeding-edge-es-next-support)
+  - [Can I use a JavaScript language variant, like Flow?](#can-i-use-a-javascript-language-variant-like-flow)
   - [Can you make rule X configurable?](#can-you-make-rule-x-configurable)
   - [What about Web Workers?](#what-about-web-workers)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
@@ -401,21 +402,10 @@ these cases, you can add this to `package.json`:
 }
 ```
 
-### How do I add an `eslint-plugin-whatever` on top of standard?
-
-You can use the command line argument: `--plugin whatever` after `npm install --save-dev eslint-plugin-whatever`, or in your `package.json`:
-
-```json
-{
-  "standard": {
-    "plugins": [
-      "whatever"
-    ]
-  }
-}
-```
-
 ### Can I use a custom JS parser for bleeding-edge ES next support?
+
+Before you use a custom parser, consider whether the added complexity in your
+build process is worth it.
 
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
 (example: `npm install babel-eslint`) and add this to your `package.json`:
@@ -430,6 +420,31 @@ You can use the command line argument: `--plugin whatever` after `npm install --
 
 If you're using `standard` globally (you installed it with `-g`), then you also
 need to install `babel-eslint` globally with `npm install babel-eslint -g`.
+
+### Can I use a JavaScript language variant, like Flow?
+
+Before you use a custom JS language variant, consider whether the added complexity
+in your build process (and effort required to get new contributors up-to-speed) is
+worth it.
+
+`standard` supports ESLint plugins. Use one of these to transform your code into
+valid JavaScript before `standard` sees it. To use a custom parser, install it from
+npm (example: `npm install eslint-plugin-flow`) and add this to your
+`package.json`:
+
+```json
+{
+  "standard": {
+    "plugins": [
+      "flow"
+    ]
+  }
+}
+```
+
+If you're using `standard` globally (you installed it with `-g`), then you also
+need to install `eslint-plugin-flow` globally with
+`npm install eslint-plugin-flow -g`.
 
 ### Can you make rule X configurable?
 
