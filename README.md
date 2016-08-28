@@ -429,22 +429,22 @@ worth it.
 
 `standard` supports ESLint plugins. Use one of these to transform your code into
 valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm (example: `npm install eslint-plugin-flow`) and add this to your
+npm (example: `npm install eslint-plugin-flowtype`) and add this to your
 `package.json`:
 
 ```json
 {
   "standard": {
     "plugins": [
-      "flow"
+      "flowtype"
     ]
   }
 }
 ```
 
 If you're using `standard` globally (you installed it with `-g`), then you also
-need to install `eslint-plugin-flow` globally with
-`npm install eslint-plugin-flow -g`.
+need to install `eslint-plugin-flowtype` globally with
+`npm install eslint-plugin-flowtype -g`.
 
 ### Can you make rule X configurable?
 
