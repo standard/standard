@@ -24,11 +24,11 @@ some problems.") when it detects problems that can be fixed automatically so you
 can save time!
 
 With `standard` v8.0.0, we are also dropping support for Node.js versions prior to
-4. Node.js 0.10 and 0.12 are in maintenance mode and will be unsupported at the end
-of 2016. Node.js 4 is the current LTS version. If you are using an older version of
-Node.js, we recommend upgrading to at least Node.js 4 as soon as possible. If you
-are unable to upgrade to Node.js 4 or higher, then we recommend continuing to use
-`standard` v7.x until you are ready to upgrade Node.js.
+v4. Node.js 0.10 and 0.12 are in maintenance mode and will be unsupported at the
+end of 2016. Node.js 4 is the current LTS version. If you are using an older
+version of Node.js, we recommend upgrading to at least Node.js 4 as soon as
+possible. If you are unable to upgrade to Node.js 4 or higher, then we recommend
+continuing to use `standard` v7.x until you are ready to upgrade Node.js.
 
 **Important:** We will not be updating the `standard` v7.x versions going forward.
 All bug fixes and enhancements will land in `standard` v8.x.
