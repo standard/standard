@@ -65,9 +65,9 @@ in JavaScript Standard Style, or check out some of
 
 - [Install](#install)
 - [Usage](#usage)
+  - [What you might do if you're clever](#what-you-might-do-if-youre-clever)
   - [Badge](#badge)
   - [Text editor plugins](#text-editor-plugins)
-  - [What you might do if you're clever](#what-you-might-do-if-youre-clever)
 - [FAQ](#faq)
   - [Why would I use JavaScript Standard Style?](#why-would-i-use-javascript-standard-style)
   - [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
@@ -131,6 +131,34 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 **Note:** by default `standard` will look for all files matching the patterns:
 `**/*.js`, `**/*.jsx`.
+
+### What you might do if you're clever
+
+1. Add it to `package.json`
+
+  ```json
+  {
+    "name": "my-cool-package",
+    "devDependencies": {
+      "standard": "*"
+    },
+    "scripts": {
+      "test": "standard && node my-tests.js"
+    }
+  }
+  ```
+
+2. Check style automatically when you run `npm test`
+
+  ```
+  $ npm test
+  Error: Use JavaScript Standard Style
+    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+  ```
+
+3. Never give style feedback on a pull request again!
+
+
 
 ### Badge
 
@@ -230,32 +258,6 @@ Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
-
-### What you might do if you're clever
-
-1. Add it to `package.json`
-
-  ```json
-  {
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "*"
-    },
-    "scripts": {
-      "test": "standard && node my-tests.js"
-    }
-  }
-  ```
-
-2. Check style automatically when you run `npm test`
-
-  ```
-  $ npm test
-  Error: Use JavaScript Standard Style
-    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
-  ```
-
-3. Never give style feedback on a pull request again!
 
 ## FAQ
 
