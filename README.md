@@ -106,6 +106,7 @@ Or, you can run this command to install `standard` locally, for use in your modu
 ```bash
 npm install standard --save-dev
 ```
+In this case, call `standard` with its relative path, `node_modules/.bin/standard`.
 
 [Node.js](http://nodejs.org) and [npm](https://npmjs.com) are required to run the preceding commands.
 
