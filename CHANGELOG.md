@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 8.2.0 - 2016-09-26
+
+For many users, this release should eliminate the need to specify `babel-eslint` as
+a custom parser, since `standard` can now parse ES7 (i.e. ES2016) syntax out of the
+box.
+
+- Support ES7 (i.e. ES2016) syntax.
+- Update ESLint from 3.5.x to 3.6.x.
+- 4 additional rules are now fixable with `standard --fix`!
+
 ## 8.1.0 - 2016-09-17
 
 - Update ESLint from 3.3.x to 3.5.x.
