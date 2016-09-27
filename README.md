@@ -538,8 +538,11 @@ be provided:
 
 ```js
 var opts = {
+  fix: false,   // automatically fix problems
   globals: [],  // global variables to declare
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  plugins: [],  // eslint plugins
+  envs: [],     // eslint environment
+  parser: ''    // js parser (e.g. babel-eslint)
 }
 ```
 
