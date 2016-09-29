@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 8.3.0 - 2016-09-29
+
+The last release (`8.2.0`) added ES7 support. This release (`8.3.0`) adds ES8
+support ...just 3 days later!
+
+This release should eliminate the need to specify `babel-eslint` as a custom
+parser, since `standard` can now parse ES8 (i.e. ES2017) syntax out of the box.
+That means `async` and `await` will just work.
+
+- Support ES8 (i.e. ES2017) syntax.
+
 ## 8.2.0 - 2016-09-26
 
 For many users, this release should eliminate the need to specify `babel-eslint` as
