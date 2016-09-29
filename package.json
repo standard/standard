@@ -21,7 +21,7 @@
     "standard-engine": "^5.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^7.0.0",
     "cross-spawn": "^4.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
