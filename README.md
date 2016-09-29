@@ -243,9 +243,9 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
 
 #### [Visual Studio Code](https://code.visualstudio.com/)
 
-Install **[vscode-standardjs][vscode-1]**.
+Install [vscode-standardjs][vscode-1].
 
-For automatic formatting, install **[vscode-standard-format][vscode-2]**. For React
+For automatic formatting, use [vscode-standardjs][vscode-1] when you're running standard v8.x.x, or you can use **[vscode-standard-format][vscode-2]** which might be deprecated later. For React
 snippets, install **[vscode-react-standard][vscode-3]**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
