@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 8.4.0 - 2016-10-10
+
+- Update ESLint from 3.6.x to 3.7.x.
+- 5 additional rules are now fixable with `standard --fix`!
+- Use more conservative semver ranges [#654](https://github.com/feross/standard/issues/654)
+
 ## 8.3.0 - 2016-09-29
 
 The last release (`8.2.0`) added ES7 support. This release (`8.3.0`) adds ES8
