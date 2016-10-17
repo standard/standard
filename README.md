@@ -435,6 +435,7 @@ npm (example: `npm install eslint-plugin-flowtype`) and add this to your
 ```json
 {
   "standard": {
+    "parser": "babel-eslint",
     "plugins": [
       "flowtype"
     ]
