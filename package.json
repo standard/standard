@@ -12,7 +12,7 @@
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
-    "eslint": "~3.7.1",
+    "eslint": "~3.8.1",
     "eslint-config-standard": "6.2.0",
     "eslint-config-standard-jsx": "3.2.0",
     "eslint-plugin-promise": "~3.0.0",
