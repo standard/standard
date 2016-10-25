@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "eslint": "~3.8.1",
-    "eslint-config-standard": "6.2.0",
+    "eslint-config-standard": "6.2.1",
     "eslint-config-standard-jsx": "3.2.0",
     "eslint-plugin-promise": "~3.3.0",
     "eslint-plugin-react": "~6.4.1",
