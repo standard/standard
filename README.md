@@ -34,7 +34,8 @@ npm install standard
 ### The Rules
 
 - **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
+- **Single quotes for strings** – except to avoid escaping –
+  but, by all means, use ’ (Unicode 2019) in your strings
 - **No unused variables** – this one catches *tons* of bugs!
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(`, `[`, or `` ` ``**
