@@ -143,7 +143,9 @@ $ standard "src/util/**/*.js" "test/**/*.js"
       "standard": "*"
     },
     "scripts": {
-      "test": "standard && node my-tests.js"
+      "lint": "standard",
+      "unit": "node my-unit-tests.js",
+      "test": "npm run lint && npm run unit"
     }
   }
   ```
