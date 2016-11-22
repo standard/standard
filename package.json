@@ -15,8 +15,8 @@
     "eslint": "~3.10.2",
     "eslint-config-standard": "6.2.1",
     "eslint-config-standard-jsx": "3.2.0",
-    "eslint-plugin-react": "~6.4.1",
     "eslint-plugin-promise": "~3.4.0",
+    "eslint-plugin-react": "~6.7.1",
     "eslint-plugin-standard": "~2.0.1",
     "standard-engine": "~5.1.0"
   },
