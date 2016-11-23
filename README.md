@@ -212,16 +212,10 @@ Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
 let g:syntastic_javascript_checkers = ['standard']
 ```
 
-For automatic formatting on save, install [standard-format](https://github.com/maxogden/standard-format)
-
-```bash
-npm install -g standard-format
-```
-
-and add these two lines to `.vimrc`:
+For automatic formatting on save, add these two lines to `.vimrc`:
 
 ```vim
-autocmd bufwritepost *.js silent !standard-format -w %
+autocmd bufwritepost *.js silent !standard --fix %
 set autoread
 ```
 
@@ -306,18 +300,12 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 Yes! You can use `standard --fix` to automatically fix most issues automatically.
 
 `standard --fix` is built into `standard` (since v8.0.0) for maximum convenience.
-Lots of problems are fixable, but some errors, like not handling errors in
-node-style callbacks, must be fixed manually.
+Lots of problems are fixable, but some errors, like forgetting to handle the error
+in node-style callbacks, must be fixed manually.
 
-To save you time, `standard` outputs a message ("Run `standard --fix` to automatically fix some
-problems.") when it detects problems that can be fixed automatically.
-
-Alternatively, if you have an ES5-only codebase, you can try
-[`standard-format`][standard-format] (a separate package), but it likely will not
-be maintained going forward since `standard --fix` works so well, and does not
-require us to maintain two tools with separate rule configurations.
-
-[standard-format]: https://github.com/maxogden/standard-format
+To save you time, `standard` outputs a message ("Run `standard --fix` to
+automatically fix some problems.") when it detects problems that can be fixed
+automatically.
 
 ### How do I ignore files?
 
@@ -596,9 +584,9 @@ Contributions are welcome! Check out the [issues](https://github.com/feross/stan
 - **[standard](https://github.com/feross/standard)** - this repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
   - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
+  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-- **[standard-format](https://github.com/maxogden/standard-format)** - automatic code formatter
 - **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
