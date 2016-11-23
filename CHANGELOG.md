@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 8.6.0 - 2016-11-22
+
+- Update ESLint from 3.8.x to 3.10.x.
+- 3 additional rules are now fixable with `standard --fix`!
+
 ## 8.5.0 - 2016-10-25
 
 - Update ESLint from 3.7.x to 3.8.x.
