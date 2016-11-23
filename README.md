@@ -245,10 +245,11 @@ Search the extension registry for **["Standard Code Style"][brackets-1]**.
 
 Install **[vscode-standardjs][vscode-1]**. (Includes support for automatic formatting.)
 
-For React snippets, install **[vscode-react-standard][vscode-2]**.
+For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React snippets, install **[vscode-react-standard][vscode-3]**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
-[vscode-2]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
+[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
 #### [WebStorm/PhpStorm][webstorm-1]
 
