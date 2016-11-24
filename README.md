@@ -15,6 +15,8 @@
 </p>
 <br>
 
+[Português](https://github.com/feross/standard/blob/master/README-ptbr.md)
+
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
 
@@ -31,7 +33,7 @@ Install with:
 npm install standard
 ```
 
-[Portuguese version]()
+
 
 ### The Rules
 
