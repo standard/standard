@@ -252,6 +252,28 @@ Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
 
+### Extensions
+
+Extensions are a way to add official Standard Style linting rules for specific libraries.
+
+#### Usage
+
+Simply install each extension:
+
+```console
+$ npm i --save-dev standard-extension-<name>
+```
+
+and its rules will be included when using `standard`.
+
+#### Available extensions
+
+> **Note: This is a curated, [white-list](https://en.wikipedia.org/wiki/Whitelist) set of extensions.**
+
+- [React](https://www.npmjs.com/package/standard-extension-react)
+- [AVA](https://www.npmjs.com/package/standard-extension-ava)
+
+
 ## FAQ
 
 ### Why would I use JavaScript Standard Style?
