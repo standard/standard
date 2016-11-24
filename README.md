@@ -273,7 +273,6 @@ and its rules will be included when using `standard`.
 - [React](https://www.npmjs.com/package/standard-extension-react)
 - [AVA](https://www.npmjs.com/package/standard-extension-ava)
 
-
 ## FAQ
 
 ### Why would I use JavaScript Standard Style?
