@@ -8,6 +8,8 @@ rules.
 The best way to learn about `standard` is to just install it and give it a try on
 your code.
 
+[Portuguese version]()
+
 ## Rules
 
 * **Use 2 spaces** for indentation.
