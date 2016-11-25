@@ -13,12 +13,8 @@
         <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
         <option name="SPACES_WITHIN_IMPORTS" value="true" />
       </JSCodeStyleSettings>
-      <XML>
-        <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
-      </XML>
       <codeStyleSettings language="JavaScript">
         <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
-        <option name="SPACE_WITHIN_BRACKETS" value="true" />
         <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
         <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
         <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
