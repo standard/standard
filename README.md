@@ -397,7 +397,7 @@ Before you use a custom parser, consider whether the added complexity in your
 build process is worth it.
 
 `standard` supports custom JS parsers. To use a custom parser, install it from npm
-(example: `npm install babel-eslint`) and add this to your `package.json`:
+(example: `npm install babel-eslint -g`) and add this to your `package.json`:
 
 ```json
 {
