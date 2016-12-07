@@ -217,7 +217,7 @@ your code.
     // ...
   }
   ```
-*
+
 ## Semicolons
 
 * No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
