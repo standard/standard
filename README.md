@@ -56,10 +56,10 @@ npm install standard
 [5]: RULES.md#javascript-standard-style
 
 To get a better idea, take a look at
-[a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard-packages/blob/master/all.json) that use
-`standard`.
+[a sample file](https://github.com/expressjs/body-parser/blob/master/index.js) written
+in JavaScript Standard Style. Or, check out one of the
+[thousands of projects](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+that use `standard`!
 
 ## Table of Contents
 
