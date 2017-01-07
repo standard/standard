@@ -28,7 +28,7 @@ This module saves you (and others!) time in two ways:
 Install with:
 
 ```
-npm install standard
+npm install standard --save-dev
 ```
 
 ### The Rules
