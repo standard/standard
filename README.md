@@ -313,9 +313,10 @@ automatically.
 
 ### How do I ignore files?
 
-The paths `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, hidden
-files/folders (beginning with `.`), and all patterns in a project's root
-`.gitignore` file are automatically ignored.
+Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
+and files/folders that begin with `.` like `.git/`) are automatically ignored.
+
+Paths in a project's root `.gitignore` file are also automatically ignored.
 
 Sometimes you need to ignore additional folders or specific minified files. To do
 that, add a `standard.ignore` property to `package.json`:
