@@ -12,6 +12,8 @@ your code.
 
 * **Use 2 spaces** for indentation.
 
+  eslint: [`indent`](http://eslint.org/docs/rules/indent)
+
   ```js
   function hello (name) {
     console.log('hi', name)
@@ -20,12 +22,16 @@ your code.
 
 * **Use single quotes for strings** except to avoid escaping.
 
+  eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
+
   ```js
   console.log('hello there')
   $("<div class='box'>")
   ```
 
 * **No unused variables.**
+
+  eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
   function myFunction () {
@@ -35,12 +41,16 @@ your code.
 
 * **Add a space after keywords.**
 
+  eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
+
   ```js
   if (condition) { ... }   // ✓ ok
   if(condition) { ... }    // ✗ avoid
   ```
 
 * **Add a space before a function declaration's parentheses.**
+
+  eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
   ```js
   function name (arg) { ... }   // ✓ ok
@@ -53,6 +63,8 @@ your code.
 * **Always use** `===` instead of `==`.<br>
   Exception: `obj == null` is allowed to check for `null || undefined`.
 
+  eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
+
   ```js
   if (name === 'John')   // ✓ ok
   if (name == 'John')    // ✗ avoid
@@ -64,6 +76,8 @@ your code.
   ```
 
 * **Infix operators** must be spaced.
+
+  eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
   ```js
   // ✓ ok
@@ -79,6 +93,8 @@ your code.
 
 * **Commas should have a space** after them.
 
+  eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
+
   ```js
   // ✓ ok
   var list = [1, 2, 3, 4]
@@ -92,6 +108,8 @@ your code.
   ```
 
 * **Keep else statements** on the same line as their curly braces.
+
+  eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
   ```js
   // ✓ ok
@@ -114,6 +132,8 @@ your code.
 
 * **For multi-line if statements,** use curly braces.
 
+  eslint: [`curly`](http://eslint.org/docs/rules/curly)
+
   ```js
   // ✓ ok
   if (options.quiet !== true) console.log('done')
@@ -134,6 +154,7 @@ your code.
 
 * **Always handle the** `err` function parameter.
 
+  eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
   // ✓ ok
   run(function (err) {
@@ -152,11 +173,15 @@ your code.
 * **Always prefix browser globals** with `window.`.<br>
   Exceptions are: `document`, `console` and `navigator`.
 
+  eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
+
   ```js
   window.alert('hi')   // ✓ ok
   ```
 
 * **Multiple blank lines not allowed.**
+
+  eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
   ```js
   // ✓ ok
@@ -173,6 +198,8 @@ your code.
   ```
 
 * **For the ternary operator** in a multi-line setting, place `?` and `:` on their own lines.
+
+  eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
   ```js
   // ✓ ok
@@ -191,6 +218,8 @@ your code.
 
 * **For var declarations,** write each declaration in its own statement.
 
+  eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
+
   ```js
   // ✓ ok
   var silent = true
@@ -205,6 +234,8 @@ your code.
   ```
 
 * **Wrap conditional assignments** with additional parentheses. This makes it clear that the expression is intentionally an assignment (`=`) rather than a typo for equality (`===`).
+
+  eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
   ```js
   // ✓ ok
@@ -222,12 +253,16 @@ your code.
 
 * No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
+  eslint: [`semi`](http://eslint.org/docs/rules/semi)
+
   ```js
   window.alert('hi')   // ✓ ok
   window.alert('hi');  // ✗ avoid
   ```
 
 * Never start a line with `(`, `[`, or `` ` ``. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
+
+  eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
   ```js
   // ✓ ok
