@@ -1,18 +1,14 @@
 # JavaScript Standard Style
 
-Rules Translation: [Português](docs/RULES-ptbr.md)
-
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
-rules.
+Esto es un TL;DR (muy largo, no lo leí) de reglas JavaScript [standard](https://github.com/feross/standard).
 
-The best way to learn about `standard` is to just install it and give it a try on
-your code.
+La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba en tu código.
 
-## Rules
+## Reglas
 
-* **Use 2 spaces** for indentation.
+* **Usar 2 espacios** como sangría.
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -22,62 +18,62 @@ your code.
   }
   ```
 
-* **Use single quotes for strings** except to avoid escaping.
+* **Usar comillas simples en cadenas de texto** con la excepcion para evitar escapado de texto
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
   ```js
-  console.log('hello there')
-  $("<div class='box'>")
+  console.log('hello there') // comillas simples
+  $("<div class='box'>") // escapado de texto
   ```
 
-* **No unused variables.**
+* **No dejar variables sin usar.**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
   function myFunction () {
-    var result = something()   // ✗ avoid
+    var result = something()   // ✗ evitar
   }
   ```
 
-* **Add a space after keywords.**
+* **Espacio después de las palabras claves.**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
   ```js
   if (condition) { ... }   // ✓ ok
-  if(condition) { ... }    // ✗ avoid
+  if(condition) { ... }    // ✗ evitar
   ```
 
-* **Add a space before a function declaration's parentheses.**
+* **Agregar un espacio antes de los paréntesis de la función declarada**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
   ```js
   function name (arg) { ... }   // ✓ ok
-  function name(arg) { ... }    // ✗ avoid
+  function name(arg) { ... }    // ✗ evitar
 
   run(function () { ... })      // ✓ ok
-  run(function() { ... })       // ✗ avoid
+  run(function() { ... })       // ✗ evitar
   ```
 
-* **Always use** `===` instead of `==`.<br>
+* **Usar siempre** `===` en vez de `==`.<br>
   Exception: `obj == null` is allowed to check for `null || undefined`.
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
   ```js
   if (name === 'John')   // ✓ ok
-  if (name == 'John')    // ✗ avoid
+  if (name == 'John')    // ✗ evitar
   ```
 
   ```js
   if (name !== 'John')   // ✓ ok
-  if (name != 'John')    // ✗ avoid
+  if (name != 'John')    // ✗ evitar
   ```
 
-* **Infix operators** must be spaced.
+* **Operadores infijos** deben ser espaciados.
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -88,12 +84,12 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   var x=2
   var message = 'hello, '+name+'!'
   ```
 
-* **Commas should have a space** after them.
+* **Comas deben tener un espacio** despues de ellas.
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -104,12 +100,12 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   var list = [1,2,3,4]
   function greet (name,options) { ... }
   ```
 
-* **Keep else statements** on the same line as their curly braces.
+* **Mantener declaracion else** en la misma linea que sus llaves.
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -123,7 +119,7 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   if (condition) {
     // ...
   }
@@ -132,7 +128,7 @@ your code.
   }
   ```
 
-* **For multi-line if statements,** use curly braces.
+* **Para delcaraciones if multi-linea** usar llaves.
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -149,12 +145,12 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   if (options.quiet !== true)
     console.log('done')
   ```
 
-* **Always handle the** `err` function parameter.
+* **Siempre gestionar** el parámetro `err` en las funciones.
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -166,14 +162,14 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   run(function (err) {
     window.alert('done')
   })
   ```
 
-* **Always prefix browser globals** with `window.`.<br>
-  Exceptions are: `document`, `console` and `navigator`.
+* **En las variables globales usar el sufijo** `window.`.<br>
+  Con la excepcion de: `document`, `console` y `navigator`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
@@ -181,7 +177,7 @@ your code.
   window.alert('hi')   // ✓ ok
   ```
 
-* **Multiple blank lines not allowed.**
+* **Múltiples líneas en blanco no está permitido.**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -192,14 +188,14 @@ your code.
   ```
 
   ```js
-  // ✗ avoid
+  // ✗ evitar
   var value = 'hello world'
 
 
   console.log(value)
   ```
 
-* **For the ternary operator** in a multi-line setting, place `?` and `:` on their own lines.
+* **Para el operador ternario** en multi-linea, colocar el `?` y `:` en su propia nueva linea.
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -212,13 +208,13 @@ your code.
     ? 'localhost'
     : 'www.api.com'
 
-  // ✗ avoid
+  // ✗ evitar
   var location = env.development ?
     'localhost' :
     'www.api.com'
   ```
 
-* **For var declarations,** write each declaration in its own statement.
+* **Para declaraciones var,** escribir solo una asignación en cada declaracion
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -227,15 +223,15 @@ your code.
   var silent = true
   var verbose = true
 
-  // ✗ avoid
+  // ✗ evitar
   var silent = true, verbose = true
 
-  // ✗ avoid
+  // ✗ evitar
   var silent = true,
       verbose = true
   ```
 
-* **Wrap conditional assignments** with additional parentheses. This makes it clear that the expression is intentionally an assignment (`=`) rather than a typo for equality (`===`).
+* **Envolver asignaciones condicionales** con paréntesis adicionales. Esto hace claro que la intención de la expresión es una asignación y no un error de igualdad (`===`).
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -245,24 +241,24 @@ your code.
     // ...
   }
 
-  // ✗ avoid
+  // ✗ evitar
   while (m = text.match(expr)) {
     // ...
   }
   ```
 
-## Semicolons
+## Puntos y comas (semicolos)
 
-* No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Sin puntos y comas. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
   ```js
   window.alert('hi')   // ✓ ok
-  window.alert('hi');  // ✗ avoid
+  window.alert('hi');  // ✗ evitar
   ```
 
-* Never start a line with `(`, `[`, or `` ` ``. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
+* Nunca empezar una linea con `(`, `[`, o `` ` ``. Este es el único problema cuando se omiten los puntos y comas, y `standard` te protege de problemas potenciales
 
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
@@ -272,7 +268,7 @@ your code.
     window.alert('ok')
   }())
 
-  // ✗ avoid
+  // ✗ evitar
   (function () {
     window.alert('ok')
   }())
@@ -282,7 +278,7 @@ your code.
   // ✓ ok
   ;[1, 2, 3].forEach(bar)
 
-  // ✗ avoid
+  // ✗ evitar
   [1, 2, 3].forEach(bar)
   ```
 
@@ -290,22 +286,22 @@ your code.
   // ✓ ok
   ;`hello`.indexOf('o')
 
-  // ✗ avoid
+  // ✗ evitar
   `hello`.indexOf('o')
   ```
 
-  Note: If you're often writing code like this, you may be trying to be too clever.
+  Nota: si te encuentras a menudo escribiendo código de esta manera,
+  quizás estás tratando de ser muy listo.
 
-  Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
-  possible.
+  esta taquigrafía es rechazada, en favor a expresiones claras y legibles, cuando sea posible.
 
-  Instead of this:
+  En vez de esto:
 
   ```js
   ;[1, 2, 3].forEach(bar)
   ```
 
-  This is much preferred:
+  Se prefiere esto:
 
   ```js
   var nums = [1, 2, 3]
@@ -313,59 +309,56 @@ your code.
   ```
 
 
-## Helpful reading
+## Lectura de ayuda con referencia hacia los puntos y comas
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
 
-##### And a helpful video:
+##### También un video:
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-All popular code minifiers in use today use AST-based minification, so they can
-handle semicolon-less JavaScript with no issues (since semicolons are not required
-in JavaScript).
+Los minificadores de código populares hoy en día están basados en AST
+(Árbol abstracto de sintaxis), de manera que pueden gestionar JavaScript
+sin puntos y comas sin problemas (puntos y comas no son requeridos en JavaScript).
 
-##### Excerpt from *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
+##### Extrácto de *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
-[Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
+[Depender de ASI (Inserción automática de puntos y comas)] es bastante seguro, y perfectamente válido que cualquier navegador web entiende, Compilador Closure, yuicompressor, packer y jsmin todos pueden perfectamente minificarlo. No existe impacto en el performance.
 
-I am sorry that, instead of educating you, the leaders in this language community have given you lies and fear.  That was shameful. I recommend learning how statements in JS are actually terminated (and in which cases they are not terminated), so that you can write code that you find beautiful.
+Lamento que, en vez de educarlos, sus líderes en este lenguaje les han dado mentiras y miedos. Que sinverguenza. Yo te recomiendo aprender como las declaraciones realmente terminan en JavaScript (y en cuales casos no terminan), de esta manera tu puedes escribir código que encuentres hermoso.
 
-In general, `\n` ends a statement unless:
-  1. The statement has an unclosed paren, array literal, or object literal or ends in some
-     other way that is not a valid way to end a statement. (For instance, ending with `.`
-     or `,`.)
-  2. The line is `--` or `++` (in which case it will decrement/increment the next token.)
-  3. It is a `for()`, `while()`, `do`, `if()`, or `else`, and there is no `{`
-  4. The next line starts with `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, or some other
-     binary operator that can only be found between two tokens in a single expression.
+En general, `\n` termina una declaración a menos que
+La declaración tiene sin cerrar un paréntesis, array literal, o objeto literal o termina de una manera no válida (por instancia, terminar con `.` o `,`)
+La línea es `--` o `++` (en este caso esto decrementa/incrementa el proximo token)
+Es un `for()`, `while()`, `do`, `if()`, o `else`, no exista una llave `{`
+La próxima línea empieza con `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.` o algún operador binario que solo se encuentra entre dos tokens en un sola expresión
 
-The first is pretty obvious. Even JSLint is ok with `\n` chars in JSON and parenthesized constructs, and with `var` statements that span multiple lines ending in `,`.
+El primero es bastante obvio. Incluso JSLint no tiene problemas con caracteres `\n` en JSON y constructores entre paréntesis, y con declaraciones `var` que lapsan múltiples líneas terminando con `,`.
 
-The second is super weird. I’ve never seen a case (outside of these sorts of conversations) where you’d want to do write `i\n++\nj`, but, point of fact, that’s parsed as `i; ++j`, not `i++; j`.
+El segundo es super raro. Yo nunca he visto un caso (fuera de este tipo de conversaciones) donde quisieras escribir `i\n++\nj`, pero, de hecho eso es analizado como `i; ++j;`y  no `j++; j`.
 
-The third is well understood, if generally despised. `if (x)\ny()` is equivalent to `if (x) { y() }`. The construct doesn’t end until it reaches either a block, or a statement.
+El tercero es bien entendido, es generalmente despreciado. `if (x)\ny()` es equivalente a `if (x) { y() }`. El constructor no termina hasta que alcanza un bloque o una declaración.
 
-`;` is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
+`;` es una declaración JavaScript válida, entonces `if(x);` es el equivalente a `if(x){}` o “Sí x, hacer nada” Esto es más comúnmente aplicado a bucles donde el bucle también chequea si la función actualiza, No es usual, pero existe.
 
-The fourth is generally the fud-inducing “oh noes, you need semicolons!” case. But, as it turns out, it’s quite easy to *prefix* those lines with semicolons if you don’t mean them to be continuations of the previous line. For example, instead of this:
+El cuarto es generalmente el caso inducido “Oh no, necesitas puntos y comas”. Pero pasa que es bastante simple darle el prefijo a esas linas con puntos y comas, si no quieres que sean la continuacion de la linea previa. Por ejemplo, en vez de esto:
 
 ```js
 foo();
 [1,2,3].forEach(bar);
 ```
 
-you could do this:
+podrias hacer esto:
 
 ```js
 foo()
 ;[1,2,3].forEach(bar)
 ```
 
-The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
+La ventaja es que los prefijos son fáciles de notar, una vez te acostumbras a ver líneas que no empiecen con `(` o `[` sin puntos y comas.
 
-*End quote from "An Open Letter to JavaScript Leaders Regarding Semicolons".*
+*Fin the la cita de "An Open Letter to JavaScript Leaders Regarding Semicolons".*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons

@@ -34,8 +34,8 @@ npm install standard --save-dev
 
 ### Las reglas
 
-- **2 espacios** – para sangría
-- **Comillas simples para cadenas de texto** – A excepcion de: evitar escape de texto
+- **Usar 2 espacios** como sangría.
+- **Usar comillas simples en cadenas de texto** con la excepcion para evitar escapado de texto
 - **No dejar variables sin usar** – esta captura *toneladas* de bugs!
 - **Sin punto y coma** – [Esta][1] [bien.][2] [En serio!][3]
 - **No debes empezar una línea con `(`, `[`, o `` ` ``**
