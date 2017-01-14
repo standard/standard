@@ -12,22 +12,18 @@
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
-  <br>
-  Traducción Readme: <a href="README.md">English</a>
-  <br>
-  Traducción Readme: <a href="docs/README-ptbr.md">Português</a>  
 </p>
 <br>
 
-Sin decisiones que hacer. Sin `.eslintrc`, `.jshintrc`, o `.jscsrc`
-  archivos a gestionar. Simplemente funciona.
+Sin decisiones que hacer. Sin archivos `.eslintrc`, `.jshintrc`, o `.jscsrc`
+   a gestionar. Simplemente funciona.
 
-Este modulo te salva a ti (y otros) tiempo en dos maneras:
+Este modulo te guarda a ti (y otros) tiempo en dos maneras:
 
 - **Sin configuración.** La manera mas fácil de forzar estilos consistentes
   en tu proyecto. Simplemente usalo.
-- **Captura errores de estilos antes que sean enviados a PR.** Te salva de
-  preciosa revisiones de código eliminando delante y detrás entre el dueño del
+- **Captura errores de estilos antes que sean enviados a PR.** Te guarda de
+  revisiones de código eliminando "delante y detrás" entre el dueño del
   repositorio y los contribuidores
 
 Instalar con:
@@ -42,7 +38,7 @@ npm install standard --save-dev
 - **Comillas simples para cadenas de texto** – A excepcion de: evitar escape de texto
 - **No dejar variables sin usar** – esta captura *toneladas* de bugs!
 - **Sin punto y coma** – [Esta][1] [bien.][2] [En serio!][3]
-- **No debes empezar una línea con `(`, `[`, or `` ` ``**
+- **No debes empezar una línea con `(`, `[`, o `` ` ``**
   - Este es ul  **unico** problema al evitar punto y coma – *automaticamente verificado para ti!*
   - [More details][4]
 - **Espacio después de las palabras claves** `if (condition) { ... }`
@@ -97,28 +93,27 @@ que usan `standard`!
 
 ## Instalación
 
-The easiest way to use JavaScript Standard Style to check your code is to install
-it globally as a Node command line program. To do so, simply run the following
-command in your terminal (flag `-g` installs `standard` globally on your system,
-omit it if you want to install in the current working directory):
+La manera más fácil de usar JavaScript Standard Style para chequear tu código
+es instalarlo globalmente como programa Node de línea de comandos.
+Para hacer esto, simplemente ejecute el siguiente comando en su terminal
+(la bandera `-g` instalará `standard` globalmente en su sistema,
+omita la bandera si solo quiere instalar `standard` en el directorio actual) :
 
 ```bash
 npm install standard --global
 ```
 
-Or, you can run this command to install `standard` locally, for use in your module:
+O, puede ejecutar este comando para instalar `standard` localmente, para usar en su módulo:
 
 ```bash
 npm install standard --save-dev
 ```
 
-[Node.js](http://nodejs.org) and [npm](https://npmjs.com) are required to run the preceding commands.
+[Node.js](http://nodejs.org) y [npm](https://npmjs.com) son requeridos para ejecutar los comandos anteriores.
 
 ## Uso
 
-After you've installed `standard`, you should be able to use the `standard` program. The
-simplest use case would be checking the style of all JavaScript files in the
-current working directory:
+Una vez tenga instalado `standard`, ya deberías poder usar `standard`. Un simple caso de uso podría ser chequear estilos de todos los archivos JavaScript en el directorio actual:
 
 ```bash
 $ standard
@@ -126,20 +121,20 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-You can optionally pass in a directory (or directories) using the glob pattern. Be
-sure to quote paths containing glob patterns so that they are expanded by standard
-instead of your shell:
+Opcionalmente puedes pasar un directorio (o directorios) usando el patrón glob.
+Asegúrese de usar comillas en las rutas que contengan el patrón glob
+para que sean expandidos por `standard` y no por el shell:
 
 ```bash
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**Note:** by default `standard` will look for all files matching the patterns:
+**Nota:** Por defecto `standard`  buscará todos los archivos que hagan pareo con los patrones:
 `**/*.js`, `**/*.jsx`.
 
 ### Lo que podrias hacer si eres inteligente
 
-1. Add it to `package.json`
+1. Agregar esto `package.json`
 
   ```json
   {
@@ -153,7 +148,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
   }
   ```
 
-2. Check style automatically when you run `npm test`
+2. Chequear estilos automaticamente cuando ejecutes `npm test`
 
   ```
   $ npm test
@@ -161,14 +156,12 @@ $ standard "src/util/**/*.js" "test/**/*.js"
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
-3. Never give style feedback on a pull request again!
-
+3. No volver a dar feedback de stilos un PR otra vez!
 
 
 ### Medalla
 
-Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
+¿Desea usar uno estos en uno de sus proyectos? Incluya una de estas medallas a su readme para darle a conocer a las personas que está usando Javascript Standard Style.
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -184,14 +177,14 @@ let people know that your code is using the standard style.
 
 ### Plugins editores de textos
 
-First, install `standard`. Then, install the appropriate plugin for your editor:
+Primero, instale `standard`. Luego, instale el plugin apropiado para su editor:
 
 #### [Sublime Text](https://www.sublimetext.com/)
 
-Using **[Package Control][sublime-1]**, install **[SublimeLinter][sublime-2]** and
+Usando **[Package Control][sublime-1]**, instale **[SublimeLinter][sublime-2]** y
 **[SublimeLinter-contrib-standard][sublime-3]**.
 
-For automatic formatting on save, install **[StandardFormat][sublime-4]**.
+Para formateo automatico al guardar, instale **[StandardFormat][sublime-4]**.
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -200,10 +193,10 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 #### [Atom](https://atom.io)
 
-Install **[linter-js-standard][atom-1]**.
+Instale **[linter-js-standard][atom-1]**.
 
-For automatic formatting, install **[standard-formatter][atom-2]**. For snippets,
-install **[standardjs-snippets][atom-3]**.
+Para formateo automatico al guardar, instale **[standard-formatter][atom-2]**. Para snippets,
+instale **[standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -211,13 +204,13 @@ install **[standardjs-snippets][atom-3]**.
 
 #### [Vim](http://www.vim.org/)
 
-Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
+instale **[Syntastic][vim-1]** y agregue esta linea a su `.vimrc`:
 
 ```vim
 let g:syntastic_javascript_checkers = ['standard']
 ```
 
-For automatic formatting on save, add these two lines to `.vimrc`:
+Para formateo automatico al guardar, agregue estas dos linea a su `.vimrc`:
 
 ```vim
 autocmd bufwritepost *.js silent !standard --fix %
@@ -228,23 +221,24 @@ set autoread
 
 #### [Emacs](https://www.gnu.org/software/emacs/)
 
-Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
-how to enable it in your projects.
+Instale **[Flycheck][emacs-1]** y revise **[manual][emacs-2]** para aprender
+como habilitarlo en sus proyectos.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 #### [Brackets](http://brackets.io/)
 
-Search the extension registry for **["Standard Code Style"][brackets-1]**.
+Busque el registro de extension para **["Standard Code Style"][brackets-1]**.
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
 #### [Visual Studio Code](https://code.visualstudio.com/)
 
-Install **[vscode-standardjs][vscode-1]**. (Includes support for automatic formatting.)
+Instale **[vscode-standardjs][vscode-1]**. (Incluye soporte para formateo automatico.)
 
-For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React snippets, install **[vscode-react-standard][vscode-3]**.
+Para snippers JS, instale: **[vscode-standardjs-snippets][vscode-2]**.
+PAra snippers React, instale **[vscode-react-standard][vscode-3]**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
@@ -252,7 +246,7 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 #### [WebStorm/PhpStorm][webstorm-1]
 
-Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
+Ambos WebStorm and PhpStorm pueden ser [configurados para estilos estandar][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
@@ -261,66 +255,54 @@ Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
 
 ### ¿Porque deberia usar JavaScript Standard Style?
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to
-maintain multiple hundred-line style configuration files for every module/project
-they work on. Enough of this madness!
+La belleza de JavaScript Standard Style es qué es simple.
+Nadie quiere mantener configuración de estilos en múltiples archivos
+de cientos de líneas para cada módulo/proyecto en los que trabajan.
+¡Es suficiente de esta locura!
 
-This module saves you time in two ways:
+Este modulo te guarda a ti (y otros) tiempo en dos maneras:
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  project. Just drop it in.
-- **Catch style errors before they're submitted in PRs.** Saves precious code
-  review time by eliminating back-and-forth between maintainer and contributor.
+- **Sin configuración.** La manera mas fácil de forzar estilos consistentes
+  en tu proyecto. Simplemente usalo.
+- **Captura errores de estilos antes que sean enviados a PR.** Te guarda de
+  revisiones de código eliminando delante y detrás entre el dueño del
+  repositorio y los contribuidores
 
-Adopting `standard` style means ranking the importance of code clarity and
-community conventions higher than personal style. This might not make sense for
-100% of projects and development cultures, however open source can be a hostile
-place for newbies. Setting up clear, automated contributor expectations makes a
-project healthier.
+Adoptar estilos `standard` significa clasificar la importancia de la claridad del código y las convenciones de la comunidad mucho más que estilo personal. Esto quizás no tenga sentido para el 100% de proyectos y culturas de desarrollo, aunque proyectos de código abierto pueden llegar a ser hostiles para los novatos. Estableciendo expectativas de contribución limpia y automatizada puede hacer el proyecto más saludable
 
 ### No estoy de acuerdo con la regla X, ¿lo puedo cambiar?
 
-No. The whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
-style. There are lots of debates online about tabs vs. spaces, etc. that will never
-be resolved. These debates just distract from getting stuff done. At the end of the
-day you have to 'just pick something', and that's the whole philosophy of
-`standard` -- its a bunch of sensible 'just pick something' opinions. Hopefully,
-users see the value in that over defending their own opinions.
+No. El punto de `standard` es de evitar [bikeshedding][bikeshedding] acerca del estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo distraen de hacer el trabajo. Al final del dia tienes “simplemente usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “simplemente usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
 ### ¡Pero esto no un estandar web real!
 
-Of course it's not! The style laid out here is not affiliated with any official web
-standards groups, which is why this repo is called `feross/standard` and not
-`ECMA/standard`.
+¡Por su puesto que no lo es! El estilo aqui no esta afiliado a ningún grupo oficial de estándar web, es por eso que este repositorio se llama `feross/standard` y no `ECMA/standard`.
 
-The word "standard" has more meanings than just "web standard" :-) For example:
 
-- This module helps hold our code to a high *standard of quality*.
-- This module ensures that new contributors follow some basic *style standards*.
+La palabra “estándar” tiene más significados que solo “estándar web” :-) Por ejemplo:
+
+- Este módulo ayuda a mantener el código a la más alta *calidad estandar*.
+- Este módulo asegura que las nuevas contribuciones sigan los *estilos estandar* básicos.
 
 ### ¿Hay algún formateador automatico?
 
-Yes! You can use `standard --fix` to automatically fix most issues automatically.
+¡Si! Puedes usar `standard --fix` para arreglar la mayoría de problemas automáticamente.
 
-`standard --fix` is built into `standard` (since v8.0.0) for maximum convenience.
-Lots of problems are fixable, but some errors, like forgetting to handle the error
-in node-style callbacks, must be fixed manually.
+`standard --fix` esta integrado en `standard` (desde v8.0.0) para máxima conveniencia.
+La mayoría de los problemas se arreglan, pero algunos errores, como olvidar darle uso a los `err` en los callbacks de node, deben ser arreglados manualmente.
 
-To save you time, `standard` outputs a message ("Run `standard --fix` to
-automatically fix some problems.") when it detects problems that can be fixed
-automatically.
+Para no hacerte perder el tiempo, `standard` emite un mensaje ("Run `standard --fix` to
+automatically fix some problems.") cuando detecta errores que pueden ser arreglados automáticamente.
 
 ### ¿Como hago para ignorar archivos?
 
-Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
-and files/folders that begin with `.` like `.git/`) are automatically ignored.
+Ciertas rutas (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, y archivos/directorios que empiezan con `.` cómo `.git` son ignorados automáticamente.
 
-Paths in a project's root `.gitignore` file are also automatically ignored.
+Las rutas del `.gitignore` del proyecto raíz son ignorados automáticamente.
 
-Sometimes you need to ignore additional folders or specific minified files. To do
-that, add a `standard.ignore` property to `package.json`:
+Algunas veces necesitas ignorar directorios o archivos específicos. Para hacerlo, agrega la propiedad `standard.ignore` al `package.json`:
 
 ```json
 "standard": {
@@ -335,13 +317,11 @@ that, add a `standard.ignore` property to `package.json`:
 
 ### ¿Como oculto cierta alerta?
 
-In rare cases, you'll need to break a rule and hide the warning generated by
-`standard`.
+En raros casos, necesitarás romper una regla y ocultar la alerta generada por `standard`.
 
-JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and
-you can hide warnings as you normally would if you used `eslint` directly.
+JavaScript Standard Style usa [`eslint`](http://eslint.org/) bajo la capucha y puedes ocultar las alertas como normalmente lo harias si usaras `eslint` directamente.
 
-To get verbose output (so you can find the particular rule name to ignore), run:
+Para obtener una salida mas especifica (así puedes encontrar el nombre de la regla a ignorar) ejecute:
 
 ```bash
 $ standard --verbose
@@ -349,19 +329,19 @@ Error: Use JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
-Disable **all rules** on a specific line:
+Inhabilitar **toda las reglas** en una linea especifica:
 
 ```js
 file = 'I know what I am doing' // eslint-disable-line
 ```
 
-Or, disable **only** the `"no-use-before-define"` rule:
+O, inhabilitar **solo** la regla `"no-use-before-define"`:
 
 ```js
 file = 'I know what I am doing' // eslint-disable-line no-use-before-define
 ```
 
-Or, disable the `"no-use-before-define"` rule for **multiple lines**:
+O, inhabilitar la regla `"no-use-before-define"` para **múltiples lineas**:
 
 ```js
 /* eslint-disable no-use-before-define */
@@ -373,21 +353,15 @@ console.log('offending code goes here...')
 
 ### Yo uso una librería que contamina el espacio de nombres global. ¿Como puedo evitar los errores  "variable is not defined"?
 
-Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the
-global object (poor form!). Since these functions are not defined or `require`d
-anywhere in your code, `standard` will warn that you're using a variable that is
-not defined (usually, this rule is really useful for catching typos!). But we want
-to disable it for these global variables.
+Algunos paquetes (ej `mocha`) colocan sus funciones (ej: `describe`, `it`) en el objeto global (¡mala manera!). Como estas funciones no están definidas o requeridas (ej: `require`) en ningún lugar del código, `standard` te alertara que están usando una variable que no está definida (usualmente, esta regla es realmente útil para detectar errores de tipeo). Pero queremos inhabilitar estas variables globales.
 
-To let `standard` (as well as humans reading your code) know that certain variables
-are global in your code, add this to the top of your file:
+Para hacerle a `standard` (como también humanos que leen tu código) saber que ciertas variables son globales en tu código, agregar esto en la parte superior de tu código:
 
 ```
 /* global myVar1, myVar2 */
 ```
 
-If you have hundreds of files, adding comments to every file can be tedious. In
-these cases, you can add this to `package.json`:
+Si tienes siendos de archivos, agregar comentarios a cada archivo puede ser tedioso. En estos casos, puedes agregar esto a `package.json`:
 
 ```json
 {
@@ -399,11 +373,9 @@ these cases, you can add this to `package.json`:
 
 ### ¿Puedo usar un parser JavaScript que soporte ES última-generación?
 
-Before you use a custom parser, consider whether the added complexity in your
-build process is worth it.
+Antes que uses un parser customizado, considera siquiera la complejidad agregada en tu proceso de compilación vale la pena.
 
-`standard` supports custom JS parsers. To use a custom parser, install it from npm
-(example: `npm install babel-eslint`) and add this to your `package.json`:
+`standard` suporta parsers js customizado. Para usar un parser customizado, instálelo desde npm (ej: `npm install babel-eslint`) y agregue esto a `package.json`:
 
 ```json
 {
@@ -413,19 +385,13 @@ build process is worth it.
 }
 ```
 
-If you're using `standard` globally (you installed it with `-g`), then you also
-need to install `babel-eslint` globally with `npm install babel-eslint -g`.
+Si está usando `standard` globalmente (lo instaló con la bandera `-g` o `--global`), entonces tiene que instalar `babel-eslint` globalmente también `npm install babel-eslint -g`.
 
 ### ¿Puedo usar una variación de lenguaje JavaScript, como Flow?
 
-Before you use a custom JS language variant, consider whether the added complexity
-in your build process (and effort required to get new contributors up-to-speed) is
-worth it.
+Antes de usar una variable customizada del lenguaje JavaScript, considere si la complejidad agregada (y esfuerzo requerido para obtener los contribuidores alcanzar)  vale la pena.
 
-`standard` supports ESLint plugins. Use one of these to transform your code into
-valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm (example: `npm install eslint-plugin-flowtype`) and add this to your
-`package.json`:
+`standard` soporta plugins ESLint. Usa una de estos para transformar el código a javascript válido antes de que `standard` lo vea. Para usar un parser customizado, instálelo desde npm (example: `npm install eslint-plugin-flowtype`) y agrege esto a `package.json`:
 
 ```json
 {
@@ -438,9 +404,7 @@ npm (example: `npm install eslint-plugin-flowtype`) and add this to your
 }
 ```
 
-If you're using `standard` globally (you installed it with `-g`), then you also
-need to install `eslint-plugin-flowtype` globally with
-`npm install eslint-plugin-flowtype -g`.
+Si está usando `standard` globalmente (lo instaló con la bandera `-g` o `--global`), entonces tiene que instalar `eslint-plugin-flowtype` globalmente también `npm install eslint-plugin-flowtype -g`.
 
 ### ¿Puede ser la regla X configurable?
 
@@ -448,39 +412,34 @@ No. The point of `standard` is to save you time by picking reasonable rules so y
 can spend your time solving actual problems. If you really do want to configure
 hundreds of eslint rules individually, you can always use `eslint` directly.
 
-If you just want to tweak a couple rules, consider using
-[this shareable config](https://github.com/feross/eslint-config-standard) and
-layering your changes on top.
+Si quieres configurar un par de reglas, considera usar [este plugin compartido](https://github.com/feross/eslint-config-standard) aplicando
+cambios encima de este
 
-Pro tip: Just use `standard` and move on. There are actual real problems that you
-could spend your time solving! :P
+Tip: ¡Simplemente usa `standard` y ya esta. Existen problemas reales
+en los cuales debes usar tu tiempo! :P
 
 ### ¿Que acerca de Web Workers?
 
-Add this to the top of your files:
+Agrega esto al inicio de tus archivos:
 
 ```js
 /* eslint-env serviceworker */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a
-global in web worker code.
+Esto le hara a `standard` (como también humanos que leen tu código) saber que
+`self` es una variable global en el codigo web worker.
 
 ### ¿Que acerca de Mocha, Jasmine, QUnit y etc?
 
-To support mocha in your test files, add this to the beginning of your test files:
+Para soportar mocha in tus archivos de prueba, agrega esto al inicio de los archivos:
 
 ```js
 /* eslint-env mocha */
 ```
 
-Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
-full list, check ESLint's
-[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
-documentation. For a list of what globals are available for these environments,
-check the
-[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
-module.
+Donde `mocha` puede ser uno de `jasmine`, `qunit`, `phantomjs`, y asi sucesivamente.
+Para ver la lista completa, chequear la documentación de ESLint [especificando entornos](http://eslint.org/docs/user-guide/configuring.html#specifying-environments).
+Por una lista de qué variables globales están disponibles en estos entornos chequea el modulo npm [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
 
 ### ¿Hay algún gancho git `pre-commit`?
 
@@ -488,14 +447,16 @@ Funny you should ask!
 
 ```sh
 #!/bin/sh
-# Ensure all javascript files staged for commit pass standard code style
+# Asegura que todos los archivos javascript escefinicados para hacer commit pasan
+# los estandares de estilo de código
 git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
 
-Alternatively, [overcommit](https://github.com/brigade/overcommit) is a Git hook
-manager that includes support for running `standard` as a Git pre-commit hook.
-To enable this, add the following to your `.overcommit.yml` file:
+Alternativamente, [overcommit](https://github.com/brigade/overcommit)
+es un gestor de ganchos Git que incluye soporte para ejecutar `standard`
+como un gancho git pre-commit. Para habilitar esto, agrega lo siguiente al
+archivo `.overcommit.yml`:
 
 ```yaml
 PreCommit:
@@ -505,30 +466,29 @@ PreCommit:
 
 ### ¿Como hago la salida (output) todo colorido y *bonito*?
 
-The built-in output is simple and straightforward, but if you like shiny things,
-install [snazzy](https://www.npmjs.com/package/snazzy):
+La salida integrada es simple y directa, pero si te gustan las cosas brillantes, puedes instalar [snazzy](https://www.npmjs.com/package/snazzy):
 
 ```
 npm install snazzy
 ```
 
-And run:
+y ejecutar:
 
 ```bash
 $ standard --verbose | snazzy
 ```
 
-There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
+También  esta [standard-tap](https://www.npmjs.com/package/standard-tap),
 [standard-json](https://www.npmjs.com/package/standard-json),
-[standard-reporter](https://www.npmjs.com/package/standard-reporter), and
+[standard-reporter](https://www.npmjs.com/package/standard-reporter), y
 [standard-summary](https://www.npmjs.com/package/standard-summary).
 
 ## Node.js API
 
 ### `standard.lintText(text, [opts], callback)`
 
-Lint the provided source `text` to enforce JavaScript Standard Style. An `opts` object may
-be provided:
+Hacer Lint al texto fuente previsto para hacer cumplir JavaScript Standard Style.
+Un objeto `opts` puede ser proporcionado:
 
 ```js
 var opts = {
@@ -540,7 +500,7 @@ var opts = {
 }
 ```
 
-The `callback` will be called with an `Error` and `results` object:
+El `callback` será llamado con un objeto de `Error` y `results`:
 
 ```js
 var results = {
@@ -561,7 +521,8 @@ var results = {
 
 ### `standard.lintFiles(files, [opts], callback)`
 
-Lint the provided `files` globs. An `opts` object may be provided:
+Hacer Lint a los archivos que hagan pareo con el patrón globs.
+Un objeto `opts` puede ser proporcionado:
 
 ```js
 var opts = {
@@ -575,32 +536,32 @@ var opts = {
 }
 ```
 
-The `callback` will be called with an `Error` and `results` object (same as above).
+El `callback` será llamado con un objeto de `Error` y `results`: (igual al de arriba).
 
 ##Canal IRC
 
-Join us in `#standard` on freenode.
+Unete a nosotros `#standard` en freenode.
 
 ## Contribuciones
 
-Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
+Contribuciones son bienvenidas! Chequea los [issues](https://github.com/feross/standard/issues) o [PRs](https://github.com/feross/standard/pulls), o has el tuyo propio si quieres algo que nos ves allí
 
 ### Quiero contribuir a `standard`. ¿Que paquetes debería conocer?
 
-- **[standard](https://github.com/feross/standard)** - this repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
-  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
-- **[standard-www](https://github.com/feross/standard-www)** - code for http://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+- **[standard](https://github.com/feross/standard)** - este repositorio
+  - **[standard-engine](https://github.com/flet/standard-engine)** - motor arbitrario cli de relgas eslint
+  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - reglas eslint para standard
+  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
+  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
+  - **[eslint](https://github.com/eslint/eslint)** - linter que da poder a standard
+- **[snazzy](https://github.com/feross/snazzy)** - salida colorida o *bonita* en el terminal para standard
+- **[standard-www](https://github.com/feross/standard-www)** - codigo de http://standardjs.com
+- **[semistandard](https://github.com/Flet/semistandard)** - standard, con punto y coma (sí es necesario)
 
-There are also many **[editor plugins](#text-editor-plugins)**, a list of
-**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
-and an awesome list of
-**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
+También  hay un monton **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
+**[paquetes npm que usan `standard`](https://github.com/feross/standard-packages)**,
+y una impresionante lista de
+**[paquetes en el ecosistema `standard`](https://github.com/feross/awesome-standard)**.
 
 ## Licencia
 
