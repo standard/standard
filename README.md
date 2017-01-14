@@ -12,10 +12,10 @@
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+  <br>
+  Readme Translation: <a href="docs/README-ptbr.md">Português</a>
 </p>
 <br>
-
-[Português](https://github.com/feross/standard/blob/master/README-ptbr.md)
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
@@ -32,8 +32,6 @@ Install with:
 ```
 npm install standard --save-dev
 ```
-
-
 
 ### The Rules
 

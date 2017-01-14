@@ -1,16 +1,14 @@
 # JavaScript Standard Style
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+Rules Translation: [Português](docs/RULES-ptbr.md)
 
-[Português](https://github.com/feross/standard/blob/master/RULES-ptbr.md)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
 rules.
 
 The best way to learn about `standard` is to just install it and give it a try on
 your code.
-
-
 
 ## Rules
 
