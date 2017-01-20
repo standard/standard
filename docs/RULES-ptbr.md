@@ -1,8 +1,10 @@
 # JavaScript Standard Style
 
+Read in: [English](RULES.md)
+
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-Esse é um "TL;DR" (ou "muito grande; nemli") das regras do [standard](https://github.com/feross/standard) 
+Esse é um "TL;DR" (ou "muito grande; nemli") das regras do [standard](https://github.com/feross/standard)
 
 A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
 
@@ -259,8 +261,8 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
   Nota: Se você frequentemente escreve código assim, você pode estar querendo ser o inteligentão. Cuidado.
 
   Atalhos inteligentes são desencorajados, em favor de expressões mais limpas e legíveis, sempre que possível.
-  
-  
+
+
   Ao invés disso:
 
   ```js
@@ -298,7 +300,7 @@ De forma geral, `\n` termina uma declaração a menos que:
   2. A linha é apenas `--` ou `++` (nesse caso vai decrementar ou incrementar o próximo token)
   3. Ela seja um `for()`, `while()`, `while()`, `do`, `if()`, ou `else`, e não possui `{`
   4. A próxima linha começa com  `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, ou algum outro operador binário que só pode ser encontrado entre 2 tokens em uma única expressão.
-  
+
 A primeira linha é bem óbvia. Qualquer JSLint não vê problemas em `\n` em json e construtores "aparêntetizados", e com declarações `var` que se extendem por múltiplas linhas, terminado em `,`;
 A segunda é muito esquisita. Nunca vi um caso (fora de ambientes específicos pra esse caso) onde você iria querer escrever `i\n++\nj`, mas pra todos os fins, isso é um `i; ++j`, e não `i++; j`.
 

@@ -12,6 +12,8 @@
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+  <br>
+  Read in: <a href="README.md">English</a>
 </p>
 <br>
 
@@ -52,8 +54,8 @@ npm install standard
 [4]: RULES.md#semicolons
 [5]: RULES.md#javascript-standard-style
 
-Para ter uma idéia melhor, dê uma olhada 
-[num arquivo amostra](https://github.com/feross/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos 
+Para ter uma idéia melhor, dê uma olhada
+[num arquivo amostra](https://github.com/feross/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
 [repositórios](https://github.com/feross/standard-packages/blob/master/all.json) que usam
 `standard`.
 
@@ -139,7 +141,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
   }
   ```
 
-2. Cheque os estilos manualmente quando rodar `npm test` 
+2. Cheque os estilos manualmente quando rodar `npm test`
 
   ```
   $ npm test
@@ -291,8 +293,8 @@ Alternativamente, se seu código é feito apenas de ES5, você pode tentar usar
 
 ### Como ignoro arquivos?
 
-Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no 
-`.gitignore` da raiz do projeto são automaticamente ignorados. 
+Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no
+`.gitignore` da raiz do projeto são automaticamente ignorados.
 
 Às vezes você precisa ignorar algumas pastas adicionais ou arquivos minificados específicos. Para fazer isso, adicione uma propriedade `standard.ignore` no `package.json`:
 
@@ -405,7 +407,7 @@ Se você está usando `standard` globalmente (instalou com `-g`), você também 
 
 Não. O objetivo do  `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
 
-Se você apenas quer trocar algumas regras, considere usar 
+Se você apenas quer trocar algumas regras, considere usar
 [essa configuração compartilhável](https://github.com/feross/eslint-config-standard) e jogue suas mudanças em cima.
 
 Dica: Use `standard` e pronto. Há problemas reais que você poderia usar seu tempo resolvendo! :P
@@ -535,7 +537,7 @@ Contribuições são bem-vindas! Cheque o [issues](https://github.com/feross/sta
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
 - **[standard](https://github.com/feross/standard)** - esse repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint 
+  - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint
   - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - Regras ESLint para  `standard`
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
@@ -544,9 +546,9 @@ Contribuições são bem-vindas! Cheque o [issues](https://github.com/feross/sta
 - **[standard-www](https://github.com/feross/standard-www)** - código do  http://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
 
-Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de 
+Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de
 **[packages que usam `standard`](https://github.com/feross/standard-packages)**,
-e uma awesome list de 
+e uma awesome list de
 **[packages do ecossistema `standard` ](https://github.com/feross/awesome-standard)**.
 
 ## License

@@ -1,5 +1,7 @@
 # JavaScript Standard Style
 
+Read in: [English](RULES.md)
+
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 Esto es un TL;DR (muy largo, no lo leí) de reglas JavaScript [standard](https://github.com/feross/standard).

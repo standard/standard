@@ -13,8 +13,7 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <br>
-  Readme Translation: <a href="docs/README-ptbr.md">Português</a>
-  Readme Translation: <a href="docs/README-esla.md">Spanish</a>
+  Read in: <a href="docs/README-ptbr.md">Português</a> <a href="docs/README-esla.md">Spanish</a>
 </p>
 <br>
 
