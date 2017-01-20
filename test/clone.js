@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /**
  * Clones several projects that are known to follow "JavaScript Standard Style" and runs
  * the `standard` style checker to verify that it passes without warnings. This helps
