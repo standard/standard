@@ -81,9 +81,9 @@ that use `standard`!
   - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [Can I use a custom JS parser for bleeding-edge ES next support?](#can-i-use-a-custom-js-parser-for-bleeding-edge-es-next-support)
   - [Can I use a JavaScript language variant, like Flow?](#can-i-use-a-javascript-language-variant-like-flow)
-  - [Can you make rule X configurable?](#can-you-make-rule-x-configurable)
-  - [What about Web Workers?](#what-about-web-workers)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
+  - [What about Web Workers?](#what-about-web-workers)
+  - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
   - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [I want to contribute to `standard`. What packages should I know about?](#i-want-to-contribute-to-standard-what-packages-should-i-know-about)
@@ -101,13 +101,13 @@ command in your terminal (flag `-g` installs `standard` globally on your system,
 omit it if you want to install in the current working directory):
 
 ```bash
-npm install standard --global
+$ npm install standard --global
 ```
 
 Or, you can run this command to install `standard` locally, for use in your module:
 
 ```bash
-npm install standard --save-dev
+$ npm install standard --save-dev
 ```
 
 [Node.js](http://nodejs.org) and [npm](https://npmjs.com) are required to run the preceding commands.
@@ -153,7 +153,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 2. Check style automatically when you run `npm test`
 
-  ```
+  ```bash
   $ npm test
   Error: Use JavaScript Standard Style
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
@@ -170,13 +170,13 @@ let people know that your code is using the standard style.
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-```markdown
+```md
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-```markdown
+```md
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 ```
 
@@ -248,12 +248,17 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
 [vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
-#### [WebStorm/PhpStorm][webstorm-1]
+#### [WebStorm and other JetBrains products][webstorm-1]
 
-Both WebStorm and PhpStorm can be [configured for Standard Style][webstorm-2].
+WebStorm [recently announced native support](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
+for `standard` directly in the IDE.
+
+If you still prefer to configure `standard` manually, [follow this guide][webstorm-2].
+
+This applies to all JetBrains products, including PhpStorm, IntelliJ, RubyMine, etc.
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
+[webstorm-2]: docs/webstorm.md
 
 ## FAQ
 
@@ -278,12 +283,21 @@ project healthier.
 
 ### I disagree with rule X, can you change it?
 
-No. The whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
-style. There are lots of debates online about tabs vs. spaces, etc. that will never
-be resolved. These debates just distract from getting stuff done. At the end of the
-day you have to 'just pick something', and that's the whole philosophy of
-`standard` -- its a bunch of sensible 'just pick something' opinions. Hopefully,
-users see the value in that over defending their own opinions.
+No. The whole point of `standard` is to save you time by avoiding
+[bikeshedding][bikeshedding] about code style. There are lots of debates online about
+tabs vs. spaces, etc. that will never be resolved. These debates just distract from
+getting stuff done. At the end of the day you have to 'just pick something', and
+that's the whole philosophy of `standard` -- its a bunch of sensible 'just pick
+something' opinions. Hopefully, users see the value in that over defending their
+own opinions.
+
+If you really want to configure hundreds of ESLint rules individually, you can
+always use `eslint` directly with
+[eslint-config-standard](https://github.com/feross/eslint-config-standard) to
+layer your changes on top.
+
+Pro tip: Just use `standard` and move on. There are actual real problems that you
+could spend your time solving! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
@@ -336,8 +350,8 @@ that, add a `standard.ignore` property to `package.json`:
 In rare cases, you'll need to break a rule and hide the warning generated by
 `standard`.
 
-JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and
-you can hide warnings as you normally would if you used `eslint` directly.
+JavaScript Standard Style uses [ESLint](http://eslint.org/) under-the-hood and
+you can hide warnings as you normally would if you used ESLint directly.
 
 To get verbose output (so you can find the particular rule name to ignore), run:
 
@@ -380,12 +394,18 @@ to disable it for these global variables.
 To let `standard` (as well as humans reading your code) know that certain variables
 are global in your code, add this to the top of your file:
 
-```
+```js
 /* global myVar1, myVar2 */
 ```
 
-If you have hundreds of files, adding comments to every file can be tedious. In
-these cases, you can add this to `package.json`:
+If you have hundreds of files, it may be desirable to avoid adding comments to
+every file. In this case, run:
+
+```bash
+$ standard --global myVar1 --global myVar2
+```
+
+Or, add this to `package.json`:
 
 ```json
 {
@@ -395,13 +415,25 @@ these cases, you can add this to `package.json`:
 }
 ```
 
+*Note: `global` and `globals` are equivalent.*
+
 ### Can I use a custom JS parser for bleeding-edge ES next support?
 
-Before you use a custom parser, consider whether the added complexity in your
-build process is worth it.
+`standard` supports the latest version of the ECMAscript, including all language
+feature proposals that are in "Stage 4" of the proposal process.
 
-`standard` supports custom JS parsers. To use a custom parser, install it from npm
-(example: `npm install babel-eslint`) and add this to your `package.json`:
+To support experimental language features, `standard` supports specifying a
+custom JS parser. Before using a custom parser, consider whether the added
+complexity is worth it.
+
+To use a custom parser, install it from npm (example: `npm install babel-eslint`)
+and run:
+
+```bash
+$ standard --parser babel-eslint
+```
+
+Or, add this to `package.json`:
 
 ```json
 {
@@ -411,47 +443,62 @@ build process is worth it.
 }
 ```
 
-If you're using `standard` globally (you installed it with `-g`), then you also
-need to install `babel-eslint` globally with `npm install babel-eslint -g`.
+If `standard` is installed globally (i.e. `npm install standard --global`), then
+be sure to install `babel-eslint` globally as well, with
+`npm install babel-eslint --global`.
 
 ### Can I use a JavaScript language variant, like Flow?
 
-Before you use a custom JS language variant, consider whether the added complexity
-in your build process (and effort required to get new contributors up-to-speed) is
-worth it.
+Before using a custom JS language variant, consider whether the added complexity
+(and effort required to get new contributors up-to-speed) is worth it.
 
 `standard` supports ESLint plugins. Use one of these to transform your code into
 valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm (example: `npm install eslint-plugin-flowtype`) and add this to your
-`package.json`:
+npm (example: `npm install eslint-plugin-flowtype`) and run:
+
+```bash
+$ standard --plugin flowtype
+```
+
+Or, add this to `package.json`:
 
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "flowtype"
-    ]
+    "plugins": [ "flowtype" ]
   }
 }
 ```
 
-If you're using `standard` globally (you installed it with `-g`), then you also
-need to install `eslint-plugin-flowtype` globally with
+If `standard` is installed globally (i.e. `npm install standard --global`), then
+be sure to install `eslint-plugin-flowtype` globally as well, with
 `npm install eslint-plugin-flowtype -g`.
 
-### Can you make rule X configurable?
+*Note: `plugin` and `plugins` are equivalent.*
 
-No. The point of `standard` is to save you time by picking reasonable rules so you
-can spend your time solving actual problems. If you really do want to configure
-hundreds of eslint rules individually, you can always use `eslint` directly.
+### What about Mocha, Jasmine, QUnit, etc?
 
-If you just want to tweak a couple rules, consider using
-[this shareable config](https://github.com/feross/eslint-config-standard) and
-layering your changes on top.
+To support mocha in your test files, add this to the beginning of your test files:
 
-Pro tip: Just use `standard` and move on. There are actual real problems that you
-could spend your time solving! :P
+```js
+/* eslint-env mocha */
+```
+
+Or, run:
+
+```bash
+$ standard --env mocha
+```
+
+Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
+full list, check ESLint's
+[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
+documentation. For a list of what globals are available for these environments,
+check the
+[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
+module.
+
+*Note: `env` and `envs` are equivalent.*
 
 ### What about Web Workers?
 
@@ -464,21 +511,36 @@ Add this to the top of your files:
 This lets `standard` (as well as humans reading your code) know that `self` is a
 global in web worker code.
 
-### What about Mocha, Jasmine, QUnit, etc?
+### Can I check code inside of Markdown or HTML files?
 
-To support mocha in your test files, add this to the beginning of your test files:
+To check code inside Markdown files, use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
 
-```js
-/* eslint-env mocha */
+Alternatively, there are ESLint plugins that can check code inside Markdown, HTML,
+and many other types of language files:
+
+To check code inside Markdown files, use an ESLint plugin:
+
+```bash
+$ npm install eslint-plugin-markdown
 ```
 
-Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
-full list, check ESLint's
-[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
-documentation. For a list of what globals are available for these environments,
-check the
-[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
-module.
+Then, to check JS that appears inside code blocks, run:
+
+```bash
+$ standard --plugin markdown '**/*.md'
+```
+
+To check code inside HTML files, use an ESLint plugin:
+
+```bash
+$ npm install eslint-plugin-html
+```
+
+Then, to check JS that appears inside `<script>` tags, run:
+
+```bash
+$ standard --plugin html '**/*.html'
+```
 
 ### Is there a Git `pre-commit` hook?
 
@@ -491,23 +553,13 @@ git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
 
-Alternatively, [overcommit](https://github.com/brigade/overcommit) is a Git hook
-manager that includes support for running `standard` as a Git pre-commit hook.
-To enable this, add the following to your `.overcommit.yml` file:
-
-```yaml
-PreCommit:
-  Standard:
-    enabled: true
-```
-
 ### How do I make the output all colorful and *pretty*?
 
 The built-in output is simple and straightforward, but if you like shiny things,
 install [snazzy](https://www.npmjs.com/package/snazzy):
 
-```
-npm install snazzy
+```bash
+$ npm install snazzy
 ```
 
 And run:
