@@ -2,7 +2,7 @@ var path = require('path')
 var test = require('tape')
 var crossSpawn = require('cross-spawn')
 
-var CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
+var CMD_PATH = path.join(__dirname, '..', 'index.js')
 
 test('command line usage: --help', function (t) {
   t.plan(1)
