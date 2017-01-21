@@ -371,7 +371,8 @@ Para hacerle a `standard` (como también humanos que leen tu código) saber que 
 /* global myVar1, myVar2 */
 ```
 
-Si tienes siendos de archivos, seria deseable evitar agregar comentarios a cada archivo. En este caso ejecute:
+Si tienes cientos de archivos, seria deseable evitar agregar comentarios a cada archivo.
+En este caso ejecute:
 
 ```bash
 $ standard --global myVar1 --global myVar2
@@ -451,7 +452,7 @@ Agrega esto al inicio de tus archivos:
 /* eslint-env serviceworker */
 ```
 
-Esto le hara a `standard` (como también humanos que leen tu código) saber que
+Esto le hara saber a` standard` (como también humanos que leen tu código) que
 `self` es una variable global en el codigo web worker.
 
 ### ¿Que acerca de Mocha, Jasmine, QUnit y etc?
@@ -476,9 +477,10 @@ Por una lista de qué variables globales están disponibles en estos entornos ch
 
 ### ¿Puedo verificar codigo dentro de archivos Markdown o HTML?
 
-Para verificar codigo dentro de archivos Markdown use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
+Para verificar código dentro de archivos Markdown use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
 
-Alternativamente, alli hay plugins ESLint para verificar código de Markdown, HTML y varios tipos de lenguaje:
+Alternativamente, hay plugins ESLint para verificar código de Markdown,
+HTML y otros tipos de lenguajes:
 
 Para verificar código dentro de archivos Markdown, use el plugin ESLint:
 
@@ -492,7 +494,7 @@ Luego para verificar codigo JS que aparece dentro de bloques código, ejecute:
 $ standard --plugin markdown '**/*.md'
 ```
 
-Para verificar dódigo dentro de archivos HTML, use el plugin ESLint:
+Para verificar código dentro de archivos HTML, use el plugin ESLint:
 
 ```bash
 $ npm install eslint-plugin-html
@@ -510,8 +512,8 @@ Funny you should ask!
 
 ```sh
 #!/bin/sh
-# Asegura que todos los archivos javascript escefinicados para hacer commit pasan
-# los estandares de estilo de código
+# Asegura que todos los archivos javascript especificados
+# para hacer commit pasan los estandares de estilo de código
 git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
