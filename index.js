@@ -1,4 +1,11 @@
-var Linter = require('standard-engine').linter
-var opts = require('./options')
+#!/usr/bin/env node
 
-module.exports = new Linter(opts)
+var CuratedLinter = require('curated-linter')
+var getConfig = require('./get-config')
+
+var standard = new CuratedLinter(getConfig)
+
+module.exports = {
+  lintFiles: CuratedLinter.prototype.lintFiles.bind(standard),
+  lintText: CuratedLinter.prototype.lintText.bind(standard)
+}
