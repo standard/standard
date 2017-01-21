@@ -17,7 +17,7 @@ var standardPackages = require('standard-packages')
 var test = require('tape')
 
 var GIT = 'git'
-var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
+var STANDARD = path.join(__dirname, '..', 'index.js')
 var TMP = path.join(__dirname, '..', 'tmp')
 var PARALLEL_LIMIT = os.cpus().length
 
