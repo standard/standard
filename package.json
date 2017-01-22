@@ -67,7 +67,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "./index.js --verbose && tape test/*.js",
+    "test": "./standard --verbose && tape test/*.js",
     "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
     "test-offline-quick": "npm test -- --offline --quick",
