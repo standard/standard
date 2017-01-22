@@ -15,7 +15,6 @@ test('api: lintFiles', function (t) {
 
 test('api: lintText', function (t) {
   t.plan(2)
-  debugger
   standard.lintText('console.log("hi there")\n')
     .catch(function () {
       t.fail('no error while linting')
