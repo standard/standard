@@ -1,5 +1,6 @@
 const standard = require('../')
 const test = require('tape')
+const isPlainObj = require('is-plain-obj')
 
 test('api: lintFiles', function (t) {
   t.plan(2)
@@ -23,4 +24,9 @@ test('api: lintText', function (t) {
       t.equal(typeof result, 'object', 'result is an object')
       t.equal(result.errorCount, 1, 'should have used single quotes')
     })
+})
+
+test('api: does not expose instance', function (t) {
+  t.plan(1)
+  t.true(isPlainObj(standard))
 })

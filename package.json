@@ -22,6 +22,7 @@
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "cross-spawn": "^5.0.1",
+    "is-plain-obj": "^1.1.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
