@@ -1,5 +1,5 @@
-var standard = require('../')
-var test = require('tape')
+const standard = require('../')
+const test = require('tape')
 
 test('api: lintFiles', function (t) {
   t.plan(2)

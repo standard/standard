@@ -1,10 +1,10 @@
-var path = require('path')
-var pkg = require('./package.json')
+const path = require('path')
+const pkg = require('./package.json')
 
-var handlers = {
+const handlers = {
   config: {
     set: (target, property, value) => {
-      var allow = [
+      const allow = [
         'cwd'
       ]
       if (allow.includes(property)) {
@@ -20,7 +20,7 @@ var handlers = {
   }
 }
 
-var getConfig = () => new Proxy({
+const getConfig = () => new Proxy({
   bugs: pkg.bugs.url,
   name: 'standard',
   homepage: pkg.homepage,

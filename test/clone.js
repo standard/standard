@@ -6,22 +6,22 @@
  * VERSION BUMP.)
  */
 
-var crossSpawn = require('cross-spawn')
-var fs = require('fs')
-var minimist = require('minimist')
-var mkdirp = require('mkdirp')
-var os = require('os')
-var parallelLimit = require('run-parallel-limit')
-var path = require('path')
-var standardPackages = require('standard-packages')
-var test = require('tape')
+const crossSpawn = require('cross-spawn')
+const fs = require('fs')
+const minimist = require('minimist')
+const mkdirp = require('mkdirp')
+const os = require('os')
+const parallelLimit = require('run-parallel-limit')
+const path = require('path')
+const standardPackages = require('standard-packages')
+const test = require('tape')
 
-var GIT = 'git'
-var STANDARD = path.join(__dirname, '..', 'standard')
-var TMP = path.join(__dirname, '..', 'tmp')
-var PARALLEL_LIMIT = os.cpus().length
+const GIT = 'git'
+const STANDARD = path.join(__dirname, '..', 'standard')
+const TMP = path.join(__dirname, '..', 'tmp')
+const PARALLEL_LIMIT = os.cpus().length
 
-var argv = minimist(process.argv.slice(2), {
+const { quick, disabled, offline, quiet } = minimist(process.argv.slice(2), {
   boolean: [
     'disabled',
     'offline',
@@ -30,17 +30,17 @@ var argv = minimist(process.argv.slice(2), {
   ]
 })
 
-var testPackages = argv.quick
+let testPackages = quick
   ? standardPackages.test.slice(0, 20)
   : standardPackages.test
 
-var disabledPackages = []
+const disabledPackages = []
 testPackages = testPackages.filter(function (pkg) {
   if (pkg.disable) disabledPackages.push(pkg)
   return !pkg.disable
 })
 
-if (argv.disabled) {
+if (disabled) {
   testPackages = disabledPackages
 } else {
   test('Disabled Packages', function (t) {
@@ -62,12 +62,12 @@ test('test github repos that use `standard`', function (t) {
   mkdirp.sync(TMP)
 
   parallelLimit(testPackages.map(function (pkg) {
-    var name = pkg.name
-    var url = pkg.repo + '.git'
-    var folder = path.join(TMP, name)
+    const name = pkg.name
+    const url = pkg.repo + '.git'
+    const folder = path.join(TMP, name)
     return function (cb) {
       fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
-        if (argv.offline) {
+        if (offline) {
           if (err) {
             t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
             return cb(null)
@@ -86,7 +86,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function gitClone (cb) {
-          var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+          const args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
           spawn(GIT, args, { stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (git clone) (' + name + ')'
             cb(err)
@@ -94,7 +94,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function gitPull (cb) {
-          var args = [ 'pull' ]
+          const args = [ 'pull' ]
           spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (git pull) (' + name + ')'
             cb(err)
@@ -102,10 +102,10 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandard (cb) {
-          var args = [ '--verbose' ]
+          const args = [ '--verbose' ]
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
-            var str = name + ' (' + pkg.repo + ')'
+            const str = name + ' (' + pkg.repo + ')'
             if (err) { t.fail(str) } else { t.pass(str) }
             cb(null)
           })
@@ -118,9 +118,9 @@ test('test github repos that use `standard`', function (t) {
 })
 
 function spawn (command, args, opts, cb) {
-  if (!opts.stdio) opts.stdio = argv.quiet ? 'ignore' : 'inherit'
+  if (!opts.stdio) opts.stdio = quiet ? 'ignore' : 'inherit'
 
-  var child = crossSpawn(command, args, opts)
+  const child = crossSpawn(command, args, opts)
   child.on('error', cb)
   child.on('close', function (code) {
     if (code !== 0) return cb(new Error('non-zero exit code: ' + code))

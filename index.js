@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var CuratedLinter = require('curated-linter')
-var getConfig = require('./get-config')
+const CuratedLinter = require('curated-linter')
+const getConfig = require('./get-config')
 
-var standard = new CuratedLinter(getConfig)
+const standard = new CuratedLinter(getConfig)
 
 module.exports = {
   lintFiles: CuratedLinter.prototype.lintFiles.bind(standard),

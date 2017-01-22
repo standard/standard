@@ -1,13 +1,13 @@
-var path = require('path')
-var test = require('tape')
-var crossSpawn = require('cross-spawn')
+const path = require('path')
+const test = require('tape')
+const crossSpawn = require('cross-spawn')
 
-var CMD_PATH = path.join(__dirname, '..', 'standard')
+const CMD_PATH = path.join(__dirname, '..', 'standard')
 
 test('command line usage: --help', function (t) {
   t.plan(1)
 
-  var child = crossSpawn(CMD_PATH, ['--help'])
+  const child = crossSpawn(CMD_PATH, ['--help'])
   child.on('error', function (err) {
     t.fail(err)
   })
