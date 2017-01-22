@@ -35,7 +35,7 @@ let testPackages = quick
   : standardPackages.test
 
 const disabledPackages = []
-testPackages = testPackages.filter(function (pkg) {
+testPackages = testPackages.filter((pkg) => {
   if (pkg.disable) disabledPackages.push(pkg)
   return !pkg.disable
 })
@@ -43,30 +43,30 @@ testPackages = testPackages.filter(function (pkg) {
 if (disabled) {
   testPackages = disabledPackages
 } else {
-  test('Disabled Packages', function (t) {
+  test('Disabled Packages', (t) => {
     if (disabledPackages.length === 0) {
       t.pass('no disabled packages')
       t.end()
     } else {
       t.plan(disabledPackages.length)
-      disabledPackages.forEach(function (pkg) {
+      disabledPackages.forEach((pkg) => {
         t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
       })
     }
   })
 }
 
-test('test github repos that use `standard`', function (t) {
+test('test github repos that use `standard`', (t) => {
   t.plan(testPackages.length)
 
   mkdirp.sync(TMP)
 
-  parallelLimit(testPackages.map(function (pkg) {
+  parallelLimit(testPackages.map((pkg) => {
     const name = pkg.name
     const url = pkg.repo + '.git'
     const folder = path.join(TMP, name)
-    return function (cb) {
-      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
+    return (cb) => {
+      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, (err) => {
         if (offline) {
           if (err) {
             t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
@@ -74,7 +74,7 @@ test('test github repos that use `standard`', function (t) {
           }
           runStandard(cb)
         } else {
-          downloadPackage(function (err) {
+          downloadPackage((err) => {
             if (err) return cb(err)
             runStandard(cb)
           })
@@ -87,7 +87,7 @@ test('test github repos that use `standard`', function (t) {
 
         function gitClone (cb) {
           const args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
-          spawn(GIT, args, { stdio: 'ignore' }, function (err) {
+          spawn(GIT, args, { stdio: 'ignore' }, (err) => {
             if (err) err.message += ' (git clone) (' + name + ')'
             cb(err)
           })
@@ -95,7 +95,7 @@ test('test github repos that use `standard`', function (t) {
 
         function gitPull (cb) {
           const args = [ 'pull' ]
-          spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
+          spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, (err) => {
             if (err) err.message += ' (git pull) (' + name + ')'
             cb(err)
           })
@@ -104,7 +104,7 @@ test('test github repos that use `standard`', function (t) {
         function runStandard (cb) {
           const args = [ '--verbose' ]
           if (pkg.args) args.push.apply(args, pkg.args)
-          spawn(STANDARD, args, { cwd: folder }, function (err) {
+          spawn(STANDARD, args, { cwd: folder }, (err) => {
             const str = name + ' (' + pkg.repo + ')'
             if (err) { t.fail(str) } else { t.pass(str) }
             cb(null)
@@ -112,7 +112,7 @@ test('test github repos that use `standard`', function (t) {
         }
       })
     }
-  }), PARALLEL_LIMIT, function (err) {
+  }), PARALLEL_LIMIT, (err) => {
     if (err) throw err
   })
 })
@@ -122,7 +122,7 @@ function spawn (command, args, opts, cb) {
 
   const child = crossSpawn(command, args, opts)
   child.on('error', cb)
-  child.on('close', function (code) {
+  child.on('close', (code) => {
     if (code !== 0) return cb(new Error('non-zero exit code: ' + code))
     cb(null)
   })
