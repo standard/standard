@@ -17,7 +17,9 @@
     "eslint-config-standard-jsx": "3.2.0",
     "eslint-plugin-promise": "~3.4.0",
     "eslint-plugin-react": "~6.7.1",
-    "eslint-plugin-standard": "~2.0.1"
+    "eslint-plugin-standard": "~2.0.1",
+    "sane-eslint-files": "^1.0.0",
+    "sane-eslint-ignore": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
