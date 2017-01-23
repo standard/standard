@@ -17,15 +17,15 @@
 </p>
 <br>
 
-Sin decisiones que hacer. Sin archivos `.eslintrc`, `.jshintrc`, o `.jscsrc`
+Sin decisiones que tomar. Sin archivos `.eslintrc`, `.jshintrc`, o `.jscsrc`
    a gestionar. Simplemente funciona.
 
-Este modulo te guarda a ti (y otros) tiempo en dos maneras:
+Este modulo te ahorra tiempo a ti (y otros) dos maneras:
 
 - **Sin configuración.** La manera mas fácil de forzar estilos consistentes
-  en tu proyecto. Simplemente usalo.
-- **Captura errores de estilos antes que sean enviados a PR.** Te guarda de
-  revisiones de código eliminando "delante y detrás" entre el dueño del
+  en tu proyecto.
+- **Captura errores de estilos antes que sean enviados a PR.** Te ahorras el tiempo de
+  hacer revisiones de código eliminando inconsistencias entre el dueño del
   repositorio y los contribuidores
 
 Instalar con:
@@ -46,11 +46,11 @@ npm install standard --save-dev
 - **Espacio después de las palabras claves** `if (condition) { ... }`
 - **Espacio después del nombre de función** `function name (arg) { ... }`
 - Usar siempre  `===` en vez de `==` – pero `obj == null` esta permitido para verificar `null || undefined`.
-- Manejar siempre el parametro de función `err` de node.js
-- Usar siempre  el prefijo `window` en los globales del navegador – A excepción de `document` y `navigator` esto esta bien
+- Gestionar siempre el parametro de función `err` de node.js
+- Usar siempre el prefijo `window` en los globales del navegador – A excepción de `document` y `navigator` esto esta bien
   - Previene uso accidental de mal-llamados globales del navegador como `open`, `length`,
     `event`, y `name`.
-- **Y [mucho mas][5]** – *prueba `standard` hoy!*
+- **Y [mucho mas][5]** – *prueba `standard` hoy mismo!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
@@ -81,9 +81,9 @@ que usan `standard`!
   - [Yo uso una librería que contamina el espacio de nombres global. ¿Como puedo evitar los errores  "variable is not defined"?](#yo-uso-una-librería-que-contamina-el-espacio-de-nombres-global-como-puedo-evitar-los-errores--variable-is-not-defined)
   - [¿Puedo usar un parser JavaScript que soporte ES última-generación?](#puedo-usar-un-parser-javascript-que-soporte-es-última-generación)
   - [¿Puedo usar una variación de lenguaje JavaScript, como Flow?](#puedo-usar-una-variación-de-lenguaje-javascript-como-flow)
-  - [¿Puede ser la regla X configurable?](#puede-ser-la-regla-x-configurable)
-  - [¿Que acerca de Web Workers?](#que-acerca-de-web-workers)
   - [¿Que acerca de Mocha, Jasmine, QUnit y etc?](#que-acerca-de-mocha-jasmine-qunit-y-etc)
+  - [¿Que acerca de Web Workers?](#que-acerca-de-web-workers)
+  - [¿Puedo verificar codigo dentro de archivos Markdown o HTML?](#puedo-verificar-codigo-dentro-de-archivos-markdown-o-html)
   - [¿Hay algún gancho git `pre-commit`?](#hay-algún-gancho-git-pre-commit)
   - [¿Como hago la salida (output) todo colorido y *bonito*?](#como-hago-la-salida-output-todo-colorido-y-bonito)
   - [Quiero contribuir a `standard`. ¿Que paquetes debería conocer?](#quiero-contribuir-a-standard-que-paquetes-debería-conocer)
@@ -99,16 +99,16 @@ La manera más fácil de usar JavaScript Standard Style para chequear tu código
 es instalarlo globalmente como programa Node de línea de comandos.
 Para hacer esto, simplemente ejecute el siguiente comando en su terminal
 (la bandera `-g` instalará `standard` globalmente en su sistema,
-omita la bandera si solo quiere instalar `standard` en el directorio actual) :
+omita la bandera si solo quiere instalar `standard` en el directorio actual):
 
 ```bash
-npm install standard --global
+$ npm install standard --global
 ```
 
 O, puede ejecutar este comando para instalar `standard` localmente, para usar en su módulo:
 
 ```bash
-npm install standard --save-dev
+$ npm install standard --save-dev
 ```
 
 [Node.js](http://nodejs.org) y [npm](https://npmjs.com) son requeridos para ejecutar los comandos anteriores.
@@ -239,19 +239,23 @@ Busque el registro de extension para **["Standard Code Style"][brackets-1]**.
 
 Instale **[vscode-standardjs][vscode-1]**. (Incluye soporte para formateo automatico.)
 
-Para snippers JS, instale: **[vscode-standardjs-snippets][vscode-2]**.
-PAra snippers React, instale **[vscode-react-standard][vscode-3]**.
+Para snippets JS, instale: **[vscode-standardjs-snippets][vscode-2]**.
+Para snippets React, instale **[vscode-react-standard][vscode-3]**.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
 [vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
-#### [WebStorm/PhpStorm][webstorm-1]
+#### [WebStorm and other JetBrains products][webstorm-1]
 
-Ambos WebStorm and PhpStorm pueden ser [configurados para estilos estandar][webstorm-2].
+WebStorm [recientemente anuncio soporte nativo](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) para `standard` diractemente en el IDE.
+
+Si aun prefieres configurar `standard` manualmente [sigue esta guia](webstorm-2)
+
+Esto aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
+[webstorm-2]: webstorm.md
 
 ## FAQ
 
@@ -274,7 +278,13 @@ Adoptar estilos `standard` significa clasificar la importancia de la claridad de
 
 ### No estoy de acuerdo con la regla X, ¿lo puedo cambiar?
 
-No. El punto de `standard` es de evitar [bikeshedding][bikeshedding] acerca del estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo distraen de hacer el trabajo. Al final del dia tienes “simplemente usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “simplemente usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones
+No. El punto de `standard` es de evitar [bikeshedding][bikeshedding] acerca del estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo distraen de hacer el trabajo. Al final del dia tienes simplemente que “usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones.
+
+Si realmente quieres configurar cientos de reglas individualmente, puedes usar `eslint` directamente con [eslint-config-standard](https://github.com/feross/eslint-config-standard) aplicando
+cambios encima de este.
+
+Tip: ¡Simplemente usa `standard` y ya esta. Existen problemas reales
+en los cuales debes usar tu tiempo! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
@@ -321,7 +331,7 @@ Algunas veces necesitas ignorar directorios o archivos específicos. Para hacerl
 
 En raros casos, necesitarás romper una regla y ocultar la alerta generada por `standard`.
 
-JavaScript Standard Style usa [`eslint`](http://eslint.org/) bajo la capucha y puedes ocultar las alertas como normalmente lo harias si usaras `eslint` directamente.
+JavaScript Standard Style usa [ESLint](http://eslint.org/) bajo la capucha y puedes ocultar las alertas como normalmente lo harias si usaras ESLint directamente.
 
 Para obtener una salida mas especifica (así puedes encontrar el nombre de la regla a ignorar) ejecute:
 
@@ -359,11 +369,18 @@ Algunos paquetes (ej `mocha`) colocan sus funciones (ej: `describe`, `it`) en el
 
 Para hacerle a `standard` (como también humanos que leen tu código) saber que ciertas variables son globales en tu código, agregar esto en la parte superior de tu código:
 
-```
+```js
 /* global myVar1, myVar2 */
 ```
 
-Si tienes siendos de archivos, agregar comentarios a cada archivo puede ser tedioso. En estos casos, puedes agregar esto a `package.json`:
+Si tienes cientos de archivos, seria deseable evitar agregar comentarios a cada archivo.
+En este caso ejecute:
+
+```bash
+$ standard --global myVar1 --global myVar2
+```
+
+O, agregar esto a su `package.json`
 
 ```json
 {
@@ -373,11 +390,22 @@ Si tienes siendos de archivos, agregar comentarios a cada archivo puede ser tedi
 }
 ```
 
+*Nota: `global` y `globals` son equivalentes*
+
 ### ¿Puedo usar un parser JavaScript que soporte ES última-generación?
 
-Antes que uses un parser customizado, considera siquiera la complejidad agregada en tu proceso de compilación vale la pena.
+`standard` soporta la umtima version de ECMAscript, incluyendo todas las caracteristicas del lenguaje
+de las propuestas que estan en "Stage 4" del proceso de propuestas.
 
-`standard` suporta parsers js customizado. Para usar un parser customizado, instálelo desde npm (ej: `npm install babel-eslint`) y agregue esto a `package.json`:
+Para soportar caracteristicas experimentales del lenguaje, `standard` soporta especificando un parser JS customizado. Antes que uses un parser customizado, considera siquiera la complejidad agregada vale la pena.
+
+Para usar un parser customizado, instálelo desde npm (ejemplo: `npm install babel-eslint`) y ejecute esto:
+
+```bash
+$ standard --parser babel-eslint
+```
+
+O, agregue esto a `package.json`:
 
 ```json
 {
@@ -387,13 +415,21 @@ Antes que uses un parser customizado, considera siquiera la complejidad agregada
 }
 ```
 
-Si está usando `standard` globalmente (lo instaló con la bandera `-g` o `--global`), entonces tiene que instalar `babel-eslint` globalmente también `npm install babel-eslint -g`.
+Si `standard` esta instalado globalmente (ej: `npm install standard --global`), entonces asegurese de instalar `babel-eslint` globalmente también com `npm install babel-eslint --global`.
 
 ### ¿Puedo usar una variación de lenguaje JavaScript, como Flow?
 
-Antes de usar una variable customizada del lenguaje JavaScript, considere si la complejidad agregada (y esfuerzo requerido para obtener los contribuidores alcanzar)  vale la pena.
+Antes de usar una variable del lenguaje JavaScript customizado, considere si la complejidad agregada
+(y esfuerzo requerido para obtener los contribuidores alcanzarle con rapidez) vale la pena.
 
-`standard` soporta plugins ESLint. Usa una de estos para transformar el código a javascript válido antes de que `standard` lo vea. Para usar un parser customizado, instálelo desde npm (example: `npm install eslint-plugin-flowtype`) y agrege esto a `package.json`:
+`standard` soporta plugins ESLint. Usa uno de estos para transformar el código a javascript válido antes de que `standard` lo vea. Para usar un parser customizado, instálelo desde
+npm (example: `npm install eslint-plugin-flowtype`) y ejecute:
+
+```bash
+$ standard --plugin flowtype
+```
+
+O, agrege esto a `package.json`:
 
 ```json
 {
@@ -406,19 +442,9 @@ Antes de usar una variable customizada del lenguaje JavaScript, considere si la 
 }
 ```
 
-Si está usando `standard` globalmente (lo instaló con la bandera `-g` o `--global`), entonces tiene que instalar `eslint-plugin-flowtype` globalmente también `npm install eslint-plugin-flowtype -g`.
+Si `standard` esta instalado globalmente (ej: `npm install standard --global`), entonces asegurese d instalar `eslint-plugin-flowtype` globalmente también, con `npm install eslint-plugin-flowtype -g`.
 
-### ¿Puede ser la regla X configurable?
-
-No. The point of `standard` is to save you time by picking reasonable rules so you
-can spend your time solving actual problems. If you really do want to configure
-hundreds of eslint rules individually, you can always use `eslint` directly.
-
-Si quieres configurar un par de reglas, considera usar [este plugin compartido](https://github.com/feross/eslint-config-standard) aplicando
-cambios encima de este
-
-Tip: ¡Simplemente usa `standard` y ya esta. Existen problemas reales
-en los cuales debes usar tu tiempo! :P
+*Nota: `plugin` y `plugins` son equivalentes*
 
 ### ¿Que acerca de Web Workers?
 
@@ -428,7 +454,7 @@ Agrega esto al inicio de tus archivos:
 /* eslint-env serviceworker */
 ```
 
-Esto le hara a `standard` (como también humanos que leen tu código) saber que
+Esto le hara saber a` standard` (como también humanos que leen tu código) que
 `self` es una variable global en el codigo web worker.
 
 ### ¿Que acerca de Mocha, Jasmine, QUnit y etc?
@@ -439,9 +465,48 @@ Para soportar mocha in tus archivos de prueba, agrega esto al inicio de los arch
 /* eslint-env mocha */
 ```
 
+O, ejecute:
+
+```bash
+$ standard --env mocha
+```
+
 Donde `mocha` puede ser uno de `jasmine`, `qunit`, `phantomjs`, y asi sucesivamente.
 Para ver la lista completa, chequear la documentación de ESLint [especificando entornos](http://eslint.org/docs/user-guide/configuring.html#specifying-environments).
 Por una lista de qué variables globales están disponibles en estos entornos chequea el modulo npm [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
+
+*Nota: `env` y `envs` son equivalentes*
+
+### ¿Puedo verificar codigo dentro de archivos Markdown o HTML?
+
+Para verificar código dentro de archivos Markdown use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
+
+Alternativamente, hay plugins ESLint para verificar código de Markdown,
+HTML y otros tipos de lenguajes:
+
+Para verificar código dentro de archivos Markdown, use el plugin ESLint:
+
+```bash
+$ npm install eslint-plugin-markdown
+```
+
+Luego para verificar codigo JS que aparece dentro de bloques código, ejecute:
+
+```bash
+$ standard --plugin markdown '**/*.md'
+```
+
+Para verificar código dentro de archivos HTML, use el plugin ESLint:
+
+```bash
+$ npm install eslint-plugin-html
+```
+
+Luego para verificar el código que aparece dentro de etiquetas `<script>`, ejecute:
+
+```bash
+$ standard --plugin html '**/*.html'
+```
 
 ### ¿Hay algún gancho git `pre-commit`?
 
@@ -449,29 +514,18 @@ Funny you should ask!
 
 ```sh
 #!/bin/sh
-# Asegura que todos los archivos javascript escefinicados para hacer commit pasan
-# los estandares de estilo de código
+# Asegura que todos los archivos javascript especificados
+# para hacer commit pasan los estandares de estilo de código
 git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
-```
-
-Alternativamente, [overcommit](https://github.com/brigade/overcommit)
-es un gestor de ganchos Git que incluye soporte para ejecutar `standard`
-como un gancho git pre-commit. Para habilitar esto, agrega lo siguiente al
-archivo `.overcommit.yml`:
-
-```yaml
-PreCommit:
-  Standard:
-    enabled: true
 ```
 
 ### ¿Como hago la salida (output) todo colorido y *bonito*?
 
 La salida integrada es simple y directa, pero si te gustan las cosas brillantes, puedes instalar [snazzy](https://www.npmjs.com/package/snazzy):
 
-```
-npm install snazzy
+```bash
+$ npm install snazzy
 ```
 
 y ejecutar:
