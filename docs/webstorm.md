@@ -1,4 +1,15 @@
-# [WebStorm/PhpStorm][webstorm-1] configuration for Standard Style
+# [WebStorm][webstorm-1] configuration for Standard Style
+
+## Native support for `standard`
+
+WebStorm [recently announced native support](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
+for `standard` directly in the IDE!
+
+This applies to all JetBrains products, including PhpStorm, IntelliJ, RubyMine, etc.
+
+If you still prefer to configure `standard` manually, use the following guide.
+
+## Configure `standard` support manually
 
 1. Close your IDE.
 2. [Figure out where your configuration lives][webstorm-2] (_IDE Settings_ section)
@@ -48,10 +59,6 @@
 
 ---
 
-If you're a Webstorm or PhpStorm user, [vote for `standard` to be one of the default styles][webstorm-3]
-built into the app.
-
 [npm-article]: https://docs.npmjs.com/getting-started/fixing-npm-permissions
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: https://www.jetbrains.com/help/phpstorm/2016.1/directories-used-by-phpstorm-to-store-settings-caches-plugins-and-logs.html?origin=old_help#d66583e60
-[webstorm-3]: https://youtrack.jetbrains.com/issue/WEB-17331
