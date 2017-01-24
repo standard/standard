@@ -54,8 +54,9 @@ If you still prefer to configure `standard` manually, use the following guide.
 
 6. Start up the IDE and open a _Settings_/_Preferences_ screen (choose between project and default settings accordingly to your preference)
 7. Under `Editor > Code Style > JavaScript` change `Scheme` to `Standard`
-8. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
-9. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`. If you didn't install `ESLint` before and you don't have it in your dependencies - that's all. If you do - be sure to use `ESLint package` of the same version as current version of `standard` is using. Or just remove your old one - you probably won't need it anymore
+8. Under `Editor > Code Style > HTML` just select `Other`, in `Spaces` setting, check `In empty tag`
+9. Under `Editor > Inspections > JavaScript > Code style issues` untick `Unterminated statement`
+10. Under `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` just select `Enable`. If you didn't install `ESLint` before and you don't have it in your dependencies - that's all. If you do - be sure to use `ESLint package` of the same version as current version of `standard` is using. Or just remove your old one - you probably won't need it anymore
 
 ---
 
