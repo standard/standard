@@ -836,6 +836,63 @@ your code.
   const message = new String('hello')   // ✗ avoid
   ```
 
+* **No calling global object properties as functions.**
+
+  eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
+
+  ```js
+  const math = Math()   // ✗ avoid
+  ```
+
+* **No octal literals.**
+
+  eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
+
+  ```js
+  const num = 042     // ✗ avoid
+  const num = '042'   // ✓ ok
+  ```
+
+* **No octal escape sequences in string literals.**
+
+  eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
+
+  ```js
+  const copyright = 'Copyright \251'  // ✗ avoid
+  ```
+
+* **Avoid string concatenation when using `__dirname` and `__filename`.**
+
+  eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
+
+  ```js
+  const pathToFile = __dirname + '/app.js'            // ✗ avoid
+  const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
+  ```
+
+* **Avoid using `__proto__`.** Use `getPrototypeOf` instead.
+
+  eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
+
+  ```js
+  const foo = obj.__proto__               // ✗ avoid
+  const foo = Object.getPrototypeOf(obj)  // ✓ ok
+  ```
+
+* **No redeclaring variables.**
+
+  eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
+
+  ```js
+  let name = 'John'
+  let name = 'Jane'     // ✗ avoid
+
+  let name = 'John'
+  name = 'Jane'         // ✓ ok
+  ```
+
+* ** **
+
 ## Semicolons
 
 * No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
