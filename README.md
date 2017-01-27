@@ -95,9 +95,8 @@ that use `standard`!
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
   - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
-  - [I want to contribute to `standard`. What packages should I know about?](#i-want-to-contribute-to-standard-what-packages-should-i-know-about)
   - [Is there a Node.js API?](#is-there-a-nodejs-api)
-- [Contribute](#contribute)
+  - [How do I contribute to `standard`?](#how-do-i-contribute-to-standard)
 - [License](#license)
 
 ## Install
@@ -656,13 +655,13 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
-## Contribute
+## How do I contribute to `standard`?
 
 Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
 
-Join us in `#standard` on freenode.
+Join other contributors in `#standard` on freenode to chat!
 
-### I want to contribute to `standard`. What packages should I know about?
+Here are some important packages in the `standard` ecosystem:
 
 - **[standard](https://github.com/feross/standard)** - this repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
