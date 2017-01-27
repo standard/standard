@@ -1,4 +1,5 @@
 test/
+docs/logos/
 tmp/
 bin/update-authors.sh
 .travis.yml

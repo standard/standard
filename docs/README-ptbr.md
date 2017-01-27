@@ -85,7 +85,6 @@ Para ter uma idéia melhor, dê uma olhada
 - [Node.js API](#nodejs-api)
   - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
   - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [Canal do IRC ](#canal-do-irc)
 - [Licensa](#licensa)
 
 ## Instalação
@@ -526,13 +525,11 @@ var opts = {
 
 O `callback` vai ser chamado com os objetos `Error` e `results`:
 
-## Canal do IRC
-
-Junte-se ao `#standard` no freenode.
-
 ## Contribuições
 
 Contribuições são bem-vindas! Cheque o [issues](https://github.com/feross/standard/issues) ou os [PRs](https://github.com/feross/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
+
+Junte-se ao `#standard` no freenode.
 
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 

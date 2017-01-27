@@ -90,7 +90,6 @@ que usan `standard`!
 - [Node.js API](#nodejs-api)
   - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
   - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [Canal IRC](#canal-irc)
 - [Licencia](#licencia)
 
 ## Instalación
@@ -594,13 +593,11 @@ var opts = {
 
 El `callback` será llamado con un objeto de `Error` y `results`: (igual al de arriba).
 
-##Canal IRC
-
-Unete a nosotros `#standard` en freenode.
-
 ## Contribuciones
 
 Contribuciones son bienvenidas! Chequea los [issues](https://github.com/feross/standard/issues) o [PRs](https://github.com/feross/standard/pulls), o has el tuyo propio si quieres algo que nos ves allí
+
+Unete a nosotros `#standard` en freenode.
 
 ### Quiero contribuir a `standard`. ¿Que paquetes debería conocer?
 
