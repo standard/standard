@@ -81,7 +81,7 @@ that use `standard`!
   - [Why should I use JavaScript Standard Style?](#why-should-i-use-javascript-standard-style)
   - [Who uses JavaScript Standard Style?](#who-uses-javascript-standard-style)
   - [Are there text editor plugins?](#are-there-text-editor-plugins)
-  - [Is there a badge?](#is-there-a-badge)
+  - [Is there a readme badge?](#is-there-a-readme-badge)
   - [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
   - [But this isn't a real web standard!](#but-this-isnt-a-real-web-standard)
   - [Is there an automatic formatter?](#is-there-an-automatic-formatter)
