@@ -614,7 +614,7 @@ your code.
 
 * **Avoid unnecessary boolean casts.**
 
-  eslint: []()
+  eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
   ```js
   const result = true
@@ -719,7 +719,7 @@ your code.
   function myFunc() /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **No using `__iterator__`**
+* **No using `__iterator__`.**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -891,7 +891,374 @@ your code.
   name = 'Jane'         // ✓ ok
   ```
 
-* ** **
+* **Avoid multiple spaces in regular expression literals.**
+
+  eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
+
+  ```js
+  const regexp = /test   value/   // ✗ avoid
+  const regexp = /test value/     // ✓ ok
+  ```
+
+* **Assignments in return statements my be surrounded by parentheses.**
+
+  eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
+
+  ```js
+  function sum (a, b) {
+    return result = a + b     // ✗ avoid
+  }
+
+  function sum (a, b) {
+    return (result = a + b)   // ✓ ok
+  }
+  ```
+
+* **Avoid assigning a variable to itself**
+
+  eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
+
+  ```js
+  name = name   // ✗ avoid
+  ```
+
+* **Avoid comparing a variable to itself.**
+
+  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+
+  ```js
+  if (score === score) {}   // ✗ avoid
+  ```
+
+* **Avoid using the comma operator.**
+
+  eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
+
+  ```js
+  if (doSomething(), !!test) {}   // ✗ avoid
+  ```
+
+* **Restricted names should not be shadowed.**
+
+  eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
+
+  ```js
+  let undefined = 'value'     // ✗ avoid
+  ```
+
+* **Sparse arrays are not allowed.**
+
+  eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
+
+  ```js
+  let fruits = ['apple',, 'orange']       // ✗ avoid
+  ```
+
+* **Tabs should not be used**
+
+  eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
+
+* **Regular strings must not contain tempalte literal placeholders.**
+
+  eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
+
+  ```js
+  const message = 'Hello ${name}'   // ✗ avoid
+  const message = `Hello ${name}`   // ✓ ok
+  ```
+
+* **`super()` must be called before using `this`.**
+
+  eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
+
+  ```js
+  class Dog extends Animal {
+    constructor () {
+      this.legs = 4     // ✗ avoid
+      super()
+    }
+  }
+  ```
+
+* **Only `throw` an `Error` object.**
+
+  eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
+
+  ```js
+  throw 'error'               // ✗ avoid
+  throw new Error('error')    // ✓ ok
+  ```
+
+* **Whitespace not allowed at end of line.**
+
+  eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
+
+* **Initializing to `undefined` is not allowed.**
+
+  eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
+
+  ```js
+  let name = undefined    // ✗ avoid
+
+  let name
+  name = 'value'          // ✓ ok
+  ```
+
+* **No unmodified conditions of loops.**
+
+  eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
+
+  ```js
+  for (let i = 0; i < items.length; j++) {...}    // ✗ avoid
+  for (let i = 0; i < items.length; i++) {...}    // ✓ ok
+  ```
+
+* **No ternary operators when simpler alternatives exist.**
+
+  eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
+
+  ```js
+  let score = val ? val : 0     // ✗ avoid
+  let score = val || 0          // ✓ ok
+  ```
+
+* **No unreachable code after `return`, `throw`, `continue`, and `break` statements.**
+
+  eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
+
+  ```js
+  function doSomething () {
+    return true
+    console.log('never called')     // ✗ avoid
+  }
+  ```
+
+* **No flow control statements in `finally` blocks.**
+
+  eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
+
+  ```js
+  try {
+    // ...
+  } catch (e) {
+    // ...
+  } finally {
+    return 42     // ✗ avoid
+  }
+  ```
+
+* **The left operand of relational operators must not be negated.**
+
+  eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
+
+  ```js
+  if (!key in obj) {}       // ✗ avoid
+  ```
+
+* **Avoid unnecessary use of `.call()` and `.apply()`.**
+
+  eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
+
+  ```js
+  sum.call(null, 1, 2, 3)   // ✗ avoid
+  ```
+
+* **Avoid using unnecessary computed property keys on objects.**
+
+  eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
+
+  ```js
+  const user = { ['name']: 'John Doe' }   // ✗ avoid
+  const user = { name: 'John Doe' }       // ✓ ok
+  ```
+
+* **No unnecessary constructor.**
+
+  eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
+
+  ```js
+  class Car {
+    constructor () {      // ✗ avoid
+    }
+  }
+  ```
+
+* **No unnecessary use of escape.**
+
+  eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
+
+  ```js
+  let message = 'Hell\o'  // ✗ avoid
+  ```
+
+* **Renaming import, export, and destructured assignments to the same name is not allowed.**
+
+  eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
+
+  ```js
+  import { config as config } from './config'     // ✗ avoid
+  import { config } from './config'               // ✓ ok
+  ```
+
+* **No whitespace before properties.**
+
+  eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
+
+  ```js
+  user .name      // ✗ avoid
+  user.name       // ✓ ok
+  ```
+
+* **No using `with` statements.**
+
+  eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
+
+  ```js
+  with (val) {...}    // ✗ avoid
+  ```
+
+* **Maintain consistency of newlines between object properties.**
+
+  eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
+
+  ```js
+  const user = {
+    name: 'Jane Doe', age: 30,
+    username: 'jdoe86'            // ✗ avoid
+  }
+
+  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
+  const user = {
+    name: 'Jane Doe',
+    age: 30,
+    username: 'jdoe86
+  }                                                                 // ✓ ok
+  ```
+
+* **No padding within blocks.**
+
+  eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
+
+  ```js
+  if (user) {
+                              // ✗ avoid
+    const name = getName()
+
+  }
+
+  if (user) {
+    const name = getName()    // ✓ ok
+  }
+  ```
+
+* **No whitespace between spread operators and their expressions.**
+
+  eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
+
+  ```js
+  fn(... args)    // ✗ avoid
+  fn(...args)     // ✓ ok
+  ```
+
+* **Semicolon's must have a space after and no space before.**
+
+  eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
+
+  ```js
+  for (let i = 0 ;i < items.length ;i++) {...}    // ✗ avoid
+  for (let i = 0; i < items.length; i++) {...}    // ✓ ok
+  ```
+
+* **Must have a space before blocks.**
+
+  eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
+
+  ```js
+  if (admin){...}     // ✗ avoid
+  if (admin) {...}    // ✓ ok
+  ```
+
+* **No spaces inside parens.**
+
+  eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
+
+  ```js
+  getName( name )     // ✗ avoid
+  getName(name)       // ✓ ok
+  ```
+
+* **Unary operators must have a space after.**
+
+  eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
+
+  ```js
+  typeof!admin        // ✗ avoid
+  typof !admin        // ✓ ok
+  ```
+
+* **Use spaces inside comments.**
+
+  eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
+
+  ```js
+  //comment           // ✗ avoid
+  // comment          // ✓ ok
+  ```
+
+* **No spacing in template strings.**
+
+  eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
+
+  ```js
+  const message = `Hello, ${ name }`    // ✗ avoid
+  const message = `Hello, ${name}`      // ✓ ok
+  ```
+
+* **Use `isNaN()` when checking for `NaN`.**
+
+  eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
+
+  ```js
+  if (price === NaN) { }      // ✗ avoid
+  if (isNaN(price)) { }       // ✓ ok
+  ```
+
+* **`typeof` must be compared to valid string.**
+
+  eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
+
+  ```js
+  typeof name === 'undefimed'     // ✗ avoid
+  typeof name === 'undefined'     // ✓ ok
+  ```
+
+* **Immediately Invoked Function Expressions (IFFE's) must be wrapped.**
+
+  eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
+
+  ```js
+  const getName = function () { }()     // ✗ avoid
+
+  const getName = (function () { })     // ✓ ok
+  ```
+
+* **The `*` in `yield*`expressions must have a space before and after.**
+
+  eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
+
+  ```js
+  yield* increment()    // ✗ avoid
+  yield * increment()   // ✓ ok
+  ```
+
+* **Avoid Yoda conditions.**
+
+  eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
+
+  ```js
+  if (42 === age) { }    // ✗ avoid
+  if (age === 42) { }    // ✓ ok
+  ```
 
 ## Semicolons
 
