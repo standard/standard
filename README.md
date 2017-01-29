@@ -188,7 +188,7 @@ project healthier.
 
 Lots of folks!
 
-[<img width=150 src=docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=docs/logos/github.png>](https:/github.com) | [<img width=150 src=docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=docs/logos/brave.png>](https://www.brave.com) |
+[<img width=150 src=docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=docs/logos/github.png>](https://github.com) | [<img width=150 src=docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=docs/logos/brave.png>](https://www.brave.com) |
 |---|---|---|---|---|
 
 | [<img width=150 src=docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
