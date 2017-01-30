@@ -1131,7 +1131,7 @@ your code.
   const user = {
     name: 'Jane Doe',
     age: 30,
-    username: 'jdoe86
+    username: 'jdoe86'
   }                                                                 // ✓ ok
   ```
 
