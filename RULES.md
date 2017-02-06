@@ -900,7 +900,7 @@ your code.
   const regexp = /test value/     // ✓ ok
   ```
 
-* **Assignments in return statements my be surrounded by parentheses.**
+* **Assignments in return statements must be surrounded by parentheses.**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -958,7 +958,7 @@ your code.
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **Regular strings must not contain tempalte literal placeholders.**
+* **Regular strings must not contain template literal placeholders.**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
