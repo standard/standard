@@ -7,22 +7,24 @@
     "name": "Feross Aboukhadijeh",
     "url": "http://feross.org/"
   },
-  "bin": "./bin/cmd.js",
+  "bin": "./index.js",
   "bugs": {
     "url": "https://github.com/feross/standard/issues"
   },
   "dependencies": {
-    "eslint": "~3.10.2",
+    "curated-linter": "^1.1.2",
     "eslint-config-standard": "6.2.1",
     "eslint-config-standard-jsx": "3.2.0",
     "eslint-plugin-promise": "~3.4.0",
     "eslint-plugin-react": "~6.7.1",
     "eslint-plugin-standard": "~2.0.1",
-    "standard-engine": "~5.2.0"
+    "sane-eslint-files": "^1.0.0",
+    "sane-eslint-ignore": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "cross-spawn": "^5.0.1",
+    "is-plain-obj": "^1.1.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
@@ -65,7 +67,7 @@
     "url": "git://github.com/feross/standard.git"
   },
   "scripts": {
-    "test": "./bin/cmd.js --verbose && tape test/*.js",
+    "test": "./standard --verbose && tape test/*.js",
     "test-disabled": "npm test -- --disabled",
     "test-offline": "npm test -- --offline",
     "test-offline-quick": "npm test -- --offline --quick",
