@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 9.0.0 (BETA) - 2016-11-22
+
+## New features
+
+- Update ESLint from 3.10.x to 3.15.x.
+- 3 additional rules are now fixable with `standard --fix`!
+
+## New rules
+
+- TODO
+
+## Changed rules
+
+- TODO
+
 ## 8.6.0 - 2016-11-22
 
 - Update ESLint from 3.8.x to 3.10.x.
