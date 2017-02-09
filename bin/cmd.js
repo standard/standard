@@ -6,4 +6,3 @@ if (process.version.match(/v(\d+)\./)[1] < 4) {
   var opts = require('../options')
   require('standard-engine').cli(opts)
 }
-
