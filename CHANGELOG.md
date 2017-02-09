@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 9.0.0 (BETA) - 2016-11-22
+## UNRELEASED 9.0.0 (BETA) - 2017-03-01
 
 ## New features
 
@@ -12,11 +12,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## New rules
 
-- TODO
+*(Estimated % of affected standard users, based on test suite in parens)*
+
+- Disallow mixing different operators without parens ([no-mixed-operators](http://eslint.org/docs/rules/no-mixed-operators)) [#566](https://github.com/feross/standard/issues/566) (5%)
+- Enforce 1 newline at end of file (previously 1 or 2 were allowed) ([no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)) [#733](https://github.com/feross/standard/issues/733) (3%)
+- Disallow Unused Expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#690](https://github.com/feross/standard/issues/690) (3%)
+  - Note: this affects users of the Chai test framework. [Read about the changes you need to make](https://github.com/feross/standard/issues/690#issuecomment-278533482).
+- Disallow redundant return statements ([no-useless-return](http://eslint.org/docs/rules/no-useless-return)) [#694](https://github.com/feross/standard/issues/694) (1%)
+- Disallow Incorrect Early Use ([no-use-before-define](http://eslint.org/docs/rules/no-use-before-define)) [#636](https://github.com/feross/standard/issues/636) (0%)
+- Enforce that Promise rejections are passed an Error object as a reason ([prefer-promise-reject-errors](http://eslint.org/docs/rules/prefer-promise-reject-errors)) [#777](https://github.com/feross/standard/issues/777) (0%)
+- Enforce comparing `typeof` expressions against string literals ([valid-typeof](http://eslint.org/docs/rules/valid-typeof)) [#629](https://github.com/feross/standard/issues/629) (0%)
+- Enforce spacing around * in generator functions ([generator-star-spacing](http://eslint.org/docs/rules/generator-star-spacing)) [#724](https://github.com/feross/standard/issues/724) (0%)
+- Disallow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label)) [#736](https://github.com/feross/standard/issues/736) (0%)
+- Disallow spacing between template tags and their literals ([template-tag-spacing](http://eslint.org/docs/rules/template-tag-spacing)) [#755](https://github.com/feross/standard/issues/775) (0%)
+- Disallow padding within switch statements and classes ([padded-blocks](http://eslint.org/docs/rules/padded-blocks)) [#610](https://github.com/feross/standard/issues/610) (0%)
+- Enforce that Symbols are passed a description ([symbol-description](http://eslint.org/docs/rules/symbol-description)) [#630](https://github.com/feross/standard/issues/630) (0%)
 
 ## Changed rules
 
-- TODO
+- Relax rule: allow TypeScript Triple-Slash Directives (spaced-comment) [#660](https://github.com/feross/standard/issues/660)
+- Relax rule: allow Flow Comments (spaced-comment) [#661](https://github.com/feross/standard/issues/661)
 
 ## 8.6.0 - 2016-11-22
 
