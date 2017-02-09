@@ -44,15 +44,10 @@ if (argv.disabled) {
   testPackages = disabledPackages
 } else {
   test('Disabled Packages', function (t) {
-    if (disabledPackages.length === 0) {
-      t.pass('no disabled packages')
-      t.end()
-    } else {
-      t.plan(disabledPackages.length)
-      disabledPackages.forEach(function (pkg) {
-        t.pass('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
-      })
-    }
+    disabledPackages.forEach(function (pkg) {
+      console.log('DISABLED: ' + pkg.name + ': ' + pkg.disable + ' (' + pkg.repo + ')')
+    })
+    t.end()
   })
 }
 
