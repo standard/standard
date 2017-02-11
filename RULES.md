@@ -570,6 +570,7 @@ your code.
 
   ```js
   eval( "var result = user." + propName ) // ✗ avoid
+  var result = user[propName]             // ✓ ok
   ```
 
 * **No reassigning exceptions in `catch` clauses.**
@@ -656,6 +657,14 @@ your code.
     case 2:
       doSomethingElse()
   }
+
+  switch (filter) {
+    case 1:
+      doSomething()
+      // fallthrough  // ✓ ok
+    case 2:
+      doSomethingElse()
+  }
   ```
 
 * **No floating decimals.**
@@ -689,7 +698,8 @@ your code.
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
   ```js
-  setTimeout("alert('Hello world')")  // ✗ avoid
+  setTimeout("alert('Hello world')")                   // ✗ avoid
+  setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
 * **No function declarations in nested blocks.**
@@ -716,7 +726,7 @@ your code.
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
   ```js
-  function myFunc() /*<NBSP>*/{}   // ✗ avoid
+  function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
 * **No using `__iterator__`.**
@@ -761,7 +771,7 @@ your code.
   }
 
   function myFunc () {
-      myOtherFunc()     // ✓ ok
+    myOtherFunc()       // ✓ ok
   }
   ```
 
@@ -897,6 +907,8 @@ your code.
 
   ```js
   const regexp = /test   value/   // ✗ avoid
+  
+  const regexp = /test {3}value/  // ✓ ok
   const regexp = /test value/     // ✓ ok
   ```
 
@@ -1128,6 +1140,7 @@ your code.
   }
 
   const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
+  
   const user = {
     name: 'Jane Doe',
     age: 30,
@@ -1160,7 +1173,7 @@ your code.
   fn(...args)     // ✓ ok
   ```
 
-* **Semicolon's must have a space after and no space before.**
+* **Semicolons must have a space after and no space before.**
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1178,7 +1191,7 @@ your code.
   if (admin) {...}    // ✓ ok
   ```
 
-* **No spaces inside parens.**
+* **No spaces inside parentheses.**
 
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
@@ -1193,7 +1206,7 @@ your code.
 
   ```js
   typeof!admin        // ✗ avoid
-  typof !admin        // ✓ ok
+  typeof !admin        // ✓ ok
   ```
 
 * **Use spaces inside comments.**
@@ -1203,6 +1216,9 @@ your code.
   ```js
   //comment           // ✗ avoid
   // comment          // ✓ ok
+  
+  /*comment*/         // ✗ avoid
+  /* comment */       // ✓ ok
   ```
 
 * **No spacing in template strings.**
@@ -1223,7 +1239,7 @@ your code.
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **`typeof` must be compared to valid string.**
+* **`typeof` must be compared to a valid string.**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1232,14 +1248,15 @@ your code.
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **Immediately Invoked Function Expressions (IFFE's) must be wrapped.**
+* **Immediately Invoked Function Expressions (IIFEs) must be wrapped.**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
   ```js
   const getName = function () { }()     // ✗ avoid
 
-  const getName = (function () { })     // ✓ ok
+  const getName = (function () { }())   // ✓ ok
+  const getName = (function () { })()   // ✓ ok
   ```
 
 * **The `*` in `yield*`expressions must have a space before and after.**
@@ -1314,7 +1331,7 @@ your code.
   ;[1, 2, 3].forEach(bar)
   ```
 
-  This is much preferred:
+  This is strongly preferred:
 
   ```js
   var nums = [1, 2, 3]
@@ -1337,44 +1354,42 @@ in JavaScript).
 
 ##### Excerpt from *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
-[Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
-
-I am sorry that, instead of educating you, the leaders in this language community have given you lies and fear.  That was shameful. I recommend learning how statements in JS are actually terminated (and in which cases they are not terminated), so that you can write code that you find beautiful.
-
-In general, `\n` ends a statement unless:
-  1. The statement has an unclosed paren, array literal, or object literal or ends in some
-     other way that is not a valid way to end a statement. (For instance, ending with `.`
-     or `,`.)
-  2. The line is `--` or `++` (in which case it will decrement/increment the next token.)
-  3. It is a `for()`, `while()`, `do`, `if()`, or `else`, and there is no `{`
-  4. The next line starts with `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, or some other
-     binary operator that can only be found between two tokens in a single expression.
-
-The first is pretty obvious. Even JSLint is ok with `\n` chars in JSON and parenthesized constructs, and with `var` statements that span multiple lines ending in `,`.
-
-The second is super weird. I’ve never seen a case (outside of these sorts of conversations) where you’d want to do write `i\n++\nj`, but, point of fact, that’s parsed as `i; ++j`, not `i++; j`.
-
-The third is well understood, if generally despised. `if (x)\ny()` is equivalent to `if (x) { y() }`. The construct doesn’t end until it reaches either a block, or a statement.
-
-`;` is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
-
-The fourth is generally the fud-inducing “oh noes, you need semicolons!” case. But, as it turns out, it’s quite easy to *prefix* those lines with semicolons if you don’t mean them to be continuations of the previous line. For example, instead of this:
-
-```js
-foo();
-[1,2,3].forEach(bar);
-```
-
-you could do this:
-
-```js
-foo()
-;[1,2,3].forEach(bar)
-```
-
-The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
-
-*End quote from "An Open Letter to JavaScript Leaders Regarding Semicolons".*
+> [Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
+>
+> I am sorry that, instead of educating you, the leaders in this language community have given you lies and fear.  That was shameful. I recommend learning how statements in JS are actually terminated (and in which cases they are not terminated), so that you can write code that you find beautiful.
+>
+> In general, `\n` ends a statement unless:
+>   1. The statement has an unclosed paren, array literal, or object literal or ends in some
+>      other way that is not a valid way to end a statement. (For instance, ending with `.`
+>      or `,`.)
+>   2. The line is `--` or `++` (in which case it will decrement/increment the next token.)
+>   3. It is a `for()`, `while()`, `do`, `if()`, or `else`, and there is no `{`
+>   4. The next line starts with `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, or some other
+>      binary operator that can only be found between two tokens in a single expression.
+>
+> The first is pretty obvious. Even JSLint is ok with `\n` chars in JSON and parenthesized constructs, and with `var` statements that span multiple lines ending in `,`.
+>
+> The second is super weird. I’ve never seen a case (outside of these sorts of conversations) where you’d want to do write `i\n++\nj`, but, point of fact, that’s parsed as `i; ++j`, not `i++; j`.
+>
+> The third is well understood, if generally despised. `if (x)\ny()` is equivalent to `if (x) { y() }`. The construct doesn’t end until it reaches either a block, or a statement.
+>
+> `;` is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
+>
+> The fourth is generally the fud-inducing “oh noes, you need semicolons!” case. But, as it turns out, it’s quite easy to *prefix* those lines with semicolons if you don’t mean them to be continuations of the previous line. For example, instead of this:
+>
+> ```js
+> foo();
+> [1,2,3].forEach(bar);
+> ```
+>
+> you could do this:
+>
+> ```js
+> foo()
+> ;[1,2,3].forEach(bar)
+> ```
+>
+> The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
