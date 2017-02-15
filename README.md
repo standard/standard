@@ -445,8 +445,8 @@ Or, add this to `package.json`:
 
 ## How do I use experimental JavaScript (ES Next) features?
 
-`standard` supports the latest version of the ECMAscript, including all language
-feature proposals that are in "Stage 4" of the proposal process.
+`standard` supports the latest JavaScript features, ES8 (ES2017), including
+language feature proposals that are in "Stage 4" of the proposal process.
 
 To support experimental language features, `standard` supports specifying a
 custom JavaScript parser. Before using a custom parser, consider whether the added
