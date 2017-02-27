@@ -1,5 +1,33 @@
 language: node_js
+
 node_js:
-  - '4'
-  - '6'
-  - 'node'
+ - 7
+ - 6
+ - 4
+
+matrix:
+  fast_finish: true
+
+cache:
+  directories:
+    - node_modules
+
+after_success:
+  - npm install --only=production codeclimate-test-reporter semantic-release
+
+before_deploy:
+  - npm run coverage -- --coverage-report=text-lcov | codeclimate-test-reporter
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: semantic-release pre && npm publish && semantic-release post || true
+
+  on:
+    branch: master
+    node: 7
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+    - /^greenkeeper\/.+/

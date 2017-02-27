@@ -1,40 +1,19 @@
 {
-  "name": "standard",
-  "description": "JavaScript Standard Style",
-  "version": "9.0.0-beta.0",
-  "author": {
-    "email": "feross@feross.org",
-    "name": "Feross Aboukhadijeh",
-    "url": "http://feross.org/"
+  "version": "0.0.0-development",
+  "name": "airbnb-standard",
+  "description": "Airbnb JavaScript Style",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://github.com/ahmadnassri/airbnb-standard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/airbnb-standard.git"
   },
-  "bin": "./bin/cmd.js",
-  "bugs": {
-    "url": "https://github.com/feross/standard/issues"
-  },
-  "dependencies": {
-    "eslint": "~3.15.0",
-    "eslint-config-standard": "7.0.0-beta.0",
-    "eslint-config-standard-jsx": "3.3.0",
-    "eslint-plugin-promise": "~3.4.0",
-    "eslint-plugin-react": "~6.9.0",
-    "eslint-plugin-standard": "~2.0.1",
-    "standard-engine": "~5.4.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "cross-spawn": "^5.0.1",
-    "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
-    "run-parallel-limit": "^1.0.3",
-    "standard-packages": "^3.1.9",
-    "tape": "^4.6.0"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "homepage": "http://standardjs.com",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": "lib/bin.js",
   "keywords": [
-    "JavaScript Standard Style",
+    "Airbnb JavaScript Standard Style",
+    "airbnb",
     "check",
     "checker",
     "code",
@@ -58,18 +37,33 @@
     "style linter",
     "verify"
   ],
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/feross/standard.git"
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/airbnb-standard/issues"
   },
   "scripts": {
-    "test": "./bin/cmd.js --verbose && tape test/*.js",
-    "test-disabled": "npm test -- --disabled",
-    "test-offline": "npm test -- --offline",
-    "test-offline-quick": "npm test -- --offline --quick",
-    "test-quick": "npm test -- --quick",
-    "update-authors": "./bin/update-authors.sh"
+    "lint": "./lib/bin.js --verbose && echint",
+    "pretest": "npm run lint",
+    "test": "tap test",
+    "coverage": "tap test --reporter silent --coverage"
+  },
+  "dependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "standard-engine": "~6.0.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "devDependencies": {
+    "cross-spawn": "^5.0.1",
+    "echint": "^4.0.1",
+    "standard-packages": "^3.1.9",
+    "tap": "^10.2.2"
   }
 }

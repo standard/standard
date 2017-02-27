@@ -1,17 +1,19 @@
-var path = require('path')
-var test = require('tape')
-var crossSpawn = require('cross-spawn')
+const crossSpawn = require('cross-spawn');
+const path = require('path');
+const tap = require('tap');
 
-var CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
+const CMD_PATH = path.join(__dirname, '..', 'lib', 'bin.js');
 
-test('command line usage: --help', function (t) {
-  t.plan(1)
+tap.test('command line usage: --help', (assert) => {
+  assert.plan(1);
 
-  var child = crossSpawn(CMD_PATH, ['--help'])
-  child.on('error', function (err) {
-    t.fail(err)
-  })
-  child.on('close', function (code) {
-    t.equal(code, 0, 'zero exit code')
-  })
-})
+  const child = crossSpawn(CMD_PATH, ['--help']);
+
+  child.on('error', (err) => {
+    assert.fail(err);
+  });
+
+  child.on('close', (code) => {
+    assert.equal(code, 0, 'zero exit code');
+  });
+});
