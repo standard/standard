@@ -80,8 +80,6 @@ This package is simply a fork of [`standard`][standard] with [Airbnb's JavaScrip
 
 This package is simply a fork of [`standard`][standard] with [Airbnb's JavaScript Style][airbnb-javascript] applied, please consult the [`standard` README][standard] for any questions on usage and configuration.
 
-```
-
 ---
 > :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/)  ·  
 > License: [ISC][license-url]  ·  
