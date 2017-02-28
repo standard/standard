@@ -22,12 +22,12 @@ errors caught by the new rules in this version.
 *Note: If you use the Chai test framework, you will need to make some changes to
 your tests to improve their robustness. [Read about the changes you need to make](https://github.com/feross/standard/issues/690#issuecomment-278533482).*
 
-## New features
+### New features
 
 - Update ESLint from 3.10.x to 3.15.x
 - 3 additional rules are now fixable with `standard --fix`
 
-## New rules
+### New rules
 
 *(Estimated % of affected standard users, based on test suite in parens)*
 
@@ -45,7 +45,7 @@ your tests to improve their robustness. [Read about the changes you need to make
 - Disallow padding within switch statements and classes ([padded-blocks](http://eslint.org/docs/rules/padded-blocks)) [#610](https://github.com/feross/standard/issues/610) (0%)
 - Enforce that Symbols are passed a description ([symbol-description](http://eslint.org/docs/rules/symbol-description)) [#630](https://github.com/feross/standard/issues/630) (0%)
 
-## Changed rules
+### Changed rules
 
 - Relax rule: allow TypeScript Triple-Slash Directives (spaced-comment) [#660](https://github.com/feross/standard/issues/660)
 - Relax rule: allow Flow Comments (spaced-comment) [#661](https://github.com/feross/standard/issues/661)
