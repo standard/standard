@@ -3,19 +3,36 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## UNRELEASED 9.0.0 (BETA) - 2017-03-01
+## 9.0.0 - 2017-02-28
+
+It's time for a new major version of `standard`! As usual, this release contains a
+bunch of awesomeness to help you keep your code in tip-top shape!
+
+We've added several new rules designed to **catch potential programmer errors**
+(i.e. bugs), as well as rules to make programmer intent **more explicit** in
+certain circumstances.
+
+This release continues our trend of tightening up rules so that, wherever possible,
+there's one "right" way to do things. This design goal is intended to reduce the
+time that teams and maintainers spend giving code review feedback in pull requests.
+
+When you upgrade, consider running `standard --fix` to automatically fix some of the
+errors caught by the new rules in this version.
+
+*Note: If you use the Chai test framework, you will need to make some changes to
+your tests to improve their robustness. [Read about the changes you need to make](https://github.com/feross/standard/issues/690#issuecomment-278533482).*
 
 ## New features
 
-- Update ESLint from 3.10.x to 3.15.x.
-- 3 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.10.x to 3.15.x
+- 3 additional rules are now fixable with `standard --fix`
 
 ## New rules
 
 *(Estimated % of affected standard users, based on test suite in parens)*
 
 - Disallow mixing different operators without parens ([no-mixed-operators](http://eslint.org/docs/rules/no-mixed-operators)) [#566](https://github.com/feross/standard/issues/566) (5%)
-- Enforce 1 newline at end of file (previously 1 or 2 were allowed) ([no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)) [#733](https://github.com/feross/standard/issues/733) (3%)
+- Enforce 1 newline at end of file (previously 1 or 2 were ok) ([no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)) [#733](https://github.com/feross/standard/issues/733) (3%)
 - Disallow Unused Expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#690](https://github.com/feross/standard/issues/690) (3%)
   - Note: this affects users of the Chai test framework. [Read about the changes you need to make](https://github.com/feross/standard/issues/690#issuecomment-278533482).
 - Disallow redundant return statements ([no-useless-return](http://eslint.org/docs/rules/no-useless-return)) [#694](https://github.com/feross/standard/issues/694) (1%)
@@ -35,18 +52,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 8.6.0 - 2016-11-22
 
-- Update ESLint from 3.8.x to 3.10.x.
-- 3 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.8.x to 3.10.x
+- 3 additional rules are now fixable with `standard --fix`
 
 ## 8.5.0 - 2016-10-25
 
-- Update ESLint from 3.7.x to 3.8.x.
-- 2 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.7.x to 3.8.x
+- 2 additional rules are now fixable with `standard --fix`
 
 ## 8.4.0 - 2016-10-10
 
-- Update ESLint from 3.6.x to 3.7.x.
-- 5 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.6.x to 3.7.x
+- 5 additional rules are now fixable with `standard --fix`
 - Use more conservative semver ranges [#654](https://github.com/feross/standard/issues/654)
 
 ## 8.3.0 - 2016-09-29
@@ -67,13 +84,13 @@ a custom parser, since `standard` can now parse ES7 (i.e. ES2016) syntax out of 
 box.
 
 - Support ES7 (i.e. ES2016) syntax.
-- Update ESLint from 3.5.x to 3.6.x.
-- 4 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.5.x to 3.6.x
+- 4 additional rules are now fixable with `standard --fix`
 
 ## 8.1.0 - 2016-09-17
 
-- Update ESLint from 3.3.x to 3.5.x.
-- Around 10 additional rules are now fixable with `standard --fix`!
+- Update ESLint from 3.3.x to 3.5.x
+- Around 10 additional rules are now fixable with `standard --fix`
 
 ## 8.0.0 - 2016-08-23
 
