@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 10.0.0 (BETA) - 2017-04-01
+
+TODO: FINALIZE RELEASE NOTES
+
+### New features
+
+- Update ESLint from 3.15.x to 3.16.x.
+
+### New rules
+
+*(Estimated % of affected standard users, based on test suite in parens)*
+
+- Disallow using deprecated Node.js APIs ([node/no-deprecated-api](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md)) [#693](https://github.com/feross/standard/issues/693) (13%)
+  - Ensures that code always runs without warnings on the lastest versions of Node
+  - Ensures that safe Buffer methods (`Buffer.from()`, `Buffer.alloc()`) are used instead of `Buffer()`
+- Enforce callbacks always called with Node.js-style error first ([standard/no-callback-literal](https://github.com/xjamundx/eslint-plugin-standard#rules-explanations)) [#623](https://github.com/feross/standard/issues/623) (3%)
+  - Functions named `callback`, `cb`, or `next` must be called with `null`, `undefined`, or an `Error` object as the first argument
+  - Prevents accidentally using a string instead of an `Error` object
+  - Prevents confusing callbacks that do not follow the Node.js pattern
+- Disallow any imports that come after non-import statements ([import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)) [#806](https://github.com/feross/standard/issues/806) (1%)
+- Disallow unnecessary return await ([no-return-await](http://eslint.org/docs/rules/no-return-await)) [#695](https://github.com/feross/standard/issues/695) (0%)
+- Disallow comma-dangle in functions ([comma-dangle](http://eslint.org/docs/rules/comma-dangle)) [#787](https://github.com/feross/standard/issues/787) (0%)
+- Disallow repeated exports of names or defaults ([import/export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
+- Disallow import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
+- Disallow Webpack loader syntax in imports ([import/no-webpack-loader-syntax](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
+
+### Changed rules
+
+- Relax rule: allow using `...rest` to omit properties from an object ([no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)) [#800](https://github.com/feross/standard/issues/800)
+  - This is a common and useful pattern in React/JSX apps!
+- Relax rule: allow Flow `import type` statements ([import/no-duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)) [#599](https://github.com/feross/standard/issues/599)
+  - These are no longer considered to be "duplicate imports"
+- Relax rule: Treat `process.exit()` the same as `throw` in code path analysis ([node/process-exit-as-throw](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/process-exit-as-throw.md)) [#699](https://github.com/feross/standard/issues/699)
+  - Makes certain other rules work better and give fewer false positives
+- Relax rule: allow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label))
+  - Redundant, since "no-labels" is already enabled, which is more restrictive
+
 ## 9.0.0 - 2017-02-28
 
 It's time for a new major version of `standard`! As usual, this release contains a
