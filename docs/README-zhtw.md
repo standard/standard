@@ -166,22 +166,22 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 
 超多人的啦！
 
-[<img width=150 src=docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=docs/logos/github.png>](https://github.com) | [<img width=150 src=docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=docs/logos/brave.png>](https://www.brave.com) |
+[<img width=150 src=../docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=../docs/logos/github.png>](https://github.com) | [<img width=150 src=../docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=../docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=../docs/logos/brave.png>](https://www.brave.com) |
 |---|---|---|---|---|
 
-| [<img width=150 src=docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+| [<img width=150 src=../docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=../docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=../docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=../docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=../docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
 |---|---|---|---|---|
 
-[<img width=150 src=docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+[<img width=150 src=../docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=../docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=../docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=../docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=../docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
 |---|---|---|---|---|
 
-[<img width=150 src=docs/logos/atom.png>](https://atom.io) | [<img width=150 src=docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=docs/logos/clevertech.png>](https://clevertech.biz) |
+[<img width=150 src=../docs/logos/atom.png>](https://atom.io) | [<img width=150 src=../docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=../docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=../docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=../docs/logos/clevertech.png>](https://clevertech.biz) |
 |---|---|---|---|---|
 
-[<img width=150 src=docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=docs/logos/zentrick.png>](https://www.zentrick.com) |
+[<img width=150 src=../docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=../docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=../docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=../docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=../docs/logos/zentrick.png>](https://www.zentrick.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=docs/logos/taser.png>](https://www.taser.com) |
+[<img width=150 src=../docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=../docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=../docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=../docs/logos/taser.png>](https://www.taser.com) |
 |---|---|---|---|---|
 
 除了公司之外，非常多的社群也在套件中採用了 `standard` [因為太多了](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 無法在此一一列舉。
