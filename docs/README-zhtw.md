@@ -18,9 +18,9 @@
 <p align="center">
   <em>
     翻譯：
-    <a href="docs/README-ptbr.md">Português</a>、
-    <a href="docs/README-esla.md">Spanish</a>、
-    <a href="docs/README-zhtw.md">繁體中文</a>
+    <a href="README-ptbr.md">Português</a>、
+    <a href="README-esla.md">Spanish</a>、
+    <a href="README-zhtw.md">繁體中文</a>
   </em>
 </p>
 
