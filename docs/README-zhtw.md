@@ -41,7 +41,7 @@ npm install standard --save-dev
 
 ## 語法規則
 
-- **兩個空白** － 縮排
+- **兩個空白** － 當作縮排
 - **字串用單引號** － 除非要避免跳脫字元
 - **沒有不必要的變數** － 這可以解決 *超多* 的 Bug ！
 - **不要加分號** － [這真的][1] [很 OK，][2] [真的！][3]
@@ -67,30 +67,30 @@ npm install standard --save-dev
 ## 目錄
 
 - 快速入門
-  - [安裝](#%E5%AE%89%E8%A3%9D)
-  - [用法](#%E7%94%A8%E6%B3%95)
-  - [如果你還是不懂的話可以](#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%82%84%E6%98%AF%E4%B8%8D%E6%87%82%E7%9A%84%E8%A9%B1%E5%8F%AF%E4%BB%A5)
+  - [安裝](#安裝)
+  - [用法](#用法)
+  - [如果你還是不懂的話可以](#如果你還是不懂的話可以)
 - FAQ
-  - [為什麼我要用 JavaScript Standard Style ？](#why-should-i-use-javascript-standard-style)
-  - [誰在用 JavaScript Standard Style ？](#who-uses-javascript-standard-style)
-  - [有文字編輯器的插件嗎？](#are-there-text-editor-plugins)
-  - [有 README 勳章嗎？](#is-there-a-readme-badge)
-  - [我不同意某條規定，你們可以改一下嗎？](#i-disagree-with-rule-x-can-you-change-it)
-  - [但這不是真實網路中的標準！](#but-this-isnt-a-real-web-standard)
-  - [有自動格式化工具嗎？](#is-there-an-automatic-formatter)
-  - [如何忽略某些檔案？](#how-do-i-ignore-files)
-  - [如何隱藏某些警告？](#how-do-i-hide-a-certain-warning)
-  - [我用了些函式庫污染了全域變數。我該怎麼防止 "variable is not defined" 錯誤？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-  - [如何使用實驗性質的 JavaScript (ES Next) 功能？](#how-do-i-use-experimental-javascript-es-next-features)
-  - [我可以使用 JavaScript 的變種，像是 Flow 嗎？](#can-i-use-a-javascript-language-variant-like-flow)
-  - [Mocha, Jasmine, QUnit 等等該怎麼辦？](#what-about-mocha-jasmine-qunit-etc)
-  - [Web Workers 呢？](#what-about-web-workers)
-  - [可以檢查 Markdown 或 HTML 檔裡面的程式嗎？](#can-i-check-code-inside-of-markdown-or-html-files)
-  - [有 Git `pre-commit` 的插件嗎？](#is-there-a-git-pre-commit-hook)
-  - [如何將輸出變得彩色和*美麗*？](#how-do-i-make-the-output-all-colorful-and-pretty)
-  - [有 Node.js 的 API 嗎？](#is-there-a-nodejs-api)
-  - [我如何貢獻 `standard` ？](#how-do-i-contribute-to-standard)
-- [授權](#license)
+  - [為什麼我要用 JavaScript Standard Style？](#為什麼我要用-javascript-standard-style)
+  - [誰在用 JavaScript Standard Style？](#誰在用-javascript-standard-style)
+  - [有文字編輯器的插件嗎？](#有文字編輯器的插件嗎)
+  - [有 README 專用的 standard 徽章嗎？](#有-readme-專用的-standard-徽章嗎)
+  - [我不同意某條規定，你們可以改一下嗎？](#我不同意某條規定你們可以改一下嗎)
+  - [但這不是真實網路中的標準！](#但這不是真實網路中的標準)
+  - [有自動修正的工具嗎？](#有自動修正的工具嗎)
+  - [如何忽略某些檔案？](#如何忽略某些檔案)
+  - [如何隱藏某些警告？](#如何隱藏某些警告)
+  - [我使用的套件庫污染了全域變數，該如何避免出現 "variable is not defined" 錯誤？](#我使用的套件庫污染了全域變數該如何避免出現-variable-is-not-defined-錯誤)
+  - [如何使用實驗性質的 JavaScript (ES Next) 新語法？](#如何使用實驗性質的-javascript-es-next-新語法)
+  - [我可以使用 JavaScript 的變體，像是 Flow 嗎？](#我可以使用-javascript-的變體像是-flow-嗎)
+  - [Mocha、Jasmine、QUnit 等等套件呢？](#mochajasminequnit-等等套件呢)
+  - [Web Workers 呢？](#web-workers-呢)
+  - [可以檢查 Markdown 或 HTML 檔裡面的程式嗎？](#可以檢查-markdown-或-html-檔裡面的程式嗎)
+  - [有 Git `pre-commit` 的插件嗎？](#有-git-pre-commit-的插件嗎)
+  - [如何將輸出加上顏色？](#如何將輸出加上顏色)
+  - [有 Node.js 的 API 嗎？](#有-nodejs-的-api-嗎)
+  - [如何貢獻 `standard`？](#如何貢獻-standard)
+- [授權](#授權)
 
 ## 安裝
 
@@ -162,7 +162,7 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 
 採用 `standard style` 代表把程式碼的簡潔和群體規範，看得比個人風格重要。這可能不是對於所有專案和開發環境都合情合理。然而，開源軟體可能是一個對於新手充滿敵意的環境，訂定簡單、一致的貢獻準則，才可以專案更健康，有更多新人投入。
 
-## 誰用了 JavaScript Standard Style?
+## 誰在用 JavaScript Standard Style？
 
 超多人的啦！
 
@@ -280,7 +280,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 ```
 
-## 我不同意其中某些規則，你們可以改一下嗎？
+## 我不同意某條規定，你們可以改一下嗎？
 
 不行。`standard` 的重點就是在於避免那些對於程式碼的風格[永遠不會有答案的爭議上][bikeshedding]，像是從古至今就在爭論的 tab vs 空白等等。這些問題是永遠不會被解決的，但永無止盡的爭論卻會讓大家分心不做正事。最後你還是得決定去「選擇其中一個」，這就是 `standard` 的哲學 —— 一大堆合理的「選擇其中一個」。幸運的是，很多採用 standard 的使用者已經發現使用後獲得的成果已經比捍衛自己的偏見好多了。
 
@@ -290,7 +290,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## 但這不是真正的網路標準！
+## 但這不是真實網路中的標準！
 
 這當然不是！這個風格訂定並不是隸屬於什麼正式網路團體的，所以這個專案才叫做 `feross/standard` 而不是
 `ECMA/standard`.
@@ -310,7 +310,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 會輸出 "`Run standard --fix to
 automatically fix some problems`" 。
 
-## 如何忽略檔案？
+## 如何忽略某些檔案？
 
 一些路徑 （`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`bundle.js` 和  `.` 開頭的檔案和資料夾，像是 `.git/`）會自動被忽略。
 
@@ -329,7 +329,7 @@ automatically fix some problems`" 。
 }
 ```
 
-## 我如何隱藏某些特定的警告？
+## 如何隱藏某些警告？
 
 在少數情況下，你需要去打破一些規則，然後隱藏 `standard` 產生的警告。
 
@@ -459,7 +459,7 @@ $ standard --env mocha
 
 *注意： `env` 和 `envs` 是可以互通的。*
 
-## Web Worker 呢？
+## Web Workers 呢？
 
 在檔案開頭加入：
 
@@ -510,7 +510,7 @@ git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
 
-## 如何將輸出變得彩色和*美麗*？
+## 如何將輸出加上顏色？
 
 原本內建的輸出是沒有顏色的，不過如果你喜歡閃亮亮的東西，可以安裝 [snazzy](https://www.npmjs.com/package/snazzy)：
 
@@ -581,7 +581,7 @@ var opts = {
 
 `callback` 會被執行，並給予 `Error` 和 `results` 參數（和上面相同）。
 
-## 我該如何貢獻 `standard`？
+## 如何貢獻 `standard`？
 
 我們非常歡迎貢獻！可以看看[議題](https://github.com/feross/standard/issues) 或 [PRs](https://github.com/feross/standard/pulls)，如果沒看到想要的東西，也可以自己建立。
 
