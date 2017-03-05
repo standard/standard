@@ -610,7 +610,7 @@
   }.bind(user)    // ✓ ok
   ```
 
-* **避免不必要的布林映射（boolean cast）。**
+* **避免不必要的布林型別轉換（boolean cast）。**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -1344,7 +1344,7 @@
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-所有當今流行的程式語言使用 AST 基礎的最小化，所以可以完美的處理沒有分號的 JavaScript。
+所有當今流行的程式語言都使用 AST 為基礎來做程式碼的最小化（code minification），所以可以完美的處理沒有分號的 JavaScript。
 
 ##### 節選自 *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 >
