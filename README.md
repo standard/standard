@@ -19,7 +19,8 @@
   <em>
     Translations:
     <a href="docs/README-ptbr.md">Português</a>,
-    <a href="docs/README-esla.md">Spanish</a>
+    <a href="docs/README-esla.md">Spanish</a>,
+    <a href="docs/README-zhtw.md">繁體中文</a>
   </em>
 </p>
 
