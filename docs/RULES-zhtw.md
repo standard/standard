@@ -1,10 +1,10 @@
 # JavaScript Standard Style
 
-翻譯: [English](RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)
+翻譯: [English](../RULES.md)、[Português](RULES-ptbr.md)、[Spanish](RULES-esla.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-這是一個 [standard](https://github.com/feross/standard) JavaScript 規則的摘要。
+這是 [standard](https://github.com/feross/standard) 語法規則的摘要。
 
 最快速掌握 `standard` 的方法，就是直接安裝並在你的程式碼中開始使用。
 
@@ -196,7 +196,7 @@
 
   console.log(value)
   ```
-* **三元運算子（ternary operator）** 在多行的情況下，把 `?` 和 `:` 和後面敘述放在相同的一行。
+* **三元運算子（ternary operator）** 在多行的情況下，把 `?` 和 `:` 和後面敘述放在同一行。
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -309,7 +309,7 @@
 
 * **檔案結尾必須要是一個空白行。**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **呼叫函式時，函式和後面的括弧間不要加空白。**
 
