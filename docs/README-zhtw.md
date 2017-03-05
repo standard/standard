@@ -244,7 +244,7 @@ set autoread
 
 ### Emacs
 
-安裝 **[Flycheck][emacs-1]** 然後察看 **[使用手冊][emacs-2]** 學習如何在專案中使用。
+安裝 **[Flycheck][emacs-1]** 然後查看 **[使用手冊][emacs-2]** 學習如何在專案中使用。
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
