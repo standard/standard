@@ -1,6 +1,6 @@
 # JavaScript Standard Style
 
-Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md)
+Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -907,7 +907,7 @@ your code.
 
   ```js
   const regexp = /test   value/   // ✗ avoid
-  
+
   const regexp = /test {3}value/  // ✓ ok
   const regexp = /test value/     // ✓ ok
   ```
@@ -1140,7 +1140,7 @@ your code.
   }
 
   const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
-  
+
   const user = {
     name: 'Jane Doe',
     age: 30,
@@ -1216,7 +1216,7 @@ your code.
   ```js
   //comment           // ✗ avoid
   // comment          // ✓ ok
-  
+
   /*comment*/         // ✗ avoid
   /* comment */       // ✓ ok
   ```
