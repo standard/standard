@@ -269,7 +269,7 @@
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **不允許行尾空白。**
+* **不允許行尾逗號。**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
