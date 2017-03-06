@@ -1,6 +1,6 @@
 # JavaScript Standard Style
 
-Read in: [English](RULES.md)
+Translations: [English](../RULES.md), [Spanish](RULES-esla.md), [繁體中文](RULES-zhtw.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 

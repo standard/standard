@@ -6,15 +6,24 @@
   <br>
 </h1>
 
-<h4 align="center">Um Guia de Estilo JavaScript para a todos governar.</h4>
-
 <p align="center">
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="http://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
-  <br>
-  Read in: <a href="README.md">English</a>
 </p>
+
+<h4 align="center">Um Guia de Estilo JavaScript para a todos governar</h4>
+
+<p align="center">
+  <em>
+    Translations:
+    <a href="../README.md">English</a>,
+    <a href="README-esla.md">Spanish</a>,
+    <a href="README-zhtw.md">繁體中文</a>
+  </em>
+</p>
+
 <br>
 
 Sem ter que tomar decisões; Sem gerenciar `.eslintrc`, `.jshintrc`, ou `.jscsrc` . Funciona logo de cara.
