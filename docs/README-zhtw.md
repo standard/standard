@@ -73,7 +73,7 @@ npm install standard --save-dev
 - FAQ
   - [為什麼我要用 JavaScript Standard Style？](#為什麼我要用-javascript-standard-style)
   - [誰在用 JavaScript Standard Style？](#誰在用-javascript-standard-style)
-  - [有文字編輯器的插件嗎？](#有文字編輯器的插件嗎)
+  - [有文字編輯器的外掛嗎？](#有文字編輯器的外掛嗎)
   - [有 README 專用的 standard 徽章嗎？](#有-readme-專用的-standard-徽章嗎)
   - [我不同意某條規定，你們可以改一下嗎？](#我不同意某條規定你們可以改一下嗎)
   - [但這不是真實網路中的標準！](#但這不是真實網路中的標準)
@@ -86,7 +86,7 @@ npm install standard --save-dev
   - [Mocha、Jasmine、QUnit 等等套件呢？](#mochajasminequnit-等等套件呢)
   - [Web Workers 呢？](#web-workers-呢)
   - [可以檢查 Markdown 或 HTML 檔裡面的程式嗎？](#可以檢查-markdown-或-html-檔裡面的程式嗎)
-  - [有 Git `pre-commit` 的插件嗎？](#有-git-pre-commit-的插件嗎)
+  - [有 Git `pre-commit` 的外掛嗎？](#有-git-pre-commit-的外掛嗎)
   - [如何將輸出加上顏色？](#如何將輸出加上顏色)
   - [有 Node.js 的 API 嗎？](#有-nodejs-的-api-嗎)
   - [如何貢獻 `standard`？](#如何貢獻-standard)
@@ -189,9 +189,9 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 `standard` 也是 GitHub 的
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 中，最多人給星的專案。
 
-## 有文字編輯器的插件嗎？
+## 有文字編輯器的外掛嗎？
 
-首先，安裝 `standard`。接下來，就可以依據你使用的編輯器安裝對應的插件了：
+首先，安裝 `standard`。接下來，就可以依據你使用的編輯器安裝對應的外掛了：
 
 ### Sublime Text
 
@@ -421,7 +421,7 @@ $ standard --parser babel-eslint
 
 在使用客製化的 JS 變體前，請考慮增加這些複雜度（和跟上所需要的人力）是否值得。
 
-`standard` 支援 ESLint 插件。在使用 `standard` 先使用其中一種把你的程式碼先轉換成正規的 JavaScript 語法。可以從 npm 安裝客製化的語法解析器（比如說：`npm install eslint-plugin-flowtype`）然後執行：
+`standard` 支援 ESLint 外掛。在使用 `standard` 先使用其中一種把你的程式碼先轉換成正規的 JavaScript 語法。可以從 npm 安裝客製化的語法解析器（比如說：`npm install eslint-plugin-flowtype`）然後執行：
 
 ```bash
 $ standard --plugin flowtype
@@ -499,7 +499,7 @@ $ npm install eslint-plugin-html
 $ standard --plugin html '**/*.html'
 ```
 
-## 有 Git `pre-commit` 的插件嗎？
+## 有 Git `pre-commit` 的外掛嗎？
 
 當然有啊！
 
@@ -538,7 +538,7 @@ $ standard --verbose | snazzy
 var opts = {
   fix: false,   // 自動修正問題
   globals: [],  // 會用到的全域變數
-  plugins: [],  // eslint 插件
+  plugins: [],  // eslint 外掛
   envs: [],     // eslint 環境
   parser: ''    // javascript 語法解析器 （比如說 babel-eslint）
 }
@@ -573,7 +573,7 @@ var opts = {
   cwd: '',      // 當前目錄（預設：process.cwd()）
   fix: false,   // 自動修正問題
   globals: [],  // 會用到的全域變數
-  plugins: [],  // eslint 插件
+  plugins: [],  // eslint 外掛
   envs: [],     // eslint 環境
   parser: ''    // javascript 語法解析器 （比如說 babel-eslint）
 }
@@ -599,7 +599,7 @@ var opts = {
 - **[standard-www](https://github.com/feross/standard-www)** - http://standardjs.com 網站程式
 - **[semistandard](https://github.com/Flet/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
-也有非常多的 **[編輯器插件](#text-editor-plugins)**、
+也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
 **[有使用 `standard` 的 npm 套件清單](https://github.com/feross/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/feross/awesome-standard)**。
 
 ## 授權
