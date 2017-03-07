@@ -40,6 +40,13 @@ TODO: FINALIZE RELEASE NOTES
 - Relax rule: allow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label))
   - Redundant, since "no-labels" is already enabled, which is more restrictive
 
+## 9.0.1 - 2017-03-07
+
+# Changed rules
+
+- Relax rule: Allow mixing basic operators without parens [#816](https://github.com/feross/standard/issues/816)
+  - Specifically, these operators: `+`, `-`, `*`, `/`, `%`, and `**`
+
 ## 9.0.0 - 2017-02-28
 
 It's time for a new major version of `standard`! As usual, this release contains a
