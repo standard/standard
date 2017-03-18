@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 9.0.2 - 2017-03-17
+
+# Changed rules
+
+- Relax rule: Allow tagged template string expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#822](https://github.com/feross/standard/issues/822)
+
 ## 9.0.1 - 2017-03-07
 
 # Changed rules
