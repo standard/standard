@@ -130,7 +130,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Para delcaraciones if multi-linea** usar llaves.
+* **Para declaraciones if multi-linea** debe usar llaves.
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -249,7 +249,440 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-## Puntos y comas (semicolos)
+* **Agregar espacios dentro de bloques de una sola linea.**
+
+  eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
+
+  ```js
+    function foo () {return true}    // ✗ evitar
+    function foo () { return true }  // ✓ ok
+  ```
+
+* **Usar camelcase al nombre variables y funciones.**
+
+  eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
+
+  ```js
+    function my_function () { }    // ✗ avoid
+    function myFunction () { }     // ✓ ok
+
+    var my_var = 'hello'           // ✗ avoid
+    var myVar = 'hello'            // ✓ ok
+  ```
+
+* **Comas adicionales no esta permitido.**
+
+  eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
+
+  ```js
+    var obj = {
+      message: 'hello',   // ✗ avoid
+    }
+  ```
+
+* **Comas deben colocarse al final de la linea actual.**
+
+  eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
+
+  ```js
+    var obj = {
+      foo: 'foo'
+      ,bar: 'bar'   // ✗ avoid
+    }
+
+    var obj = {
+      foo: 'foo',
+      bar: 'bar'   // ✓ ok
+    }
+  ```
+
+* **El Puto debe ir en la misma linea que la propiedad.**
+
+  eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
+
+  ```js
+    console.
+      log('hello')  // ✗ avoid
+
+    console
+      .log('hello') // ✓ ok
+  ```
+
+* **Archivos deben terminar con una nueva linea.**
+
+  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+
+* **Sin espacios entre el identificador de la funcion y su invocación.**
+
+  eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
+
+  ```js
+  console.log ('hello') // ✗ avoid
+  console.log('hello')  // ✓ ok
+  ```
+
+* **Agregar espacio entre dos puntos (colon) y pares clave valor.**
+
+  eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
+
+  ```js
+  var obj = { 'key' : 'value' }    // ✗ avoid
+  var obj = { 'key' :'value' }     // ✗ avoid
+  var obj = { 'key':'value' }      // ✗ avoid
+  var obj = { 'key': 'value' }     // ✓ ok
+  ```
+
+* **Nombres de Constructor deben empezar con letra Mayúscula.**
+
+  eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
+
+  ```js
+  function animal () {}
+  var dog = new animal()    // ✗ avoid
+
+  function Animal () {}
+  var dog = new Animal()    // ✓ ok
+  ```
+
+* **Constructor sin argumentos debe ser invocado con paréntesis.**
+
+  eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
+
+  ```js
+  function Animal () {}
+  var dog = new Animal    // ✗ avoid
+  var dog = new Animal()  // ✓ ok
+  ```
+
+* **Objetos deben contener un getter cuando se ha definido un setter.**
+
+  eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
+
+  ```js
+  var person = {
+    set name (value) {    // ✗ avoid
+      this.name = value
+    }
+  }
+
+  var person = {
+    set name (value) {
+      this.name = value
+    },
+    get name () {         // ✓ ok
+      return this.name
+    }
+  }
+  ```
+
+* **Constructores de clases derivadas deben llamar `super`.**
+
+  eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
+
+  ```js
+  class Dog {
+    constructor () {
+      super()   // ✗ avoid
+    }
+  }
+
+  class Dog extends Mammal {
+    constructor () {
+      super()   // ✓ ok
+    }
+  }
+  ```
+
+* **Usar array literales en vez de array constructor.**
+
+  eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
+
+  ```js
+  var nums = new Array(1, 2, 3)   // ✗ avoid
+  var nums = [1, 2, 3]            // ✓ ok
+  ```
+
+* **Evitar usar arguments.calle y arguments.caller.**
+
+  eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
+
+  ```js
+  function foo (n) {
+    if (n <= 0) return
+
+    arguments.callee(n - 1)   // ✗ avoid
+  }
+
+  function foo (n) {
+    if (n <= 0) return
+
+    foo(n - 1)
+  }
+  ```
+
+* **Evitar modificar variables que fueron declaradas como clase.**
+
+  eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
+
+  ```js
+  class Dog {}
+  Dog = 'Fido'    // ✗ avoid
+  ```
+
+* **Evitar modifidicar variables declaracas usando `const`.**
+
+  eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
+
+  ```js
+  const score = 100
+  score = 125       // ✗ avoid
+  ```
+
+* **Evitar usar expresiones constantes en condicionales (a excepcion de búcles).**
+
+  eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
+
+  ```js
+  if (false) {    // ✗ avoid
+    // ...
+  }
+
+  if (x === 0) {  // ✓ ok
+    // ...
+  }
+
+  while (true) {  // ✓ ok
+    // ...
+  }
+  ```
+
+* **Evitar carácteres de control de expresiones regulares.**
+
+  eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
+
+  ```js
+  var pattern = /\x1f/    // ✗ avoid
+  var pattern = /\x20/    // ✓ ok
+  ```
+
+* **Evitar sentencias `debugger`.**
+
+  eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
+
+  ```js
+  function sum (a, b) {
+    debugger      // ✗ avoid
+    return a + b
+  }
+  ```
+* **Evitar operador delete en variables.**
+
+  eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
+
+  ```js
+  var name
+  delete name     // ✗ avoid
+  ```
+
+* **Evitar argumentos duplicados en definicion de funciones.**
+
+  eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
+
+  ```js
+  function sum (a, b, a) {  // ✗ avoid
+    // ...
+  }
+
+  function sum (a, b, c) {  // ✓ ok
+    // ...
+  }
+  ```
+
+* **Evitar duplicados en miembros de clase.**
+
+  eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
+
+  ```js
+  class Dog {
+    bark () {}
+    bark () {}    // ✗ avoid
+  }
+  ```
+
+* **Evitar duplicado de claves en objetos literales.**
+
+  eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
+
+  ```js
+  var user = {
+    name: 'Jane Doe',
+    name: 'John Doe'    // ✗ avoid
+  }
+  ```
+
+* **Evitar dublicados de etiqueta `case` en sentencias `switch`.**
+
+  eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
+
+  ```js
+  switch (id) {
+    case 1:
+      // ...
+    case 1:     // ✗ avoid
+  }
+  ```
+
+* **Usar una unica sentencia `import` por modulo.**
+
+  eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
+
+  ```js
+  import { myFunc1 } from 'module'
+  import { myFunc2 } from 'module'          // ✗ avoid
+
+  import { myFunc1, myFunc2 } from 'module' // ✓ ok
+  ```
+
+* **Evitar classes de carácteres vacia en expresiones regulares.**
+
+  eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
+
+  ```js
+  const myRegex = /^abc[]/      // ✗ avoid
+  const myRegex = /^abc[a-z]/   // ✓ ok
+  ```
+
+* **Evitar pratones de destructuración vacios.**
+
+  eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
+
+  ```js
+  const { a: {} } = foo         // ✗ avoid
+  const { a: { b } } = foo      // ✓ ok
+  ```
+
+* **Evitar uso de `eval()`.**
+
+  eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
+
+  ```js
+  eval( "var result = user." + propName ) // ✗ avoid
+  var result = user[propName]             // ✓ ok
+  ```
+
+* **Evitar reasignar excepciones en clausas `catch`.**
+
+  eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
+
+  ```js
+  try {
+    // ...
+  } catch (e) {
+    e = 'new value'             // ✗ avoid
+  }
+
+  try {
+    // ...
+  } catch (e) {
+    const newVal = 'new value'  // ✓ ok
+  }
+  ```
+
+* **Evitar extender objetos nativos**
+
+  eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
+
+  ```js
+  Object.prototype.age = 21     // ✗ avoid
+  ```
+
+* **Evitar uso innecesario de bind en funciones.**
+
+  eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
+
+  ```js
+  const name = function () {
+    getName()
+  }.bind(user)    // ✗ avoid
+
+  const name = function () {
+    this.getName()
+  }.bind(user)    // ✓ ok
+  ```
+
+* **Evitar hacer cast a booleanos.**
+
+  eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
+
+  ```js
+  const result = true
+  if (!!result) {   // ✗ avoid
+    // ...
+  }
+
+  const result = true
+  if (result) {     // ✓ ok
+    // ...
+  }
+  ```
+
+* **Evitar paréntesis inncesario alrededor de expresión de funciones.**
+
+  eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
+
+  ```js
+  const myFunc = (function () { })   // ✗ avoid
+  const myFunc = function () { }     // ✓ ok
+  ```
+
+* **Usar `break` para evitar pasar de largo `fallthrough` en casos `switch`.**
+
+  eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
+
+  ```js
+  switch (filter) {
+    case 1:
+      doSomething()    // ✗ avoid
+    case 2:
+      doSomethingElse()
+  }
+
+  switch (filter) {
+    case 1:
+      doSomething()
+      break           // ✓ ok
+    case 2:
+      doSomethingElse()
+  }
+
+  switch (filter) {
+    case 1:
+      doSomething()
+      // fallthrough  // ✓ ok
+    case 2:
+      doSomethingElse()
+  }
+  ```
+
+* **Evitar decimales flotantes**
+
+  eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
+
+  ```js
+  const discount = .5      // ✗ avoid
+  const discount = 0.5     // ✓ ok
+  ```
+
+* **Evitar reasignación de declaraciones de funciones**
+
+  eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
+
+  ```js
+  function myFunc () { }
+  myFunc = myOtherFunc    // ✗ avoid
+  ```
+
+## Puntos y comas (semicolons)
 
 * Sin puntos y comas. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
