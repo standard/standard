@@ -40,6 +40,12 @@ TODO: FINALIZE RELEASE NOTES
 - Relax rule: allow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label))
   - Redundant, since "no-labels" is already enabled, which is more restrictive
 
+## 9.0.2 - 2017-03-17
+
+# Changed rules
+
+- Relax rule: Allow tagged template string expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#822](https://github.com/feross/standard/issues/822)
+
 ## 9.0.1 - 2017-03-07
 
 # Changed rules
