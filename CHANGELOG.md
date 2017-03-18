@@ -9,7 +9,7 @@ TODO: FINALIZE RELEASE NOTES
 
 ### New features
 
-- Update ESLint from 3.15.x to 3.16.x.
+- Update ESLint from 3.15.x to 3.18.x.
 
 ### New rules
 
@@ -42,15 +42,15 @@ TODO: FINALIZE RELEASE NOTES
 
 ## 9.0.2 - 2017-03-17
 
-# Changed rules
+### Changed rules
 
 - Relax rule: Allow tagged template string expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#822](https://github.com/feross/standard/issues/822)
 
 ## 9.0.1 - 2017-03-07
 
-# Changed rules
+### Changed rules
 
-- Relax rule: Allow mixing basic operators without parens [#816](https://github.com/feross/standard/issues/816)
+- Relax rule: Allow mixing basic operators without parens ([no-mixed-operators](http://eslint.org/docs/rules/no-mixed-operators)) [#816](https://github.com/feross/standard/issues/816)
   - Specifically, these operators: `+`, `-`, `*`, `/`, `%`, and `**`
 
 ## 9.0.0 - 2017-02-28
@@ -97,8 +97,8 @@ your tests to improve their robustness. [Read about the changes you need to make
 
 ### Changed rules
 
-- Relax rule: allow TypeScript Triple-Slash Directives (spaced-comment) [#660](https://github.com/feross/standard/issues/660)
-- Relax rule: allow Flow Comments (spaced-comment) [#661](https://github.com/feross/standard/issues/661)
+- Relax rule: allow TypeScript Triple-Slash Directives ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#660](https://github.com/feross/standard/issues/660)
+- Relax rule: allow Flow Comments ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#661](https://github.com/feross/standard/issues/661)
 
 ## 8.6.0 - 2016-11-22
 
