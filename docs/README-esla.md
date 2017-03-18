@@ -97,10 +97,8 @@ que usan `standard`!
   - [¿Puedo verificar codigo dentro de archivos Markdown o HTML?](#puedo-verificar-codigo-dentro-de-archivos-markdown-o-html)
   - [¿Hay algún gancho git `pre-commit`?](#hay-algún-gancho-git-pre-commit)
   - [¿Como hago la salida (output) todo colorido y *bonito*?](#como-hago-la-salida-output-todo-colorido-y-bonito)
-  - [Quiero contribuir a `standard`. ¿Que paquetes debería conocer?](#quiero-contribuir-a-standard-que-paquetes-debería-conocer)
-- [Node.js API](#nodejs-api)
-  - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
-  - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
+  - [Node.js API](#nodejs-api)
+  - [¿Como puedo contribuir a `standard`?](#como-puedo-contribuir-a-standard)
 - [Licencia](#licencia)
 
 ## Instalación
@@ -306,7 +304,7 @@ hacerle saber a las personas que en tu código estas usando estilos standard.
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 ```
 
-### No estoy de acuerdo con la regla X, ¿lo puedo cambiar?
+## No estoy de acuerdo con la regla X, ¿lo puedo cambiar?
 
 No. El punto de `standard` es de evitar [bikeshedding][bikeshedding] acerca del estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo distraen de hacer el trabajo. Al final del dia tienes simplemente que “usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones.
 
@@ -318,7 +316,7 @@ en los cuales debes usar tu tiempo! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-### ¡Pero esto no un estandar web real!
+## ¡Pero esto no un estandar web real!
 
 ¡Por su puesto que no lo es! El estilo aqui no esta afiliado a ningún grupo oficial de estándar web, es por eso que este repositorio se llama `feross/standard` y no `ECMA/standard`.
 
@@ -328,19 +326,19 @@ La palabra “estándar” tiene más significados que solo “estándar web” 
 - Este módulo ayuda a mantener el código a la más alta *calidad estandar*.
 - Este módulo asegura que las nuevas contribuciones sigan los *estilos estandar* básicos.
 
-### ¿Hay algún formateador automatico?
+## ¿Hay algún formateador automatico?
 
 ¡Si! Puedes usar `standard --fix` para arreglar la mayoría de problemas automáticamente.
 
 `standard --fix` esta integrado en `standard` (desde v8.0.0) para máxima conveniencia.
-La mayoría de los problemas se arreglan, pero algunos errores, como olvidar darle uso a los `err` en los callbacks de node, deben ser arreglados manualmente.
+La mayoría de los problemas se arreglan, pero algunos errores (olvidar gestionar errores en callbacks) deben ser arreglados manualmente.
 
-Para no hacerte perder el tiempo, `standard` emite un mensaje ("Run `standard --fix` to
+Para no perder el tiempo, `standard` emite un mensaje ("Run `standard --fix` to
 automatically fix some problems.") cuando detecta errores que pueden ser arreglados automáticamente.
 
-### ¿Como hago para ignorar archivos?
+## ¿Como hago para ignorar archivos?
 
-Ciertas rutas (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, y archivos/directorios que empiezan con `.` cómo `.git` son ignorados automáticamente.
+Ciertas rutas (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, y archivos/directorios que empiezan con `.` cómo `.git`) son ignorados automáticamente.
 
 Las rutas del `.gitignore` del proyecto raíz son ignorados automáticamente.
 
@@ -357,7 +355,7 @@ Algunas veces necesitas ignorar directorios o archivos específicos. Para hacerl
 }
 ```
 
-### ¿Como oculto cierta alerta?
+## ¿Como oculto cierta alerta?
 
 En raros casos, necesitarás romper una regla y ocultar la alerta generada por `standard`.
 
@@ -393,7 +391,7 @@ console.log('offending code goes here...')
 /* eslint-enable no-use-before-define */
 ```
 
-### Yo uso una librería que contamina el espacio de nombres global. ¿Como puedo evitar los errores  "variable is not defined"?
+## Yo uso una librería que contamina el espacio de nombres global. ¿Como puedo evitar los errores  "variable is not defined"?
 
 Algunos paquetes (ej `mocha`) colocan sus funciones (ej: `describe`, `it`) en el objeto global (¡mala manera!). Como estas funciones no están definidas o requeridas (ej: `require`) en ningún lugar del código, `standard` te alertara que están usando una variable que no está definida (usualmente, esta regla es realmente útil para detectar errores de tipeo). Pero queremos inhabilitar estas variables globales.
 
@@ -422,12 +420,12 @@ O, agregar esto a su `package.json`
 
 *Nota: `global` y `globals` son equivalentes*
 
-### ¿Puedo usar un parser JavaScript que soporte ES última-generación?
+## ¿Como Puedo usar características experimentales JavaScript (ES Next)?
 
-`standard` soporta la umtima version de ECMAscript, incluyendo todas las caracteristicas del lenguaje
+`standard` soporta las ultimas características de ECMAscript, ES8 (ES2017) incluyendo todas las características del lenguaje
 de las propuestas que estan en "Stage 4" del proceso de propuestas.
 
-Para soportar caracteristicas experimentales del lenguaje, `standard` soporta especificando un parser JS customizado. Antes que uses un parser customizado, considera siquiera la complejidad agregada vale la pena.
+Para soportar características experimentales del lenguaje, `standard` soporta especificando un parser JS customizado. Antes que uses un parser customizado, considera siquiera la complejidad agregada vale la pena.
 
 Para usar un parser customizado, instálelo desde npm (ejemplo: `npm install babel-eslint`) y ejecute esto:
 
@@ -447,7 +445,7 @@ O, agregue esto a `package.json`:
 
 Si `standard` esta instalado globalmente (ej: `npm install standard --global`), entonces asegurese de instalar `babel-eslint` globalmente también com `npm install babel-eslint --global`.
 
-### ¿Puedo usar una variación de lenguaje JavaScript, como Flow?
+## ¿Puedo usar una variación de lenguaje JavaScript, como Flow?
 
 Antes de usar una variable del lenguaje JavaScript customizado, considere si la complejidad agregada
 (y esfuerzo requerido para obtener los contribuidores alcanzarle con rapidez) vale la pena.
@@ -476,18 +474,7 @@ Si `standard` esta instalado globalmente (ej: `npm install standard --global`), 
 
 *Nota: `plugin` y `plugins` son equivalentes*
 
-### ¿Que acerca de Web Workers?
-
-Agrega esto al inicio de tus archivos:
-
-```js
-/* eslint-env serviceworker */
-```
-
-Esto le hara saber a` standard` (como también humanos que leen tu código) que
-`self` es una variable global en el codigo web worker.
-
-### ¿Que acerca de Mocha, Jasmine, QUnit y etc?
+## ¿Que acerca de Mocha, Jasmine, QUnit y etc?
 
 Para soportar mocha in tus archivos de prueba, agrega esto al inicio de los archivos:
 
@@ -507,7 +494,18 @@ Por una lista de qué variables globales están disponibles en estos entornos ch
 
 *Nota: `env` y `envs` son equivalentes*
 
-### ¿Puedo verificar codigo dentro de archivos Markdown o HTML?
+## ¿Que acerca de Web Workers?
+
+Agrega esto al inicio de tus archivos:
+
+```js
+/* eslint-env serviceworker */
+```
+
+Esto le hara saber a` standard` (como también humanos que leen tu código) que
+`self` es una variable global en el codigo web worker.
+
+## ¿Puedo verificar codigo dentro de archivos Markdown o HTML?
 
 Para verificar código dentro de archivos Markdown use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
 
@@ -538,7 +536,7 @@ Luego para verificar el código que aparece dentro de etiquetas `<script>`, ejec
 $ standard --plugin html '**/*.html'
 ```
 
-### ¿Hay algún gancho git `pre-commit`?
+## ¿Hay algún gancho git `pre-commit`?
 
 Funny you should ask!
 
@@ -550,7 +548,7 @@ git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
 
-### ¿Como hago la salida (output) todo colorido y *bonito*?
+## ¿Como hago la salida (output) todo colorido y *bonito*?
 
 La salida integrada es simple y directa, pero si te gustan las cosas brillantes, puedes instalar [snazzy](https://www.npmjs.com/package/snazzy):
 
@@ -624,13 +622,11 @@ var opts = {
 
 El `callback` será llamado con un objeto de `Error` y `results`: (igual al de arriba).
 
-## Contribuciones
+## ¿Como puedo contribuir a `standard`?
 
 Contribuciones son bienvenidas! Chequea los [issues](https://github.com/feross/standard/issues) o [PRs](https://github.com/feross/standard/pulls), o has el tuyo propio si quieres algo que nos ves allí
 
 Unete a nosotros `#standard` en freenode.
-
-### Quiero contribuir a `standard`. ¿Que paquetes debería conocer?
 
 - **[standard](https://github.com/feross/standard)** - este repositorio
   - **[standard-engine](https://github.com/flet/standard-engine)** - motor arbitrario cli de relgas eslint
