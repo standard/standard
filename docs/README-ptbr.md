@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
-  <a href="http://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
@@ -172,10 +172,10 @@ Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ```
 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
 ```
 
 ### Plugins de Editores de Texto
@@ -549,7 +549,7 @@ Junte-se ao `#standard` no freenode.
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
 - **[standard-format](https://github.com/maxogden/standard-format)** - Formatador de código automático
 - **[snazzy](https://github.com/feross/snazzy)** - Output de terminal bonitinho
-- **[standard-www](https://github.com/feross/standard-www)** - código do  http://standardjs.com
+- **[standard-www](https://github.com/feross/standard-www)** - código do  https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
 
 Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de

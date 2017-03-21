@@ -34,7 +34,7 @@
   "engines": {
     "node": ">=4"
   },
-  "homepage": "http://standardjs.com",
+  "homepage": "https://standardjs.com",
   "keywords": [
     "JavaScript Standard Style",
     "check",
