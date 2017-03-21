@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="http://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
-  <a href="http://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
@@ -274,10 +274,10 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ```
 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
 
 ```md
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
 ```
 
 ## 我不同意某條規定，你們可以改一下嗎？
@@ -596,7 +596,7 @@ var opts = {
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standard 客製化 eslint 規則（非 eslint 核心）
   - **[eslint](https://github.com/eslint/eslint)** - 驅動 standard 的核心
 - **[snazzy](https://github.com/feross/snazzy)** - standard 的終端機美麗輸出
-- **[standard-www](https://github.com/feross/standard-www)** - http://standardjs.com 網站程式
+- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com 網站程式
 - **[semistandard](https://github.com/Flet/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
 也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
