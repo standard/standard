@@ -26,15 +26,19 @@
 
 <br>
 
-No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
-works.
+## JavaScript Style Guide, with linter & automatic code fixer
 
-This module saves you (and others!) time in two ways:
+This module saves you (and others!) time in three ways:
 
 - **No configuration.** The easiest way to enforce consistent style in your
   project. Just drop it in.
-- **Catch style errors before they're submitted in PRs.** Saves precious code
-  review time by eliminating back-and-forth between maintainer and contributor.
+- **Automatically format code.** Just run `standard --fix` and say goodbye to
+  messy or inconsistent code.
+- **Catch style issues & programmer errors early.** Save precious code review
+  time by eliminating back-and-forth between reviewer & contributor.
+
+No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
+works.
 
 Install with:
 
@@ -172,12 +176,14 @@ The beauty of JavaScript Standard Style is that it's simple. No one wants to
 maintain multiple hundred-line style configuration files for every module/project
 they work on. Enough of this madness!
 
-This module saves you time in two ways:
+This module saves you (and others!) time in three ways:
 
 - **No configuration.** The easiest way to enforce consistent style in your
   project. Just drop it in.
-- **Catch style errors before they're submitted in PRs.** Saves precious code
-  review time by eliminating back-and-forth between maintainer and contributor.
+- **Automatically format code.** Just run `standard --fix` and say goodbye to
+  messy or inconsistent code.
+- **Catch style issues & programmer errors early.** Save precious code review
+  time by eliminating back-and-forth between reviewer & contributor.
 
 Adopting `standard` style means ranking the importance of code clarity and
 community conventions higher than personal style. This might not make sense for
