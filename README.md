@@ -26,7 +26,7 @@
 
 <br>
 
-## JavaScript Style Guide, with linter & automatic code fixer
+## JavaScript style guide, with linter & automatic code fixer
 
 This module saves you (and others!) time in three ways:
 
