@@ -16,12 +16,10 @@
 <h4 align="center">統一 JavaScript，只需一種樣式</h4>
 
 <p align="center">
-  <em>
-    翻譯：
-    <a href="../README.md">English</a>、
-    <a href="README-ptbr.md">Português</a>、
-    <a href="README-esla.md">Spanish</a>
-  </em>
+  翻譯：
+  <a href="../README.md">English</a>、
+  <a href="README-ptbr.md">Português</a>、
+  <a href="README-esla.md">Spanish</a>
 </p>
 
 <br>

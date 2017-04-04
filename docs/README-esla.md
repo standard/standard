@@ -16,12 +16,10 @@
 <h4 align="center">Una guía de estilos Javascript para gobernarlos a todos</h4>
 
 <p align="center">
-  <em>
-    Translations:
-    <a href="../README.md">English</a>,
-    <a href="README-ptbr.md">Português</a>,
-    <a href="README-zhtw.md">繁體中文</a>
-  </em>
+  Translations:
+  <a href="../README.md">English</a>,
+  <a href="README-ptbr.md">Português</a>,
+  <a href="README-zhtw.md">繁體中文</a>
 </p>
 
 <br>

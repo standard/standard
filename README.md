@@ -16,12 +16,10 @@
 <h4 align="center">One JavaScript Style to Rule Them All</h4>
 
 <p align="center">
-  <em>
-    Translations:
-    <a href="docs/README-ptbr.md">Português</a>,
-    <a href="docs/README-esla.md">Spanish</a>,
-    <a href="docs/README-zhtw.md">繁體中文</a>
-  </em>
+  Translations:
+  <a href="docs/README-ptbr.md">Português</a>,
+  <a href="docs/README-esla.md">Spanish</a>,
+  <a href="docs/README-zhtw.md">繁體中文</a>
 </p>
 
 <br>
@@ -302,16 +300,16 @@ If you still prefer to configure `standard` manually, [follow this guide][websto
 Yes! If you use `standard` in your project, you can include one of these badges in
 your readme to let people know that your code is using the standard style.
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ```md
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ```
 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ```md
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ```
 
 ## I disagree with rule X, can you change it?
