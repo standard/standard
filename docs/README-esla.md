@@ -24,16 +24,17 @@
 
 <br>
 
-Sin decisiones que hacer. Sin necesidad de `.eslintrc`, `.jshintrc`, o `.jscsrc`
-   a gestionar. Simplemente funciona.
+## Guía de estilos JavaScript, con linter y corrección automática de código
 
-Este modulo te ahorra tiempo a ti (y otros) dos maneras:
+Este modulo te ahorra tiempo a ti (y otros) tres maneras:
 
 - **Sin configuración.** La manera mas fácil de usar estilos consistentes
   en tu proyecto.
-- **Captura errores de estilos antes que sean enviados a PR.** Te ahorras el tiempo de
-  hacer revisiones de código eliminando inconsistencias entre el dueño del
-  repositorio y los contribuidores
+- **Automaticamente formatea el código.** Ejecuta `standard --fix` y dile adios a las
+  inconsistencias en tu código.
+- **De manera temprana captura problemas de estilos y errores de programador.** Te ahorras el tiempo
+  de hacer revisiones de código eliminando inconsistencias entre el dueño del
+  repositorio y los contribuidores.
 
 Instalar con:
 
@@ -169,13 +170,15 @@ Nadie quiere mantener configuración de estilos en múltiples archivos
 de cientos de líneas para cada módulo/proyecto en los que trabajan.
 ¡Es suficiente de esta locura!
 
-Este modulo te ahorra tiempo a ti (y otros) en dos maneras:
+Este modulo te ahorra tiempo a ti (y otros) en tres maneras:
 
-- **Sin configuración.** La manera mas fácil de forzar estilos consistentes
-  en tu proyecto. Simplemente usalo.
-- **Captura errores de estilos antes que sean enviados a PR.** Te guarda de
-  revisiones de código eliminando delante y detrás entre el dueño del
-  repositorio y los contribuidores
+- **Sin configuración.** La manera mas fácil de usar estilos consistentes
+  en tu proyecto.
+- **Automaticamente formatea el código.** Ejecuta `standard --fix` y dile adios a las
+  inconsistencias en tu código.
+- **De manera temprana captura problemas de estilos y errores de programador.** Te ahorras el tiempo
+  de hacer revisiones de código eliminando inconsistencias entre el dueño del
+  repositorio y los contribuidores.
 
 Adoptar estilos `standard` significa clasificar la importancia de la claridad del código y las convenciones de la comunidad mucho más que estilo personal. Esto quizás no tenga sentido para el 100% de proyectos y culturas de desarrollo, aunque proyectos de código abierto pueden llegar a ser hostiles para los novatos. Estableciendo expectativas de contribución limpia y automatizada puede hacer el proyecto más saludable.
 
