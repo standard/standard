@@ -6,6 +6,8 @@ BEGIN {
   %seen = (), @authors = ();
 }
 while (<>) {
+  s/fletd01\@yahoo.com/flettre\@gmail.com/;
+
   next if $seen{$_};
   next if /(support\@greenkeeper.io)/;
   next if /(nate\@ngoldman.me)/;
