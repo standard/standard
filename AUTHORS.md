@@ -4,7 +4,7 @@
 
 - Feross Aboukhadijeh (feross@feross.org)
 - Jonny Buchanan (jonathan.buchanan@gmail.com)
-- Dan Flettre (fletd01@yahoo.com)
+- Dan Flettre (flettre@gmail.com)
 - Brandon Horst (brandonhorst@gmail.com)
 - Yoshua Wuyts (yoshuawuyts@gmail.com)
 - Alexander Gugel (alexander.gugel@gmail.com)
