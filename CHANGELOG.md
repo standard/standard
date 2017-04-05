@@ -23,15 +23,14 @@ console in recent versions of Node.js. This often confuses users and leads to
 unnecessary support tickets for project maintainers.
 
 Some deprecated APIs are even insecure (or at least prone to incorrect usage) which
-can have serious security implications. For that reason, `standard` now prevents
-usage of `Buffer(num)` or `new Buffer(num)` since these functions return
-uninitialized program memory which could contain private user information or
-confidential secret keys.
+can have serious security implications. For that reason, `standard` now considers
+usage of `Buffer(num)` to be an error, since this function returns uninitialized
+program memory which could contain confidential information like passwords or keys.
 
 Instead of `Buffer(num)`, consider using `Buffer.alloc(num)` or `Buffer.from(obj)`
-which make the programmer intention much clearer. These new functions exist in all
-currently supported versions of Node.js, including Node.js 4.x. For more
-background, [see this Node.js issue](https://github.com/nodejs/node/issues/4660).
+which make the programmer's intent clearer. These functions exist in all currently
+supported versions of Node.js, including Node.js 4.x. For more background,
+[see this Node.js issue](https://github.com/nodejs/node/issues/4660).
 
 We also improved some rules to support common patterns in code bases that use
 React, JSX, and Flow.
