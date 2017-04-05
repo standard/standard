@@ -3,13 +3,44 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 10.0.0 (BETA) - 2017-04-01
+## 10.0.0 - 2017-04-04
 
-TODO: FINALIZE RELEASE NOTES
+**Standard is turning 10.0.0!** 🎉
+
+As with every new major release, there are lots of new rules in 10.0.0 designed to
+help catch bugs and make programmer intent more explicit.
+
+`standard` is more popular than ever – **330,000 downloads per month!** It's even
+more popular – **670,000 downloads per month** – if you include the
+[shareable ESLint config](https://www.npmjs.com/package/eslint-config-standard)
+that we also publish.
+
+The most important change in 10.0.0 is that **using deprecated Node.js APIs is now
+considered an error**. It's finally time to update those dusty old APIs!
+
+Deprecated APIs are problematic because they may print warning messages in the
+console in recent versions of Node.js. This often confuses users and leads to
+unecessary support tickets for project maintainers.
+
+Some deprecated APIs are even insecure (or at least prone to incorrect usage) which
+can have serious security implications. For that reason, `standard` now prevents
+usage of `Buffer(num)` or `new Buffer(num)` since these functions return uninitialized
+program memory which could contain private user information, secret keys, etc.
+Instead of `Buffer(num)` use the new `Buffer.alloc(num)` or `Buffer.from(obj)`
+functions which make programmer intent clearer and work in all currently supported
+versions of Node.js, including Node.js 4.x. For more background,
+[see this Node.js issue](https://github.com/nodejs/node/issues/4660).
+
+We also improved some rules to support common patterns in codebases that use React,
+JSX, and Flow.
+
+When you upgrade, consider running `standard --fix` to automatically fix some of
+the issues caught by this new version.
 
 ### New features
 
-- Update ESLint from 3.15.x to 3.18.x.
+- Update ESLint from 3.15.x to 3.19.x.
+- Node.js API: Add `standard.lintTextSync` method
 
 ### New rules
 
@@ -19,15 +50,16 @@ TODO: FINALIZE RELEASE NOTES
   - Ensures that code always runs without warnings on the lastest versions of Node
   - Ensures that safe Buffer methods (`Buffer.from()`, `Buffer.alloc()`) are used instead of `Buffer()`
 - Enforce callbacks always called with Node.js-style error first ([standard/no-callback-literal](https://github.com/xjamundx/eslint-plugin-standard#rules-explanations)) [#623](https://github.com/feross/standard/issues/623) (3%)
-  - Functions named `callback`, `cb`, or `next` must be called with `null`, `undefined`, or an `Error` object as the first argument
-  - Prevents accidentally using a string instead of an `Error` object
-  - Prevents confusing callbacks that do not follow the Node.js pattern
+  - Functions named `callback` or `cb` must be invoked with `null`, `undefined`, or an `Error` as the first argument
+  - Disallows using a string instead of an `Error` object
+  - Disallows confusing callbacks that do not follow the standard Node.js pattern
 - Disallow any imports that come after non-import statements ([import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)) [#806](https://github.com/feross/standard/issues/806) (1%)
 - Disallow unnecessary return await ([no-return-await](http://eslint.org/docs/rules/no-return-await)) [#695](https://github.com/feross/standard/issues/695) (0%)
 - Disallow comma-dangle in functions ([comma-dangle](http://eslint.org/docs/rules/comma-dangle)) [#787](https://github.com/feross/standard/issues/787) (0%)
 - Disallow repeated exports of names or defaults ([import/export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
 - Disallow import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
 - Disallow Webpack loader syntax in imports ([import/no-webpack-loader-syntax](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)) [#806](https://github.com/feross/standard/issues/806) (0%)
+- Disallow comparing against -0 ([no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)) [#812](https://github.com/feross/standard/issues/812) (0%)
 
 ### Changed rules
 
