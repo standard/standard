@@ -20,7 +20,7 @@
     "eslint-plugin-promise": "~3.5.0",
     "eslint-plugin-react": "~6.10.0",
     "eslint-plugin-standard": "~2.2.0",
-    "standard-engine": "~5.4.0"
+    "standard-engine": "~7.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
