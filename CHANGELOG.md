@@ -24,12 +24,14 @@ unnecessary support tickets for project maintainers.
 
 Some deprecated APIs are even insecure (or at least prone to incorrect usage) which
 can have serious security implications. For that reason, `standard` now prevents
-usage of `Buffer(num)` or `new Buffer(num)` since these functions return uninitialized
-program memory which could contain private user information, secret keys, etc.
-Instead of `Buffer(num)` use the new `Buffer.alloc(num)` or `Buffer.from(obj)`
-functions which make programmer intent clearer and work in all currently supported
-versions of Node.js, including Node.js 4.x. For more background,
-[see this Node.js issue](https://github.com/nodejs/node/issues/4660).
+usage of `Buffer(num)` or `new Buffer(num)` since these functions return
+uninitialized program memory which could contain private user information or
+confidential secret keys.
+
+Instead of `Buffer(num)`, consider using `Buffer.alloc(num)` or `Buffer.from(obj)`
+which make the programmer intention much clearer. These new functions exist in all
+currently supported versions of Node.js, including Node.js 4.x. For more
+background, [see this Node.js issue](https://github.com/nodejs/node/issues/4660).
 
 We also improved some rules to support common patterns in code bases that use
 React, JSX, and Flow.
