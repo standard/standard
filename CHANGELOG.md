@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 10.0.0 - 2017-04-04
 
-**Standard is turning 10.0.0!** 🎉
+**`standard` just turned 10.0.0!** 🎉
 
 As with every new major release, there are lots of new rules in 10.0.0 designed to
 help catch bugs and make programmer intent more explicit.
@@ -20,7 +20,7 @@ considered an error**. It's finally time to update those dusty old APIs!
 
 Deprecated APIs are problematic because they may print warning messages in the
 console in recent versions of Node.js. This often confuses users and leads to
-unecessary support tickets for project maintainers.
+unnecessary support tickets for project maintainers.
 
 Some deprecated APIs are even insecure (or at least prone to incorrect usage) which
 can have serious security implications. For that reason, `standard` now prevents
@@ -31,8 +31,8 @@ functions which make programmer intent clearer and work in all currently support
 versions of Node.js, including Node.js 4.x. For more background,
 [see this Node.js issue](https://github.com/nodejs/node/issues/4660).
 
-We also improved some rules to support common patterns in codebases that use React,
-JSX, and Flow.
+We also improved some rules to support common patterns in code bases that use
+React, JSX, and Flow.
 
 When you upgrade, consider running `standard --fix` to automatically fix some of
 the issues caught by this new version.
@@ -47,7 +47,7 @@ the issues caught by this new version.
 *(Estimated % of affected standard users, based on test suite in parens)*
 
 - Disallow using deprecated Node.js APIs ([node/no-deprecated-api](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md)) [#693](https://github.com/feross/standard/issues/693) (13%)
-  - Ensures that code always runs without warnings on the lastest versions of Node
+  - Ensures that code always runs without warnings on the latest versions of Node.js
   - Ensures that safe Buffer methods (`Buffer.from()`, `Buffer.alloc()`) are used instead of `Buffer()`
 - Enforce callbacks always called with Node.js-style error first ([standard/no-callback-literal](https://github.com/xjamundx/eslint-plugin-standard#rules-explanations)) [#623](https://github.com/feross/standard/issues/623) (3%)
   - Functions named `callback` or `cb` must be invoked with `null`, `undefined`, or an `Error` as the first argument
