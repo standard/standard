@@ -610,20 +610,26 @@ Yes!
 
 ### `standard.lintText(text, [opts], callback)`
 
-Lint the provided source `text` to enforce JavaScript Standard Style. An `opts` object may
-be provided:
+Lint the provided source `text`. An `opts` object may be provided:
 
 ```js
-var opts = {
+{
+  cwd: '',      // current working directory (default: process.cwd())
+  filename: '', // path of the file containing the text being linted (optional, though some eslint plugins require it)
   fix: false,   // automatically fix problems
-  globals: [],  // global variables to declare
-  plugins: [],  // eslint plugins
-  envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  globals: [],  // custom global variables to declare
+  plugins: [],  // custom eslint plugins
+  envs: [],     // custom eslint environment
+  parser: ''    // custom js parser (e.g. babel-eslint)
 }
 ```
 
-The `callback` will be called with an `Error` and `results` object:
+Additional options may be loaded from a `package.json` if it's found for the
+current working directory.
+
+The `callback` will be called with an `Error` and `results` object.
+
+The `results` object will contain the following properties:
 
 ```js
 var results = {
@@ -634,13 +640,19 @@ var results = {
         { ruleId: '', message: '', line: 0, column: 0 }
       ],
       errorCount: 0,
-      warningCount: 0
+      warningCount: 0,
+      output: '' // fixed source code (only present with {fix: true} option)
     }
   ],
   errorCount: 0,
   warningCount: 0
 }
 ```
+
+### `results = standard.lintTextSync(text, [opts])`
+
+Synchronous version of `standard.lintText()`. If an error occurs, an exception is
+thrown. Otherwise, a `results` object is returned.
 
 ### `standard.lintFiles(files, [opts], callback)`
 
