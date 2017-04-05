@@ -12,6 +12,7 @@ while (<>) {
   next if /(support\@greenkeeper.io)/;
   next if /(nate\@ngoldman.me)/;
   next if /(ahmad\@codeinchaos.com)/;
+  next if /(wayou )/;
   $seen{$_} = push @authors, "- ", $_;
 }
 END {
