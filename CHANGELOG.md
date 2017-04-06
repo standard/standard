@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 10.0.1 - 2017-04-06
+
+- Internal changes (incremented dependency versions)
+
 ## 10.0.0 - 2017-04-04
 
 **`standard` just turned 10.0.0!** 🎉
