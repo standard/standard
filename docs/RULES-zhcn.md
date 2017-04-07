@@ -10,7 +10,7 @@
 
 ## 细则
 
-* **使用两个空格** 进行缩进。
+* **使用两个空格**进行缩进。
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -29,7 +29,7 @@
   $("<div class='box'>")
   ```
 
-* **不要留下未使用的变量**。
+* **不要定义未使用的变量**。
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
@@ -75,7 +75,7 @@
   if (name != 'John')    // ✗ avoid
   ```
 
-* **字符串拼接操作符（Infix operators）**之间要留空格。
+* **字符串拼接操作符 (Infix operators)** 之间要留空格。
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -130,7 +130,7 @@
   }
   ```
 
-* **多行 if 语句的** 的括号不能省。
+* **多行 if 语句的**的括号不能省。
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -170,7 +170,7 @@
   })
   ```
 
-* **使用浏览器全局变量时加上**`window.`前缀。<br>
+* **使用浏览器全局变量时加上** `window.` 前缀。<br>
   Exceptions are: `document`, `console` and `navigator`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
@@ -179,7 +179,7 @@
   window.alert('hi')   // ✓ ok
   ```
 
-* **不允许有连续多行的空行**。
+* **不允许有连续多行空行**。
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -197,7 +197,7 @@
   console.log(value)
   ```
 
-* **对于三元运算符** 操持`?`和`:`与他们所负责的代码处于同一行
+* **对于三元运算符** `?` 和 `:` 与他们所负责的代码处于同一行
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -296,7 +296,7 @@
     }
   ```
 
-* **点号操作符须与属性处在同一行**。
+* **点号操作符须与属性需在同一行**。
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -485,7 +485,7 @@
   delete name     // ✗ avoid
   ```
 
-* **不要定义重复的函数参数**。
+* **不要定义冗余的函数参数**。
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -499,7 +499,7 @@
   }
   ```
 
-* **类中不要定义重复的属性**。
+* **类中不要定义冗余的属性**。
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -521,7 +521,7 @@
   }
   ```
 
-* **`switch` 语句中不要定义重复的 `case`**。
+* **`switch` 语句中不要定义重复的 `case` 分支**。
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -597,7 +597,7 @@
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **譬如多余的函数上下文绑定**。
+* **避免多余的函数上下文绑定**。
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -674,7 +674,7 @@
   const discount = 0.5     // ✓ ok
   ```
 
-* **譬如对声明过的函数重新赋值**。
+* **避免对声明过的函数重新赋值**。
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -691,7 +691,7 @@
   window = {}     // ✗ avoid
   ```
 
-* **不要使用隐式的`eval()`**。
+* **注意隐式的 `eval()`**。
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -710,7 +710,7 @@
   }
   ```
 
-* **不要向 `RegExp` 的构造器传入非法的正则表达式**。
+* **不要向 `RegExp` 构造器传入非法的正则表达式**。
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -977,7 +977,7 @@
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **类中，使用 `this` 前请确保 `super()` 已调用**。
+* **使用 `this` 前请确保 `super()` 已调用**。
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -990,7 +990,7 @@
   }
   ```
 
-* **用`throw`抛错时，抛出 `Error` 对象而不是字符串**。
+* **用 `throw` 抛错时，抛出 `Error` 对象而不是字符串**。
 
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
@@ -1032,7 +1032,7 @@
   let score = val || 0          // ✓ ok
   ```
 
-* **`return`，`throw`，`continue` 和 `break` 这些语句后面的代码都是多余的**。
+* **`return`，`throw`，`continue` 和 `break` 后不要再跟代码**。
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1043,7 +1043,7 @@
   }
   ```
 
-* **`finally` 代码块中不要再程序流程**。
+* **`finally` 代码块中不要再改变程序执行流程**。
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1073,7 +1073,7 @@
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
-* **避免使用不必要的动态计算值作对象属性**。
+* **避免使用不必要的计算值作对象属性**。
 
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
@@ -1171,7 +1171,7 @@
   fn(...args)     // ✓ ok
   ```
 
-* **分号前面不留空格，后面留空格**。
+* **遇到分号时空格要后留前不留**。
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1180,7 +1180,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **代码块开始之间留一个空格**。
+* **代码块首尾留空格**。
 
   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
@@ -1207,7 +1207,7 @@
   typeof !admin        // ✓ ok
   ```
 
-* **注释前后留空格**。
+* **注释首尾留空格**。
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1246,7 +1246,7 @@
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **自调用匿名函数 (IIFEs) 需要使用括号包裹**。
+* **自调用匿名函数 (IIFEs) 使用括号包裹**。
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1320,8 +1320,6 @@
 
   备注：上面的写法只能说聪明过头了。
 
-  Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
-  possible.
   相比更加可读易懂的代码，那些看似投巧的写法是不可取的。
 
   譬如：
@@ -1343,19 +1341,17 @@
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
 
-##### 一些相关视频：
+##### 一个值得观看的视频：
 
-- [Are Semicolons Necessary in JavaScript? - YouTube][3]
+- [JavaScript 中的分号多余吗？- YouTube][3]
 
-All popular code minifiers in use today use AST-based minification, so they can
-handle semicolon-less JavaScript with no issues (since semicolons are not required
-in JavaScript).
+当前主流的代码压缩方案都是基于词法（AST-based）进行的，所以在处理无分号的代码时完全没有压力（何况 JavaScript 中分号本来就不是强制的）。
 
-##### 一段摘抄自 *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* 一书的内容：
+##### 一段摘抄自 *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* 这篇文章的内容：
 
 > [自动化插入分号的做法]是安全可依赖的，而且其产出的代码能够在所有浏览器里很好地运行。 Closure compiler, yuicompressor, packer 还有 jsmin 都能正确地对这样的代码进行压缩处理。并没有任何性能相关的问题。
 >
-> 不得不说，Javascript 社区里的大牛们一直是错误的，并不能教给你最佳实践。真是让人忧伤啊。 我建议先弄清楚 JS 是怎样断句的（如此地方双是看起来断了其实并没有），明白了这个后就可以随心写出漂亮的代码了。
+> 不得不说，Javascript 社区里的大牛们一直是错误的，并不能教给你最佳实践。真是让人忧伤啊。 我建议先弄清楚 JS 是怎样断句的（还有就是哪些地方看起来断了其实并没有），明白了这个后就可以随心写出漂亮的代码了。
 >
 > 一般来说， `\n` 表示语句结束，除非：
 >   1. 该语句有未闭合的括号， 数组字面量， 对象字面量 或者其他不能正常结束一条语句的情况（譬如，以 `.` 或 `,` 结尾）
@@ -1367,7 +1363,7 @@ in JavaScript).
 >
 > 第二条有点奇葩。 我还想不出谁会（除了这里用作讨论外）写出 `i\n++\nj` 这样的代码来，不过，顺便说一下，这种写法最后解析的结果是 `i; ++j`，而不是 `i++; j`。
 >
-> 第三条也容易理解。 `if (x)\ny()` is equivalent to `if (x) { y() }`. 解释器向下寻找到代码块或一条语句为止。
+> 第三条也容易理解。 `if (x)\ny()` 等价于 `if (x) { y() }`。解释器会向下寻找到代码块或一条语句为止。
 >
 > `;` 是条合法的 JavaScript 语句。所以 `if(x);` 等价于 `if(x){}`，表示 “如果 x 为真，什么也不做。” 这种写法在循环里面可以看到，就是当条件判断与条件更新是同一个方法的时候。 不常见，但也不至于没听说过吧。
 >
