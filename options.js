@@ -10,6 +10,6 @@ module.exports = {
     configFile: path.join(__dirname, 'eslintrc.json')
   },
   homepage: pkg.homepage,
-  tagline: 'Use JavaScript Standard Style',
+  tagline: 'Use JavaScript Standard Style ' + pkg.version,
   version: pkg.version
 }
