@@ -17,11 +17,10 @@
 
 <p align="center">
   Translations:
-  <a href="../README.md">English</a>、
-  <a href="README-esla.md">Spanish</a>、
-  <a href="README-zhtw.md">繁體中文</a>、
+  <a href="../README.md">English</a>,
+  <a href="README-esla.md">Spanish</a>,
+  <a href="README-zhtw.md">繁體中文</a>,
   <a href="README-zhcn.md">简体中文</a>
-
 </p>
 
 <br>
