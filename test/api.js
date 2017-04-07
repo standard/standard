@@ -9,7 +9,7 @@ test('api usage', function t(assert) {
     }, function onFiles(err, result) {
         assert.error(err, 'no error while linting');
         assert.equal(typeof result, 'object', 'result is an object');
-        assert.equal(result.errorCount, 179, 'error count 179');
+        assert.equal(result.errorCount, 181, 'error count 181');
 
         assert.end();
     });
