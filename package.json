@@ -1,7 +1,7 @@
 {
   "name": "standard",
   "description": "JavaScript Standard Style",
-  "version": "10.0.0",
+  "version": "10.0.1",
   "author": {
     "email": "feross@feross.org",
     "name": "Feross Aboukhadijeh",
@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "eslint": "~3.19.0",
-    "eslint-config-standard": "10.0.0",
-    "eslint-config-standard-jsx": "3.3.0",
+    "eslint-config-standard": "10.2.0",
+    "eslint-config-standard-jsx": "4.0.1",
     "eslint-plugin-import": "~2.2.0",
     "eslint-plugin-node": "~4.2.2",
     "eslint-plugin-promise": "~3.5.0",
     "eslint-plugin-react": "~6.10.0",
-    "eslint-plugin-standard": "~2.2.0",
+    "eslint-plugin-standard": "~3.0.1",
     "standard-engine": "~7.0.0"
   },
   "devDependencies": {

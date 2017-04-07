@@ -676,7 +676,7 @@ The `callback` will be called with an `Error` and `results` object (same as abov
 
 Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
 
-Join other contributors in `#standard` on freenode to chat!
+Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
 
 Here are some important packages in the `standard` ecosystem:
 
