@@ -30,10 +30,10 @@
 本工具通过以下三种方式为你（及你的团队）节省大量时间：
 
 - **无须配置。** 史上最便捷的统一代码风格的方式，轻松拥有。
-- **自动的代码格式化。** 只需运行 `standard --fix` 从此和脏乱差的代码说再见。
-- **提前发现风格及程序问题。** 减少代码审查时的反反复复修改过程，节约时间。
+- **自动代码格式化。** 只需运行 `standard --fix` 从此和脏乱差的代码说再见。
+- **提前发现风格及程序问题。** 减少代码审查过程中反反复复的修改过程，节约时间。
 
-无须犹豫。也不用维护 `.eslintrc`, `.jshintrc`, or `.jscsrc` 。开箱即用。
+无须犹豫。再也不用维护 `.eslintrc`, `.jshintrc`, or `.jscsrc` 。开箱即用。
 
 安装：
 
@@ -52,7 +52,7 @@ npm install standard --save-dev
   - [详情][4]
 - **关键字后加空格** `if (condition) { ... }`
 - **函数名后加空格** `function name (arg) { ... }`
-- 坚持使用全等 `===` 摒弃 `==` – 但在需要检查 `null || undefined` 时可以使用 `obj == null`。
+- 坚持使用全等 `===` 摒弃 `==` 一但在需要检查 `null || undefined` 时可以使用 `obj == null`。
 - 一定要处理 Node.js 中错误回调传递进来的 `err` 参数。
 - 使用浏览器全局变量时加上 `window` 前缀 – `document` 和 `navigator` 除外
   - 避免无意中使用到了这些命名看上去很普通的全局变量， `open`, `length`,
@@ -157,7 +157,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 ## 为何要使用 JavaScript Standard 规范？
 
-本规范特点之一是简洁。谁也不想为每个项目维护一分有成百上千行语句的代码风格配置文件。有此规范就够了。
+本规范特点之一是简洁。谁也不想为每个项目维护一份有成百上千行语句的代码风格配置文件。有此规范就够了。
 
 本工具通过以下三种方式为你（及你的团队）节省大量时间：
 
@@ -165,12 +165,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 - **自动的代码格式化。** 只需运行 `standard --fix` 从此和脏乱差的代码说再见。
 - **提前发现风格及程序问题。** 减少代码审查时的反反复复修改过程，节约时间。
 
-Adopting `standard` style means ranking the importance of code clarity and
-community conventions higher than personal style. This might not make sense for
-100% of projects and development cultures, however open source can be a hostile
-place for newbies. Setting up clear, automated contributor expectations makes a
-project healthier.
-一旦使用 `standard` 规范表明代码的简明性及社区的约定要高于个人的编码风格。这不一定100%适用于所有项目和从多的编程文化，但开源项目代码容易受到新手的影响。把规范讲明，严格执行对于项目的长远维护不无裨益。
+一旦使用 `standard` 规范表明代码的简明性及社区的约定要高于个人的编码风格。这不一定100%适用于所有项目和多元的编程文化，但开源项目代码容易受到新手的影响。把规范讲明，严格执行对于项目的长远维护不无裨益。
 
 ## 谁在用 JavaScript Standard 规范？
 
@@ -196,8 +191,6 @@ project healthier.
 
 除公司组织外，[很多个人](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)也在项目中使用，这里就不一一罗列了。
 
-`standard` is also the top-starred linter in GitHub's
-[Clean Code Linter](https://github.com/showcases/clean-code-linters) showcase.
 并且 `standard` 在 GitHub 的[代码检查类工具](https://github.com/showcases/clean-code-linters) 展示列表中也排名第一。
 
 ## 有现成的编辑器插件吗？
@@ -220,7 +213,7 @@ project healthier.
 
 安装 **[linter-js-standard][atom-1]**。
 
-如果想要保存时自动格式化，还需安装 **[standard-formatter][atom-2]**。安装 **[standardjs-snippets][atom-3]** 可以获得 snippets。
+如果想要保存时自动格式化，还需安装 **[standard-formatter][atom-2]**。安装 **[standardjs-snippets][atom-3]** 可以获得 snippets 特性。
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -317,14 +310,11 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 `standard --fix` 可以修正大部分约定俗成的问题，但有些错误（譬如忘记了错误处理）只能手动去修复了。
 
-To save you time, `standard` outputs the message "`Run standard --fix to
-automatically fix some problems`" when it detects problems that can be fixed
-automatically.
 为了使用方便，`standard` 会在检测到有能够自动被修复的问题的时候，给出相应的提示 "`运行 standard --fix 来自动修正一些问题`"。
 
 ## 如何排除某些文件？
 
-`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js` 这些目录，还有以 `.` 开头的文件（譬如 `.git/`）或者文件夹自动被排除在外。
+`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`bundle.js` 这些目录，还有以 `.` 开头的文件（譬如 `.git/`）或者文件夹自动被排除在外。
 
 `.gitignore` 里配置的文件也会自动排除掉。
 
@@ -343,7 +333,7 @@ automatically.
 
 ## 如何隐藏某类警告？
 
-很少的情况下你需要绕开 `standard`，隐藏某些警告信息。
+很少的情况下你需要绕开 `standard` 以隐藏某些警告信息。
 
 JavaScript Standard 代码规范底层使用的是 [ESLint](http://eslint.org/)。所以如果你想隐藏某些警告，方法和使用 ESLint 时一样。
 
@@ -479,8 +469,6 @@ $ standard --env mocha
 /* eslint-env serviceworker */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a
-global in web worker code.
 这样可以让 `standard` 知道 `self` 是 web worker 中的全局变量（同时也让人更容易看懂）。
 
 ## Markdown 或者 HTML 文件中的代码能检查到吗？
@@ -515,7 +503,7 @@ $ standard --plugin html '**/*.html'
 
 ## 有为 git 添加 `pre-commit` 钩子么？
 
-很高兴你问了！
+这个问题问得好！
 
 ```sh
 #!/bin/sh
