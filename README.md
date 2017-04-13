@@ -258,11 +258,7 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 ### Vim
 
-Install **[Syntastic][vim-1]** and add this line to `.vimrc`:
-
-```vim
-let g:syntastic_javascript_checkers = ['standard']
-```
+Install **[ale][vim-1]**.
 
 For automatic formatting on save, add these lines to `.vimrc`:
 
@@ -271,7 +267,11 @@ autocmd bufwritepost *.js silent !standard --fix %
 set autoread
 ```
 
-[vim-1]: https://github.com/scrooloose/syntastic
+Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
+
+[vim-1]: https://github.com/w0rp/ale
+[vim-2]: https://github.com/neomake/neomake
+[vim-3]: https://github.com/vim-syntastic/syntastic
 
 ### Emacs
 
