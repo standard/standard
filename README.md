@@ -486,10 +486,10 @@ Before using a custom JS language variant, consider whether the added complexity
 
 `standard` supports ESLint plugins. Use one of these to transform your code into
 valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm (example: `npm install eslint-plugin-flowtype`) and run:
+npm and run:
 
 ```bash
-$ standard --plugin flowtype
+$ standard --plugin PLUGIN_NAME
 ```
 
 Or, add this to `package.json`:
@@ -497,14 +497,32 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "plugins": [ "flowtype" ]
+    "plugins": [ "PLUGIN_NAME" ]
+  }
+}
+```
+
+To use Flow, you need to use `babel-eslint` as your parser. So, run
+`npm install eslint-plugin-flowtype babel-eslint`, then run:
+
+```bash
+$ standard --plugin flowtype --parser babel-eslint
+```
+
+Or, add this to `package.json`:
+
+```json
+{
+  "standard": {
+    "plugins": [ "flowtype" ],
+    "parser": "babel-eslint"
   }
 }
 ```
 
 If `standard` is installed globally (i.e. `npm install standard --global`), then
 be sure to install `eslint-plugin-flowtype` globally as well, with
-`npm install eslint-plugin-flowtype -g`.
+`npm install eslint-plugin-flowtype --global`.
 
 *Note: `plugin` and `plugins` are equivalent.*
 
