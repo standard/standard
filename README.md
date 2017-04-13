@@ -267,7 +267,7 @@ autocmd bufwritepost *.js silent !standard --fix %
 set autoread
 ```
 
-Other linters you can try are [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for Standard (though configuration may be necessary).
+Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
 
 [vim-1]: https://github.com/w0rp/ale
 [vim-2]: https://github.com/neomake/neomake
