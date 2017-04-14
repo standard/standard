@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 10.0.2 - 2017-04-14
+
+### Changed rules
+
+- Relax rule: Disallow import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#861](https://github.com/feross/standard/issues/861)
+  - This rule was responsible for up to 25% of the running time of `standard`, so we are disabling it until its performance improves.
+
 ## 10.0.1 - 2017-04-06
 
 - Internal changes (incremented dependency versions)
