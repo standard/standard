@@ -54,12 +54,11 @@ npm install standard --save-dev
   - [More details][4]
 - **키워드 뒤에 공백을 사용합니다.** `if (condition) { ... }`
 - **함수명 뒤에 공백을 사용합니다.** `function name (arg) { ... }`
-- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
-- Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
-    `event`, and `name`.
-- **And [more goodness][5]** – *give `standard` a try today!*
+- 항상 `==` 대신 `===`을 사용합니다. - 단, `null || undefined`는 `obj == null`로 확인할 수 있습니다.
+- node.js에서 err 파라미터는 항상 처리해야 합니다.
+- 항상 브라우저 전역에 `window` 접두사를 붙입니다. - `document`와 `navigator`는 괜찮습니다.
+  - `open`, `length`, `event`, `name` 등 불분명하게 브라우저 전역을 우연히 사용하는 것을 방지합니다.
+- **[더 많은 장점][5]이 있습니다.** - *`standard`를 시도해보세요!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
@@ -67,11 +66,7 @@ npm install standard --save-dev
 [4]: RULES.md#semicolons
 [5]: RULES.md#javascript-standard-style
 
-To get a better idea, take a look at
-[a sample file](https://github.com/expressjs/body-parser/blob/master/index.js) written
-in JavaScript Standard Style. Or, check out one of the
-[thousands of projects](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
-that use `standard`!
+더 나은 아이디어를 얻으려면 JavaScript Standard 스타일로 작성된 [샘플 파일](https://github.com/expressjs/body-parser/blob/master/index.js)을 살펴보십시오. 또는 `standard`을 사용하는 [수천 개의 프로젝트](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 중 하나를 확인하십시오!
 
 ## Table of Contents
 
