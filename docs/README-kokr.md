@@ -34,11 +34,10 @@
 - **자동으로 코드 포멧을 맞춰줍니다.** `standard --fix`를 실행하면 지저분하거나 일관성없는 코드와 작별인사 할 수 있습니다.
 - **스타일 이슈 및 프로그래머의 오류를 조기에 파악할 수 있습니다.** 리뷰어와 기여자 사이의 관계를 제거함으로써 귀중한 코드 리뷰 시간을 절약할 수 있습니다.
 
-No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
-works.
+만드는 것의 대해 결정할 필요가 없ㅅ브니다. `.eslintrc`, `.jshintrc`, `.jscsrc` 파일들을 관리할 필요가 없이 바로 가능합니다.
 
 
-Install with:
+설치하는 방법입니다.
 
 ```
 npm install standard --save-dev
