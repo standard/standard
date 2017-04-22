@@ -68,33 +68,33 @@ npm install standard --save-dev
 
 더 나은 아이디어를 얻으려면 JavaScript Standard 스타일로 작성된 [샘플 파일](https://github.com/expressjs/body-parser/blob/master/index.js)을 살펴보십시오. 또는 `standard`을 사용하는 [수천 개의 프로젝트](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 중 하나를 확인하십시오!
 
-## Table of Contents
+## 목차
 
-- Quick start
-  - [Install](#install)
-  - [Usage](#usage)
-  - [What you might do if you're clever](#what-you-might-do-if-youre-clever)
-- FAQ
-  - [Why should I use JavaScript Standard Style?](#why-should-i-use-javascript-standard-style)
-  - [Who uses JavaScript Standard Style?](#who-uses-javascript-standard-style)
-  - [Are there text editor plugins?](#are-there-text-editor-plugins)
-  - [Is there a readme badge?](#is-there-a-readme-badge)
-  - [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
-  - [But this isn't a real web standard!](#but-this-isnt-a-real-web-standard)
-  - [Is there an automatic formatter?](#is-there-an-automatic-formatter)
-  - [How do I ignore files?](#how-do-i-ignore-files)
-  - [How do I hide a certain warning?](#how-do-i-hide-a-certain-warning)
-  - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-  - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
-  - [Can I use a JavaScript language variant, like Flow?](#can-i-use-a-javascript-language-variant-like-flow)
-  - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
-  - [What about Web Workers?](#what-about-web-workers)
-  - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
-  - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
-  - [Is there a Node.js API?](#is-there-a-nodejs-api)
-  - [How do I contribute to `standard`?](#how-do-i-contribute-to-standard)
-- [License](#license)
+- 빠른 시작
+  - [설치](#install)
+  - [사용법](#usage)
+  - [이해가 잘되면 다음을 수행합니다](#what-you-might-do-if-youre-clever)
+- 질의응답
+  - [왜 JavaScript Standard Style을 사용해야 할까요?](#why-should-i-use-javascript-standard-style)
+  - [누가 JavaScript Standard Style을 사용하나요?](#who-uses-javascript-standard-style)
+  - [텍스트 편집 플러그인이 있나요?](#are-there-text-editor-plugins)
+  - [readme에 넣을 수 있는 뱃지로고가 있나요?](#is-there-a-readme-badge)
+  - [나와는 룰이 맞지 않습니다. 변경 가능합니까?](#i-disagree-with-rule-x-can-you-change-it)
+  - [그러나 이 것은 실제 웹표준이 아닙니다!](#but-this-isnt-a-real-web-standard)
+  - [자동으로 포멧을 맞춰주는 것이 있나요?](#is-there-an-automatic-formatter)
+  - [어떻게하면 파일들을 무시할 수 있나요?](#how-do-i-ignore-files)
+  - [어떻게하면 경고를 숨길 수 있나요?](#how-do-i-hide-a-certain-warning)
+  - [전역 namespace를 오염시키는 라이브러리를 사용합니다. "vaiable is not defined" 오류를 방지하려면 어떻게 해야 하나요?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
+  - [실험용 JavaScript (ES Next) 기능은 어떻게 사용하나요?](#how-do-i-use-experimental-javascript-es-next-features)
+  - [Flow와 같은 JavaScrpt 언어 변형을 사용할 수 있나요?](#can-i-use-a-javascript-language-variant-like-flow)
+  - [Mocha, Jasmine, QUnit 등은 어떻습니까?](#what-about-mocha-jasmine-qunit-etc)
+  - [Web Workes는 어떻습니까?](#what-about-web-workers)
+  - [Markdown 또는 HTML 파일 내부의 코드를 확인할 수 있나요?](#can-i-check-code-inside-of-markdown-or-html-files)
+  - [Git `pre-commit` hook이 있나요?](#is-there-a-git-pre-commit-hook)
+  - [출력을 모두 화려하고 예쁘게 만드려면 어떻게 해야 하나요?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [Node.js API가 있나요?](#is-there-a-nodejs-api)
+  - [`standard` 기여는 어떻게 하나요?](#how-do-i-contribute-to-standard)
+- [라이선스](#license)
 
 ## Install
 
