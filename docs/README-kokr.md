@@ -26,19 +26,17 @@
 
 <br>
 
-## JavaScript 스타일 가이드, 교정 & 자동 코드 수정기
+## 교정 & 자동 코드 수정을 도와주는 JavaScript 스타일 가이드
 
-This module saves you (and others!) time in three ways:
+이 모듈은 다음과 같은 세 가지 방법으로 시간을 절약할 수 있습니다.
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  project. Just drop it in.
-- **Automatically format code.** Just run `standard --fix` and say goodbye to
-  messy or inconsistent code.
-- **Catch style issues & programmer errors early.** Save precious code review
-  time by eliminating back-and-forth between reviewer & contributor.
+- **환경설정이 필요없습니다.** 프로젝트에서 일관된 스타일을 적용하는 가장 쉬운 방법입니다. 그냥 넣기만 하면 됩니다.
+- **자동으로 코드 포멧을 맞춰줍니다.** `standard --fix`를 실행하면 지저분하거나 일관성없는 코드와 작별인사 할 수 있습니다.
+- **스타일 이슈 및 프로그래머의 오류를 조기에 파악할 수 있습니다.** 리뷰어와 기여자 사이의 관계를 제거함으로써 귀중한 코드 리뷰 시간을 절약할 수 있습니다.
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
+
 
 Install with:
 
