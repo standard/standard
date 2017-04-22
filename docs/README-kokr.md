@@ -96,22 +96,21 @@ npm install standard --save-dev
   - [`standard` 기여는 어떻게 하나요?](#how-do-i-contribute-to-standard)
 - [라이선스](#license)
 
-## Install
+## 설치
 
-The easiest way to use JavaScript Standard Style is to install it globally as a
-Node command line program. Run the following command in Terminal:
+JavaScript Standard Style을 사용하는 가장 쉬운 방법은 Node 명령 프로그램을 통해 전역으로 설치하는 것입니다. 터미널에서 다음 명령을 실행하세요.
 
 ```bash
 $ npm install standard --global
 ```
 
-Or, you can install `standard` locally, for use in a single project:
+또는 `standard`를 로컬에 설치하여 단일 프로젝트에서 사용할 수 있습니다.
 
 ```bash
 $ npm install standard --save-dev
 ```
 
-*Note: To run the preceding commands, [Node.js](http://nodejs.org) and [npm](https://npmjs.com) must be installed.*
+*메모: 위 명령을 실행하려면 [Node.js](http://nodejs.org)와 [npm](https://npmjs.com)이 설치되어 있어야 합니다.*
 
 ## Usage
 
