@@ -43,17 +43,17 @@
 npm install standard --save-dev
 ```
 
-## The Rules
+## 규칙
 
-- **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
-- **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(`, `[`, or `` ` ``**
-  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
+- **2칸 공백을 사용합니다.** – 들여쓰기
+- **문자열에 작은 따옴표를 사용합니다.** – 누락된 곳은 제외합니다.
+- **사용되지 않는 변수가 없어야 합니다.** – 이 것은 대량의 버그를 초래하는 원인입니다.
+- **세미콜론이 없어야 합니다.** – [It's][1] [fine.][2] [Really!][3]
+- **`(`, `[`, or `` ` ``과 같이 라인을 시작하지 말아야 합니다.**
+  - 세미콜론 생략시 반드시 문제가 생길 수 있습니다. – *자동으로 체크할 수 있도록 준비되어 있습니다.*
   - [More details][4]
-- **Space after keywords** `if (condition) { ... }`
-- **Space after function name** `function name (arg) { ... }`
+- **키워드 뒤에 공백을 사용합니다.** `if (condition) { ... }`
+- **함수명 뒤에 공백을 사용합니다.** `function name (arg) { ... }`
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
 - Always prefix browser globals with `window` – except `document` and `navigator` are okay
