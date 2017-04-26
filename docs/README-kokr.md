@@ -159,26 +159,17 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. style 의견의 대해 절대로 풀 리퀘스트를 요청하지 마세요.
 
-## Why should I use JavaScript Standard Style?
+## 왜 JavaScript Standard Style을 사용해야 할까요?
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to
-maintain multiple hundred-line style configuration files for every module/project
-they work on. Enough of this madness!
+JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누구도 작업하는 모든 모듈/프로젝트에 대해 수백 줄 style의 구성 파일을 유지하려고하지 않습니다. 더 이상 바보같은 짓은 그만하세요.
 
-This module saves you (and others!) time in three ways:
+이 모듈은 세가지의 방법으로 당신(또는 주변사람들)의 시간을 절약할 수 있습니다.
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  project. Just drop it in.
-- **Automatically format code.** Just run `standard --fix` and say goodbye to
-  messy or inconsistent code.
-- **Catch style issues & programmer errors early.** Save precious code review
-  time by eliminating back-and-forth between reviewer & contributor.
+- **환경설정이 필요없습니다.** 프로젝트에서 일관된 스타일을 적용하는 가장 쉬운 방법입니다. 그냥 넣기만 하면 됩니다.
+- **자동으로 코드 포멧을 맞춰줍니다.** `standard --fix`를 실행하면 지저분하거나 일관성없는 코드와 작별인사 할 수 있습니다.
+- **스타일 이슈 및 프로그래머의 오류를 조기에 파악할 수 있습니다.** 리뷰어와 기여자 사이의 관계를 제거함으로써 귀중한 코드 리뷰 시간을 절약할 수 있습니다.
 
-Adopting `standard` style means ranking the importance of code clarity and
-community conventions higher than personal style. This might not make sense for
-100% of projects and development cultures, however open source can be a hostile
-place for newbies. Setting up clear, automated contributor expectations makes a
-project healthier.
+`standard` 스타일을 채택한다는 것은 개인적 스타일보다 코드 명확성과 커뮤니티 협업의 중요성을 우선으로 하는 것을 의미합니다. 이것은 프로젝트와 개발문화에 100% 타당하지 않을 수도 있지만, 오픈소스는 초보자들에게 적대적인 장소가 될 수 있습니다. 명확하고 자동화된 기여를 기대할수록 프로젝트가 더욱 건강해 집니다.
 
 ## Who uses JavaScript Standard Style?
 
