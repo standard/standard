@@ -112,11 +112,9 @@ $ npm install standard --save-dev
 
 *메모: 위 명령을 실행하려면 [Node.js](http://nodejs.org)와 [npm](https://npmjs.com)이 설치되어 있어야 합니다.*
 
-## Usage
+## 사용법
 
-After you've installed `standard`, you should be able to use the `standard` program. The
-simplest use case would be checking the style of all JavaScript files in the
-current working directory:
+`standard`를 설치 한 후에 `standard` 프로그램을 사용할 수 있습니다. 가장 간단한 사용 사례는 현재 작업 디렉토리에있는 모든 JavaScript 파일의 스타일을 확인하는 것입니다.
 
 ```bash
 $ standard
@@ -127,13 +125,13 @@ Error: Use JavaScript Standard Style
 You can optionally pass in a directory (or directories) using the glob pattern. Be
 sure to quote paths containing glob patterns so that they are expanded by
 `standard` instead of your shell:
+glob 패턴을 사용하여 디렉토리(또는 디렉토리들)를 선택적으로 전달할 수 있습니다. glob 패턴을 포함하는 경로를 인용 부호로 묶어 쉘 대신에 `standard`에 의해 확장되도록 할 수 있습니다.
 
 ```bash
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**Note:** by default `standard` will look for all files matching the patterns:
-`**/*.js`, `**/*.jsx`.
+**메모** 기본적으로`standard`는 `**/*.js`, `**/*.jsx` 패턴과 일치하는 모든 파일을 찾을 것입니다.
 
 ## What you might do if you're clever
 
