@@ -133,9 +133,9 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 **메모** 기본적으로`standard`는 `**/*.js`, `**/*.jsx` 패턴과 일치하는 모든 파일을 찾을 것입니다.
 
-## What you might do if you're clever
+## 이해가 잘되면 다음을 수행합니다
 
-1. Add it to `package.json`
+1. `package.json`에 다음코드를 추가합니다.
 
   ```json
   {
@@ -149,7 +149,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
   }
   ```
 
-2. Style is checked automatically when you run `npm test`
+2. `npm test`를 실행할 때 자동으로 스타일을 검사합니다.
 
   ```bash
   $ npm test
@@ -157,7 +157,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
-3. Never give style feedback on a pull request again!
+3. style 의견의 대해 절대로 풀 리퀘스트를 요청하지 마세요.
 
 ## Why should I use JavaScript Standard Style?
 
