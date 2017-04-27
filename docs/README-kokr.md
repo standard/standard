@@ -197,16 +197,15 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 또한 GitHub의 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 쇼케이스에서도 볼 수 있습니다.
 
-## Are there text editor plugins?
+## 텍스트 편집 플러그인이 있나요?
 
-First, install `standard`. Then, install the appropriate plugin for your editor:
+먼저, `standard`를 설치합니다. 그런 다음, 편집기에 적절한 플러그인을 설치하세요.
 
 ### Sublime Text
 
-Using **[Package Control][sublime-1]**, install **[SublimeLinter][sublime-2]** and
-**[SublimeLinter-contrib-standard][sublime-3]**.
+**[Package Control][sublime-1]**을 사용하여, **[SublimeLinter][sublime-2]**와 **[SublimeLinter-contrib-standard][sublime-3]**를 설치합니다.
 
-For automatic formatting on save, install **[StandardFormat][sublime-4]**.
+저장시 자동포멧을 적용하려면 **[StandardFormat][sublime-4]**을 설치하세요.
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -215,10 +214,9 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 ### Atom
 
-Install **[linter-js-standard][atom-1]**.
+**[linter-js-standard][atom-1]**를 설치합니다.
 
-For automatic formatting, install **[standard-formatter][atom-2]**. For snippets,
-install **[standardjs-snippets][atom-3]**.
+저장시 자동포멧을 적용하려면 **[standard-formatter][atom-2]**를 설치합니다. 스니펫의 경우 **[standardjs-snippets][atom-3]**을 설치합니다.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -226,9 +224,9 @@ install **[standardjs-snippets][atom-3]**.
 
 ### Visual Studio Code
 
-Install **[vscode-standardjs][vscode-1]**. (Includes support for automatic formatting.)
+**[vscode-standardjs][vscode-1]**를 설치합니다. (자동포멧을 지원합니다.)
 
-For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React snippets, install **[vscode-react-standard][vscode-3]**.
+JS 스니펫의 경우 **[vscode-standardjs-snippets][vscode-2]**을 설치합니다. React 스니펫의 경우 **[vscode-react-standard][vscode-3]**를 설치합니다.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
@@ -236,16 +234,18 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 ### Vim
 
-Install **[ale][vim-1]**.
+**[ale][vim-1]**를 설치합니다.
 
 For automatic formatting on save, add these lines to `.vimrc`:
+
+저장시 자동포멧을 적용하려면 해당 코드를 `.vimrc`에 추가하세요.
 
 ```vim
 autocmd bufwritepost *.js silent !standard --fix %
 set autoread
 ```
 
-Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
+고려해야 할 대체 플러그인으로는 [neomake][vim-2] 및 [syntastic][vim-3]이 있으며, 둘 다 표준에 대한 지원이 내장되어 있습니다. (추가적으로 구성이 필요할 수도 있습니다)
 
 [vim-1]: https://github.com/w0rp/ale
 [vim-2]: https://github.com/neomake/neomake
@@ -253,24 +253,22 @@ Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3],
 
 ### Emacs
 
-Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
-how to enable it in your projects.
+**[Flycheck][emacs-1]**를 설치하고 **[manual][emacs-2]**을 확인하여 프로젝트에서 활성화하는 방법을 확인하십시오.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 ### Brackets
 
-Search the extension registry for **["Standard Code Style"][brackets-1]** and click "Install".
+extension registry에서 **["Standard Code Style"][brackets-1]**을 검색하여 "Install"을 클릭하세요.
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
 ### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains, etc.)
 
-WebStorm [recently announced native support](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
-for `standard` directly in the IDE.
+WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본적인 지원에 관한 최근 발표](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) 했습니다.
 
-If you still prefer to configure `standard` manually, [follow this guide][webstorm-1]. This applies to all JetBrains products, including PhpStorm, IntelliJ, RubyMine, etc.
+만약 수동으로 `standard`를 구성하려면 [안내서]([webstorm-1])를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
 
 [webstorm-1]: docs/webstorm.md
 
