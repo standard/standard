@@ -272,10 +272,12 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 [webstorm-1]: docs/webstorm.md
 
-## Is there a readme badge?
+## readme에 넣을 수 있는 뱃지로고가 있나요?
 
 Yes! If you use `standard` in your project, you can include one of these badges in
 your readme to let people know that your code is using the standard style.
+
+네! 프로젝트에서 `standard`를 사용한다면, readme에 이 뱃지들 중 하나를 포함시켜 코드가 standard 스타일을 사용하고 있음을 사람들에게 알릴 수 있습니다.
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
