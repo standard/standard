@@ -203,9 +203,9 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 ### Sublime Text
 
-**[Package Control][sublime-1]**을 사용하여, **[SublimeLinter][sublime-2]**와 **[SublimeLinter-contrib-standard][sublime-3]**를 설치합니다.
+**[Package Control][sublime-1]** 을 사용하여, **[SublimeLinter][sublime-2]** 와 **[SublimeLinter-contrib-standard][sublime-3]** 를 설치합니다.
 
-저장시 자동포멧을 적용하려면 **[StandardFormat][sublime-4]**을 설치하세요.
+저장시 자동포멧을 적용하려면 **[StandardFormat][sublime-4]** 을 설치하세요.
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -214,9 +214,9 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 ### Atom
 
-**[linter-js-standard][atom-1]**를 설치합니다.
+**[linter-js-standard][atom-1]** 를 설치합니다.
 
-저장시 자동포멧을 적용하려면 **[standard-formatter][atom-2]**를 설치합니다. 스니펫의 경우 **[standardjs-snippets][atom-3]**을 설치합니다.
+저장시 자동포멧을 적용하려면 **[standard-formatter][atom-2]** 를 설치합니다. 스니펫의 경우 **[standardjs-snippets][atom-3]** 을 설치합니다.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -224,9 +224,9 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 ### Visual Studio Code
 
-**[vscode-standardjs][vscode-1]**를 설치합니다. (자동포멧을 지원합니다.)
+**[vscode-standardjs][vscode-1]** 를 설치합니다. (자동포멧을 지원합니다.)
 
-JS 스니펫의 경우 **[vscode-standardjs-snippets][vscode-2]**을 설치합니다. React 스니펫의 경우 **[vscode-react-standard][vscode-3]**를 설치합니다.
+JS 스니펫의 경우 **[vscode-standardjs-snippets][vscode-2]** 을 설치합니다. React 스니펫의 경우 **[vscode-react-standard][vscode-3]** 를 설치합니다.
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
@@ -234,7 +234,7 @@ JS 스니펫의 경우 **[vscode-standardjs-snippets][vscode-2]**을 설치합�
 
 ### Vim
 
-**[ale][vim-1]**를 설치합니다.
+**[ale][vim-1]** 를 설치합니다.
 
 For automatic formatting on save, add these lines to `.vimrc`:
 
@@ -253,14 +253,14 @@ set autoread
 
 ### Emacs
 
-**[Flycheck][emacs-1]**를 설치하고 **[manual][emacs-2]**을 확인하여 프로젝트에서 활성화하는 방법을 확인하십시오.
+**[Flycheck][emacs-1]** 를 설치하고 **[manual][emacs-2]** 을 확인하여 프로젝트에서 활성화하는 방법을 확인하십시오.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 ### Brackets
 
-extension registry에서 **["Standard Code Style"][brackets-1]**을 검색하여 "Install"을 클릭하세요.
+extension registry에서 **["Standard Code Style"][brackets-1]** 을 검색하여 "Install"을 클릭하세요.
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
