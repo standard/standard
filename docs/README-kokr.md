@@ -171,9 +171,9 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 `standard` 스타일을 채택한다는 것은 개인적 스타일보다 코드 명확성과 커뮤니티 협업의 중요성을 우선으로 하는 것을 의미합니다. 이것은 프로젝트와 개발문화에 100% 타당하지 않을 수도 있지만, 오픈소스는 초보자들에게 적대적인 장소가 될 수 있습니다. 명확하고 자동화된 기여를 기대할수록 프로젝트가 더욱 건강해 집니다.
 
-## Who uses JavaScript Standard Style?
+## 누가 JavaScript Standard Style을 사용하나요?
 
-Lots of folks!
+주변에 많은 사람들!
 
 [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/brave.png>](https://www.brave.com) |
 |---|---|---|---|---|
@@ -193,12 +193,9 @@ Lots of folks!
 [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/taser.png>](https://www.taser.com) |
 |---|---|---|---|
 
-In addition to companies, many community members use `standard` on packages that
-are [too numerous](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
-to list here.
+회사 이외에 많은 커뮤니티 회원은 여기에 나열하기에는 [너무 많은](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 패키지들이 `standard`를 사용합니다.
 
-`standard` is also the top-starred linter in GitHub's
-[Clean Code Linter](https://github.com/showcases/clean-code-linters) showcase.
+또한 GitHub의 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 쇼케이스에서도 볼 수 있습니다.
 
 ## Are there text editor plugins?
 
