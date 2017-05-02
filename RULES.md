@@ -312,7 +312,7 @@ your code.
 
 * **Files must end with a newline.**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **No space between function identifiers and their invocations.**
 
