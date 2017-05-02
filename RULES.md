@@ -936,7 +936,7 @@ your code.
 
 * **Avoid comparing a variable to itself.**
 
-  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+  eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
   ```js
   if (score === score) {}   // ✗ avoid
