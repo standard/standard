@@ -308,17 +308,13 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 - 이 모듈은 우리의 코드를 높은 수준의 품질로 유지하는 데 도움이됩니다.
 - 이 모듈은 새로운 기여자가 몇 가지 기본 스타일 표준을 준수하도록합니다.
 
-## Is there an automatic formatter?
+## 자동으로 포멧을 맞춰주는 것이 있나요?
 
-Yes! You can use `standard --fix` to automatically fix most issues automatically.
+예! `standard --fix`를 사용하면 자동으로 대부분의 문제를 자동으로 해결할 수 있습니다.
 
-`standard --fix` is built into `standard` for maximum convenience. Most problems
-are fixable, but some errors (like forgetting to handle errors) must be fixed
-manually.
+`standard --fix`는 최대의 편의를 위해 `standard`에 내장되어 있습니다. 대부분의 문제점은 고칠 수 있지만 일부 오류(오류 처리를 잊어 버리는 것)는 수동으로 해결해야합니다.
 
-To save you time, `standard` outputs the message "`Run standard --fix to
-automatically fix some problems`" when it detects problems that can be fixed
-automatically.
+시간을 절약하기 위해 `standard`는 자동으로 수정할 수있는 문제를 발견하면 "`Run standard --fix to automatically fix some problems`" 메시지를 출력합니다.
 
 ## How do I ignore files?
 
