@@ -298,16 +298,15 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## But this isn't a real web standard!
+## 그러나 이 것은 실제 웹표준이 아닙니다!
 
-Of course it's not! The style laid out here is not affiliated with any official web
-standards groups, which is why this repo is called `feross/standard` and not
-`ECMA/standard`.
+물론 표준이 아닙니다! 여기에 제시된 스타일은 공식 웹 표준 그룹과 관련이 없으므로 `ECMA/standard`이 아닌 `feross/standard`라고하는 이유입니다.
 
-The word "standard" has more meanings than just "web standard" :-) For example:
+"standard"이라는 단어는 "web standard"이상의 의미를 가지고 있습니다 :-)
 
-- This module helps hold our code to a high *standard of quality*.
-- This module ensures that new contributors follow some basic *style standards*.
+예를 들어,
+- 이 모듈은 우리의 코드를 높은 수준의 품질로 유지하는 데 도움이됩니다.
+- 이 모듈은 새로운 기여자가 몇 가지 기본 스타일 표준을 준수하도록합니다.
 
 ## Is there an automatic formatter?
 
