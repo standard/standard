@@ -34,7 +34,7 @@
 - **자동으로 코드 포멧을 맞춰줍니다.** `standard --fix`를 실행하면 지저분하거나 일관성없는 코드와 작별인사 할 수 있습니다.
 - **스타일 이슈 및 프로그래머의 오류를 조기에 파악할 수 있습니다.** 리뷰어와 기여자 사이의 관계를 제거함으로써 귀중한 코드 리뷰 시간을 절약할 수 있습니다.
 
-만드는 것의 대해 결정할 필요가 없ㅅ브니다. `.eslintrc`, `.jshintrc`, `.jscsrc` 파일들을 관리할 필요가 없이 바로 가능합니다.
+만드는 것의 대해 결정할 필요가 없습니다. `.eslintrc`, `.jshintrc`, `.jscsrc` 파일들을 관리할 필요가 없이 바로 가능합니다.
 
 
 설치하는 방법입니다.
@@ -274,9 +274,6 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 ## readme에 넣을 수 있는 뱃지로고가 있나요?
 
-Yes! If you use `standard` in your project, you can include one of these badges in
-your readme to let people know that your code is using the standard style.
-
 네! 프로젝트에서 `standard`를 사용한다면, readme에 이 뱃지들 중 하나를 포함시켜 코드가 standard 스타일을 사용하고 있음을 사람들에게 알릴 수 있습니다.
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
@@ -291,23 +288,13 @@ your readme to let people know that your code is using the standard style.
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ```
 
-## I disagree with rule X, can you change it?
+## 나와는 룰이 맞지 않습니다. 변경 가능합니까?
 
-No. The whole point of `standard` is to save you time by avoiding
-[bikeshedding][bikeshedding] about code style. There are lots of debates online about
-tabs vs. spaces, etc. that will never be resolved. These debates just distract from
-getting stuff done. At the end of the day you have to 'just pick something', and
-that's the whole philosophy of `standard` -- its a bunch of sensible 'just pick
-something' opinions. Hopefully, users see the value in that over defending their
-own opinions.
+안됩니다. `standard`의 전체적인 요점은 코드 스타일에 대한 [bikeshedding][bikeshedding]을 피함으로써 시간을 절약하는 것입니다. 탭과 공백 등에 관해서는 온라인으로 많은 논쟁이 있기때문에 해결되지 않을 것입니다. 이러한 논쟁은 어떠한 것도 얻지 못하게합니다. 결국 `뭔가를 골라야 한다`입니다. 그것은 `standard`의 철학입니다. 이는 `단지 뭔가를 선택하세요`라는 의견입니다. 바라건대, 사용자들이 자신들의 의견을 방어하는 것에 대해 가치를 보게 되기를 바랍니다.
 
-If you really want to configure hundreds of ESLint rules individually, you can
-always use `eslint` directly with
-[eslint-config-standard](https://github.com/feross/eslint-config-standard) to
-layer your changes on top.
+수백 개의 ESLint 규칙을 개별적으로 구성하려는 경우 `eslint`를 직접 [eslint-config-standard](https://github.com/feross/eslint-config-standard)와 함께 사용하여 변경 사항을 맨 위에 배치 할 수 있습니다.
 
-Pro tip: Just use `standard` and move on. There are actual real problems that you
-could spend your time solving! :P
+팁 : 표준을 사용하고 계속 진행하십시오. 당신의 시간을 소비하고 있는 실질적인 문제를 해결하세요! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
