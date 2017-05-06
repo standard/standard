@@ -316,15 +316,13 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 시간을 절약하기 위해 `standard`는 자동으로 수정할 수있는 문제를 발견하면 "`Run standard --fix to automatically fix some problems`" 메시지를 출력합니다.
 
-## How do I ignore files?
+## 어떻게하면 파일들을 무시할 수 있나요?
 
-Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
-and files/folders that begin with `.` like `.git/`) are automatically ignored.
+특정 경로 (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, `.git/`와 같이 `.`으로 시작하는 파일/폴더)는 자동으로 무시됩니다.
 
-Paths in a project's root `.gitignore` file are also automatically ignored.
+프로젝트의 루트 `.gitignore` 파일에 있는 경로도 자동으로 무시됩니다.
 
-Sometimes you need to ignore additional folders or specific minified files. To do
-that, add a `standard.ignore` property to `package.json`:
+때로는 추가 폴더 또는 특정 축소 파일을 무시해야합니다. 이를 수행하려면 `package.json`에 `standard.ignore` 속성을 추가하십시오.
 
 ```json
 "standard": {
