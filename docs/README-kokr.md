@@ -371,29 +371,23 @@ console.log('offending code goes here...')
 /* eslint-enable no-use-before-define */
 ```
 
-## I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
+## 전역 namespace를 오염시키는 라이브러리를 사용합니다. "vaiable is not defined" 오류를 방지하려면 어떻게 해야 하나요?
 
-Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the
-global object (poor form!). Since these functions are not defined or `require`'d
-anywhere in your code, `standard` will warn that you're using a variable that is
-not defined (usually, this rule is really useful for catching typos!). But we want
-to disable it for these global variables.
+일부 패키지 (예 : `mocha`)는 전역 개체 (가난한 형태!)에 기능 (예 : `describe`, `it`)을 지정합니다. 이 함수는 정의되지 않았거나 코드의 어느 곳에서든지 요구 될 수 있기 때문에 `standard`에서는 정의되지 않은 변수를 사용하고 있다고 경고합니다 (일반적으로 이 규칙은 오타를 잡는 데 유용합니다). 그러나 우리는 이 전역 변수들에 대해 이를 비활성화 하고자합니다.
 
-To let `standard` (as well as humans reading your code) know that certain variables
-are global in your code, add this to the top of your file:
+`standard` (코드를 읽는 사람뿐만 아니라)에서 특정 변수가 코드에서 전역이라는 것을 알 수 있도록 파일의 맨 위에 추가하십시오.
 
 ```js
 /* global myVar1, myVar2 */
 ```
 
-If you have hundreds of files, it may be desirable to avoid adding comments to
-every file. In this case, run:
+수백 개의 파일이 있다면 모든 파일에 주석을 추가하지 않는 것이 좋습니다. 이 경우 다음을 실행하십시오.
 
 ```bash
 $ standard --global myVar1 --global myVar2
 ```
 
-Or, add this to `package.json`:
+혹은 `package.json`에 다음코드를 추가하세요.
 
 ```json
 {
@@ -403,7 +397,7 @@ Or, add this to `package.json`:
 }
 ```
 
-*Note: `global` and `globals` are equivalent.*
+*노트: `global`과 `globals`는 같습니다.
 
 ## How do I use experimental JavaScript (ES Next) features?
 
