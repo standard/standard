@@ -399,23 +399,17 @@ $ standard --global myVar1 --global myVar2
 
 *노트: `global`과 `globals`는 같습니다.
 
-## How do I use experimental JavaScript (ES Next) features?
+## 실험용 JavaScript (ES Next) 기능은 어떻게 사용하나요?
 
-`standard` supports the latest ECMAScript features, ES8 (ES2017), including
-language feature proposals that are in "Stage 4" of the proposal process.
+`standard`는 제안 프로세스의 "단계 4"에있는 언어 기능 제안을 포함하여 최신 ECMAScript 기능인 ES8 (ES2017)을 지원합니다.
 
-To support experimental language features, `standard` supports specifying a
-custom JavaScript parser. Before using a custom parser, consider whether the added
-complexity is worth it.
-
-To use a custom parser, install it from npm (example: `npm install babel-eslint`)
-and run:
+실험용 언어 기능을 지원하기 위해 `standard`는 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. 커스텀 파서를 사용하기 전에 추가 된 복잡성이 그럴 가치가 있는지 고려하십시오.
 
 ```bash
 $ standard --parser babel-eslint
 ```
 
-Or, add this to `package.json`:
+혹은, `package.json`에 아래코드를 추가하세요.
 
 ```json
 {
@@ -425,9 +419,7 @@ Or, add this to `package.json`:
 }
 ```
 
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `babel-eslint` globally as well, with
-`npm install babel-eslint --global`.
+`standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `babel-eslint`를 `npm install babel-eslint --global`과 함께 설치하십시오.
 
 ## Can I use a JavaScript language variant, like Flow?
 
