@@ -421,37 +421,33 @@ $ standard --parser babel-eslint
 
 `standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `babel-eslint`를 `npm install babel-eslint --global`과 함께 설치하십시오.
 
-## Can I use a JavaScript language variant, like Flow?
+## Flow와 같은 JavaScrpt 언어 변형을 사용할 수 있나요?
 
-Before using a custom JS language variant, consider whether the added complexity
-(and effort required to get new contributors up-to-speed) is worth it.
+커스텀 JS 언어 변형을 사용하기 전에 추가된 복잡성 (그리고 새로운 기여자를 최신으로 만드는데 필요한 노력)이 그만한 가치가 있는지 고려하십시오.
 
-`standard` supports ESLint plugins. Use one of these to transform your code into
-valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm and run:
+`standard`는 ESLint 플러그인을 지원합니다. `standard` 중 하나를 보기 전에 코드를 유효한 JavaScript로 변환하려면 이 중 하나를 사용하십시오. 맞춤 구문 분석기를 사용하려면 npm에서 설치하고 다음을 실행하십시오.
 
 ```bash
-$ standard --plugin PLUGIN_NAME
+$ standard --plugin 플러그인_이름
 ```
 
-Or, add this to `package.json`:
+아니면, `package.json`에 아래 코드를 추가하세요.
 
 ```json
 {
   "standard": {
-    "plugins": [ "PLUGIN_NAME" ]
+    "plugins": [ "플러그인_이름" ]
   }
 }
 ```
 
-To use Flow, you need to use `babel-eslint` as your parser. So, run
-`npm install eslint-plugin-flowtype babel-eslint`, then run:
+Flow를 사용하려면 `babel-eslint`를 파서로 사용해야합니다. 따라서 `npm install eslint-plugin-flowtype babel-eslint`를 수행한 후에, 다음을 실행하십시오.
 
 ```bash
 $ standard --plugin flowtype --parser babel-eslint
 ```
 
-Or, add this to `package.json`:
+아니면, `package.json`에 아래 코드를 추가하세요.
 
 ```json
 {
@@ -462,35 +458,27 @@ Or, add this to `package.json`:
 }
 ```
 
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `eslint-plugin-flowtype` globally as well, with
-`npm install eslint-plugin-flowtype --global`.
+`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install-eslint-plugin-flowtype --global`을 사용하여 `eslint-plugin-flowtype`을 전역으로 설치해야합니다.
 
-*Note: `plugin` and `plugins` are equivalent.*
+**참고 : 플러그인 및 플러그인은 동일합니다.**
 
-## What about Mocha, Jasmine, QUnit, etc?
+## Mocha, Jasmine, QUnit 등은 어떻습니까?
 
-To support mocha in your test files, add this to the beginning of your test files:
+테스트 파일에서 mocha를 지원하려면 테스트 파일의 시작 부분에 다음을 추가하십시오.
 
 ```js
 /* eslint-env mocha */
 ```
 
-Or, run:
+혹은 다음을 실행하세요.
 
 ```bash
 $ standard --env mocha
 ```
 
-Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
-full list, check ESLint's
-[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
-documentation. For a list of what globals are available for these environments,
-check the
-[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
-module.
+`mocha`는 `jasmine`, `qunit`, `phantomjs` 중 하나가 될 수 있습니다. 전체 목록을 보려면 ESLint의 [specifying environments(스펙문서)](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)를 확인하십시오. 이러한 환경에서 사용할 수있는 전역의 목록을 보려면 [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm 모듈을 확인하십시오.
 
-*Note: `env` and `envs` are equivalent.*
+**참고 : `env` 및 `envs`는 동일합니다.**
 
 ## What about Web Workers?
 
