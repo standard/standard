@@ -520,13 +520,13 @@ $ npm install eslint-plugin-html
 $ standard --plugin html '**/*.html'
 ```
 
-## Is there a Git `pre-commit` hook?
+## Git `pre-commit` hook이 있나요?
 
-Funny you should ask!
+재미있는 질문이네요!
 
 ```sh
 #!/bin/sh
-# Ensure all javascript files staged for commit pass standard code style
+# 커밋을 위해 준비된 모든 자바 스크립트 파일이 표준 코드 스타일을 통과하는지 확인합니다.
 git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
