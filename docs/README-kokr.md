@@ -531,25 +531,24 @@ git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
 
-## How do I make the output all colorful and *pretty*?
+## 출력을 모두 화려하고 *예쁘게* 만드려면 어떻게 해야 하나요?
 
-The built-in output is simple and straightforward, but if you like shiny things,
-install [snazzy](https://www.npmjs.com/package/snazzy):
+내장 된 출력물은 간단하고 간단하지만 반짝이는 물건을 원한다면 [snazzy](https://www.npmjs.com/package/snazzy) 설치하십시오.
 
 ```bash
 $ npm install snazzy
 ```
 
-And run:
+그리고 아래 명령어를 실행합니다.
 
 ```bash
 $ standard --verbose | snazzy
 ```
 
-There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
+[standard-tap](https://www.npmjs.com/package/standard-tap),
 [standard-json](https://www.npmjs.com/package/standard-json),
-[standard-reporter](https://www.npmjs.com/package/standard-reporter), and
-[standard-summary](https://www.npmjs.com/package/standard-summary).
+[standard-reporter](https://www.npmjs.com/package/standard-reporter),
+[standard-summary](https://www.npmjs.com/package/standard-summary)도 있습니다..
 
 ## Is there a Node.js API?
 
