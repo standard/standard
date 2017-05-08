@@ -490,32 +490,31 @@ $ standard --env mocha
 
 이것은 `standard` (자신의 코드를 읽는 사람뿐만 아니라)이 web worker 코드에서 `자신`이 전역(global)이라는 것을 알 수 있게 해줍니다.
 
-## Can I check code inside of Markdown or HTML files?
+## Markdown 또는 HTML 파일 내부의 코드를 확인할 수 있나요?
 
-To check code inside Markdown files, use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
+Markdown 파일 내의 코드를 확인하려면 [`standard-markdown`](https://www.npmjs.com/package/standard-markdown)을 사용하십시오.
 
-Alternatively, there are ESLint plugins that can check code inside Markdown, HTML,
-and many other types of language files:
+또는 Markdown, HTML 및 기타 여러 유형의 언어 파일에서 코드를 확인할 수있는 ESLint 플러그인이 있습니다.
 
-To check code inside Markdown files, use an ESLint plugin:
+Markdown 파일 내의 코드를 확인하려면 ESLint 플러그인을 사용하십시오.
 
 ```bash
 $ npm install eslint-plugin-markdown
 ```
 
-Then, to check JS that appears inside code blocks, run:
+그런 다음, 코드 블록 안에있는 JS를 확인하려면 다음을 실행하십시오.
 
 ```bash
 $ standard --plugin markdown '**/*.md'
 ```
 
-To check code inside HTML files, use an ESLint plugin:
+HTML 파일 내부의 코드를 확인하려면 ESLint 플러그인을 사용하십시오.
 
 ```bash
 $ npm install eslint-plugin-html
 ```
 
-Then, to check JS that appears inside `<script>` tags, run:
+그런 다음, `<script>`태그 안에있는 JS를 확인하려면 다음을 실행하십시오.
 
 ```bash
 $ standard --plugin html '**/*.html'
