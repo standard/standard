@@ -480,16 +480,15 @@ $ standard --env mocha
 
 **참고 : `env` 및 `envs`는 동일합니다.**
 
-## What about Web Workers?
+## Web Workes는 어떻습니까?
 
-Add this to the top of your files:
+적용하려는 파일 상단에 아래 주석코드를 추가하세요.
 
 ```js
 /* eslint-env serviceworker */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a
-global in web worker code.
+이것은 `standard` (자신의 코드를 읽는 사람뿐만 아니라)이 web worker 코드에서 `자신`이 전역(global)이라는 것을 알 수 있게 해줍니다.
 
 ## Can I check code inside of Markdown or HTML files?
 
