@@ -616,29 +616,26 @@ var opts = {
 
 `callback`은 `Error`와 `results`객체로 호출됩니다. (위와 같습니다)
 
-## How do I contribute to `standard`?
+## `standard` 기여는 어떻게 하나요?
 
-Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
+기여를 환영합니다! [issues](https://github.com/feross/standard/issues) 나 [PRs](https://github.com/feross/standard/pulls)를 확인하고 거기에 보이지 않는 것을 원한다면 직접 만들어주세요.
 
-Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
+채팅을 원하시나요? freenode의 `#standard` 채널에서 IRC의 참여자와 함께하세요.
 
-Here are some important packages in the `standard` ecosystem:
+다음은 `standard` 생태계의 중요한 패키지입니다.
 
-- **[standard](https://github.com/feross/standard)** - this repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
-  - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
-- **[standard-www](https://github.com/feross/standard-www)** - code for https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+- **[standard](https://github.com/feross/standard)** - 현재 저장소
+  - **[standard-engine](https://github.com/flet/standard-engine)** - 임의의 eslint 규칙에 대한 cli 엔진
+  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - `standard`을 위한 eslint 규칙
+  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - `standard`을 위한 eslint 규칙 (JSX)
+  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - `standard`을 위한 커스텀 eslint 규칙 (eslint 코어의 일부가 아닙니다.)
+  - **[eslint](https://github.com/eslint/eslint)** - 강력한 standard linter
+- **[snazzy](https://github.com/feross/snazzy)** - standard를 예쁘게 터미널에 출력해줍니다.
+- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com에 대한 코드
+- **[semistandard](https://github.com/Flet/semistandard)** - 세미콜론이 포함된 standard (필요한 경우)
 
-There are also many **[editor plugins](#text-editor-plugins)**, a list of
-**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
-and an awesome list of
-**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
+또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/feross/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/feross/awesome-standard)**이 있습니다.
 
-## License
+## 라이선스
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](http://feross.org).
