@@ -550,32 +550,31 @@ $ standard --verbose | snazzy
 [standard-reporter](https://www.npmjs.com/package/standard-reporter),
 [standard-summary](https://www.npmjs.com/package/standard-summary)도 있습니다..
 
-## Is there a Node.js API?
+## Node.js API가 있나요?
 
-Yes!
+네!
 
 ### `standard.lintText(text, [opts], callback)`
 
-Lint the provided source `text`. An `opts` object may be provided:
+린트에 제공할 소스 `text`를 준비합니다. `opts` 객체를 추가할 수 있습니다.
 
 ```js
 {
-  cwd: '',      // current working directory (default: process.cwd())
-  filename: '', // path of the file containing the text being linted (optional, though some eslint plugins require it)
-  fix: false,   // automatically fix problems
-  globals: [],  // custom global variables to declare
-  plugins: [],  // custom eslint plugins
-  envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  cwd: '',      // 현재 작업 디렉토리 (default: process.cwd())
+  filename: '', // 린트 텍스트를 포함하는 파일의 경로 (선택, 일부 eslint 플러그인이 필요함)
+  fix: false,   // 자동 문제 해결
+  globals: [],  // 선언할 커스텀 글로벌 변수
+  plugins: [],  // 커스텀 eslint 플러그인
+  envs: [],     // 커스텀 eslint 환경
+  parser: ''    // 커스텀 js 파서  (예: babel-eslint)
 }
 ```
 
-Additional options may be loaded from a `package.json` if it's found for the
-current working directory.
+`package.json`가 현재 작업 디렉토리에서 발견되면 추가옵션을 로드 할 수 있습니다.
 
-The `callback` will be called with an `Error` and `results` object.
+`콜백(callback)`은 `Error`와 `results`객체와 함께 호출 될 것입니다.
 
-The `results` object will contain the following properties:
+`results`객체는 다음과 같은 속성을 포함합니다.
 
 ```js
 var results = {
