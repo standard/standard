@@ -21,6 +21,7 @@
   <a href="docs/README-esla.md">Spanish</a>,
   <a href="docs/README-zhtw.md">繁體中文</a>,
   <a href="docs/README-zhcn.md">简体中文</a>
+  <a href="docs/README-kokr.md">한국어</a>
 </p>
 
 <br>

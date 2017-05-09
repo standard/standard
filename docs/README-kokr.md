@@ -17,11 +17,12 @@
 
 <p align="center">
   번역:
-  <a href="docs/README-ptbr.md">Português</a>,
-  <a href="docs/README-esla.md">Spanish</a>,
-  <a href="docs/README-zhtw.md">繁體中文</a>,
-  <a href="docs/README-zhcn.md">简体中文</a>
-  <a href="docs/README-kokr.md">한국어</a>
+  <a href="../README.md">English</a>,
+  <a href="README-ptbr.md">Português</a>,
+  <a href="README-esla.md">Spanish</a>,
+  <a href="README-zhtw.md">繁體中文</a>,
+  <a href="README-zhcn.md">简体中文</a>
+  <a href="README-kokr.md">한국어</a>
 </p>
 
 <br>
