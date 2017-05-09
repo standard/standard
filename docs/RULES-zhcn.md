@@ -1,6 +1,6 @@
 # JavaScript Standard Style
 
-其他语言: [English](../RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)、[繁體中文](docs/RULES-zhtw.md)
+其他语言: [English](../RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)、[繁體中文](docs/RULES-zhtw.md), [한국어](RULES-kokr.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
