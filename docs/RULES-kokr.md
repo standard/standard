@@ -1,14 +1,12 @@
 # JavaScript Standard Style
 
-Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](RULES-zhcn.md)
+번역: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](RULES-zhcn.md), [한국어](docs/RULES-kokr.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
-rules.
+이것은 JavaScript [standard](https://github.com/feross/standard) 규칙입니다.
 
-The best way to learn about `standard` is to just install it and give it a try on
-your code.
+`standard`에 대해 배우는 가장 좋은 방법은 그냥 설치하고 코드에 시도해 보는 것입니다.
 
 ## Rules
 
