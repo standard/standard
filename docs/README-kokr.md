@@ -634,7 +634,7 @@ var opts = {
 - **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com에 대한 코드
 - **[semistandard](https://github.com/Flet/semistandard)** - 세미콜론이 포함된 standard (필요한 경우)
 
-또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/feross/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/feross/awesome-standard)**이 있습니다.
+또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/feross/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/feross/awesome-standard)** 이 있습니다.
 
 ## 라이선스
 
