@@ -73,12 +73,12 @@ npm install standard --save-dev
 - 빠른 시작
   - [설치](#install)
   - [사용법](#usage)
-  - [이해가 잘되면 다음을 수행합니다](#what-you-might-do-if-youre-clever)
+  - [이해가 잘되면 다음을 수행합니다](#이해가-잘되면-다음을-수행합니다)
 - 질의응답
-  - [왜 JavaScript Standard Style을 사용해야 할까요?](#why-should-i-use-javascript-standard-style)
-  - [누가 JavaScript Standard Style을 사용하나요?](#who-uses-javascript-standard-style)
-  - [텍스트 편집 플러그인이 있나요?](#are-there-text-editor-plugins)
-  - [readme에 넣을 수 있는 뱃지로고가 있나요?](#is-there-a-readme-badge)
+  - [왜 JavaScript Standard Style을 사용해야 할까요?](#왜-JavaScript-Standard-Style을-사용해야-할까요?)
+  - [누가 JavaScript Standard Style을 사용하나요?](#누가-JavaScript-Standard-Style을-사용하나요?)
+  - [텍스트 편집 플러그인이 있나요?](#텍스트-편집-플러그인이-있나요?)
+  - [readme에 넣을 수 있는 뱃지로고가 있나요?](#readme에-넣을-수-있는-뱃지로고가-있나요?)
   - [나와는 룰이 맞지 않습니다. 변경 가능합니까?](#i-disagree-with-rule-x-can-you-change-it)
   - [그러나 이 것은 실제 웹표준이 아닙니다!](#but-this-isnt-a-real-web-standard)
   - [자동으로 포멧을 맞춰주는 것이 있나요?](#is-there-an-automatic-formatter)
