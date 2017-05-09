@@ -560,7 +560,7 @@ $ standard --verbose | snazzy
 
 ```js
 {
-  cwd: '',      // 현재 작업 디렉토리 (default: process.cwd())
+  cwd: '',      // 현재 작업 디렉토리 (기본: process.cwd())
   filename: '', // 린트 텍스트를 포함하는 파일의 경로 (선택, 일부 eslint 플러그인이 필요함)
   fix: false,   // 자동 문제 해결
   globals: [],  // 선언할 커스텀 글로벌 변수
@@ -600,21 +600,21 @@ var results = {
 
 ### `standard.lintFiles(files, [opts], callback)`
 
-Lint the provided `files` globs. An `opts` object may be provided:
+제공된 'files' 덩어리를 린트에 적용할 수 있습니다. `opts` 객체를 추가할 수 있습니다.
 
 ```js
 var opts = {
-  ignore: [],   // file globs to ignore (has sane defaults)
-  cwd: '',      // current working directory (default: process.cwd())
-  fix: false,   // automatically fix problems
-  globals: [],  // global variables to declare
-  plugins: [],  // eslint plugins
-  envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  ignore: [],   // 파일뭉치를 무시합니다. (기본적인 무시파일들이 포함되어 있습니다)
+  cwd: '',      // 현재 작업 디렉토리 (기본: process.cwd())
+  fix: false,   // 자동 문제 해결
+  globals: [],  // 선언할 글로벌 변수
+  plugins: [],  // eslint 플러그인
+  envs: [],     // eslint 환경
+  parser: ''    // js 파서 (예: babel-eslint)
 }
 ```
 
-The `callback` will be called with an `Error` and `results` object (same as above).
+`callback`은 `Error`와 `results`객체로 호출됩니다. (위와 같습니다)
 
 ## How do I contribute to `standard`?
 
