@@ -1,6 +1,6 @@
 # JavaScript Standard Style
 
-Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](RULES-zhcn.md), [한국어](docs/RULES-kokr.md)
+Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](docs/RULES-zhcn.md), [한국어](docs/RULES-kokr.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -312,7 +312,7 @@ your code.
 
 * **Files must end with a newline.**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **No space between function identifiers and their invocations.**
 
@@ -936,7 +936,7 @@ your code.
 
 * **Avoid comparing a variable to itself.**
 
-  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+  eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
   ```js
   if (score === score) {}   // ✗ avoid

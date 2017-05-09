@@ -310,7 +310,7 @@
 
 * **파일은 개행으로 끝나야합니다.**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **함수식별자와 호출사이에는 공백이 없어야 합니다.**
 
@@ -934,7 +934,7 @@
 
 * **변수를 자기 자신과 비교하지 말아야 합니다.**
 
-  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+  eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
   ```js
   if (score === score) {}   // ✗ 피하세요

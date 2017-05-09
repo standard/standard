@@ -710,7 +710,7 @@ Here are some important packages in the `standard` ecosystem:
 - **[standard-www](https://github.com/feross/standard-www)** - code for https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
 
-There are also many **[editor plugins](#text-editor-plugins)**, a list of
+There are also many **[editor plugins](#are-there-text-editor-plugins)**, a list of
 **[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
 and an awesome list of
 **[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
