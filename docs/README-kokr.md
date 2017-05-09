@@ -586,7 +586,7 @@ var results = {
       ],
       errorCount: 0,
       warningCount: 0,
-      output: '' // fixed source code (only present with {fix: true} option)
+      output: '' // 고정 소스 코드 ({fix : true} 옵션과 함께 제공)
     }
   ],
   errorCount: 0,
@@ -596,8 +596,7 @@ var results = {
 
 ### `results = standard.lintTextSync(text, [opts])`
 
-Synchronous version of `standard.lintText()`. If an error occurs, an exception is
-thrown. Otherwise, a `results` object is returned.
+`standard.lintText()`의 동기화 버전. 오류가 발생하면 예외가 발생합니다. 그렇지 않으면 `results`객체가 반환됩니다.
 
 ### `standard.lintFiles(files, [opts], callback)`
 
