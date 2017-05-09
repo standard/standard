@@ -1,6 +1,6 @@
 # JavaScript Standard Style
 
-번역: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](RULES-zhcn.md), [한국어](docs/RULES-kokr.md)
+번역: [Português](RULES-ptbr.md), [Spanish](RULES-esla.md), [繁體中文](RULES-zhtw.md), [简体中文](RULES-zhcn.md), [한국어](RULES-kokr.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
