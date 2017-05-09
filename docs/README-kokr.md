@@ -75,7 +75,7 @@ npm install standard --save-dev
   - [사용법](#usage)
   - [이해가 잘되면 다음을 수행합니다](#이해가-잘되면-다음을-수행합니다)
 - 질의응답
-  - [왜 JavaScript Standard Style을 사용해야 할까요?](#왜-JavaScript-Standard-Style을-사용해야-할까요?)
+  - [왜 JavaScript Standard Style을 사용해야 할까요?](#왜 JavaScript Standard Style을 사용해야 할까요?)
   - [누가 JavaScript Standard Style을 사용하나요?](#누가-JavaScript-Standard-Style을-사용하나요?)
   - [텍스트 편집 플러그인이 있나요?](#텍스트-편집-플러그인이-있나요?)
   - [readme에 넣을 수 있는 뱃지로고가 있나요?](#readme에-넣을-수-있는-뱃지로고가-있나요?)
