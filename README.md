@@ -239,12 +239,19 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 Install **[linter-js-standard][atom-1]**.
 
+Alternatively, you can install **[linter-js-standard-engine][atom-4]**. Instead of
+bundling a version of `standard` it will automatically use the version installed
+in your current project. It will also work out of the box with other linters based
+on **[standard-engine][atom-5]**.
+
 For automatic formatting, install **[standard-formatter][atom-2]**. For snippets,
 install **[standardjs-snippets][atom-3]**.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
+[atom-4]: https://atom.io/packages/linter-js-standard-engine
+[atom-5]: https://github.com/Flet/standard-engine
 
 ### Visual Studio Code
 
