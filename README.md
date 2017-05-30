@@ -346,7 +346,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 
 ## Is there an automatic formatter?
 
-Yes! You can use `standard --fix` to automatically fix most issues automatically.
+Yes! You can use `standard --fix` to fix most issues automatically.
 
 `standard --fix` is built into `standard` for maximum convenience. Most problems
 are fixable, but some errors (like forgetting to handle errors) must be fixed
