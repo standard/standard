@@ -79,7 +79,7 @@ npm install standard --save-dev
   - [有现成的编辑器插件吗？](#are-there-text-editor-plugins)
   - [有专属徽章可以用来放到项目的 README 文件中吗？](#is-there-a-readme-badge)
   - [如果我不同意某条规则，可以改吗？](#i-disagree-with-rule-x-can-you-change-it)
-  - [毕竟这不是一分正式的 Web 规范啊！](#but-this-isnt-a-real-web-standard)
+  - [毕竟这不是一份正式的 Web 规范啊！](#but-this-isnt-a-real-web-standard)
   - [有自动格式化工具么？](#is-there-an-automatic-formatter)
   - [如何排除某些文件？](#how-do-i-ignore-files)
   - [如何隐藏某类警告？](#how-do-i-hide-a-certain-warning)
@@ -295,7 +295,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## 毕竟这不是一分正式的 Web 规范啊！
+## 毕竟这不是一份正式的 Web 规范啊！
 
 确实！这份规范不隶属于任何官方组织，所以才叫 `feross/standard` 而不是 `ECMA/standard` 嘛。
 
