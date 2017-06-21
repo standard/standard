@@ -93,7 +93,7 @@ that use `standard`!
   - [How do I hide a certain warning?](#how-do-i-hide-a-certain-warning)
   - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
-  - [Can I use a JavaScript language variant, like Flow?](#can-i-use-a-javascript-language-variant-like-flow)
+  - [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
   - [What about Web Workers?](#what-about-web-workers)
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
@@ -465,8 +465,13 @@ To support experimental language features, `standard` supports specifying a
 custom JavaScript parser. Before using a custom parser, consider whether the added
 complexity is worth it.
 
-To use a custom parser, install it from npm (example: `npm install babel-eslint`)
-and run:
+To use a custom parser, first install it from npm:
+
+```bash
+npm install babel-eslint --save-dev
+```
+
+Then run:
 
 ```bash
 $ standard --parser babel-eslint
@@ -486,17 +491,28 @@ If `standard` is installed globally (i.e. `npm install standard --global`), then
 be sure to install `babel-eslint` globally as well, with
 `npm install babel-eslint --global`.
 
-## Can I use a JavaScript language variant, like Flow?
+## Can I use a JavaScript language variant, like Flow or TypeScript?
 
-Before using a custom JS language variant, consider whether the added complexity
-(and effort required to get new contributors up-to-speed) is worth it.
+`standard` supports the latest ECMAScript features. However, Flow and TypeScript add new
+syntax to the language, so they are not supported out-of-the-box.
 
-`standard` supports ESLint plugins. Use one of these to transform your code into
-valid JavaScript before `standard` sees it. To use a custom parser, install it from
-npm and run:
+To support JavaScript language variants, `standard` supports specifying a custom JavaScript
+parser as well as an ESLint plugin to handle the changed syntax. Before using a JavaScript
+language variant, consider whether the added complexity is worth it.
+
+### Flow
+
+To use Flow, you need to run `standard` with `babel-eslint` as the parser and
+`eslint-plugin-flowtype` as a plugin.
 
 ```bash
-$ standard --plugin PLUGIN_NAME
+npm install babel-eslint eslint-plugin-flowtype --save-dev
+```
+
+Then run:
+
+```bash
+$ standard --parser babel-eslint --plugin flowtype
 ```
 
 Or, add this to `package.json`:
@@ -504,38 +520,58 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "plugins": [ "PLUGIN_NAME" ]
+    "parser": "babel-eslint",
+    "plugins": [ "flowtype" ]
   }
 }
 ```
-
-To use Flow, you need to use `babel-eslint` as your parser. So, run
-`npm install eslint-plugin-flowtype babel-eslint`, then run:
-
-```bash
-$ standard --plugin flowtype --parser babel-eslint
-```
-
-Or, add this to `package.json`:
-
-```json
-{
-  "standard": {
-    "plugins": [ "flowtype" ],
-    "parser": "babel-eslint"
-  }
-}
-```
-
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `eslint-plugin-flowtype` globally as well, with
-`npm install eslint-plugin-flowtype --global`.
 
 *Note: `plugin` and `plugins` are equivalent.*
 
+If `standard` is installed globally (i.e. `npm install standard --global`), then
+be sure to install `babel-eslint` and `eslint-plugin-flowtype` globally as well, with
+`npm install babel-eslint eslint-plugin-flowtype --global`.
+
+### TypeScript
+
+To use TypeScript, you need to run `standard` with `typescript-eslint-parser` as the parser,
+`eslint-plugin-typescript` as a plugin, and tell standard to lint `*.ts` files (since it
+doesn't by default).
+
+```bash
+npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+```
+
+Then run:
+
+```bash
+$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+```
+
+Or, add this to `package.json`:
+
+```json
+{
+  "standard": {
+    "parser": "typescript-eslint-parser",
+    "plugins": [ "typescript" ]
+  }
+}
+```
+
+With that in `package.json`, you can run:
+
+```bash
+standard *.ts
+```
+
+If `standard` is installed globally (i.e. `npm install standard --global`), then
+be sure to install `typescript-eslint-parser` and `eslint-plugin-typescript` globally as well,
+with `npm install typescript-eslint-parser eslint-plugin-typescript --global`.
+
 ## What about Mocha, Jasmine, QUnit, etc?
 
-To support mocha in your test files, add this to the beginning of your test files:
+To support mocha in test files, add this to the top of the test files:
 
 ```js
 /* eslint-env mocha */
@@ -559,13 +595,13 @@ module.
 
 ## What about Web Workers?
 
-Add this to the top of your files:
+Add this to the top of worker files:
 
 ```js
 /* eslint-env serviceworker */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a
+This lets `standard` (as well as humans reading the code) know that `self` is a
 global in web worker code.
 
 ## Can I check code inside of Markdown or HTML files?
