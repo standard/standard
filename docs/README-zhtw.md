@@ -396,7 +396,7 @@ $ standard --global myVar1 --global myVar2
 
 `standard` 支援最新的 ECMAScript 語法 ES8 (ES2017)，包含所有在新語法提議過程中，已經進入 "階段四" 的提議。
 
-為了支援實驗性質的語法，`standard` 支援客製化 Javascript 語法解析器。在使用客製化語法解析器前，請考慮清楚是否值得去增加這些複雜度。
+為了支援實驗性質的語法，`standard` 支援客製化 JavaScript 語法解析器。在使用客製化語法解析器前，請考慮清楚是否值得去增加這些複雜度。
 
 要使用客製化語法解析器，可以從 npm 安裝（比如說：`npm install babel-eslint`），然後執行：
 
