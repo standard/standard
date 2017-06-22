@@ -83,7 +83,7 @@ Para ter uma idéia melhor, dê uma olhada
   - [Como escondo um determinado aviso?](#como-escondo-um-determinado-aviso)
   - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-definedfunctions)
   - [Posso usar um custom parser de JS novinho em folha que saiu ontem para suporte ao ES Next?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
-  - [Posso usar uma linguagem variante de Javascript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
+  - [Posso usar uma linguagem variante de JavaScript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
   - [Você pode tornar regra X configurável?](#voc%C3%AA-pode-tornar-regra-x-configur%C3%A1vel)
   - [E os Web Workers?](#e-os-web-workers)
   - [E a respeito de Mocha, Jasmine, QUnit, etc?](#e-a-respeito-de-mocha-jasmine-qunit-etc)
@@ -390,7 +390,7 @@ Antes de usar um custom parser, considere se a complexidade a mais no seu códig
 
 Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `babel-eslint` globalmente como `npm install babel-eslint -g`.
 
-### Posso usar uma linguagem variante de Javascript, tipo Flow?
+### Posso usar uma linguagem variante de JavaScript, tipo Flow?
 
 Antes de usar uma variante de JS customizada, considere se a complexidade a mais no seu processo de construção (e os esforços necessários para conseguir contribuíntes numa velocidade boa) valem a pena.
 
