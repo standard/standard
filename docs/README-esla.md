@@ -13,7 +13,7 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
-<h4 align="center">Una guía de estilos Javascript para gobernarlos a todos</h4>
+<h4 align="center">Una guía de estilos JavaScript para gobernarlos a todos</h4>
 
 <p align="center">
   Translations:
@@ -453,7 +453,7 @@ Si `standard` está instalado globalmente (ej: `npm install standard --global`),
 Antes de usar una variable del lenguaje JavaScript customizado, considera si la complejidad agregada
 (y esfuerzo requerido para obtener los contribuidores alcanzarle con rapidez) vale la pena.
 
-`standard` soporta plugins ESLint. Usa uno de estos para transformar el código a javascript válido antes de que `standard` lo vea. Para usar un parser customizado, instálalo desde
+`standard` soporta plugins ESLint. Usa uno de estos para transformar el código a JavaScript válido antes de que `standard` lo vea. Para usar un parser customizado, instálalo desde
 npm (example: `npm install eslint-plugin-flowtype`) y ejecuta:
 
 ```bash

@@ -85,7 +85,7 @@ npm install standard --save-dev
   - [如何隐藏某类警告？](#how-do-i-hide-a-certain-warning)
   - [使用的三方插件向全局暴露了变量，如何避免 "variable is not defined" 的错误提示？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [如何才能使用处于实验阶段的 JavaScript 特性（譬如 ES Next）？](#how-do-i-use-experimental-javascript-es-next-features)
-  - [我能使用其他 Javascript 变种吗，例如 Flow？](#can-i-use-a-javascript-language-variant-like-flow)
+  - [我能使用其他 JavaScript 变种吗，例如 Flow？](#can-i-use-a-javascript-language-variant-like-flow)
   - [如何与 Mocha，Jasmine 和 QUnit 这些测试工具搭配工作?](#what-about-mocha-jasmine-qunit-etc)
   - [Web Workers 有考虑过么？](#what-about-web-workers)
   - [Markdown 或者 HTML 文件中的代码能检查到吗？](#can-i-check-code-inside-of-markdown-or-html-files)
@@ -416,7 +416,7 @@ $ standard --parser babel-eslint
 
 如果全局安装（`npm install standard --global`）了 `standard` 的话，那么请确保 `babel-eslint` 也用 `npm install babel-eslint --global` 全局安装。
 
-## 我能使用其他 Javascript 变种吗，例如 Flow？
+## 我能使用其他 JavaScript 变种吗，例如 Flow？
 
 同样地，想要使用一个 JS 变种之前，先考虑添加和使用它所带来的复杂度看是否值得这么去做。
 
