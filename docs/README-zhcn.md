@@ -420,7 +420,7 @@ $ standard --parser babel-eslint
 
 同样地，想要使用一个 JS 变种之前，先考虑添加和使用它所带来的复杂度看是否值得这么去做。
 
-`standard` 支付 ESLint 插件。在 `standard` 处理代码前，使用任何一个插件来将代码编译成合法的 JS 即可。 从 npm 安装一个自定义的解析器 (示例：`npm install eslint-plugin-flowtype`) 然后运行：
+`standard` 支持 ESLint 插件。在 `standard` 处理代码前，使用任何一个插件来将代码编译成合法的 JS 即可。 从 npm 安装一个自定义的解析器 (示例：`npm install eslint-plugin-flowtype`) 然后运行：
 
 ```bash
 $ standard --plugin flowtype
