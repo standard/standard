@@ -42,7 +42,7 @@ npm install standard
 
 - **2 espaços** – para identação
 - **Aspas simples para strings** – exceto para evitar escapamentos
-- **Sem variáveis não-utilizadas** – resolve *uma porraad* de bugs!
+- **Sem variáveis não-utilizadas** – resolve *uma porrada* de bugs!
 - **Sem vírgulas-e-vírgula** – [Dá][1] [boa.][2] [Sério!][3]
 - **Nunca comece uma linha com  `(`, `[`, ou `` ` ``**
   - Esse é o único **problema** em omitir ponto-e-vírgula – *checado automaticamente pra você!*
