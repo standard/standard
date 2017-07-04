@@ -62,8 +62,8 @@ npm install standard --save-dev
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES.md#semicolons
-[5]: RULES.md#javascript-standard-style
+[4]: RULES-zhcn.md#semicolons
+[5]: RULES-zhcn.md#javascript-standard-style
 
 说了那么多，看看[这个遵循了 Standard 规范的示例文件](https://github.com/expressjs/body-parser/blob/master/index.js) 中的代码吧。或者，这里还有[一大波使用了此规范的项目](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 代码可供参考。
 
@@ -79,13 +79,13 @@ npm install standard --save-dev
   - [有现成的编辑器插件吗？](#are-there-text-editor-plugins)
   - [有专属徽章可以用来放到项目的 README 文件中吗？](#is-there-a-readme-badge)
   - [如果我不同意某条规则，可以改吗？](#i-disagree-with-rule-x-can-you-change-it)
-  - [毕竟这不是一分正式的 Web 规范啊！](#but-this-isnt-a-real-web-standard)
+  - [毕竟这不是一份正式的 Web 规范啊！](#but-this-isnt-a-real-web-standard)
   - [有自动格式化工具么？](#is-there-an-automatic-formatter)
   - [如何排除某些文件？](#how-do-i-ignore-files)
   - [如何隐藏某类警告？](#how-do-i-hide-a-certain-warning)
   - [使用的三方插件向全局暴露了变量，如何避免 "variable is not defined" 的错误提示？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [如何才能使用处于实验阶段的 JavaScript 特性（譬如 ES Next）？](#how-do-i-use-experimental-javascript-es-next-features)
-  - [我能使用其他 Javascript 变种吗，例如 Flow？](#can-i-use-a-javascript-language-variant-like-flow)
+  - [我能使用其他 JavaScript 变种吗，例如 Flow？](#can-i-use-a-javascript-language-variant-like-flow)
   - [如何与 Mocha，Jasmine 和 QUnit 这些测试工具搭配工作?](#what-about-mocha-jasmine-qunit-etc)
   - [Web Workers 有考虑过么？](#what-about-web-workers)
   - [Markdown 或者 HTML 文件中的代码能检查到吗？](#can-i-check-code-inside-of-markdown-or-html-files)
@@ -295,7 +295,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## 毕竟这不是一分正式的 Web 规范啊！
+## 毕竟这不是一份正式的 Web 规范啊！
 
 确实！这份规范不隶属于任何官方组织，所以才叫 `feross/standard` 而不是 `ECMA/standard` 嘛。
 
@@ -416,11 +416,11 @@ $ standard --parser babel-eslint
 
 如果全局安装（`npm install standard --global`）了 `standard` 的话，那么请确保 `babel-eslint` 也用 `npm install babel-eslint --global` 全局安装。
 
-## 我能使用其他 Javascript 变种吗，例如 Flow？
+## 我能使用其他 JavaScript 变种吗，例如 Flow？
 
 同样地，想要使用一个 JS 变种之前，先考虑添加和使用它所带来的复杂度看是否值得这么去做。
 
-`standard` 支付 ESLint 插件。在 `standard` 处理代码前，使用任何一个插件来将代码编译成合法的 JS 即可。 从 npm 安装一个自定义的解析器 (示例：`npm install eslint-plugin-flowtype`) 然后运行：
+`standard` 支持 ESLint 插件。在 `standard` 处理代码前，使用任何一个插件来将代码编译成合法的 JS 即可。 从 npm 安装一个自定义的解析器 (示例：`npm install eslint-plugin-flowtype`) 然后运行：
 
 ```bash
 $ standard --plugin flowtype
