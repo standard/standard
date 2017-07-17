@@ -16,12 +16,12 @@
 <h4 align="center">One JavaScript Style to Rule Them All</h4>
 
 <p align="center">
-  Translations:
-  <a href="docs/README-ptbr.md">Português</a>,
-  <a href="docs/README-esla.md">Spanish</a>,
-  <a href="docs/README-zhtw.md">繁體中文</a>,
-  <a href="docs/README-zhcn.md">简体中文</a>,
-  <a href="docs/README-zhcn.md">Italian</a>
+  <a href="README-en.md">English</a> •
+  <a href="README-esla.md">Español (Latinoamérica)</a> •
+  <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-ptbr.md">Português (Brasil)</a> •
+  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
@@ -213,7 +213,7 @@ Lots of folks!
 [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/rentograph.png>](https://rentograph.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) |
 |---|---|---|---|---|
 
 In addition to companies, many community members use `standard` on packages that
@@ -305,7 +305,7 @@ for `standard` directly in the IDE.
 
 If you still prefer to configure `standard` manually, [follow this guide][webstorm-1]. This applies to all JetBrains products, including PhpStorm, IntelliJ, RubyMine, etc.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## Is there a readme badge?
 
