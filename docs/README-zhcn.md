@@ -272,10 +272,10 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 必需的！如果你的项目使用了 `standard` 规范，可以任选一个下面的徽章放入项目中来进行展示。
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -289,7 +289,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 不行。制定这套 `standard` 规范的目的就是让大家都不必再花时间浪费在[无谓的][bikeshedding]代码风格之争上面了。关于缩进该用制表符还是空格这个问题已经争论了很久了，永远也没有答案。争论这个都可以把需求提前写完了。遵循 `standard` 规范，你就不用再犹豫了，毕竟不管怎样争论总归会选择一种风格的。希望大家也能在个人语义和普适价值上做一个权衡。
 
 如果你非要自己去配置成百上千项的 ESLint 规则，那你可以直接使用
-[eslint-config-standard](https://github.com/feross/eslint-config-standard) 来将个人配置包装在上层。
+[eslint-config-standard](https://github.com/standard/eslint-config-standard) 来将个人配置包装在上层。
 
 小贴士：选择 `standard` 然后保持吧。把时间留下来解决其他有意义的问题！\(^____^)/
 
@@ -507,7 +507,7 @@ $ standard --plugin html '**/*.html'
 
 ```sh
 #!/bin/sh
-# 确保将要提交的所有 JavaScript 代码通过 standard 规范的检查 
+# 确保将要提交的所有 JavaScript 代码通过 standard 规范的检查
 git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
 if [ $? -ne 0 ]; then exit 1; fi
 ```
@@ -599,24 +599,24 @@ var opts = {
 
 ## 如何参与到 `standard` 规范中来？
 
-欢迎参与进来！逛逛 [issues](https://github.com/feross/standard/issues) 或者 [PRs](https://github.com/feross/standard/pulls) 页面，如果发现没有找到想要的问题可以自己提一个。
+欢迎参与进来！逛逛 [issues](https://github.com/standard/standard/issues) 或者 [PRs](https://github.com/standard/standard/pulls) 页面，如果发现没有找到想要的问题可以自己提一个。
 
 来 freenode 的 `#standard` 频道与其他人一起聊天讨论！
 
 以下是一些 `standard` 生态里比较重要的包：
 
-- **[standard](https://github.com/feross/standard)** - 本仓库
+- **[standard](https://github.com/standard/standard)** - 本仓库
   - **[standard-engine](https://github.com/flet/standard-engine)** - 一个 eslint 命令行引擎
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** -standard 规范的 eslint 检查器
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 规范
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** -standard 规范的 eslint 检查器
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 规范
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standard 规范自定义的 eslint 规则（不在 eslint 核心规则里面）
   - **[eslint](https://github.com/eslint/eslint)** - standard 基于它来实现的
-- **[snazzy](https://github.com/feross/snazzy)** - 美化输出
-- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com 站点的源码
+- **[snazzy](https://github.com/standard/snazzy)** - 美化输出
+- **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 站点的源码
 - **[semistandard](https://github.com/Flet/semistandard)** - standard 规范带逗号的版本（如果你需要的话）
 
 还有很多 **[编辑器插件](#text-editor-plugins)**、一个
-**[使用 `standard` 规范开发的 npm 包](https://github.com/feross/standard-packages)**的列表、还有一分非常棒的**[ `standard` 生态中所使用到的包](https://github.com/feross/awesome-standard)**的列表。
+**[使用 `standard` 规范开发的 npm 包](https://github.com/standard/standard-packages)**的列表、还有一分非常棒的**[ `standard` 生态中所使用到的包](https://github.com/standard/awesome-standard)**的列表。
 
 ## 协议
 

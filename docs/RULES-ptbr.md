@@ -2,9 +2,9 @@
 
 Translations: [English](../RULES.md), [Spanish](RULES-esla.md), [繁體中文](RULES-zhtw.md), [简体中文](RULES-zhcn.md)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Esse é um "TL;DR" (ou "muito grande; nemli") das regras do [standard](https://github.com/feross/standard)
+Esse é um "TL;DR" (ou "muito grande; nemli") das regras do [standard](https://github.com/standard/standard)
 
 A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
 
