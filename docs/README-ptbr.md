@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
@@ -167,10 +167,10 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme para que as pessoas saibam que seu código está em standard style.
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -279,7 +279,7 @@ Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sob
 
 ### Mas isso não é um padrão legítimo!
 
-Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `feross/standard` e não `ECMA/standard`.
+Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `standard/standard` e não `ECMA/standard`.
 
 A palavra  "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
 

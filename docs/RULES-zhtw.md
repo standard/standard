@@ -10,7 +10,7 @@
   <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 這是 [standard](https://github.com/standard/standard) 語法規則的摘要。
 

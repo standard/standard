@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
@@ -63,7 +63,7 @@ npm install standard --save-dev
 [4]: RULES.md#semicolons
 [5]: RULES.md#javascript-standard-style
 
-看看一些[用 JavaScript Standard Style 寫的範例](https://github.com/expressjs/body-parser/blob/master/index.js)來了解更多，或查看其他[數以千計使用 `standard` 的專案。](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+看看一些[用 JavaScript Standard Style 寫的範例](https://github.com/expressjs/body-parser/blob/master/index.js)來了解更多，或查看其他[數以千計使用 `standard` 的專案。](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 
 ## 目錄
 
@@ -185,7 +185,7 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 [<img width=150 src=../docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=../docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=../docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=../docs/logos/taser.png>](https://www.taser.com) |
 |---|---|---|---|---|
 
-除了公司之外，非常多的社群也在套件中採用了 `standard` [因為太多了](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 無法在此一一列舉。
+除了公司之外，非常多的社群也在套件中採用了 `standard` [因為太多了](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) 無法在此一一列舉。
 
 `standard` 也是 GitHub 的
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 中，最多人給星的專案。
@@ -269,10 +269,10 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 可以！如果你在專案中使用了 `standard`，你可以在 README 中加入以下的徽章，讓大家知道你的程式碼使用了 standard 的標準。
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -293,7 +293,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 ## 但這不是真實網路中的標準！
 
-這當然不是！這個風格訂定並不是隸屬於什麼正式網路團體的，所以這個專案才叫做 `feross/standard` 而不是
+這當然不是！這個風格訂定並不是隸屬於什麼正式網路團體的，所以這個專案才叫做 `standard/standard` 而不是
 `ECMA/standard`.
 
 "standard" 這個字的意義比 "web standard" 的意義來得多 :-)。舉例來說：
