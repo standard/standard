@@ -10,9 +10,9 @@
   <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Questo è un TL;DR (troppo lungo, non ho letto) delle regole JavaScript di  [standard](https://github.com/feross/standard).
+Questo è un TL;DR (troppo lungo, non ho letto) delle regole JavaScript di  [standard](https://github.com/standard/standard).
 
 Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul tuo codice.
 

@@ -65,7 +65,7 @@ npm install standard
 [5]: RULES.md#javascript-standard-style
 
 Para ter uma idéia melhor, dê uma olhada
-[num arquivo amostra](https://github.com/feross/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
+[num arquivo amostra](https://github.com/webtorrent/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
 [repositórios](https://github.com/standard/standard-packages/blob/master/all.json) que usam
 `standard`.
 

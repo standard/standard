@@ -277,10 +277,10 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 네! 프로젝트에서 `standard`를 사용한다면, readme에 이 뱃지들 중 하나를 포함시켜 코드가 standard 스타일을 사용하고 있음을 사람들에게 알릴 수 있습니다.
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -293,7 +293,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 안됩니다. `standard`의 전체적인 요점은 코드 스타일에 대한 [bikeshedding][bikeshedding]을 피함으로써 시간을 절약하는 것입니다. 탭과 공백 등에 관해서는 온라인으로 많은 논쟁이 있기때문에 해결되지 않을 것입니다. 이러한 논쟁은 어떠한 것도 얻지 못하게합니다. 결국 `뭔가를 골라야 한다`입니다. 그것은 `standard`의 철학입니다. 이는 `단지 뭔가를 선택하세요`라는 의견입니다. 바라건대, 사용자들이 자신들의 의견을 방어하는 것에 대해 가치를 보게 되기를 바랍니다.
 
-수백 개의 ESLint 규칙을 개별적으로 구성하려는 경우 `eslint`를 직접 [eslint-config-standard](https://github.com/feross/eslint-config-standard)와 함께 사용하여 변경 사항을 맨 위에 배치 할 수 있습니다.
+수백 개의 ESLint 규칙을 개별적으로 구성하려는 경우 `eslint`를 직접 [eslint-config-standard](https://github.com/standard/eslint-config-standard)와 함께 사용하여 변경 사항을 맨 위에 배치 할 수 있습니다.
 
 팁 : 표준을 사용하고 계속 진행하십시오. 당신의 시간을 소비하고 있는 실질적인 문제를 해결하세요! :P
 
@@ -619,23 +619,23 @@ var opts = {
 
 ## `standard` 기여는 어떻게 하나요?
 
-기여를 환영합니다! [issues](https://github.com/feross/standard/issues) 나 [PRs](https://github.com/feross/standard/pulls)를 확인하고 거기에 보이지 않는 것을 원한다면 직접 만들어주세요.
+기여를 환영합니다! [issues](https://github.com/standard/standard/issues) 나 [PRs](https://github.com/standard/standard/pulls)를 확인하고 거기에 보이지 않는 것을 원한다면 직접 만들어주세요.
 
 채팅을 원하시나요? freenode의 `#standard` 채널에서 IRC의 참여자와 함께하세요.
 
 다음은 `standard` 생태계의 중요한 패키지입니다.
 
-- **[standard](https://github.com/feross/standard)** - 현재 저장소
+- **[standard](https://github.com/standard/standard)** - 현재 저장소
   - **[standard-engine](https://github.com/flet/standard-engine)** - 임의의 eslint 규칙에 대한 cli 엔진
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - `standard`을 위한 eslint 규칙
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - `standard`을 위한 eslint 규칙 (JSX)
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - `standard`을 위한 eslint 규칙
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - `standard`을 위한 eslint 규칙 (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - `standard`을 위한 커스텀 eslint 규칙 (eslint 코어의 일부가 아닙니다.)
   - **[eslint](https://github.com/eslint/eslint)** - 강력한 standard linter
-- **[snazzy](https://github.com/feross/snazzy)** - standard를 예쁘게 터미널에 출력해줍니다.
-- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com에 대한 코드
+- **[snazzy](https://github.com/standard/snazzy)** - standard를 예쁘게 터미널에 출력해줍니다.
+- **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com에 대한 코드
 - **[semistandard](https://github.com/Flet/semistandard)** - 세미콜론이 포함된 standard (필요한 경우)
 
-또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/feross/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/feross/awesome-standard)** 이 있습니다.
+또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/standard/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/standard/awesome-standard)** 이 있습니다.
 
 ## 라이선스
 

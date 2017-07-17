@@ -295,10 +295,10 @@ If you still prefer to configure `standard` manually, [follow this guide][websto
 
 Sì! Se usi `standard` nel tuo progetto, puoi includere uno di questi banner nel tuo readme file per far sapere alle persone the il tuo codice usa JavaScript Standard Style.
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -310,7 +310,7 @@ Sì! Se usi `standard` nel tuo progetto, puoi includere uno di questi banner nel
 
 No. Il punto essenziale di `standard` è di aiutarti a salvare tempo evitando [bikeshedding][bikeshedding] (discussioni su piccole cose mentre la cosa più importante non è terminata) sullo stile del codice. Ci sono un sacco di grandi discussioni riguardo tabs vs. spazi, ecc. che non saranno mai risolte. Queste discussioni semplicemente fanno perdere tempo. Alla fine, quello che ti rimane da fare è solamente 'scegli qualcosa', è questa la filosofia di `standard` - un sensato insieme di opinioni di 'scegli qualcosa'. Con un po' di fiducia, gli utenti vedranno il valore in ciò invece di difendere il proprie opinioni personali.
 
-Se davvero vuoi configurare centinaia di regole ESLint individualmente, puoi sempre usare `eslint` direttamente con [eslint-config-standard](https://github.com/feross/eslint-config-standard) in modo da usare le tue regole.
+Se davvero vuoi configurare centinaia di regole ESLint individualmente, puoi sempre usare `eslint` direttamente con [eslint-config-standard](https://github.com/standard/eslint-config-standard) in modo da usare le tue regole.
 
 Suggerimento: usa semplicemente `standard` e vai avanti. Ci sono problemi più reali dove puoi spendere il tuo prezioso tempo! :P
 
@@ -643,25 +643,25 @@ Il parametro `callback` sarà chiamato con un `Error` ed un oggetto `results`. (
 
 ## Come posso contribuire a `standard`?
 
-I collaboratori sono i benvenuti! Controlla le [issue](https://github.com/feross/standard/issues) o le [PR](https://github.com/feross/standard/pulls) e crea la tua di PR se vuoi qualcosa che non vedi.
+I collaboratori sono i benvenuti! Controlla le [issue](https://github.com/standard/standard/issues) o le [PR](https://github.com/standard/standard/pulls) e crea la tua di PR se vuoi qualcosa che non vedi.
 
 Vuoi chattare? Unisciti ai collaboratori su IRC nel canale `#standard` su freenode.
 
 Eccoti importanti module che sono importanti nell'ecosistema di `standard`:
 
-- **[standard](https://github.com/feross/standard)** - questo repository
+- **[standard](https://github.com/standard/standard)** - questo repository
   - **[standard-engine](https://github.com/flet/standard-engine)** - motore cli per regole eslint arbitrarie
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - regole eslint per standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - regole eslint per standard (JSX)
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - regole eslint per standard
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - regole eslint per standard (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - regole eslint personalizzate per standard (non fanno parte del cuore di eslint)
   - **[eslint](https://github.com/eslint/eslint)** - il linter che da energie a standard
-- **[snazzy](https://github.com/feross/snazzy)** - generate output carino nel terminale per standard
-- **[standard-www](https://github.com/feross/standard-www)** - codice per https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - generate output carino nel terminale per standard
+- **[standard-www](https://github.com/standard/standard-www)** - codice per https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, ma con i punti e virgola (se proprio sei obbligato)
 
-Ci sono anche molti **[plugin per l'editor di testo](#ci-sono-dei-plugin-per-gli-editor-di-testo)**, una lista di **[npm packages che usano `standard`](https://github.com/feross/standard-packages)**,
+Ci sono anche molti **[plugin per l'editor di testo](#ci-sono-dei-plugin-per-gli-editor-di-testo)**, una lista di **[npm packages che usano `standard`](https://github.com/standard/standard-packages)**,
 una incredibile lista di
-**[packages nell'ecosistema di `standard`](https://github.com/feross/awesome-standard)**.
+**[packages nell'ecosistema di `standard`](https://github.com/standard/awesome-standard)**.
 
 ## Licenza
 
