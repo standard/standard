@@ -643,11 +643,22 @@ $ standard --plugin html '**/*.html'
 
 Funny you should ask!
 
-```sh
-#!/bin/sh
-# Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
-if [ $? -ne 0 ]; then exit 1; fi
+```bash
+#!/bin/bash
+
+# Ensure all JavaScript files staged for commit pass standard code style
+function xargs-r() {
+  # Portable version of "xargs -r". The -r flag is a GNU extension that
+  # prevents xargs from running if there are no input files.
+  if IFS= read -r -d '' path; then
+    { echo -n "$path"; echo -ne "\0"; cat; } | xargs $@
+  fi
+}
+git diff -z --name-only --cached --relative | grep -z '\.jsx\?$' | xargs-r -0 -t standard
+if [[ $? -ne 0 ]]; then
+  echo 'JavaScript Standard Style errors were detected. Aborting commit.'
+  exit 1
+fi
 ```
 
 ## How do I make the output all colorful and *pretty*?
