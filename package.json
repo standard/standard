@@ -9,7 +9,7 @@
   },
   "bin": "./bin/cmd.js",
   "bugs": {
-    "url": "https://github.com/feross/standard/issues"
+    "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
     "eslint": "~3.19.0",
@@ -65,7 +65,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/standard.git"
+    "url": "git://github.com/standard/standard.git"
   },
   "scripts": {
     "show-rules": "eslint-index eslintrc.json",

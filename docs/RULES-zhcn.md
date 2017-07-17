@@ -2,9 +2,9 @@
 
 其他语言: [English](../RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)、[繁體中文](docs/RULES-zhtw.md)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-这是 JavaScript [standard](https://github.com/feross/standard) 代码规范的全文。
+这是 JavaScript [standard](https://github.com/standard/standard) 代码规范的全文。
 
 掌握本规范的最好方法是安装并在自己的代码中使用它。
 

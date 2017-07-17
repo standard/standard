@@ -79,7 +79,7 @@ que usan `standard`!
   - [Instalación](#instalación)
   - [Uso](#uso)
   - [Lo que podrías hacer si eres inteligente](#lo-que-podrías-hacer-si-eres-inteligente)
-  
+
 - FAQ
   - [¿Por qué debería usar JavaScript Standard Style?](#por-qué-deberia-usar-javascript-standard-style)
   - [¿Quién usa JavaScript Standard Style?](#quién-usa-javascript-standard-style)
@@ -296,10 +296,10 @@ Si aun prefieres configurar `standard` manualmente [sigue esta guia](webstorm-2)
 Si! Si estas usando `standard` en tu proyecto, puedes includir una de estas en tu readme para
 hacerle saber a las personas que en tu código estas usando estilos standard.
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -312,7 +312,7 @@ hacerle saber a las personas que en tu código estas usando estilos standard.
 
 No. El objetivo de `standard` es evitar [bikeshedding][bikeshedding] en el estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo te distraen de hacer tu trabajo. Al final del día tienes simplemente que “usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones.
 
-Si realmente quieres configurar cientos de reglas individualmente, puedes usar `eslint` directamente con [eslint-config-standard](https://github.com/feross/eslint-config-standard) aplicando
+Si realmente quieres configurar cientos de reglas individualmente, puedes usar `eslint` directamente con [eslint-config-standard](https://github.com/standard/eslint-config-standard) aplicando
 cambios encima de este.
 
 Tip: ¡Simplemente usa `standard` y ya está. Existen problemas reales
@@ -627,24 +627,24 @@ El `callback` será llamado con un objeto de `Error` y `results`: (igual al de a
 
 ## ¿Cómo puedo contribuir a `standard`?
 
-Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/feross/standard/issues) o [PRs](https://github.com/feross/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
+Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/standard/standard/issues) o [PRs](https://github.com/standard/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
 
 Unete a nosotros `#standard` en freenode.
 
-- **[standard](https://github.com/feross/standard)** - este repositorio
+- **[standard](https://github.com/standard/standard)** - este repositorio
   - **[standard-engine](https://github.com/flet/standard-engine)** - motor arbitrario cli de relgas eslint
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - reglas eslint para standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - reglas eslint para standard
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
   - **[eslint](https://github.com/eslint/eslint)** - linter que da poder a standard
-- **[snazzy](https://github.com/feross/snazzy)** - salida colorida o *bonita* en el terminal para standard
-- **[standard-www](https://github.com/feross/standard-www)** - codigo de https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - salida colorida o *bonita* en el terminal para standard
+- **[standard-www](https://github.com/standard/standard-www)** - codigo de https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, con punto y coma (sí es necesario)
 
 También  hay un montón **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
-**[paquetes npm que usan `standard`](https://github.com/feross/standard-packages)**,
+**[paquetes npm que usan `standard`](https://github.com/standard/standard-packages)**,
 y una impresionante lista de
-**[paquetes en el ecosistema `standard`](https://github.com/feross/awesome-standard)**.
+**[paquetes en el ecosistema `standard`](https://github.com/standard/awesome-standard)**.
 
 ## Licencia
 

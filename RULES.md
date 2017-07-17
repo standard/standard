@@ -2,9 +2,9 @@
 
 Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](docs/RULES-zhcn.md)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
+This is a TL;DR of the [standard](https://github.com/standard/standard) JavaScript
 rules.
 
 The best way to learn about `standard` is to just install it and give it a try on

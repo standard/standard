@@ -64,7 +64,7 @@ npm install standard
 
 Para ter uma idéia melhor, dê uma olhada
 [num arquivo amostra](https://github.com/feross/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
-[repositórios](https://github.com/feross/standard-packages/blob/master/all.json) que usam
+[repositórios](https://github.com/standard/standard-packages/blob/master/all.json) que usam
 `standard`.
 
 ## Índice
@@ -165,10 +165,10 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme para que as pessoas saibam que seu código está em standard style.
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -254,7 +254,7 @@ Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
+[webstorm-2]: https://github.com/standard/standard/blob/master/docs/webstorm.md
 
 ## FAQ
 
@@ -415,7 +415,7 @@ Se você está usando `standard` globalmente (instalou com `-g`), você também 
 Não. O objetivo do  `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
 
 Se você apenas quer trocar algumas regras, considere usar
-[essa configuração compartilhável](https://github.com/feross/eslint-config-standard) e jogue suas mudanças em cima.
+[essa configuração compartilhável](https://github.com/standard/eslint-config-standard) e jogue suas mudanças em cima.
 
 Dica: Use `standard` e pronto. Há problemas reais que você poderia usar seu tempo resolvendo! :P
 
@@ -535,26 +535,26 @@ O `callback` vai ser chamado com os objetos `Error` e `results`:
 
 ## Contribuições
 
-Contribuições são bem-vindas! Cheque o [issues](https://github.com/feross/standard/issues) ou os [PRs](https://github.com/feross/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
+Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
 
 Junte-se ao `#standard` no freenode.
 
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
-- **[standard](https://github.com/feross/standard)** - esse repo
+- **[standard](https://github.com/standard/standard)** - esse repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - Regras ESLint para  `standard`
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - Regras ESLint para  `standard`
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
 - **[standard-format](https://github.com/maxogden/standard-format)** - Formatador de código automático
-- **[snazzy](https://github.com/feross/snazzy)** - Output de terminal bonitinho
-- **[standard-www](https://github.com/feross/standard-www)** - código do  https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - Output de terminal bonitinho
+- **[standard-www](https://github.com/standard/standard-www)** - código do  https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
 
 Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de
-**[packages que usam `standard`](https://github.com/feross/standard-packages)**,
+**[packages que usam `standard`](https://github.com/standard/standard-packages)**,
 e uma awesome list de
-**[packages do ecossistema `standard` ](https://github.com/feross/awesome-standard)**.
+**[packages do ecossistema `standard` ](https://github.com/standard/awesome-standard)**.
 
 ## License
 

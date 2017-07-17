@@ -2,9 +2,9 @@
 
 翻譯: [English](../RULES.md)、[Português](RULES-ptbr.md)、[Spanish](RULES-esla.md)、[简体中文](RULES-zhcn.md)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-這是 [standard](https://github.com/feross/standard) 語法規則的摘要。
+這是 [standard](https://github.com/standard/standard) 語法規則的摘要。
 
 最快速掌握 `standard` 的方法，就是直接安裝並在你的程式碼中開始使用。
 

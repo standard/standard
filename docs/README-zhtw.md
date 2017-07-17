@@ -267,10 +267,10 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 可以！如果你在專案中使用了 `standard`，你可以在 README 中加入以下的徽章，讓大家知道你的程式碼使用了 standard 的標準。
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -283,7 +283,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 不行。`standard` 的重點就是在於避免那些對於程式碼的風格[永遠不會有答案的爭議上][bikeshedding]，像是從古至今就在爭論的 tab vs 空白等等。這些問題是永遠不會被解決的，但永無止盡的爭論卻會讓大家分心不做正事。最後你還是得決定去「選擇其中一個」，這就是 `standard` 的哲學 —— 一大堆合理的「選擇其中一個」。幸運的是，很多採用 standard 的使用者已經發現使用後獲得的成果已經比捍衛自己的偏見好多了。
 
-如果你真的非常想要去客製化設定幾百行的規則，應該直接去用 `eslint` 和 [eslint-config-standard](https://github.com/feross/eslint-config-standard)，可以把你想要的規則列在最前面。
+如果你真的非常想要去客製化設定幾百行的規則，應該直接去用 `eslint` 和 [eslint-config-standard](https://github.com/standard/eslint-config-standard)，可以把你想要的規則列在最前面。
 
 專業建議：就直接用 `standard` 然後開始吧。把時間花在那些你真正該解決的問題上吧！:P
 
@@ -582,24 +582,24 @@ var opts = {
 
 ## 如何貢獻 `standard`？
 
-我們非常歡迎貢獻！可以看看[議題](https://github.com/feross/standard/issues) 或 [PRs](https://github.com/feross/standard/pulls)，如果沒看到想要的東西，也可以自己建立。
+我們非常歡迎貢獻！可以看看[議題](https://github.com/standard/standard/issues) 或 [PRs](https://github.com/standard/standard/pulls)，如果沒看到想要的東西，也可以自己建立。
 
 加入 freenode 的 `#standard` 群組來跟其他貢獻者聊天吧！
 
 以下是一些 `standard` 生態圈中重要的套件：
 
-- **[standard](https://github.com/feross/standard)** - 本專案
+- **[standard](https://github.com/standard/standard)** - 本專案
   - **[standard-engine](https://github.com/flet/standard-engine)** - 命令列引擎
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - standard 的 eslint 規則
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 規則
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - standard 的 eslint 規則
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 規則
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standard 客製化 eslint 規則（非 eslint 核心）
   - **[eslint](https://github.com/eslint/eslint)** - 驅動 standard 的核心
-- **[snazzy](https://github.com/feross/snazzy)** - standard 的終端機美麗輸出
-- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com 網站程式
+- **[snazzy](https://github.com/standard/snazzy)** - standard 的終端機美麗輸出
+- **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 網站程式
 - **[semistandard](https://github.com/Flet/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
 也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
-**[有使用 `standard` 的 npm 套件清單](https://github.com/feross/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/feross/awesome-standard)**。
+**[有使用 `standard` 的 npm 套件清單](https://github.com/standard/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/standard/awesome-standard)**。
 
 ## 授權
 
