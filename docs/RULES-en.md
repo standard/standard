@@ -11,13 +11,15 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 
-这是 JavaScript [standard](https://github.com/standard/standard) 代码规范的全文。
+This is a TL;DR of the [standard](https://github.com/standard/standard) JavaScript
+rules.
 
-掌握本规范的最好方法是安装并在自己的代码中使用它。
+The best way to learn about `standard` is to just install it and give it a try on
+your code.
 
-## 细则
+## Rules
 
-* **使用两个空格**进行缩进。
+* **Use 2 spaces** for indentation.
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -27,7 +29,7 @@
   }
   ```
 
-* 除需要转义的情况外，**字符串统一使用单引号**。
+* **Use single quotes for strings** except to avoid escaping.
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
@@ -36,7 +38,7 @@
   $("<div class='box'>")
   ```
 
-* **不要定义未使用的变量**。
+* **No unused variables.**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
@@ -46,7 +48,7 @@
   }
   ```
 
-* **关键字后面加空格**。
+* **Add a space after keywords.**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
@@ -55,7 +57,7 @@
   if(condition) { ... }    // ✗ avoid
   ```
 
-* **函数声明时括号与函数名间加空格**。
+* **Add a space before a function declaration's parentheses.**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
@@ -67,8 +69,8 @@
   run(function() { ... })       // ✗ avoid
   ```
 
-* **始终使用** `===` 替代 `==`。<br>
-  例外： `obj == null` 可以用来检查 `null || undefined`。
+* **Always use** `===` instead of `==`.<br>
+  Exception: `obj == null` is allowed to check for `null || undefined`.
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
@@ -82,7 +84,7 @@
   if (name != 'John')    // ✗ avoid
   ```
 
-* **字符串拼接操作符 (Infix operators)** 之间要留空格。
+* **Infix operators** must be spaced.
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -98,7 +100,7 @@
   var message = 'hello, '+name+'!'
   ```
 
-* **逗号后面加空格**。
+* **Commas should have a space** after them.
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -114,7 +116,7 @@
   function greet (name,options) { ... }
   ```
 
-* **else 关键字要与花括号**保持在同一行。
+* **Keep else statements** on the same line as their curly braces.
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -137,7 +139,7 @@
   }
   ```
 
-* **多行 if 语句的**的括号不能省。
+* **For multi-line if statements,** use curly braces.
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -159,7 +161,7 @@
     console.log('done')
   ```
 
-* **不要丢掉**异常处理中`err`参数。
+* **Always handle the** `err` function parameter.
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -177,7 +179,7 @@
   })
   ```
 
-* **使用浏览器全局变量时加上** `window.` 前缀。<br>
+* **Always prefix browser globals** with `window.`.<br>
   Exceptions are: `document`, `console` and `navigator`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
@@ -186,7 +188,7 @@
   window.alert('hi')   // ✓ ok
   ```
 
-* **不允许有连续多行空行**。
+* **Multiple blank lines not allowed.**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -204,7 +206,7 @@
   console.log(value)
   ```
 
-* **对于三元运算符** `?` 和 `:` 与他们所负责的代码处于同一行
+* **For the ternary operator** in a multi-line setting, place `?` and `:` on their own lines.
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -223,7 +225,7 @@
     'www.api.com'
   ```
 
-* **每个 var 关键字**单独声明一个变量。
+* **For var declarations,** write each declaration in its own statement.
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -240,7 +242,7 @@
       verbose = true
   ```
 
-* **条件语句中赋值语句**使用括号包起来。这样使得代码更加清晰可读，而不会认为是将条件判断语句的全等号（`===`）错写成了等号（`=`）。
+* **Wrap conditional assignments** with additional parentheses. This makes it clear that the expression is intentionally an assignment (`=`) rather than a typo for equality (`===`).
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -256,7 +258,7 @@
   }
   ```
 
-* **单行代码块两边加空格**。
+* **Add spaces inside single line blocks.**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
@@ -265,7 +267,7 @@
     function foo () { return true }  // ✓ ok
   ```
 
-* **对于变量和函数名统一使用驼峰命名法**。
+* **Use camelcase when naming variables and functions.**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
@@ -277,7 +279,7 @@
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **不允许有多余的行末逗号**。
+* **Trailing commas not allowed.**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
@@ -287,7 +289,7 @@
     }
   ```
 
-* **始终将逗号置于行末**。
+* **Commas must be placed at the end of the current line.**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -303,7 +305,7 @@
     }
   ```
 
-* **点号操作符须与属性需在同一行**。
+* **Dot should be on the same line as property.**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -315,11 +317,11 @@
       .log('hello') // ✓ ok
   ```
 
-* **文件末尾留一空行**。
+* **Files must end with a newline.**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
-* **函数调用时标识符与括号间不留间隔**。
+* **No space between function identifiers and their invocations.**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -328,7 +330,7 @@
   console.log('hello')  // ✓ ok
   ```
 
-* **键值对当中冒号与值之间要留空白**。
+* **Add space between colon and value in key value pairs.**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -339,7 +341,7 @@
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **构造函数要以大写字母开头**。
+* **Constructor names must begin with a capital letter.**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -351,7 +353,7 @@
   var dog = new Animal()    // ✓ ok
   ```
 
-* **无参的构造函数调用时要带上括号**。
+* **Constructor with no arguments must be invoked with parentheses.**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -361,7 +363,7 @@
   var dog = new Animal()  // ✓ ok
   ```
 
-* **对象中定义了存值器，一定要对应的定义取值器**。
+* **Objects must contain a getter when a setter is defined.**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -382,7 +384,7 @@
   }
   ```
 
-* **子类的构造器中一定要调用 `super`**
+* **Constructors of derived classes must call `super`.**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -400,7 +402,7 @@
   }
   ```
 
-* **使用数组字面量而不是构造器**。
+* **Use array literals instead of array constructors.**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -409,7 +411,7 @@
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **避免使用 `arguments.callee` 和 `arguments.caller`**。
+* **Avoid using `arguments.callee` and `arguments.caller`.**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -427,7 +429,7 @@
   }
   ```
 
-* **避免对类名重新赋值**。
+* **Avoid modifying variables of class declarations.**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -436,7 +438,7 @@
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **避免修改使用 `const` 声明的变量**。
+* **Avoid modifying variables declared using `const`.**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -445,7 +447,7 @@
   score = 125       // ✗ avoid
   ```
 
-* **避免使用常量作为条件表达式的条件（循环语句除外）**。
+* **Avoid using constant expressions in conditions (except loops).**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -463,7 +465,7 @@
   }
   ```
 
-* **正则中不要使用控制符**。
+* **No control characters in regular expressions.**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -472,7 +474,7 @@
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **不要使用 `debugger`**。
+* **No `debugger` statements.**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -483,7 +485,7 @@
   }
   ```
 
-* **不要对变量使用 `delete` 操作**。
+* **No `delete` operator on variables.**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -492,7 +494,7 @@
   delete name     // ✗ avoid
   ```
 
-* **不要定义冗余的函数参数**。
+* **No duplicate arguments in function definitions.**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -506,7 +508,7 @@
   }
   ```
 
-* **类中不要定义冗余的属性**。
+* **No duplicate name in class members.**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -517,7 +519,7 @@
   }
   ```
 
-* **对象字面量中不要定义重复的属性**。
+* **No duplicate keys in object literals.**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -528,7 +530,7 @@
   }
   ```
 
-* **`switch` 语句中不要定义重复的 `case` 分支**。
+* **No duplicate `case` labels in `switch` statements.**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -540,7 +542,7 @@
   }
   ```
 
-* **同一模块有多个导入时一次性写完**。
+* **Use a single import statement per module.**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -551,7 +553,7 @@
   import { myFunc1, myFunc2 } from 'module' // ✓ ok
   ```
 
-* **正则中不要使用空字符**。
+* **No empty character classes in regular expressions.**
 
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
@@ -560,7 +562,7 @@
   const myRegex = /^abc[a-z]/   // ✓ ok
   ```
 
-* **不要解构空值**。
+* **No empty destructuring patterns.**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -569,7 +571,7 @@
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **不要使用 `eval()`**。
+* **No using `eval()`.**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -578,7 +580,7 @@
   var result = user[propName]             // ✓ ok
   ```
 
-* **`catch` 中不要对错误重新赋值**。
+* **No reassigning exceptions in `catch` clauses.**
 
   eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
 
@@ -596,7 +598,7 @@
   }
   ```
 
-* **不要扩展原生对象**。
+* **No extending native objects.**
 
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
@@ -604,7 +606,7 @@
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **避免多余的函数上下文绑定**。
+* **Avoid unnecessary function binding.**
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -618,7 +620,7 @@
   }.bind(user)    // ✓ ok
   ```
 
-* **避免不必要的布尔转换**。
+* **Avoid unnecessary boolean casts.**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -634,7 +636,7 @@
   }
   ```
 
-* **不要使用多余的括号包裹函数**。
+* **No unnecessary parentheses around function expressions.**
 
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
@@ -643,7 +645,7 @@
   const myFunc = function () { }     // ✓ ok
   ```
 
-* **`switch` 一定要使用 `break` 来将条件分支正常中断**。
+* **Use `break` to prevent fallthrough in `switch` cases.**
 
   eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
 
@@ -672,7 +674,7 @@
   }
   ```
 
-* **不要省去小数点前面的0**。
+* **No floating decimals.**
 
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
@@ -681,7 +683,7 @@
   const discount = 0.5     // ✓ ok
   ```
 
-* **避免对声明过的函数重新赋值**。
+* **Avoid reassigning function declarations.**
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -690,7 +692,7 @@
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
-* **不要对全局只读对象重新赋值**。
+* **No reassigning read-only global variables.**
 
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
@@ -698,7 +700,7 @@
   window = {}     // ✗ avoid
   ```
 
-* **注意隐式的 `eval()`**。
+* **No implied `eval()`.**
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -707,7 +709,7 @@
   setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
-* **嵌套的代码块中禁止再定义函数**。
+* **No function declarations in nested blocks.**
 
   eslint: [`no-inner-declarations`](http://eslint.org/docs/rules/no-inner-declarations)
 
@@ -717,7 +719,7 @@
   }
   ```
 
-* **不要向 `RegExp` 构造器传入非法的正则表达式**。
+* **No invalid regular expression strings in  `RegExp` constructors.**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -726,7 +728,7 @@
   RegExp('[a-z]')   // ✓ ok
   ```
 
-* **不要使用非法的空白符**。
+* **No irregular whitespace.**
 
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
@@ -734,7 +736,7 @@
   function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **禁止使用 `__iterator__`**。
+* **No using `__iterator__`.**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -742,7 +744,7 @@
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
   ```
 
-* **外部变量不要与对象属性重名**。
+* **No labels that share a name with an in scope variable.**
 
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
@@ -753,7 +755,7 @@
   }
   ```
 
-* **不要使用标签语句**。
+* **No label statements.**
 
   eslint: [`no-labels`](http://eslint.org/docs/rules/no-labels)
 
@@ -764,7 +766,7 @@
     }
   ```
 
-* **不要书写不必要的嵌套代码块**。
+* **No unnecessary nested blocks.**
 
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
@@ -780,11 +782,11 @@
   }
   ```
 
-* **不要混合使用空格与制表符作为缩进**。
+* **Avoid mixing spaces and tabs for indentation.**
 
   eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
 
-* **除了缩进，不要使用多个空格**。
+* **Do not use multiple spaces except for indentation.**
 
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
@@ -793,7 +795,7 @@
   const id = 1234       // ✓ ok
   ```
 
-* **不要使用多行字符串**。
+* **No multiline strings.**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
 
@@ -802,7 +804,7 @@
                    world'     // ✗ avoid
   ```
 
-* **`new` 创建对象实例后需要赋值给变量**。
+* **No `new` without assigning object to a variable.**
 
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
@@ -811,7 +813,7 @@
   const character = new Character()   // ✓ ok
   ```
 
-* **禁止使用 `Function` 构造器**。
+* **No using the `Function` constructor.**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -819,7 +821,7 @@
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **禁止使用 `Object` 构造器**。
+* **No using the `Object` constructor.**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -827,7 +829,7 @@
   let config = new Object()   // ✗ avoid
   ```
 
-* **禁止使用 `new require`**。
+* **No using `new require`.**
 
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
@@ -835,7 +837,7 @@
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **禁止使用 `Symbol` 构造器**。
+* **No using the `Symbol` constructor.**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -843,7 +845,7 @@
   const foo = new Symbol('foo')   // ✗ avoid
   ```
 
-* **禁止使用原始包装器**。
+* **No using primitive wrapper instances.**
 
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
@@ -851,7 +853,7 @@
   const message = new String('hello')   // ✗ avoid
   ```
 
-* **不要将全局对象的属性作为函数调用**。
+* **No calling global object properties as functions.**
 
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
@@ -859,7 +861,7 @@
   const math = Math()   // ✗ avoid
   ```
 
-* **不要使用八进制字面量**。
+* **No octal literals.**
 
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
@@ -868,7 +870,7 @@
   const num = '042'   // ✓ ok
   ```
 
-* **字符串字面量中也不要使用八进制转义字符**。
+* **No octal escape sequences in string literals.**
 
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
@@ -876,7 +878,7 @@
   const copyright = 'Copyright \251'  // ✗ avoid
   ```
 
-* **使用 `__dirname` 和 `__filename` 时尽量避免使用字符串拼接**。
+* **Avoid string concatenation when using `__dirname` and `__filename`.**
 
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
@@ -885,7 +887,7 @@
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
 
-* 使用 `getPrototypeOf` 来替代 **`__proto__`**。
+* **Avoid using `__proto__`.** Use `getPrototypeOf` instead.
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -894,7 +896,7 @@
   const foo = Object.getPrototypeOf(obj)  // ✓ ok
   ```
 
-* **不要重复声明变量**。
+* **No redeclaring variables.**
 
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
@@ -906,7 +908,7 @@
   name = 'Jane'         // ✓ ok
   ```
 
-* **正则中避免使用多个空格**。
+* **Avoid multiple spaces in regular expression literals.**
 
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
@@ -917,7 +919,7 @@
   const regexp = /test value/     // ✓ ok
   ```
 
-* **return 语句中的赋值必需有括号包裹**。
+* **Assignments in return statements must be surrounded by parentheses.**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -931,7 +933,7 @@
   }
   ```
 
-* **避免将变量赋值给自己**。
+* **Avoid assigning a variable to itself**
 
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
@@ -939,15 +941,15 @@
   name = name   // ✗ avoid
   ```
 
-* **避免将变量与自己进行比较操作**。
+* **Avoid comparing a variable to itself.**
 
-  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+  eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
   ```js
   if (score === score) {}   // ✗ avoid
   ```
 
-* **避免使用逗号操作符**。
+* **Avoid using the comma operator.**
 
   eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
 
@@ -955,7 +957,7 @@
   if (doSomething(), !!test) {}   // ✗ avoid
   ```
 
-* **不要随意更改关键字的值**。
+* **Restricted names should not be shadowed.**
 
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
@@ -963,7 +965,7 @@
   let undefined = 'value'     // ✗ avoid
   ```
 
-* **禁止使用稀疏数组（Sparse arrays）**。
+* **Sparse arrays are not allowed.**
 
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
@@ -971,11 +973,11 @@
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **不要使用制表符**。
+* **Tabs should not be used**
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **正确使用 ES6 中的字符串模板**。
+* **Regular strings must not contain template literal placeholders.**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
@@ -984,7 +986,7 @@
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **使用 `this` 前请确保 `super()` 已调用**。
+* **`super()` must be called before using `this`.**
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -997,7 +999,7 @@
   }
   ```
 
-* **用 `throw` 抛错时，抛出 `Error` 对象而不是字符串**。
+* **Only `throw` an `Error` object.**
 
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
@@ -1006,11 +1008,11 @@
   throw new Error('error')    // ✓ ok
   ```
 
-* **行末不留空格**。
+* **Whitespace not allowed at end of line.**
 
   eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
-* **不要使用 `undefined` 来初始化变量**。
+* **Initializing to `undefined` is not allowed.**
 
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
@@ -1021,7 +1023,7 @@
   name = 'value'          // ✓ ok
   ```
 
-* **循环语句中注意更新循环变量**。
+* **No unmodified conditions of loops.**
 
   eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
@@ -1030,7 +1032,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **如果有更好的实现，尽量不要使用三元表达式**。
+* **No ternary operators when simpler alternatives exist.**
 
   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
@@ -1039,7 +1041,7 @@
   let score = val || 0          // ✓ ok
   ```
 
-* **`return`，`throw`，`continue` 和 `break` 后不要再跟代码**。
+* **No unreachable code after `return`, `throw`, `continue`, and `break` statements.**
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1050,7 +1052,7 @@
   }
   ```
 
-* **`finally` 代码块中不要再改变程序执行流程**。
+* **No flow control statements in `finally` blocks.**
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1064,7 +1066,7 @@
   }
   ```
 
-* **关系运算符的左值不要做取反操作**。
+* **The left operand of relational operators must not be negated.**
 
   eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
 
@@ -1072,7 +1074,7 @@
   if (!key in obj) {}       // ✗ avoid
   ```
 
-* **避免不必要的 `.call()` 和 `.apply()`**。
+* **Avoid unnecessary use of `.call()` and `.apply()`.**
 
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
@@ -1080,7 +1082,7 @@
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
-* **避免使用不必要的计算值作对象属性**。
+* **Avoid using unnecessary computed property keys on objects.**
 
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
@@ -1089,7 +1091,7 @@
   const user = { name: 'John Doe' }       // ✓ ok
   ```
 
-* **禁止多余的构造器**。
+* **No unnecessary constructor.**
 
   eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
@@ -1100,7 +1102,7 @@
   }
   ```
 
-* **禁止不必要的转义**。
+* **No unnecessary use of escape.**
 
   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
@@ -1108,7 +1110,7 @@
   let message = 'Hell\o'  // ✗ avoid
   ```
 
-* **import, export 和解构操作中，禁止赋值到同名变量**。
+* **Renaming import, export, and destructured assignments to the same name is not allowed.**
 
   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
@@ -1117,7 +1119,7 @@
   import { config } from './config'               // ✓ ok
   ```
 
-* **属性前面不要加空格**。
+* **No whitespace before properties.**
 
   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
@@ -1126,7 +1128,7 @@
   user.name       // ✓ ok
   ```
 
-* **禁止使用 `with`**。
+* **No using `with` statements.**
 
   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
@@ -1134,7 +1136,7 @@
   with (val) {...}    // ✗ avoid
   ```
 
-* **对象属性换行时注意统一代码风格**。
+* **Maintain consistency of newlines between object properties.**
 
   eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
 
@@ -1153,7 +1155,7 @@
   }                                                                 // ✓ ok
   ```
 
-* **代码块中避免多余留白**。
+* **No padding within blocks.**
 
   eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
 
@@ -1169,7 +1171,7 @@
   }
   ```
 
-* **展开运算符与它的表达式间不要留空白**。
+* **No whitespace between spread operators and their expressions.**
 
   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
@@ -1178,7 +1180,7 @@
   fn(...args)     // ✓ ok
   ```
 
-* **遇到分号时空格要后留前不留**。
+* **Semicolons must have a space after and no space before.**
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1187,7 +1189,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **代码块首尾留空格**。
+* **Must have a space before blocks.**
 
   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
@@ -1196,7 +1198,7 @@
   if (admin) {...}    // ✓ ok
   ```
 
-* **圆括号间不留空格**。
+* **No spaces inside parentheses.**
 
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
@@ -1205,7 +1207,7 @@
   getName(name)       // ✓ ok
   ```
 
-* **一元运算符后面跟一个空格**。
+* **Unary operators must have a space after.**
 
   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
 
@@ -1214,7 +1216,7 @@
   typeof !admin        // ✓ ok
   ```
 
-* **注释首尾留空格**。
+* **Use spaces inside comments.**
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1226,7 +1228,7 @@
   /* comment */       // ✓ ok
   ```
 
-* **模板字符串中变量前后不加空格**。
+* **No spacing in template strings.**
 
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
@@ -1235,7 +1237,7 @@
   const message = `Hello, ${name}`      // ✓ ok
   ```
 
-* **检查 `NaN` 的正确姿势是使用 `isNaN()`**。
+* **Use `isNaN()` when checking for `NaN`.**
 
   eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
 
@@ -1244,7 +1246,7 @@
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **用合法的字符串跟 `typeof` 进行比较操作**。
+* **`typeof` must be compared to a valid string.**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1253,7 +1255,7 @@
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **自调用匿名函数 (IIFEs) 使用括号包裹**。
+* **Immediately Invoked Function Expressions (IIFEs) must be wrapped.**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1264,7 +1266,7 @@
   const getName = (function () { })()   // ✓ ok
   ```
 
-* **`yield *` 中的 `*` 前后都要有空格**。
+* **The `*` in `yield*`expressions must have a space before and after.**
 
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
@@ -1273,7 +1275,7 @@
   yield * increment()   // ✓ ok
   ```
 
-* **请书写优雅的条件语句（avoid Yoda conditions）**。
+* **Avoid Yoda conditions.**
 
   eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
 
@@ -1282,9 +1284,9 @@
   if (age === 42) { }    // ✓ ok
   ```
 
-## 关于分号
+## Semicolons
 
-* 不要使用分号。 (参见：[1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)，[2](http://inimino.org/%7Einimino/blog/javascript_semicolons)，[3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* No semicolons. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1293,7 +1295,7 @@
   window.alert('hi');  // ✗ avoid
   ```
 
-* 不要使用 `(`, `[`, or `` ` `` 等作为一行的开始。在没有分号的情况下代码压缩后会导致报错，而坚持这一规范则可避免出错。
+* Never start a line with `(`, `[`, or `` ` ``. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
 
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
@@ -1325,17 +1327,18 @@
   `hello`.indexOf('o')
   ```
 
-  备注：上面的写法只能说聪明过头了。
+  Note: If you're often writing code like this, you may be trying to be too clever.
 
-  相比更加可读易懂的代码，那些看似投巧的写法是不可取的。
+  Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
+  possible.
 
-  譬如：
+  Instead of this:
 
   ```js
   ;[1, 2, 3].forEach(bar)
   ```
 
-  建议的写法是：
+  This is strongly preferred:
 
   ```js
   var nums = [1, 2, 3]
@@ -1343,52 +1346,57 @@
   ```
 
 
-## 拓展阅读
+## Helpful reading
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
 
-##### 一个值得观看的视频：
+##### And a helpful video:
 
-- [JavaScript 中的分号多余吗？- YouTube][3]
+- [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-当前主流的代码压缩方案都是基于词法（AST-based）进行的，所以在处理无分号的代码时完全没有压力（何况 JavaScript 中分号本来就不是强制的）。
+All popular code minifiers in use today use AST-based minification, so they can
+handle semicolon-less JavaScript with no issues (since semicolons are not required
+in JavaScript).
 
-##### 一段摘抄自 *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* 这篇文章的内容：
+##### Excerpt from *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
-> [自动化插入分号的做法]是安全可依赖的，而且其产出的代码能够在所有浏览器里很好地运行。 Closure compiler, yuicompressor, packer 还有 jsmin 都能正确地对这样的代码进行压缩处理。并没有任何性能相关的问题。
+> [Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
 >
-> 不得不说，Javascript 社区里的大牛们一直是错误的，并不能教给你最佳实践。真是让人忧伤啊。 我建议先弄清楚 JS 是怎样断句的（还有就是哪些地方看起来断了其实并没有），明白了这个后就可以随心写出漂亮的代码了。
+> I am sorry that, instead of educating you, the leaders in this language community have given you lies and fear.  That was shameful. I recommend learning how statements in JS are actually terminated (and in which cases they are not terminated), so that you can write code that you find beautiful.
 >
-> 一般来说， `\n` 表示语句结束，除非：
->   1. 该语句有未闭合的括号， 数组字面量， 对象字面量 或者其他不能正常结束一条语句的情况（譬如，以 `.` 或 `,` 结尾）
->   2. 该语句是 `--` 或者 `++` （它会将后面的内容进行自增或减）
->   3. 该语句是 `for()`，`while()`，`do`，`if()` 或者 `else` 并且没有 `{`
->   4. 下一行以 `[`，`(`，`+`，`*`，`/`，`-`，`,`，`.` 或者其他只会单独出现在两块内容间的二元操作符。
+> In general, `\n` ends a statement unless:
+>   1. The statement has an unclosed paren, array literal, or object literal or ends in some
+>      other way that is not a valid way to end a statement. (For instance, ending with `.`
+>      or `,`.)
+>   2. The line is `--` or `++` (in which case it will decrement/increment the next token.)
+>   3. It is a `for()`, `while()`, `do`, `if()`, or `else`, and there is no `{`
+>   4. The next line starts with `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, or some other
+>      binary operator that can only be found between two tokens in a single expression.
 >
-> 第一条很容易理解。即使在 JSLint 中，也允许 JSON，构造器的括号中，以及使用 `var` 配合 `,` 结尾来声明多个变量等这些情中包含 `\n`。
+> The first is pretty obvious. Even JSLint is ok with `\n` chars in JSON and parenthesized constructs, and with `var` statements that span multiple lines ending in `,`.
 >
-> 第二条有点奇葩。 我还想不出谁会（除了这里用作讨论外）写出 `i\n++\nj` 这样的代码来，不过，顺便说一下，这种写法最后解析的结果是 `i; ++j`，而不是 `i++; j`。
+> The second is super weird. I’ve never seen a case (outside of these sorts of conversations) where you’d want to do write `i\n++\nj`, but, point of fact, that’s parsed as `i; ++j`, not `i++; j`.
 >
-> 第三条也容易理解。 `if (x)\ny()` 等价于 `if (x) { y() }`。解释器会向下寻找到代码块或一条语句为止。
+> The third is well understood, if generally despised. `if (x)\ny()` is equivalent to `if (x) { y() }`. The construct doesn’t end until it reaches either a block, or a statement.
 >
-> `;` 是条合法的 JavaScript 语句。所以 `if(x);` 等价于 `if(x){}`，表示 “如果 x 为真，什么也不做。” 这种写法在循环里面可以看到，就是当条件判断与条件更新是同一个方法的时候。 不常见，但也不至于没听说过吧。
+> `;` is a valid JavaScript statement, so `if(x);` is equivalent to `if(x){}` or, “If x, do nothing.” This is more commonly applied to loops where the loop check also is the update function. Unusual, but not unheard of.
 >
-> 第四条就是常见的 “看，说过要加分号！” 的情形。但这些情况可以通过在语句前面加上分号来解决，如果你确定该语句跟前面的没关系的话。举个例子，假如你想这样：
+> The fourth is generally the fud-inducing “oh noes, you need semicolons!” case. But, as it turns out, it’s quite easy to *prefix* those lines with semicolons if you don’t mean them to be continuations of the previous line. For example, instead of this:
 >
 > ```js
 > foo();
 > [1,2,3].forEach(bar);
 > ```
 >
-> 那么完全可以这样来写：
+> you could do this:
 >
 > ```js
 > foo()
 > ;[1,2,3].forEach(bar)
 > ```
 >
-> 后者的好处是分号比较瞩目，一旦习惯后便再也不会看到以 `(` 和 `[` 开头又不带分号的语句了。
+> The advantage is that the prefixes are easier to notice, once you are accustomed to never seeing lines starting with `(` or `[` without semis.
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons

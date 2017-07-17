@@ -1,6 +1,13 @@
 # JavaScript Standard Style
 
-Traduzioni: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md), [简体中文](docs/RULES-zhcn.md), [Italian](docs/RULES-iteu.md)
+<p align="center">
+  <a href="RULES-en.md">English</a> •
+  <a href="RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -46,7 +53,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```js
   if (condition) { ... }   // ✓ ok
   if(condition) { ... }    // ✗ evita
-  ```  
+  ```
 * **Aggiungi uno spazio prima delle parenti di una dichiarazione di una funzione.**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
@@ -72,7 +79,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```js
   if (name !== 'John')   // ✓ ok
   if (name != 'John')    // ✗ evita
-  ```  
+  ```
 
 * **Operatori infisso** necessitano sempre di uno spazio.
 
@@ -127,7 +134,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   else {
     // ...
   }
-  ```    
+  ```
 
 * **Per dichiarazioni if su più righe,** utilizza le parentesi graffe.
 
@@ -167,7 +174,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   run(function (err) {
     window.alert('done')
   })
-  ```  
+  ```
 
 * **Usa il prefisso per le variabili gloabli** con `window.`.<br>
   Eccezioni sono: `document`, `console` e `navigator`.
@@ -267,7 +274,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
 
     var my_var = 'hello'           // ✗ evita
     var myVar = 'hello'            // ✓ ok
-  ```  
+  ```
 
 * **I trailing comma non sono ammessi.**
 
@@ -730,7 +737,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
 
   ```js
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
-  ```  
+  ```
 
 * **No a etichette che condividono lo stesso nome di una variabile all'interno dello stesso scope.**
 
@@ -807,7 +814,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
 
   ```js
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
-  ```  
+  ```
 
 * **No all'uso del costruttore `Object`.**
 

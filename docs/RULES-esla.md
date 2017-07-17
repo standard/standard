@@ -1,6 +1,13 @@
 # JavaScript Standard Style
 
-Translations: [English](../RULES.md), [Português](RULES-ptbr.md), [繁體中文](RULES-zhtw.md), [简体中文](RULES-zhcn.md)
+<p align="center">
+  <a href="RULES-en.md">English</a> •
+  <a href="RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
 

@@ -16,12 +16,12 @@
 <h4 align="center">Un solo Stile JavaScript per domarli tutti</h4>
 
 <p align="center">
-  Traduzioni:
-  <a href="docs/README-ptbr.md">Português</a>,
-  <a href="docs/README-esla.md">Spanish</a>,  
-  <a href="docs/README-zhtw.md">繁體中文</a>,
-  <a href="docs/README-zhcn.md">简体中文</a>,
-  <a href="docs/README-iteu.md">Italiano</a>
+  <a href="README-en.md">English</a> •
+  <a href="README-esla.md">Español (Latinoamérica)</a> •
+  <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-ptbr.md">Português (Brasil)</a> •
+  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
