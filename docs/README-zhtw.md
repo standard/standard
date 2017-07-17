@@ -19,6 +19,7 @@
   <a href="README-en.md">English</a> •
   <a href="README-esla.md">Español (Latinoamérica)</a> •
   <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-kokr.md">한국어 (Korean)</a> •
   <a href="README-ptbr.md">Português (Brasil)</a> •
   <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>

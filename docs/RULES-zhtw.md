@@ -4,6 +4,7 @@
   <a href="RULES-en.md">English</a> •
   <a href="RULES-esla.md">Español (Latinoamérica)</a> •
   <a href="RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="RULES-kokr.md">한국어 (Korean)</a> •
   <a href="RULES-ptbr.md">Português (Brasil)</a> •
   <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
