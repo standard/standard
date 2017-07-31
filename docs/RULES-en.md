@@ -1073,6 +1073,7 @@ your code.
 
   ```js
   if (!key in obj) {}       // ✗ avoid
+  if (!(key in obj)) {}     // ✓ ok
   ```
 
 * **Avoid unnecessary use of `.call()` and `.apply()`.**
