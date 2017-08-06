@@ -14,7 +14,7 @@
   "dependencies": {
     "eslint": "~3.19.0",
     "eslint-config-standard": "10.2.1",
-    "eslint-config-standard-jsx": "4.0.1",
+    "eslint-config-standard-jsx": "4.0.2",
     "eslint-plugin-import": "~2.2.0",
     "eslint-plugin-node": "~4.2.2",
     "eslint-plugin-promise": "~3.5.0",
