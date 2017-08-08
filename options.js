@@ -1,6 +1,6 @@
-var eslint = require('eslint')
-var path = require('path')
-var pkg = require('./package.json')
+var eslint = require('eslint');
+var path = require('path');
+var pkg = require('./package.json');
 
 module.exports = {
   bugs: pkg.bugs.url,
@@ -12,4 +12,4 @@ module.exports = {
   homepage: pkg.homepage,
   tagline: 'Use JavaScript Standard Style',
   version: pkg.version
-}
+};
