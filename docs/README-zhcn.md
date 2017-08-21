@@ -16,13 +16,13 @@
 <h4 align="center">One JavaScript Style to Rule Them All</h4>
 
 <p align="center">
-  <a href="README-en.md">English</a> •
-  <a href="README-esla.md">Español (Latinoamérica)</a> •
-  <a href="README-iteu.md">Italiano (Italian)</a> •
-  <a href="README-kokr.md">한국어 (Korean)</a> •
-  <a href="README-ptbr.md">Português (Brasil)</a> •
-  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
-  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+  <a href="https://github.com/standard/standard/blob/master/docs/README-en.md">English</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-esla.md">Español (Latinoamérica)</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-iteu.md">Italiano (Italian)</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-kokr.md">한국어 (Korean)</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-ptbr.md">Português (Brasil)</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="https://github.com/standard/standard/blob/master/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
