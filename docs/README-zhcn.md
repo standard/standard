@@ -615,7 +615,7 @@ var opts = {
   - **[eslint](https://github.com/eslint/eslint)** - standard 基于它来实现的
 - **[snazzy](https://github.com/standard/snazzy)** - 美化输出
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 站点的源码
-- **[semistandard](https://github.com/Flet/semistandard)** - standard 规范带逗号的版本（如果你需要的话）
+- **[semistandard](https://github.com/Flet/semistandard)** - standard 规范带分号的版本（如果你需要的话）
 
 还有很多 **[编辑器插件](#text-editor-plugins)**、一个
 **[使用 `standard` 规范开发的 npm 包](https://github.com/standard/standard-packages)**的列表、还有一分非常棒的**[ `standard` 生态中所使用到的包](https://github.com/standard/awesome-standard)**的列表。
