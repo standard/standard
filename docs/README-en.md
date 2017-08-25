@@ -339,6 +339,8 @@ If you really want to configure hundreds of ESLint rules individually, you can
 always use `eslint` directly with
 [eslint-config-standard](https://github.com/standard/eslint-config-standard) to
 layer your changes on top.
+[`standard-eject`](https://github.com/josephfrazier/standard-eject) can help
+you migrate from `standard` to `eslint` and `eslint-config-standard`.
 
 Pro tip: Just use `standard` and move on. There are actual real problems that you
 could spend your time solving! :P
