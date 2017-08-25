@@ -145,7 +145,8 @@ $ standard "src/util/**/*.js" "test/**/*.js"
       "standard": "*"
     },
     "scripts": {
-      "test": "standard && node my-tests.js"
+      "pretest": "standard",
+      "test": "node my-tests.js"
     }
   }
   ```
