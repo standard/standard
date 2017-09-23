@@ -194,6 +194,9 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
 |---|---|---|---|---|
 
+[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/rentograph.png>](https://rentograph.com) |
+|---|---|---|---|---|
+
 회사 이외에 많은 커뮤니티 회원은 여기에 나열하기에는 [너무 많은](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) 패키지들이 `standard`를 사용합니다.
 
 또한 GitHub의 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 쇼케이스에서도 볼 수 있습니다.
