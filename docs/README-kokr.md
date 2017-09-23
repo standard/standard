@@ -217,11 +217,15 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 **[linter-js-standard][atom-1]** 를 설치합니다.
 
+또는 **[linter-js-standard-engine][atom-4]** 를 설치할 수 있습니다. `standard` 버전을 번들링하는 대신 현재 프로젝트에 설치된 버전을 자동으로 사용합니다. 또한 **[standard-engine][atom-5]**를 기반으로하는 다른 linter와 함께 작동합니다.
+
 저장시 자동포멧을 적용하려면 **[standard-formatter][atom-2]** 를 설치합니다. 스니펫의 경우 **[standardjs-snippets][atom-3]** 을 설치합니다.
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
+[atom-4]: https://atom.io/packages/linter-js-standard-engine
+[atom-5]: https://github.com/Flet/standard-engine
 
 ### Visual Studio Code
 
