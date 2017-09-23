@@ -87,7 +87,7 @@ npm install standard --save-dev
   - [어떻게하면 경고를 숨길 수 있나요?](#어떻게하면-경고를-숨길-수-있나요)
   - [전역 namespace를 오염시키는 라이브러리를 사용합니다. "vaiable is not defined" 오류를 방지하려면 어떻게 해야 하나요?](#전역-namespace를-오염시키는-라이브러리를-사용합니다-vaiable-is-not-defined-오류를-방지하려면-어떻게-해야-하나요)
   - [실험용 JavaScript (ES Next) 기능은 어떻게 사용하나요?](#실험용-javascript-es-next-기능은-어떻게-사용하나요)
-  - [Flow와 같은 JavaScrpt 언어 변형을 사용할 수 있나요?](#flow와-같은-javascrpt-언어-변형을-사용할-수-있나요)
+  - [javaScrpt와 다른 Flow 또는 typescript에서도 사용할 수 있나요?](#javaScrpt와-다른-Flow-또는-typescript에서도-사용할-수-있나요)
   - [Mocha, Jasmine, QUnit 등은 어떻습니까?](#mocha-jasmine-qunit-등은-어떻습니까)
   - [Web Workes는 어떻습니까?](#web-workes는-어떻습니까)
   - [Markdown 또는 HTML 파일 내부의 코드를 확인할 수 있나요?](#markdown-또는-html-파일-내부의-코드를-확인할-수-있나요)
@@ -410,6 +410,14 @@ $ standard --global myVar1 --global myVar2
 
 실험용 언어 기능을 지원하기 위해 `standard`는 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. 커스텀 파서를 사용하기 전에 추가 된 복잡성이 그럴 가치가 있는지 고려하십시오.
 
+커스텀파서를 사용하기 전에 먼저 npm모듈을 설치합니다.
+
+```bash
+npm install babel-eslint --save-dev
+```
+
+다음을 수행합니다.
+
 ```bash
 $ standard --parser babel-eslint
 ```
@@ -426,14 +434,24 @@ $ standard --parser babel-eslint
 
 `standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `babel-eslint`를 `npm install babel-eslint --global`과 함께 설치하십시오.
 
-## Flow와 같은 JavaScrpt 언어 변형을 사용할 수 있나요?
+## javaScrpt와 다른 Flow 또는 typescript에서도 사용할 수 있나요?
 
-커스텀 JS 언어 변형을 사용하기 전에 추가된 복잡성 (그리고 새로운 기여자를 최신으로 만드는데 필요한 노력)이 그만한 가치가 있는지 고려하십시오.
+`standard`는 최신 ECMAScript 기능을 지원합니다. 그러나 Flow 및 TypeScript는 새로운 구문을 언어에 추가해야하기 때문에 즉시 사용할 수 없습니다.
 
-`standard`는 ESLint 플러그인을 지원합니다. `standard` 중 하나를 보기 전에 코드를 유효한 JavaScript로 변환하려면 이 중 하나를 사용하십시오. 맞춤 구문 분석기를 사용하려면 npm에서 설치하고 다음을 실행하십시오.
+JavaScript 언어 변형을 지원하기 위해 `standard`는 변경된 구문을 처리 할 수있는 ESLint 플러그인뿐만 아니라 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. JavaScript 언어 변형을 사용하기 전에 추가된 복잡성이 가치가 있는지 고려하십시오.
+
+### Flow
+
+Flow를 사용하려면`babel-eslint`를 파서로 사용하고`eslint-plugin-flowtype`을 플러그인으로 사용하여`standard`를 실행해야합니다.
 
 ```bash
-$ standard --plugin 플러그인_이름
+npm install babel-eslint eslint-plugin-flowtype --save-dev
+```
+
+다음을 실행하세요.
+
+```bash
+$ standard --parser babel-eslint --plugin flowtype
 ```
 
 아니면, `package.json`에 아래 코드를 추가하세요.
@@ -441,15 +459,29 @@ $ standard --plugin 플러그인_이름
 ```json
 {
   "standard": {
-    "plugins": [ "플러그인_이름" ]
+    "parser": "babel-eslint",
+    "plugins": [ "flowtype" ]
   }
 }
 ```
 
-Flow를 사용하려면 `babel-eslint`를 파서로 사용해야합니다. 따라서 `npm install eslint-plugin-flowtype babel-eslint`를 수행한 후에, 다음을 실행하십시오.
+*주의 :`plugin`과`plugins`는 동일합니다.*
+
+만약`standard`가 전역 적으로 설치된다면 (즉,`npm install standard - global`), `babel-eslint`와`eslint-plugin-flowtype`도 함께 설치해야합니다. `npm install babel-eslint eslint-plugin-flowtype --global`.
+
+### TypeScript
+
+TypeScript를 사용하려면`typescript-eslint-parser`를 파서로`standard`를, 플러그인으로`eslint-plugin-typescript`를 실행하고 표준을 lint`* .ts` 파일로 보내야합니다. (기본값이 아니기 때문)
 
 ```bash
-$ standard --plugin flowtype --parser babel-eslint
+npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+```
+
+다음을 실행합니다.
+
+
+```bash
+$ standard --parser typescript-eslint-parser --plugin typescript *.ts
 ```
 
 아니면, `package.json`에 아래 코드를 추가하세요.
@@ -457,15 +489,19 @@ $ standard --plugin flowtype --parser babel-eslint
 ```json
 {
   "standard": {
-    "plugins": [ "flowtype" ],
-    "parser": "babel-eslint"
+    "parser": "typescript-eslint-parser",
+    "plugins": [ "typescript" ]
   }
 }
 ```
 
-`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install-eslint-plugin-flowtype --global`을 사용하여 `eslint-plugin-flowtype`을 전역으로 설치해야합니다.
+`package.json`을 사용하면 다음과 같이 실행할 수 있습니다.
 
-**참고 : 플러그인 및 플러그인은 동일합니다.**
+```bash
+standard *.ts
+```
+
+`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install typescript-eslint-parser eslint-plugin-typescript --global`을 사용하여 `eslint-plugin-flowtype`와 `typescript-eslint-parser`를 전역으로 설치해야합니다.
 
 ## Mocha, Jasmine, QUnit 등은 어떻습니까?
 
@@ -493,7 +529,7 @@ $ standard --env mocha
 /* eslint-env serviceworker */
 ```
 
-이것은 `standard` (자신의 코드를 읽는 사람뿐만 아니라)이 web worker 코드에서 `자신`이 전역(global)이라는 것을 알 수 있게 해줍니다.
+이것은 `standard` (코드를 읽는 사람뿐만 아니라)이 web worker 코드에서 `자신`이 전역(global)이라는 것을 알 수 있게 해줍니다.
 
 ## Markdown 또는 HTML 파일 내부의 코드를 확인할 수 있나요?
 
