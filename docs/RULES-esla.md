@@ -1,10 +1,18 @@
 # JavaScript Standard Style
 
-Translations: [English](../RULES.md), [Português](RULES-ptbr.md), [繁體中文](RULES-zhtw.md), [简体中文](RULES-zhcn.md)
+<p align="center">
+  <a href="RULES-en.md">English</a> •
+  <a href="RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="RULES-kokr.md">한국어 (Korean)</a> •
+  <a href="RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Esto es un TL;DR (muy largo, no lo leí) de reglas JavaScript [standard](https://github.com/feross/standard).
+Esto es un TL;DR (muy largo, no lo leí) de reglas JavaScript [standard](https://github.com/standard/standard).
 
 La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba en tu código.
 

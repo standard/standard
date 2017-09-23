@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard － JavaScript 樣式教學" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
@@ -16,11 +16,13 @@
 <h4 align="center">統一 JavaScript，只需一種樣式</h4>
 
 <p align="center">
-  翻譯：
-  <a href="../README.md">English</a>,
-  <a href="README-ptbr.md">Português</a>,
-  <a href="README-esla.md">Spanish</a>,
-  <a href="README-zhcn.md">简体中文</a>
+  <a href="README-en.md">English</a> •
+  <a href="README-esla.md">Español (Latinoamérica)</a> •
+  <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-kokr.md">한국어 (Korean)</a> •
+  <a href="README-ptbr.md">Português (Brasil)</a> •
+  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
@@ -61,7 +63,7 @@ npm install standard --save-dev
 [4]: RULES.md#semicolons
 [5]: RULES.md#javascript-standard-style
 
-看看一些[用 JavaScript Standard Style 寫的範例](https://github.com/expressjs/body-parser/blob/master/index.js)來了解更多，或查看其他[數以千計使用 `standard` 的專案。](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+看看一些[用 JavaScript Standard Style 寫的範例](https://github.com/expressjs/body-parser/blob/master/index.js)來了解更多，或查看其他[數以千計使用 `standard` 的專案。](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 
 ## 目錄
 
@@ -183,7 +185,7 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 [<img width=150 src=../docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=../docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=../docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=../docs/logos/taser.png>](https://www.taser.com) |
 |---|---|---|---|---|
 
-除了公司之外，非常多的社群也在套件中採用了 `standard` [因為太多了](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) 無法在此一一列舉。
+除了公司之外，非常多的社群也在套件中採用了 `standard` [因為太多了](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) 無法在此一一列舉。
 
 `standard` 也是 GitHub 的
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) 中，最多人給星的專案。
@@ -267,10 +269,10 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 可以！如果你在專案中使用了 `standard`，你可以在 README 中加入以下的徽章，讓大家知道你的程式碼使用了 standard 的標準。
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -283,7 +285,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 不行。`standard` 的重點就是在於避免那些對於程式碼的風格[永遠不會有答案的爭議上][bikeshedding]，像是從古至今就在爭論的 tab vs 空白等等。這些問題是永遠不會被解決的，但永無止盡的爭論卻會讓大家分心不做正事。最後你還是得決定去「選擇其中一個」，這就是 `standard` 的哲學 —— 一大堆合理的「選擇其中一個」。幸運的是，很多採用 standard 的使用者已經發現使用後獲得的成果已經比捍衛自己的偏見好多了。
 
-如果你真的非常想要去客製化設定幾百行的規則，應該直接去用 `eslint` 和 [eslint-config-standard](https://github.com/feross/eslint-config-standard)，可以把你想要的規則列在最前面。
+如果你真的非常想要去客製化設定幾百行的規則，應該直接去用 `eslint` 和 [eslint-config-standard](https://github.com/standard/eslint-config-standard)，可以把你想要的規則列在最前面。
 
 專業建議：就直接用 `standard` 然後開始吧。把時間花在那些你真正該解決的問題上吧！:P
 
@@ -291,7 +293,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 ## 但這不是真實網路中的標準！
 
-這當然不是！這個風格訂定並不是隸屬於什麼正式網路團體的，所以這個專案才叫做 `feross/standard` 而不是
+這當然不是！這個風格訂定並不是隸屬於什麼正式網路團體的，所以這個專案才叫做 `standard/standard` 而不是
 `ECMA/standard`.
 
 "standard" 這個字的意義比 "web standard" 的意義來得多 :-)。舉例來說：
@@ -396,7 +398,7 @@ $ standard --global myVar1 --global myVar2
 
 `standard` 支援最新的 ECMAScript 語法 ES8 (ES2017)，包含所有在新語法提議過程中，已經進入 "階段四" 的提議。
 
-為了支援實驗性質的語法，`standard` 支援客製化 Javascript 語法解析器。在使用客製化語法解析器前，請考慮清楚是否值得去增加這些複雜度。
+為了支援實驗性質的語法，`standard` 支援客製化 JavaScript 語法解析器。在使用客製化語法解析器前，請考慮清楚是否值得去增加這些複雜度。
 
 要使用客製化語法解析器，可以從 npm 安裝（比如說：`npm install babel-eslint`），然後執行：
 
@@ -582,24 +584,24 @@ var opts = {
 
 ## 如何貢獻 `standard`？
 
-我們非常歡迎貢獻！可以看看[議題](https://github.com/feross/standard/issues) 或 [PRs](https://github.com/feross/standard/pulls)，如果沒看到想要的東西，也可以自己建立。
+我們非常歡迎貢獻！可以看看[議題](https://github.com/standard/standard/issues) 或 [PRs](https://github.com/standard/standard/pulls)，如果沒看到想要的東西，也可以自己建立。
 
 加入 freenode 的 `#standard` 群組來跟其他貢獻者聊天吧！
 
 以下是一些 `standard` 生態圈中重要的套件：
 
-- **[standard](https://github.com/feross/standard)** - 本專案
+- **[standard](https://github.com/standard/standard)** - 本專案
   - **[standard-engine](https://github.com/flet/standard-engine)** - 命令列引擎
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - standard 的 eslint 規則
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 規則
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - standard 的 eslint 規則
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 規則
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standard 客製化 eslint 規則（非 eslint 核心）
   - **[eslint](https://github.com/eslint/eslint)** - 驅動 standard 的核心
-- **[snazzy](https://github.com/feross/snazzy)** - standard 的終端機美麗輸出
-- **[standard-www](https://github.com/feross/standard-www)** - https://standardjs.com 網站程式
+- **[snazzy](https://github.com/standard/snazzy)** - standard 的終端機美麗輸出
+- **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 網站程式
 - **[semistandard](https://github.com/Flet/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
 也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
-**[有使用 `standard` 的 npm 套件清單](https://github.com/feross/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/feross/awesome-standard)**。
+**[有使用 `standard` 的 npm 套件清單](https://github.com/standard/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/standard/awesome-standard)**。
 
 ## 授權
 

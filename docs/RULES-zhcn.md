@@ -1,10 +1,18 @@
 # JavaScript Standard Style
 
-其他语言: [English](../RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)、[繁體中文](docs/RULES-zhtw.md)
+<p align="center">
+  <a href="RULES-en.md">English</a> •
+  <a href="RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="RULES-kokr.md">한국어 (Korean)</a> •
+  <a href="RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-这是 JavaScript [standard](https://github.com/feross/standard) 代码规范的全文。
+这是 JavaScript [standard](https://github.com/standard/standard) 代码规范的全文。
 
 掌握本规范的最好方法是安装并在自己的代码中使用它。
 

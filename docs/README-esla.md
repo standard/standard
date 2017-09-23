@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,20 +7,22 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
-<h4 align="center">Una guía de estilos Javascript para gobernarlos a todos</h4>
+<h4 align="center">Una guía de estilos JavaScript para gobernarlos a todos</h4>
 
 <p align="center">
-  Translations:
-  <a href="../README.md">English</a>,
-  <a href="README-ptbr.md">Português</a>,
-  <a href="README-zhtw.md">繁體中文</a>,
-  <a href="README-zhcn.md">简体中文</a>
+  <a href="README-en.md">English</a> •
+  <a href="README-esla.md">Español (Latinoamérica)</a> •
+  <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-kokr.md">한국어 (Korean)</a> •
+  <a href="README-ptbr.md">Português (Brasil)</a> •
+  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
@@ -70,7 +72,7 @@ npm install standard --save-dev
 Para una mejor idea, mira este
 [archivo de ejemplo](https://github.com/expressjs/body-parser/blob/master/index.js) escrito
 en JavaScript Standard Style. O, mira alguno de los
-[miles de proyectos](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+[miles de proyectos](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 que usan `standard`!
 
 ## Tabla de Contenido
@@ -79,7 +81,7 @@ que usan `standard`!
   - [Instalación](#instalación)
   - [Uso](#uso)
   - [Lo que podrías hacer si eres inteligente](#lo-que-podrías-hacer-si-eres-inteligente)
-  
+
 - FAQ
   - [¿Por qué debería usar JavaScript Standard Style?](#por-qué-deberia-usar-javascript-standard-style)
   - [¿Quién usa JavaScript Standard Style?](#quién-usa-javascript-standard-style)
@@ -189,26 +191,26 @@ Adoptar estilos `standard` significa clasificar la importancia de la claridad de
 
 Un montón de gente!
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/brave.png>](https://www.brave.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) |
 |---|---|---|---|---|
 
-| [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+| [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/taser.png>](https://www.taser.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) |
 |---|---|---|---|---|
 
 Adicionalmente a compañías, muchos miembros de la comunidad usan `standard` en modulos que son
-[muy numerosos](https://raw.githubusercontent.com/feross/standard-packages/master/all.json) para listar aquí.
+[muy numerosos](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) para listar aquí.
 
 También `standard` es el linter con más estrellas en GitHub
 [Clean Code Linter](https://github.com/showcases/clean-code-linters).
@@ -296,10 +298,10 @@ Si aun prefieres configurar `standard` manualmente [sigue esta guia](webstorm-2)
 Si! Si estas usando `standard` en tu proyecto, puedes includir una de estas en tu readme para
 hacerle saber a las personas que en tu código estas usando estilos standard.
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -312,7 +314,7 @@ hacerle saber a las personas que en tu código estas usando estilos standard.
 
 No. El objetivo de `standard` es evitar [bikeshedding][bikeshedding] en el estilo. Existen un montón de debates online acerca de tabs vs espacios, etc. que nunca serán resueltos. Estos debates solo te distraen de hacer tu trabajo. Al final del día tienes simplemente que “usar alguno”, y esa es toda la filosofía de `standard` -- es un montón de sensibles opiniones de “usar alguno”. Con la esperanza que los usuarios vean el valor en esto más que defender sus propias opiniones.
 
-Si realmente quieres configurar cientos de reglas individualmente, puedes usar `eslint` directamente con [eslint-config-standard](https://github.com/feross/eslint-config-standard) aplicando
+Si realmente quieres configurar cientos de reglas individualmente, puedes usar `eslint` directamente con [eslint-config-standard](https://github.com/standard/eslint-config-standard) aplicando
 cambios encima de este.
 
 Tip: ¡Simplemente usa `standard` y ya está. Existen problemas reales
@@ -322,7 +324,7 @@ en los cuales debes usar tu tiempo! :P
 
 ## ¡Pero esto no un estandar web real!
 
-¡Por su puesto que no lo es! Este estilo no está afiliado a ningún grupo oficial de estándar web, por eso este repositorio se llama `feross/standard` y no `ECMA/standard`.
+¡Por su puesto que no lo es! Este estilo no está afiliado a ningún grupo oficial de estándar web, por eso este repositorio se llama `standard/standard` y no `ECMA/standard`.
 
 La palabra “estándar” tiene más significados que solo “estándar web” :-) Por ejemplo:
 
@@ -453,7 +455,7 @@ Si `standard` está instalado globalmente (ej: `npm install standard --global`),
 Antes de usar una variable del lenguaje JavaScript customizado, considera si la complejidad agregada
 (y esfuerzo requerido para obtener los contribuidores alcanzarle con rapidez) vale la pena.
 
-`standard` soporta plugins ESLint. Usa uno de estos para transformar el código a javascript válido antes de que `standard` lo vea. Para usar un parser customizado, instálalo desde
+`standard` soporta plugins ESLint. Usa uno de estos para transformar el código a JavaScript válido antes de que `standard` lo vea. Para usar un parser customizado, instálalo desde
 npm (example: `npm install eslint-plugin-flowtype`) y ejecuta:
 
 ```bash
@@ -627,24 +629,24 @@ El `callback` será llamado con un objeto de `Error` y `results`: (igual al de a
 
 ## ¿Cómo puedo contribuir a `standard`?
 
-Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/feross/standard/issues) o [PRs](https://github.com/feross/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
+Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/standard/standard/issues) o [PRs](https://github.com/standard/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
 
 Unete a nosotros `#standard` en freenode.
 
-- **[standard](https://github.com/feross/standard)** - este repositorio
+- **[standard](https://github.com/standard/standard)** - este repositorio
   - **[standard-engine](https://github.com/flet/standard-engine)** - motor arbitrario cli de relgas eslint
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - reglas eslint para standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - reglas eslint para standard
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
   - **[eslint](https://github.com/eslint/eslint)** - linter que da poder a standard
-- **[snazzy](https://github.com/feross/snazzy)** - salida colorida o *bonita* en el terminal para standard
-- **[standard-www](https://github.com/feross/standard-www)** - codigo de https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - salida colorida o *bonita* en el terminal para standard
+- **[standard-www](https://github.com/standard/standard-www)** - codigo de https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, con punto y coma (sí es necesario)
 
 También  hay un montón **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
-**[paquetes npm que usan `standard`](https://github.com/feross/standard-packages)**,
+**[paquetes npm que usan `standard`](https://github.com/standard/standard-packages)**,
 y una impresionante lista de
-**[paquetes en el ecosistema `standard`](https://github.com/feross/awesome-standard)**.
+**[paquetes en el ecosistema `standard`](https://github.com/standard/awesome-standard)**.
 
 ## Licencia
 

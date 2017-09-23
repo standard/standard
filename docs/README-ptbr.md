@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="Travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
@@ -16,11 +16,13 @@
 <h4 align="center">Um Guia de Estilo JavaScript para a todos governar</h4>
 
 <p align="center">
-  Translations:
-  <a href="../README.md">English</a>,
-  <a href="README-esla.md">Spanish</a>,
-  <a href="README-zhtw.md">繁體中文</a>,
-  <a href="README-zhcn.md">简体中文</a>
+  <a href="README-en.md">English</a> •
+  <a href="README-esla.md">Español (Latinoamérica)</a> •
+  <a href="README-iteu.md">Italiano (Italian)</a> •
+  <a href="README-kokr.md">한국어 (Korean)</a> •
+  <a href="README-ptbr.md">Português (Brasil)</a> •
+  <a href="README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 <br>
@@ -42,7 +44,7 @@ npm install standard
 
 - **2 espaços** – para identação
 - **Aspas simples para strings** – exceto para evitar escapamentos
-- **Sem variáveis não-utilizadas** – resolve *uma porraad* de bugs!
+- **Sem variáveis não-utilizadas** – resolve *uma porrada* de bugs!
 - **Sem vírgulas-e-vírgula** – [Dá][1] [boa.][2] [Sério!][3]
 - **Nunca comece uma linha com  `(`, `[`, ou `` ` ``**
   - Esse é o único **problema** em omitir ponto-e-vírgula – *checado automaticamente pra você!*
@@ -63,8 +65,8 @@ npm install standard
 [5]: RULES.md#javascript-standard-style
 
 Para ter uma idéia melhor, dê uma olhada
-[num arquivo amostra](https://github.com/feross/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
-[repositórios](https://github.com/feross/standard-packages/blob/master/all.json) que usam
+[num arquivo amostra](https://github.com/webtorrent/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
+[repositórios](https://github.com/standard/standard-packages/blob/master/all.json) que usam
 `standard`.
 
 ## Índice
@@ -83,7 +85,7 @@ Para ter uma idéia melhor, dê uma olhada
   - [Como escondo um determinado aviso?](#como-escondo-um-determinado-aviso)
   - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-definedfunctions)
   - [Posso usar um custom parser de JS novinho em folha que saiu ontem para suporte ao ES Next?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
-  - [Posso usar uma linguagem variante de Javascript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
+  - [Posso usar uma linguagem variante de JavaScript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
   - [Você pode tornar regra X configurável?](#voc%C3%AA-pode-tornar-regra-x-configur%C3%A1vel)
   - [E os Web Workers?](#e-os-web-workers)
   - [E a respeito de Mocha, Jasmine, QUnit, etc?](#e-a-respeito-de-mocha-jasmine-qunit-etc)
@@ -165,10 +167,10 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme para que as pessoas saibam que seu código está em standard style.
 
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
@@ -254,7 +256,7 @@ Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/feross/standard/blob/master/docs/webstorm.md
+[webstorm-2]: https://github.com/standard/standard/blob/master/docs/webstorm.md
 
 ## FAQ
 
@@ -277,7 +279,7 @@ Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sob
 
 ### Mas isso não é um padrão legítimo!
 
-Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `feross/standard` e não `ECMA/standard`.
+Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `standard/standard` e não `ECMA/standard`.
 
 A palavra  "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
 
@@ -390,7 +392,7 @@ Antes de usar um custom parser, considere se a complexidade a mais no seu códig
 
 Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `babel-eslint` globalmente como `npm install babel-eslint -g`.
 
-### Posso usar uma linguagem variante de Javascript, tipo Flow?
+### Posso usar uma linguagem variante de JavaScript, tipo Flow?
 
 Antes de usar uma variante de JS customizada, considere se a complexidade a mais no seu processo de construção (e os esforços necessários para conseguir contribuíntes numa velocidade boa) valem a pena.
 
@@ -415,7 +417,7 @@ Se você está usando `standard` globalmente (instalou com `-g`), você também 
 Não. O objetivo do  `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
 
 Se você apenas quer trocar algumas regras, considere usar
-[essa configuração compartilhável](https://github.com/feross/eslint-config-standard) e jogue suas mudanças em cima.
+[essa configuração compartilhável](https://github.com/standard/eslint-config-standard) e jogue suas mudanças em cima.
 
 Dica: Use `standard` e pronto. Há problemas reais que você poderia usar seu tempo resolvendo! :P
 
@@ -535,26 +537,26 @@ O `callback` vai ser chamado com os objetos `Error` e `results`:
 
 ## Contribuições
 
-Contribuições são bem-vindas! Cheque o [issues](https://github.com/feross/standard/issues) ou os [PRs](https://github.com/feross/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
+Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
 
 Junte-se ao `#standard` no freenode.
 
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
-- **[standard](https://github.com/feross/standard)** - esse repo
+- **[standard](https://github.com/standard/standard)** - esse repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - Regras ESLint para  `standard`
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - Regras ESLint para  `standard`
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
 - **[standard-format](https://github.com/maxogden/standard-format)** - Formatador de código automático
-- **[snazzy](https://github.com/feross/snazzy)** - Output de terminal bonitinho
-- **[standard-www](https://github.com/feross/standard-www)** - código do  https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - Output de terminal bonitinho
+- **[standard-www](https://github.com/standard/standard-www)** - código do  https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
 
 Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de
-**[packages que usam `standard`](https://github.com/feross/standard-packages)**,
+**[packages que usam `standard`](https://github.com/standard/standard-packages)**,
 e uma awesome list de
-**[packages do ecossistema `standard` ](https://github.com/feross/awesome-standard)**.
+**[packages do ecossistema `standard` ](https://github.com/standard/awesome-standard)**.
 
 ## License
 
