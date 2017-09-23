@@ -301,6 +301,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 안됩니다. `standard`의 전체적인 요점은 코드 스타일에 대한 [bikeshedding][bikeshedding]을 피함으로써 시간을 절약하는 것입니다. 탭과 공백 등에 관해서는 온라인으로 많은 논쟁이 있기때문에 해결되지 않을 것입니다. 이러한 논쟁은 어떠한 것도 얻지 못하게합니다. 결국 `뭔가를 골라야 한다`입니다. 그것은 `standard`의 철학입니다. 이는 `단지 뭔가를 선택하세요`라는 의견입니다. 바라건대, 사용자들이 자신들의 의견을 방어하는 것에 대해 가치를 보게 되기를 바랍니다.
 
 수백 개의 ESLint 규칙을 개별적으로 구성하려는 경우 `eslint`를 직접 [eslint-config-standard](https://github.com/standard/eslint-config-standard)와 함께 사용하여 변경 사항을 맨 위에 배치 할 수 있습니다.
+[`standard-eject`](https://github.com/josephfrazier/standard-eject)는`standard`에서 `eslint`와 `eslint-config-standard` 로의 마이그레이션을 도와 줄 수 있습니다.
 
 팁 : 표준을 사용하고 계속 진행하십시오. 당신의 시간을 소비하고 있는 실질적인 문제를 해결하세요! :P
 
