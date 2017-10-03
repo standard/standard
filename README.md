@@ -45,7 +45,7 @@ npm install standard
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
 - Declare browser globals with `/* global */` comment at top of file
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
+  - Prevents accidental use of vaguely-named browser globals like `open`, `length`,
     `event`, and `name`.
   - Example: `/* global alert, prompt */`
   - Exceptions are: `window`, `document`, and `navigator`
