@@ -130,10 +130,12 @@
 
   ```js
   // ✗ avoid
-  if (condition) {
+  if (condition) 
+  {
     // ...
   }
-  else {
+  else 
+  {
     // ...
   }
   ```
@@ -200,6 +202,7 @@
   ```js
   // ✗ avoid
   var value = 'hello world'
+  ```
 
 
   console.log(value)
