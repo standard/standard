@@ -447,11 +447,22 @@ Para uma lista de quais variávies globais estão disponíveis nesses ambientes,
 
 Curioso você perguntar!
 
-```sh
-#!/bin/sh
+```bash
+#!/bin/bash
+
 # Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
-if [ $? -ne 0 ]; then exit 1; fi
+function xargs-r() {
+  # Portable version of "xargs -r". The -r flag is a GNU extension that
+  # prevents xargs from running if there are no input files.
+  if IFS= read -r -d '' path; then
+    { echo -n "$path"; echo -ne "\0"; cat; } | xargs $@
+  fi
+}
+git diff -z --name-only --cached --relative | grep -z '\.jsx\?$' | xargs-r -0 -t standard
+if [[ $? -ne 0 ]]; then
+  echo 'JavaScript Standard Style errors were detected. Aborting commit.'
+  exit 1
+fi
 ```
 
 Alternativamente, [overcommit](https://github.com/brigade/overcommit) é um gerenciador de ganchos Git que incluem suporte para rodar `standard` como um gancho pre-commit de Git.

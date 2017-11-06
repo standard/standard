@@ -569,11 +569,22 @@ $ standard --plugin html '**/*.html'
 
 재미있는 질문이네요!
 
-```sh
-#!/bin/sh
+```bash
+#!/bin/bash
+
 # 커밋을 위해 준비된 모든 자바 스크립트 파일이 표준 코드 스타일을 통과하는지 확인합니다.
-git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
-if [ $? -ne 0 ]; then exit 1; fi
+function xargs-r() {
+  # Portable version of "xargs -r". The -r flag is a GNU extension that
+  # prevents xargs from running if there are no input files.
+  if IFS= read -r -d '' path; then
+    { echo -n "$path"; echo -ne "\0"; cat; } | xargs $@
+  fi
+}
+git diff -z --name-only --cached --relative | grep -z '\.jsx\?$' | xargs-r -0 -t standard
+if [[ $? -ne 0 ]]; then
+  echo 'JavaScript Standard Style errors were detected. Aborting commit.'
+  exit 1
+fi
 ```
 
 ## 출력을 모두 화려하고 *예쁘게* 만드려면 어떻게 해야 하나요?
