@@ -1,13 +1,13 @@
 # JavaScript Standard Style
 
 <p align="center">
-  <a href="RULES-en.md">English</a> •
-  <a href="RULES-esla.md">Español (Latinoamérica)</a> •
-  <a href="RULES-iteu.md">Italiano (Italian)</a> •
-  <a href="RULES-kokr.md">한국어 (Korean)</a> •
-  <a href="RULES-ptbr.md">Português (Brasil)</a> •
-  <a href="RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
-  <a href="RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+  <a href="/docs/RULES-en.md">English</a> •
+  <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="/docs/RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/RULES-kokr.md">한국어 (Korean)</a> •
+  <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="/docs/RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
@@ -1071,6 +1071,7 @@
 
   ```js
   if (!key in obj) {}       // ✗ 피하세요
+  if (!(key in obj)) {}       // ✓ 좋아요
   ```
 
 * **`.call ()`과`.apply ()`를 불필요하게 사용하지 말아야 합니다.**
