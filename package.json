@@ -12,24 +12,24 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "~3.19.0",
-    "eslint-config-standard": "10.2.1",
+    "eslint": "~4.13.0",
+    "eslint-config-standard": "11.0.0-beta.0",
     "eslint-config-standard-jsx": "4.0.2",
-    "eslint-plugin-import": "~2.2.0",
-    "eslint-plugin-node": "~4.2.2",
-    "eslint-plugin-promise": "~3.5.0",
-    "eslint-plugin-react": "~6.10.0",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-react": "~7.5.1",
     "eslint-plugin-standard": "~3.0.1",
-    "standard-engine": "~7.0.0"
+    "standard-engine": "~7.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
+    "babel-eslint": "^8.0.3",
     "cross-spawn": "^5.0.1",
     "eslint-index": "^1.3.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
-    "standard-packages": "^3.1.9",
+    "standard-packages": "^3.2.11",
     "tape": "^4.6.0"
   },
   "engines": {

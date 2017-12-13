@@ -101,8 +101,35 @@ test('test github repos that use `standard`', function (t) {
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ')'
-            if (err) { t.fail(str) } else { t.pass(str) }
+            if (err) {
+              if (err.message.indexOf('(indent)') || err.message.indexOf('(no-multi-spaces)') || err.message.indexOf('(space-unary-ops)')) {
+                t.comment('Attempting to fix eslint breaking changes for ' + str)
+                return runStandardFix(cb)
+              } else {
+                t.fail(str)
+              }
+            } else {
+              t.pass(str)
+            }
             cb(null)
+          })
+        }
+
+        function runStandardFix (cb) {
+          var args = [ '--fix', '--verbose' ]
+          if (pkg.args) args.push.apply(args, pkg.args)
+          spawn(STANDARD, args, { cwd: folder }, function (err) {
+            var str = name + ' (' + pkg.repo + ')  **with --fix'
+            if (err) { t.fail(str) } else { t.pass(str) }
+            runGitReset(cb)
+          })
+        }
+
+        function runGitReset (cb) {
+          var args = [ 'reset', '--hard' ]
+          spawn(GIT, args, { cwd: folder }, function (err) {
+            if (err) err.message += ' (git reset) (' + name + ')'
+            cb(err)
           })
         }
       })

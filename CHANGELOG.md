@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 11.0.0 - 2017-12-11
+
+This release has no new rules, but it does update to the latest version of `eslint`, which has some significant changes to exisitng rules. Most updates are to make rules more strict.
+
+Thankfully, most will just need to run `standard --fix` to update their code to be compliant.
+
+eslint 4:
+  - Bumped to 4.13.0.
+  - The `indent` rule is more strict.
+  - The `padded-blocks` rule is more strict.
+  - The `space-before-function-paren` rule is more strict.
+  - The `no-multi-spaces` rule is more strict.
+  - Minor improvements to
+   - `no-extra-parens`,
+   - `no-unexpected-multiline`,
+   - `no-regex-spaces`, and
+   - `space-unary-ops`
+
+eslint-plugin-import:
+  - Bumped to 2.8.0.
+  - Updated for eslint 4.0 compatibility.
+  - Various small bug fixes included related to `import/*` rules.
+
+eslint-plugin-node:
+  - The `no-deprecated-api` rule updated to with node 8 support and better node 6 support.
+
+ - eslint-plugin-promise:
+  - Bumped to 3.6.0.
+
+eslint-plugin-react:
+  - Bumped to 5.0.0
+  - Fix jsx-indent crash
+  - Fix jsx-indent indentation calculation with nested JSX
+  - jsx-no-undef will not check the global scope by default.
+  - Fix jsx-curly-spacing newline with object literals bug
+  - Fix jsx-curly-spacing schema incompatibility with ESLint 4.2.0
+  - Fix alignment bug in jsx-indent
+
+
 ## 10.0.3 - 2017-08-06
 
 - Internal changes (incremented dependency versions)
