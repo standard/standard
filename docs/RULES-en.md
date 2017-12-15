@@ -752,7 +752,7 @@ your code.
   ```js
   var score = 100
   function game () {
-    score: 50         // ✗ avoid
+    score = 50         // ✗ avoid
   }
   ```
 
