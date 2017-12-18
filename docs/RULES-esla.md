@@ -749,7 +749,11 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```js
   var score = 100
   function game () {
-    score: 50         // ✗ avoid
+    score: while (true) {      // ✗ avoid
+      score -= 10
+      if (score > 0) continue score
+      break
+    }
   }
   ```
 
