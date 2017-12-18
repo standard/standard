@@ -750,7 +750,11 @@
   ```js
   var score = 100
   function game () {
-    score: 50         // ✗ 피하세요
+    score: while (true) {      // ✗ avoid
+      score -= 10
+      if (score > 0) continue score
+      break
+    }
   }
   ```
 
