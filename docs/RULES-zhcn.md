@@ -130,10 +130,12 @@
 
   ```js
   // ✗ avoid
-  if (condition) {
+  if (condition)
+  {
     // ...
   }
-  else {
+  else
+  {
     // ...
   }
   ```
