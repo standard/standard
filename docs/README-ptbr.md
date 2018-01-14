@@ -45,7 +45,7 @@ npm install standard
 - **2 espaços** – para identação
 - **Aspas simples para strings** – exceto para evitar escapamentos
 - **Sem variáveis não-utilizadas** – resolve *uma porrada* de bugs!
-- **Sem vírgulas-e-vírgula** – [Dá][1] [boa.][2] [Sério!][3]
+- **Sem ponto-e-vírgulas** – [Dá][1] [boa.][2] [Sério!][3]
 - **Nunca comece uma linha com  `(`, `[`, ou `` ` ``**
   - Esse é o único **problema** em omitir ponto-e-vírgula – *checado automaticamente pra você!*
   - [Mais detalhes][4]
@@ -61,8 +61,8 @@ npm install standard
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES.md#semicolons
-[5]: RULES.md#javascript-standard-style
+[4]: RULES-ptbr.md#ponto-e-v%C3%ADrgula
+[5]: RULES-ptbr.md#javascript-standard-style
 
 Para ter uma idéia melhor, dê uma olhada
 [num arquivo amostra](https://github.com/webtorrent/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
