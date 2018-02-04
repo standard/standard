@@ -23,7 +23,10 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<br>
+<p align="center">
+  <strong>Sponsored by</strong>
+  <a href="https://stdlib.com" target='_blank'><img src='https://feross.org/images/supporters/stdlib.png' width=150></a>
+</p>
 
 ## JavaScript style guide, with linter & automatic code fixer
 
