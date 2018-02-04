@@ -28,7 +28,7 @@
   <a href="https://stdlib.com" target='_blank'><img src='https://feross.org/images/supporters/stdlib.png' width=150></a>
 </p>
 
-## JavaScript style guide, with linter & automatic code fixer
+## JavaScript style guide, linter, and formatter
 
 This module saves you (and others!) time in three ways:
 
