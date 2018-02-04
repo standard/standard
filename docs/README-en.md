@@ -13,8 +13,6 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
-<h4 align="center">One JavaScript Style to Rule Them All</h4>
-
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
@@ -47,7 +45,7 @@ Install with:
 npm install standard --save-dev
 ```
 
-## The Rules
+## StandardJS — The Rules
 
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
