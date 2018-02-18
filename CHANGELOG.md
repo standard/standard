@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 11.0.0 - 2018-02-17
+## 11.0.0 - 2018-02-18
 
 This release has no new rules, but it does update to the latest version of `eslint`,
 version 4, which has some significant changes to existing rules. Most updates make
