@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This release has no new rules, but it does update to the latest version of `eslint`,
 version 4, which has some significant changes to existing rules. Most updates make
-the rules more strict.
+the indentation rules more strict.
 
 Thankfully, most users will just need to run `standard --fix` to update code to be
 compliant.
@@ -43,7 +43,12 @@ compliant.
   - Fix `jsx-curly-spacing` schema incompatibility with ESLint 4.2.0.
   - Fix alignment bug in `jsx-indent`.
 
-Huge thanks to [@Flet](https://github.com/Flet) for putting together most of this
+### Changed rules
+
+- Relax rule: Don't mark Rails Asset Pipeline comments (comments that start with `//=`)
+  as errors. ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#918](https://github.com/standard/standard/issues/918)
+
+👏 Huge thanks to [@Flet](https://github.com/Flet) for putting together most of this
 release!
 
 ## 10.0.3 - 2017-08-06
