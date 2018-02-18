@@ -104,14 +104,15 @@ test('test github repos that use `standard`', function (t) {
             if (err) {
               if (err.message.indexOf('(indent)') || err.message.indexOf('(no-multi-spaces)') || err.message.indexOf('(space-unary-ops)')) {
                 t.comment('Attempting to fix eslint breaking changes for ' + str)
-                return runStandardFix(cb)
+                runStandardFix(cb)
               } else {
                 t.fail(str)
+                cb(null)
               }
             } else {
               t.pass(str)
+              cb(null)
             }
-            cb(null)
           })
         }
 
