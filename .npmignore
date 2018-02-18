@@ -2,7 +2,6 @@ test/
 docs/logos/
 tmp/
 bin/update-authors.sh
-.travis.yml
 .npmignore
 badge.png
 badge.svg
