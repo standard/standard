@@ -110,7 +110,7 @@
 - Sola (airsolakey@icloud.com)
 - Lion Yang (lion@aosc.xyz)
 - Joseph Frazier (1212jtraceur@gmail.com)
-- Emanuele Stoppa (my.burning@gmail.com)
+- Emanuele (my.burning@gmail.com)
 - Jakob Krigovsky (jakob@krigovsky.com)
 - Joe Boyle (joe.boyle@jibo.com)
 - Pablo Varela (pablovarela182@gmail.com)
