@@ -193,6 +193,11 @@ community conventions higher than personal style. This might not make sense for
 place for newbies. Setting up clear, automated contributor expectations makes a
 project healthier.
 
+For more info, see the conference talk ["Write Perfect Code with Standard and
+ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). In this talk, you'll learn
+about linting, when to use `standard` versus `eslint`, and how `prettier` compares
+to `standard`.
+
 ## Who uses JavaScript Standard Style?
 
 Lots of folks!
