@@ -312,7 +312,7 @@ for `standard` directly in the IDE.
 
 If you still prefer to configure `standard` manually, [follow this guide][webstorm-1]. This applies to all JetBrains products, including PhpStorm, IntelliJ, RubyMine, etc.
 
-[webstorm-1]: webstorm.md
+[webstorm-1]: docs/webstorm.md
 
 ## Is there a readme badge?
 
