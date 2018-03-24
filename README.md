@@ -606,16 +606,22 @@ module.
 
 *Note: `env` and `envs` are equivalent.*
 
-## What about Web Workers?
+## What about Web Workers and Service Workers?
 
-Add this to the top of worker files:
+Add this to the top of web worker files:
 
 ```js
-/* eslint-env serviceworker */
+/* eslint-env worker */
 ```
 
 This lets `standard` (as well as humans reading the code) know that `self` is a
 global in web worker code.
+
+For Service workers, add this instead:
+
+```js
+/* eslint-env serviceworker */
+```
 
 ## Can I check code inside of Markdown or HTML files?
 
