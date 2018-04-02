@@ -50,7 +50,7 @@ npm install standard --save-dev
 
 ### Open Source Supporters
 
-<a href="https://nodesource.com" target='_blank'><img src='https://feross.org/images/supporters/nodesource.png' width=125></a>
+<a href="https://nsrc.io/oss-feross" target='_blank'><img src='https://feross.org/images/supporters/nodesource.png' width=125></a>
 
 ## StandardJS — The Rules
 
