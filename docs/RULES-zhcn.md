@@ -320,7 +320,7 @@
 
 * **文件末尾留一空行**。
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **函数调用时标识符与括号间不留间隔**。
 
