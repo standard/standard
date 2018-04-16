@@ -280,7 +280,15 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 ### Vim
 
-Install **[ale][vim-1]**.
+Install **[ale][vim-1]**. And add these lines to your `.vimrc` file.
+
+```vim
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+```
+
+This sets standard as your only linter for javascript files and so prevents conflicts with eslint.
 
 For automatic formatting on save, add these lines to `.vimrc`:
 
