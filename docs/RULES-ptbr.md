@@ -213,7 +213,7 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
       verbose = true
   ```
 
-* **Coloque parẽnteses adicionais** em declarações em condições. Isso torna mais claro que a expressão é uma declaração (`=`) e não um typo de equidade (`===`)
+* **Coloque parênteses adicionais** em declarações em condições. Isso torna mais claro que a expressão é uma declaração (`=`) e não um typo de equidade (`===`)
 
   ```js
   // ✓ ok
@@ -226,7 +226,7 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
     // ...
   }
   ```
-*
+
 ## Ponto-e-vírgula
 
 * Não use. (veja: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
