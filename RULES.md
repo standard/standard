@@ -12,7 +12,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-This is a TL;DR of the [standard](https://github.com/standard/standard) JavaScript
+This is a summary of the [standard](https://github.com/standard/standard) JavaScript
 rules.
 
 The best way to learn about `standard` is to just install it and give it a try on
