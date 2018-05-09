@@ -73,8 +73,8 @@ npm install standard --save-dev
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: /docs/RULES-en.md#semicolons
-[5]: /docs/RULES-en.md#javascript-standard-style
+[4]: /RULES.md#semicolons
+[5]: /RULES.md#javascript-standard-style
 
 To get a better idea, take a look at
 [a sample file](https://github.com/expressjs/body-parser/blob/master/index.js) written
