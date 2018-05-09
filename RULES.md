@@ -1297,7 +1297,11 @@ your code.
   window.alert('hi');  // ✗ avoid
   ```
 
-* Never start a line with `(`, `[`, or `` ` ``. This is the only gotcha with omitting semicolons, and standard protects you from this potential issue.
+* Never start a line with `(`, `[`, `` ` ``, or a handful of other unlikely possibilities.
+
+  This is the only gotcha with omitting semicolons, and `standard` protects you from this potential issue.
+
+  (The full list is: `[`, `(`, `` ` ``, `+`, `*`, `/`, `-`, `,`, `.`, but most of these will never appear at the start of a line in real code.)
 
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
