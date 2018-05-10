@@ -369,16 +369,16 @@
   ```js
   var person = {
     set name (value) {    // ✗ 피하세요
-      this.name = value
+      this._name = value
     }
   }
 
   var person = {
     set name (value) {
-      this.name = value
+      this._name = value
     },
     get name () {         // ✓ 좋아요
-      return this.name
+      return this._name
     }
   }
   ```
