@@ -180,8 +180,20 @@ your code.
   })
   ```
 
-* **Always prefix browser globals** with `window.`.<br>
-  Exceptions are: `document`, `console` and `navigator`.
+* **Declare browser globals** with a `/* global */` comment.<br>
+  Exceptions are: `window`, `document` and `navigator`.<br>
+  Prevents accidental use of poorly-named browser globals like `open`, `length`,
+  `event`, and `name`.
+
+  ```js
+  /* global alert, prompt */
+
+  alert('hi')
+  prompt('ok?')
+  ```
+
+  Explicitly referencing the function or property on `window` is okay too, though
+  such code will not run in a Worker which uses `self` instead of `window`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 

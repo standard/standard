@@ -63,9 +63,11 @@ npm install standard --save-dev
 - **Space after function name** `function name (arg) { ... }`
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
+- Declare browser globals with `/* global */` comment at top of file
+  - Prevents accidental use of vaguely-named browser globals like `open`, `length`,
     `event`, and `name`.
+  - Example: `/* global alert, prompt */`
+  - Exceptions are: `window`, `document`, and `navigator`
 - **And [more goodness][5]** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
