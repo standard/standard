@@ -72,6 +72,6 @@
     "show-rules-disabled": "eslint-index eslintrc.json --status omitted off",
     "show-summary": "eslint-index eslintrc.json --format table",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
-    "update-authors": "./bin/update-authors.sh"
+    "update-authors": "./tools/update-authors.sh"
   }
 }
