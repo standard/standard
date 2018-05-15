@@ -1,8 +1,13 @@
+.editorconfig
+.github/
 .npmignore
+.travis.yml
 badge.png
 badge.svg
 CONTRIBUTING.md
+docs/
 docs/logos/
+SECURITY.md
 sticker.png
 sticker.svg
 test/
