@@ -1,10 +1,10 @@
-test/
-docs/logos/
-tmp/
-bin/update-authors.sh
 .npmignore
 badge.png
 badge.svg
 CONTRIBUTING.md
+docs/logos/
 sticker.png
 sticker.svg
+test/
+tmp/
+tools/
