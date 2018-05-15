@@ -556,11 +556,11 @@ Divertente!
 function xargs-r() {
   # Portable version of "xargs -r". The -r flag is a GNU extension that
   # prevents xargs from running if there are no input files.
-  if IFS= read -r -d '' path; then
-    { echo -n "$path"; echo -ne "\0"; cat; } | xargs $@
+  if IFS= read -r -d $'\n' path; then
+    { echo "$path"; cat; } | xargs $@
   fi
 }
-git diff -z --name-only --cached --relative | grep -z '\.jsx\?$' | xargs-r -0 -t standard
+git diff --name-only --cached --relative | grep '\.jsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t standard
 if [[ $? -ne 0 ]]; then
   echo 'JavaScript Standard Style errors were detected. Aborting commit.'
   exit 1
