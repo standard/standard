@@ -289,14 +289,12 @@ let g:ale_linters = {
 let g:ale_fixers = {'javascript': ['standard']}
 ```
 
-This sets standard as your only linter and fixer(on save) for javascript files and so prevents conflicts with eslint.
-
-For automatic formatting on save, add these lines to `.vimrc` if you are not using **[ale][vim-1]**:
-
+This sets standard as your only linter and fixer for javascript files and so prevents conflicts with eslint. For linting and automatic fixing on save, add these lines to `.vimrc`:
 ```vim
-autocmd bufwritepost *.js silent !standard --fix %
-set autoread
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
 ```
+
 
 Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
 
