@@ -286,11 +286,12 @@ Install **[ale][vim-1]**. And add these lines to your `.vimrc` file.
 let g:ale_linters = {
 \   'javascript': ['standard'],
 \}
+let g:ale_fixers = {'javascript': ['standard']}
 ```
 
-This sets standard as your only linter for javascript files and so prevents conflicts with eslint.
+This sets standard as your only linter and fixer(on save) for javascript files and so prevents conflicts with eslint.
 
-For automatic formatting on save, add these lines to `.vimrc`:
+For automatic formatting on save, add these lines to `.vimrc` if you are not using **[ale][vim-1]**:
 
 ```vim
 autocmd bufwritepost *.js silent !standard --fix %
