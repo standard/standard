@@ -793,6 +793,7 @@ Here are some important packages in the `standard` ecosystem:
 - **[snazzy](https://github.com/standard/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/standard/standard-www)** - code for https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+- **[standardx](https://github.com/standard/standardx)** - standard, with custom tweaks
 
 There are also many **[editor plugins](#are-there-text-editor-plugins)**, a list of
 **[npm packages that use `standard`](https://github.com/standard/standard-packages)**,
