@@ -12,9 +12,9 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "^5.0.0",
     "eslint-config-standard": "standard/eslint-config-standard",
     "eslint-config-standard-jsx": "standard/eslint-config-standard-jsx",
+    "eslint": "~5.0.0",
     "eslint-plugin-import": "~2.13.0",
     "eslint-plugin-node": "~7.0.1",
     "eslint-plugin-promise": "~4.0.0",
