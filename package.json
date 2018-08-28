@@ -23,7 +23,7 @@
     "standard-engine": "~9.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.3",
+    "babel-eslint": "^9.0.0",
     "cross-spawn": "^6.0.3",
     "eslint-index": "^1.3.0",
     "minimist": "^1.2.0",
