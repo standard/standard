@@ -802,4 +802,4 @@ and an awesome list of
 
 ## License
 
-[MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+[MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).

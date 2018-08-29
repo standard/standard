@@ -5,7 +5,7 @@
   "author": {
     "email": "feross@feross.org",
     "name": "Feross Aboukhadijeh",
-    "url": "http://feross.org/"
+    "url": "https://feross.org/"
   },
   "bin": "./bin/cmd.js",
   "bugs": {
