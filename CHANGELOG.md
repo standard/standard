@@ -11,7 +11,7 @@ When you upgrade, consider running `standard --fix` to automatically format your
 
 ### New features
 
-- Update `eslint` from `~4.19.0` to `~5.0.0`.
+- Update `eslint` from `~4.19.0` to `~5.4.0`.
   - Support JSXFragment nodes (e.g. `<></>`)
   - Lots of minor changes to rules to catch more edge cases!
 - The README is now available in French! (Thanks [@charliegerard](https://github.com/charliegerard)!)
