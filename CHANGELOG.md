@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 12.0.0 - 2018-08-28
+
+New version of ESLint, new version of Standard!
+
+When you upgrade, consider running `standard --fix` to automatically format your code to match the newly added rules.
+
+### New features
+
+- Update `eslint` from `~4.19.0` to `~5.0.0`.
+  - Support JSXFragment nodes (e.g. `<></>`)
+  - Lots of minor changes to rules to catch more edge cases!
+- The README is now available in French! (Thanks [@charliegerard](https://github.com/charliegerard)!)
+  - Other community contributed translations exist in Spanish, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
+  - More translations are welcome!
+
+### New rules
+
+*(Estimated % of affected standard users, based on test suite in parens)*
+
+- Require spacing inside of braces ([object-curly-spacing](https://eslint.org/docs/rules/object-curly-spacing)) [#609](https://github.com/standard/standard/issues/609) [eslint-config-standard/#35](https://github.com/standard/eslint-config-standard/issues/35) (29%)
+- Disallow APIs that were deprecated in Node 10 ([no-deprecated-api](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md)) [#1164](https://github.com/standard/standard/pull/1164) (15%)
+  - e.g. `assert.equal()`, `assert.deepEqual()` and `assert.notEqual()` were deprecated in Node 10.
+- Disallow self assignment of properties ([no-self-assign](https://eslint.org/docs/rules/no-self-assign)) [#1186](https://github.com/standard/standard/issues/1186) (0%)
+
+### Changed rules
+
+None.
+
 ## 11.0.0 - 2018-02-18
 
 This release has no new rules, but it does update to the latest version of `eslint`,
