@@ -16,13 +16,13 @@
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
+  <a href="/docs/README-fr.md">Français</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/README-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
-  <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a> •
-  <a href="/docs/README-fr.md">Francais</a>
- </p>
+  <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
 <p align="center">
   <strong>Sponsorisé par</strong>
