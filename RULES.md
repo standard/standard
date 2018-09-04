@@ -8,6 +8,7 @@
   <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+  <a href="/docs/RULES-fr.md">Français</a> •
 </p>
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
