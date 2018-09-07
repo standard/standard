@@ -439,7 +439,7 @@ your code.
   function foo (n) {
     if (n <= 0) return
 
-    foo(n - 1)
+    foo(n - 1)                // ✓ ok
   }
   ```
 
