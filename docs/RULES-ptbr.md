@@ -3,12 +3,12 @@
 <p align="center">
   <a href="/docs/RULES-en.md">English</a> •
   <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="/docs/RULES-fr.md">Français</a> •
   <a href="/docs/RULES-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/RULES-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
-  <a href="/docs/RULES-fr.md">Français</a> •
 </p>
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
