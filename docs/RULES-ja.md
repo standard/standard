@@ -253,7 +253,7 @@
       verbose = true
   ```
 
-* **条件式における代入を追加の括弧でラップしてください。**これは、式が等価演算子（`===`）のタイプミスではなく意図的な代入（`=`）であることを明確にします。
+* **条件式における代入を追加の括弧でラップしてください。** これは、式が等価演算子（`===`）のタイプミスではなく意図的な代入（`=`）であることを明確にします。
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -902,7 +902,7 @@
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
 
-* **`__proto__`を使用しないでください。**かわりに`getPrototypeOf`を使用してください。
+* **`__proto__`を使用しないでください。** かわりに`getPrototypeOf`を使用してください。
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -1376,7 +1376,7 @@
 
 今日使用されている一般的なコードマイナーはASTベースのミニフィケーションを使用しているので、セミコロンレスなJavaScriptを問題なく扱うことができます（JavaScriptではセミコロンは不要であるため）。
 
-##### *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*からの抜粋：
+##### *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* からの抜粋：
 
 > [Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
 >
