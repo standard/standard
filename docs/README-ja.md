@@ -215,9 +215,9 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 
 ### Sublime Text
 
-**[Package Control][sublime-1]**を用いて、**[SublimeLinter][sublime-2]**と**[SublimeLinter-contrib-standard][sublime-3]**をインストールしてください。
+**[Package Control][sublime-1]** を用いて、 **[SublimeLinter][sublime-2]** と **[SublimeLinter-contrib-standard][sublime-3]** をインストールしてください。
 
-保存時に自動でフォーマットするには、**[StandardFormat][sublime-4]**をインストールしてください。
+保存時に自動でフォーマットするには、 **[StandardFormat][sublime-4]** をインストールしてください。
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -226,11 +226,11 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 
 ### Atom
 
-**[linter-js-standard][atom-1]**をインストールしてください。
+**[linter-js-standard][atom-1]** をインストールしてください。
 
-あるいは、**[linter-js-standard-engine][atom-4]**をインストールしてもよいでしょう。バンドルされた`standard`のバージョンではなく、プロジェクトにインストールされているバージョンが自動的に使用されます。 また、**[standard-engine][atom-5]**を元にした他のリンターでも動作します。
+あるいは、 **[linter-js-standard-engine][atom-4]** をインストールしてもよいでしょう。バンドルされた`standard`のバージョンではなく、プロジェクトにインストールされているバージョンが自動的に使用されます。 また、 **[standard-engine][atom-5]** を元にした他のリンターでも動作します。
 
-自動フォーマットには、**[standard-formatter][atom-2]**をインストールしてください。スニペットには、**[standardjs-snippets][atom-3]**をインストールしてください。
+自動フォーマットには、 **[standard-formatter][atom-2]** をインストールしてください。スニペットには、 **[standardjs-snippets][atom-3]** をインストールしてください。
 
 [atom-1]: https://atom.io/packages/linter-js-standard
 [atom-2]: https://atom.io/packages/standard-formatter
@@ -240,9 +240,9 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 
 ### Visual Studio Code
 
-**[vscode-standardjs][vscode-1]**をインストールしてください（自動フォーマットもサポートしています）。
+**[vscode-standardjs][vscode-1]** をインストールしてください（自動フォーマットもサポートしています）。
 
-JavaScriptのスニペットには、**[vscode-standardjs-snippets][vscode-2]**をインストールしてください。Reactのスニペットには、**[vscode-react-standard][vscode-3]**をインストールしてください。
+JavaScriptのスニペットには、 **[vscode-standardjs-snippets][vscode-2]** をインストールしてください。Reactのスニペットには、 **[vscode-react-standard][vscode-3]** をインストールしてください。
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
@@ -250,7 +250,7 @@ JavaScriptのスニペットには、**[vscode-standardjs-snippets][vscode-2]**�
 
 ### Vim
 
-**[ale][vim-1]**をインストールしてください。そして、次の行を`.vimrc`ファイルに追加してください。
+**[ale][vim-1]** をインストールしてください。そして、次の行を`.vimrc`ファイルに追加してください。
 
 ```vim
 let g:ale_linters = {
@@ -275,14 +275,14 @@ let g:ale_fix_on_save = 1
 
 ### Emacs
 
-**[Flycheck][emacs-1]**をインストールし、プロジェクトで有効にする方法については**[マニュアル][emacs-2]**を参照してください。
+**[Flycheck][emacs-1]** をインストールし、プロジェクトで有効にする方法については **[マニュアル][emacs-2]** を参照してください。
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
 ### Brackets
 
-extension registryで**["Standard Code Style"][brackets-1]**を検索し、"Install"をクリックしてください。
+extension registryで **["Standard Code Style"][brackets-1]** を検索し、"Install"をクリックしてください。
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
@@ -370,19 +370,19 @@ Error: Use JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
-特定の行の**すべてのルール**を無効にするには：
+特定の行の **すべてのルール** を無効にするには：
 
 ```js
 file = 'I know what I am doing' // eslint-disable-line
 ```
 
-あるいは、`"no-use-before-define"`ルール**のみ**を無効にするには：
+あるいは、`"no-use-before-define"`ルール **のみ** を無効にするには：
 
 ```js
 file = 'I know what I am doing' // eslint-disable-line no-use-before-define
 ```
 
-あるいは、**複数行**の`"no-use-before-define"`ルールを無効にするには：
+あるいは、 **複数行** の`"no-use-before-define"`ルールを無効にするには：
 
 ```js
 /* eslint-disable no-use-before-define */
@@ -582,7 +582,7 @@ $ npm install eslint-plugin-html
 $ standard --plugin html '**/*.html'
 ```
 
-<h2 id="is-there-a-git-pre-commit-hook">Gitの`pre-commit`フックはありますか？</h2>
+<h2 id="is-there-a-git-pre-commit-hook">Gitの<code>pre-commit</code>フックはありますか？</h2>
 
 ```bash
 #!/bin/bash
@@ -684,7 +684,7 @@ var opts = {
 
 `callback`は、`Error`オブジェクトと`results`オブジェクトを引数として実行されます（上記と同じ）。
 
-<h2 id="how-do-i-contribute-to-standard">`standard`にコントリビュートするには？</h2>
+<h2 id="how-do-i-contribute-to-standard"><code>standard</code>にコントリビュートするには？</h2>
 
 コントリビューションは歓迎されます！[Issues](https://github.com/standard/standard/issues)や[Pull Requests](https://github.com/standard/standard/pulls)をチェックし、望みのものがなければ作成してください。
 
@@ -703,7 +703,7 @@ var opts = {
 - **[semistandard](https://github.com/Flet/semistandard)** - セミコロンありのstandard（必要ならば）
 - **[standardx](https://github.com/standard/standardx)** - カスタマイズ可能なstandard
 
-多くの**[エディタープラグイン](#are-there-text-editor-plugins)**、**[`standard`を使用しているnpmパッケージ](https://github.com/standard/standard-packages)**のリスト、**[`standard`のエコシステムのパッケージ](https://github.com/standard/awesome-standard)**の素晴らしいリストもあります。
+多くの **[エディタープラグイン](#are-there-text-editor-plugins)** 、 **[`standard`を使用しているnpmパッケージ](https://github.com/standard/standard-packages)** のリスト、 **[`standard`のエコシステムのパッケージ](https://github.com/standard/awesome-standard)** の素晴らしいリストもあります。
 
 <h2 id="license">ライセンス</h2>
 
