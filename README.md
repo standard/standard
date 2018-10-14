@@ -107,7 +107,7 @@ that use `standard`!
   - [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [How do I make the output all colorful and pretty?](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Is there a Node.js API?](#is-there-a-nodejs-api)
   - [How do I contribute to StandardJS?](#how-do-i-contribute-to-standardjs)
 - [License](#license)
