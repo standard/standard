@@ -64,7 +64,7 @@ npm install standard --save-dev
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
 [4]: RULES.md#semicolons
-[5]: RULES.md#javascript-standard-style
+[5]: RULES-kokr.md#javascript-standard-style
 
 더 나은 아이디어를 얻으려면 JavaScript Standard 스타일로 작성된 [샘플 파일](https://github.com/expressjs/body-parser/blob/master/index.js)을 살펴보십시오. 또는 `standard`을 사용하는 [수천 개의 프로젝트](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) 중 하나를 확인하십시오!
 
