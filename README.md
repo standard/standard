@@ -47,6 +47,8 @@ npm install standard --save-dev
 
 ### Open Source Supporters
 
+<a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
+
 [Become a supporter!](https://feross.org/thanks/)
 
 ## StandardJS — The Rules
