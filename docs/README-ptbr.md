@@ -7,10 +7,11 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="Travis"></a>
-  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
-  <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/dm/standard.svg" alt="npm downloads"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
+  <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme"><img src="https://img.shields.io/badge/-dependencies%20ok-brightgreen.svg?colorA=58595b&style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAYAAADJ7fe0AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAVhJREFUKBV1kj0vBFEUhmd2sdZHh2IlGhKFQuOviEYiNlFodCqtUqPxA%2FwCjUTnDygkGoVERFQaZFlE9nreO%2BdM5u5wkifvuee892Pu3CyEcA0DeIc%2B9IwftJsR6Cko3uCjguZdjuBZhhwmYDjGrOC96WED41UtsgEdGEAPlmAfpuAbFF%2BFZLfoMfRBGzThDtLgePPwBIpdddGzOArhPHUXowbNptE2www6a%2Fm96Y3pHN7oQ1s%2B13pxt1ENaKzBFWyWzaJ%2BRO0C9Jny6VPSoKjLVbMDC5bn5OPuJF%2BBSe95PVEMuugY5AegS9fCh7BedP45hRnj8TC34QQUe9bTZyh2KgvFk2vc8GIlXyTfsvqr6bPpNgv52ynnlomZJNpB70Xhl%2Bf6Sa02p1bApEfnETwxVa%2Faj%2BW%2FFtHltmxS%2FO3krvpTtTnVgu%2F6gvHRFvG78Ef3kOe5PimJXycY74blT5R%2BAAAAAElFTkSuQmCC"></a>
+  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
 <p align="center">
@@ -24,16 +25,16 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<br>
+## JavaScript guia de estilo, linter e formatador
 
-Sem ter que tomar decisões; Sem gerenciar `.eslintrc`, `.jshintrc`, ou `.jscsrc` . Funciona logo de cara.
+Esse módulo economiza o seu tempo (e de outras pessoas!) de duas formas:
 
-Esse módulo salva o seu tempo (e de outras pessoas!) de duas formas:
-
-- **Zero configuração.** A forma mais fácil de forçar consistência de estilo no seu projeto. É só tacar lá e pronto.
+- **Zero configuração.** A forma mais fácil de garantir consistência de estilo no seu projeto. É só usar e pronto.
 - **Captura erros de estilo antes de serem enviados em PR's.** Salva um tempo precioso de code review eliminando vai-e-vem entre mantenedor  e contribuínte.
 
-Instale:
+Não precisa tomar decisões. Sem `.eslintrc`, `.jshintrc`, ou `.jscsrc` . Apenas funciona.
+
+Instalação:
 
 ```
 npm install standard
@@ -44,18 +45,18 @@ npm install standard
 - **2 espaços** – para identação
 - **Aspas simples para strings** – exceto para evitar escapamentos
 - **Sem variáveis não-utilizadas** – resolve *uma porrada* de bugs!
-- **Sem ponto-e-vírgulas** – [Dá][1] [boa.][2] [Sério!][3]
+- **Sem ponto-e-vírgulas** – [Sem][1] [problemas.][2] [Sério!][3]
 - **Nunca comece uma linha com  `(`, `[`, ou `` ` ``**
-  - Esse é o único **problema** em omitir ponto-e-vírgula – *checado automaticamente pra você!*
   - [Mais detalhes][4]
-- **Espaço após keywords** `if (condição) { ... }`
-- **Espaço antes dos nomes das funções** `function nome (arg) { ... }`
+- **Espaço após palavras-chave** `if (condição) { ... }`
+- **Espaço antes de nomes de funções** `function nome (arg) { ... }`
 - Sempre use `===` ao invés de  `==` – mas `obj == null` é permitido para checar se `null || undefined`.
-- Sempre lide com o parâmetro `err` do node.
-- Sempre prefixe globais de browser com  `window` – exceto `document` e `navigator`, essas tudo bem.
-  - Previne o uso acidental de globais de browser mal-nomeadas como  `open`, `length`,
-    `event`, e `name`.
-- **E [mais benefícios][5]** – *dê uma chance para  `standard` hoje!*
+- Sempre trate o parâmetro da função `err` do node.js.
+- Declare variáveis globais de browser com o comentário `/* global */` no início do arquivo
+  - Previne o uso acidental de variáveis globais de browser com nomes ambíguos como `open`, `length`,, `event` e `name`.
+  - Exemplo: `/* global alert, prompt */`
+  - Exceções: `window`, `document` e `navigator`
+- **E [mais benefícios][5]** – *dê uma chance para `standard` hoje!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
@@ -63,59 +64,60 @@ npm install standard
 [4]: RULES-ptbr.md#ponto-e-v%C3%ADrgula
 [5]: RULES-ptbr.md#javascript-standard-style
 
-Para ter uma idéia melhor, dê uma olhada
-[num arquivo amostra](https://github.com/webtorrent/bittorrent-dht/blob/master/client.js) escrito no JavaScript Standard Style, ou dê uma olhada em alguns dos
+Para ter uma ideia melhor, dê uma olhada
+[no modelo](https://github.com/webtorrent/bittorrent-dht/blob/master/client.js) escrito com JavaScript Standard Style ou dê uma olhada em alguns dos
 [repositórios](https://github.com/standard/standard-packages/blob/master/all.json) que usam
 `standard`.
 
 ## Índice
 
-- [Instalação](#instala%C3%A7%C3%A3o)
-- [Uso](#uso)
-  - [O que você pode fazer se for espertinho](#o-que-voc%C3%AA-pode-fazer-se-for-espertinho)
-  - [Insígnia](#ins%C3%ADgnia)
-  - [Plugins de Editores de Texto](#plugins-de-editores-de-texto)
-- [FAQ](#faq)
+- Primeiros passos
+  - [Instalação](#instala%C3%A7%C3%A3o)
+  - [Uso](#uso)
+  - [O que você pode fazer se for esperto](#o-que-voc%C3%AA-pode-fazer-se-for-espertinho)
+- FAQ
   - [Por que eu deveria usar o JavaScript Standard Style?](#por-que-eu-deveria-usar-o-javascript-standard-style)
+  - [Empresas e organizações que utilizam JavaScript Standard Style](#empresas-e-organizações-que-utilizam-javaScript-standard-style?)
+  - [Plugins para Editores de Texto](#plugins-de-editores-de-texto)
+  - [Badge para README](#ins%C3%ADgnia)
   - [Discordo da regra X, você pode mudá-la?](#discordo-da-regra-x-voc%C3%AA-pode-mud%C3%A1-la)
-  - [Mas isso não é um padrão legítimo!](#mas-isso-n%C3%A3o-%C3%A9-um-padr%C3%A3o-leg%C3%ADtimo)
+  - [Mas isso não é um padrão web oficial!](#mas-isso-n%C3%A3o-%C3%A9-um-padr%C3%A3o-leg%C3%ADtimo)
   - [Existe um formatador automático?](#existe-um-formatador-autom%C3%A1tico)
   - [Como ignoro arquivos?](#como-ignoro-arquivos)
   - [Como escondo um determinado aviso?](#como-escondo-um-determinado-aviso)
-  - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-definedfunctions)
-  - [Posso usar um custom parser de JS novinho em folha que saiu ontem para suporte ao ES Next?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
-  - [Posso usar uma linguagem variante de JavaScript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
-  - [Você pode tornar regra X configurável?](#voc%C3%AA-pode-tornar-regra-x-configur%C3%A1vel)
-  - [E os Web Workers?](#e-os-web-workers)
-  - [E a respeito de Mocha, Jasmine, QUnit, etc?](#e-a-respeito-de-mocha-jasmine-qunit-etc)
+  - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros como "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-definedfunctions)
+  - [Como utilizar funcionalidades experimentais de JavaScript (ES Next)?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
+  - [Posso usar uma variante da linguagem JavaScript, como Flow ou TypeScript?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
+  - [E Web Workers?](#e-os-web-workers)
+  - [E Mocha, Jasmine, QUnit, etc?](#e-a-respeito-de-mocha-jasmine-qunit-etc)
   - [Existe um hook `pre-commit` para Git?](#existe-um-hook-pre-commit-para-git)
-  - [Como eu deixo o output todo coloridinho e *bonitinho*?](#como-eu-deixo-o-output-todo-coloridinho-e-bonitinho)
-  - [Quero contribuir com o `standard`. Quais packages eu devo conhecer?](#quero-contribuir-com-o-standard-quais-packages-eu-devo-conhecer)
-- [Node.js API](#nodejs-api)
+  - [Como eu deixo o output todo colorido e *bonito*?](#como-eu-deixo-o-output-todo-coloridinho-e-bonitinho)
+  - [Node.js API](#nodejs-api)
+  - [Como eu contribuo com o `standard`?](#quero-contribuir-com-o-standard-quais-packages-eu-devo-conhecer)
   - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
   - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [Licensa](#licensa)
+- [Licença](#licensa)
 
 ## Instalação
 
-A forma mais fácil de usar o JavaScript Standard Style para checar seu código é instalá-lo globalmente como se fosse um programa de linha de comando do Node. Para isso, simplesmente execute o seguinte comando no seu terminal (a flag `-g` instala o `standard` globalmente no seu sistema, omita-a se quiser instalar no seu diretório de trabalho atual.)
+A forma mais fácil de usar o JavaScript Standard Style para checar seu código é instalá-lo globalmente como se fosse um programa de linha de comando do Node. Para isso, simplesmente execute o seguinte comando no seu terminal:
 
 
 ```bash
 npm install standard --global
 ```
 
-Ou você pode rodar este comando para instalar `standard`  localmente, para usar no seu módulo:
+Ou você pode instalar `standard` localmente em um único projeto:
 
 ```bash
 npm install standard --save-dev
 ```
 
-[Node.js](http://nodejs.org) e [npm](https://npmjs.com) são requisitos para rodar este programa.
+*Obs: para executar os comandos anteriores, você precisa instalar [Node.js](http://nodejs.org) e [npm](https://npmjs.com).*
 
 ## Uso
 
-Depois de você ter instalado  `standard`, você será capaz de usá-lo. O caso de uso mais simples seria checar o estilo de todos os arquivos JavaScript no diretório de trabalho atual:
+Depois de instalar o `standard`, você já pode utilizar o programa `standard`. O caso de uso mais simples seria checar o estilo de todos os arquivos JavaScript no diretório de trabalho atual:
 
 ```bash
 $ standard
@@ -123,23 +125,23 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
-Você pode passar opcionalmente um diretório (ou diretórios) usando o padrões glob. Assegure-se de colocar aspas nos caminhos contendo padrões glob para que eles sejam expandidos pelo `standard` ao invés da sua shell.
+Você pode passar opcionalmente um diretório (ou diretórios) usando padrões _glob_. Certifique-se de colocar aspas nos caminhos contendo padrões _glob_ para que eles sejam expandidos pelo `standard` ao invés do seu shell.
 
 
 ```bash
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**Note:** por padrão `standard` vai procurar por todos os arquivos que casarem com os padrões::
+**Note:** por padrão, `standard` vai procurar por todos os arquivos que correspondem com os padrões:
 `**/*.js`, `**/*.jsx`.
 
-### O que você pode fazer se for espertinho
+### O que você pode fazer se for esperto
 
 1. Adicione isso ao `package.json`
 
   ```json
   {
-    "name": "meu-package-legalzao",
+    "name": "meu-package-legal",
     "devDependencies": {
       "standard": "*"
     },
@@ -149,7 +151,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
   }
   ```
 
-2. Cheque os estilos manualmente quando rodar `npm test`
+2. O estilo é verificado automaticamente ao rodar `npm test`
 
   ```
   $ npm test
@@ -159,28 +161,47 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. Nunca dê feedback de estilo num pull request de novo!
 
+### Por que eu deveria usar o JavaScript Standard Style?
 
+A beleza do JavaScript Standard Style reside no fato de ser simples. Ninguém quer manter vários arquivos de centenas de linhas de configuração de estilo para cada módulo/projeto em que trabalham. Chega dessa patifaria!
 
-### Insígnia
+Esse módulo te faz economizar tempo de 2 formas:
 
-Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme para que as pessoas saibam que seu código está em standard style.
+- **Zero configuração.** A forma mais fácil de forçar consistência de estilo no seu projeto. É só tacar lá e pronto.
+- **Captura erros de estilo antes de serem enviados em PR's.** Salva um tempo precioso de code review eliminando vai-e-vem entre mantenedor  e contribuínte.
 
+Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o opens ource pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+## Empresas e organizações que utilizam JavaScript Standard Style?
 
-```markdown
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
-```
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) |
+|---|---|---|---|---|
 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
+| [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+|---|---|---|---|---|
 
-```markdown
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
-```
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+|---|---|---|---|---|
 
-### Plugins de Editores de Texto
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) |
+|---|---|---|---|---|
 
-Primeiro, instale `standard`. Então, instale  o plugin apropriado para o seu editor.
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
+|---|---|---|---|---|
+
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
+|---|---|---|---|---|
+
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) | |
+|---|---|---|---|---|
+
+Além de empresas e organizações, membros da comunidade open-source utilizam `standard` em diversos [projetos](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) que são muitos para serem listados aqui.
+
+`standard` é também o linter mais favoritado na seção [Clean Code Linter](https://github.com/showcases/clean-code-linters) do GitHub.
+
+### Plugins para Editores de Texto
+
+Primeiro, instale `standard`. Então, instale o plugin apropriado para o seu editor de texto.
 
 #### [Sublime Text](https://www.sublimetext.com/)
 
@@ -207,7 +228,7 @@ installe **[standardjs-snippets][atom-3]**.
 
 #### [Vim](http://www.vim.org/)
 
-Instale **[Syntastic][vim-1]** e adicione essa linha ao seu `.vimrc`:
+Instale **[Syntastic][vim-1]** e adicione a linha abaixo ao seu `.vimrc`:
 
 ```vim
 let g:syntastic_javascript_checkers = ['standard']
@@ -230,7 +251,7 @@ set autoread
 
 #### [Emacs](https://www.gnu.org/software/emacs/)
 
-Instale **[Flycheck][emacs-1]** e cheque o  **[manual][emacs-2]** para aprender a habilitar nos seus projetos.
+Instale **[Flycheck][emacs-1]** e verifique o  **[manual][emacs-2]** para aprender a habilitar nos seus projetos.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
@@ -257,22 +278,25 @@ Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: https://github.com/standard/standard/blob/master/docs/webstorm.md
 
-## FAQ
+### Badge para README
 
-### Por que eu deveria usar o JavaScript Standard Style?
+Sim! Se você está utilizando `standard` no seu projecto, você poderá incluir um desses badges no seu README para que as pessoas saibam que seu código está usando o estilo standard.
 
-A beleza do JavaScript Standard Style reside no fato de ser simples. Ninguém quer manter vários arquivos de centenas de linhas de configuração de estilo para cada módulo/projeto em que trabalham. Chega dessa patifaria!
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Esse módulo te faz economizar tempo de 2 formas:
+```markdown
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+```
 
-- **Zero configuração.** A forma mais fácil de forçar consistência de estilo no seu projeto. É só tacar lá e pronto.
-- **Captura erros de estilo antes de serem enviados em PR's.** Salva um tempo precioso de code review eliminando vai-e-vem entre mantenedor  e contribuínte.
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
 
-Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o opens ource pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
+```markdown
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
+```
 
 ### Discordo da regra X, você pode mudá-la?
 
-Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sobre estilos. Há vários debates online sobre tabs vs. espaços, etc., que nunca vão terminar. Esses debates apenas tiram as pessoas do foco, que deveria ser terminar seus projetos. No fim das contas você só tem que 'escolher um', e essa é a filosofia do `standard` - um monte de opiniões 'escolha um' juntadas com todo o cuidado. Espero que os usuários percebam o valor nisso ao invés de defender suas próprias opiniões.
+Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sobre estilos. Há vários debates online sobre tabs vs. espaços, etc., que nunca vão terminar. Esses debates apenas tiram as pessoas do foco, que deveria ser terminar seus projetos. No fim das contas você só tem que 'escolher um' e essa é a filosofia do `standard` - um monte de opiniões 'escolha um' reunidas com todo o cuidado. Esperamos que os usuários percebam o valor disto ao invés de defender suas próprias opiniões.
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
@@ -551,7 +575,7 @@ Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/s
 
 Junte-se ao `#standard` no freenode.
 
-### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
+### Como contribuir com o `standard`?
 
 - **[standard](https://github.com/standard/standard)** - esse repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint
