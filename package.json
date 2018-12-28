@@ -18,7 +18,7 @@
     "eslint-plugin-import": "~2.14.0",
     "eslint-plugin-node": "~7.0.1",
     "eslint-plugin-promise": "~4.0.0",
-    "eslint-plugin-react": "~7.11.1",
+    "eslint-plugin-react": "~7.12.0",
     "eslint-plugin-standard": "~4.0.0",
     "standard-engine": "~10.0.0"
   },
