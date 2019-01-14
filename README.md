@@ -101,12 +101,12 @@ that use `standard`!
   - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
   - [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
-  - [What about Web Workers?](#what-about-web-workers)
+  - [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [How do I make the output all colorful and pretty?](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Is there a Node.js API?](#is-there-a-nodejs-api)
-  - [How do I contribute to `standard`?](#how-do-i-contribute-to-standard)
+  - [How do I contribute to StandardJS?](#how-do-i-contribute-to-standardjs)
 - [License](#license)
 
 ## Install
@@ -686,7 +686,7 @@ if [[ $? -ne 0 ]]; then
 fi
 ```
 
-## How do I make the output all colorful and *pretty*?
+## How do I make the output all colorful and pretty?
 
 The built-in output is simple and straightforward, but if you like shiny things,
 install [snazzy](https://www.npmjs.com/package/snazzy):
@@ -774,7 +774,7 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
-## How do I contribute to `standard`?
+## How do I contribute to StandardJS?
 
 Contributions are welcome! Check out the [issues](https://github.com/standard/standard/issues) or the [PRs](https://github.com/standard/standard/pulls), and make your own if you want something that you don't see there.
 
