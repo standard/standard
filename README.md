@@ -351,6 +351,10 @@ that's the whole philosophy of `standard` -- its a bunch of sensible 'just pick
 something' opinions. Hopefully, users see the value in that over defending their
 own opinions.
 
+There are a couple of similar packages for anyone who does not want to completely accept `standard`:
+- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons
+- [standardx](https://github.com/standard/standardx) - standard, with custom tweaks
+
 If you really want to configure hundreds of ESLint rules individually, you can
 always use `eslint` directly with
 [eslint-config-standard](https://github.com/standard/eslint-config-standard) to
