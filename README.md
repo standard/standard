@@ -175,6 +175,20 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. Never give style feedback on a pull request again!
 
+## If you want to be even more clever...
+
+1. Use npx ✨ (`package.json`)
+  ```json
+  {
+    "name": "my-cool-package",
+    "devDependencies": {},
+    "scripts": {
+      "lint": "npx standard --verbose **/*.js | npx snazzy"
+    }
+  }
+  ```
+2. Thats it!
+
 ## Why should I use JavaScript Standard Style?
 
 The beauty of JavaScript Standard Style is that it's simple. No one wants to
