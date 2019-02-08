@@ -22,7 +22,7 @@
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/README-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
-  <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+  <a href="/docs/README-zhtw.md">繁體中文 (Traditional Chinese)</a>
 </p>
 
 ## JavaScript style guide, linter, and formatter
