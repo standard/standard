@@ -988,7 +988,7 @@
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **タブは使用の使用は推奨されない。**
+* **タブの使用は推奨されない。**
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
