@@ -20,7 +20,7 @@
 
 ## ルール
 
-* **インデントには2個のスペースを使用してください。**
+* **インデントには2個のスペースを使用する。**
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -30,7 +30,7 @@
   }
   ```
 
-* **エスケープを避ける場合を除いて、文字列にはシングルクォートを使用してください。**
+* **エスケープを避ける場合を除いて、文字列にはシングルクォートを使用する。**
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
@@ -39,7 +39,7 @@
   $("<div class='box'>")
   ```
 
-* **未使用の変数があってはいけません。**
+* **未使用の変数は定義しない。**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
@@ -49,7 +49,7 @@
   }
   ```
 
-* **キーワードの後にはスペースを入れてください。**
+* **キーワードの後にはスペースを入れる。**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
@@ -58,7 +58,7 @@
   if(condition) { ... }    // ✗ avoid
   ```
 
-* **関数宣言の括弧の前にはスペースを入れてください。**
+* **関数宣言の括弧の前にはスペースを入れる。**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
@@ -70,8 +70,8 @@
   run(function() { ... })       // ✗ avoid
   ```
 
-* **常に`==`ではなく`===`を使用してください。**<br>
-  例外: `obj == null`は`null || undefined`をチェックするために許容されています。
+* **常に`==`ではなく`===`を使用する。**<br>
+  例外: `obj == null`は`null || undefined`をチェックするために許容されます。
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
@@ -85,7 +85,7 @@
   if (name != 'John')    // ✗ avoid
   ```
 
-* **中置演算子はスペースで囲まれていなければなりません。**
+* **演算子の間には** 空白を入れる。
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -101,7 +101,7 @@
   var message = 'hello, '+name+'!'
   ```
 
-* **カンマの後にはスペースが必要です。**
+* **カンマの後にはスペース** を置くことを推奨。
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -117,7 +117,7 @@
   function greet (name,options) { ... }
   ```
 
-* **else文は波括弧と同じ行に書いてください。**
+* **else文は** 波括弧と **同じ行に** 書く。
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -140,7 +140,7 @@
   }
   ```
 
-* **複数行のif文には波括弧を使用してください。**
+* **複数行のif文には、** 波括弧を付ける。
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -162,7 +162,7 @@
     console.log('done')
   ```
 
-* **常にコールバック関数のエラーをハンドルしてください。**
+* 関数のパラメーターに `err` がある場合、**常に処理する。**
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -180,8 +180,8 @@
   })
   ```
 
-* **`/* global */`コメントでブラウザのグローバルオブジェクトを宣言してください。**<br>
-  例外: `window`、`document`、`navigator`<br>
+* **ブラウザのグローバルオブジェクトは `/* global */`コメントで宣言する。**<br>
+  例外: `window`、`document`、`navigator`。<br>
   `open`、`length`、`event`、`name`のような不適切な名前のグローバルオブジェクトの誤用を防ぎます。
 
   ```js
@@ -199,7 +199,7 @@
   window.alert('hi')   // ✓ ok
   ```
 
-* **複数行の空行があってはいけません。**
+* **複数行の空行はしないこと。**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -236,7 +236,7 @@
     'www.api.com'
   ```
 
-* **var宣言では、各宣言を個別の文に書いてください。**
+* **var宣言では、** 各宣言を個別に書く。
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -253,7 +253,7 @@
       verbose = true
   ```
 
-* **条件式における代入を追加の括弧でラップしてください。** これは、式が等価演算子（`===`）のタイプミスではなく意図的な代入（`=`）であることを明確にします。
+* **条件式での代入は追加の括弧でラップする。** これは、式が等価演算子（`===`）のタイプミスではなく意図的な代入（`=`）であることを明確にします。
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -269,7 +269,7 @@
   }
   ```
 
-* **単一行のブロックの内側にスペースを入れてください。**
+* **単一行ブロックの内側にはスペースを入れる。**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
@@ -278,7 +278,7 @@
     function foo () { return true }  // ✓ ok
   ```
 
-* **変数と関数の命名にはキャメルケースを用いてください。**
+* **変数と関数の命名にはキャメルケースを使う。**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
@@ -290,7 +290,7 @@
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **末尾のカンマがあってはいけません。**
+* **末尾のカンマはしないこと。**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
@@ -300,7 +300,7 @@
     }
   ```
 
-* **カンマは行末にある必要があります。**
+* **カンマは必ず行末に置く**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -316,7 +316,7 @@
     }
   ```
 
-* **ドットはプロパティと同じ行にある必要があります。**
+* **ドットはプロパティと同じ行に置くことを推奨。**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -328,11 +328,11 @@
       .log('hello') // ✓ ok
   ```
 
-* **ファイルは改行で終わらなければなりません。**
+* **ファイルは必ず改行で終わる。**
 
   eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
-* **関数の識別子とその呼び出しの間にスペースがあってはいけません。**
+* **関数の識別子とその呼び出しの間にスペースを置かない。**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -341,7 +341,7 @@
   console.log('hello')  // ✓ ok
   ```
 
-* **オブジェクトリテラルのコロンと値の間にスペースを入れてください。**
+* **オブジェクトリテラルのコロンと値の間にスペースを入れる。**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -352,7 +352,7 @@
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **コストラクタ名は大文字で始まらなければなりません。**
+* **コストラクタ名は必ず大文字で始める。**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -364,7 +364,7 @@
   var dog = new Animal()    // ✓ ok
   ```
 
-* **引数なしのコンストラクタは括弧で呼び出さなければなりません**
+* **引数なしコンストラクタは必ず括弧付きで実行する。**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -374,7 +374,7 @@
   var dog = new Animal()  // ✓ ok
   ```
 
-* **オブジェクトにsetterが定義されている場合、getterを含まなければなりません。**
+* **setterが定義されている場合、getterを必ず含むこと。**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -395,7 +395,7 @@
   }
   ```
 
-* **派生クラスのコンストラクタでは`super`を呼び出さなければなりません。**
+* **派生クラスのコンストラクタでは`super`を必ず呼び出す。**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -413,7 +413,7 @@
   }
   ```
 
-* **Arrayクラスのコンストラクタではなく配列リテラルを使用してください。**
+* **配列初期化にはArrayコンストラクタではなく配列リテラルを使用する。**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -422,7 +422,7 @@
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **`arguments.callee`と`arguments.caller`は使用しないでください。**
+* **`arguments.callee`と`arguments.caller`は使用しない。**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -440,7 +440,7 @@
   }
   ```
 
-* **クラス宣言の変数を上書きしないでください。**
+* **クラス宣言した名前を上書きしない。**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -449,7 +449,7 @@
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **`const`を使って宣言された変数を上書きしないでください。**
+* **`const`を使って宣言された変数を上書きしない。**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -458,7 +458,7 @@
   score = 125       // ✗ avoid
   ```
 
-* **条件式に定数を使用しないでください（繰り返しを除く）。**
+* **条件式に定数を使用しない（ループを除く）。**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -476,7 +476,7 @@
   }
   ```
 
-* **正規表現に制御文字があってはいけません。**
+* **正規表現に制御文字は禁止。**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -485,7 +485,7 @@
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **debugger文があってはいけません。**
+* **debugger文は禁止。**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -496,7 +496,7 @@
   }
   ```
 
-* **変数の`delete`演算子があってはいけません。**
+* **`delete`演算子を変数に使うことは禁止。**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -505,7 +505,7 @@
   delete name     // ✗ avoid
   ```
 
-* **関数定義に重複する引数があってはいけません。**
+* **関数の引数の重複は禁止。**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -519,7 +519,7 @@
   }
   ```
 
-* **クラスのメンバーに重複する名前があってはいけません。**
+* **クラスのメンバーに重複する名前は禁止。**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -530,7 +530,7 @@
   }
   ```
 
-* **オブジェクトリテラルに重複するキーがあってはいけません。**
+* **オブジェクトリテラルに重複するキーは禁止。**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -541,7 +541,7 @@
   }
   ```
 
-* **switch文に重複するラベルがあってはいけません。**
+* **switch文に重複するラベルは禁止。**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -553,7 +553,7 @@
   }
   ```
 
-* **モジュールごとに単一のimport文を使用してください。**
+* **ひとつのモジュールにはひとつのimport文を使用する。**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -564,7 +564,7 @@
   import { myFunc1, myFunc2 } from 'module' // ✓ ok
   ```
 
-* **正規表現に空の文字クラスがあってはいけません。**
+* **正規表現に空の文字クラスは禁止。**
 
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
@@ -573,7 +573,7 @@
   const myRegex = /^abc[a-z]/   // ✓ ok
   ```
 
-* **空の分割代入があってはいけません。**
+* **空の分割代入は禁止。**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -582,7 +582,7 @@
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **`eval()`を使用してはいけません。**
+* **`eval()`は使用禁止。**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -591,7 +591,7 @@
   var result = user[propName]             // ✓ ok
   ```
 
-* **catch節で例外の再代入をしてはいけません。**
+* **catch節で例外の再代入は禁止。**
 
   eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
 
@@ -609,7 +609,7 @@
   }
   ```
 
-* **ネイティブオブジェクトを拡張してはいけません。**
+* **ネイティブオブジェクトの拡張禁止。**
 
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
@@ -617,7 +617,7 @@
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **不要な関数バインディングをしないでください。**
+* **不要な関数バインディングをしない。**
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -631,7 +631,7 @@
   }.bind(user)    // ✓ ok
   ```
 
-* **不要なbooleanのキャストをしないでください。**
+* **不要なbooleanのキャストをしない。**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -647,7 +647,7 @@
   }
   ```
 
-* **関数表現の周囲に不要な括弧があってはいけません。**
+* **関数式の周囲の不要な括弧は禁止。**
 
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
@@ -656,7 +656,7 @@
   const myFunc = function () { }     // ✓ ok
   ```
 
-* **switch文のcase節でフォールスルーを避けるために`break`を使用してください。**
+* **switch文のcase節でフォールスルーを防ぐため`break`を使用する。**
 
   eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
 
@@ -685,7 +685,7 @@
   }
   ```
 
-* **浮動小数点数があってはいけません。**
+* **浮動小数点数のゼロ省略は禁止。**
 
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
@@ -694,7 +694,7 @@
   const discount = 0.5     // ✓ ok
   ```
 
-* **関数宣言を上書きしないでください。**
+* **関数宣言を上書きしない。**
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -703,7 +703,7 @@
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
-* **読み取り専用のグローバル変数を上書きしないでください。**
+* **読み取り専用のグローバル変数を上書きしない。**
 
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
@@ -711,7 +711,7 @@
   window = {}     // ✗ avoid
   ```
 
-* **暗黙の`eval()`があってはいけません。**
+* **暗黙の`eval()`は禁止。**
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -720,7 +720,7 @@
   setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
-* **ネストされたブロック内に関数宣言があってはいけません。**
+* **ネストされたブロック内に関数宣言は禁止。**
 
   eslint: [`no-inner-declarations`](http://eslint.org/docs/rules/no-inner-declarations)
 
@@ -730,7 +730,7 @@
   }
   ```
 
-* **`RegExp`クラスのコンストラクタに無効な正規表現文字列があってはいけません。**
+* **`RegExp`クラスのコンストラクタに無効な正規表現文字列は禁止。**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -739,7 +739,7 @@
   RegExp('[a-z]')   // ✓ ok
   ```
 
-* **イレギュラーな空白があってはいけません。**
+* **イレギュラーな空白は禁止。**
 
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
@@ -747,7 +747,7 @@
   function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **`__iterator__`を使用してはいけません。**
+* **`__iterator__`は使用禁止。**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -755,7 +755,7 @@
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
   ```
 
-* **スコープ変数と名前を共有するラベルがあってはいけません。**
+* **スコープ変数と名前を共有するラベルは禁止。**
 
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
@@ -770,7 +770,7 @@
   }
   ```
 
-* **label文があってはいけません。**
+* **label文は禁止。**
 
   eslint: [`no-labels`](http://eslint.org/docs/rules/no-labels)
 
@@ -781,7 +781,7 @@
     }
   ```
 
-* **不必要にネストされたブロックがあってはいけません。**
+* **不必要にネストされたブロックは禁止。**
 
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
@@ -797,11 +797,11 @@
   }
   ```
 
-* **インデントにスペースとタブを混ぜないでください。**
+* **インデントにスペースとタブを混ぜない。**
 
   eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
 
-* **インデント以外に複数のスペースを使用しないでください。**
+* **インデント以外に複数のスペースを使用しない。**
 
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
@@ -810,7 +810,7 @@
   const id = 1234       // ✓ ok
   ```
 
-* **複数行の文字列があってはいけません。**
+* **複数行の文字列は禁止。**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
 
@@ -819,7 +819,7 @@
                    world'     // ✗ avoid
   ```
 
-* **オブジェクトを変数に代入しないnew演算子があってはいけません。**
+* **オブジェクトを変数に代入しないnew演算子は禁止。**
 
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
@@ -828,7 +828,7 @@
   const character = new Character()   // ✓ ok
   ```
 
-* **`Function`クラスのコンストラクタを使用してはいけません。**
+* **`Function`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -836,7 +836,7 @@
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **`Object`クラスのコンストラクタを使用してはいけません。**
+* **`Object`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -844,7 +844,7 @@
   let config = new Object()   // ✗ avoid
   ```
 
-* **`new require`を使用してはいけません。**
+* **`new require`は使用禁止。**
 
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
@@ -852,7 +852,7 @@
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **`Symbol`クラスのコンストラクタを使用してはいけません。**
+* **`Symbol`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -860,7 +860,7 @@
   const foo = new Symbol('foo')   // ✗ avoid
   ```
 
-* **プリミティブ型のラッパーインスタンスを使用してはいけません。**
+* **プリミティブ型のラッパーインスタンスは使用禁止。**
 
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
@@ -868,7 +868,7 @@
   const message = new String('hello')   // ✗ avoid
   ```
 
-* **グローバルオブジェクトのプロパティを関数として呼び出してはいけません。**
+* **関数としてグローバルオブジェクトのプロパティを呼び出さない。**
 
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
@@ -876,7 +876,7 @@
   const math = Math()   // ✗ avoid
   ```
 
-* **8進数リテラルがあってはいけません。**
+* **8進数リテラルは禁止。**
 
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
@@ -885,7 +885,7 @@
   const num = '042'   // ✓ ok
   ```
 
-* **文字列リテラルに8進数エスケープシーケンスがあってはいけません。**
+* **文字列リテラルに8進数エスケープシーケンスは禁止。**
 
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
@@ -893,7 +893,7 @@
   const copyright = 'Copyright \251'  // ✗ avoid
   ```
 
-* **`__dirname`と`__filename`を使用する場合、文字列結合をしないでください。**
+* **`__dirname`と`__filename`は、文字列結合を避ける。**
 
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
@@ -902,7 +902,7 @@
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
 
-* **`__proto__`を使用しないでください。** かわりに`getPrototypeOf`を使用してください。
+* **`__proto__`を使用しない。** 代わりに`getPrototypeOf`を使用する。
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -911,7 +911,7 @@
   const foo = Object.getPrototypeOf(obj)  // ✓ ok
   ```
 
-* **変数を再宣言してはいけません。**
+* **変数を再宣言してはいけない。**
 
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
@@ -923,7 +923,7 @@
   name = 'Jane'         // ✓ ok
   ```
 
-* **正規表現リテラルに複数のスペースがあってはいけません。**
+* **正規表現リテラルに複数のスペースは禁止。**
 
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
@@ -934,7 +934,7 @@
   const regexp = /test value/     // ✓ ok
   ```
 
-* **return文における代入は括弧で囲まれていなければなりません。**
+* **return文における代入は括弧で囲まれていなければならない。**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -948,7 +948,7 @@
   }
   ```
 
-* **変数を自身に代入しないでください。**
+* **変数を自身に代入しない。**
 
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
@@ -956,7 +956,7 @@
   name = name   // ✗ avoid
   ```
 
-* **変数を自身と比較しないでください。**
+* **変数を自身と比較しない。**
 
   eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
@@ -964,7 +964,7 @@
   if (score === score) {}   // ✗ avoid
   ```
 
-* **カンマ演算子を使用しないでください。**
+* **カンマ演算子を使用しない。**
 
   eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
 
@@ -972,7 +972,7 @@
   if (doSomething(), !!test) {}   // ✗ avoid
   ```
 
-* **制限付きの名前を隠蔽してはいけません。**
+* **制限付きの名前(訳注: restricted-name. strict mode の対象であるES5の予約語)を上書きして隠蔽するべきではない。**
 
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
@@ -980,7 +980,7 @@
   let undefined = 'value'     // ✗ avoid
   ```
 
-* **疎配列は許容されていません。**
+* **疎配列は許容されない。**
 
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
@@ -988,11 +988,11 @@
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **タブを使用してはいけません。**
+* **タブの使用は推奨されない。**
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **通常の文字列にテンプレートリテラルのプレースホルダーを含んではいけません。**
+* **通常の文字列にテンプレートリテラルのプレースホルダーを含んではいけない。**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
@@ -1001,7 +1001,7 @@
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **`super()`は`this`を使う前に呼び出さなければなりません。**
+* **`super()`は`this`を使う前に呼び出さなければならない。**
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -1023,11 +1023,11 @@
   throw new Error('error')    // ✓ ok
   ```
 
-* **行末に空白があってはいけません。**
+* **行末の空白はしないこと。**
 
   eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
-* **`undefined`で初期化してはいけません。**
+* **`undefined`での初期化はしないこと。**
 
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
@@ -1038,7 +1038,7 @@
   name = 'value'          // ✓ ok
   ```
 
-* **更新されない繰り返し条件があってはいけません。**
+* **更新されないループ条件は禁止。**
 
   eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
@@ -1047,7 +1047,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **よりシンプルな書き方がある場合は、三項演算子を使用してはいけません。**
+* **よりシンプルな書き方がある場合は、三項演算子は使用禁止。**
 
   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
@@ -1056,7 +1056,7 @@
   let score = val || 0          // ✓ ok
   ```
 
-* **return文、throw文、continue文、break文の後に到達不能なコードがあってはいけません。**
+* **return文、throw文、continue文、break文の後に到達不能なコードは禁止。**
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1067,7 +1067,7 @@
   }
   ```
 
-* **finallyブロックにフロー制御文があってはいけません。**
+* **finallyブロックにフロー制御文は禁止。**
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1081,7 +1081,7 @@
   }
   ```
 
-* **関係演算子の左オペランドを否定してはいけません。**
+* **関係演算子の左オペランドを否定することは禁止。**
 
   eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
 
@@ -1090,7 +1090,7 @@
   if (!(key in obj)) {}     // ✓ ok
   ```
 
-* **`.call()`と`.apply()`を不必要に使用しないでください。**
+* **`.call()`と`.apply()`を不必要に使用しない。**
 
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
@@ -1098,7 +1098,7 @@
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
-* **オブジェクトの計算されたプロパティ名を不必要に使用しないでください。**
+* **オブジェクトの計算されたプロパティ名(Computed Property)を不必要に使用しない。**
 
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
@@ -1107,7 +1107,7 @@
   const user = { name: 'John Doe' }       // ✓ ok
   ```
 
-* **不要なコンストラクタがあってはいけません。**
+* **不要なコンストラクタは禁止。**
 
   eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
@@ -1118,7 +1118,7 @@
   }
   ```
 
-* **エスケープを不必要に使用しないでください。**
+* **エスケープを不必要に使用しない。**
 
   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
@@ -1126,7 +1126,7 @@
   let message = 'Hell\o'  // ✗ avoid
   ```
 
-* **import文、export文、分割代入で同じ名前にリネームしてはいけません。**
+* **import、export、分割代入での、同じ名前へのリネームはしないこと。**
 
   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
@@ -1135,7 +1135,7 @@
   import { config } from './config'               // ✓ ok
   ```
 
-* **プロパティの前に空白があってはいけません。**
+* **プロパティの前に空白は禁止。**
 
   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
@@ -1144,7 +1144,7 @@
   user.name       // ✓ ok
   ```
 
-* **with文を使用してはいけません。**
+* **with文は使用禁止。**
 
   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
@@ -1152,7 +1152,7 @@
   with (val) {...}    // ✗ avoid
   ```
 
-* **オブジェクトのプロパティ間で改行の一貫性を保ってください。**
+* **オブジェクトのプロパティ間で、改行の一貫性を保つこと**
 
   eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
 
@@ -1171,7 +1171,7 @@
   }                                                                 // ✓ ok
   ```
 
-* **ブロックの内側にパディングがあってはいけません。**
+* **ブロックの内側にパディングは禁止。**
 
   eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
 
@@ -1187,7 +1187,7 @@
   }
   ```
 
-* **スプレッド演算子とその式の間に空白があってはいけません。**
+* **スプレッド演算子とその式の間に空白は禁止。**
 
   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
@@ -1196,7 +1196,7 @@
   fn(...args)     // ✓ ok
   ```
 
-* **セミコロンの後にはスペースが必要で、前にはあってはいけません。**
+* **セミコロンの後にはスペースが必要。また、セミコロン前のスペースは不要**
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1205,7 +1205,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **ブロックの前にはスペースが必要です。**
+* **ブロックの中括弧の前にはスペースが必要。**
 
   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
@@ -1214,7 +1214,7 @@
   if (admin) {...}    // ✓ ok
   ```
 
-* **括弧の内側にスペースがあってはいけません。**
+* **括弧の内側にスペースは禁止。**
 
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
@@ -1223,7 +1223,7 @@
   getName(name)       // ✓ ok
   ```
 
-* **単項演算子の後にはスペースが必要です。**
+* **単項演算子の後にはスペースが必要。**
 
   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
 
@@ -1232,7 +1232,7 @@
   typeof !admin        // ✓ ok
   ```
 
-* **コメントの内側にスペースを入れてください。**
+* **コメントの内側にスペースを入れること。**
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1244,7 +1244,7 @@
   /* comment */       // ✓ ok
   ```
 
-* **テンプレート文字列のプレースホルダーの内側にスペースがあってはいけません。**
+* **テンプレート文字列のプレースホルダーの内側にスペースは禁止。**
 
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
@@ -1253,7 +1253,7 @@
   const message = `Hello, ${name}`      // ✓ ok
   ```
 
-* **`NaN`のチェックには`isNaN()`を使用してください。**
+* **`NaN`のチェックには`isNaN()`を使用する。**
 
   eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
 
@@ -1262,7 +1262,7 @@
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **`typeof`は有効な文字列と比較しなければなりません。**
+* **`typeof`は有効な文字列と比較しなければならない。**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1271,7 +1271,7 @@
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **即時実行関数式（IIFE）はラップしなければなりません。**
+* **即時実行関数式（IIFE）はラップしなければならない。**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1282,7 +1282,7 @@
   const getName = (function () { })()   // ✓ ok
   ```
 
-* **yield*式の`*`の前後にはスペースが必要です。**
+* **yield*式の`*`は前後にスペースが必要。**
 
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
@@ -1291,7 +1291,7 @@
   yield * increment()   // ✓ ok
   ```
 
-* **ヨーダ記法を使用しないでください。**
+* **ヨーダ記法を使用しない。**
 
   eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
 
@@ -1302,7 +1302,7 @@
 
 ## セミコロン
 
-* セミコロンは不要です。 （参照： [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)、 [2](http://inimino.org/%7Einimino/blog/javascript_semicolons)、 [3](https://www.youtube.com/watch?v=gsfbh17Ax9I)）
+* セミコロンは不要。 （右記を参照のこと： [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)、 [2](http://inimino.org/%7Einimino/blog/javascript_semicolons)、 [3](https://www.youtube.com/watch?v=gsfbh17Ax9I)）
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1311,7 +1311,7 @@
   window.alert('hi');  // ✗ avoid
   ```
 
-* 決して`(`、`[`、`` ` ``（または他の起こりうる可能性の低い一握りの文字）で行を始めないでください。
+* 決して`(`、`[`、`` ` ``（または下記の起こりうる可能性の低い一部の文字）で行を始めないでください。
 
   これはセミコロンを省略する際の唯一の問題点ですが、`standard`はこの潜在的な問題からあなたを保護します。
 
@@ -1374,7 +1374,7 @@
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-今日使用されている一般的なコードマイナーはASTベースのミニフィケーションを使用しているので、セミコロンレスなJavaScriptを問題なく扱うことができます（JavaScriptではセミコロンは不要であるため）。
+今日使用されている一般的なコードミニファイアー(圧縮ツール)はASTベースのミニフィケーションを使用しているので、セミコロンレスなJavaScriptを問題なく扱うことができます（JavaScriptではセミコロンは不要であるため）。
 
 ##### *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* からの抜粋：
 
