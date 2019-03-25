@@ -19,8 +19,7 @@ are welcome:
 
 [![standard][standard-image]][standard-url]
 
-This repository uses [`standard`][standard-url] to maintain code style and consistency,
-and to avoid style arguments. `npm test` runs `standard` automatically, so you don't have
+This repository uses [`standard`][standard-url] to maintain code style and consistency and to avoid style arguments. `npm test` runs `standard` automatically, so you don't have
 to!
 
 [standard-image]: https://cdn.rawgit.com/standard/standard/master/badge.svg
@@ -40,7 +39,7 @@ There are a few basic ground-rules for contributors:
 2. **Non-master branches** should be used for ongoing work.
 3. **Significant modifications** like API changes should be subject to a **pull request**
    to solicit feedback from other contributors.
-4. **Pull requests** are *encouraged* for all contributions to solicit feedback, but left to
+4. **Pull requests** are *encouraged* for all contributions to solicit feedback but left to
    the discretion of the contributor.
 
 ### Releases
