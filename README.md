@@ -714,9 +714,12 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
 
 Yes!
 
-### `standard.lintText(text, [opts], callback)`
+```js
+standard.lintText(text, [opts], callback)
+```
+Lints the provided source `text`. 
 
-Lint the provided source `text`. An `opts` object may be provided:
+An `opts` object may be provided:
 
 ```js
 {
@@ -755,14 +758,19 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
-
-Synchronous version of `standard.lintText()`. If an error occurs, an exception is
+A Synchronous version of `standard.lintText()` is the `standard.lintTextSync()`. If an error occurs, an exception is
 thrown. Otherwise, a `results` object is returned.
 
-### `standard.lintFiles(files, [opts], callback)`
+```js
+results = standard.lintTextSync(text, [opts])
+```
 
-Lint the provided `files` globs. An `opts` object may be provided:
+We can also lint the provided `files` globs using.
+```js
+standard.lintFiles(files, [opts], callback)
+```
+
+An `opts` object may be provided:
 
 ```js
 var opts = {
