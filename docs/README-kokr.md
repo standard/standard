@@ -474,17 +474,17 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScript를 사용하려면`typescript-eslint-parser`를 파서로`standard`를, 플러그인으로`eslint-plugin-typescript`를 실행하고 표준을 lint`* .ts` 파일로 보내야합니다. (기본값이 아니기 때문)
+TypeScript를 사용하려면`@typescript-eslint/parser`를 파서로`standard`를, 플러그인으로`eslint-plugin-typescript`를 실행하고 표준을 lint`* .ts` 파일로 보내야합니다. (기본값이 아니기 때문)
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 다음을 실행합니다.
 
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
 ```
 
 아니면, `package.json`에 아래 코드를 추가하세요.
@@ -492,8 +492,8 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -504,7 +504,7 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 standard *.ts
 ```
 
-`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install typescript-eslint-parser eslint-plugin-typescript --global`을 사용하여 `eslint-plugin-flowtype`와 `typescript-eslint-parser`를 전역으로 설치해야합니다.
+`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install @typescript-eslint/parser eslint-plugin-typescript --global`을 사용하여 `eslint-plugin-flowtype`와 `@typescript-eslint/parser`를 전역으로 설치해야합니다.
 
 ## Mocha, Jasmine, QUnit 등은 어떻습니까?
 
