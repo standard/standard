@@ -561,18 +561,18 @@ be sure to install `babel-eslint` and `eslint-plugin-flowtype` globally as well,
 
 ### TypeScript
 
-To use TypeScript, you need to run `standard` with `typescript-eslint-parser` as the parser,
+To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` as the parser,
 `eslint-plugin-typescript` as a plugin, and tell standard to lint `*.ts` files (since it
 doesn't by default).
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
 ```
 
 Or, add this to `package.json`:
@@ -580,8 +580,8 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -593,8 +593,8 @@ standard *.ts
 ```
 
 If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `typescript-eslint-parser` and `eslint-plugin-typescript` globally as well,
-with `npm install typescript-eslint-parser eslint-plugin-typescript --global`.
+be sure to install `@typescript-eslint/parser` and `eslint-plugin-typescript` globally as well,
+with `npm install @typescript-eslint/parser eslint-plugin-typescript --global`.
 
 ## What about Mocha, Jasmine, QUnit, etc?
 

@@ -506,17 +506,17 @@ Si `standard` est installé globalement (`npm install standard --global`), soyez
 
 ### TypeScript
 
-Pour utiliser TypeScript, vous allez devoir éxécuter `standard` avec `typescript-eslint-parser` comme parseur,
+Pour utiliser TypeScript, vous allez devoir éxécuter `standard` avec `@typescript-eslint/parser` comme parseur,
 `eslint-plugin-typescript` comme plugin, et dire à standard de linter les fichiers `*.ts` (puisqu'il ne le fait pas par défaut).
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser eslint-plugin-typescript --save-dev
 ```
 
 Ensuite éxécutez:
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 Ou, ajoutez ça au `package.json`:
@@ -524,8 +524,8 @@ Ou, ajoutez ça au `package.json`:
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -536,8 +536,8 @@ Avec ça dans le `package.json`, vous pouvez éxécuter:
 standard *.ts
 ```
 
-Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `typescript-eslint-parser` et `eslint-plugin-typescript` globalement aussi,
-avec `npm install typescript-eslint-parser eslint-plugin-typescript --global`.
+Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `@typescript-eslint/parser` et `eslint-plugin-typescript` globalement aussi,
+avec `npm install @typescript-eslint/parser eslint-plugin-typescript --global`.
 
 ## Et Mocha, Jasmine, QUnit, etc?
 
