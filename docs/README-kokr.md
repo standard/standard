@@ -379,7 +379,7 @@ console.log('offending code goes here...')
 /* eslint-enable no-use-before-define */
 ```
 
-## 전역 namespace를 오염시키는 라이브러리를 사용합니다. "vaiable is not defined" 오류를 방지하려면 어떻게 해야 하나요?
+## 전역 namespace를 오염시키는 라이브러리를 사용합니다. "variable is not defined" 오류를 방지하려면 어떻게 해야 하나요?
 
 일부 패키지 (예 : `mocha`)는 전역 개체 (가난한 형태!)에 기능 (예 : `describe`, `it`)을 지정합니다. 이 함수는 정의되지 않았거나 코드의 어느 곳에서든지 요구 될 수 있기 때문에 `standard`에서는 정의되지 않은 변수를 사용하고 있다고 경고합니다 (일반적으로 이 규칙은 오타를 잡는 데 유용합니다). 그러나 우리는 이 전역 변수들에 대해 이를 비활성화 하고자합니다.
 
