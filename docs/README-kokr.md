@@ -484,7 +484,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
 ```
 
 아니면, `package.json`에 아래 코드를 추가하세요.

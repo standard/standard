@@ -572,7 +572,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 Then run:
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
 ```
 
 Or, add this to `package.json`:
