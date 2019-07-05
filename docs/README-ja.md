@@ -539,7 +539,7 @@ standard *.ts
 $ standard --env mocha
 ```
 
-`mocha`は`jasmine`、`jest`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
+`mocha`は`jest`、`jasmine`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
 
 *注： `env`と`envs`は同じです。*
 
