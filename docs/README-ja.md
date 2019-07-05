@@ -94,12 +94,12 @@ npm install standard --save-dev
   - [実験的なJavaScriptの機能（ES Next）を使用するには？](#how-do-i-use-experimental-javascript-es-next-features)
   - [FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [Mocha、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jasmine-qunit-etc)
-  - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers)
+  - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers-and-service-workers)
   - [MarkdownやHTMLファイル内のコードをチェックできますか？](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Gitの`pre-commit`フックはありますか？](#is-there-a-git-pre-commit-hook)
   - [出力をすべてカラフルで綺麗にするには？](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Node.jsのAPIはありますか？](#is-there-a-nodejs-api)
-  - [`standard`にコントリビュートするには？](#how-do-i-contribute-to-standard)
+  - [StandardJSにコントリビュートするには？](#how-do-i-contribute-to-standardjs)
 - [ライセンス](#license)
 
 <h2 id="install">インストール</h2>
@@ -533,7 +533,7 @@ $ standard --env mocha
 
 *注： `env`と`envs`は同じです。*
 
-<h2 id="what-about-web-workers">Web WorkersとService Workersはどうすれば？</h2>
+<h2 id="what-about-web-workers-and-service-workers">Web WorkersとService Workersはどうすれば？</h2>
 
 次のコメントをweb workerファイルの先頭に追加してください。：
 
@@ -681,7 +681,7 @@ var opts = {
 
 `callback`は、`Error`オブジェクトと`results`オブジェクトを引数として実行されます（上記と同じ）。
 
-<h2 id="how-do-i-contribute-to-standard"><code>standard</code>にコントリビュートするには？</h2>
+<h2 id="how-do-i-contribute-to-standardjs">StandardJSにコントリビュートするには？</h2>
 
 コントリビューションは歓迎されます！[Issues](https://github.com/standard/standard/issues)や[Pull Requests](https://github.com/standard/standard/pulls)をチェックし、望みのものがなければ作成してください。
 
