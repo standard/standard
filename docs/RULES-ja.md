@@ -14,13 +14,13 @@
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Questo è un TL;DR (troppo lungo, non ho letto) delle regole JavaScript di  [standard](https://github.com/standard/standard).
+これは、[standard](https://github.com/standard/standard)なJavaScriptのルールの概要です。
 
-Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul tuo codice.
+`standard`を学ぶための最も良い方法は、ただインストールしてあなたのコードで試してみることです。
 
-## Regole
+## ルール
 
-* **Usa due spazi** per indentare.
+* **インデントには2個のスペースを使用する。**
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -30,7 +30,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Usa il singolo apostrofo per le stringhe** tranne per evitare l'escaping.
+* **エスケープを避ける場合を除いて、文字列にはシングルクォートを使用する。**
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
@@ -39,52 +39,53 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   $("<div class='box'>")
   ```
 
-* **Niente variabili inutilizzate.**
+* **未使用の変数は定義しない。**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
   function myFunction () {
-    var result = something()   // ✗ evita
+    var result = something()   // ✗ avoid
   }
   ```
 
-* **Aggiungi uno spazio dopo le parole chiave.**
+* **キーワードの後にはスペースを入れる。**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
   ```js
   if (condition) { ... }   // ✓ ok
-  if(condition) { ... }    // ✗ evita
+  if(condition) { ... }    // ✗ avoid
   ```
-* **Aggiungi uno spazio prima delle parenti di una dichiarazione di una funzione.**
+
+* **関数宣言の括弧の前にはスペースを入れる。**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
   ```js
   function name (arg) { ... }   // ✓ ok
-  function name(arg) { ... }    // ✗ evita
+  function name(arg) { ... }    // ✗ avoid
 
   run(function () { ... })      // ✓ ok
-  run(function() { ... })       // ✗ evita
+  run(function() { ... })       // ✗ avoid
   ```
 
-* **Usa sempree** `===` invece di `==`.<br>
-  Eccezione: `obj == null` è consentito per controllare `null || undefined`.
+* **常に`==`ではなく`===`を使用する。**<br>
+  例外: `obj == null`は`null || undefined`をチェックするために許容されます。
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
   ```js
   if (name === 'John')   // ✓ ok
-  if (name == 'John')    // ✗ evita
+  if (name == 'John')    // ✗ avoid
   ```
 
   ```js
   if (name !== 'John')   // ✓ ok
-  if (name != 'John')    // ✗ evita
+  if (name != 'John')    // ✗ avoid
   ```
 
-* **Operatori infisso** necessitano sempre di uno spazio.
+* **演算子の間には** 空白を入れる。
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -95,12 +96,12 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   var x=2
   var message = 'hello, '+name+'!'
   ```
 
-* **Le virgole devono avere uno spazio** dopo di loro.
+* **カンマの後にはスペース** を置くことを推奨。
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -111,12 +112,12 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   var list = [1,2,3,4]
   function greet (name,options) { ... }
   ```
 
-* **Tieni gli else** sulla stessa linea della parentesi graffa.
+* **else文は** 波括弧と **同じ行に** 書く。
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -130,7 +131,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   if (condition) {
     // ...
   }
@@ -139,7 +140,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Per dichiarazioni if su più righe,** utilizza le parentesi graffe.
+* **複数行のif文には、** 波括弧を付ける。
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -156,12 +157,12 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   if (options.quiet !== true)
     console.log('done')
   ```
 
-* **Gestisci sempre l'oggetto** `err` come parametro di funzione.
+* 関数のパラメーターに `err` がある場合、**常に処理する。**
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -173,14 +174,24 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   run(function (err) {
     window.alert('done')
   })
   ```
 
-* **Usa il prefisso per le variabili gloabli** con `window.`.<br>
-  Eccezioni sono: `document`, `console` e `navigator`.
+* **ブラウザのグローバルオブジェクトは `/* global */`コメントで宣言する。**<br>
+  例外: `window`、`document`、`navigator`。<br>
+  `open`、`length`、`event`、`name`のような不適切な名前のグローバルオブジェクトの誤用を防ぎます。
+
+  ```js
+  /* global alert, prompt */
+
+  alert('hi')
+  prompt('ok?')
+  ```
+
+  明示的に`window`の関数またはプロパティを参照するのも良いですが、そのようなコードは`window`の代わりに`self`を使うWorkerでは動作しません。
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
@@ -188,7 +199,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   window.alert('hi')   // ✓ ok
   ```
 
-* **Non sono consentite più di una riga vuota.**
+* **複数行の空行はしないこと。**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -199,14 +210,14 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```
 
   ```js
-  // ✗ evita
+  // ✗ avoid
   var value = 'hello world'
 
 
   console.log(value)
   ```
 
-* **Per l'operatore ternario** su più di una riga, piazza `?` e `:` nelle righe che gli appartengono.
+* **複数行の三項演算子では、`?`と`:`を各行に書いてください。**
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -219,13 +230,13 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
     ? 'localhost'
     : 'www.api.com'
 
-  // ✗ evita
+  // ✗ avoid
   var location = env.development ?
     'localhost' :
     'www.api.com'
   ```
 
-* **Per l'utilizzo del var,** ogni assegnazione deve avere la sua definizione
+* **var宣言では、** 各宣言を個別に書く。
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -234,15 +245,15 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var silent = true
   var verbose = true
 
-  // ✗ evita
+  // ✗ avoid
   var silent = true, verbose = true
 
-  // ✗ evita
+  // ✗ avoid
   var silent = true,
       verbose = true
   ```
 
-* **Circonda gli assegnatori condizionali** con parentesi aggiuntive. Questo assicura che ci sia l'espressione è intenzionalmente un assegnamento (`=`) invece di un errore di scrittura (`===`).
+* **条件式での代入は追加の括弧でラップする。** これは、式が等価演算子（`===`）のタイプミスではなく意図的な代入（`=`）であることを明確にします。
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -252,44 +263,44 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
     // ...
   }
 
-  // ✗ evita
+  // ✗ avoid
   while (m = text.match(expr)) {
     // ...
   }
   ```
 
-* **Aggiungi degli spazie all'interno di blocchi su una singola riga.**
+* **単一行ブロックの内側にはスペースを入れる。**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
   ```js
-    function foo () {return true}    // ✗ evita
+    function foo () {return true}    // ✗ avoid
     function foo () { return true }  // ✓ ok
   ```
 
-* **Utilizza il camelcase per i nomi delle variabili e funzioni.**
+* **変数と関数の命名にはキャメルケースを使う。**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
   ```js
-    function my_function () { }    // ✗ evita
+    function my_function () { }    // ✗ avoid
     function myFunction () { }     // ✓ ok
 
-    var my_var = 'hello'           // ✗ evita
+    var my_var = 'hello'           // ✗ avoid
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **I trailing comma non sono ammessi.**
+* **末尾のカンマはしないこと。**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
   ```js
     var obj = {
-      message: 'hello',   // ✗ evita
+      message: 'hello',   // ✗ avoid
     }
   ```
 
-* **The virgole devono essere messe alla fine della riga corrente**
+* **カンマは必ず行末に置く**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -305,7 +316,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
     }
   ```
 
-* **Il punto deve essere sulla stessa linea della proprietà.**
+* **ドットはプロパティと同じ行に置くことを推奨。**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -317,11 +328,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
       .log('hello') // ✓ ok
   ```
 
-* **I file devono terminare con una nuova linea.**
+* **ファイルは必ず改行で終わる。**
 
   eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
-* **No spazi tra la definizione di una funzione e la sua invocazione**
+* **関数の識別子とその呼び出しの間にスペースを置かない。**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -330,7 +341,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   console.log('hello')  // ✓ ok
   ```
 
-* **Aggiungi uno spazio tra i due punti e il valore della chiave all'interno di un oggetto.**
+* **オブジェクトリテラルのコロンと値の間にスペースを入れる。**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -341,7 +352,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **I nomi dei costruttori devono iniziare con la lettera maiuscola**
+* **コストラクタ名は必ず大文字で始める。**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -353,7 +364,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var dog = new Animal()    // ✓ ok
   ```
 
-* **I costruttori senza argomenti devono essere invocati con le parentesi.**
+* **引数なしコンストラクタは必ず括弧付きで実行する。**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -363,7 +374,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var dog = new Animal()  // ✓ ok
   ```
 
-* **Gli oggetti devono un getter quando un settere viene definito.**
+* **setterが定義されている場合、getterを必ず含むこと。**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -384,7 +395,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **I costruttori di classi derivate devono chiamare `super`.**
+* **派生クラスのコンストラクタでは`super`を必ず呼び出す。**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -402,7 +413,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Usa gli array literals invece dei costruttori.**
+* **配列初期化にはArrayコンストラクタではなく配列リテラルを使用する。**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -411,7 +422,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **Evita l'utilizzo di `arguments.callee` e `arguments.caller`.**
+* **`arguments.callee`と`arguments.caller`は使用しない。**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -425,10 +436,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   function foo (n) {
     if (n <= 0) return
 
-    foo(n - 1)
+    foo(n - 1)                // ✓ ok
   }
   ```
-* **Non è possibile cambiare il nome delle classi.**
+
+* **クラス宣言した名前を上書きしない。**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -437,7 +449,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **Evita di modificare il varole di una variabile dichiarata usando `const`.**
+* **`const`を使って宣言された変数を上書きしない。**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -446,7 +458,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   score = 125       // ✗ avoid
   ```
 
-* **Evita l'uso delle espressioni costanti all'interno delle condizioni (eccezione fatta per i cicli).**
+* **条件式に定数を使用しない（ループを除く）。**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -463,7 +475,8 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
     // ...
   }
   ```
-* **No controllo dei caratteri nelle espressioni regolari.**
+
+* **正規表現に制御文字は禁止。**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -472,7 +485,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **No `debugger` nel codice.**
+* **debugger文は禁止。**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -483,7 +496,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Non usare `delete` sulle variabili.**
+* **`delete`演算子を変数に使うことは禁止。**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -492,7 +505,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   delete name     // ✗ avoid
   ```
 
-* **No argomenti doppi all'interno della definizione di una funzione.**
+* **関数の引数の重複は禁止。**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -506,7 +519,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No nomi doppi all'interno di una classe.**
+* **クラスのメンバーに重複する名前は禁止。**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -517,7 +530,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Non è possibile dichiarare chiavi doppie degli oggetti literals.**
+* **オブジェクトリテラルに重複するキーは禁止。**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -528,7 +541,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Non è possibile dichiarare due `case` che controllano lo stesso valore all'interno di uno `switch`**
+* **switch文に重複するラベルは禁止。**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -540,7 +553,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Utilizza un solo import per module.**
+* **ひとつのモジュールにはひとつのimport文を使用する。**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -551,7 +564,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   import { myFunc1, myFunc2 } from 'module' // ✓ ok
   ```
 
-* **No caratteri vuoti all'iterno delle espressioni regolari.**
+* **正規表現に空の文字クラスは禁止。**
 
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
@@ -560,7 +573,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const myRegex = /^abc[a-z]/   // ✓ ok
   ```
 
-* **Non è possibile usare il destructuring vuoto**
+* **空の分割代入は禁止。**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -569,7 +582,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **No all'uso di `eval()`.**
+* **`eval()`は使用禁止。**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -578,7 +591,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var result = user[propName]             // ✓ ok
   ```
 
-* **No all reassegnamento delle eccezioni all'interno di blocchi `catch`.**
+* **catch節で例外の再代入は禁止。**
 
   eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
 
@@ -596,7 +609,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Non è possibile estendere oggetti nativi.**
+* **ネイティブオブジェクトの拡張禁止。**
 
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
@@ -604,7 +617,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **Evita il binding non necessari.**
+* **不要な関数バインディングをしない。**
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -618,7 +631,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }.bind(user)    // ✓ ok
   ```
 
-* **Evita di effettuare il cast di booleani che non sono necessari.**
+* **不要なbooleanのキャストをしない。**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -634,7 +647,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No parentesi non necessarie intorno alle funzioni.**
+* **関数式の周囲の不要な括弧は禁止。**
 
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
@@ -643,7 +656,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const myFunc = function () { }     // ✓ ok
   ```
 
-* **Utilizza il `break` per evitare l'esecuzioni dei successivi `case` all'interno di un blocco `switch`.**
+* **switch文のcase節でフォールスルーを防ぐため`break`を使用する。**
 
   eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
 
@@ -672,7 +685,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No ai decimali con la virgola mobile.**
+* **浮動小数点数のゼロ省略は禁止。**
 
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
@@ -681,7 +694,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const discount = 0.5     // ✓ ok
   ```
 
-* **Evita la riassegnazione di una funzione dichiarata.**
+* **関数宣言を上書きしない。**
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -690,7 +703,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
-* **Evita la riassegnazione di oggetti che possono essere solo letti.**
+* **読み取り専用のグローバル変数を上書きしない。**
 
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
@@ -698,7 +711,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   window = {}     // ✗ avoid
   ```
 
-* **No agli `eval()` sottointesi.**
+* **暗黙の`eval()`は禁止。**
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -707,7 +720,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
-* **No alla dichiarazione di funzioni all'interno di blocchi innestati.**
+* **ネストされたブロック内に関数宣言は禁止。**
 
   eslint: [`no-inner-declarations`](http://eslint.org/docs/rules/no-inner-declarations)
 
@@ -717,7 +730,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No a stringhe di expressioni regolari invalide all'interno dei costruttori `RegExp`.**
+* **`RegExp`クラスのコンストラクタに無効な正規表現文字列は禁止。**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -726,7 +739,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   RegExp('[a-z]')   // ✓ ok
   ```
 
-* **No a spazi irregolari.**
+* **イレギュラーな空白は禁止。**
 
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
@@ -734,7 +747,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **No all'uso di `__iterator__`.**
+* **`__iterator__`は使用禁止。**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -742,7 +755,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
   ```
 
-* **No a etichette che condividono lo stesso nome di una variabile all'interno dello stesso scope.**
+* **スコープ変数と名前を共有するラベルは禁止。**
 
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
@@ -757,7 +770,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No al blocco label.**
+* **label文は禁止。**
 
   eslint: [`no-labels`](http://eslint.org/docs/rules/no-labels)
 
@@ -768,7 +781,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
     }
   ```
 
-* **No a blocchi non necessari.**
+* **不必要にネストされたブロックは禁止。**
 
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
@@ -784,11 +797,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Evita di mixare spazi e tab per indentare.**
+* **インデントにスペースとタブを混ぜない。**
 
   eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
 
-* **Non usare spazi multipli per indentare.**
+* **インデント以外に複数のスペースを使用しない。**
 
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
@@ -797,7 +810,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const id = 1234       // ✓ ok
   ```
 
-* **No a stringhe su più linee.**
+* **複数行の文字列は禁止。**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
 
@@ -806,7 +819,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
                    world'     // ✗ avoid
   ```
 
-* **No all'uso del `new` senza l'assegnazione ad una variabile.**
+* **オブジェクトを変数に代入しないnew演算子は禁止。**
 
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
@@ -815,7 +828,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const character = new Character()   // ✓ ok
   ```
 
-* **No all'uso del costruttore `Function`.**
+* **`Function`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -823,7 +836,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **No all'uso del costruttore `Object`.**
+* **`Object`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -831,7 +844,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   let config = new Object()   // ✗ avoid
   ```
 
-* **No all'uso di `new require`.**
+* **`new require`は使用禁止。**
 
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
@@ -839,7 +852,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **No all'uso del costruttore `Symbol`.**
+* **`Symbol`クラスのコンストラクタは使用禁止。**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -847,7 +860,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const foo = new Symbol('foo')   // ✗ avoid
   ```
 
-* **No all'uso di istanze di primitive.**
+* **プリミティブ型のラッパーインスタンスは使用禁止。**
 
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
@@ -855,7 +868,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const message = new String('hello')   // ✗ avoid
   ```
 
-* **Non chiamare le proprietà di oggetti globali come funzioni.**
+* **関数としてグローバルオブジェクトのプロパティを呼び出さない。**
 
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
@@ -863,7 +876,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const math = Math()   // ✗ avoid
   ```
 
-* **No agli ottali literals.**
+* **8進数リテラルは禁止。**
 
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
@@ -872,7 +885,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const num = '042'   // ✓ ok
   ```
 
-* **No all'escape di sequenze di ottali nelle stringhe letterali.**
+* **文字列リテラルに8進数エスケープシーケンスは禁止。**
 
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
@@ -880,7 +893,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const copyright = 'Copyright \251'  // ✗ avoid
   ```
 
-* **Evita la concatenazione di strighe quando si usano `__dirname` e `__filename`.**
+* **`__dirname`と`__filename`は、文字列結合を避ける。**
 
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
@@ -888,7 +901,8 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const pathToFile = __dirname + '/app.js'            // ✗ avoid
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
-* **Evita l'uso di `__proto__`.** Usa invece `getPrototypeOf`.
+
+* **`__proto__`を使用しない。** 代わりに`getPrototypeOf`を使用する。
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -897,7 +911,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const foo = Object.getPrototypeOf(obj)  // ✓ ok
   ```
 
-* **No alla ridichiarazione di variabili.**
+* **変数を再宣言してはいけない。**
 
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
@@ -909,7 +923,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   name = 'Jane'         // ✓ ok
   ```
 
-* **Evita spazi multipli all'interno di espressioni regolari literals.**
+* **正規表現リテラルに複数のスペースは禁止。**
 
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
@@ -920,7 +934,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const regexp = /test value/     // ✓ ok
   ```
 
-* **Gli assegnamenti nei blocchi `return` devono essere circondati da parentesi .**
+* **return文における代入は括弧で囲まれていなければならない。**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -934,7 +948,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Evita di assegnare una variabile a se stessa**
+* **変数を自身に代入しない。**
 
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
@@ -942,7 +956,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   name = name   // ✗ avoid
   ```
 
-* **Evita di confrontare una variabile con se stessa.**
+* **変数を自身と比較しない。**
 
   eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
@@ -950,7 +964,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   if (score === score) {}   // ✗ avoid
   ```
 
-* **Evita l'uso della virgola come operatore.**
+* **カンマ演算子を使用しない。**
 
   eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
 
@@ -958,7 +972,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   if (doSomething(), !!test) {}   // ✗ avoid
   ```
 
-* **Nomi protetti non possono essere reassegnati (shadowing).**
+* **制限付きの名前(訳注: restricted-name. strict mode の対象であるES5の予約語)を上書きして隠蔽するべきではない。**
 
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
@@ -966,7 +980,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   let undefined = 'value'     // ✗ avoid
   ```
 
-* **Array sparsi non sono consentiti.**
+* **疎配列は許容されない。**
 
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
@@ -974,11 +988,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **I tab non dovrebbero essere utilizzati**
+* **タブの使用は推奨されない。**
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **Strighe regolari non devono contenere i placeholders propri dei template literal.**
+* **通常の文字列にテンプレートリテラルのプレースホルダーを含んではいけない。**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
@@ -987,7 +1001,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **`super()` deve essere chiamato prima di `this`.**
+* **`super()`は`this`を使う前に呼び出さなければならない。**
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -1000,7 +1014,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **Puoi usare `throw` solo su un oggetto `Error`.**
+* **`Error`オブジェクトのみをスローしてください。**
 
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
@@ -1009,11 +1023,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   throw new Error('error')    // ✓ ok
   ```
 
-* **Spazi bianchi banditi alla fine di una linea.**
+* **行末の空白はしないこと。**
 
   eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
-* **Inizializzare con `undefined` non è consentito.**
+* **`undefined`での初期化はしないこと。**
 
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
@@ -1024,7 +1038,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   name = 'value'          // ✓ ok
   ```
 
-* **No alla non-modifica delle condizioni all'interno dei cicli.**
+* **更新されないループ条件は禁止。**
 
   eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
@@ -1033,7 +1047,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **No all'uso dell'operatore ternario quando esiste una alternativa migliore.**
+* **よりシンプルな書き方がある場合は、三項演算子は使用禁止。**
 
   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
@@ -1042,7 +1056,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   let score = val || 0          // ✓ ok
   ```
 
-* **No a codice non eseguibile dopo l'uso di `return`, `throw`, `continue`, e `break`.**
+* **return文、throw文、continue文、break文の後に到達不能なコードは禁止。**
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1053,7 +1067,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No a controlli di flusso all'interno di blocchi `finally`.**
+* **finallyブロックにフロー制御文は禁止。**
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1067,15 +1081,16 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **L'operando sinistro di una operazione relazionale non può essere negato.**
+* **関係演算子の左オペランドを否定することは禁止。**
 
   eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
 
   ```js
   if (!key in obj) {}       // ✗ avoid
+  if (!(key in obj)) {}     // ✓ ok
   ```
 
-* **Evita l'uso non necessario di `.call()` e `.apply()`.**
+* **`.call()`と`.apply()`を不必要に使用しない。**
 
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
@@ -1083,7 +1098,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
-* **Evita l'uso di una non necessario computed property all'interno di una chiave di un oggetto**
+* **オブジェクトの計算されたプロパティ名(Computed Property)を不必要に使用しない。**
 
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
@@ -1092,7 +1107,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const user = { name: 'John Doe' }       // ✓ ok
   ```
 
-* **No all'uso non necessario di costruttori.**
+* **不要なコンストラクタは禁止。**
 
   eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
@@ -1103,7 +1118,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No all'uso non necessario degli escape.**
+* **エスケープを不必要に使用しない。**
 
   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
@@ -1111,7 +1126,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   let message = 'Hell\o'  // ✗ avoid
   ```
 
-* **Rinominare l'assegnamento di import, export, e destrutturazione (destructuring) usano lo stesso nome non è consentito.**
+* **import、export、分割代入での、同じ名前へのリネームはしないこと。**
 
   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
@@ -1120,7 +1135,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   import { config } from './config'               // ✓ ok
   ```
 
-* **No spazi prima di una proprietà**
+* **プロパティの前に空白は禁止。**
 
   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
@@ -1129,7 +1144,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   user.name       // ✓ ok
   ```
 
-* **No all'uso di `with`.**
+* **with文は使用禁止。**
 
   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
@@ -1137,7 +1152,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   with (val) {...}    // ✗ avoid
   ```
 
-* **Mantere consistenza di nuove righe all'interno delle proprietà di un oggetto.**
+* **オブジェクトのプロパティ間で、改行の一貫性を保つこと**
 
   eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
 
@@ -1156,7 +1171,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }                                                                 // ✓ ok
   ```
 
-* **No padding all'interno dei blocchi.**
+* **ブロックの内側にパディングは禁止。**
 
   eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
 
@@ -1172,7 +1187,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   }
   ```
 
-* **No spazi tra l'operatore spread e la loro espressione.**
+* **スプレッド演算子とその式の間に空白は禁止。**
 
   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
@@ -1181,7 +1196,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   fn(...args)     // ✓ ok
   ```
 
-* **Le virgole devono avere uno spazio dopo e non prima.**
+* **セミコロンの後にはスペースが必要。また、セミコロン前のスペースは不要**
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1190,7 +1205,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **Avere uno spazio prima dei blocchi.**
+* **ブロックの中括弧の前にはスペースが必要。**
 
   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
@@ -1199,7 +1214,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   if (admin) {...}    // ✓ ok
   ```
 
-* **No spazi all'interno delle parentesi**
+* **括弧の内側にスペースは禁止。**
 
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
@@ -1208,7 +1223,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   getName(name)       // ✓ ok
   ```
 
-* **Uso dello spazio dopo l'uso di un operatore unario.**
+* **単項演算子の後にはスペースが必要。**
 
   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
 
@@ -1217,7 +1232,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   typeof !admin        // ✓ ok
   ```
 
-* **Usa gli spazi dentro i commenti.**
+* **コメントの内側にスペースを入れること。**
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1229,7 +1244,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   /* comment */       // ✓ ok
   ```
 
-* **No spazi dentro le strighe template.**
+* **テンプレート文字列のプレースホルダーの内側にスペースは禁止。**
 
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
@@ -1238,7 +1253,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const message = `Hello, ${name}`      // ✓ ok
   ```
 
-* **Usa `IsNaN()` quando controlli `NaN`.**
+* **`NaN`のチェックには`isNaN()`を使用する。**
 
   eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
 
@@ -1247,7 +1262,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **`typeof` deve essere comparato con una stringa valida.**
+* **`typeof`は有効な文字列と比較しなければならない。**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1256,7 +1271,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **Espressioni di funzioni immediatamente invocate (IIFEs - Immediately Invoked Function Expressions) devono essere circondate da parentesi.**
+* **即時実行関数式（IIFE）はラップしなければならない。**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1267,7 +1282,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   const getName = (function () { })()   // ✓ ok
   ```
 
-* **Mettere uno spazio prima e dopo `*` dentro le espressioni `yield*` .**
+* **yield*式の`*`は前後にスペースが必要。**
 
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
@@ -1276,7 +1291,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   yield * increment()   // ✓ ok
   ```
 
-* **Evitare condizioni Yoda.**
+* **ヨーダ記法を使用しない。**
 
   eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
 
@@ -1285,10 +1300,9 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   if (age === 42) { }    // ✓ ok
   ```
 
+## セミコロン
 
-## Semicolons
-
-* No punti e virgola (semicolons). (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* セミコロンは不要。 （右記を参照のこと： [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)、 [2](http://inimino.org/%7Einimino/blog/javascript_semicolons)、 [3](https://www.youtube.com/watch?v=gsfbh17Ax9I)）
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1297,7 +1311,11 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   window.alert('hi');  // ✗ avoid
   ```
 
-* Mai iniziare una linea con `(`, `[`, o `` ` ``. Questo è l'unico trucchetto che permette di omettere i punti e virgola. E `standard` ti protegge da potenziali errori.
+* 決して`(`、`[`、`` ` ``（または下記の起こりうる可能性の低い一部の文字）で行を始めないでください。
+
+  これはセミコロンを省略する際の唯一の問題点ですが、`standard`はこの潜在的な問題からあなたを保護します。
+
+  （完全なリストは`[`、`(`、`` ` ``、`+`、`*`、`/`、`-`、`,`、`.`ですが、これらのほとんどは実際のコードでは行頭には現れません。）
 
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
@@ -1329,33 +1347,36 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   `hello`.indexOf('o')
   ```
 
-  Nota: Se tendi a scrivere codice in questo modo, probabilmente stai cercando di essere troppo furbo.
+  注：もしあなたがこのようなコードをよく書くのであれば、あなたはあまりにも賢明な書き方をしようとしているのかもしれません。
 
-  È scoraggiato l'uso di scorciatoie, in favore di espressioni chiare e leggibili quando possibile.
+  賢明なショートハンドは推奨されません。可能な限り明確で読みやすい表現を心がけてください。
 
-  Invece di:
+  これのかわりに：
 
   ```js
   ;[1, 2, 3].forEach(bar)
   ```
 
-  È preferito questo approccio:
+  これが強く推奨されます。：
 
   ```js
   var nums = [1, 2, 3]
   nums.forEach(bar)
   ```
 
-## Letture utili
+
+## 参考文書
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
 
-##### E un video utile:
+##### 参考ビデオ：
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-Oggigiorno, tutti i più popolari minificatori di codice si basano su AST, quindi gestiscono il JavaScript senza punti e virgola (semicolons-less) senza problemi (visto che i punti e virgola non sono obbligatori in JavaScript).
+今日使用されている一般的なコードミニファイアー(圧縮ツール)はASTベースのミニフィケーションを使用しているので、セミコロンレスなJavaScriptを問題なく扱うことができます（JavaScriptではセミコロンは不要であるため）。
+
+##### *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]* からの抜粋：
 
 > [Relying on automatic semicolon insertion] is quite safe, and perfectly valid JS that every browser understands. Closure compiler, yuicompressor, packer, and jsmin all can properly minify it. There is no performance impact anywhere.
 >
