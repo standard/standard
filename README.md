@@ -233,6 +233,9 @@ Lots of folks!
 [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) |
 |---|---|---|---|---|
 
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | Your logo here | Your logo here | Your logo here | Your logo here
+|---|---|---|---|---|
+
 In addition to companies, many community members use `standard` on packages that
 are [too numerous](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 to list here.
