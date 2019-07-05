@@ -26,11 +26,6 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<p align="center">
-  <strong>Sponsored by</strong>
-  <a href="https://stdlib.com" target='_blank'><img src='https://feross.org/images/supporters/stdlib.png' width=150></a>
-</p>
-
 ## JavaScript スタイルガイド、リンター、フォーマッター
 
 このモジュールは、3つの方法であなたの（そして他の人の！）時間を節約します。：
@@ -49,7 +44,7 @@ npm install standard --save-dev
 
 ### オープンソースサポーター
 
-<a href="https://nsrc.io/oss-feross" target='_blank'><img src='https://feross.org/images/supporters/nodesource.png' width=125></a>
+[Become a supporter!](https://feross.org/thanks/)
 
 ## StandardJS — ルール
 
