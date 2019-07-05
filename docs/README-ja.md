@@ -311,6 +311,10 @@ WebStormでは、IDEで`standard`が[ネイティブサポートされるよう�
 
 いいえ。`standard`のすべては、スタイルについての[bikeshedding][bikeshedding]（自転車置き場の議論）を避けることであなたの時間をセーブするためにあります。タブ対スペースについてのような議論はオンライン上にたくさんありますが、決して結論は出ません。これらの議論はただ物事を終わらせることから目を逸らさせるだけです。結局のところ、あなたは何かを選ばなければばなりません。これは、`standard`の哲学のすべてです。うまくいけば、ユーザーは自身の意見を守るうえでその価値に気づくでしょう。
 
+`standard`を完全には受け入れたくない人のために、似たようなパッケージが2つあります:
+- [semistandard](https://github.com/Flet/semistandard) - セミコロンありのstandard
+- [standardx](https://github.com/standard/standardx) - カスタマイズ可能なstandard
+
 本当に何百ものESLintのルールを個別に設定したいなら、ルールを上書きするために[eslint-config-standard](https://github.com/standard/eslint-config-standard)で`eslint`を直接使うことができます。[`standard-eject`](https://github.com/josephfrazier/standard-eject)は、`standard`から`eslint`と`eslint-config-standard`への移行を支援します。
 
 Pro tip: ただ`standard`を使っていってください。時間をかけて解決すべき現実の問題があるでしょう！ :P
