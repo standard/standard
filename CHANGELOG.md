@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+When you upgrade, consider running `standard --fix` to automatically format your code to match the newly added rules.
+
 ### New features
 
 - Update `eslint` from `~5.16.0` to `~6.0.1`
@@ -17,8 +19,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - To address: If you use a global installation of `standard` (e.g. installed with `npm install standard --global`) along with plugins, you should install those plugins and parsers locally in the projects where you run `standard`.
 
 - Update `eslint-plugin-promise` from `~4.0.0` to `~4.2.1`
+  - No significant changes
 
 - Update `eslint-plugin-node` from `~7.0.1` to `~9.1.0`
+  - No significant changes
+
+- The README is now available in Japanese 🇯🇵!
+  - Thanks to [@Munieru](https://github.com/munierujp) for the excellent work!
+  - Other community contributed translations exist in Spanish, French, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin. More translations are welcome.
+
+### New rules
+
+*(Estimated % of affected standard users, based on test suite in parens)*
+
+- Disallow spaces inside of array brackets ([array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing)) [#1203](https://github.com/standard/standard/issues/1203) [eslint-config-standard/#131](https://github.com/standard/eslint-config-standard/pull/131) (14%)
+- Require `const` instead of `let` if variable is never reassigned ([prefer-const](https://eslint.org/docs/rules/prefer-const)) [#523](https://github.com/standard/standard/issues/523) [eslint-config-standard/#133](https://github.com/standard/eslint-config-standard/pull/133) (14%)
+- Disallow quotes around object literal property names that are not strictly required ([quote-props](https://eslint.org/docs/rules/quote-props)) [#791](https://github.com/standard/standard/issues/791) (4%)
+- Disallow use of Object.prototypes builtins directly ([no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)) [#1310](https://github.com/standard/standard/issues/1310) (3%)
+- Require an empty line between class members ([lines-between-class-members](https://eslint.org/docs/rules/lines-between-class-members)) [#438](https://github.com/standard/standard/issues/438) (1%)
+- Disallow using an async function as a Promise executor ([no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)) [#1309](https://github.com/standard/standard/issues/1309) (1%)
+- Disallow assignments that can lead to race conditions due to usage of await or yield ([require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)) [#1314](https://github.com/standard/standard/issues/1314) (1%)
+- Disallow unnecessary catch clauses ([no-useless-catch](https://eslint.org/docs/rules/no-useless-catch)) [#1312](https://github.com/standard/standard/issues/1312) (0%)
+- Disallow characters which are made with multiple code points in character class syntax ([no-misleading-character-class](https://eslint.org/docs/rules/no-misleading-character-class)) [#1311](https://github.com/standard/standard/issues/1311) (0%)
 
 ## 12.0.1 - 2018-08-29
 
