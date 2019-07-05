@@ -488,16 +488,16 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScriptを使用するには、`typescript-eslint-parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -505,8 +505,8 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -517,7 +517,7 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 standard *.ts
 ```
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install typescript-eslint-parser eslint-plugin-typescript --global`で`typescript-eslint-parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
+もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install @typescript-eslint/parser eslint-plugin-typescript --global`で`@typescript-eslint/parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
 
 <h2 id="what-about-mocha-jasmine-qunit-etc">Mocha、Jasmine、QUnitなどはどうすれば？</h2>
 
