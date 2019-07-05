@@ -26,11 +26,6 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<p align="center">
-  <strong>Sponsored by</strong>
-  <a href="https://stdlib.com" target='_blank'><img src='https://feross.org/images/supporters/stdlib.png' width=150></a>
-</p>
-
 ## JavaScript スタイルガイド、リンター、フォーマッター
 
 このモジュールは、3つの方法であなたの（そして他の人の！）時間を節約します。：
@@ -49,7 +44,9 @@ npm install standard --save-dev
 
 ### オープンソースサポーター
 
-<a href="https://nsrc.io/oss-feross" target='_blank'><img src='https://feross.org/images/supporters/nodesource.png' width=125></a>
+<a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
+
+[Become a supporter!](https://feross.org/thanks/)
 
 ## StandardJS — ルール
 
@@ -96,13 +93,13 @@ npm install standard --save-dev
   - [私はグローバル名前空間を汚染するライブラリを使用しています。"variable is not defined"というエラーを防ぐには？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [実験的なJavaScriptの機能（ES Next）を使用するには？](#how-do-i-use-experimental-javascript-es-next-features)
   - [FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
-  - [Mocha、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jasmine-qunit-etc)
-  - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers)
+  - [Mocha、Jest、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jest-jasmine-qunit-etc)
+  - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers-and-service-workers)
   - [MarkdownやHTMLファイル内のコードをチェックできますか？](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Gitの`pre-commit`フックはありますか？](#is-there-a-git-pre-commit-hook)
   - [出力をすべてカラフルで綺麗にするには？](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Node.jsのAPIはありますか？](#is-there-a-nodejs-api)
-  - [`standard`にコントリビュートするには？](#how-do-i-contribute-to-standard)
+  - [StandardJSにコントリビュートするには？](#how-do-i-contribute-to-standardjs)
 - [ライセンス](#license)
 
 <h2 id="install">インストール</h2>
@@ -129,6 +126,12 @@ $ npm install standard --save-dev
 $ standard
 Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+```
+
+`standard`をローカルにインストールした場合は、かわりに`npx`で実行します。:
+
+```bash
+$ npx standard
 ```
 
 globパターンを用いてディレクトリを渡すこともできます。globパターンを含むパスは、シェルではなく`standard`で展開されるようにクォートで囲んでください。：
@@ -202,7 +205,7 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) | |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) |
 |---|---|---|---|---|
 
 企業に加えて、多くのコミュニティメンバーがここに載せるには[多すぎる](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)パッケージで`standard`を使用しています。
@@ -313,6 +316,10 @@ WebStormでは、IDEで`standard`が[ネイティブサポートされるよう�
 <h2 id="i-disagree-with-rule-x-can-you-change-it">私はあるルールに反対なのですが、変更してもらえますか？</h2>
 
 いいえ。`standard`のすべては、スタイルについての[bikeshedding][bikeshedding]（自転車置き場の議論）を避けることであなたの時間をセーブするためにあります。タブ対スペースについてのような議論はオンライン上にたくさんありますが、決して結論は出ません。これらの議論はただ物事を終わらせることから目を逸らさせるだけです。結局のところ、あなたは何かを選ばなければばなりません。これは、`standard`の哲学のすべてです。うまくいけば、ユーザーは自身の意見を守るうえでその価値に気づくでしょう。
+
+`standard`を完全には受け入れたくない人のために、似たようなパッケージが2つあります:
+- [semistandard](https://github.com/Flet/semistandard) - セミコロンありのstandard
+- [standardx](https://github.com/standard/standardx) - カスタマイズ可能なstandard
 
 本当に何百ものESLintのルールを個別に設定したいなら、ルールを上書きするために[eslint-config-standard](https://github.com/standard/eslint-config-standard)で`eslint`を直接使うことができます。[`standard-eject`](https://github.com/josephfrazier/standard-eject)は、`standard`から`eslint`と`eslint-config-standard`への移行を支援します。
 
@@ -487,16 +494,16 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScriptを使用するには、`typescript-eslint-parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -504,8 +511,8 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -516,9 +523,9 @@ $ standard --parser typescript-eslint-parser --plugin typescript *.ts
 standard *.ts
 ```
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install typescript-eslint-parser eslint-plugin-typescript --global`で`typescript-eslint-parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
+もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install @typescript-eslint/parser eslint-plugin-typescript --global`で`@typescript-eslint/parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
 
-<h2 id="what-about-mocha-jasmine-qunit-etc">Mocha、Jasmine、QUnitなどはどうすれば？</h2>
+<h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
 
 テストファイルでmochaをサポートするには、次のコメントをテストファイルの先頭に追加します。：
 
@@ -532,11 +539,11 @@ standard *.ts
 $ standard --env mocha
 ```
 
-`mocha`は`jasmine`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
+`mocha`は`jest`、`jasmine`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
 
 *注： `env`と`envs`は同じです。*
 
-<h2 id="what-about-web-workers">Web WorkersとService Workersはどうすれば？</h2>
+<h2 id="what-about-web-workers-and-service-workers">Web WorkersとService Workersはどうすれば？</h2>
 
 次のコメントをweb workerファイルの先頭に追加してください。：
 
@@ -684,7 +691,7 @@ var opts = {
 
 `callback`は、`Error`オブジェクトと`results`オブジェクトを引数として実行されます（上記と同じ）。
 
-<h2 id="how-do-i-contribute-to-standard"><code>standard</code>にコントリビュートするには？</h2>
+<h2 id="how-do-i-contribute-to-standardjs">StandardJSにコントリビュートするには？</h2>
 
 コントリビューションは歓迎されます！[Issues](https://github.com/standard/standard/issues)や[Pull Requests](https://github.com/standard/standard/pulls)をチェックし、望みのものがなければ作成してください。
 
