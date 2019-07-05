@@ -503,7 +503,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin typescript *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
