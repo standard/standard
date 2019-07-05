@@ -521,10 +521,6 @@ Or, add this to `package.json`:
 }
 ```
 
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `babel-eslint` globally as well, with
-`npm install babel-eslint --global`.
-
 ## Can I use a JavaScript language variant, like Flow or TypeScript?
 
 `standard` supports the latest ECMAScript features. However, Flow and TypeScript add new
@@ -562,10 +558,6 @@ Or, add this to `package.json`:
 
 *Note: `plugin` and `plugins` are equivalent.*
 
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `babel-eslint` and `eslint-plugin-flowtype` globally as well, with
-`npm install babel-eslint eslint-plugin-flowtype --global`.
-
 ### TypeScript
 
 To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` as the parser,
@@ -598,10 +590,6 @@ With that in `package.json`, you can run:
 ```bash
 standard *.ts
 ```
-
-If `standard` is installed globally (i.e. `npm install standard --global`), then
-be sure to install `@typescript-eslint/parser` and `eslint-plugin-typescript` globally as well,
-with `npm install @typescript-eslint/parser eslint-plugin-typescript --global`.
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
 

@@ -11,6 +11,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - BREAKING: Node.js 6 is no longer supported
     - Node.js 6 is EOL and will no longer be receiving security updates. As a result, the eslint team has decided to drop support for it.
     - To prevent breaking CI for projects which still support Node 6, `standard` silently passes when run by an unsupported version of Node.
+  - Plugins are no longer affected by `standard`'s location
+    - Previously, `standard` loaded plugins relative to the location of the `standard` package itself. As a result, we suggested that users with global `standard` installations should also install plugins globally, and users with local `standard` installations should install plugins locally. However, due to a design bug, this strategy caused `standard` to randomly fail to load plugins under certain circumstances, particularly when using package management tools like `lerna` and Yarn Plug n’ Play.
+    - As a rule of thumb: With `standard` 13, plugins should always be installed locally, even if `standard` was installed globally. More precisely, `standard` 13 resolves plugins relative to the end user’s project by default, and always resolves parsers relative to the location of the config file that imports them.
+    - To address: If you use a global installation of `standard` (e.g. installed with `npm install standard --global`) along with plugins, you should install those plugins and parsers locally in the projects where you run `standard`.
 
 - Update `eslint-plugin-promise` from `~4.0.0` to `~4.2.1`
 
