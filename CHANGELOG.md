@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## UNRELEASED
+
+### New features
+
+- Update `eslint` from `~5.16.0` to `~6.0.1`
+  - BREAKING: Node.js 6 is no longer supported
+    - Node.js 6 is EOL and will no longer be receiving security updates. As a result, the eslint team has decided to drop support for it.
+    - To prevent breaking CI for projects which still support Node 6, `standard` silently passes when run by an unsupported version of Node.
+
 ## 12.0.1 - 2018-08-29
 
 - Since ESLint 5 no longer supports Node 4, `standard` silently passes when run in Node 4, which matches the current behavior for Node 0.10, 0.12, and all other unsupported versions of Node.

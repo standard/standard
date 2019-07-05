@@ -33,7 +33,7 @@
     "tape": "^4.6.0"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "homepage": "https://standardjs.com",
   "keywords": [
