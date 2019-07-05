@@ -77,7 +77,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function gitClone (cb) {
-          var args = [ 'clone', '--depth', 1, url, path.join(TMP, name) ]
+          var args = ['clone', '--depth', 1, url, path.join(TMP, name)]
           spawn(GIT, args, { stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (git clone) (' + name + ')'
             cb(err)
@@ -85,7 +85,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function gitPull (cb) {
-          var args = [ 'pull' ]
+          var args = ['pull']
           spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, function (err) {
             if (err) err.message += ' (git pull) (' + name + ')'
             cb(err)
@@ -93,7 +93,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandard (cb) {
-          var args = [ '--verbose' ]
+          var args = ['--verbose']
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ')'
@@ -111,7 +111,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandardFix (cb) {
-          var args = [ '--fix', '--verbose' ]
+          var args = ['--fix', '--verbose']
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ') ** with --fix'
@@ -121,7 +121,7 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runGitReset (cb) {
-          var args = [ 'reset', '--hard' ]
+          var args = ['reset', '--hard']
           spawn(GIT, args, { cwd: folder }, function (err) {
             if (err) err.message += ' (git reset) (' + name + ')'
             // Fatal error if can't git reset
