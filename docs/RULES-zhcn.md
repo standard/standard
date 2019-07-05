@@ -182,7 +182,7 @@
   ```
 
 * **使用浏览器全局变量时加上** `window.` 前缀。<br>
-  Exceptions are: `document`, `console` and `navigator`.
+  `document`、`console` 和 `navigator` 除外。
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
