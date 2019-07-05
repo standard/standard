@@ -610,7 +610,7 @@ Or, run:
 $ standard --env mocha
 ```
 
-Where `mocha` can be one of `jasmine`, `jest`, `qunit`, `phantomjs`, and so on. To see a
+Where `mocha` can be one of `jest`, `jasmine`, `qunit`, `phantomjs`, and so on. To see a
 full list, check ESLint's
 [specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
 documentation. For a list of what globals are available for these environments,
