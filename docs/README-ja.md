@@ -128,6 +128,12 @@ Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
 
+`standard`をローカルにインストールした場合は、かわりに`npx`で実行します。:
+
+```bash
+$ npx standard
+```
+
 globパターンを用いてディレクトリを渡すこともできます。globパターンを含むパスは、シェルではなく`standard`で展開されるようにクォートで囲んでください。：
 
 ```bash
