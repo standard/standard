@@ -93,7 +93,7 @@ npm install standard --save-dev
   - [私はグローバル名前空間を汚染するライブラリを使用しています。"variable is not defined"というエラーを防ぐには？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [実験的なJavaScriptの機能（ES Next）を使用するには？](#how-do-i-use-experimental-javascript-es-next-features)
   - [FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
-  - [Mocha、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jasmine-qunit-etc)
+  - [Mocha、Jest、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jest-jasmine-qunit-etc)
   - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers-and-service-workers)
   - [MarkdownやHTMLファイル内のコードをチェックできますか？](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Gitの`pre-commit`フックはありますか？](#is-there-a-git-pre-commit-hook)
@@ -525,7 +525,7 @@ standard *.ts
 
 もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install @typescript-eslint/parser eslint-plugin-typescript --global`で`@typescript-eslint/parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
 
-<h2 id="what-about-mocha-jasmine-qunit-etc">Mocha、Jasmine、QUnitなどはどうすれば？</h2>
+<h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
 
 テストファイルでmochaをサポートするには、次のコメントをテストファイルの先頭に追加します。：
 
@@ -539,7 +539,7 @@ standard *.ts
 $ standard --env mocha
 ```
 
-`mocha`は`jasmine`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
+`mocha`は`jasmine`、`jest`、`qunit`、`phantomjs`などのいずれかになります。完全なリストを見るには、ESLintの[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)を参照してください。これらの環境で使用可能なグローバルオブジェクトのリストについては、[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)のnpm moduleを参照してください。
 
 *注： `env`と`envs`は同じです。*
 
