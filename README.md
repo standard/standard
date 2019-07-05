@@ -569,7 +569,7 @@ be sure to install `babel-eslint` and `eslint-plugin-flowtype` globally as well,
 ### TypeScript
 
 To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` as the parser,
-`eslint-plugin-typescript` as a plugin, and tell standard to lint `*.ts` files (since it
+`@typescript-eslint/eslint-plugin` as a plugin, and tell standard to lint `*.ts` files (since it
 doesn't by default).
 
 ```bash
