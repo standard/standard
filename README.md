@@ -100,7 +100,7 @@ that use `standard`!
   - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
   - [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
-  - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
+  - [What about Mocha, Jest, Jasmine, QUnit, etc?](#what-about-mocha-jest-jasmine-qunit-etc)
   - [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
@@ -596,7 +596,7 @@ If `standard` is installed globally (i.e. `npm install standard --global`), then
 be sure to install `@typescript-eslint/parser` and `eslint-plugin-typescript` globally as well,
 with `npm install @typescript-eslint/parser eslint-plugin-typescript --global`.
 
-## What about Mocha, Jasmine, QUnit, etc?
+## What about Mocha, Jest, Jasmine, QUnit, etc?
 
 To support mocha in test files, add this to the top of the test files:
 
@@ -610,7 +610,7 @@ Or, run:
 $ standard --env mocha
 ```
 
-Where `mocha` can be one of `jasmine`, `qunit`, `phantomjs`, and so on. To see a
+Where `mocha` can be one of `jest`, `jasmine`, `qunit`, `phantomjs`, and so on. To see a
 full list, check ESLint's
 [specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
 documentation. For a list of what globals are available for these environments,
