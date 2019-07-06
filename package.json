@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "eslint": "~6.0.1",
-    "eslint-config-standard": "12.0.0",
-    "eslint-config-standard-jsx": "6.0.2",
+    "eslint-config-standard": "13.0.0-1",
+    "eslint-config-standard-jsx": "7.0.0-0",
     "eslint-plugin-import": "~2.18.0",
     "eslint-plugin-node": "~9.1.0",
     "eslint-plugin-promise": "~4.2.1",
@@ -29,7 +29,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
-    "standard-packages": "^3.4.0",
+    "standard-packages": "^3.5.2",
     "tape": "^4.6.0"
   },
   "engines": {
