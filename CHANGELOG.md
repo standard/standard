@@ -39,6 +39,7 @@ When you upgrade, consider running `standard --fix` to automatically format your
 - Require an empty line between class members ([lines-between-class-members](https://eslint.org/docs/rules/lines-between-class-members)) [#438](https://github.com/standard/standard/issues/438) (1%)
 - Disallow using an async function as a Promise executor ([no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)) [#1309](https://github.com/standard/standard/issues/1309) (1%)
 - Disallow assignments that can lead to race conditions due to usage of await or yield ([require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)) [#1314](https://github.com/standard/standard/issues/1314) (1%)
+- Disallow spaces inside of computed properties ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1315](https://github.com/standard/standard/issues/1315) [eslint-config-standard/#131](https://github.com/standard/eslint-config-standard/pull/131) (1%)
 - Disallow unnecessary catch clauses ([no-useless-catch](https://eslint.org/docs/rules/no-useless-catch)) [#1312](https://github.com/standard/standard/issues/1312) (0%)
 - Disallow characters which are made with multiple code points in character class syntax ([no-misleading-character-class](https://eslint.org/docs/rules/no-misleading-character-class)) [#1311](https://github.com/standard/standard/issues/1311) (0%)
 
