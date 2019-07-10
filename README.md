@@ -805,6 +805,10 @@ There are also many **[editor plugins](#are-there-text-editor-plugins)**, a list
 and an awesome list of
 **[packages in the `standard` ecosystem](https://github.com/standard/awesome-standard)**.
 
+## Security Policies and Procedures
+
+The `standard` team and community take all security bugs in `standard` seriously. Please see our [security policies and procedures](https://github.com/standard/standard/blob/master/SECURITY.md) document to learn how to report issues.
+
 ## License
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).
