@@ -17,6 +17,8 @@ that we also publish (for advanced users).
 
 When you upgrade, consider running `standard --fix` to automatically format your code to match the newly added rules.
 
+❤️ If you enjoy StandardJS and want to support future releases, check out Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship). GitHub is matching donations, so your dollars go twice as far! 🚀
+
 ### New features
 
 - Update `eslint` from `~5.16.0` to `~6.0.1`
