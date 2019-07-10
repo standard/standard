@@ -3,30 +3,41 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## UNRELEASED
+## 13.0.0 - 2019-07-10
+
+Welcome to the latest version of `standard`!
+
+As with every new major release, there are lots of new rules in 13.0.0 designed
+to help catch bugs and make programmer intent more explicit.
+
+`standard` is more popular than ever – **640,000 downloads per month!** It's
+even more popular – **3,000,000 downloads per month** – if you include the
+[ESLint configuration](https://www.npmjs.com/package/eslint-config-standard)
+that we also publish (for advanced users).
 
 When you upgrade, consider running `standard --fix` to automatically format your code to match the newly added rules.
 
 ### New features
 
 - Update `eslint` from `~5.16.0` to `~6.0.1`
+
   - BREAKING: Node.js 6 is no longer supported
     - Node.js 6 is EOL and will no longer be receiving security updates. As a result, the eslint team has decided to drop support for it.
     - To prevent breaking CI for projects which still support Node 6, `standard` silently passes when run by an unsupported version of Node.
+
   - **For `eslint-config-standard` users only:** Plugins are no longer affected by `eslint`'s location
     - Previously, ESLint loaded plugins relative to the location of the ESLint package itself. As a result, we suggested that users with global ESLint installations should also install plugins globally, and users with local ESLint installations should install plugins locally.
     - With ESLint v6, plugins should always be installed locally, even if ESLint was installed globally. More precisely, ESLint v6 resolves plugins relative to the end user’s project by default, and always resolves shareable configs and parsers relative to the location of the config file that imports them.
     - See [migrating to ESLint 6.0.0 for more information](https://eslint.org/docs/user-guide/migrating-to-6.0.0#-plugins-and-shareable-configs-are-no-longer-affected-by-eslints-location).
 
+- The documentation is now available in Japanese 🇯🇵!
+  - Thanks to [@Munieru](https://github.com/munierujp) for the excellent work!
+  - Other community contributed translations exist in Spanish, French, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
+  - More translations are always welcome!
+
 - Update `eslint-plugin-promise` from `~4.0.0` to `~4.2.1`
-  - No significant changes
 
 - Update `eslint-plugin-node` from `~7.0.1` to `~9.1.0`
-  - No significant changes
-
-- The README is now available in Japanese 🇯🇵!
-  - Thanks to [@Munieru](https://github.com/munierujp) for the excellent work!
-  - Other community contributed translations exist in Spanish, French, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin. More translations are welcome.
 
 ### New rules
 
@@ -38,7 +49,6 @@ When you upgrade, consider running `standard --fix` to automatically format your
 - Disallow use of Object.prototypes builtins directly ([no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)) [#1310](https://github.com/standard/standard/issues/1310) (3%)
 - Require an empty line between class members ([lines-between-class-members](https://eslint.org/docs/rules/lines-between-class-members)) [#438](https://github.com/standard/standard/issues/438) (1%)
 - Disallow using an async function as a Promise executor ([no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)) [#1309](https://github.com/standard/standard/issues/1309) (1%)
-- Disallow assignments that can lead to race conditions due to usage of await or yield ([require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)) [#1314](https://github.com/standard/standard/issues/1314) (1%)
 - Disallow spaces inside of computed properties ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1315](https://github.com/standard/standard/issues/1315) [eslint-config-standard/#131](https://github.com/standard/eslint-config-standard/pull/131) (1%)
 - Disallow unnecessary catch clauses ([no-useless-catch](https://eslint.org/docs/rules/no-useless-catch)) [#1312](https://github.com/standard/standard/issues/1312) (0%)
 - Disallow characters which are made with multiple code points in character class syntax ([no-misleading-character-class](https://eslint.org/docs/rules/no-misleading-character-class)) [#1311](https://github.com/standard/standard/issues/1311) (0%)
