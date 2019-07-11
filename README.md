@@ -29,57 +29,20 @@
 
 This module saves you (and others!) time in three ways:
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  project. Just drop it in.
+- **No configuration.** The easiest way to enforce code quality in your
+  project. No decisions to make. No `.eslintrc` files to manage. It just works.
 - **Automatically format code.** Just run `standard --fix` and say goodbye to
   messy or inconsistent code.
 - **Catch style issues & programmer errors early.** Save precious code review
   time by eliminating back-and-forth between reviewer & contributor.
 
-No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
-works.
-
-Install with:
-
-```
-npm install standard --save-dev
-```
+Give it a try by running `npx standard --fix` right now!
 
 ### Open Source Supporters
 
 <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
 
 [Become a supporter!](https://feross.org/thanks/)
-
-## StandardJS — The Rules
-
-- **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
-- **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-  - [More details][4]
-- **Space after keywords** `if (condition) { ... }`
-- **Space after function name** `function name (arg) { ... }`
-- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
-- Always handle the node.js `err` function parameter
-- Declare browser globals with `/* global */` comment at top of file
-  - Prevents accidental use of vaguely-named browser globals like `open`, `length`,
-    `event`, and `name`.
-  - Example: `/* global alert, prompt */`
-  - Exceptions are: `window`, `document`, and `navigator`
-- **And [more goodness][5]** – *give `standard` a try today!*
-
-[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: /RULES.md#semicolons
-[5]: /RULES.md#javascript-standard-style
-
-To get a better idea, take a look at
-[a sample file](https://github.com/expressjs/body-parser/blob/master/index.js) written
-in JavaScript Standard Style. Or, check out one of the
-[thousands of projects](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
-that use `standard`!
 
 ## Table of Contents
 
