@@ -93,9 +93,9 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandard (cb) {
-          var args = ['--verbose']
+          var args = [STANDARD, '--verbose']
           if (pkg.args) args.push.apply(args, pkg.args)
-          spawn(STANDARD, args, { cwd: folder }, function (err) {
+          spawn('node', args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ')'
             if (err && argv.fix) {
               t.comment('Attempting --fix on ' + str)
@@ -111,9 +111,9 @@ test('test github repos that use `standard`', function (t) {
         }
 
         function runStandardFix (cb) {
-          var args = ['--fix', '--verbose']
+          var args = [STANDARD, '--fix', '--verbose']
           if (pkg.args) args.push.apply(args, pkg.args)
-          spawn(STANDARD, args, { cwd: folder }, function (err) {
+          spawn('node', args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ') ** with --fix'
             if (err) { t.fail(str) } else { t.pass(str) }
             runGitReset(cb)
