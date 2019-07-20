@@ -183,7 +183,7 @@ your code.
   ```
 
 * **Declare browser globals** with a `/* global */` comment.<br>
-  Exceptions are: `window`, `document` and `navigator`.<br>
+  Exceptions are: `window`, `document`, and `navigator`.<br>
   Prevents accidental use of poorly-named browser globals like `open`, `length`,
   `event`, and `name`.
 
