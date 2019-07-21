@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 13.1.0 - 2019-07-20
+
+- Update `eslint` from `~6.0.1` to `~6.1.0`
+
 ## 13.0.2 - 2019-07-12
 
 - Fix global installations of `standard` not finding dependencies due to ESLint v6 plugin resolution change [#1327](https://github.com/standard/standard/issues/1327) [#1328](https://github.com/standard/standard/issues/1328) [#1329](https://github.com/standard/standard/issues/1329)
