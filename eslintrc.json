@@ -1,3 +1,6 @@
 {
-  "extends": ["standard", "standard-jsx"]
+  "extends": ["standard", "standard-jsx"],
+  "rules": {
+    "quotes": ["error", "single", { "avoidEscape": true }]
+  }
 }

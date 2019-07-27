@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## UNRELEASED
+
+### New features
+
+### New rules
+
+*(Estimated % of affected standard users, based on test suite in parens)*
+
+- Disallow template literals when placeholders or tagged template features are not used. ([quotes](https://eslint.org/docs/rules/quotes)) [#838](https://github.com/standard/standard/issues/838) [eslint-config-standard/#151](https://github.com/standard/eslint-config-standard/pull/151) (1%)
+
+### Changed rules
+
 ## 13.1.0 - 2019-07-20
 
 - Update `eslint` from `~6.0.1` to `~6.1.0`
