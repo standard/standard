@@ -1,6 +1,7 @@
 {
   "extends": ["standard", "standard-jsx"],
   "rules": {
-    "quotes": ["error", "single", { "avoidEscape": true }]
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-self-assign": ["error", { "props": true }]
   }
 }
