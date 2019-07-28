@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 *(Estimated % of affected standard users, based on test suite in parens)*
 
+- Forbid import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#861](https://github.com/standard/standard/issues/861) [#1343](https://github.com/standard/standard/issues/1343)
 - Disallow template literals when placeholders or tagged template features are not used. ([quotes](https://eslint.org/docs/rules/quotes)) [#838](https://github.com/standard/standard/issues/838) [eslint-config-standard/#151](https://github.com/standard/eslint-config-standard/pull/151) (1%)
 
 ### Changed rules
