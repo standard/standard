@@ -438,7 +438,7 @@ $ standard --parser babel-eslint
 
 `standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `babel-eslint`를 `npm install babel-eslint --global`과 함께 설치하십시오.
 
-## javaScrpt와 다른 Flow 또는 typescript에서도 사용할 수 있나요?
+## JavaScript와 다른 Flow 또는 TypeScript에서도 사용할 수 있나요?
 
 `standard`는 최신 ECMAScript 기능을 지원합니다. 그러나 Flow 및 TypeScript는 새로운 구문을 언어에 추가해야하기 때문에 즉시 사용할 수 없습니다.
 
