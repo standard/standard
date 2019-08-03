@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### New features
 
+- Ignore patterns from `.git/info/exclude` in addition to `.gitignore`. [#1277](https://github.com/standard/standard/issues/1277).
+
 ### New rules
 
 *(Estimated % of affected standard users, based on test suite in parens)*
