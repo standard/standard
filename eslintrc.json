@@ -4,6 +4,8 @@
     "quotes": ["error", "single", { "avoidEscape": true }],
     "no-self-assign": ["error", { "props": true }],
     "import/no-absolute-path": ["error", { "esmodule": true, "commonjs": true, "amd": false }],
-    "dot-notation": ["error", { "allowKeywords": true }]
+    "dot-notation": ["error", { "allowKeywords": true }],
+
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always", "beforeClosing": "never" }]
   }
 }
