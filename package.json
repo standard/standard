@@ -29,7 +29,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "run-parallel-limit": "^1.0.3",
-    "standard-packages": "^3.5.2",
+    "standard-packages": "^3.6.1",
     "tape": "^4.6.0"
   },
   "engines": {
