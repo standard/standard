@@ -20,6 +20,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed rules
 
+- Relax rule: Don't require newlines between *single-line* member functions or class field declarations ([lines-between-class-members](http://eslint.org/docs/rules/lines-between-class-members)) [#1347](https://github.com/standard/standard/issues/1347)
+
 ## 13.1.0 - 2019-07-20
 
 - Update `eslint` from `~6.0.1` to `~6.1.0`
