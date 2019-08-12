@@ -115,6 +115,7 @@ When you upgrade, consider running `standard --fix` to automatically format your
 - Disallow APIs that were deprecated in Node 10 ([no-deprecated-api](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md)) [#1164](https://github.com/standard/standard/pull/1164) (15%)
   - e.g. `assert.equal()`, `assert.deepEqual()` and `assert.notEqual()` were deprecated in Node 10.
 - Disallow self assignment of properties ([no-self-assign](https://eslint.org/docs/rules/no-self-assign)) [#1186](https://github.com/standard/standard/issues/1186) (0%)
+- Disallow use of an exported name as the locally imported name of a default export ([import/no-named-as-default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md)) [eslint-config-standard/#98](https://github.com/standard/eslint-config-standard/pull/98)
 
 ### Changed rules
 
