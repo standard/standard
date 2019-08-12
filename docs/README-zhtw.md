@@ -60,8 +60,8 @@ npm install standard --save-dev
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES.md#semicolons
-[5]: RULES.md#javascript-standard-style
+[4]: RULES-zhtw.md#semicolons
+[5]: RULES-zhtw.md#javascript-standard-style
 
 看看一些[用 JavaScript Standard Style 寫的範例](https://github.com/expressjs/body-parser/blob/master/index.js)來了解更多，或查看其他[數以千計使用 `standard` 的專案。](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 

@@ -67,8 +67,8 @@ npm install standard --save-dev
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: /RULES-ja.md#semicolons
-[5]: /RULES-ja.md#javascript-standard-style
+[4]: RULES-ja.md#semicolons
+[5]: RULES-ja.md#javascript-standard-style
 
 より良いアイデアを得るには、JavaScript Standard Styleで書かれた[サンプルファイル](https://github.com/expressjs/body-parser/blob/master/index.js)を見てみましょう。
 または、`standard`を使用している[何千ものプロジェクト](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)を参照してください！
