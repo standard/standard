@@ -1,7 +1,7 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## UNRELEASED
 
@@ -21,7 +21,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed rules
 
-- Relax rule: Don't require newlines between *single-line* member functions or class field declarations ([lines-between-class-members](http://eslint.org/docs/rules/lines-between-class-members)) [#1347](https://github.com/standard/standard/issues/1347)
+- Relax rule: Don't require newlines between *single-line* member functions or class field declarations ([lines-between-class-members](https://eslint.org/docs/rules/lines-between-class-members)) [#1347](https://github.com/standard/standard/issues/1347)
 
 ## 13.1.0 - 2019-07-20
 
@@ -165,7 +165,7 @@ compliant.
 ### Changed rules
 
 - Relax rule: Don't mark Rails Asset Pipeline comments (comments that start with `//=`)
-  as errors. ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#918](https://github.com/standard/standard/issues/918)
+  as errors. ([spaced-comment](https://eslint.org/docs/rules/spaced-comment)) [#918](https://github.com/standard/standard/issues/918)
 
 👏 Huge thanks to [@Flet](https://github.com/Flet) for putting together most of this
 release!
@@ -237,35 +237,35 @@ the issues caught by this new version.
   - Disallows using a string instead of an `Error` object
   - Disallows confusing callbacks that do not follow the standard Node.js pattern
 - Disallow any imports that come after non-import statements ([import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)) [#806](https://github.com/standard/standard/issues/806) (1%)
-- Disallow unnecessary return await ([no-return-await](http://eslint.org/docs/rules/no-return-await)) [#695](https://github.com/standard/standard/issues/695) (0%)
-- Disallow comma-dangle in functions ([comma-dangle](http://eslint.org/docs/rules/comma-dangle)) [#787](https://github.com/standard/standard/issues/787) (0%)
+- Disallow unnecessary return await ([no-return-await](https://eslint.org/docs/rules/no-return-await)) [#695](https://github.com/standard/standard/issues/695) (0%)
+- Disallow comma-dangle in functions ([comma-dangle](https://eslint.org/docs/rules/comma-dangle)) [#787](https://github.com/standard/standard/issues/787) (0%)
 - Disallow repeated exports of names or defaults ([import/export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md)) [#806](https://github.com/standard/standard/issues/806) (0%)
 - Disallow import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#806](https://github.com/standard/standard/issues/806) (0%)
 - Disallow Webpack loader syntax in imports ([import/no-webpack-loader-syntax](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)) [#806](https://github.com/standard/standard/issues/806) (0%)
-- Disallow comparing against -0 ([no-compare-neg-zero](http://eslint.org/docs/rules/no-compare-neg-zero)) [#812](https://github.com/standard/standard/issues/812) (0%)
+- Disallow comparing against -0 ([no-compare-neg-zero](https://eslint.org/docs/rules/no-compare-neg-zero)) [#812](https://github.com/standard/standard/issues/812) (0%)
 
 ### Changed rules
 
-- Relax rule: allow using `...rest` to omit properties from an object ([no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)) [#800](https://github.com/standard/standard/issues/800)
+- Relax rule: allow using `...rest` to omit properties from an object ([no-unused-vars](https://eslint.org/docs/rules/no-unused-vars)) [#800](https://github.com/standard/standard/issues/800)
   - This is a common and useful pattern in React/JSX apps!
 - Relax rule: allow Flow `import type` statements ([import/no-duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)) [#599](https://github.com/standard/standard/issues/599)
   - These are no longer considered to be "duplicate imports"
 - Relax rule: Treat `process.exit()` the same as `throw` in code path analysis ([node/process-exit-as-throw](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/process-exit-as-throw.md)) [#699](https://github.com/standard/standard/issues/699)
   - Makes certain other rules work better and give fewer false positives
-- Relax rule: allow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label))
+- Relax rule: allow Unnecessary Labels ([no-extra-label](https://eslint.org/docs/rules/no-extra-label))
   - Redundant, since "no-labels" is already enabled, which is more restrictive
 
 ## 9.0.2 - 2017-03-17
 
 ### Changed rules
 
-- Relax rule: Allow tagged template string expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#822](https://github.com/standard/standard/issues/822)
+- Relax rule: Allow tagged template string expressions ([no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)) [#822](https://github.com/standard/standard/issues/822)
 
 ## 9.0.1 - 2017-03-07
 
 ### Changed rules
 
-- Relax rule: Allow mixing basic operators without parens ([no-mixed-operators](http://eslint.org/docs/rules/no-mixed-operators)) [#816](https://github.com/standard/standard/issues/816)
+- Relax rule: Allow mixing basic operators without parens ([no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)) [#816](https://github.com/standard/standard/issues/816)
   - Specifically, these operators: `+`, `-`, `*`, `/`, `%`, and `**`
 
 ## 9.0.0 - 2017-02-28
@@ -296,24 +296,24 @@ your tests to improve their robustness. [Read about the changes you need to make
 
 *(Estimated % of affected standard users, based on test suite in parens)*
 
-- Disallow mixing different operators without parens ([no-mixed-operators](http://eslint.org/docs/rules/no-mixed-operators)) [#566](https://github.com/standard/standard/issues/566) (5%)
-- Enforce 1 newline at end of file (previously 1 or 2 were ok) ([no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)) [#733](https://github.com/standard/standard/issues/733) (3%)
-- Disallow Unused Expressions ([no-unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)) [#690](https://github.com/standard/standard/issues/690) (3%)
+- Disallow mixing different operators without parens ([no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)) [#566](https://github.com/standard/standard/issues/566) (5%)
+- Enforce 1 newline at end of file (previously 1 or 2 were ok) ([no-multiple-empty-lines](https://eslint.org/docs/rules/no-multiple-empty-lines)) [#733](https://github.com/standard/standard/issues/733) (3%)
+- Disallow Unused Expressions ([no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)) [#690](https://github.com/standard/standard/issues/690) (3%)
   - Note: this affects users of the Chai test framework. [Read about the changes you need to make](https://github.com/standard/standard/issues/690#issuecomment-278533482).
-- Disallow redundant return statements ([no-useless-return](http://eslint.org/docs/rules/no-useless-return)) [#694](https://github.com/standard/standard/issues/694) (1%)
-- Disallow Incorrect Early Use ([no-use-before-define](http://eslint.org/docs/rules/no-use-before-define)) [#636](https://github.com/standard/standard/issues/636) (0%)
-- Enforce that Promise rejections are passed an Error object as a reason ([prefer-promise-reject-errors](http://eslint.org/docs/rules/prefer-promise-reject-errors)) [#777](https://github.com/standard/standard/issues/777) (0%)
-- Enforce comparing `typeof` expressions against string literals ([valid-typeof](http://eslint.org/docs/rules/valid-typeof)) [#629](https://github.com/standard/standard/issues/629) (0%)
-- Enforce spacing around * in generator functions ([generator-star-spacing](http://eslint.org/docs/rules/generator-star-spacing)) [#724](https://github.com/standard/standard/issues/724) (0%)
-- Disallow Unnecessary Labels ([no-extra-label](http://eslint.org/docs/rules/no-extra-label)) [#736](https://github.com/standard/standard/issues/736) (0%)
-- Disallow spacing between template tags and their literals ([template-tag-spacing](http://eslint.org/docs/rules/template-tag-spacing)) [#755](https://github.com/standard/standard/issues/775) (0%)
-- Disallow padding within switch statements and classes ([padded-blocks](http://eslint.org/docs/rules/padded-blocks)) [#610](https://github.com/standard/standard/issues/610) (0%)
-- Enforce that Symbols are passed a description ([symbol-description](http://eslint.org/docs/rules/symbol-description)) [#630](https://github.com/standard/standard/issues/630) (0%)
+- Disallow redundant return statements ([no-useless-return](https://eslint.org/docs/rules/no-useless-return)) [#694](https://github.com/standard/standard/issues/694) (1%)
+- Disallow Incorrect Early Use ([no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)) [#636](https://github.com/standard/standard/issues/636) (0%)
+- Enforce that Promise rejections are passed an Error object as a reason ([prefer-promise-reject-errors](https://eslint.org/docs/rules/prefer-promise-reject-errors)) [#777](https://github.com/standard/standard/issues/777) (0%)
+- Enforce comparing `typeof` expressions against string literals ([valid-typeof](https://eslint.org/docs/rules/valid-typeof)) [#629](https://github.com/standard/standard/issues/629) (0%)
+- Enforce spacing around * in generator functions ([generator-star-spacing](https://eslint.org/docs/rules/generator-star-spacing)) [#724](https://github.com/standard/standard/issues/724) (0%)
+- Disallow Unnecessary Labels ([no-extra-label](https://eslint.org/docs/rules/no-extra-label)) [#736](https://github.com/standard/standard/issues/736) (0%)
+- Disallow spacing between template tags and their literals ([template-tag-spacing](https://eslint.org/docs/rules/template-tag-spacing)) [#755](https://github.com/standard/standard/issues/775) (0%)
+- Disallow padding within switch statements and classes ([padded-blocks](https://eslint.org/docs/rules/padded-blocks)) [#610](https://github.com/standard/standard/issues/610) (0%)
+- Enforce that Symbols are passed a description ([symbol-description](https://eslint.org/docs/rules/symbol-description)) [#630](https://github.com/standard/standard/issues/630) (0%)
 
 ### Changed rules
 
-- Relax rule: allow TypeScript Triple-Slash Directives ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#660](https://github.com/standard/standard/issues/660)
-- Relax rule: allow Flow Comments ([spaced-comment](http://eslint.org/docs/rules/spaced-comment)) [#661](https://github.com/standard/standard/issues/661)
+- Relax rule: allow TypeScript Triple-Slash Directives ([spaced-comment](https://eslint.org/docs/rules/spaced-comment)) [#660](https://github.com/standard/standard/issues/660)
+- Relax rule: allow Flow Comments ([spaced-comment](https://eslint.org/docs/rules/spaced-comment)) [#661](https://github.com/standard/standard/issues/661)
 
 ## 8.6.0 - 2016-11-22
 
@@ -391,7 +391,7 @@ Full changelog below. Cheers!
 
 ### New features
 
-- Upgrade to ESLint v3 (http://eslint.org/docs/user-guide/migrating-to-3.0.0) [#565](https://github.com/standard/standard/pull/565)
+- Upgrade to ESLint v3 (https://eslint.org/docs/user-guide/migrating-to-3.0.0) [#565](https://github.com/standard/standard/pull/565)
   - **BREAKING:** Drop support for node < 4 (this was a decision made by the ESLint team)
 - Expose ESLint's `--fix` command line flag [#540](https://github.com/standard/standard/issues/540) [standard-engine/#107](https://github.com/Flet/standard-engine/issues/107)
   - Lightweight, no additional dependencies, fixes dozens of rules automatically
@@ -400,16 +400,16 @@ Full changelog below. Cheers!
 
 *(Estimated % of affected standard users, based on test suite in parens)*
 
-- Enforce placing object properties on separate lines ([object-property-newline](http://eslint.org/docs/rules/object-property-newline)) [#524](https://github.com/standard/standard/issues/524) (2%)
-- Require block comments to be balanced ([spaced-comment "balanced"](http://eslint.org/docs/rules/spaced-comment)) [#572](https://github.com/standard/standard/issues/572) (2%)
-- Disallow constant expressions in conditions ([no-constant-condition](http://eslint.org/docs/rules/no-constant-condition)) [#563](https://github.com/standard/standard/issues/563) (1%)
-- Disallow renaming import, export, and destructured assignments to the same name ([no-useless-rename](http://eslint.org/docs/rules/no-useless-rename)) [#537](https://github.com/standard/standard/issues/537) (0%)
-- Disallow spacing between rest and spread operators and their expressions ([rest-spread-spacing](http://eslint.org/docs/rules/rest-spread-spacing)) [#567](https://github.com/standard/standard/issues/567) (0%)
-- Disallow the Unicode Byte Order Mark (BOM) ([unicode-bom](http://eslint.org/docs/rules/unicode-bom)) [#538](https://github.com/standard/standard/issues/538) (0%)
-- Disallow assignment to native objects/global variables ([no-global-assign](http://eslint.org/docs/rules/no-global-assign)) [#596](https://github.com/standard/standard/issues/596) (0%)
-- Disallow negating the left operand of relational operators ([no-unsafe-negation](http://eslint.org/docs/rules/no-unsafe-negation)) [#595](https://github.com/standard/standard/issues/595) (0%)
-- Disallow template literal placeholder syntax in regular strings ([no-template-curly-in-string](http://eslint.org/docs/rules/no-template-curly-in-string)) [#594](https://github.com/standard/standard/issues/594) (0%)
-- Disallow tabs in file ([no-tabs](http://eslint.org/docs/rules/no-tabs)) [#593](https://github.com/standard/standard/issues/593) (0%)
+- Enforce placing object properties on separate lines ([object-property-newline](https://eslint.org/docs/rules/object-property-newline)) [#524](https://github.com/standard/standard/issues/524) (2%)
+- Require block comments to be balanced ([spaced-comment "balanced"](https://eslint.org/docs/rules/spaced-comment)) [#572](https://github.com/standard/standard/issues/572) (2%)
+- Disallow constant expressions in conditions ([no-constant-condition](https://eslint.org/docs/rules/no-constant-condition)) [#563](https://github.com/standard/standard/issues/563) (1%)
+- Disallow renaming import, export, and destructured assignments to the same name ([no-useless-rename](https://eslint.org/docs/rules/no-useless-rename)) [#537](https://github.com/standard/standard/issues/537) (0%)
+- Disallow spacing between rest and spread operators and their expressions ([rest-spread-spacing](https://eslint.org/docs/rules/rest-spread-spacing)) [#567](https://github.com/standard/standard/issues/567) (0%)
+- Disallow the Unicode Byte Order Mark (BOM) ([unicode-bom](https://eslint.org/docs/rules/unicode-bom)) [#538](https://github.com/standard/standard/issues/538) (0%)
+- Disallow assignment to native objects/global variables ([no-global-assign](https://eslint.org/docs/rules/no-global-assign)) [#596](https://github.com/standard/standard/issues/596) (0%)
+- Disallow negating the left operand of relational operators ([no-unsafe-negation](https://eslint.org/docs/rules/no-unsafe-negation)) [#595](https://github.com/standard/standard/issues/595) (0%)
+- Disallow template literal placeholder syntax in regular strings ([no-template-curly-in-string](https://eslint.org/docs/rules/no-template-curly-in-string)) [#594](https://github.com/standard/standard/issues/594) (0%)
+- Disallow tabs in file ([no-tabs](https://eslint.org/docs/rules/no-tabs)) [#593](https://github.com/standard/standard/issues/593) (0%)
 
 ### Changed rules
 
@@ -449,18 +449,18 @@ export * from 'bar'
 
 *Estimated % of affected standard users, based on test suite*
 
-- Require camelCase ([camelcase](http://eslint.org/docs/rules/camelcase)) [4%]
-- Disallow unnecessary escape usage ([no-useless-escape](http://eslint.org/docs/rules/no-useless-escape)) [4% -- but, including many bugs]
-- Disallow duplicate imports ([no-duplicate-imports](http://eslint.org/docs/rules/no-duplicate-imports)) [0%]
-- Disallow unmodified conditions of loops ([no-unmodified-loop-condition](http://eslint.org/docs/2.0.0/rules/no-unmodified-loop-condition)) [0%]
-- Disallow whitespace before properties ([no-whitespace-before-property](http://eslint.org/docs/2.0.0/rules/no-whitespace-before-property)) [0%]
-- Disallow control flow statements in `finally` blocks ([no-unsafe-finally](http://eslint.org/docs/rules/no-unsafe-finally)) [0%]
-- Disallow unnecessary computed property keys on objects ([no-useless-computed-key](http://eslint.org/docs/rules/no-useless-computed-key)) [0%]
+- Require camelCase ([camelcase](https://eslint.org/docs/rules/camelcase)) [4%]
+- Disallow unnecessary escape usage ([no-useless-escape](https://eslint.org/docs/rules/no-useless-escape)) [4% -- but, including many bugs]
+- Disallow duplicate imports ([no-duplicate-imports](https://eslint.org/docs/rules/no-duplicate-imports)) [0%]
+- Disallow unmodified conditions of loops ([no-unmodified-loop-condition](https://eslint.org/docs/2.0.0/rules/no-unmodified-loop-condition)) [0%]
+- Disallow whitespace before properties ([no-whitespace-before-property](https://eslint.org/docs/2.0.0/rules/no-whitespace-before-property)) [0%]
+- Disallow control flow statements in `finally` blocks ([no-unsafe-finally](https://eslint.org/docs/rules/no-unsafe-finally)) [0%]
+- Disallow unnecessary computed property keys on objects ([no-useless-computed-key](https://eslint.org/docs/rules/no-useless-computed-key)) [0%]
 - Validate spacing before closing bracket in JSX ([react/jsx-space-before-closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)) [0%]
 
 ### Removed rules
 
-- Require parens in arrow function arguments ([arrow-parens](http://eslint.org/docs/rules/arrow-parens))
+- Require parens in arrow function arguments ([arrow-parens](https://eslint.org/docs/rules/arrow-parens))
 
 ## 6.0.8 - 2016-03-07
 
@@ -517,23 +517,23 @@ The goal of this release is to make `standard` faster to install, and simpler t
 
 *The percentage (%) of users that rule changes will effect, based on real-world testing of the top ~400 npm packages is denoted in brackets.*
 
-- Disallow `__dirname`/`__filename` string concatenation ([#403](https://github.com/standard/standard/issues/403)) ([no-path-concat](http://eslint.org/docs/2.0.0/rules/no-path-concat)) [5%]
-- Require parens in arrow function arguments  ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](http://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
+- Disallow `__dirname`/`__filename` string concatenation ([#403](https://github.com/standard/standard/issues/403)) ([no-path-concat](https://eslint.org/docs/2.0.0/rules/no-path-concat)) [5%]
+- Require parens in arrow function arguments  ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](https://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
 - Ensure that `new Promise()` is instantiated with the parameter names
 `resolve`, `reject` ([#282](https://github.com/standard/standard/issues/282)) ([promise/param-names](https://github.com/xjamundx/eslint-plugin-promise#param-names)) [1%]
-- Enforce Usage of Spacing in Template Strings ([template-curly-spacing](http://eslint.org/docs/2.0.0/rules/template-curly-spacing)) [1%]
+- Enforce Usage of Spacing in Template Strings ([template-curly-spacing](https://eslint.org/docs/2.0.0/rules/template-curly-spacing)) [1%]
 - Template strings are only allowed when necessary, i.e. template string features are being used (eslint got stricter: https://github.com/eslint/eslint/issues/5147) [1%]
 - Better dead code detection after conditional statements (eslint got stricter) [1%]
-- Enforce spaces around `*` in `yield * something` ([#335](https://github.com/standard/standard/issues/335)) ([yield-star-spacing](http://eslint.org/docs/2.0.0/rules/yield-star-spacing)) [0%]
-- Disallow labels on loops/switch statements too (made rule stricter) ([no-labels](http://eslint.org/docs/2.0.0/rules/no-labels.html)) [0%]
-- Disallow unnecessary constructor ([no-useless-constructor](http://eslint.org/docs/2.0.0/rules/no-useless-constructor)) [0%]
-- Disallow empty destructuring patterns ([no-empty-pattern](http://eslint.org/docs/2.0.0/rules/no-empty-pattern)) [0%]
-- Disallow Symbol Constructor ([no-new-symbol](http://eslint.org/docs/2.0.0/rules/no-new-symbol)) [0%]
-- Disallow Self Assignment ([no-self-assign](http://eslint.org/docs/2.0.0/rules/no-self-assign)) [0%]
+- Enforce spaces around `*` in `yield * something` ([#335](https://github.com/standard/standard/issues/335)) ([yield-star-spacing](https://eslint.org/docs/2.0.0/rules/yield-star-spacing)) [0%]
+- Disallow labels on loops/switch statements too (made rule stricter) ([no-labels](https://eslint.org/docs/2.0.0/rules/no-labels.html)) [0%]
+- Disallow unnecessary constructor ([no-useless-constructor](https://eslint.org/docs/2.0.0/rules/no-useless-constructor)) [0%]
+- Disallow empty destructuring patterns ([no-empty-pattern](https://eslint.org/docs/2.0.0/rules/no-empty-pattern)) [0%]
+- Disallow Symbol Constructor ([no-new-symbol](https://eslint.org/docs/2.0.0/rules/no-new-symbol)) [0%]
+- Disallow Self Assignment ([no-self-assign](https://eslint.org/docs/2.0.0/rules/no-self-assign)) [0%]
 
 ### Removed Rules
 
-- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384))  ([radix](http://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
+- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384))  ([radix](https://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
 
 ### Expose eslint configuration via command line options and `package.json`
 
