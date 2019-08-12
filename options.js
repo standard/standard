@@ -1,11 +1,11 @@
-var eslint = require('eslint')
-var path = require('path')
-var pkg = require('./package.json')
+const eslint = require('eslint')
+const path = require('path')
+const pkg = require('./package.json')
 
 module.exports = {
   bugs: pkg.bugs.url,
   cmd: 'standard',
-  eslint: eslint,
+  eslint,
   eslintConfig: {
     configFile: path.join(__dirname, 'eslintrc.json')
   },
