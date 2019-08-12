@@ -6,6 +6,7 @@
     "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
     "no-self-assign": ["error", { "props": true }],
     "quotes": ["error", "single", { "avoidEscape": true }],
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "|>": "before" } }],
 
     "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always", "beforeClosing": "never" }]
   }

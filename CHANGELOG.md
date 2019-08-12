@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Forbid import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#861](https://github.com/standard/standard/issues/861) [#1343](https://github.com/standard/standard/issues/1343) (0%)
 - JSX: Enforce no spaces before closing brackets (i.e. no `<div >` or `</div >`) [#1348](https://github.com/standard/standard/issues/1348) [eslint-config-standard-jsx/38](https://github.com/standard/eslint-config-standard-jsx/pull/38) (0%)
 - Disallow template literals when placeholders or tagged template features are not used. ([quotes](https://eslint.org/docs/rules/quotes)) [#838](https://github.com/standard/standard/issues/838) [eslint-config-standard/#151](https://github.com/standard/eslint-config-standard/pull/151) (1%)
+- Pipeline operators should appear at the start of a line ([operator-linebreak](https://eslint.org/docs/rules/operator-linebreak)) [eslint-config-standard/#121](https://github.com/standard/eslint-config-standard/pull/121) (0%)
 
 ### Changed rules
 
