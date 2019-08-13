@@ -20,6 +20,7 @@
     }],
     "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
     "no-self-assign": ["error", { "props": true }],
+    "no-void": "error",
     "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "|>": "before" } }],
     "quotes": ["error", "single", { "avoidEscape": true }],
 
