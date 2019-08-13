@@ -1,5 +1,14 @@
 {
   "extends": ["standard", "standard-jsx"],
+
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+
   "rules": {
     "dot-notation": ["error", { "allowKeywords": true }],
     "import/no-absolute-path": ["error", { "esmodule": true, "commonjs": true, "amd": false }],

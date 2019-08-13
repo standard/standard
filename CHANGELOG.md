@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### New features
 
+- Support ES 2019, the latest version of the ECMAScript specification.
 - Ignore patterns from `.git/info/exclude` in addition to `.gitignore`. [#1277](https://github.com/standard/standard/issues/1277).
 
 ### New rules
