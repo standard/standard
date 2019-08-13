@@ -26,6 +26,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 - Relax rule: Don't require newlines between *single-line* member functions or class field declarations ([lines-between-class-members](https://eslint.org/docs/rules/lines-between-class-members)) [#1347](https://github.com/standard/standard/issues/1347)
 - Relax rule: Don't check indentation on template literal children (work around for ESLint bug) ([indent](https://eslint.org/docs/rules/indent)) [#1176](https://github.com/standard/standard/issues/1176)
+- Relax rule: Disallow labels that are variables names (because all labels are already disallowed) ([no-label-var](https://eslint.org/docs/rules/no-label-var)) [eslint-config-standard/#132](https://github.com/standard/eslint-config-standard/pull/132)
 
 ## 13.1.0 - 2019-07-20
 
