@@ -35,7 +35,12 @@
     "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "|>": "before" } }],
     "quotes": ["error", "single", { "avoidEscape": true }],
 
-    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always", "beforeClosing": "never" }],
+    "react/jsx-tag-spacing": ["error", {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }],
     "react/jsx-closing-tag-location": "error",
     "react/jsx-wrap-multilines": ["error", {
       "declaration": "parens-new-line",
