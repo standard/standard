@@ -36,6 +36,7 @@
     "quotes": ["error", "single", { "avoidEscape": true }],
 
     "react/jsx-boolean-value": "error",
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
     "react/jsx-tag-spacing": ["error", {
       "closingSlash": "never",
