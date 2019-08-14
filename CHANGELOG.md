@@ -26,6 +26,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Forbid import of modules using absolute paths ([import/no-absolute-path](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md)) [#861](https://github.com/standard/standard/issues/861) [#1343](https://github.com/standard/standard/issues/1343) (0%)
 - Enforce no spaces before JSX closing brackets (i.e. no `<div >` or `</div >`) ([react/jsx-tag-spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)) [#1348](https://github.com/standard/standard/issues/1348) [eslint-config-standard-jsx/38](https://github.com/standard/eslint-config-standard-jsx/pull/38) (0%)
 - Require JSX closing tag to be aligned with the opening tag ([react/jsx-closing-tag-location](https://eslint.org/docs/rules/react/jsx-closing-tag-location)) [#1358](https://github.com/standard/standard/issues/1358) (0%)
+- Prevent missing parentheses around multiline JSX ([react/jsx-wrap-multilines](https://eslint.org/docs/rules/react/jsx-wrap-multilines)) [#710](https://github.com/standard/standard/issues/710) (0%)
 - Pipeline operators should appear at the start of a line ([operator-linebreak](https://eslint.org/docs/rules/operator-linebreak)) [eslint-config-standard/#121](https://github.com/standard/eslint-config-standard/pull/121) (0%)
 - Disallow use of the void operator ([no-void](https://eslint.org/docs/rules/no-void)) [eslint-config-standard/#135](https://github.com/standard/eslint-config-standard/pull/135) (0%)
 
