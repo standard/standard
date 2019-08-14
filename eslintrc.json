@@ -35,6 +35,7 @@
     "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "|>": "before" } }],
     "quotes": ["error", "single", { "avoidEscape": true }],
 
+    "react/jsx-boolean-value": "error",
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
     "react/jsx-tag-spacing": ["error", {
       "closingSlash": "never",
