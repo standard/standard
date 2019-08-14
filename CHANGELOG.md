@@ -9,7 +9,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 - Support ES 2019, the latest version of the ECMAScript specification. [eslint-config-standard/e04e06](https://github.com/standard/eslint-config-standard/commit/e04e0615fdea44567bfb2fd1f868e3ab6751bda3)
 - Lint `*.mjs` and `*.cjs` files automatically by default [#1009](https://github.com/standard/standard/issues/1009)
-- Ignore patterns from `.git/info/exclude` in addition to `.gitignore`. [#1277](https://github.com/standard/standard/issues/1277).
+- Ignore patterns from `.git/info/exclude` in addition to `.gitignore`. [#1277](https://github.com/standard/standard/issues/1277)
+
+### Changed features
+
+- Remove `bundle.js` from the default list of ignored files [#743](https://github.com/standard/standard/issues/743)
 
 ### New rules
 
