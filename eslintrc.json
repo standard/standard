@@ -38,6 +38,7 @@
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-handler-names": "error",
     "react/jsx-indent": ["error", 2, { "checkAttributes": true, "indentLogicalExpressions": true }],
     "react/jsx-key": "error",
     "react/jsx-no-comment-textnodes": "error",
