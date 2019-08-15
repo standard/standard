@@ -38,6 +38,7 @@
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-pascal-case": ["error", { "allowAllCaps": false }],
     "react/jsx-fragments": ["error", "syntax"],
     "react/jsx-props-no-multi-spaces": "error",
     "react/jsx-tag-spacing": ["error", {
