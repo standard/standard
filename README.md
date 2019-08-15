@@ -542,7 +542,7 @@ Or, add this to `package.json`:
 ### TypeScript
 
 To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` as the parser,
-`@typescript-eslint/eslint-plugin` as a plugin, and tell standard to lint `*.ts` files (since it
+`@typescript-eslint/eslint-plugin` as a plugin, and tell standard to lint `**/*.ts` files (since it
 doesn't by default).
 
 ```bash
@@ -552,7 +552,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 Then run:
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
 ```
 
 Or, add this to `package.json`:
@@ -569,7 +569,7 @@ Or, add this to `package.json`:
 With that in `package.json`, you can run:
 
 ```bash
-standard *.ts
+standard **/*.ts
 ```
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
