@@ -38,6 +38,7 @@
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-no-target-blank": ["error", { "enforceDynamicLinks": "always" }],
     "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
     "react/jsx-pascal-case": ["error", { "allowAllCaps": false }],
     "react/jsx-fragments": ["error", "syntax"],
