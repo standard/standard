@@ -37,6 +37,11 @@
 
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
+    "react/jsx-curly-spacing": ["error", {
+      "attributes": { "when": "never" },
+      "children": { "when": "never" },
+      "allowMultiline": true
+    }],
     "react/jsx-curly-newline": ["error", { "multiline": "consistent", "singleline": "consistent" }],
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
     "react/jsx-handler-names": "error",
