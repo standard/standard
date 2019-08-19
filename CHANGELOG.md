@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Support ES 2019, the latest version of the ECMAScript specification. [eslint-config-standard/e04e06](https://github.com/standard/eslint-config-standard/commit/e04e0615fdea44567bfb2fd1f868e3ab6751bda3)
 - Lint `*.mjs` and `*.cjs` files automatically by default [#1009](https://github.com/standard/standard/issues/1009)
 - Ignore patterns from `.git/info/exclude` in addition to `.gitignore`. [#1277](https://github.com/standard/standard/issues/1277)
+- Add [`funding`](https://github.com/feross/funding), an open source funding experiment.
 
 ### Changed features
 
