@@ -16,6 +16,11 @@ JSX, and `.mjs` files for ES modules.
 When you upgrade, consider running `standard --fix` to automatically format your
 code to match the newly added rules.
 
+`standard` keeps growing! The latest stats show that `standard` and
+`eslint-standard-*` shareable configs are dependended upon by **318,512 GitHub
+repositories** and **33,349 public npm packages**. Thanks for spreading the
+word!
+
 ❤️ If you enjoy StandardJS and want to support future releases, check out
 Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
 GitHub is matching donations, so your dollars go twice as far! 🚀
