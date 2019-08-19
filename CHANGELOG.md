@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## UNRELEASED
+## 14.0.0 - 2019-08-19
+
+We're super excited to announce `standard` 14!
+
+As with every new major release, there are lots of new rules in 14.0.0 designed
+to help catch bugs and make programmer intent more explicit. This release brings
+support for ES 2019, the latest version of the ECMAScript specification, as well
+as many quality-of-life improvements for users who use tagged template strings,
+JSX, and `.mjs` files for ES modules.
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the newly added rules.
+
+❤️ If you enjoy StandardJS and want to support future releases, check out
+Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
+GitHub is matching donations, so your dollars go twice as far! 🚀
 
 ### New features
 
