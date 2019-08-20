@@ -781,7 +781,7 @@ and an awesome list of
 
 ## Security Policies and Procedures
 
-The `standard` team and community take all security bugs in `standard` seriously. Please see our [security policies and procedures](https://github.com/standard/standard/blob/master/SECURITY.md) document to learn how to report issues.
+The `standard` team and community take all security bugs in `standard` seriously. Please see our [security policies and procedures](https://github.com/standard/.github/blob/master/SECURITY.md) document to learn how to report issues.
 
 ## License
 
