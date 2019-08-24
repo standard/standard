@@ -20,7 +20,6 @@
     "eslint-plugin-promise": "~4.2.1",
     "eslint-plugin-react": "~7.14.2",
     "eslint-plugin-standard": "~4.0.0",
-    "funding": "^1.0.0",
     "standard-engine": "^12.0.0"
   },
   "devDependencies": {
