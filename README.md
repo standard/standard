@@ -39,6 +39,8 @@ This module saves you (and others!) time in three ways:
 
 Give it a try by running `npx standard --fix` right now!
 
+Now ad free!
+
 ### Open Source Supporters
 
 <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
@@ -79,13 +81,13 @@ The easiest way to use JavaScript Standard Style is to install it globally as a
 Node command line program. Run the following command in Terminal:
 
 ```bash
-$ npm install standard --global
+$ npm i @wheresalice/standard-adfree --global
 ```
 
 Or, you can install `standard` locally, for use in a single project:
 
 ```bash
-$ npm install standard --save-dev
+$ npm i @wheresalice/standard-adfree --save-dev
 ```
 
 *Note: To run the preceding commands, [Node.js](http://nodejs.org) and [npm](https://npmjs.com) must be installed.*
