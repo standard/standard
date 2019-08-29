@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support ES 2020, the latest version of the ECMAScript specification, which includes support for Dynamic Imports and `BigInt`. [#1378](https://github.com/standard/standard/issues/1378)
 - Security: Upgrade `eslint` to `6.2.2` to fix security issue ([blog post](https://eslint.org/blog/2019/08/eslint-v6.2.1-released)) ([security advisory](https://github.com/mysticatea/eslint-utils/security/advisories/GHSA-3gx7-xhv7-5mx3))
-- Remove [`funding`](https://github.com/feross/funding). See [Recap of the `funding` experiment](https://feross.org/funding-experiment-recap) and [Process of Elimination](https://blog.licensezero.com/2019/08/24/Process-of-Elimination.html) for thoughts and learnings.
+- Remove [`funding`](https://github.com/feross/funding). See [Recap of the `funding` experiment](https://feross.org/funding-experiment-recap) for thoughts and learnings.
 
 NOTE: If you use `standard` with the `--parser babel-eslint` option, please ensure that you update `babel-eslint` to `10.0.3` or later for compatibility with this version of `standard`.
 
