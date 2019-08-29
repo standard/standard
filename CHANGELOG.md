@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-## 14.1.0 - 2019-08-27
+## 14.1.0 - 2019-08-28
 
 - Support ES 2020, the latest version of the ECMAScript specification, which includes support for Dynamic Imports and `BigInt`. [#1378](https://github.com/standard/standard/issues/1378)
 - Security: Upgrade `eslint` to `6.2.2` to fix security issue ([blog post](https://eslint.org/blog/2019/08/eslint-v6.2.1-released)) ([security advisory](https://github.com/mysticatea/eslint-utils/security/advisories/GHSA-3gx7-xhv7-5mx3))
