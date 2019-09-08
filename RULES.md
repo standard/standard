@@ -1323,25 +1323,13 @@ your code.
 
   This is the only gotcha with omitting semicolons, and `standard` protects you from this potential issue.
 
-  (The full list is: `[`, `(`, `` ` ``, `+`, `*`, `/`, `-`, `,`, `.`, but most of these will never appear at the start of a line in real code.)
-
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
+  eslint: [`no-unexpected-start`](http://eslint.org/docs/rules/no-unexpected-start)
 
   ```js
   // ✓ ok
-  ;(function () {
-    window.alert('ok')
-  }())
-
-  // ✗ avoid
-  (function () {
-    window.alert('ok')
-  }())
-  ```
-
-  ```js
-  // ✓ ok
-  ;[1, 2, 3].forEach(bar)
+  var nums = [1, 2, 3]
+  nums.forEach(bar)
 
   // ✗ avoid
   [1, 2, 3].forEach(bar)
@@ -1349,30 +1337,15 @@ your code.
 
   ```js
   // ✓ ok
-  ;`hello`.indexOf('o')
+  {
+    window.alert('ok')
+  }
 
   // ✗ avoid
-  `hello`.indexOf('o')
+  (function () {
+    window.alert('ok')
+  }())
   ```
-
-  Note: If you're often writing code like this, you may be trying to be too clever.
-
-  Clever short-hands are discouraged, in favor of clear and readable expressions, whenever
-  possible.
-
-  Instead of this:
-
-  ```js
-  ;[1, 2, 3].forEach(bar)
-  ```
-
-  This is strongly preferred:
-
-  ```js
-  var nums = [1, 2, 3]
-  nums.forEach(bar)
-  ```
-
 
 ## Helpful reading
 
