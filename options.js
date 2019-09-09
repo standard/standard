@@ -7,7 +7,7 @@ module.exports = {
   cmd: 'standard',
   eslint,
   eslintConfig: {
-    configFile: path.join(__dirname, 'eslintrc.json')
+    configFile: path.join(__dirname, '.eslintrc.json')
   },
   homepage: pkg.homepage,
   tagline: 'Use JavaScript Standard Style',
