@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [14.3.0] - 2019-09-14
+
+- Update `eslint` to `~6.4.0`
+
 ## [14.2.0] - 2019-09-11
 
 - Update `eslint` to `~6.3.0`
@@ -854,7 +858,9 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v14.2.0...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v14.3.0...HEAD
+
+[14.3.0]: https://github.com/standard/standard/compare/v14.2.0...v14.3.0
 
 [14.2.0]: https://github.com/standard/standard/compare/v14.1.0...v14.2.0
 
