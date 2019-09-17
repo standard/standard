@@ -475,8 +475,6 @@ $ standard --parser babel-eslint
 }
 ```
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install babel-eslint --global`で`babel-eslint`もグローバルインストールしてください。
-
 <h2 id="can-i-use-a-javascript-language-variant-like-flow-or-typescript">FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？</h2>
 
 `standard`は最新のECMAScriptの機能をサポートしています。しかしながら、FlowやTypeScriptは言語に新たな構文を追加するため、そのまま使用することはできません。
@@ -510,8 +508,6 @@ $ standard --parser babel-eslint --plugin flowtype
 
 *注： `plugin`と`plugins`は同じです。*
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install babel-eslint eslint-plugin-flowtype --global`で`babel-eslint`と`eslint-plugin-flowtype`もグローバルインストールしてください。
-
 ### TypeScript
 
 TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
@@ -542,8 +538,6 @@ $ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint
 ```bash
 standard *.ts
 ```
-
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install @typescript-eslint/parser eslint-plugin-typescript --global`で`@typescript-eslint/parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
 
 <h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
 
