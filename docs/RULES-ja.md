@@ -35,8 +35,12 @@
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
   ```js
-  console.log('hello there')
-  $("<div class='box'>")
+  console.log('hello there')    // ✓ ok
+  console.log("hello there")    // ✗ avoid
+  console.log(`hello there`)    // ✗ avoid
+
+  $("<div class='box'>")        // ✓ ok
+  console.log(`hello ${name}`)  // ✓ ok
   ```
 
 * **未使用の変数は定義しない。**
