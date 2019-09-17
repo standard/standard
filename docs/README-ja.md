@@ -29,49 +29,17 @@
 
 このモジュールは、3つの方法であなたの（そして他の人の！）時間を節約します。：
 
-- **設定不要** プロジェクトに一貫性のあるスタイルを適用する最も簡単な方法です。単に入れるだけ！
+- **設定不要** プロジェクトのコード品質を高める最も簡単な方法です。決断はいりません。管理するための`.eslintrc`ファイルも不要です。ただこれだけで動作します。
 - **コードを自動的にフォーマット** ただ`standard --fix`を実行するだけで、汚いコードや一貫性のないコードにサヨナラしましょう。
 - **スタイルの問題やプログラマーのエラーを早期にキャッチ** レビュアーと作業者の間の往復をなくすことで、貴重なコードレビューの時間を節約します。
 
-導入するために考えなければならないことも、管理するための`.eslintrc`、`.jshintrc`、`.jscsrc`ファイルも必要ありません。ただこれだけで動作します。
-
-インストール方法：
-
-```
-npm install standard --save-dev
-```
+今すぐ`npx standard --fix`を実行して、試してみましょう！
 
 ### オープンソースサポーター
 
 <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
 
 [Become a supporter!](https://feross.org/thanks/)
-
-## StandardJS — ルール
-
-- **2スペース** – インデントのため
-- **文字列にはシングルクォート** – エスケープを避ける場合を除く
-- **未使用の変数なし** – 多くのバグをキャッチ！
-- **セミコロンなし** – [It's][1] [fine.][2] [Really!][3] (訳注: 試してみなって！マジで良いぞ！)
-  - [詳細][4]
-- **キーワードの後にスペース** `if (condition) { ... }`
-- **関数名の後にスペース** `function name (arg) { ... }`
-- 常に`==`ではなく`===`を使用 – ただし`obj == null`は`null || undefined`をチェックするために許容されています
-- 常にnode.jsの`err`引数をハンドル
-- ファイルの先頭に`/* global */`コメントでブラウザのグローバルオブジェクトを宣言
-  - `open`、`length`、`event`、`name`のようなあいまいな名前のグローバルオブジェクトの誤用を防ぎます
-  - 例： `/* global alert, prompt */`
-  - 例外： `window`、`document`、`navigator`
-- **そして[もっと良いこと色々][5]** – *`standard`を今すぐ試そう！*
-
-[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES-ja.md#semicolons
-[5]: RULES-ja.md#javascript-standard-style
-
-より良いアイデアを得るには、JavaScript Standard Styleで書かれた[サンプルファイル](https://github.com/expressjs/body-parser/blob/master/index.js)を見てみましょう。
-または、`standard`を使用している[何千ものプロジェクト](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)を参照してください！
 
 ## 目次
 
