@@ -476,7 +476,7 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`**/*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
 ```bash
 npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
@@ -485,7 +485,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -502,7 +502,7 @@ $ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint
 `package.json`にこれを追加すると、次のコマンドが実行できます。：
 
 ```bash
-standard *.ts
+standard **/*.ts
 ```
 
 <h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
