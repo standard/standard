@@ -152,8 +152,6 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 
 <h2 id="#who-uses-javascript-standard-style">誰がJavaScript Standard Styleを使用していますか？</h2>
 
-多くの人々！
-
 [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
 |---|---|---|---|
 
