@@ -695,7 +695,7 @@ var opts = {
 
 <h2 id="security-policies-and-procedures">セキュリティポリシーと手続き</h2>
 
-`standard`チームとコミュニティは、`standard`におけるすべてのバグを真摯に受け止めています。問題を報告する方法については、[security policies and procedures](https://github.com/standard/standard/blob/master/SECURITY.md)を参照してください。
+`standard`チームとコミュニティは、`standard`におけるすべてのバグを真摯に受け止めています。問題を報告する方法については、[security policies and procedures](https://github.com/standard/.github/blob/master/SECURITY.md)を参照してください。
 
 <h2 id="license">ライセンス</h2>
 
