@@ -715,6 +715,10 @@ var opts = {
 
 多くの **[エディタープラグイン](#are-there-text-editor-plugins)** 、 **[`standard`を使用しているnpmパッケージ](https://github.com/standard/standard-packages)** のリスト、 **[`standard`のエコシステムのパッケージ](https://github.com/standard/awesome-standard)** の素晴らしいリストもあります。
 
+<h2 id="security-policies-and-procedures">セキュリティポリシーと手続き</h2>
+
+`standard`チームとコミュニティは、`standard`におけるすべてのバグを真摯に受け止めています。問題を報告する方法については、[security policies and procedures](https://github.com/standard/standard/blob/master/SECURITY.md)を参照してください。
+
 <h2 id="license">ライセンス</h2>
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).
