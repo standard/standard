@@ -514,7 +514,7 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
 ```bash
 npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
