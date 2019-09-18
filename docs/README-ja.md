@@ -7,6 +7,7 @@
 </h1>
 
 <p align="center">
+    <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
   <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
@@ -29,49 +30,17 @@
 
 このモジュールは、3つの方法であなたの（そして他の人の！）時間を節約します。：
 
-- **設定不要** プロジェクトに一貫性のあるスタイルを適用する最も簡単な方法です。単に入れるだけ！
+- **設定不要** プロジェクトのコード品質を高める最も簡単な方法です。決断はいりません。管理するための`.eslintrc`ファイルも不要です。ただこれだけで動作します。
 - **コードを自動的にフォーマット** ただ`standard --fix`を実行するだけで、汚いコードや一貫性のないコードにサヨナラしましょう。
 - **スタイルの問題やプログラマーのエラーを早期にキャッチ** レビュアーと作業者の間の往復をなくすことで、貴重なコードレビューの時間を節約します。
 
-導入するために考えなければならないことも、管理するための`.eslintrc`、`.jshintrc`、`.jscsrc`ファイルも必要ありません。ただこれだけで動作します。
-
-インストール方法：
-
-```
-npm install standard --save-dev
-```
+今すぐ`npx standard --fix`を実行して、試してみましょう！
 
 ### オープンソースサポーター
 
 <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
 
 [Become a supporter!](https://feross.org/thanks/)
-
-## StandardJS — ルール
-
-- **2スペース** – インデントのため
-- **文字列にはシングルクォート** – エスケープを避ける場合を除く
-- **未使用の変数なし** – 多くのバグをキャッチ！
-- **セミコロンなし** – [It's][1] [fine.][2] [Really!][3] (訳注: 試してみなって！マジで良いぞ！)
-  - [詳細][4]
-- **キーワードの後にスペース** `if (condition) { ... }`
-- **関数名の後にスペース** `function name (arg) { ... }`
-- 常に`==`ではなく`===`を使用 – ただし`obj == null`は`null || undefined`をチェックするために許容されています
-- 常にnode.jsの`err`引数をハンドル
-- ファイルの先頭に`/* global */`コメントでブラウザのグローバルオブジェクトを宣言
-  - `open`、`length`、`event`、`name`のようなあいまいな名前のグローバルオブジェクトの誤用を防ぎます
-  - 例： `/* global alert, prompt */`
-  - 例外： `window`、`document`、`navigator`
-- **そして[もっと良いこと色々][5]** – *`standard`を今すぐ試そう！*
-
-[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
-[3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES-ja.md#semicolons
-[5]: RULES-ja.md#javascript-standard-style
-
-より良いアイデアを得るには、JavaScript Standard Styleで書かれた[サンプルファイル](https://github.com/expressjs/body-parser/blob/master/index.js)を見てみましょう。
-または、`standard`を使用している[何千ものプロジェクト](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)を参照してください！
 
 ## 目次
 
@@ -183,8 +152,6 @@ JavaScript Standard Styleの美しさは、シンプルなことです。作業�
 ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。このトークでは、リントについて、`standard`と`eslint`の使い分けについて、そして`prettier`との比較について学ぶことができます。
 
 <h2 id="#who-uses-javascript-standard-style">誰がJavaScript Standard Styleを使用していますか？</h2>
-
-多くの人々！
 
 [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
 |---|---|---|---|
@@ -475,8 +442,6 @@ $ standard --parser babel-eslint
 }
 ```
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install babel-eslint --global`で`babel-eslint`もグローバルインストールしてください。
-
 <h2 id="can-i-use-a-javascript-language-variant-like-flow-or-typescript">FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？</h2>
 
 `standard`は最新のECMAScriptの機能をサポートしています。しかしながら、FlowやTypeScriptは言語に新たな構文を追加するため、そのまま使用することはできません。
@@ -510,11 +475,9 @@ $ standard --parser babel-eslint --plugin flowtype
 
 *注： `plugin`と`plugins`は同じです。*
 
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install babel-eslint eslint-plugin-flowtype --global`で`babel-eslint`と`eslint-plugin-flowtype`もグローバルインストールしてください。
-
 ### TypeScript
 
-TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`eslint-plugin-typescript`をプラグインとして`standard`を実行し、`*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`**/*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
 ```bash
 npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
@@ -523,7 +486,7 @@ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-de
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin *.ts
+$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -540,10 +503,8 @@ $ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint
 `package.json`にこれを追加すると、次のコマンドが実行できます。：
 
 ```bash
-standard *.ts
+standard **/*.ts
 ```
-
-もし`standard`がグローバルインストールされている場合（つまり`npm install standard --global`）、`npm install @typescript-eslint/parser eslint-plugin-typescript --global`で`@typescript-eslint/parser`と`eslint-plugin-typescript`もグローバルインストールしてください。
 
 <h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
 
@@ -731,6 +692,10 @@ var opts = {
 - **[standardx](https://github.com/standard/standardx)** - カスタマイズ可能なstandard
 
 多くの **[エディタープラグイン](#are-there-text-editor-plugins)** 、 **[`standard`を使用しているnpmパッケージ](https://github.com/standard/standard-packages)** のリスト、 **[`standard`のエコシステムのパッケージ](https://github.com/standard/awesome-standard)** の素晴らしいリストもあります。
+
+<h2 id="security-policies-and-procedures">セキュリティポリシーと手続き</h2>
+
+`standard`チームとコミュニティは、`standard`におけるすべてのバグを真摯に受け止めています。問題を報告する方法については、[security policies and procedures](https://github.com/standard/.github/blob/master/SECURITY.md)を参照してください。
 
 <h2 id="license">ライセンス</h2>
 
