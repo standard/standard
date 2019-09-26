@@ -2,8 +2,11 @@
   <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
-  <br>
-  <br>
+  <p align="center">
+    <a href="https://codefund.io/properties/454/visit-sponsor">
+      <img src="https://codefund.io/properties/454/sponsor" />
+    </a>
+  </p>
 </h1>
 
 <p align="center">
