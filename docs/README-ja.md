@@ -224,7 +224,7 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -303,7 +303,7 @@ WebStormでは、IDEで`standard`が[ネイティブサポートされるよう�
 いいえ。`standard`のすべては、スタイルについての[bikeshedding][bikeshedding]（自転車置き場の議論）を避けることであなたの時間をセーブするためにあります。タブ対スペースについてのような議論はオンライン上にたくさんありますが、決して結論は出ません。これらの議論はただ物事を終わらせることから目を逸らさせるだけです。結局のところ、あなたは何かを選ばなければなりません。これは、`standard`の哲学のすべてです。うまくいけば、ユーザーは自身の意見を守るうえでその価値に気づくでしょう。
 
 `standard`を完全には受け入れたくない人のために、似たようなパッケージが2つあります:
-- [semistandard](https://github.com/Flet/semistandard) - セミコロンありのstandard
+- [semistandard](https://github.com/standard/semistandard) - セミコロンありのstandard
 - [standardx](https://github.com/standard/standardx) - カスタマイズ可能なstandard
 
 本当に何百ものESLintのルールを個別に設定したいなら、ルールを上書きするために[eslint-config-standard](https://github.com/standard/eslint-config-standard)で`eslint`を直接使うことができます。[`standard-eject`](https://github.com/josephfrazier/standard-eject)は、`standard`から`eslint`と`eslint-config-standard`への移行を支援します。
@@ -679,14 +679,14 @@ var opts = {
 `standard`のエコシステムには、いくつかの重要なパッケージがあります：
 
 - **[standard](https://github.com/standard/standard)** - このリポジトリ
-  - **[standard-engine](https://github.com/flet/standard-engine)** - 任意のESLintルールのCLIエンジン
+  - **[standard-engine](https://github.com/standard/standard-engine)** - 任意のESLintルールのCLIエンジン
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - standardのESLintルール
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standardのESLintルール（JSX）
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standardのカスタムESlintルール（ESLintのコアの一部ではない）
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - standardのカスタムESlintルール（ESLintのコアの一部ではない）
   - **[eslint](https://github.com/eslint/eslint)** - standardを動作させるリンター
 - **[snazzy](https://github.com/standard/snazzy)** - standardのきれいなターミナル出力
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com のコード
-- **[semistandard](https://github.com/Flet/semistandard)** - セミコロンありのstandard（必要ならば）
+- **[semistandard](https://github.com/standard/semistandard)** - セミコロンありのstandard（必要ならば）
 - **[standardx](https://github.com/standard/standardx)** - カスタマイズ可能なstandard
 
 多くの **[エディタープラグイン](#are-there-text-editor-plugins)** 、 **[`standard`を使用しているnpmパッケージ](https://github.com/standard/standard-packages)** のリスト、 **[`standard`のエコシステムのパッケージ](https://github.com/standard/awesome-standard)** の素晴らしいリストもあります。

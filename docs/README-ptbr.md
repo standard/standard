@@ -555,14 +555,14 @@ Junte-se ao `#standard` no freenode.
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
 - **[standard](https://github.com/standard/standard)** - esse repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - Motor cli para regras arbritrárias de ESLint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - Motor cli para regras arbritrárias de ESLint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - Regras ESLint para  `standard`
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
 - **[standard-format](https://github.com/maxogden/standard-format)** - Formatador de código automático
 - **[snazzy](https://github.com/standard/snazzy)** - Output de terminal bonitinho
 - **[standard-www](https://github.com/standard/standard-www)** - código do  https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, com ponto-e-vírgula (se você precisar)
 
 Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de
 **[packages que usam `standard`](https://github.com/standard/standard-packages)**,

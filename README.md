@@ -255,7 +255,7 @@ install **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -342,7 +342,7 @@ something' opinions. Hopefully, users see the value in that over defending their
 own opinions.
 
 There are a couple of similar packages for anyone who does not want to completely accept `standard`:
-- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons
+- [semistandard](https://github.com/standard/semistandard) - standard, with semicolons
 - [standardx](https://github.com/standard/standardx) - standard, with custom tweaks
 
 If you really want to configure hundreds of ESLint rules individually, you can

@@ -626,14 +626,14 @@ var opts = {
 以下是一些 `standard` 生態圈中重要的套件：
 
 - **[standard](https://github.com/standard/standard)** - 本專案
-  - **[standard-engine](https://github.com/flet/standard-engine)** - 命令列引擎
+  - **[standard-engine](https://github.com/standard/standard-engine)** - 命令列引擎
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - standard 的 eslint 規則
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standard (JSX) 的 eslint 規則
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - standard 客製化 eslint 規則（非 eslint 核心）
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - standard 客製化 eslint 規則（非 eslint 核心）
   - **[eslint](https://github.com/eslint/eslint)** - 驅動 standard 的核心
 - **[snazzy](https://github.com/standard/snazzy)** - standard 的終端機美麗輸出
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 網站程式
-- **[semistandard](https://github.com/Flet/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
+- **[semistandard](https://github.com/standard/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
 也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
 **[有使用 `standard` 的 npm 套件清單](https://github.com/standard/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/standard/awesome-standard)**。

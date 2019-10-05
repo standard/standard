@@ -267,7 +267,7 @@ installez **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -740,14 +740,14 @@ Envie de discuter? Joignez les contributeurs sur IRC dans la chaine `#standard` 
 Voici quelques modules importants dans l'ecosystème `standard`:
 
 - **[standard](https://github.com/standard/standard)** - ce repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - le moteur cli pour les règles eslint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - le moteur cli pour les règles eslint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - les règles eslint pour standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - les règles eslint pour standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - règles eslint customisées pour standard (ne fait pas partie de eslint core)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - règles eslint customisées pour standard (ne fait pas partie de eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - le linteur qui alimente standard
 - **[snazzy](https://github.com/standard/snazzy)** - résultats de standard plus jolis dans le terminal
 - **[standard-www](https://github.com/standard/standard-www)** - le code pour https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, avec point-virgules (si nécessaire)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, avec point-virgules (si nécessaire)
 
 Il y a aussi plein de **[plugins pour editeur](#are-there-text-editor-plugins)**, une liste de
 **[modules npm qui utilisent `standard`](https://github.com/standard/standard-packages)**,
