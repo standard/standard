@@ -547,21 +547,32 @@ To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` a
 `@typescript-eslint/eslint-plugin` as a plugin, and tell standard to lint `**/*.ts` files (since it
 doesn't by default).
 
+Unfortunately, there's an outstanding [issue](https://github.com/standard/standard/issues/1283)
+with `standard` and Typescript where `standard` would incorrectly emit unused-variable errors
+(e.g: when you import interfaces). And as a workaround, you need to use
+[standardx](https://github.com/standard/standardx) instead:sweat_smile:.
+
 ```bash
-npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+npm install standardx @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
+$ standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
 ```
 
 Or, add this to `package.json`:
 
 ```json
 {
-  "standard": {
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
     "parser": "@typescript-eslint/parser",
     "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
@@ -571,7 +582,14 @@ Or, add this to `package.json`:
 With that in `package.json`, you can run:
 
 ```bash
-standard **/*.ts
+standardx **/*.ts
+```
+
+And you probably should remove `standard` too to avoid confusion where it's used by mistake
+instead of `standardx`.
+
+```bash
+npm uninstall standard
 ```
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
