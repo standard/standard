@@ -255,7 +255,7 @@ install **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -342,7 +342,7 @@ something' opinions. Hopefully, users see the value in that over defending their
 own opinions.
 
 There are a couple of similar packages for anyone who does not want to completely accept `standard`:
-- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons
+- [semistandard](https://github.com/standard/semistandard) - standard, with semicolons
 - [standardx](https://github.com/standard/standardx) - standard, with custom tweaks
 
 If you really want to configure hundreds of ESLint rules individually, you can
@@ -765,14 +765,14 @@ Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
 Here are some important packages in the `standard` ecosystem:
 
 - **[standard](https://github.com/standard/standard)** - this repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
+  - **[standard-engine](https://github.com/standard/standard-engine)** - cli engine for arbitrary eslint rules
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - eslint rules for standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
 - **[snazzy](https://github.com/standard/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/standard/standard-www)** - code for https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, with semicolons (if you must)
 - **[standardx](https://github.com/standard/standardx)** - standard, with custom tweaks
 
 There are also many **[editor plugins](#are-there-text-editor-plugins)**, a list of

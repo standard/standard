@@ -260,7 +260,7 @@ installa **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -682,14 +682,14 @@ Vuoi chattare? Unisciti ai collaboratori su IRC nel canale `#standard` su freeno
 Eccoti importanti module che sono importanti nell'ecosistema di `standard`:
 
 - **[standard](https://github.com/standard/standard)** - questo repository
-  - **[standard-engine](https://github.com/flet/standard-engine)** - motore cli per regole eslint arbitrarie
+  - **[standard-engine](https://github.com/standard/standard-engine)** - motore cli per regole eslint arbitrarie
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - regole eslint per standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - regole eslint per standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - regole eslint personalizzate per standard (non fanno parte del cuore di eslint)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - regole eslint personalizzate per standard (non fanno parte del cuore di eslint)
   - **[eslint](https://github.com/eslint/eslint)** - il linter che da energie a standard
 - **[snazzy](https://github.com/standard/snazzy)** - generate output carino nel terminale per standard
 - **[standard-www](https://github.com/standard/standard-www)** - codice per https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, ma con i punti e virgola (se proprio sei obbligato)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, ma con i punti e virgola (se proprio sei obbligato)
 
 Ci sono anche molti **[plugin per l'editor di testo](#ci-sono-dei-plugin-per-gli-editor-di-testo)**, una lista di **[npm packages che usano `standard`](https://github.com/standard/standard-packages)**,
 una incredibile lista di

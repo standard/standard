@@ -669,14 +669,14 @@ Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/st
 Unete a nosotros `#standard` en freenode.
 
 - **[standard](https://github.com/standard/standard)** - este repositorio
-  - **[standard-engine](https://github.com/flet/standard-engine)** - motor arbitrario cli de relgas eslint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - motor arbitrario cli de relgas eslint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - reglas eslint para standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - reglas eslint para standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
   - **[eslint](https://github.com/eslint/eslint)** - linter que da poder a standard
 - **[snazzy](https://github.com/standard/snazzy)** - salida colorida o *bonita* en el terminal para standard
 - **[standard-www](https://github.com/standard/standard-www)** - codigo de https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, con punto y coma (sí es necesario)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, con punto y coma (sí es necesario)
 
 También  hay un montón **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
 **[paquetes npm que usan `standard`](https://github.com/standard/standard-packages)**,

@@ -249,7 +249,7 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -702,14 +702,14 @@ var opts = {
 다음은 `standard` 생태계의 중요한 패키지입니다.
 
 - **[standard](https://github.com/standard/standard)** - 현재 저장소
-  - **[standard-engine](https://github.com/flet/standard-engine)** - 임의의 eslint 규칙에 대한 cli 엔진
+  - **[standard-engine](https://github.com/standard/standard-engine)** - 임의의 eslint 규칙에 대한 cli 엔진
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - `standard`을 위한 eslint 규칙
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - `standard`을 위한 eslint 규칙 (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - `standard`을 위한 커스텀 eslint 규칙 (eslint 코어의 일부가 아닙니다.)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - `standard`을 위한 커스텀 eslint 규칙 (eslint 코어의 일부가 아닙니다.)
   - **[eslint](https://github.com/eslint/eslint)** - 강력한 standard linter
 - **[snazzy](https://github.com/standard/snazzy)** - standard를 예쁘게 터미널에 출력해줍니다.
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com에 대한 코드
-- **[semistandard](https://github.com/Flet/semistandard)** - 세미콜론이 포함된 standard (필요한 경우)
+- **[semistandard](https://github.com/standard/semistandard)** - 세미콜론이 포함된 standard (필요한 경우)
 
 또한 많은 **[에디터 플러그인](#text-editor-plugins)**, **[`standard`를 사용하는 npm 패키지 목록](https://github.com/standard/standard-packages)**, **[`standard` 에코 시스템의 멋진 패키지 목록](https://github.com/standard/awesome-standard)** 이 있습니다.
 
