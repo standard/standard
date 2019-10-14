@@ -477,21 +477,29 @@ $ standard --parser babel-eslint --plugin flowtype
 
 TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`**/*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
 
+残念ながら、`standard`とTypeScriptには、`standard`が誤って`unused-variable`のエラーを出すという未解決の[イシュー](https://github.com/standard/standard/issues/1283)があります（例：インターフェースをインポートするとき）。その回避策として、かわりに[standardx](https://github.com/standard/standardx)を使う必要があります:sweat_smile:
+
 ```bash
-npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+npm install standardx @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
+$ standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
 
 ```json
 {
-  "standard": {
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
     "parser": "@typescript-eslint/parser",
     "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
@@ -501,7 +509,13 @@ $ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint
 `package.json`にこれを追加すると、次のコマンドが実行できます。：
 
 ```bash
-standard **/*.ts
+standardx **/*.ts
+```
+
+また、`standardx`のかわりに誤って使われるのを避けるために、`standard`の削除もすべきでしょう。
+
+```bash
+npm uninstall standard
 ```
 
 <h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
