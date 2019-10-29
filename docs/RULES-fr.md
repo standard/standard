@@ -881,8 +881,9 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const octal = 042         // ✗ avoid
+  const decimal = 34        // ✓ ok
+  const octalString = '042' // ✓ ok
   ```
 
 * **Pas de séquence d'echappement octale dans les chaines de charactères littérales.**

@@ -870,8 +870,9 @@
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const octal = 042         // ✗ avoid
+  const decimal = 34        // ✓ ok
+  const octalString = '042' // ✓ ok
   ```
 
 * **字串中不使用八進位的跳脫序列。**

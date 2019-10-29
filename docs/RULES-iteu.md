@@ -868,8 +868,9 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const octal = 042         // ✗ avoid
+  const decimal = 34        // ✓ ok
+  const octalString = '042' // ✓ ok
   ```
 
 * **No all'escape di sequenze di ottali nelle stringhe letterali.**
