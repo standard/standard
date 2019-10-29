@@ -871,7 +871,7 @@
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **字串中不使用八進位的跳脫序列。**

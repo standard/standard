@@ -871,7 +871,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **Evitar escapado de secuencia octal en cadena de texto literal.**

@@ -886,7 +886,7 @@
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **文字列リテラルに8進数エスケープシーケンスは禁止。**

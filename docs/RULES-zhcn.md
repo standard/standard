@@ -874,7 +874,7 @@
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **字符串字面量中也不要使用八进制转义字符**。

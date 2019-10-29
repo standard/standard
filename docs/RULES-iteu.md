@@ -869,7 +869,7 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **No all'escape di sequenze di ottali nelle stringhe letterali.**

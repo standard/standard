@@ -882,7 +882,7 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
 
   ```js
   const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const num = 34   // ✓ ok
   ```
 
 * **Pas de séquence d'echappement octale dans les chaines de charactères littérales.**
