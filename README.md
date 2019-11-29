@@ -13,7 +13,7 @@
 </h1>
 
 <p align="center">
-    <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
+  <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
   <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
@@ -32,6 +32,10 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=50 valign="middle"></a>
+</h5>
+
 ## JavaScript style guide, linter, and formatter
 
 This module saves you (and others!) time in three ways:
@@ -44,10 +48,6 @@ This module saves you (and others!) time in three ways:
   time by eliminating back-and-forth between reviewer & contributor.
 
 Give it a try by running `npx standard --fix` right now!
-
-### Open Source Supporters
-
-[Become a supporter!](https://feross.org/thanks/)
 
 ## Table of Contents
 
