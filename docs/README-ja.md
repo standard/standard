@@ -331,7 +331,7 @@ Pro tip: ただ`standard`を使っていってください。時間をかけて�
 
 <h2 id="how-do-i-ignore-files">ファイルを無視するには？</h2>
 
-特定のパス（`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`bundle.js`、`.git/`のようなドットファイル）は自動的に無視されます。
+特定のパス（`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`.git/`のようなドットファイル）は自動的に無視されます。
 
 プロジェクトルートの`.gitignore`ファイルに記載されているパスも自動的に無視されます。
 

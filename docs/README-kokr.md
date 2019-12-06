@@ -348,7 +348,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 ## 어떻게하면 파일들을 무시할 수 있나요?
 
-특정 경로 (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, `.git/`와 같이 `.`으로 시작하는 파일/폴더)는 자동으로 무시됩니다.
+특정 경로 (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `.git/`와 같이 `.`으로 시작하는 파일/폴더)는 자동으로 무시됩니다.
 
 프로젝트의 루트 `.gitignore` 파일에 있는 경로도 자동으로 무시됩니다.
 
