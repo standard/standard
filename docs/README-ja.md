@@ -27,7 +27,7 @@
 </p>
 
 <h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=50 valign="middle"></a>
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=35 valign="middle"></a>
 </h5>
 
 ## JavaScript スタイルガイド、リンター、フォーマッター
