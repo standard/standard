@@ -28,7 +28,7 @@
     "eslint-index": "^1.3.0",
     "hallmark": "^2.0.0",
     "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "run-parallel-limit": "^1.0.3",
     "standard-packages": "^3.6.1",
     "tape": "^4.6.0"
