@@ -26,10 +26,6 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=35 valign="middle"></a>
-</h5>
-
 ## JavaScript style guide, linter, and formatter
 
 This module saves you (and others!) time in three ways:
