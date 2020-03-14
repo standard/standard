@@ -12,7 +12,7 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "~6.4.0",
+    "eslint": "~6.8.0",
     "eslint-config-standard": "14.1.0",
     "eslint-config-standard-jsx": "8.1.0",
     "eslint-plugin-import": "~2.18.0",
@@ -27,8 +27,8 @@
     "cross-spawn": "^7.0.0",
     "eslint-index": "^1.3.0",
     "hallmark": "^2.0.0",
-    "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
+    "minimist": "^1.2.2",
+    "mkdirp": "^1.0.3",
     "run-parallel-limit": "^1.0.3",
     "standard-packages": "^3.6.1",
     "tape": "^4.6.0"
