@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [14.3.3] - 2020-03-15
+
+- Skip running on versions of Node.js older than 8.10.0. [#1496](https://github.com/standard/standard/pull/1496)
+
 ## [14.3.2] - 2020-03-14
 
 - Update `eslint` to `~6.8.0`
@@ -866,7 +870,9 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v14.3.1...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v14.3.3...HEAD
+
+[14.3.3]: https://github.com/standard/standard/compare/v14.3.2...v14.3.3
 
 [14.3.2]: https://github.com/standard/standard/compare/v14.3.1...v14.3.2
 
