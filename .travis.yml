@@ -1,8 +1,14 @@
 language: node_js
 node_js:
-  - 8.10.0
+  - 8.10.0 # This version should be fully supported
   - 8
   - 10
   - 12
 cache:
   npm: false
+jobs:
+  include:
+    # Special case for the largest version of Node.js that is not supported,
+    # under which we do not want to run the entire test suite.
+    - node_js: 8.9
+      script: './bin/cmd.js'
