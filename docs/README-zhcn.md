@@ -71,31 +71,31 @@ npm install standard --save-dev
 
 ## 目录
 
--  上手
-  - [安装](#install)
-  - [使用](#usage)
-  - [如果你聪明的话会这样做](#what-you-might-do-if-youre-clever)
+- 上手
+  - [安装](#安装)
+  - [使用](#使用)
+  - [如果你聪明的话会这样做](#如果你聪明的话会这样做)
 - FAQ
-  - [为何要使用 JavaScript Standard 规范？](#why-should-i-use-javascript-standard-style)
-  - [谁在用 JavaScript Standard 规范？](#who-uses-javascript-standard-style)
-  - [有现成的编辑器插件吗？](#are-there-text-editor-plugins)
-  - [有专属徽章可以用来放到项目的 README 文件中吗？](#is-there-a-readme-badge)
-  - [如果我不同意某条规则，可以改吗？](#i-disagree-with-rule-x-can-you-change-it)
-  - [毕竟这不是一份正式的 Web 规范啊！](#but-this-isnt-a-real-web-standard)
-  - [有自动格式化工具么？](#is-there-an-automatic-formatter)
-  - [如何排除某些文件？](#how-do-i-ignore-files)
-  - [如何隐藏某类警告？](#how-do-i-hide-a-certain-warning)
-  - [使用的三方插件向全局暴露了变量，如何避免 "variable is not defined" 的错误提示？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-  - [如何才能使用处于实验阶段的 JavaScript 特性（譬如 ES Next）？](#how-do-i-use-experimental-javascript-es-next-features)
-  - [我能使用其他 JavaScript 变种吗，例如 Flow？](#can-i-use-a-javascript-language-variant-like-flow)
-  - [如何与 Mocha，Jasmine 和 QUnit 这些测试工具搭配工作?](#what-about-mocha-jasmine-qunit-etc)
-  - [Web Workers 有考虑过么？](#what-about-web-workers)
-  - [Markdown 或者 HTML 文件中的代码能检查到吗？](#can-i-check-code-inside-of-markdown-or-html-files)
-  - [有为 git 添加 `pre-commit` 钩子么？](#is-there-a-git-pre-commit-hook)
-  - [怎样使输出好看些，带颜色？](#how-do-i-make-the-output-all-colorful-and-pretty)
-  - [有相关的 Node.js API 没？](#is-there-a-nodejs-api)
-  - [如何参与到 `standard` 规范中来？](#how-do-i-contribute-to-standard)
-- [协议](#license)
+  - [为何要使用 JavaScript Standard 规范？](#为何要使用-javascript-standard-规范)
+  - [谁在用 JavaScript Standard 规范？](#谁在用-javascript-standard-规范)
+  - [有现成的编辑器插件吗？](#有现成的编辑器插件吗)
+  - [有专属徽章可以用来放到项目的 README 文件中吗？](#有专属徽章可以用来放到项目的-readme-文件中吗)
+  - [如果我不同意某条规则，可以改吗？](#如果我不同意某条规则可以改吗)
+  - [毕竟这不是一份正式的 Web 规范啊！](#毕竟这不是一份正式的-web-规范啊)
+  - [有自动格式化工具么？](#有自动格式化工具么)
+  - [如何排除某些文件？](#如何排除某些文件)
+  - [如何隐藏某类警告？](#如何隐藏某类警告)
+  - [使用的三方插件向全局暴露了变量，如何避免 "variable is not defined" 的错误提示？](#使用的三方插件向全局暴露了变量如何避免-variable-is-not-defined-的错误提示)
+  - [如何才能使用处于实验阶段的 JavaScript 特性（譬如 ES Next）？](#如何才能使用处于实验阶段的-javascript-特性譬如-es-next)
+  - [我能使用其他 JavaScript 变种吗，例如 Flow？](#我能使用其他-javascript-变种吗例如-flow)
+  - [如何与 Mocha，Jasmine 和 QUnit 这些测试工具搭配工作?](#如何与-mochajasmine-和-qunit-这些测试工具搭配工作)
+  - [Web Workers 有考虑过么？](#web-workers-有考虑过么)
+  - [Markdown 或者 HTML 文件中的代码能检查到吗？](#markdown-或者-html-文件中的代码能检查到吗)
+  - [有为 git 添加 `pre-commit` 钩子么？](#有为-git-添加-pre-commit-钩子么)
+  - [怎样使输出好看些，带颜色？](#怎样使输出好看些带颜色)
+  - [有相关的 Node.js API 没？](#有相关的-nodejs-api-没)
+  - [如何参与到 `standard` 规范中来？](#如何参与到-standard-规范中来)
+- [协议](#协议)
 
 ## 安装
 
@@ -652,7 +652,7 @@ var opts = {
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 站点的源码
 - **[semistandard](https://github.com/standard/semistandard)** - standard 规范带分号的版本（如果你需要的话）
 
-还有很多 **[编辑器插件](#text-editor-plugins)**、一个
+还有很多 **[编辑器插件](#有现成的编辑器插件吗)**、一个
 **[使用 `standard` 规范开发的 npm 包](https://github.com/standard/standard-packages)**的列表、还有一分非常棒的**[ `standard` 生态中所使用到的包](https://github.com/standard/awesome-standard)**的列表。
 
 ## 协议
