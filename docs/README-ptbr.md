@@ -269,7 +269,7 @@ Esse módulo te faz economizar tempo de 2 formas:
 - **Zero configuração.** A forma mais fácil de forçar consistência de estilo no seu projeto. É só tacar lá e pronto.
 - **Captura erros de estilo antes de serem enviados em PR's.** Salva um tempo precioso de code review eliminando vai-e-vem entre mantenedor  e contribuínte.
 
-Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o opens ource pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
+Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o open source pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
 
 ### Discordo da regra X, você pode mudá-la?
 
@@ -281,10 +281,10 @@ Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sob
 
 Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `standard/standard` e não `ECMA/standard`.
 
-A palavra  "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
+A palavra "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
 
 - Esse módulo ajuda a manter seu código num alto *padrão de qualidade*.
-- Esse módulo assegura que novos contribuíntes sigam alguns  *padrões de estilo* básicos.
+- Esse módulo assegura que novos contribuíntes sigam alguns *padrões de estilo* básicos.
 
 ### Existe um formatador automático?
 
@@ -296,14 +296,13 @@ Para economizar seu tempo, `standard` solta uma mensagem ("Run `standard --fix` 
 problems.") quando detecta problemas que podem ser corrigidos manualmente.
 
 Alternativamente, se seu código é feito apenas de ES5, você pode tentar usar
-[`standard-format`][standard-format] (um pacote separado), mas provavlemente não vai ser mantido pois  `standard --fix` funciona muito bem, e isso faz com que não precisemos manter duas ferramentas com regras de configuração separadas.
+[`standard-format`][standard-format] (um pacote separado), mas provavelmente não vai ser mantido pois `standard --fix` funciona muito bem, e isso faz com que não precisemos manter duas ferramentas com regras de configuração separadas.
 
 [standard-format]: https://github.com/maxogden/standard-format
 
 ### Como ignoro arquivos?
 
-Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no
-`.gitignore` da raiz do projeto são automaticamente ignorados.
+Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no `.gitignore` da raiz do projeto são automaticamente ignorados.
 
 Às vezes você precisa ignorar algumas pastas adicionais ou arquivos minificados específicos. Para fazer isso, adicione uma propriedade `standard.ignore` no `package.json`:
 
@@ -322,7 +321,6 @@ Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/ar
 
 Em casos raros, você vai precisar quebrar uma regra e esconder um warning gerado pelo `standard`.
 
-
 JavaScript Standard Style usa o [`eslint`](http://eslint.org/) por baixo dos panos, sendo assim, você pode esconder algum aviso da mesma forma que você faria se utilizasse `eslint` diretamente.
 
 Para receber output verboso (para que você descubra que regra em particular precisa ignorar), execute:
@@ -333,19 +331,19 @@ Error: Use JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
-Desabilite **todas as regras** oem uma linha específica:
+Desabilite **todas as regras** em uma linha específica:
 
 ```js
 file = 'Eu sei bem o que tô fazendo' // eslint-disable-line
 ```
 
-Ou, desabilite  **apenas** na regra `"no-use-before-define"`:
+Ou, desabilite **apenas** na regra `"no-use-before-define"`:
 
 ```js
 file = 'Eu sei bem o que tô fazendo' // eslint-disable-line no-use-before-define
 ```
 
-Ou, desabilite a regra  `"no-use-before-define"` em  **várias linhas**:
+Ou, desabilite a regra `"no-use-before-define"` em  **várias linhas**:
 
 ```js
 /* eslint-disable no-use-before-define */
@@ -365,7 +363,7 @@ Para fazer com que o  `standard` (e outros humanos que lerão seu código) saiba
 /* global myVar1, myVar2 */
 ```
 
-Se você possui centenas de arquivps, adicionar comentários em cada um pode ficar um saco; Nesses casos, você pode adicionar isso ao `package.json`:
+Se você possui centenas de arquivos, adicionar comentários em cada um pode ficar um saco; Nesses casos, você pode adicionar isso ao `package.json`:
 
 ```json
 {
@@ -414,7 +412,7 @@ Se você está usando `standard` globalmente (instalou com `-g`), você também 
 
 ### Você pode tornar regra X configurável?
 
-Não. O objetivo do  `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
+Não. O objetivo do `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
 
 Se você apenas quer trocar algumas regras, considere usar
 [essa configuração compartilhável](https://github.com/standard/eslint-config-standard) e jogue suas mudanças em cima.
@@ -439,7 +437,7 @@ Para ter suporte a mocha nos seus arquivos de teste, adicione isso no começo do
 /* eslint-env mocha */
 ```
 
-Onde  `mocha` pode ser  `jasmine`, `qunit`, `phantomjs`, e por aí vai. Para ver a lista completa, cheque a documentação para
+Onde `mocha` pode ser  `jasmine`, `qunit`, `phantomjs`, e por aí vai. Para ver a lista completa, cheque a documentação para
 [especificar ambientes](http://eslint.org/docs/user-guide/configuring.html#specifying-environments) do ESLint.
 Para uma lista de quais variávies globais estão disponíveis nesses ambientes, cheque o módulo npm [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) .
 
@@ -476,7 +474,7 @@ PreCommit:
 
 ### Como eu deixo o output todo coloridinho e *bonitinho*?
 
-O output de fábrica é simples e direto, mas se você gosta de coisinhas brilhantes, instale  [snazzy](https://www.npmjs.com/package/snazzy):
+O output de fábrica é simples e direto, mas se você gosta de coisinhas brilhantes, instale [snazzy](https://www.npmjs.com/package/snazzy):
 
 ```
 npm install snazzy
@@ -548,14 +546,14 @@ O `callback` vai ser chamado com os objetos `Error` e `results`:
 
 ## Contribuições
 
-Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
+Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontrou aqui.
 
 Junte-se ao `#standard` no freenode.
 
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
 - **[standard](https://github.com/standard/standard)** - esse repo
-  - **[standard-engine](https://github.com/standard/standard-engine)** - Motor cli para regras arbritrárias de ESLint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - Motor cli para regras arbitrárias de ESLint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - Regras ESLint para  `standard`
   - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
