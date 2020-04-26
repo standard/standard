@@ -205,7 +205,7 @@ to `standard`.
 |---|---|---|---|
 
 
-| Your logo here | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/swissdev-js-jobs.png>](https://swissdevjobs.ch/jobs/JavaScript/All) | Your logo here | Your logo here | Your logo here |
 |---|---|---|---|
 
 
