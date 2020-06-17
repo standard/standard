@@ -337,7 +337,7 @@ automatically fix some problems`" 。
 
 ## 如何忽略某些檔案？
 
-一些路徑 （`node_modules/`、`coverage/`、`vendor/`、`*.min.js` 和  `.` 開頭的檔案和資料夾，像是 `.git/`）會自動被忽略。
+一些路徑 （`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`bundle.js` 和  `.` 開頭的檔案和資料夾，像是 `.git/`）會自動被忽略。
 
 專案根目錄下 `.gitignore` 中列出來的路徑也會被自動忽略。
 

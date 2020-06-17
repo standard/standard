@@ -367,7 +367,7 @@ automatically fix some problems.") cuando detecta errores que pueden ser arregla
 
 ## ¿Cómo hago para ignorar archivos?
 
-Ciertas rutas (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, y archivos/directorios que empiezan con `.` cómo `.git`) son ignorados automáticamente.
+Ciertas rutas (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`, y archivos/directorios que empiezan con `.` cómo `.git`) son ignorados automáticamente.
 
 Las rutas del `.gitignore` del proyecto raíz son ignorados automáticamente.
 

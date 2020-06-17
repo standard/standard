@@ -376,7 +376,7 @@ automatically fix some problems`" quand il détecte des problèmes qui peuvent �
 
 ## Comment ignorer des fichiers?
 
-Quelques chemins de fichiers (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`,
+Quelques chemins de fichiers (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
 et fichiers/dossiers qui commencent avec `.` comme `.git/`) sont automatiquement ignorés.
 
 Les chemins de fichiers dans le fichier `.gitignore` sont aussi automatiquement ignorés.

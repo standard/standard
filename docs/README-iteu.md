@@ -357,7 +357,7 @@ Per risparmiare tempo, l'ouput di `standard` è un messaggio del tipo "`Run stan
 
 ## Come posso ignorare dei file?
 
-Alcuni percorsi (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`,
+Alcuni percorsi (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
 e file/cartelle the iniziano con `.` come `.git/`) sono automaticamente ignorati.
 
 Anche i percorsi specificati all'interno del file `.gitignore` sono automaticamente ignorati.

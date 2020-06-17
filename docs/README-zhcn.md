@@ -340,7 +340,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 ## 如何排除某些文件？
 
-`node_modules/`、`coverage/`、`vendor/`、`*.min.js` 这些目录，还有以 `.` 开头的文件（譬如 `.git/`）或者文件夹自动被排除在外。
+`node_modules/`、`coverage/`、`vendor/`、`*.min.js`、`bundle.js` 这些目录，还有以 `.` 开头的文件（譬如 `.git/`）或者文件夹自动被排除在外。
 
 `.gitignore` 里配置的文件也会自动排除掉。
 

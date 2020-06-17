@@ -302,7 +302,7 @@ Alternativamente, se seu código é feito apenas de ES5, você pode tentar usar
 
 ### Como ignoro arquivos?
 
-Os caminhos `node_modules/**`, `*.min.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no `.gitignore` da raiz do projeto são automaticamente ignorados.
+Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no `.gitignore` da raiz do projeto são automaticamente ignorados.
 
 Às vezes você precisa ignorar algumas pastas adicionais ou arquivos minificados específicos. Para fazer isso, adicione uma propriedade `standard.ignore` no `package.json`:
 
