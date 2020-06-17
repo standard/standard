@@ -375,7 +375,7 @@ automatically.
 
 ## How do I ignore files?
 
-Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
+Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`,
 and files/folders that begin with `.` like `.git/`) are automatically ignored.
 
 Paths in a project's root `.gitignore` file are also automatically ignored.
