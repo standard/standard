@@ -306,7 +306,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     }
   ```
 
-* **El Puto debe ir en la misma linea que la propiedad.**
+* **El Punto debe ir en la misma linea que la propiedad.**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
