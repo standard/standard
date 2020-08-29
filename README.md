@@ -14,6 +14,11 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.remote.io/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=feross&utm_term=standardjs" rel="nofollow"><img src="https://feross.org/images/supporters/remoteio.png" alt="Remote.io" height=35 valign="middle"></a>
+</h5>
+<br>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
