@@ -214,7 +214,7 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 |---|---|---|---|
 
 
-| Your logo here | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/swissdev-js-jobs.png>](https://swissdevjobs.ch/jobs/JavaScript/All) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here |
 |---|---|---|---|
 
 
