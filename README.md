@@ -15,7 +15,6 @@
 </p>
 
 <h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.remote.io/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=feross&utm_term=standardjs" rel="nofollow"><img src="https://feross.org/images/supporters/remoteio.png" alt="Remote.io" height=35 valign="middle"></a>
 </h5>
 <br>
 
