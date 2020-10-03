@@ -121,25 +121,25 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 1. Add it to `package.json`
 
-  ```json
-  {
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "*"
-    },
-    "scripts": {
-      "test": "standard && node my-tests.js"
-    }
-  }
-  ```
+   ```json
+   {
+     "name": "my-cool-package",
+     "devDependencies": {
+       "standard": "*"
+     },
+     "scripts": {
+       "test": "standard && node my-tests.js"
+     }
+   }
+   ```
 
 2. Style is checked automatically when you run `npm test`
 
-  ```bash
-  $ npm test
-  Error: Use JavaScript Standard Style
-    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
-  ```
+   ```bash
+   $ npm test
+   Error: Use JavaScript Standard Style
+     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+   ```
 
 3. Never give style feedback on a pull request again!
 
