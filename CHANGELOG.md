@@ -31,6 +31,8 @@ Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
   - Node.js 8 is EOL and will no longer be receiving security updates.
   - To prevent breaking CI for projects which still support Node 8, `standard` silently passes when run by an unsupported version of Node.
 
+- Update `eslint` from `~6.8.0` to `~7.11.0`
+
 ### Changed features
 
 TODO
