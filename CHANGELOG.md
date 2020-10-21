@@ -504,7 +504,7 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 ### Changed rules
 
-- Relax rule: Allow template literal strings (backtick strings) to avoid escaping  [#421](https://github.com/standard/standard/issues/421)
+- Relax rule: Allow template literal strings (backtick strings) to avoid escaping [#421](https://github.com/standard/standard/issues/421)
 - Relax rule: Do not enforce spacing around \* in generator functions ([#564 (comment)](https://github.com/standard/standard/issues/564#issuecomment-234699126))
   - This is a temporary workaround for `babel` users who use async generator functions.
 
@@ -609,7 +609,7 @@ The goal of this release is to make `standard` faster to install, and simpler t
 _The percentage (%) of users that rule changes will effect, based on real-world testing of the top ~400 npm packages is denoted in brackets._
 
 - Disallow `__dirname`/`__filename` string concatenation ([#403](https://github.com/standard/standard/issues/403)) ([no-path-concat](https://eslint.org/docs/2.0.0/rules/no-path-concat)) [5%]
-- Require parens in arrow function arguments  ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](https://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
+- Require parens in arrow function arguments ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](https://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
 - Ensure that `new Promise()` is instantiated with the parameter names
   `resolve`, `reject` ([#282](https://github.com/standard/standard/issues/282)) ([promise/param-names](https://github.com/xjamundx/eslint-plugin-promise#param-names)) [1%]
 - Enforce Usage of Spacing in Template Strings ([template-curly-spacing](https://eslint.org/docs/2.0.0/rules/template-curly-spacing)) [1%]
@@ -624,7 +624,7 @@ _The percentage (%) of users that rule changes will effect, based on real-world 
 
 ### Removed Rules
 
-- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384))  ([radix](https://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
+- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384)) ([radix](https://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
 
 ### Expose eslint configuration via command line options and `package.json`
 
