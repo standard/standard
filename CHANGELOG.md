@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+We're super excited to announce `standard` 15!
+
+As with every new major release, there are lots of new rules in 15.0.0 designed
+to help catch bugs and make programmer intent more explicit. This release brings
+support for ES 2021, the latest version of the ECMAScript specification, as well
+as many quality-of-life improvements.
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the newly added rules.
+
+`standard` keeps growing! The latest stats show that `standard` and
+`eslint-standard-*` shareable configs are depended upon by **TODO GitHub
+repositories** and **TODO public npm packages**. Thanks for spreading the
+word!
+
+❤️ If you enjoy StandardJS and want to support future releases, check out
+Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
+
+### New features
+
+- BREAKING: Node.js 8 is no longer supported
+  - Node.js 8 is EOL and will no longer be receiving security updates.
+  - To prevent breaking CI for projects which still support Node 8, `standard` silently passes when run by an unsupported version of Node.
+
+### Changed features
+
+TODO
+
+### New rules
+
+_(Estimated % of affected standard users, based on test suite in parens)_
+
+TODO
+
 ## [14.3.3] - 2020-03-15
 
 - Skip running on versions of Node.js older than 8.10.0. [#1496](https://github.com/standard/standard/pull/1496)
