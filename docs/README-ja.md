@@ -14,6 +14,10 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
+<h5 align="center">
+</h5>
+<br>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
@@ -26,10 +30,6 @@
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
-
-<h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=35 valign="middle"></a>
-</h5>
 
 ## JavaScript スタイルガイド、リンター、フォーマッター
 
