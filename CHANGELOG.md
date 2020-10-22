@@ -30,6 +30,10 @@ Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
 - Support ES 2021, the latest version of the ECMAScript specification, which includes support for [logical assignment operators](https://github.com/tc39/proposal-logical-assignment) and [numeric separators](https://github.com/tc39/proposal-numeric-separator) [#1551](https://github.com/standard/standard/issues/1551)
 - Support additional ES 2020 features, such as [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator), `export * as ns from 'source'`, and [`import.meta`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta).
 - Support global variables from ES 2017 (`Atomics`, `SharedArrayBuffer`), ES 2020 (`BigInt`, `BigInt64Array`, `BigUint64Array`, `globalThis`), and ES 2021 (`FinalizationRegistry`, `WeakRef`). [#1436](https://github.com/standard/standard/issues/1436) [#1557](https://github.com/standard/standard/issues/1557) (eslint-config-standard/#156)(https://github.com/standard/eslint-config-standard/pull/156)
+- The documentation is now available in Indonesian 🇮🇩! [#1544](https://github.com/standard/standard/pull/1544)
+  - Thanks to [@yoga1234](https://github.com/yoga1234) for the excellent work!
+  - Other community contributed translations exist in Spanish, French, Italian, Japanese, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
+  - More translations are always welcome!
 
 ### Changed features
 
@@ -198,23 +202,18 @@ When you upgrade, consider running `standard --fix` to automatically format your
 ### New features
 
 - Update `eslint` from `~5.16.0` to `~6.0.1`
-
   - BREAKING: Node.js 6 is no longer supported
     - Node.js 6 is EOL and will no longer be receiving security updates. As a result, the eslint team has decided to drop support for it.
     - To prevent breaking CI for projects which still support Node 6, `standard` silently passes when run by an unsupported version of Node.
-
   - **For `eslint-config-standard` users only:** Plugins are no longer affected by `eslint`'s location
     - Previously, ESLint loaded plugins relative to the location of the ESLint package itself. As a result, we suggested that users with global ESLint installations should also install plugins globally, and users with local ESLint installations should install plugins locally.
     - With ESLint v6, plugins should always be installed locally, even if ESLint was installed globally. More precisely, ESLint v6 resolves plugins relative to the end user’s project by default, and always resolves shareable configs and parsers relative to the location of the config file that imports them.
     - See [migrating to ESLint 6.0.0 for more information](https://eslint.org/docs/user-guide/migrating-to-6.0.0#-plugins-and-shareable-configs-are-no-longer-affected-by-eslints-location).
-
 - The documentation is now available in Japanese 🇯🇵!
-  - Thanks to [@Munieru](https://github.com/munierujp) for the excellent work!
+  - Thanks to [@munierujp](https://github.com/munierujp) for the excellent work!
   - Other community contributed translations exist in Spanish, French, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
   - More translations are always welcome!
-
 - Update `eslint-plugin-promise` from `~4.0.0` to `~4.2.1`
-
 - Update `eslint-plugin-node` from `~7.0.1` to `~9.1.0`
 
 ### New rules
