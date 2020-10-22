@@ -27,22 +27,32 @@ Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
 
 ### New features
 
-- BREAKING: Node.js 8 is no longer supported
-  - Node.js 8 is EOL and will no longer be receiving security updates.
-  - To prevent breaking CI for projects which still support Node 8, `standard` silently passes when run by an unsupported version of Node.
-
-- Update `eslint` from `~6.8.0` to `~7.11.0`
+- Support ES 2021, the latest version of the ECMAScript specification, which includes support for [logical assignment operators](https://github.com/tc39/proposal-logical-assignment) and [numeric separators](https://github.com/tc39/proposal-numeric-separator) [#1551](https://github.com/standard/standard/issues/1551)
+- Support additional ES 2020 features, such as [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator), `export * as ns from 'source'`, and [`import.meta`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta).
+- Support global variables from ES 2017 (`Atomics`, `SharedArrayBuffer`), ES 2020 (`BigInt`, `BigInt64Array`, `BigUint64Array`, `globalThis`), and ES 2021 (`FinalizationRegistry`, `WeakRef`). [#1436](https://github.com/standard/standard/issues/1436) [#1557](https://github.com/standard/standard/issues/1557) (eslint-config-standard/#156)(https://github.com/standard/eslint-config-standard/pull/156)
 
 ### Changed features
 
-TODO
+- BREAKING: Node.js 8 is no longer supported
+  - Node.js 8 is EOL and will no longer be receiving security updates.
+  - To prevent breaking CI for projects which still support Node 8, `standard` silently passes when run by an unsupported version of Node
+- Update `eslint` from `~6.8.0` to `~7.11.0`
 
 ### New rules
 
 _(Estimated % of affected standard users, based on test suite in parens)_
 
-TODO
+- Require indentation for values of ternary expressions ([indent](https://eslint.org/docs/rules/indent)) [#927](https://github.com/standard/standard/issues/927) [4%]
+- Enforce newlines between operands of ternary expressions if the expression spans multiple lines ([multiline-ternary](https://eslint.org/docs/rules/multiline-ternary)) [#1558](https://github.com/standard/standard/issues/1558) [3%]
+- Disallow loops with a body that allows only one iteration ([no-unreachable-loop](https://eslint.org/docs/rules/no-unreachable-loop)) [#1556](https://github.com/standard/standard/issues/1556) [0%]
+- Disallow useless backreferences in regular expressions ([no-useless-backreference](https://eslint.org/docs/rules/no-useless-backreference)) [#1554](https://github.com/standard/standard/issues/1554) [0%]
+- Enforce default clauses in switch statements to be last ([default-case-last](https://eslint.org/docs/rules/default-case-last)) [#1553](https://github.com/standard/standard/issues/1553) [0%]
+- Disallow Number Literals That Lose Precision ([no-loss-of-precision](https://eslint.org/docs/rules/no-loss-of-precision)) [#1552](https://github.com/standard/standard/issues/1552) [0%]
 
+### Changed rules
+
+- Relax rule: Allow function declarations in nested blocks [#1406](https://github.com/standard/standard/issues/1406)
+- Relax rule: Removed redundant `no-negated-in-lhs` rule, already enforced by `no-unsafe-negation` [eslint-config-standard/#160](https://github.com/standard/eslint-config-standard/pull/160)
 
 ## [14.3.4] - 2020-05-11
 
