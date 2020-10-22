@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-    <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
+  <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
   <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
@@ -26,6 +26,10 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://botpress.io/?utm_source=standardjs&utm_medium=referral&utm_campaign=feross" rel="nofollow"><img src="https://feross.org/images/supporters/botpress.png" alt="Botpress" height=35 valign="middle"></a>
+</h5>
+
 ## JavaScript スタイルガイド、リンター、フォーマッター
 
 このモジュールは、3つの方法であなたの（そして他の人の！）時間を節約します。：
@@ -36,9 +40,6 @@
 
 今すぐ`npx standard --fix`を実行して、試してみましょう！
 
-### オープンソースサポーター
-
-[Become a supporter!](https://feross.org/thanks/)
 
 ## 目次
 
