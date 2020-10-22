@@ -3,9 +3,9 @@
   "description": "JavaScript Standard Style",
   "version": "15.0.0",
   "author": {
-    "email": "feross@feross.org",
     "name": "Feross Aboukhadijeh",
-    "url": "https://feross.org/"
+    "email": "feross@feross.org",
+    "url": "https://feross.org"
   },
   "bin": "./bin/cmd.js",
   "bugs": {
@@ -74,5 +74,19 @@
     "show-summary": "eslint-index eslintrc.json --format table",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
-  }
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/feross"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/feross"
+    },
+    {
+      "type": "consulting",
+      "url": "https://feross.org/support"
+    }
+  ]
 }
