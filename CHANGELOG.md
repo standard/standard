@@ -43,6 +43,11 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 TODO
 
+
+## [14.3.4] - 2020-05-11
+
+- Relax rule: `no-return-await` [#1442](https://github.com/standard/standard/pull/1442)
+
 ## [14.3.3] - 2020-03-15
 
 - Skip running on versions of Node.js older than 8.10.0. [#1496](https://github.com/standard/standard/pull/1496)
