@@ -26,7 +26,7 @@
     "babel-eslint": "^10.1.0",
     "cross-spawn": "^7.0.3",
     "eslint-index": "^1.5.0",
-    "hallmark": "^2.0.0",
+    "hallmark": "^3.0.0",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
     "run-parallel-limit": "^1.0.5",
