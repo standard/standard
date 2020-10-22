@@ -23,7 +23,7 @@
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
-  <a href="/docs/README-id.md">Indonesia</a> •
+  <a href="/docs/README-id.md">Indonesian</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -38,7 +38,7 @@ Modul ini menghemat waktu kamu (dan lainnya!) dengan tiga cara:
 
 - **Tanpa konfigurasi.** Cara paling mudah untuk menaikan kualitas kode kamu didalam projek. Tanpa harus membuat keputusan. Tanpa berkas`.eslintrc` untuk dikelola. Tinggal dijalankan.
 - **Secara otomatis memformat kode.** Tinggal jalankan `standard --fix` dan katakan selamat tinggal pada kode yang berantakan dan tidak konsisten.
-- **Tangkap masalah gaya penulisan & error dari programmer dengan cepat.** Hemat waktu untuk mereview kode dengan mengeliminasi kegiatan bolak-balik antara reviewer & kontributor. 
+- **Tangkap masalah gaya penulisan & error dari programmer dengan cepat.** Hemat waktu untuk mereview kode dengan mengeliminasi kegiatan bolak-balik antara reviewer & kontributor.
 
 Cobalah dengan menjalankan `npx standart --fix` sekarang juga!
 
@@ -60,7 +60,7 @@ Cobalah dengan menjalankan `npx standart --fix` sekarang juga!
   - [Bagaimana cara menyembunyikan peringatan tertentu?](#how-do-i-hide-a-certain-warning)
   - [Saya menggunakan librari yang memenuhi penamaan global. Bagaimana cara saya menghindari error "variable is not defined" ?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [Bagaimana cara saya menggunakan fitur javascript yang experimental (ES Next)?](#how-do-i-use-experimental-javascript-es-next-features)
-  
+
   - [Bisakah saya menggunakan varian bahasa Javascript, seperti Flow atau Typescript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [Bagaimana dengan Mocha, Jest, Jasmine, QUnit, etc?](#what-about-mocha-jest-jasmine-qunit-etc)
   - [Bagaimana dengan Web Workers dan Service Workers?](#what-about-web-workers-and-service-workers)
@@ -146,7 +146,7 @@ Modul ini menghemat waktu kamu (dan lainnya!) dengan tiga cara:
 
 - **Tanpa konfigurasi.** Cara paling mudah untuk menaikan kualitas kode kamu didalam projek. Tanpa harus membuat keputusan. Tanpa berkas`.eslintrc` untuk dikelola. Tinggal masukan.
 - **Secara otomatis memformat kode.** Tinggal jalankan `standard --fix` dan katakan selamat tinggal pada kode yang berantakan dan tidak konsisten.
-- **Tangkap masalah gaya penulisan & error dari programmer dengan cepat.** Hemat waktu untuk mereview kode dengan mengeliminasi kegiatan bolak-balik antara reviewer & kontributor. 
+- **Tangkap masalah gaya penulisan & error dari programmer dengan cepat.** Hemat waktu untuk mereview kode dengan mengeliminasi kegiatan bolak-balik antara reviewer & kontributor.
 
 Mengadopsi gaya `standard` berarti meninggikan pentingnya kejelasan dan konvensi komunitas lebih tinggi daripada gaya penulisan sendiri. Hal ini mungkin tidak masuk akal untuk 100% projek dan kultur dari pengembangan, entah bagaimana untuk open source bisa menjadi tempat yang dihindari oleh pemula. Siapkan dengan jelas, ekspektasi otomasi kontributor membuat projek lebih baik.
 
