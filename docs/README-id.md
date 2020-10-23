@@ -23,7 +23,7 @@
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
-  <a href="/docs/README-id.md">Indonesian</a> •
+  <a href="/docs/README-id.md">Bahasa Indonesia</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -40,36 +40,35 @@ Modul ini menghemat waktu kamu (dan lainnya!) dengan tiga cara:
 - **Secara otomatis memformat kode.** Tinggal jalankan `standard --fix` dan katakan selamat tinggal pada kode yang berantakan dan tidak konsisten.
 - **Tangkap masalah gaya penulisan & error dari programmer dengan cepat.** Hemat waktu untuk mereview kode dengan mengeliminasi kegiatan bolak-balik antara reviewer & kontributor.
 
-Cobalah dengan menjalankan `npx standart --fix` sekarang juga!
+Cobalah dengan menjalankan `npx standard --fix` sekarang juga!
 
 ## Daftar isi
 
 - Quick start
-  - [Pemasangan](#install)
-  - [Penggunaan](#usage)
-  - [Apa yang kamu lakukan jika kamu pintar](#what-you-might-do-if-youre-clever)
+  - [Pemasangan](#pemasangan)
+  - [Penggunaan](#penggunaan)
+  - [Apa yang kamu lakukan jika kamu pintar](#apa-yang-kamu-lakukan-jika-kamu-pintar)
 - FAQ
-  - [Kenapa saya harus menggunakan JavaScript Standard Style?](#why-should-i-use-javascript-standard-style)
-  - [Siapa yang menggunakan JavaScript Standard Style?](#who-uses-javascript-standard-style)
-  - [Apakah terdapat plugin untuk text editor?](#are-there-text-editor-plugins)
-  - [Apakah terdapat badge readme?](#is-there-a-readme-badge)
-  - [Saya tidak setuju dengan aturan X, bisakah diganti?](#i-disagree-with-rule-x-can-you-change-it)
-  - [Tapi ini bukanlah standar web yang sesungguhnya!](#but-this-isnt-a-real-web-standard)
-  - [Apakah terdapat formater yang otomatis?](#is-there-an-automatic-formatter)
-  - [Bagaimana cara saya mengabaikan berkas?](#how-do-i-ignore-files)
-  - [Bagaimana cara menyembunyikan peringatan tertentu?](#how-do-i-hide-a-certain-warning)
-  - [Saya menggunakan librari yang memenuhi penamaan global. Bagaimana cara saya menghindari error "variable is not defined" ?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-  - [Bagaimana cara saya menggunakan fitur javascript yang experimental (ES Next)?](#how-do-i-use-experimental-javascript-es-next-features)
-
-  - [Bisakah saya menggunakan varian bahasa Javascript, seperti Flow atau Typescript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
-  - [Bagaimana dengan Mocha, Jest, Jasmine, QUnit, etc?](#what-about-mocha-jest-jasmine-qunit-etc)
-  - [Bagaimana dengan Web Workers dan Service Workers?](#what-about-web-workers-and-service-workers)
-  - [Bisakah saya memeriksa kode didalam berkas Markdown atau HTML?](#can-i-check-code-inside-of-markdown-or-html-files)
-  - [Apakah terdapat Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [Bagaimana cara membuat outputnya menjadi berwarna dan cantik?](#how-do-i-make-the-output-all-colorful-and-pretty)
-  - [Apakah terdapat API untuk Node.js?](#is-there-a-nodejs-api)
-  - [Bagaimana caranya saya berkonstribusi kepada StandardJS?](#how-do-i-contribute-to-standardjs)
-- [Lisensi](#license)
+  - [Kenapa saya harus menggunakan JavaScript Standard Style?](#kenapa-saya-harus-menggunakan-javascript-standard-style)
+  - [Siapa yang menggunakan JavaScript Standard Style?](#siapa-yang-menggunakan-javascript-standard-style)
+  - [Apakah terdapat plugin untuk text editor?](#apakah-terdapat-plugin-untuk-text-editor)
+  - [Apakah terdapat badge readme?](#apakah-terdapat-badge-readme)
+  - [Saya tidak setuju dengan aturan X, bisakah diganti?](#saya-tidak-setuju-dengan-aturan-x-bisakah-diganti)
+  - [Tapi ini bukanlah standar web yang sesungguhnya!](#tapi-ini-bukanlah-standar-web-yang-sesungguhnya)
+  - [Apakah terdapat formater yang otomatis?](#apakah-terdapat-formater-yang-otomatis)
+  - [Bagaimana cara saya mengabaikan berkas?](#bagaimana-cara-saya-mengabaikan-berkas)
+  - [Bagaimana cara menyembunyikan peringatan tertentu?](#bagaimana-cara-menyembunyikan-peringatan-tertentu)
+  - [Saya menggunakan librari yang memenuhi penamaan global. Bagaimana cara saya menghindari error "variable is not defined"?](#saya-menggunakan-librari-yang-memenuhi-penamaan-global-bagaimana-cara-saya-menghundari-error-variable-is-not-defined)
+  - [Bagaimana cara saya menggunakan fitur javascript yang experimental (ES Next)?](#bagaimana-cara-saya-menggunakan-fitur-javascript-yang-experimental-es-next)
+  - [Bisakah saya menggunakan varian bahasa Javascript, seperti Flow atau Typescript?](#bisakah-saya-menggunakan-varian-bahasa-javascript-seperti-flow-atau-typescript)
+  - [Bagaimana dengan Mocha, Jest, Jasmine, QUnit, etc?](#bagaimana-dengan-mocha-jest-jasmine-qunit-etc)
+  - [Bagaimana dengan Web Workers dan Service Workers?](#bagaimana-dengan-web-workers-dan-service-workers)
+  - [Bisakah saya memeriksa kode didalam berkas Markdown atau HTML?](#bisakah-saya-memeriksa-kode-didalam-berkas-markdown-atau-html)
+  - [Apakah terdapat Git `pre-commit` hook?](#apakah-terdapat-git-pre-commit-hook)
+  - [Bagaimana cara membuat outputnya menjadi berwarna dan cantik?](#bagaimana-cara-membuat-outputnya-menjadi-berwarna-dan-cantik)
+  - [Apakah terdapat API untuk NodeJS?](#apakah-terdapat-api-untuk-nodejs)
+  - [Bagaimana caranya saya berkonstribusi kepada StandardJS?](#bagaimana-caranya-saya-berkonstribusi-kepada-standardjs)
+- [Lisensi](#lisensi)
 
 ## Pemasangan
 
