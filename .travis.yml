@@ -6,5 +6,3 @@ node_js:
   - 14
 cache:
   npm: false
-before_install:
-  - npm i -g npm@7
