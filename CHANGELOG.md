@@ -36,6 +36,8 @@ code to match the newly added rules.
 
 _(Estimated % of affected standard users, based on test suite in parens)_
 
+- Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
+- Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
 - React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
 - React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
 - React: Prevent direct mutation of `this.state` ([react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)) [#1571](https://github.com/standard/standard/issues/1571) [0%]
