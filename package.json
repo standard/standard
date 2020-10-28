@@ -7,7 +7,9 @@
     "email": "feross@feross.org",
     "url": "https://feross.org"
   },
-  "bin": "./bin/cmd.js",
+  "bin": {
+    "standard": "bin/cmd.js"
+  },
   "bugs": {
     "url": "https://github.com/standard/standard/issues"
   },
