@@ -9,7 +9,6 @@
 const crossSpawn = require('cross-spawn')
 const fs = require('fs')
 const minimist = require('minimist')
-const mkdirp = require('mkdirp')
 const os = require('os')
 const parallelLimit = require('run-parallel-limit')
 const path = require('path')
@@ -55,7 +54,7 @@ if (argv.disabled) {
 test('test github repos that use `standard`', t => {
   t.plan(testPackages.length)
 
-  mkdirp.sync(TMP)
+  fs.mkdirSync(TMP, { recursive: true })
 
   parallelLimit(testPackages.map(pkg => {
     const name = pkg.name
