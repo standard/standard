@@ -27,7 +27,6 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cross-spawn": "^7.0.3",
-    "eslint-index": "^1.5.0",
     "hallmark": "^3.0.0",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
@@ -71,9 +70,6 @@
     "url": "git://github.com/standard/standard.git"
   },
   "scripts": {
-    "show-rules": "eslint-index eslintrc.json",
-    "show-rules-disabled": "eslint-index eslintrc.json --status omitted off",
-    "show-summary": "eslint-index eslintrc.json --format table",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
