@@ -27,6 +27,11 @@ code to match the newly added rules.
 
 - Update `eslint` from `~7.11.0` to `~7.12.1`
 
+- Update `standard-engine` from `^12` to `^13`
+  - Fix inaccurate `--help` command which indicates that `bundle.js` is automatically ignored when it is not [standard-engine/#224](https://github.com/standard/standard-engine/pull/224)
+  - New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
+
+
 ### New rules
 
 _(Estimated % of affected standard users, based on test suite in parens)_
