@@ -5,6 +5,54 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+We're super excited to announce `standard` 16!
+
+As with every new major release, there are lots of new rules in 16.0.0 designed
+to help catch bugs and make programmer intent more explicit. This release brings
+better JSX and React support! ⚛️
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the newly added rules.
+
+❤️ If you enjoy StandardJS and want to support future releases, please
+[support the maintainer](https://github.com/users/feross/sponsorship).
+
+### New features
+
+
+
+### Changed features
+
+- Update `eslint` from `~7.11.0` to `~7.12.1`
+
+### New rules
+
+_(Estimated % of affected standard users, based on test suite in parens)_
+
+- React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
+- React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
+- React: Prevent direct mutation of `this.state` ([react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)) [#1571](https://github.com/standard/standard/issues/1571) [0%]
+- React: Prevent usage of `findDOMNode` ([react/no-find-dom-node](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md)) [#1570](https://github.com/standard/standard/issues/1570) [0%]
+- React: Prevent usage of `isMounted` ([react/no-is-mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)) [#1569](https://github.com/standard/standard/issues/1569) [0%]
+- React: Prevent using string refs ([react/no-string-refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)) [#1567](https://github.com/standard/standard/issues/1567) [0%]
+- JSX: Prevent missing parentheses around multiline JSX ([react/jsx-wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md)) [#710](https://github.com/standard/standard/issues/710) [#1382](https://github.com/standard/standard/issues/1382) (0%)
+- JSX: Check if shorthand fragment syntax requires a key prop ([react/jsx-key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)) [#1575](https://github.com/standard/standard/issues/1575) [0%]
+- JSX: Prevent passing of children as props ([react/no-children-prop](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md)) [#1574](https://github.com/standard/standard/issues/1574) [0%]
+- JSX: Prevent using children and dangerouslySetInnerHTML as props at the same time ([react/no-danger-with-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md)) [#1573](https://github.com/standard/standard/issues/1573) [0%]
+- JSX: Prevent invalid characters from appearing in markup ([react/no-unescaped-entities](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md)) [#1566](https://github.com/standard/standard/issues/1566) [0%]
+- JSX: Enforce JSX value is returned in component render function ([react/require-render-return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)) [#1565](https://github.com/standard/standard/issues/1565) [0%]
+- JSX: Prevent usage of unsafe `target='_blank'` on any component named `Link` ([react/jsx-no-target-blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)) [#1576](https://github.com/standard/standard/issues/1576) [0%]
+
+### Changed rules
+
+
+
+## [15.0.1] - 2020-10-27
+
+- Relax rule: Remove conflicting JSX indenting with `indent` rule [eslint-config-standard/#177](https://github.com/standard/eslint-config-standard/issues/177)
+
 ## [15.0.0] - 2020-10-21
 
 We're super excited to announce `standard` 15!
@@ -915,7 +963,11 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v14.3.3...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v16.0.0...HEAD
+
+[16.0.0]: https://github.com/standard/standard/compare/v15.0.1...v16.0.0
+
+[15.0.1]: https://github.com/standard/standard/compare/v15.0.0...v15.0.1
 
 [15.0.0]: https://github.com/standard/standard/compare/v14.3.4...v15.0.0
 
