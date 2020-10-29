@@ -21,21 +21,17 @@ code to match the newly added rules.
 
 ### New features
 
-- Support the `.gitignore` ignore syntax from the command line [#1117](https://github.com/standard/standard/issues/1117)
+- 🏎 Better performance: the filesystem doesn't need to be traversed multiple times! [#1023](https://github.com/standard/standard/issues/1023)
+  - Massive improvements (on the order of minutes!) for projects with huge folders which are are ignored with `.gitignore`
+
+- 🌟 Support the `.gitignore` ignore syntax from the command line [#1117](https://github.com/standard/standard/issues/1117)
   - In older versions, the command `standard src` would not lint the `src/` folder
   - Instead, a glob pattern needed like `standard src/**/*.js` was required
   - This is now fixed! You can run `standard src` to lint the `src/` folder!
 
-- Paths with square brackets (e.g. `[` and `]`) are no longer skipped [#1333](https://github.com/standard/standard/issues/1333)
-  - This pattern is particularly common in Next.js apps, e.g. `blog/[slug].js`
-  - You may notice new errors in these files since they were not being linted before
+- 🌟 Support relative paths from the command line (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
 
-- Better performance: the filesystem doesn't need to be traversed multiple times! [#1023](https://github.com/standard/standard/issues/1023)
-  - Massive improvements (on the order of minutes!) for projects with huge folders which are are ignored with `.gitignore`
-
-- Support relative paths from the command line (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
-
-- New `extensions` option for linting additional extensions besides `.js`, `.jsx`, `.mjs`, and `.cjs`
+- 🌟 New `extensions` option for linting additional extensions besides `.js`, `.jsx`, `.mjs`, and `.cjs`
   - Can be configured with the `--ext` command line flag or in `package.json`:
   - Example:
 
@@ -60,7 +56,9 @@ code to match the newly added rules.
   - New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
   - Remove `deglob` package and use built-in ESLint folder-traversal support
 
-
+- Paths with square brackets (e.g. `[` and `]`) are no longer skipped [#1333](https://github.com/standard/standard/issues/1333)
+  - This pattern is particularly common in Next.js apps, e.g. `blog/[slug].js`
+  - You may notice new errors in these files since they were not being linted before
 
 ### New rules
 
@@ -68,8 +66,14 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 - Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
 - Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
+- Enforce default parameters to be last ([default-param-last](https://eslint.org/docs/rules/default-param-last)) [#1414](https://github.com/standard/standard/issues/1414) [1%]
+- Disallow use of the `RegExp` constructor in favor of regular expression literals ([prefer-regex-literals](https://eslint.org/docs/rules/prefer-regex-literals)) [#1413](https://github.com/standard/standard/issues/1413) [1%]
 - Disallow spaces inside of computed keys of class methods, getters and setters ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1416](https://github.com/standard/standard/issues/1416) [0%]
 - Disallow `case NaN`, `switch(NaN)`, `indexOf(NaN)`, and `lastIndexOf(NaN)` ([use-isnan](https://eslint.org/docs/rules/use-isnan)) [#1429](https://github.com/standard/standard/issues/1429) [0%]
+- Disallow assigning to imported bindings ([no-import-assign](https://eslint.org/docs/rules/no-import-assign)) [#1412](https://github.com/standard/standard/issues/1412) [0%]
+- Enforce getter/setter pairs in classes ([accessor-pairs](https://eslint.org/docs/rules/accessor-pairs)) [#1415](https://github.com/standard/standard/issues/1415) [0%]
+
+- Node: Disallow assignment to `exports` ([node/no-exports-assign](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-exports-assign.md)) [#1400](https://github.com/standard/standard/issues/1400) [0%]
 
 - React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
 - React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
