@@ -222,7 +222,9 @@
     "repo": "https://github.com/marcbachmann/node-html-pdf",
     "description": "HTML to PDF converter that uses phantomjs",
     "dependents": 17,
-    "args": ["bin/index.js"]
+    "args": [
+      "bin/index.js"
+    ]
   },
   {
     "name": "run-waterfall",
@@ -264,8 +266,7 @@
     "name": "electron-mocha",
     "repo": "https://github.com/jprichardson/electron-mocha",
     "description": "Mocha tests in Electron.",
-    "dependents": 14,
-    "disable": true
+    "dependents": 14
   },
   {
     "name": "curry2",
@@ -332,7 +333,11 @@
     "repo": "https://github.com/bahmutov/rocha",
     "description": "Runs Mocha unit tests but randomizes their order",
     "dependents": 10,
-    "args": ["bin/*.js", "*.js", "spec/*.js"]
+    "args": [
+      "bin/*.js",
+      "*.js",
+      "spec/*.js"
+    ]
   },
   {
     "name": "multihashes",
@@ -521,7 +526,9 @@
     "repo": "https://github.com/achojs/acho",
     "description": "An extremely simple (but powerful) logging system for NodeJS and browser.",
     "dependents": 6,
-    "args": ["lib"]
+    "args": [
+      "lib"
+    ]
   },
   {
     "name": "application-config",
@@ -751,8 +758,7 @@
     "name": "aedes-persistence",
     "repo": "https://github.com/mcollina/aedes-persistence",
     "description": "The spec for an Aedes persistence, with abstract tests and a fast in-memory implementation.",
-    "dependents": 4,
-    "disable": true
+    "dependents": 4
   },
   {
     "name": "browser-supports-log-styles",
@@ -1061,8 +1067,7 @@
     "name": "nyc",
     "repo": "https://github.com/istanbuljs/nyc",
     "description": "the Istanbul command line interface",
-    "dependents": 31616,
-    "disable": true
+    "dependents": 31616
   },
   {
     "name": "karma-chrome-launcher",
@@ -1154,8 +1159,7 @@
     "name": "multer",
     "repo": "https://github.com/expressjs/multer",
     "description": "Middleware for handling `multipart/form-data`.",
-    "dependents": 1766,
-    "disable": true
+    "dependents": 1766
   },
   {
     "name": "ini",
@@ -1312,8 +1316,7 @@
     "name": "cross-fetch",
     "repo": "https://github.com/lquixada/cross-fetch",
     "description": "Universal WHATWG Fetch API for Node, Browsers and React Native",
-    "dependents": 644,
-    "disable": true
+    "dependents": 644
   },
   {
     "name": "blue-tape",
@@ -1346,8 +1349,7 @@
     "name": "yargs-parser",
     "repo": "https://github.com/yargs/yargs-parser",
     "description": "the mighty option parser used by yargs",
-    "dependents": 591,
-    "disable": true
+    "dependents": 591
   },
   {
     "name": "mathjs",
@@ -1380,8 +1382,7 @@
     "name": "leveldown",
     "repo": "https://github.com/Level/leveldown",
     "description": "A low-level Node.js LevelDB binding",
-    "dependents": 534,
-    "disable": true
+    "dependents": 534
   },
   {
     "name": "memdown",
@@ -1426,22 +1427,19 @@
     "name": "md5-file",
     "repo": "https://github.com/roryrjb/md5-file",
     "description": "return an md5sum of a given file",
-    "dependents": 482,
-    "disable": true
+    "dependents": 482
   },
   {
     "name": "extract-zip",
     "repo": "https://github.com/maxogden/extract-zip",
     "description": "unzip a zip file into a directory using 100% javascript",
-    "dependents": 467,
-    "disable": true
+    "dependents": 467
   },
   {
     "name": "assets-webpack-plugin",
     "repo": "https://github.com/ztoben/assets-webpack-plugin",
     "description": "Emits a json file with assets paths",
-    "dependents": 466,
-    "disable": true
+    "dependents": 466
   },
   {
     "name": "testdouble",
@@ -1493,8 +1491,7 @@
     "name": "koa-convert",
     "repo": "https://github.com/gyson/koa-convert",
     "description": "convert koa legacy generator-based middleware to promise-based middleware",
-    "dependents": 345,
-    "disable": true
+    "dependents": 345
   },
   {
     "name": "sha.js",
@@ -1547,8 +1544,7 @@
     "name": "klaw",
     "repo": "https://github.com/jprichardson/node-klaw",
     "description": "File system walker with Readable stream interface.",
-    "dependents": 325,
-    "disable": true
+    "dependents": 325
   },
   {
     "name": "klaw-sync",
