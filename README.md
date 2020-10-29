@@ -15,8 +15,8 @@
 </p>
 
 <h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
 </h5>
-<br>
 
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
@@ -786,7 +786,6 @@ Here are some important packages in the `standard` ecosystem:
   - **[standard-engine](https://github.com/standard/standard-engine)** - cli engine for arbitrary eslint rules
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - eslint rules for standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
 - **[snazzy](https://github.com/standard/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/standard/standard-www)** - code for https://standardjs.com

@@ -13,6 +13,10 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
@@ -25,8 +29,6 @@
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
-
-<br>
 
 Sem ter que tomar decisões; Sem gerenciar `.eslintrc`, `.jshintrc`, ou `.jscsrc` . Funciona logo de cara.
 

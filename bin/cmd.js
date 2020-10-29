@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-var */
 
 var match = process.version.match(/v(\d+)\.(\d+)/)
 var major = parseInt(match[1], 10)

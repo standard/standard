@@ -1,0 +1,1683 @@
+[
+  {
+    "name": "fs-extra",
+    "repo": "https://github.com/jprichardson/node-fs-extra",
+    "description": "fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.",
+    "dependents": 3279
+  },
+  {
+    "name": "karma-cli",
+    "repo": "https://github.com/karma-runner/karma-cli",
+    "description": "The Karma command line interface.",
+    "dependents": 517
+  },
+  {
+    "name": "co-mocha",
+    "repo": "https://github.com/blakeembrey/co-mocha",
+    "description": "Enable support for generators in Mocha tests",
+    "dependents": 388,
+    "disable": true
+  },
+  {
+    "name": "dotenv",
+    "repo": "https://github.com/motdotla/dotenv",
+    "description": "Loads environment variables from .env file",
+    "dependents": 377
+  },
+  {
+    "name": "jsonfile",
+    "repo": "https://github.com/jprichardson/node-jsonfile",
+    "description": "Easily read/write JSON files.",
+    "dependents": 370,
+    "disable": true
+  },
+  {
+    "name": "babel-tape-runner",
+    "repo": "https://github.com/wavded/babel-tape-runner",
+    "description": "Babel + Tape for running your ES Next tests",
+    "dependents": 233
+  },
+  {
+    "name": "merge2",
+    "repo": "https://github.com/teambition/merge2",
+    "description": "Merge multiple streams into one stream in sequence or parallel.",
+    "dependents": 214
+  },
+  {
+    "name": "semistandard",
+    "repo": "https://github.com/standard/semistandard",
+    "description": "All the goodness of `feross/standard` with semicolons sprinkled on top.",
+    "dependents": 150
+  },
+  {
+    "name": "dependency-check",
+    "repo": "https://github.com/dependency-check-team/dependency-check",
+    "description": "checks which modules you have used in your code and then makes sure they are listed as dependencies in your package.json",
+    "dependents": 149,
+    "disable": true
+  },
+  {
+    "name": "snazzy",
+    "repo": "https://github.com/standard/snazzy",
+    "description": "Format JavaScript Standard Style as Stylish (i.e. snazzy) output",
+    "dependents": 123
+  },
+  {
+    "name": "split2",
+    "repo": "https://github.com/mcollina/split2",
+    "description": "split a Text Stream into a Line Stream, using Stream 3",
+    "dependents": 96,
+    "disable": true
+  },
+  {
+    "name": "run-parallel",
+    "repo": "https://github.com/feross/run-parallel",
+    "description": "Run an array of functions in parallel",
+    "dependents": 85
+  },
+  {
+    "name": "buffer",
+    "repo": "https://github.com/feross/buffer",
+    "description": "Node.js Buffer API, for the browser",
+    "dependents": 75
+  },
+  {
+    "name": "tar-stream",
+    "repo": "https://github.com/mafintosh/tar-stream",
+    "description": "tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
+    "dependents": 73,
+    "disable": true
+  },
+  {
+    "name": "run-series",
+    "repo": "https://github.com/feross/run-series",
+    "description": "Run an array of functions in series",
+    "dependents": 69
+  },
+  {
+    "name": "david",
+    "repo": "https://github.com/alanshaw/david",
+    "description": "Node.js module that tells you when your project npm dependencies are out of date.",
+    "dependents": 60,
+    "disable": true
+  },
+  {
+    "name": "bs58",
+    "repo": "https://github.com/cryptocoinjs/bs58",
+    "description": "Base 58 encoding / decoding",
+    "dependents": 58
+  },
+  {
+    "name": "subleveldown",
+    "repo": "https://github.com/Level/subleveldown",
+    "description": "sublevels implemented using leveldowns",
+    "dependents": 40,
+    "disable": true
+  },
+  {
+    "name": "stream-to-promise",
+    "repo": "https://github.com/bendrucker/stream-to-promise",
+    "description": "Convert streams (readable or writable) to promises",
+    "dependents": 35
+  },
+  {
+    "name": "parse-torrent",
+    "repo": "https://github.com/webtorrent/parse-torrent",
+    "description": "Parse a torrent identifier (magnet uri, .torrent file, info hash)",
+    "dependents": 33
+  },
+  {
+    "name": "simple-get",
+    "repo": "https://github.com/feross/simple-get",
+    "description": "Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in < 100 lines.",
+    "dependents": 33
+  },
+  {
+    "name": "is-generator",
+    "repo": "https://github.com/blakeembrey/is-generator",
+    "description": "Check whether a value is a generator or generator function",
+    "dependents": 29,
+    "disable": true
+  },
+  {
+    "name": "simple-peer",
+    "repo": "https://github.com/feross/simple-peer",
+    "description": "Simple one-to-one WebRTC video/voice and data channels",
+    "dependents": 28
+  },
+  {
+    "name": "blacklist",
+    "repo": "https://github.com/dcousens/blacklist",
+    "description": "Returns a shallow copy of an object without blacklisted properties",
+    "dependents": 24,
+    "disable": true
+  },
+  {
+    "name": "proxyquire-universal",
+    "repo": "https://github.com/bendrucker/proxyquire-universal",
+    "description": "Proxyquire in Node and Proxyquireify in the browser with no code changes",
+    "dependents": 24,
+    "disable": true
+  },
+  {
+    "name": "base64-js",
+    "repo": "https://github.com/beatgammit/base64-js",
+    "description": "Base64 encoding/decoding in pure JS",
+    "dependents": 24,
+    "disable": true
+  },
+  {
+    "name": "typedarray-to-buffer",
+    "repo": "https://github.com/feross/typedarray-to-buffer",
+    "description": "Convert a typed array to a Buffer without a copy",
+    "dependents": 23
+  },
+  {
+    "name": "bs58check",
+    "repo": "https://github.com/bitcoinjs/bs58check",
+    "description": "A straightforward implementation of base58-check encoding",
+    "dependents": 22,
+    "disable": true
+  },
+  {
+    "name": "echint",
+    "repo": "https://github.com/ahmadnassri/echint",
+    "description": "Quick validation of files with EditorConfig",
+    "dependents": 22
+  },
+  {
+    "name": "assert-ok",
+    "repo": "https://github.com/bendrucker/assert-ok",
+    "description": "Assert that a value is truthy",
+    "dependents": 19,
+    "disable": true
+  },
+  {
+    "name": "re-emitter",
+    "repo": "https://github.com/feross/re-emitter",
+    "description": "Re emit events from another emitter",
+    "dependents": 19
+  },
+  {
+    "name": "multistream",
+    "repo": "https://github.com/feross/multistream",
+    "description": "A stream that emits multiple other streams one after another (streams2)",
+    "dependents": 19
+  },
+  {
+    "name": "standard-format",
+    "repo": "https://github.com/maxogden/standard-format",
+    "description": "attempts to reformat javascript to comply with feross/standard style",
+    "dependents": 18
+  },
+  {
+    "name": "multiaddr",
+    "repo": "https://github.com/multiformats/js-multiaddr",
+    "description": "multiaddr implementation (binary + string representation of network addresses)",
+    "dependents": 18,
+    "disable": true
+  },
+  {
+    "name": "binary-split",
+    "repo": "https://github.com/maxogden/binary-split",
+    "description": "a fast newline (or any delimiter) splitter stream - like require('split') but faster",
+    "dependents": 17,
+    "disable": true
+  },
+  {
+    "name": "webtorrent",
+    "repo": "https://github.com/webtorrent/webtorrent",
+    "description": "Streaming torrent client",
+    "dependents": 17
+  },
+  {
+    "name": "html-pdf",
+    "repo": "https://github.com/marcbachmann/node-html-pdf",
+    "description": "HTML to PDF converter that uses phantomjs",
+    "dependents": 17,
+    "args": [
+      "bin/index.js"
+    ],
+    "disable": true
+  },
+  {
+    "name": "run-waterfall",
+    "repo": "https://github.com/feross/run-waterfall",
+    "description": "Run an array of functions in series, each passing its results to the next function (waterfall)",
+    "dependents": 16
+  },
+  {
+    "name": "magnet-uri",
+    "repo": "https://github.com/webtorrent/magnet-uri",
+    "description": "Parse a magnet URI and return an object of keys/values",
+    "dependents": 15
+  },
+  {
+    "name": "any-db-postgres",
+    "repo": "https://github.com/grncdr/node-any-db-postgres",
+    "description": "The postgres adapter for any-db",
+    "dependents": 14,
+    "disable": true
+  },
+  {
+    "name": "standard-engine",
+    "repo": "https://github.com/standard/standard-engine",
+    "description": "Wrap your standards in a tortilla and cover it in special sauce.",
+    "dependents": 14
+  },
+  {
+    "name": "multihashing",
+    "repo": "https://github.com/multiformats/js-multihashing",
+    "description": "multiple hash functions",
+    "dependents": 14,
+    "disable": true
+  },
+  {
+    "name": "mkdirp-promise",
+    "repo": "https://github.com/ahmadnassri/mkdirp-promise",
+    "description": "Promise version of mkdirp",
+    "dependents": 14
+  },
+  {
+    "name": "electron-mocha",
+    "repo": "https://github.com/jprichardson/electron-mocha",
+    "description": "Mocha tests in Electron.",
+    "dependents": 14
+  },
+  {
+    "name": "curry2",
+    "repo": "https://github.com/wilmoore/curry2.js",
+    "description": "Curry a binary function.",
+    "dependents": 14,
+    "disable": true
+  },
+  {
+    "name": "markdown-pdf",
+    "repo": "https://github.com/alanshaw/markdown-pdf",
+    "description": "Markdown to PDF converter",
+    "dependents": 13,
+    "disable": true
+  },
+  {
+    "name": "bittorrent-dht",
+    "repo": "https://github.com/webtorrent/bittorrent-dht",
+    "description": "Simple, robust, BitTorrent DHT implementation",
+    "dependents": 13
+  },
+  {
+    "name": "fastparallel",
+    "repo": "https://github.com/mcollina/fastparallel",
+    "description": "Zero-overhead asynchronous parallel/each/map function call",
+    "dependents": 12,
+    "disable": true
+  },
+  {
+    "name": "bittorrent-tracker",
+    "repo": "https://github.com/webtorrent/bittorrent-tracker",
+    "description": "Simple, robust, BitTorrent tracker (client & server) implementation",
+    "dependents": 12
+  },
+  {
+    "name": "run-parallel-limit",
+    "repo": "https://github.com/feross/run-parallel-limit",
+    "description": "Run an array of functions in parallel, but limit the number of tasks executing at the same time",
+    "dependents": 11
+  },
+  {
+    "name": "har-validator",
+    "repo": "https://github.com/ahmadnassri/node-har-validator",
+    "description": "Extremely fast HTTP Archive (HAR) validator using JSON Schema",
+    "dependents": 11,
+    "disable": true
+  },
+  {
+    "name": "deglob",
+    "repo": "https://github.com/standard/deglob",
+    "description": "Take a list of glob patterns and return an array of file locations, respecting `.gitignore` and allowing for ignore patterns via `package.json`.",
+    "dependents": 10
+  },
+  {
+    "name": "simple-bin-help",
+    "repo": "https://github.com/bahmutov/simple-bin-help",
+    "description": "Simple help and sanity checks for Node CLI bin scripts",
+    "dependents": 10,
+    "disable": true
+  },
+  {
+    "name": "supertest-koa-agent",
+    "repo": "https://github.com/wilmoore/node-supertest-koa-agent",
+    "description": "Converts a Koa app into a supertest compatible agent instance.",
+    "dependents": 10,
+    "disable": true
+  },
+  {
+    "name": "rocha",
+    "repo": "https://github.com/bahmutov/rocha",
+    "description": "Runs Mocha unit tests but randomizes their order",
+    "dependents": 10,
+    "args": [
+      "bin/*.js",
+      "*.js",
+      "spec/*.js"
+    ],
+    "disable": true
+  },
+  {
+    "name": "multihashes",
+    "repo": "https://github.com/multiformats/js-multihash",
+    "description": "multihash implementation",
+    "dependents": 9,
+    "disable": true
+  },
+  {
+    "name": "value-pipe",
+    "repo": "https://github.com/bendrucker/value-pipe",
+    "description": "Pipe a value through a list of sync transform functions",
+    "dependents": 9,
+    "disable": true
+  },
+  {
+    "name": "has-require",
+    "repo": "https://github.com/bendrucker/has-require",
+    "description": "Check if code requires any module or a specific id",
+    "dependents": 9,
+    "disable": true
+  },
+  {
+    "name": "blob-to-buffer",
+    "repo": "https://github.com/feross/blob-to-buffer",
+    "description": "Convert a Blob to a Buffer",
+    "dependents": 9
+  },
+  {
+    "name": "create-torrent",
+    "repo": "https://github.com/webtorrent/create-torrent",
+    "description": "Create .torrent files",
+    "dependents": 9
+  },
+  {
+    "name": "run-auto",
+    "repo": "https://github.com/feross/run-auto",
+    "description": "Determine the best order for running async functions, and run them",
+    "dependents": 9
+  },
+  {
+    "name": "spawn-npm-install",
+    "repo": "https://github.com/mattdesl/spawn-npm-install",
+    "description": "programmatically install npm dependencies",
+    "dependents": 9,
+    "disable": true
+  },
+  {
+    "name": "mqemitter",
+    "repo": "https://github.com/mcollina/mqemitter",
+    "description": "An Opinionated Message Queue with an emitter-style API",
+    "dependents": 8,
+    "disable": true
+  },
+  {
+    "name": "reusify",
+    "repo": "https://github.com/mcollina/reusify",
+    "description": "Reuse objects and functions with style",
+    "dependents": 8,
+    "disable": true
+  },
+  {
+    "name": "fastseries",
+    "repo": "https://github.com/mcollina/fastseries",
+    "description": "Zero-overhead asynchronous series/each/map function calls",
+    "dependents": 8,
+    "disable": true
+  },
+  {
+    "name": "weakmap-event",
+    "repo": "https://github.com/bendrucker/weakmap-event",
+    "description": "> Associate [geval](https://github.com/Raynos/geval) events with a given object.",
+    "dependents": 8,
+    "disable": true
+  },
+  {
+    "name": "chrome-net",
+    "repo": "https://github.com/feross/chrome-net",
+    "description": "Use the Node `net` API in Chrome Apps",
+    "dependents": 7
+  },
+  {
+    "name": "subcommand",
+    "repo": "https://github.com/maxogden/subcommand",
+    "description": "create CLI tools with subcommands",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "memory-chunk-store",
+    "repo": "https://github.com/mafintosh/memory-chunk-store",
+    "description": "In memory chunk store that is abstract-chunk-store compliant",
+    "dependents": 7
+  },
+  {
+    "name": "fastfall",
+    "repo": "https://github.com/mcollina/fastfall",
+    "description": "call your callbacks in a waterfall, at speed",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "dom-event-target",
+    "repo": "https://github.com/bendrucker/dom-event-target",
+    "description": "DOM EventTarget compatible events interface",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "buffer-xor",
+    "repo": "https://github.com/crypto-browserify/buffer-xor",
+    "description": "A simple module for bitwise-xor on buffers",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "ipld",
+    "repo": "https://github.com/ipld/js-ipld-dag-cbor",
+    "description": "JavaScript implementation of the IPLD (InterpPlanetary Linked Data)",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "bulk-write-stream",
+    "repo": "https://github.com/mafintosh/bulk-write-stream",
+    "description": "Writable stream that forwards everything in the highWaterMark buffer to a custom write function using the new writev api in streams",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "hapi-cors-headers",
+    "repo": "https://github.com/gr2m/hapi-cors-headers",
+    "description": "hapi extension to enable CORS",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "board-io",
+    "repo": "https://github.com/achingbrain/board-io",
+    "description": "Provides a standard interface to boards capable of IO (e.g. Arduinos, Maestros, Raspberry Pis, etc) and their firmware",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "assert-function",
+    "repo": "https://github.com/bendrucker/assert-function",
+    "description": "Assert that a value is a function",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "aerospike",
+    "repo": "https://github.com/aerospike/aerospike-client-nodejs",
+    "description": "Aerospike Client Library",
+    "dependents": 7,
+    "disable": true
+  },
+  {
+    "name": "simple-format",
+    "repo": "https://github.com/bendrucker/simple-format",
+    "description": "sprintf with multiple arguments",
+    "dependents": 6,
+    "disable": true
+  },
+  {
+    "name": "fs-chunk-store",
+    "repo": "https://github.com/feross/fs-chunk-store",
+    "description": "Filesystem (fs) chunk store that is abstract-chunk-store compliant",
+    "dependents": 6
+  },
+  {
+    "name": "read-closest-package",
+    "repo": "https://github.com/mattdesl/read-closest-package",
+    "description": "reads the closest package.json file",
+    "dependents": 6,
+    "disable": true
+  },
+  {
+    "name": "parse-int",
+    "repo": "https://github.com/bendrucker/parse-int",
+    "description": "Strict integer parsing",
+    "dependents": 6,
+    "disable": true
+  },
+  {
+    "name": "bittorrent-protocol",
+    "repo": "https://github.com/webtorrent/bittorrent-protocol",
+    "description": "Simple, robust, BitTorrent peer wire protocol implementation",
+    "dependents": 6
+  },
+  {
+    "name": "coininfo",
+    "repo": "https://github.com/cryptocoinjs/coininfo",
+    "description": "JavaScript component for crypto currency specific information.",
+    "dependents": 6,
+    "disable": true
+  },
+  {
+    "name": "gulp-codecov.io",
+    "repo": "https://github.com/eddiemoore/gulp-codecov",
+    "description": "Gulp plugin to submit code coverage to Codecov.io",
+    "dependents": 6
+  },
+  {
+    "name": "acho",
+    "repo": "https://github.com/achojs/acho",
+    "description": "An extremely simple (but powerful) logging system for NodeJS and browser.",
+    "dependents": 6,
+    "args": [
+      "lib"
+    ]
+  },
+  {
+    "name": "application-config",
+    "repo": "https://github.com/LinusU/node-application-config",
+    "description": "Store your applications config where the operating system wants you to.",
+    "dependents": 5
+  },
+  {
+    "name": "observ-value",
+    "repo": "https://github.com/bendrucker/observ-value",
+    "description": "Get the value of an observable via a single interface",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "numeric-id-map",
+    "repo": "https://github.com/mafintosh/numeric-id-map",
+    "description": "Data structure that maps entries to numeric ids",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "is-server-response",
+    "repo": "https://github.com/yoshuawuyts/is-server-response",
+    "description": " Check if value is a server response (`res`)",
+    "dependents": 5
+  },
+  {
+    "name": "standard-packages",
+    "repo": "https://github.com/standard/standard-packages",
+    "description": "List of Packages that Use JavaScript Standard Style",
+    "dependents": 5
+  },
+  {
+    "name": "drag-drop",
+    "repo": "https://github.com/feross/drag-drop",
+    "description": "HTML5 drag & drop for humans",
+    "dependents": 5
+  },
+  {
+    "name": "fs-writefile-promise",
+    "repo": "https://github.com/ahmadnassri/node-fs-writefile-promise",
+    "description": "Promise version of fs.writefile",
+    "dependents": 5
+  },
+  {
+    "name": "builtin-status-codes",
+    "repo": "https://github.com/bendrucker/builtin-status-codes",
+    "description": "The map of HTTP status codes from the builtin http module",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "gameloop",
+    "repo": "https://github.com/sethvincent/gameloop",
+    "description": "simple game loop for javascript – server or browser.",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "cast-array",
+    "repo": "https://github.com/bendrucker/cast-array",
+    "description": "Ensure a value is an array and wrap it if it is not an array",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "socketio-wildcard",
+    "repo": "https://github.com/hden/socketio-wildcard",
+    "description": "socket.io with a wildcard event",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "ban-sensitive-files",
+    "repo": "https://github.com/bahmutov/ban-sensitive-files",
+    "description": "Checks filenames to be committed against a library of filename rules to prevent sensitive files in Git",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "fill-keys",
+    "repo": "https://github.com/bendrucker/fill-keys",
+    "description": "Fill keys in a destination that are defined on the source",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "libp2p-tcp",
+    "repo": "https://github.com/libp2p/js-libp2p-tcp",
+    "description": "Node.js implementation of the TCP module that libp2p uses, which implements the abstract-connection interface",
+    "dependents": 5
+  },
+  {
+    "name": "merkledag-store",
+    "repo": "https://github.com/daviddias/js-merkledag-store",
+    "description": "JavaScript Implementation of the MerkleDAG Store",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "is-electron-renderer",
+    "repo": "https://github.com/jprichardson/is-electron-renderer",
+    "description": "Check if code is running in Electron renderer process.",
+    "dependents": 5,
+    "disable": true
+  },
+  {
+    "name": "mightyiam",
+    "repo": "https://github.com/mightyiam/mightyiam.js",
+    "description": "Shahar Or (mightyiam)",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "fs-find-root",
+    "repo": "https://github.com/jarofghosts/fs-find-root",
+    "description": "search up directories",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "is-package",
+    "repo": "https://github.com/bendrucker/is-package",
+    "description": "Detect if a string is a package name that could be on npm",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "simple-websocket",
+    "repo": "https://github.com/feross/simple-websocket",
+    "description": "Simple, EventEmitter API for WebSockets (browser)",
+    "dependents": 4
+  },
+  {
+    "name": "is-installed",
+    "repo": "https://github.com/tunnckoCore/is-installed",
+    "description": "Checks that given package is installed on the system - globally or locally.",
+    "dependents": 4
+  },
+  {
+    "name": "random-iterate",
+    "repo": "https://github.com/mafintosh/random-iterate",
+    "description": "Iterate values in a list in random order",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "respjs",
+    "repo": "https://github.com/zensh/resp.js",
+    "description": "An implementation of REdis Serialization Protocol (RESP), parse pipelining chunks.",
+    "dependents": 4
+  },
+  {
+    "name": "immediate-chunk-store",
+    "repo": "https://github.com/feross/immediate-chunk-store",
+    "description": "Immediate put/get for abstract-chunk-store compliant stores",
+    "dependents": 4
+  },
+  {
+    "name": "ut_metadata",
+    "repo": "https://github.com/webtorrent/ut_metadata",
+    "description": "Extension for Peers to Send Metadata Files (BEP 9)",
+    "dependents": 4
+  },
+  {
+    "name": "require-deps",
+    "repo": "https://github.com/bendrucker/require-deps",
+    "description": "Generate require statements for dependencies",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "chrome-dgram",
+    "repo": "https://github.com/feross/chrome-dgram",
+    "description": "Use the Node `dgram` API in Chrome Apps",
+    "dependents": 4
+  },
+  {
+    "name": "ieee754",
+    "repo": "https://github.com/feross/ieee754",
+    "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
+    "dependents": 4
+  },
+  {
+    "name": "attach-css",
+    "repo": "https://github.com/shama/attach-css",
+    "description": "Localizes CSS based on a virtual DOM tree.",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "couchdb-push",
+    "repo": "https://github.com/jo/couchdb-push",
+    "description": "Deploy CouchDB documents from directory, JSON or module.",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "aedes-packet",
+    "repo": "https://github.com/mcollina/aedes-packet",
+    "description": "Basic data structure for packets in Aedes ",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "cyclist",
+    "repo": "https://github.com/mafintosh/cyclist",
+    "description": "Cyclist is an efficient cyclic list implemention.",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "console-log-level",
+    "repo": "https://github.com/watson/console-log-level",
+    "description": "The most simple logger imaginable",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "bip38",
+    "repo": "https://github.com/bitcoinjs/bip38",
+    "description": "BIP38 is a standard process to encrypt Bitcoin and crypto currency private keys that is impervious to brute force attacks thus protecting the user.",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "base-input",
+    "repo": "https://github.com/bendrucker/base-input",
+    "description": "Base input field for virtual-dom",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "sodium-signatures",
+    "repo": "https://github.com/mafintosh/sodium-signatures",
+    "description": "Sodium signatures that works in node and in the browser",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "glslify-bundle",
+    "repo": "https://github.com/glslify/glslify-bundle",
+    "description": "Bundle a glslify-deps dependency tree into a GLSL source string",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "aedes-persistence",
+    "repo": "https://github.com/mcollina/aedes-persistence",
+    "description": "The spec for an Aedes persistence, with abstract tests and a fast in-memory implementation.",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "browser-supports-log-styles",
+    "repo": "https://github.com/gr2m/browser-supports-log-styles",
+    "description": "returns true if browser supports console log styling",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "assert-observ",
+    "repo": "https://github.com/bendrucker/assert-observ",
+    "description": "Assert that a value is an observable",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "torrent-discovery",
+    "repo": "https://github.com/webtorrent/torrent-discovery",
+    "description": "Discover BitTorrent and WebTorrent peers",
+    "dependents": 4
+  },
+  {
+    "name": "inject-lr-script",
+    "repo": "https://github.com/mattdesl/inject-lr-script",
+    "description": "inject live reload into HTML content",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "postgres-array",
+    "repo": "https://github.com/bendrucker/postgres-array",
+    "description": "Parse postgres array columns",
+    "dependents": 4,
+    "disable": true
+  },
+  {
+    "name": "int-encoder",
+    "repo": "https://github.com/alanclarke/int-encoder",
+    "description": "a simple utitlity to encode and decode ints from a predefined alphabet",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "application-config-path",
+    "repo": "https://github.com/LinusU/node-application-config-path",
+    "description": "Store your application config in the right location.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "sanitycheck",
+    "repo": "https://github.com/junosuarez/sanitycheck",
+    "description": "ensure that all deps are present and accounted for CI / CD",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "addressbar",
+    "repo": "https://github.com/cerebral/addressbar",
+    "description": "Makes the addressbar of the browser work just like a normal input",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "moment-parseformat",
+    "repo": "https://github.com/gr2m/moment-parseformat",
+    "description": "A moment.js plugin to extract the format of a date/time string",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "round-precision",
+    "repo": "https://github.com/bendrucker/round-precision",
+    "description": "Round a number to a specified decimal precision",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "auto-changelog",
+    "repo": "https://github.com/CookPete/auto-changelog",
+    "description": "Command line tool for generating a changelog from git tags and commit history",
+    "dependents": 3
+  },
+  {
+    "name": "sort-semver-comparators",
+    "repo": "https://github.com/bendrucker/sort-semver-comparators",
+    "description": "Sort semver comparators",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "assert-array",
+    "repo": "https://github.com/bendrucker/assert-array",
+    "description": "Assert that a value is an array",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "wifi-triangulate",
+    "repo": "https://github.com/watson/wifi-triangulate",
+    "description": "Finds your current position on planet earth using the wifi access points in your vicinity",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "cli-fail",
+    "repo": "https://github.com/bendrucker/cli-fail",
+    "description": "Fail with an error message and a correct exit code",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "dom-stub",
+    "repo": "https://github.com/npm-dom/dom-stub",
+    "description": "A minimal dom node stub for testing purposes",
+    "dependents": 3
+  },
+  {
+    "name": "osprey-router",
+    "repo": "https://github.com/mulesoft-labs/osprey-router",
+    "description": "Simple middleware-style router for RAML based on router",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "stream-to-blob-url",
+    "repo": "https://github.com/feross/stream-to-blob-url",
+    "description": "Convert a Readable Stream to a Blob URL",
+    "dependents": 3
+  },
+  {
+    "name": "geohub",
+    "repo": "https://github.com/koopjs/geohub",
+    "description": "GeoJSON extractor for Github repos and gists.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "dot-slash",
+    "repo": "https://github.com/bendrucker/dot-slash",
+    "description": "Normalize and detect the \"./\" relative path prefix",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "metalsmith-register-helpers",
+    "repo": "https://github.com/losttype/metalsmith-register-helpers",
+    "description": "A Metalsmith plugin for registering Handlebars helpers.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "patch-text",
+    "repo": "https://github.com/bendrucker/patch-text",
+    "description": "Make multiple changes to a block of text by providing start and end indices and replacement text",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "evp_bytestokey",
+    "repo": "https://github.com/crypto-browserify/EVP_BytesToKey",
+    "description": "he super secure key derivation algorithm from openssl",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "url-mapper",
+    "repo": "https://github.com/cerebral/url-mapper",
+    "description": "Two way `URL` <==> `route(params)` converter with mapper",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "is-ci",
+    "repo": "https://github.com/watson/is-ci",
+    "description": "Detect if your code is running on a CI server",
+    "dependents": 3
+  },
+  {
+    "name": "torrent-piece",
+    "repo": "https://github.com/webtorrent/torrent-piece",
+    "description": "Torrent piece abstraction",
+    "dependents": 3
+  },
+  {
+    "name": "view-list",
+    "repo": "https://github.com/shama/view-list",
+    "description": "An infinite scrolling list view element built on a virtual DOM.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "view-size",
+    "repo": "https://github.com/bendrucker/view-size",
+    "description": "Get the viewport size",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "git-head",
+    "repo": "https://github.com/christophwitzko/git-head",
+    "description": "finds the hash of the HEAD reference",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "publish-dist",
+    "repo": "https://github.com/tlvince/publish-dist",
+    "description": "Build and publish dist",
+    "dependents": 3
+  },
+  {
+    "name": "standard-json",
+    "repo": "https://github.com/standard/standard-json",
+    "description": "Format JavaScript Standard Style output to a JSON array.",
+    "dependents": 3
+  },
+  {
+    "name": "unique-filename",
+    "repo": "https://github.com/npm/unique-filename",
+    "description": "Generate a unique filename for use in temporary directories or caches.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "hash-index",
+    "repo": "https://github.com/watson/hash-index",
+    "description": "A hashing function which returns integers with a possible max value",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "program-version",
+    "repo": "https://github.com/wilmoore/program-version",
+    "description": "Returns the program/package name and version as a string with optional format customization.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "gl-blend-demo",
+    "repo": "https://github.com/Jam3/gl-blend-demo",
+    "description": "an example scene which blends foreground and background images",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "gl-cubemap-placeholder",
+    "repo": "https://github.com/wwwtyro/gl-cubemap-placeholder",
+    "description": "Simple debug cubemap generator.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "tape-promise",
+    "repo": "https://github.com/jprichardson/tape-promise",
+    "description": "Promise/async support for tape.",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "feathers-action-types",
+    "repo": "https://github.com/ahdinosaur/feathers-action-types",
+    "description": "flux action types for feathers services",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "stackman",
+    "repo": "https://github.com/watson/stackman",
+    "description": "Enhance an error stacktrace with code excerpts and other goodies",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "toa-token",
+    "repo": "https://github.com/toajs/toa-token",
+    "description": "Json web token (JWT) module for toa.",
+    "dependents": 3
+  },
+  {
+    "name": "object-pair",
+    "repo": "https://github.com/bendrucker/object-pair",
+    "description": "Create an object from a key/value pair",
+    "dependents": 3,
+    "disable": true
+  },
+  {
+    "name": "make-concurrent",
+    "repo": "https://github.com/fanatid/make-concurrent",
+    "description": "Easy exclusive or shared access to resource",
+    "dependents": 3
+  },
+  {
+    "name": "standard-www",
+    "repo": "https://github.com/standard/standard-www"
+  },
+  {
+    "name": "studynotes.org",
+    "repo": "https://github.com/feross/studynotes.org"
+  },
+  {
+    "name": "webtorrent.io",
+    "repo": "https://github.com/webtorrent/webtorrent.io"
+  },
+  {
+    "name": "webtorrent-desktop",
+    "repo": "https://github.com/webtorrent/webtorrent-desktop"
+  },
+  {
+    "name": "instant.io",
+    "repo": "https://github.com/webtorrent/instant.io"
+  },
+  {
+    "name": "bitmidi.com",
+    "repo": "https://github.com/feross/bitmidi.com"
+  },
+  {
+    "name": "speakeasyjs.com",
+    "repo": "https://github.com/feross/speakeasyjs.com"
+  },
+  {
+    "name": "request",
+    "repo": "https://github.com/request/request",
+    "description": "Simplified HTTP request client.",
+    "dependents": 41569,
+    "disable": true
+  },
+  {
+    "name": "commander",
+    "repo": "https://github.com/tj/commander.js",
+    "description": "the complete solution for node.js command-line programs",
+    "dependents": 34111,
+    "disable": true
+  },
+  {
+    "name": "nyc",
+    "repo": "https://github.com/istanbuljs/nyc",
+    "description": "the Istanbul command line interface",
+    "dependents": 31616,
+    "disable": true
+  },
+  {
+    "name": "karma-chrome-launcher",
+    "repo": "https://github.com/karma-runner/karma-chrome-launcher",
+    "description": "A Karma plugin. Launcher for Chrome and Chrome Canary.",
+    "dependents": 22619,
+    "disable": true
+  },
+  {
+    "name": "postcss-loader",
+    "repo": "https://github.com/postcss/postcss-loader",
+    "description": "PostCSS loader for webpack",
+    "dependents": 21179,
+    "disable": true
+  },
+  {
+    "name": "eslint-plugin-standard",
+    "repo": "https://github.com/standard/eslint-plugin-standard",
+    "description": "ESlint Plugin for the Standard Linter",
+    "dependents": 20349
+  },
+  {
+    "name": "yargs",
+    "repo": "https://github.com/yargs/yargs",
+    "description": "yargs the modern, pirate-themed, successor to optimist.",
+    "dependents": 17832,
+    "disable": true
+  },
+  {
+    "name": "karma-firefox-launcher",
+    "repo": "https://github.com/karma-runner/karma-firefox-launcher",
+    "description": "A Karma plugin. Launcher for Firefox.",
+    "dependents": 6947,
+    "disable": true
+  },
+  {
+    "name": "babel-plugin-istanbul",
+    "repo": "https://github.com/istanbuljs/babel-plugin-istanbul",
+    "description": "A babel plugin that adds istanbul instrumentation to ES6 code",
+    "dependents": 6465,
+    "disable": true
+  },
+  {
+    "name": "proxyquire",
+    "repo": "https://github.com/thlorenz/proxyquire",
+    "description": "Proxies nodejs require in order to allow overriding dependencies during testing.",
+    "dependents": 4889,
+    "disable": true
+  },
+  {
+    "name": "npm",
+    "repo": "https://github.com/npm/cli",
+    "description": "a package manager for JavaScript",
+    "dependents": 3868,
+    "disable": true
+  },
+  {
+    "name": "fast-sass-loader",
+    "repo": "https://github.com/yibn2008/fast-sass-loader",
+    "description": "fast sass loader for webpack",
+    "dependents": 3341,
+    "disable": true
+  },
+  {
+    "name": "tslint-config-standard",
+    "repo": "https://github.com/blakeembrey/tslint-config-standard",
+    "description": "A TSLint config for JavaScript Standard Style",
+    "dependents": 3169,
+    "disable": true
+  },
+  {
+    "name": "jsdom-global",
+    "repo": "https://github.com/rstacruz/jsdom-global",
+    "description": "Enable DOM in Node.js",
+    "dependents": 2164,
+    "disable": true
+  },
+  {
+    "name": "date-fns",
+    "repo": "https://github.com/date-fns/date-fns",
+    "description": "Modern JavaScript date utility library",
+    "dependents": 2026,
+    "disable": true
+  },
+  {
+    "name": "electron",
+    "repo": "https://github.com/electron/electron",
+    "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+    "dependents": 1985,
+    "disable": true
+  },
+  {
+    "name": "multer",
+    "repo": "https://github.com/expressjs/multer",
+    "description": "Middleware for handling `multipart/form-data`.",
+    "dependents": 1766,
+    "disable": true
+  },
+  {
+    "name": "ini",
+    "repo": "https://github.com/isaacs/ini",
+    "description": "An ini encoder/decoder for node",
+    "dependents": 1353,
+    "disable": true
+  },
+  {
+    "name": "npmlog",
+    "repo": "https://github.com/npm/npmlog",
+    "description": "logger for npm",
+    "dependents": 1114,
+    "disable": true
+  },
+  {
+    "name": "budo",
+    "repo": "https://github.com/mattdesl/budo",
+    "description": "a browserify server for rapid prototyping",
+    "dependents": 1105,
+    "disable": true
+  },
+  {
+    "name": "mqtt",
+    "repo": "https://github.com/mqttjs/MQTT.js",
+    "description": "A library for the MQTT protocol",
+    "dependents": 1096,
+    "disable": true
+  },
+  {
+    "name": "hubot",
+    "repo": "https://github.com/hubotio/hubot",
+    "description": "A simple helpful robot for your Company",
+    "dependents": 1080,
+    "disable": true
+  },
+  {
+    "name": "validate-npm-package-name",
+    "repo": "https://github.com/npm/validate-npm-package-name",
+    "description": "Give me a string and I'll tell you if it's a valid npm package name",
+    "dependents": 1064,
+    "disable": true
+  },
+  {
+    "name": "canvas",
+    "repo": "https://github.com/Automattic/node-canvas",
+    "description": "Canvas graphics API backed by Cairo",
+    "dependents": 1062,
+    "disable": true
+  },
+  {
+    "name": "redux-mock-store",
+    "repo": "https://github.com/arnaudbenard/redux-mock-store",
+    "description": "A mock store for testing your redux async action creators and middleware",
+    "dependents": 1020,
+    "disable": true
+  },
+  {
+    "name": "gulp-sequence",
+    "repo": "https://github.com/teambition/gulp-sequence",
+    "description": "Run a series of gulp tasks in order.",
+    "dependents": 1014,
+    "disable": true
+  },
+  {
+    "name": "node-gyp",
+    "repo": "https://github.com/nodejs/node-gyp",
+    "description": "Node.js native addon build tool",
+    "dependents": 1012,
+    "disable": true
+  },
+  {
+    "name": "chai-enzyme",
+    "repo": "https://github.com/producthunt/chai-enzyme",
+    "description": "Chai.js assertions for enzyme",
+    "dependents": 961,
+    "disable": true
+  },
+  {
+    "name": "markdown-it-anchor",
+    "repo": "https://github.com/valeriangalliat/markdown-it-anchor",
+    "description": "Header anchors for markdown-it.",
+    "dependents": 911,
+    "disable": true
+  },
+  {
+    "name": "safe-buffer",
+    "repo": "https://github.com/feross/safe-buffer",
+    "description": "Safer Node.js Buffer API",
+    "dependents": 897
+  },
+  {
+    "name": "levelup",
+    "repo": "https://github.com/Level/levelup",
+    "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
+    "dependents": 766,
+    "disable": true
+  },
+  {
+    "name": "sax",
+    "repo": "https://github.com/isaacs/sax-js",
+    "description": "An evented streaming XML parser in JavaScript",
+    "dependents": 765,
+    "disable": true
+  },
+  {
+    "name": "level",
+    "repo": "https://github.com/Level/level",
+    "description": "Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN)",
+    "dependents": 744,
+    "disable": true
+  },
+  {
+    "name": "flat",
+    "repo": "https://github.com/hughsk/flat",
+    "description": "Take a nested Javascript object and flatten it, or unflatten an object with delimited keys",
+    "dependents": 705,
+    "disable": true
+  },
+  {
+    "name": "@octokit/rest",
+    "repo": "https://github.com/octokit/rest.js",
+    "description": "GitHub REST API client for Node.js",
+    "dependents": 702,
+    "disable": true
+  },
+  {
+    "name": "koa-compose",
+    "repo": "https://github.com/koajs/compose",
+    "description": "compose Koa middleware",
+    "dependents": 702,
+    "disable": true
+  },
+  {
+    "name": "rollup-plugin-serve",
+    "repo": "https://github.com/thgh/rollup-plugin-serve",
+    "description": "Serve your rolled up bundle",
+    "dependents": 696,
+    "disable": true
+  },
+  {
+    "name": "pino",
+    "repo": "https://github.com/pinojs/pino",
+    "description": "super fast, all natural json logger",
+    "dependents": 670,
+    "disable": true
+  },
+  {
+    "name": "ignore-styles",
+    "repo": "https://github.com/bkonkle/ignore-styles",
+    "description": "Ignore imported style files when running in Node",
+    "dependents": 646,
+    "disable": true
+  },
+  {
+    "name": "cross-fetch",
+    "repo": "https://github.com/lquixada/cross-fetch",
+    "description": "Universal WHATWG Fetch API for Node, Browsers and React Native",
+    "dependents": 644,
+    "disable": true
+  },
+  {
+    "name": "blue-tape",
+    "repo": "https://github.com/spion/blue-tape",
+    "description": "Tape test runner with promise support",
+    "dependents": 632,
+    "disable": true
+  },
+  {
+    "name": "sinon-as-promised",
+    "repo": "https://github.com/bendrucker/sinon-as-promised",
+    "description": "Sugar methods for using sinon.js stubs with promises",
+    "dependents": 612,
+    "disable": true
+  },
+  {
+    "name": "mocha-jsdom",
+    "repo": "https://github.com/rstacruz/mocha-jsdom",
+    "description": "Simple integration of jsdom into mocha tests",
+    "dependents": 607,
+    "disable": true
+  },
+  {
+    "name": "eslint-plugin-jasmine",
+    "repo": "https://github.com/tlvince/eslint-plugin-jasmine",
+    "description": "ESLint rules for Jasmine",
+    "dependents": 600,
+    "disable": true
+  },
+  {
+    "name": "yargs-parser",
+    "repo": "https://github.com/yargs/yargs-parser",
+    "description": "the mighty option parser used by yargs",
+    "dependents": 591,
+    "disable": true
+  },
+  {
+    "name": "mathjs",
+    "repo": "https://github.com/josdejong/mathjs",
+    "description": "Math.js is an extensive math library for JavaScript and Node.js. It features a flexible expression parser with support for symbolic computation, comes with a large set of built-in functions and constants, and offers an integrated solution to work with dif",
+    "dependents": 584,
+    "disable": true
+  },
+  {
+    "name": "create-hash",
+    "repo": "https://github.com/crypto-browserify/createHash",
+    "description": "create hashes for browserify",
+    "dependents": 557,
+    "disable": true
+  },
+  {
+    "name": "mssql",
+    "repo": "https://github.com/tediousjs/node-mssql",
+    "description": "Microsoft SQL Server client for Node.js.",
+    "dependents": 545,
+    "disable": true
+  },
+  {
+    "name": "tar-fs",
+    "repo": "https://github.com/mafintosh/tar-fs",
+    "description": "filesystem bindings for tar-stream",
+    "dependents": 535,
+    "disable": true
+  },
+  {
+    "name": "leveldown",
+    "repo": "https://github.com/Level/leveldown",
+    "description": "A low-level Node.js LevelDB binding",
+    "dependents": 534,
+    "disable": true
+  },
+  {
+    "name": "memdown",
+    "repo": "https://github.com/Level/memdown",
+    "description": "An drop-in replacement for LevelDOWN that works in memory only",
+    "dependents": 530,
+    "disable": true
+  },
+  {
+    "name": "front-matter",
+    "repo": "https://github.com/jxson/front-matter",
+    "description": "Extract YAML front matter from a string",
+    "dependents": 522,
+    "disable": true
+  },
+  {
+    "name": "electron-prebuilt",
+    "repo": "https://github.com/electron-userland/electron-prebuilt",
+    "description": "Install prebuilt electron binaries for the command-line using npm",
+    "dependents": 515,
+    "disable": true
+  },
+  {
+    "name": "fstream",
+    "repo": "https://github.com/npm/fstream",
+    "description": "Advanced file system stream things",
+    "dependents": 514,
+    "disable": true
+  },
+  {
+    "name": "fastify",
+    "repo": "https://github.com/fastify/fastify",
+    "description": "Fast and low overhead web framework, for Node.js",
+    "dependents": 501,
+    "disable": true
+  },
+  {
+    "name": "secp256k1",
+    "repo": "https://github.com/cryptocoinjs/secp256k1-node",
+    "description": "This module provides native bindings to ecdsa secp256k1 functions",
+    "dependents": 483,
+    "disable": true
+  },
+  {
+    "name": "md5-file",
+    "repo": "https://github.com/roryrjb/md5-file",
+    "description": "return an md5sum of a given file",
+    "dependents": 482,
+    "disable": true
+  },
+  {
+    "name": "extract-zip",
+    "repo": "https://github.com/maxogden/extract-zip",
+    "description": "unzip a zip file into a directory using 100% javascript",
+    "dependents": 467,
+    "disable": true
+  },
+  {
+    "name": "assets-webpack-plugin",
+    "repo": "https://github.com/ztoben/assets-webpack-plugin",
+    "description": "Emits a json file with assets paths",
+    "dependents": 466,
+    "disable": true
+  },
+  {
+    "name": "testdouble",
+    "repo": "https://github.com/testdouble/testdouble.js",
+    "description": "A minimal test double library for TDD with JavaScript",
+    "dependents": 466,
+    "disable": true
+  },
+  {
+    "name": "randombytes",
+    "repo": "https://github.com/crypto-browserify/randombytes",
+    "description": "random bytes from browserify stand alone",
+    "dependents": 424,
+    "disable": true
+  },
+  {
+    "name": "microtime",
+    "repo": "https://github.com/wadey/node-microtime",
+    "description": "Get the current time in microseconds",
+    "dependents": 411,
+    "disable": true
+  },
+  {
+    "name": "fixpack",
+    "repo": "https://github.com/henrikjoreteg/fixpack",
+    "description": "cli tool that cleans up package.json files.",
+    "dependents": 392,
+    "disable": true
+  },
+  {
+    "name": "browser-sync-webpack-plugin",
+    "repo": "https://github.com/Va1/browser-sync-webpack-plugin",
+    "description": "BrowserSync and Webpack integration",
+    "dependents": 375
+  },
+  {
+    "name": "find-root",
+    "repo": "https://github.com/js-n/find-root",
+    "description": "find the closest package.json",
+    "dependents": 365,
+    "disable": true
+  },
+  {
+    "name": "create-hmac",
+    "repo": "https://github.com/crypto-browserify/createHmac",
+    "description": "node style hmacs in the browser",
+    "dependents": 362,
+    "disable": true
+  },
+  {
+    "name": "koa-convert",
+    "repo": "https://github.com/gyson/koa-convert",
+    "description": "convert koa legacy generator-based middleware to promise-based middleware",
+    "dependents": 345
+  },
+  {
+    "name": "sha.js",
+    "repo": "https://github.com/crypto-browserify/sha.js",
+    "description": "Streamable SHA hashes in pure javascript",
+    "dependents": 344,
+    "disable": true
+  },
+  {
+    "name": "mongojs",
+    "repo": "https://github.com/mafintosh/mongojs",
+    "description": "Easy to use module that implements the mongo api",
+    "dependents": 338,
+    "disable": true
+  },
+  {
+    "name": "qrcode",
+    "repo": "https://github.com/soldair/node-qrcode",
+    "description": "QRCode / 2d Barcode api with both server side and client side support using canvas",
+    "dependents": 337,
+    "disable": true
+  },
+  {
+    "name": "portscanner",
+    "repo": "https://github.com/baalexander/node-portscanner",
+    "description": "Asynchronous port scanner for Node.js",
+    "dependents": 332,
+    "disable": true
+  },
+  {
+    "name": "tinyify",
+    "repo": "https://github.com/browserify/tinyify",
+    "description": "a browserify plugin that runs various optimizations, so you don't have to install them all manually.",
+    "dependents": 330,
+    "disable": true
+  },
+  {
+    "name": "condition-circle",
+    "repo": "https://github.com/bahmutov/condition-circle",
+    "description": "Checks CircleCI environment before publishing successful build using semantic-release",
+    "dependents": 329,
+    "disable": true
+  },
+  {
+    "name": "react-tooltip",
+    "repo": "https://github.com/wwayne/react-tooltip",
+    "description": "react tooltip component",
+    "dependents": 326,
+    "disable": true
+  },
+  {
+    "name": "klaw",
+    "repo": "https://github.com/jprichardson/node-klaw",
+    "description": "File system walker with Readable stream interface.",
+    "dependents": 325,
+    "disable": true
+  },
+  {
+    "name": "klaw-sync",
+    "repo": "https://github.com/manidlou/node-klaw-sync",
+    "description": "Recursive, synchronous, and fast file system walker",
+    "dependents": 324,
+    "disable": true
+  },
+  {
+    "name": "nano",
+    "repo": "https://github.com/apache/couchdb-nano",
+    "description": "The official CouchDB client for Node.js",
+    "dependents": 313,
+    "disable": true
+  }
+]

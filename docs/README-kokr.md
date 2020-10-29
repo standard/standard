@@ -13,6 +13,10 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
@@ -25,8 +29,6 @@
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
-
-<br>
 
 ## 교정 & 자동 코드 수정을 도와주는 JavaScript 스타일 가이드
 
@@ -133,11 +135,11 @@ glob 패턴을 사용하여 디렉토리(또는 디렉토리들)를 선택적으
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**메모** 기본적으로`standard`는 `**/*.js`, `**/*.jsx` 패턴과 일치하는 모든 파일을 찾을 것입니다.
+**메모** 기본적으로 `standard`는 `**/*.js`, `**/*.jsx` 패턴과 일치하는 모든 파일을 찾을 것입니다.
 
 ## 이해가 잘되면 다음을 수행합니다
 
-1. `package.json`에 다음코드를 추가합니다.
+1. `package.json`에 다음 코드를 추가합니다.
 
   ```json
   {
@@ -167,7 +169,7 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느 누�
 
 이 모듈은 세가지의 방법으로 당신(또는 주변사람들)의 시간을 절약할 수 있습니다.
 
-- **환경설정이 필요없습니다.** 프로젝트에서 일관된 스타일을 적용하는 가장 쉬운 방법입니다. 그냥 넣기만 하면 됩니다.
+- **환경설정이 필요 없습니다.** 프로젝트에서 일관된 스타일을 적용하는 가장 쉬운 방법입니다. 그냥 넣기만 하면 됩니다.
 - **자동으로 코드 포멧을 맞춰줍니다.** `standard --fix`를 실행하면 지저분하거나 일관성없는 코드와 작별인사 할 수 있습니다.
 - **스타일 이슈 및 프로그래머의 오류를 조기에 파악할 수 있습니다.** 리뷰어와 기여자 사이의 관계를 제거함으로써 귀중한 코드 리뷰 시간을 절약할 수 있습니다.
 

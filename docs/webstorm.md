@@ -39,10 +39,10 @@ If you still prefer to configure `standard` manually, use the following guide.
 
 5. You may install dependencies and config globally or locally and with support of ES7 or without it
   - **Local** install:
-    - `npm install --save-dev eslint-config-standard eslint-config-standard-jsx eslint-plugin-promise eslint-plugin-react eslint-plugin-standard`
+    - `npm install --save-dev eslint-config-standard eslint-config-standard-jsx eslint-plugin-promise eslint-plugin-react`
     - `echo '{"extends": ["standard", "standard-jsx"]}' > .eslintrc`
   - **Global** install:
-    - `npm install --global eslint-config-standard eslint-config-standard-jsx eslint-plugin-promise eslint-plugin-react eslint-plugin-standard`
+    - `npm install --global eslint-config-standard eslint-config-standard-jsx eslint-plugin-promise eslint-plugin-react`
     - `echo '{"extends": ["standard", "standard-jsx"]}' > ~/.eslintrc`
 
   Be aware: The second command above will overwrite an existing `.eslintrc` if one exists.

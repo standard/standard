@@ -1,7 +1,7 @@
 {
   "name": "standard",
   "description": "JavaScript Standard Style",
-  "version": "15.0.1",
+  "version": "16.0.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -15,24 +15,22 @@
   },
   "dependencies": {
     "eslint": "~7.12.1",
-    "eslint-config-standard": "15.0.1",
-    "eslint-config-standard-jsx": "9.0.0",
+    "eslint-config-standard": "16.0.0",
+    "eslint-config-standard-jsx": "10.0.0",
     "eslint-plugin-import": "~2.22.1",
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~4.2.1",
     "eslint-plugin-react": "~7.21.5",
-    "eslint-plugin-standard": "~4.0.2",
-    "standard-engine": "^13.0.0"
+    "standard-engine": "^14.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cross-spawn": "^7.0.3",
-    "eslint-index": "^1.5.0",
     "hallmark": "^3.0.0",
     "minimist": "^1.2.5",
-    "mkdirp": "^1.0.4",
     "run-parallel-limit": "^1.0.6",
-    "standard-packages": "^3.10.0",
+    "run-series": "^1.1.9",
+    "simple-get": "^4.0.0",
     "tape": "^5.0.1"
   },
   "engines": {
@@ -71,9 +69,6 @@
     "url": "git://github.com/standard/standard.git"
   },
   "scripts": {
-    "show-rules": "eslint-index eslintrc.json",
-    "show-rules-disabled": "eslint-index eslintrc.json --status omitted off",
-    "show-summary": "eslint-index eslintrc.json --format table",
     "test": "./bin/cmd.js --verbose && tape test/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
