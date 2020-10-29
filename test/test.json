@@ -27,7 +27,8 @@
     "name": "jsonfile",
     "repo": "https://github.com/jprichardson/node-jsonfile",
     "description": "Easily read/write JSON files.",
-    "dependents": 370
+    "dependents": 370,
+    "disable": true
   },
   {
     "name": "babel-tape-runner",
@@ -1316,7 +1317,8 @@
     "name": "cross-fetch",
     "repo": "https://github.com/lquixada/cross-fetch",
     "description": "Universal WHATWG Fetch API for Node, Browsers and React Native",
-    "dependents": 644
+    "dependents": 644,
+    "disable": true
   },
   {
     "name": "blue-tape",
@@ -1439,7 +1441,8 @@
     "name": "assets-webpack-plugin",
     "repo": "https://github.com/ztoben/assets-webpack-plugin",
     "description": "Emits a json file with assets paths",
-    "dependents": 466
+    "dependents": 466,
+    "disable": true
   },
   {
     "name": "testdouble",
