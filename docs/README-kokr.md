@@ -165,7 +165,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 ## 왜 JavaScript Standard Style을 사용해야 할까요?
 
-JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누구도 작업하는 모든 모듈/프로젝트에 대해 수백 줄 style의 구성 파일을 유지하려고하지 않습니다. 더 이상 바보 같은 짓은 그만 하세요.
+JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느 누구도 작업하는 모든 모듈/프로젝트에 대해 수백 줄 style의 구성 파일을 유지하려고 하지 않습니다. 더 이상 바보같은 짓은 그만하세요.
 
 이 모듈은 세가지의 방법으로 당신(또는 주변사람들)의 시간을 절약할 수 있습니다.
 
@@ -233,7 +233,7 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느누�
 
 **[Package Control][sublime-1]** 을 사용하여, **[SublimeLinter][sublime-2]** 와 **[SublimeLinter-contrib-standard][sublime-3]** 를 설치합니다.
 
-저장시 자동포멧을 적용하려면 **[StandardFormat][sublime-4]** 을 설치하세요.
+저장시 자동 포멧을 적용하려면 **[StandardFormat][sublime-4]** 을 설치하세요.
 
 [sublime-1]: https://packagecontrol.io/
 [sublime-2]: http://www.sublimelinter.com/en/latest/
@@ -285,7 +285,7 @@ set autoread
 
 ### Emacs
 
-**[Flycheck][emacs-1]** 를 설치하고 **[manual][emacs-2]** 을 확인하여 프로젝트에서 활성화하는 방법을 확인하십시오.
+**[Flycheck][emacs-1]** 를 설치하고 **[manual][emacs-2]** 을 확인하여 프로젝트에서 활성화하는 방법을 확인하세요.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
@@ -322,7 +322,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 ## 나와는 룰이 맞지 않습니다. 변경 가능합니까?
 
-안됩니다. `standard`의 전체적인 요점은 코드 스타일에 대한 [bikeshedding][bikeshedding]을 피함으로써 시간을 절약하는 것입니다. 탭과 공백 등에 관해서는 온라인으로 많은 논쟁이 있기때문에 해결되지 않을 것입니다. 이러한 논쟁은 어떠한 것도 얻지 못하게합니다. 결국 `뭔가를 골라야 한다`입니다. 그것은 `standard`의 철학입니다. 이는 `단지 뭔가를 선택하세요`라는 의견입니다. 바라건대, 사용자들이 자신들의 의견을 방어하는 것에 대해 가치를 보게 되기를 바랍니다.
+안됩니다. `standard`의 전체적인 요점은 코드 스타일에 대한 [bikeshedding][bikeshedding]을 피함으로써 시간을 절약하는 것입니다. 탭과 공백 등에 관해서는 온라인으로 많은 논쟁이 있기 때문에 해결되지 않을 것입니다. 이러한 논쟁은 어떠한 것도 얻지 못하게 합니다. 결국 `뭔가를 골라야 한다`입니다. 그것은 `standard`의 철학입니다. 이는 `단지 뭔가를 선택하세요`라는 의견입니다. 바라건대, 사용자들이 자신들의 의견을 방어하는 것에 대해 가치를 보게 되기를 바랍니다.
 
 수백 개의 ESLint 규칙을 개별적으로 구성하려는 경우 `eslint`를 직접 [eslint-config-standard](https://github.com/standard/eslint-config-standard)와 함께 사용하여 변경 사항을 맨 위에 배치 할 수 있습니다.
 [`standard-eject`](https://github.com/josephfrazier/standard-eject)는`standard`에서 `eslint`와 `eslint-config-standard` 로의 마이그레이션을 도와 줄 수 있습니다.
@@ -333,21 +333,21 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 ## 그러나 이 것은 실제 웹표준이 아닙니다!
 
-물론 표준이 아닙니다! 여기에 제시된 스타일은 공식 웹 표준 그룹과 관련이 없으므로 `ECMA/standard`이 아닌 `standard/standard`라고하는 이유입니다.
+물론 표준이 아닙니다! 여기에 제시된 스타일은 공식 웹 표준 그룹과 관련이 없으므로 `ECMA/standard`이 아닌 `standard/standard`라고 하는 이유입니다.
 
 "standard"이라는 단어는 "web standard"이상의 의미를 가지고 있습니다 :-)
 
 예를 들어,
-- 이 모듈은 우리의 코드를 높은 수준의 품질로 유지하는 데 도움이됩니다.
-- 이 모듈은 새로운 기여자가 몇 가지 기본 스타일 표준을 준수하도록합니다.
+- 이 모듈은 우리의 코드를 높은 수준의 품질로 유지하는 데 도움이 됩니다.
+- 이 모듈은 새로운 기여자가 몇 가지 기본 스타일 표준을 준수하도록 합니다.
 
 ## 자동으로 포멧을 맞춰주는 것이 있나요?
 
 예! 대부분의 이슈를 자동으로 수정하려면 `standard --fix`를 사용할 수 있습니다.
 
-`standard --fix`는 최대의 편의를 위해 `standard`에 내장되어 있습니다. 대부분의 문제점은 고칠 수 있지만 일부 오류(오류 처리를 잊어 버리는 것)는 수동으로 해결해야합니다.
+`standard --fix`는 최대의 편의를 위해 `standard`에 내장되어 있습니다. 대부분의 문제점은 고칠 수 있지만 일부 오류(오류 처리를 잊어 버리는 것)는 수동으로 해결해야 합니다.
 
-시간을 절약하기 위해 `standard`는 자동으로 수정할 수있는 문제를 발견하면 "`Run standard --fix to automatically fix some problems`" 메시지를 출력합니다.
+시간을 절약하기 위해 `standard`는 자동으로 수정할 수 있는 문제를 발견하면 "`Run standard --fix to automatically fix some problems`" 메시지를 출력합니다.
 
 ## 어떻게하면 파일들을 무시할 수 있나요?
 
@@ -355,7 +355,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 프로젝트의 루트 `.gitignore` 파일에 있는 경로도 자동으로 무시됩니다.
 
-때로는 추가 폴더 또는 특정 축소 파일을 무시해야합니다. 이를 수행하려면 `package.json`에 `standard.ignore` 속성을 추가하십시오.
+때로는 추가 폴더 또는 특정 축소 파일을 무시해야 합니다. 이를 수행하려면 `package.json`에 `standard.ignore` 속성을 추가하십시오.
 
 ```json
 "standard": {
@@ -406,7 +406,7 @@ console.log('offending code goes here...')
 
 ## 전역 namespace를 오염시키는 라이브러리를 사용합니다. "variable is not defined" 오류를 방지하려면 어떻게 해야 하나요?
 
-일부 패키지 (예 : `mocha`)는 전역 개체 (가난한 형태!)에 기능 (예 : `describe`, `it`)을 지정합니다. 이 함수는 정의되지 않았거나 코드의 어느 곳에서든지 요구 될 수 있기 때문에 `standard`에서는 정의되지 않은 변수를 사용하고 있다고 경고합니다 (일반적으로 이 규칙은 오타를 잡는 데 유용합니다). 그러나 우리는 이 전역 변수들에 대해 이를 비활성화 하고자합니다.
+일부 패키지 (예 : `mocha`)는 전역 개체 (가난한 형태!)에 기능 (예 : `describe`, `it`)을 지정합니다. 이 함수는 정의되지 않았거나 코드의 어느 곳에서든지 요구 될 수 있기 때문에 `standard`에서는 정의되지 않은 변수를 사용하고 있다고 경고합니다 (일반적으로 이 규칙은 오타를 잡는 데 유용합니다). 그러나 우리는 이 전역 변수들에 대해 이를 비활성화 하고자 합니다.
 
 `standard` (코드를 읽는 사람뿐만 아니라)에서 특정 변수가 코드에서 전역이라는 것을 알 수 있도록 파일의 맨 위에 추가하십시오.
 
@@ -436,7 +436,7 @@ $ standard --global myVar1 --global myVar2
 
 `standard`는 제안 프로세스의 "단계 4"에있는 언어 기능 제안을 포함하여 최신 ECMAScript 기능인 ES8 (ES2017)을 지원합니다.
 
-실험용 언어 기능을 지원하기 위해 `standard`는 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. 커스텀 파서를 사용하기 전에 추가 된 복잡성이 그럴 가치가 있는지 고려하십시오.
+실험용 언어 기능을 지원하기 위해 `standard`는 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. 커스텀 파서를 사용하기 전에 추가 된 복잡성이 그럴 가치가 있는지 고려하세요.
 
 커스텀파서를 사용하기 전에 먼저 npm모듈을 설치합니다.
 
@@ -464,7 +464,7 @@ $ standard --parser babel-eslint
 
 ## JavaScript와 다른 Flow 또는 TypeScript에서도 사용할 수 있나요?
 
-`standard`는 최신 ECMAScript 기능을 지원합니다. 그러나 Flow 및 TypeScript는 새로운 구문을 언어에 추가해야하기 때문에 즉시 사용할 수 없습니다.
+`standard`는 최신 ECMAScript 기능을 지원합니다. 그러나 Flow 및 TypeScript는 새로운 구문을 언어에 추가해야 하기 때문에 즉시 사용할 수 없습니다.
 
 JavaScript 언어 변형을 지원하기 위해 `standard`는 변경된 구문을 처리 할 수있는 ESLint 플러그인뿐만 아니라 맞춤 JavaScript 파서를 지정하는 것을 지원합니다. JavaScript 언어 변형을 사용하기 전에 추가된 복잡성이 가치가 있는지 고려하십시오.
 
@@ -493,13 +493,13 @@ $ standard --parser babel-eslint --plugin flowtype
 }
 ```
 
-*주의 :`plugin`과`plugins`는 동일합니다.*
+*주의 :`plugin`과 `plugins`는 동일합니다.*
 
-만약`standard`가 전역 적으로 설치된다면 (즉,`npm install standard - global`), `babel-eslint`와`eslint-plugin-flowtype`도 함께 설치해야합니다. `npm install babel-eslint eslint-plugin-flowtype --global`.
+만약`standard`가 전역 적으로 설치된다면 (즉,`npm install standard - global`), `babel-eslint`와`eslint-plugin-flowtype`도 함께 설치해야 합니다. `npm install babel-eslint eslint-plugin-flowtype --global`.
 
 ### TypeScript
 
-TypeScript를 사용하려면`@typescript-eslint/parser`를 파서로`standard`를, 플러그인으로`eslint-plugin-typescript`를 실행하고 표준을 lint`* .ts` 파일로 보내야합니다. (기본값이 아니기 때문)
+TypeScript를 사용하려면 `@typescript-eslint/parser`를 파서로 `standard`를, 플러그인으로 `eslint-plugin-typescript`를 실행하고 표준을 lint `* .ts` 파일로 보내야 합니다. (기본값이 아니기 때문)
 
 ```bash
 npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
@@ -529,7 +529,7 @@ $ standard --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint
 standard *.ts
 ```
 
-`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install @typescript-eslint/parser eslint-plugin-typescript --global`을 사용하여 `eslint-plugin-flowtype`와 `@typescript-eslint/parser`를 전역으로 설치해야합니다.
+`standard`가 전역으로 설치된 경우 (즉, `npm install standard --global`) `npm install @typescript-eslint/parser eslint-plugin-typescript --global`을 사용하여 `eslint-plugin-flowtype`와 `@typescript-eslint/parser`를 전역으로 설치해야 합니다.
 
 ## Mocha, Jasmine, QUnit 등은 어떻습니까?
 
@@ -545,7 +545,7 @@ standard *.ts
 $ standard --env mocha
 ```
 
-`mocha`는 `jasmine`, `qunit`, `phantomjs` 중 하나가 될 수 있습니다. 전체 목록을 보려면 ESLint의 [specifying environments(스펙문서)](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)를 확인하십시오. 이러한 환경에서 사용할 수있는 전역의 목록을 보려면 [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm 모듈을 확인하십시오.
+`mocha`는 `jasmine`, `qunit`, `phantomjs` 중 하나가 될 수 있습니다. 전체 목록을 보려면 ESLint의 [specifying environments(스펙문서)](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)를 확인하십시오. 이러한 환경에서 사용할 수 있는 전역의 목록을 보려면 [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm 모듈을 확인하십시오.
 
 **참고 : `env` 및 `envs`는 동일합니다.**
 
@@ -563,7 +563,7 @@ $ standard --env mocha
 
 Markdown 파일 내의 코드를 확인하려면 [`standard-markdown`](https://www.npmjs.com/package/standard-markdown)을 사용하십시오.
 
-또는 Markdown, HTML 및 기타 여러 유형의 언어 파일에서 코드를 확인할 수있는 ESLint 플러그인이 있습니다.
+또는 Markdown, HTML 및 기타 여러 유형의 언어 파일에서 코드를 확인할 수 있는 ESLint 플러그인이 있습니다.
 
 Markdown 파일 내의 코드를 확인하려면 ESLint 플러그인을 사용하십시오.
 
@@ -571,7 +571,7 @@ Markdown 파일 내의 코드를 확인하려면 ESLint 플러그인을 사용�
 $ npm install eslint-plugin-markdown
 ```
 
-그런 다음, 코드 블록 안에있는 JS를 확인하려면 다음을 실행하십시오.
+그런 다음, 코드 블록 안에 있는 JS를 확인하려면 다음을 실행하십시오.
 
 ```bash
 $ standard --plugin markdown '**/*.md'
@@ -583,7 +583,7 @@ HTML 파일 내부의 코드를 확인하려면 ESLint 플러그인을 사용하
 $ npm install eslint-plugin-html
 ```
 
-그런 다음, `<script>`태그 안에있는 JS를 확인하려면 다음을 실행하십시오.
+그런 다음, `<script>`태그 안에 있는 JS를 확인하려면 다음을 실행하십시오.
 
 ```bash
 $ standard --plugin html '**/*.html'
