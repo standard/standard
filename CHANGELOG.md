@@ -21,15 +21,45 @@ code to match the newly added rules.
 
 ### New features
 
+- Support the `.gitignore` ignore syntax from the command line [#1117](https://github.com/standard/standard/issues/1117)
+  - In older versions, the command `standard src` would not lint the `src/` folder
+  - Instead, a glob pattern needed like `standard src/**/*.js` was required
+  - This is now fixed! You can run `standard src` to lint the `src/` folder!
 
+- Paths with square brackets (e.g. `[` and `]`) are no longer skipped [#1333](https://github.com/standard/standard/issues/1333)
+  - This pattern is particularly common in Next.js apps, e.g. `blog/[slug].js`
+  - You may notice new errors in these files since they were not being linted before
+
+- Better performance: the filesystem doesn't need to be traversed multiple times! [#1023](https://github.com/standard/standard/issues/1023)
+  - Massive improvements (on the order of minutes!) for projects with huge folders which are are ignored with `.gitignore`
+
+- Support relative paths from the command line (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
+
+- New `extensions` option for linting additional extensions besides `.js`, `.jsx`, `.mjs`, and `.cjs`
+  - Can be configured with the `--ext` command line flag or in `package.json`:
+  - Example:
+
+    ```bash
+    standard --ext .ts
+    ```
+
+    ```json
+    {
+      "standard": {
+        "extensions": [".ts"]
+      }
+    }
+    ```
 
 ### Changed features
 
 - Update `eslint` from `~7.11.0` to `~7.12.1`
 
-- Update `standard-engine` from `^12` to `^13`
+- Update `standard-engine` from `^12` to `^14`
   - Fix inaccurate `--help` command which indicates that `bundle.js` is automatically ignored when it is not [standard-engine/#224](https://github.com/standard/standard-engine/pull/224)
   - New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
+  - Remove `deglob` package and use built-in ESLint folder-traversal support
+
 
 
 ### New rules
@@ -38,6 +68,7 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 - Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
 - Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
+- Disallow spaces inside of computed keys of class methods, getters and setters ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1416](https://github.com/standard/standard/issues/1416) [0%]
 - React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
 - React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
 - React: Prevent direct mutation of `this.state` ([react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)) [#1571](https://github.com/standard/standard/issues/1571) [0%]
@@ -52,9 +83,10 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 - JSX: Enforce JSX value is returned in component render function ([react/require-render-return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)) [#1565](https://github.com/standard/standard/issues/1565) [0%]
 - JSX: Prevent usage of unsafe `target='_blank'` on any component named `Link` ([react/jsx-no-target-blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)) [#1576](https://github.com/standard/standard/issues/1576) [0%]
 
+
 ### Changed rules
 
-
+- Relax rule: Remove conflicting JSX indenting with `indent` rule [#1499](https://github.com/standard/standard/issues/1499)
 
 ## [15.0.1] - 2020-10-27
 
