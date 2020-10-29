@@ -69,12 +69,15 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 - Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
 - Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
 - Disallow spaces inside of computed keys of class methods, getters and setters ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1416](https://github.com/standard/standard/issues/1416) [0%]
+- Disallow `case NaN`, `switch(NaN)`, `indexOf(NaN)`, and `lastIndexOf(NaN)` ([use-isnan](https://eslint.org/docs/rules/use-isnan)) [#1429](https://github.com/standard/standard/issues/1429) [0%]
+
 - React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
 - React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
 - React: Prevent direct mutation of `this.state` ([react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)) [#1571](https://github.com/standard/standard/issues/1571) [0%]
 - React: Prevent usage of `findDOMNode` ([react/no-find-dom-node](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md)) [#1570](https://github.com/standard/standard/issues/1570) [0%]
 - React: Prevent usage of `isMounted` ([react/no-is-mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)) [#1569](https://github.com/standard/standard/issues/1569) [0%]
 - React: Prevent using string refs ([react/no-string-refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)) [#1567](https://github.com/standard/standard/issues/1567) [0%]
+
 - JSX: Prevent missing parentheses around multiline JSX ([react/jsx-wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md)) [#710](https://github.com/standard/standard/issues/710) [#1382](https://github.com/standard/standard/issues/1382) (0%)
 - JSX: Check if shorthand fragment syntax requires a key prop ([react/jsx-key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)) [#1575](https://github.com/standard/standard/issues/1575) [0%]
 - JSX: Prevent passing of children as props ([react/no-children-prop](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md)) [#1574](https://github.com/standard/standard/issues/1574) [0%]
