@@ -15,6 +15,7 @@
 </p>
 
 <h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
 </h5>
 <br>
 
