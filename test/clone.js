@@ -26,13 +26,12 @@ const argv = minimist(process.argv.slice(2), {
     'offline',
     'quick',
     'quiet',
-    'fix'
+    'fix',
+    'write'
   ]
 })
 
-let pkgs = argv.quick
-  ? testPkgs.slice(0, 20)
-  : testPkgs
+let pkgs = testPkgs
 
 const disabledPkgs = []
 pkgs = pkgs.filter(pkg => {
@@ -42,9 +41,15 @@ pkgs = pkgs.filter(pkg => {
 
 if (argv.disabled) {
   pkgs = disabledPkgs
-} else {
+}
+
+pkgs = argv.quick
+  ? pkgs.slice(0, 20)
+  : pkgs
+
+if (!argv.disabled) {
   test('Disabled Packages', t => {
-    disabledPkgs.forEach(pkg => {
+    pkgs.forEach(pkg => {
       console.log(`DISABLED: ${pkg.name}: ${pkg.disable} (${pkg.repo})`)
     })
     t.end()
@@ -100,9 +105,11 @@ test('test github repos that use `standard`', t => {
               t.comment(`Attempting --fix on ${str}`)
               runStandardFix(cb)
             } else if (err) {
+              markDisabled(name, true)
               t.fail(str)
               cb(null)
             } else {
+              markDisabled(name, false)
               t.pass(str)
               cb(null)
             }
@@ -127,10 +134,25 @@ test('test github repos that use `standard`', t => {
             cb(err)
           })
         }
+
+        function markDisabled (name, disabled) {
+          const pkg = testPkgs.find(pkg => pkg.name === name)
+          if (disabled) {
+            pkg.disable = disabled
+          } else {
+            delete pkg.disable
+          }
+        }
       })
     }
   }), PARALLEL_LIMIT, err => {
     if (err) throw err
+    if (argv.write) {
+      fs.writeFileSync(
+        path.join(__dirname, 'test.json'),
+        JSON.stringify(testPkgs, null, 2)
+      )
+    }
   })
 })
 
