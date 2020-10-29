@@ -69,6 +69,7 @@ code to match the newly added rules.
 
 _(Estimated % of affected standard users, based on test suite in parens)_
 
+- Require let or const instead of var ([no-var](https://eslint.org/docs/rules/no-var)) [#633](https://github.com/standard/standard/issues/633) [75%] [automatic fixing reduces to 11%]
 - Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
 - Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
 - Enforce default parameters to be last ([default-param-last](https://eslint.org/docs/rules/default-param-last)) [#1414](https://github.com/standard/standard/issues/1414) [1%]
