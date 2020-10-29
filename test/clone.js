@@ -49,7 +49,7 @@ pkgs = argv.quick
 
 if (!argv.disabled) {
   test('Disabled Packages', t => {
-    pkgs.forEach(pkg => {
+    disabledPkgs.forEach(pkg => {
       console.log(`DISABLED: ${pkg.name}: ${pkg.disable} (${pkg.repo})`)
     })
     t.end()
