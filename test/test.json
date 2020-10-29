@@ -1477,13 +1477,6 @@
     "dependents": 375
   },
   {
-    "name": "camel-case",
-    "repo": "https://github.com/blakeembrey/camel-case",
-    "description": "Camel case a string",
-    "dependents": 373,
-    "disable": true
-  },
-  {
     "name": "find-root",
     "repo": "https://github.com/js-n/find-root",
     "description": "find the closest package.json",
