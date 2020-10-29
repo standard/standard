@@ -13,10 +13,15 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
+  <a href="/docs/README-id.md">Bahasa Indonesia</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -25,15 +30,13 @@
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<br>
-
 ## Guía de estilos JavaScript, con linter y corrección automática de código
 
-Este modulo te ahorra tiempo a ti (y otros) tres maneras:
+Este módulo te ahorra tiempo a ti (y otros) tres maneras:
 
-- **Sin configuración.** La manera mas fácil de usar estilos consistentes
+- **Sin configuración.** La manera más fácil de usar estilos consistentes
   en tu proyecto.
-- **Automaticamente formatea el código.** Ejecuta `standard --fix` y dile adios a las
+- **Automáticamente formatea el código.** Ejecuta `standard --fix` y dile adiós a las
   inconsistencias en tu código.
 - **De manera temprana captura problemas de estilos y errores de programador.** Te ahorras el tiempo
   de hacer revisiones de código eliminando inconsistencias entre el dueño del
@@ -45,7 +48,7 @@ Instalar con:
 npm install standard --save-dev
 ```
 
-### Las reglas
+### Las reglas son:
 
 - **2 espacios** como sangría.
 - **Usar comillas simples en cadenas de texto** con la excepción de escapado de texto
@@ -56,7 +59,7 @@ npm install standard --save-dev
   - [Más detalles][4]
 - **Espacio después de las palabras claves** `if (condition) { ... }`
 - **Espacio después del nombre de función** `function name (arg) { ... }`
-- Usar siempre  `===` en vez de `==` – pero `obj == null` está permitido para verificar `null || undefined`.
+- Usar siempre `===` en vez de `==` – pero `obj == null` está permitido para verificar `null || undefined`.
 - Gestionar siempre el parámetro de función `err` de node.js
 - Usar siempre el prefijo `window` en los globales del navegador – A excepción de `document` y `navigator` esto está bien
   - Previene el uso accidental de mal-llamados globales del navegador como `open`, `length`,
@@ -92,7 +95,7 @@ que usan `standard`!
   - [¿Hay algún formateador automático?](#hay-algún-formateador-automático)
   - [¿Cómo hago para ignorar archivos?](#cómo-hago-para-ignorar-archivos)
   - [¿Cómo oculto cierta alerta?](#cómo-oculto-cierta-alerta)
-  - [Yo uso una librería que contamina el espacio de nombres global. ¿Cómo puedo evitar los errores  "variable is not defined"?](#yo-uso-una-librería-que-contamina-el-espacio-de-nombres-global-cómo-puedo-evitar-los-errores--variable-is-not-defined)
+  - [Yo uso una librería que contamina el espacio de nombres global. ¿Cómo puedo evitar los errores "variable is not defined"?](#yo-uso-una-librería-que-contamina-el-espacio-de-nombres-global-cómo-puedo-evitar-los-errores--variable-is-not-defined)
   - [¿Puedo usar un parser JavaScript que soporte ES última-generación?](#puedo-usar-un-parser-javascript-que-soporte-es-última-generación)
   - [¿Puedo usar una variación de lenguaje JavaScript, como Flow?](#puedo-usar-una-variación-de-lenguaje-javascript-como-flow)
   - [¿Qué pasa con Mocha, Jasmine, QUnit y etc?](#qué-pasa-con-mocha-jasmine-qunit-y-etc)
@@ -139,7 +142,7 @@ para que sean expandidos por `standard` y no por el shell:
 $ standard "src/util/**/*.js" "test/**/*.js"
 ```
 
-**Nota:** Por defecto `standard`  buscará todos los archivos que concuerden con los patrones:
+**Nota:** Por defecto `standard` buscará todos los archivos que concuerden con los patrones:
 `**/*.js`, `**/*.jsx`.
 
 ## Lo que podrías hacer si eres inteligente
@@ -168,7 +171,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. No vuelvas a dar feedback de estilos en una PR jamás!
 
-## ¿Por qué deberia usar JavaScript Standard Style?
+## ¿Por qué debería usar JavaScript Standard Style?
 
 La belleza de JavaScript Standard Style es qué es simple.
 Nadie quiere mantener configuración de estilos en múltiples archivos
@@ -177,9 +180,9 @@ de cientos de líneas para cada módulo/proyecto en los que trabajan.
 
 Este módulo te ahorra tiempo a ti (y otros) en tres maneras:
 
-- **Sin configuración.** La manera mas fácil de usar estilos consistentes
+- **Sin configuración.** La manera más fácil de usar estilos consistentes
   en tu proyecto.
-- **Automáticamente formatea el código.** Ejecuta `standard --fix` y dile adios a las
+- **Automáticamente formatea el código.** Ejecuta `standard --fix` y dile adiós a las
   inconsistencias en tu código.
 - **Captura problemas de estilos y errores del programador muy pronto.** Te ahorras el tiempo
   de hacer revisiones de código eliminando inconsistencias entre el dueño del
@@ -189,7 +192,7 @@ Adoptar estilos `standard` significa clasificar la importancia de la claridad de
 
 ## ¿Quién usa JavaScript Standard Style?
 
-Un montón de gente!
+¡Un montón de gente!
 
 [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
 |---|---|---|---|
@@ -229,11 +232,11 @@ Un montón de gente!
 |---|---|---|---|
 
 
-| Your logo here | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
 |---|---|---|---|
 
 
-Adicionalmente a compañías, muchos miembros de la comunidad usan `standard` en modulos que son
+Adicionalmente a compañías, muchos miembros de la comunidad usan `standard` en módulos que son
 [muy numerosos](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) para listar aquí.
 
 También `standard` es el linter con más estrellas en GitHub
@@ -310,16 +313,16 @@ Busque el registro de extension para **["Standard Code Style"][brackets-1]**.
 
 #### [WebStorm and other JetBrains products][webstorm-1]
 
-WebStorm [recientemente anuncio soporte nativo](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) para `standard` diractemente en el IDE.
+WebStorm [recientemente anuncio soporte nativo](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) para `standard` directamente en el IDE.
 
-Si aun prefieres configurar `standard` manualmente [sigue esta guia](webstorm-2). Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
+Si aun prefieres configurar `standard` manualmente [sigue esta guía](webstorm-2). Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: webstorm.md
 
 ## Hay alguna medalla para readme?
 
-Si! Si estas usando `standard` en tu proyecto, puedes includir una de estas en tu readme para
+Si! Si estas usando `standard` en tu proyecto, puedes incluir una de estas en tu readme para
 hacerle saber a las personas que en tu código estas usando estilos standard.
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
@@ -346,9 +349,9 @@ en los cuales debes usar tu tiempo! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## ¡Pero esto no un estandar web real!
+## ¡Pero esto no es un estandar web real!
 
-¡Por su puesto que no lo es! Este estilo no está afiliado a ningún grupo oficial de estándar web, por eso este repositorio se llama `standard/standard` y no `ECMA/standard`.
+¡Por supuesto que no lo es! Este estilo no está afiliado a ningún grupo oficial de estándar web, por eso este repositorio se llama `standard/standard` y no `ECMA/standard`.
 
 La palabra “estándar” tiene más significados que solo “estándar web” :-) Por ejemplo:
 
@@ -357,7 +360,7 @@ La palabra “estándar” tiene más significados que solo “estándar web” 
 
 ## ¿Hay algún formateador automático?
 
-¡Sí! Puedes usar `standard --fix` para arreglar la mayoría de problemas automáticamente.
+¡Sí! Puedes usar `standard --fix` para arreglar la mayoría de los problemas automáticamente.
 
 `standard --fix` está integrado en `standard` (desde v8.0.0) para máxima conveniencia.
 La mayoría de los problemas se arreglan, pero algunos errores (olvidar gestionar errores en callbacks) deben ser arreglados manualmente.
@@ -390,7 +393,7 @@ En raros casos, necesitarás romper una regla y ocultar la alerta generada por `
 
 JavaScript Standard Style usa [ESLint](http://eslint.org/) bajo la capucha y puedes ocultar las alertas como normalmente lo harías si usaras ESLint directamente.
 
-Para obtener una salida mas especifica (así puedes encontrar el nombre de la regla a ignorar) ejecute:
+Para obtener una salida más específica (así puedes encontrar el nombre de la regla a ignorar) ejecute:
 
 ```bash
 $ standard --verbose
@@ -398,7 +401,7 @@ Error: Use JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
-Inhabilitar **toda las reglas** en una linea especifica:
+Inhabilitar **toda las reglas** en una línea específica:
 
 ```js
 file = 'I know what I am doing' // eslint-disable-line
@@ -410,7 +413,7 @@ O, inhabilitar **solo** la regla `"no-use-before-define"`:
 file = 'I know what I am doing' // eslint-disable-line no-use-before-define
 ```
 
-O, inhabilitar la regla `"no-use-before-define"` para **múltiples lineas**:
+O, inhabilitar la regla `"no-use-before-define"` para **múltiples líneas**:
 
 ```js
 /* eslint-disable no-use-before-define */
@@ -430,7 +433,7 @@ Para hacerle saber a `standard` (como también a los humanos que leen tu código
 /* global myVar1, myVar2 */
 ```
 
-Si tienes cientos de archivos, seria deseable evitar agregar comentarios a cada archivo.
+Si tienes cientos de archivos, sería deseable evitar agregar comentarios a cada archivo.
 En este caso ejecute:
 
 ```bash
@@ -532,7 +535,7 @@ Agrega esto al inicio de tus archivos:
 ```
 
 Esto le hará saber a` standard` (como también humanos que leen tu código) que
-`self` es una variable global en el codigo web worker.
+`self` es una variable global en el código web worker.
 
 ## ¿Puedo verificar código dentro de archivos Markdown o HTML?
 
@@ -664,9 +667,9 @@ El `callback` será llamado con un objeto de `Error` y `results`: (igual al de a
 
 ## ¿Cómo puedo contribuir a `standard`?
 
-Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/standard/standard/issues) o [PRs](https://github.com/standard/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
+¡Las contribuciones son bienvenidas! Comprueba los [issues](https://github.com/standard/standard/issues) o [PRs](https://github.com/standard/standard/pulls), o haz el tuyo propio si quieres algo que nos ves allí
 
-Unete a nosotros `#standard` en freenode.
+Únete a nosotros `#standard` en freenode.
 
 - **[standard](https://github.com/standard/standard)** - este repositorio
   - **[standard-engine](https://github.com/standard/standard-engine)** - motor arbitrario cli de relgas eslint
@@ -675,10 +678,10 @@ Unete a nosotros `#standard` en freenode.
   - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - reglas customizadas eslint para standard (no es parte del nucleo eslint)
   - **[eslint](https://github.com/eslint/eslint)** - linter que da poder a standard
 - **[snazzy](https://github.com/standard/snazzy)** - salida colorida o *bonita* en el terminal para standard
-- **[standard-www](https://github.com/standard/standard-www)** - codigo de https://standardjs.com
+- **[standard-www](https://github.com/standard/standard-www)** - código de https://standardjs.com
 - **[semistandard](https://github.com/standard/semistandard)** - standard, con punto y coma (sí es necesario)
 
-También  hay un montón **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
+También hay un montón **[plugins editores de textos](#plugins-editores-de-textos)**, una lista de
 **[paquetes npm que usan `standard`](https://github.com/standard/standard-packages)**,
 y una impresionante lista de
 **[paquetes en el ecosistema `standard`](https://github.com/standard/awesome-standard)**.

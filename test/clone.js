@@ -9,12 +9,11 @@
 const crossSpawn = require('cross-spawn')
 const fs = require('fs')
 const minimist = require('minimist')
-const mkdirp = require('mkdirp')
 const os = require('os')
 const parallelLimit = require('run-parallel-limit')
 const path = require('path')
-const standardPackages = require('standard-packages')
 const test = require('tape')
+const testPkgs = require('./test.json')
 
 const GIT = 'git'
 const STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
@@ -27,25 +26,30 @@ const argv = minimist(process.argv.slice(2), {
     'offline',
     'quick',
     'quiet',
-    'fix'
+    'fix',
+    'write'
   ]
 })
 
-let testPackages = argv.quick
-  ? standardPackages.test.slice(0, 20)
-  : standardPackages.test
+let pkgs = testPkgs
 
-const disabledPackages = []
-testPackages = testPackages.filter(pkg => {
-  if (pkg.disable) disabledPackages.push(pkg)
+const disabledPkgs = []
+pkgs = pkgs.filter(pkg => {
+  if (pkg.disable) disabledPkgs.push(pkg)
   return !pkg.disable
 })
 
 if (argv.disabled) {
-  testPackages = disabledPackages
-} else {
+  pkgs = disabledPkgs
+}
+
+pkgs = argv.quick
+  ? pkgs.slice(0, 20)
+  : pkgs
+
+if (!argv.disabled) {
   test('Disabled Packages', t => {
-    disabledPackages.forEach(pkg => {
+    disabledPkgs.forEach(pkg => {
       console.log(`DISABLED: ${pkg.name}: ${pkg.disable} (${pkg.repo})`)
     })
     t.end()
@@ -53,11 +57,11 @@ if (argv.disabled) {
 }
 
 test('test github repos that use `standard`', t => {
-  t.plan(testPackages.length)
+  t.plan(pkgs.length)
 
-  mkdirp.sync(TMP)
+  fs.mkdirSync(TMP, { recursive: true })
 
-  parallelLimit(testPackages.map(pkg => {
+  parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
     const url = `${pkg.repo}.git`
     const folder = path.join(TMP, name)
@@ -101,9 +105,11 @@ test('test github repos that use `standard`', t => {
               t.comment(`Attempting --fix on ${str}`)
               runStandardFix(cb)
             } else if (err) {
+              markDisabled(name, true)
               t.fail(str)
               cb(null)
             } else {
+              markDisabled(name, false)
               t.pass(str)
               cb(null)
             }
@@ -128,10 +134,25 @@ test('test github repos that use `standard`', t => {
             cb(err)
           })
         }
+
+        function markDisabled (name, disabled) {
+          const pkg = testPkgs.find(pkg => pkg.name === name)
+          if (disabled) {
+            pkg.disable = disabled
+          } else {
+            delete pkg.disable
+          }
+        }
       })
     }
   }), PARALLEL_LIMIT, err => {
     if (err) throw err
+    if (argv.write) {
+      fs.writeFileSync(
+        path.join(__dirname, 'test.json'),
+        JSON.stringify(testPkgs, null, 2)
+      )
+    }
   })
 })
 

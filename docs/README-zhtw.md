@@ -13,10 +13,15 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
+  <a href="/docs/README-id.md">Bahasa Indonesia</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -24,8 +29,6 @@
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
-
-<br>
 
 什麼都不用想。不用管理 `.eslintrc` 、 `.jshintrc` 或 `.jscsrc` 等檔案。就是這麼容易。
 
@@ -205,7 +208,7 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 |---|---|---|---|
 
 
-| Your logo here | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
 |---|---|---|---|
 
 

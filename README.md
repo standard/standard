@@ -14,10 +14,15 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
+  <a href="/docs/README-id.md">Bahasa Indonesia</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -117,25 +122,25 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 1. Add it to `package.json`
 
-  ```json
-  {
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "*"
-    },
-    "scripts": {
-      "test": "standard && node my-tests.js"
-    }
-  }
-  ```
+   ```json
+   {
+     "name": "my-cool-package",
+     "devDependencies": {
+       "standard": "*"
+     },
+     "scripts": {
+       "test": "standard && node my-tests.js"
+     }
+   }
+   ```
 
 2. Style is checked automatically when you run `npm test`
 
-  ```bash
-  $ npm test
-  Error: Use JavaScript Standard Style
-    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
-  ```
+   ```bash
+   $ npm test
+   Error: Use JavaScript Standard Style
+     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+   ```
 
 3. Never give style feedback on a pull request again!
 
@@ -205,7 +210,7 @@ to `standard`.
 |---|---|---|---|
 
 
-| Your logo here | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
 |---|---|---|---|
 
 
@@ -375,7 +380,7 @@ automatically.
 
 ## How do I ignore files?
 
-Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`, `bundle.js`,
+Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`,
 and files/folders that begin with `.` like `.git/`) are automatically ignored.
 
 Paths in a project's root `.gitignore` file are also automatically ignored.
@@ -562,7 +567,9 @@ Or, add this to `package.json`:
   "eslintConfig": {
     "rules": {
       "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error"
+      "@typescript-eslint/no-unused-vars": "error",
+      "no-useless-constructor": "off",
+      "@typescript-eslint/no-useless-constructor": "error",
     }
   },
   "standardx": {
@@ -779,7 +786,6 @@ Here are some important packages in the `standard` ecosystem:
   - **[standard-engine](https://github.com/standard/standard-engine)** - cli engine for arbitrary eslint rules
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - eslint rules for standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
 - **[snazzy](https://github.com/standard/snazzy)** - pretty terminal output for standard
 - **[standard-www](https://github.com/standard/standard-www)** - code for https://standardjs.com

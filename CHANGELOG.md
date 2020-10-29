@@ -5,7 +5,162 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased][unreleased]
+## [16.0.0] - 2020-10-28
+
+We're super excited to announce `standard` 16!
+
+As with every new major release, there are lots of new rules in 16.0.0 designed
+to help catch bugs and make programmer intent more explicit. This release brings
+better performance, tons of bug fixes, improved JSX, React ⚛️, and Next.js support!
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the newly added rules.
+
+❤️ If you enjoy StandardJS and want to support future releases, please
+[support Feross](https://github.com/users/feross/sponsorship)!
+
+### New features
+
+- 🏎 Better performance: the filesystem doesn't need to be traversed multiple times! [#1023](https://github.com/standard/standard/issues/1023)
+  - Massive improvements (on the order of minutes!) for projects with huge folders which are are ignored with `.gitignore`
+
+- 🌟 Support the `.gitignore` ignore syntax from the command line [#1117](https://github.com/standard/standard/issues/1117)
+  - In older versions, the command `standard src` would not lint the `src/` folder
+  - Instead, a glob pattern needed like `standard src/**/*.js` was required
+  - This is now fixed! You can run `standard src` to lint the `src/` folder!
+
+- 🌟 Support relative paths from the command line (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
+
+- 🌟 New `extensions` option for linting additional extensions besides `.js`, `.jsx`, `.mjs`, and `.cjs`
+  - Can be configured with the `--ext` command line flag or in `package.json`:
+  - Example:
+
+    ```bash
+    standard --ext .ts
+    ```
+
+    ```json
+    {
+      "standard": {
+        "extensions": [".ts"]
+      }
+    }
+    ```
+
+### Changed features
+
+- Update `eslint` from `~7.11.0` to `~7.12.1`
+
+- Update `standard-engine` from `^12` to `^14`
+  - Fix inaccurate `--help` command which indicates that `bundle.js` is automatically ignored when it is not [standard-engine/#224](https://github.com/standard/standard-engine/pull/224)
+  - New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
+  - Remove `deglob` package and use built-in ESLint folder-traversal support
+
+- Paths with square brackets (e.g. `[` and `]`) are no longer skipped [#1333](https://github.com/standard/standard/issues/1333)
+  - This pattern is particularly common in Next.js apps, e.g. `blog/[slug].js`
+  - You may notice new errors in these files since they were not being linted before
+
+- Better mono-repo support: Nested `node_modules/` folders are ignored by default [#1182](https://github.com/standard/standard/issues/1182)
+
+- Remove `eslint-plugin-standard` [#1316](https://github.com/standard/standard/issues/1316)
+  - We migrated the remaining `no-callback-literal` rule into `eslint-plugin-node`
+
+### New rules
+
+_(Estimated % of affected standard users, based on test suite in parens)_
+
+- Require let or const instead of var ([no-var](https://eslint.org/docs/rules/no-var)) [#633](https://github.com/standard/standard/issues/633) [75%] [automatic fixing reduces to 11%]
+- Enforce return statements in `Array` method callbacks ([array-callback-return](https://eslint.org/docs/rules/array-callback-return)) [#859](https://github.com/standard/standard/issues/859) [7%]
+- Disallow empty block statements ([no-empty](https://eslint.org/docs/rules/no-empty)) [#796](https://github.com/standard/standard/issues/796) [2%]
+- Enforce default parameters to be last ([default-param-last](https://eslint.org/docs/rules/default-param-last)) [#1414](https://github.com/standard/standard/issues/1414) [1%]
+- Disallow use of the `RegExp` constructor in favor of regular expression literals ([prefer-regex-literals](https://eslint.org/docs/rules/prefer-regex-literals)) [#1413](https://github.com/standard/standard/issues/1413) [1%]
+- Disallow spaces inside of computed keys of class methods, getters and setters ([computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)) [#1416](https://github.com/standard/standard/issues/1416) [0%]
+- Disallow `case NaN`, `switch(NaN)`, `indexOf(NaN)`, and `lastIndexOf(NaN)` ([use-isnan](https://eslint.org/docs/rules/use-isnan)) [#1429](https://github.com/standard/standard/issues/1429) [0%]
+- Disallow assigning to imported bindings ([no-import-assign](https://eslint.org/docs/rules/no-import-assign)) [#1412](https://github.com/standard/standard/issues/1412) [0%]
+- Enforce getter/setter pairs in classes ([accessor-pairs](https://eslint.org/docs/rules/accessor-pairs)) [#1415](https://github.com/standard/standard/issues/1415) [0%]
+
+- Node: Disallow assignment to `exports` ([node/no-exports-assign](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-exports-assign.md)) [#1400](https://github.com/standard/standard/issues/1400) [0%]
+
+- React: Prevent usage of the return value of `ReactDOM.render` ([react/no-render-return-value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md)) [#1568](https://github.com/standard/standard/issues/1568) [1%]
+- React: Prevent usage of deprecated methods ([react/no-deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)) [#1572](https://github.com/standard/standard/issues/1572) [1%]
+- React: Prevent direct mutation of `this.state` ([react/no-direct-mutation-state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)) [#1571](https://github.com/standard/standard/issues/1571) [0%]
+- React: Prevent usage of `findDOMNode` ([react/no-find-dom-node](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md)) [#1570](https://github.com/standard/standard/issues/1570) [0%]
+- React: Prevent usage of `isMounted` ([react/no-is-mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)) [#1569](https://github.com/standard/standard/issues/1569) [0%]
+- React: Prevent using string refs ([react/no-string-refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)) [#1567](https://github.com/standard/standard/issues/1567) [0%]
+
+- JSX: Prevent missing parentheses around multiline JSX ([react/jsx-wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md)) [#710](https://github.com/standard/standard/issues/710) [#1382](https://github.com/standard/standard/issues/1382) (0%)
+- JSX: Check if shorthand fragment syntax requires a key prop ([react/jsx-key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)) [#1575](https://github.com/standard/standard/issues/1575) [0%]
+- JSX: Prevent passing of children as props ([react/no-children-prop](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md)) [#1574](https://github.com/standard/standard/issues/1574) [0%]
+- JSX: Prevent using children and dangerouslySetInnerHTML as props at the same time ([react/no-danger-with-children](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md)) [#1573](https://github.com/standard/standard/issues/1573) [0%]
+- JSX: Prevent invalid characters from appearing in markup ([react/no-unescaped-entities](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md)) [#1566](https://github.com/standard/standard/issues/1566) [0%]
+- JSX: Enforce JSX value is returned in component render function ([react/require-render-return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)) [#1565](https://github.com/standard/standard/issues/1565) [0%]
+- JSX: Prevent usage of unsafe `target='_blank'` on any component named `Link` ([react/jsx-no-target-blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)) [#1576](https://github.com/standard/standard/issues/1576) [0%]
+
+
+### Changed rules
+
+- Relax rule: JSX: Consider the global scope when checking for defined Components [#1115](https://github.com/standard/standard/issues/1115)
+- Relax rule: JSX: Remove conflicting indentation rule in `indent` [#1499](https://github.com/standard/standard/issues/1499)
+
+## [15.0.1] - 2020-10-27
+
+- Relax rule: Remove conflicting JSX indenting with `indent` rule [eslint-config-standard/#177](https://github.com/standard/eslint-config-standard/issues/177)
+
+## [15.0.0] - 2020-10-21
+
+We're super excited to announce `standard` 15!
+
+As with every new major release, there are lots of new rules in 15.0.0 designed
+to help catch bugs and make programmer intent more explicit. This release brings
+support for ES 2021, the latest version of the ECMAScript specification, as well
+as many quality-of-life improvements, including ESLint v7.
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the newly added rules.
+
+❤️ If you enjoy StandardJS and want to support future releases, check out
+Feross's [GitHub Sponsors page](https://github.com/users/feross/sponsorship).
+
+### New features
+
+- Support ES 2021, the latest version of the ECMAScript specification, which includes support for [logical assignment operators](https://github.com/tc39/proposal-logical-assignment) and [numeric separators](https://github.com/tc39/proposal-numeric-separator) [#1551](https://github.com/standard/standard/issues/1551)
+- Support ES 2020 features such as [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator), `export * as ns from 'source'`, and [`import.meta`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta).
+- Support global variables from ES 2017 (`Atomics`, `SharedArrayBuffer`), ES 2020 (`BigInt`, `BigInt64Array`, `BigUint64Array`, `globalThis`), and ES 2021 (`FinalizationRegistry`, `WeakRef`). [#1436](https://github.com/standard/standard/issues/1436) [#1557](https://github.com/standard/standard/issues/1557) [eslint-config-standard/#156](https://github.com/standard/eslint-config-standard/pull/156)
+- The documentation is now available in Indonesian 🇮🇩! [#1544](https://github.com/standard/standard/pull/1544)
+  - Thanks to [@yoga1234](https://github.com/yoga1234) for the excellent work!
+  - Other community contributed translations exist in Spanish, French, Italian, Japanese, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
+  - More translations are always welcome!
+
+### Changed features
+
+- BREAKING: Node.js 8 is no longer supported
+  - Node.js 8 is EOL and will no longer be receiving security updates.
+  - To prevent breaking CI for projects which still support Node 8, `standard` silently passes when run by an unsupported version of Node
+- Update `eslint` from `~6.8.0` to `~7.11.0`
+
+### New rules
+
+_(Estimated % of affected standard users, based on test suite in parens)_
+
+- Require indentation for values of ternary expressions ([indent](https://eslint.org/docs/rules/indent)) [#927](https://github.com/standard/standard/issues/927) [4%]
+- Enforce newlines between operands of ternary expressions if the expression spans multiple lines ([multiline-ternary](https://eslint.org/docs/rules/multiline-ternary)) [#1558](https://github.com/standard/standard/issues/1558) [3%]
+- Disallow loops with a body that allows only one iteration ([no-unreachable-loop](https://eslint.org/docs/rules/no-unreachable-loop)) [#1556](https://github.com/standard/standard/issues/1556) [0%]
+- Disallow useless backreferences in regular expressions ([no-useless-backreference](https://eslint.org/docs/rules/no-useless-backreference)) [#1554](https://github.com/standard/standard/issues/1554) [0%]
+- Enforce default clauses in switch statements to be last ([default-case-last](https://eslint.org/docs/rules/default-case-last)) [#1553](https://github.com/standard/standard/issues/1553) [0%]
+- Disallow Number Literals That Lose Precision ([no-loss-of-precision](https://eslint.org/docs/rules/no-loss-of-precision)) [#1552](https://github.com/standard/standard/issues/1552) [0%]
+
+### Changed rules
+
+- Relax rule: Allow function declarations in nested blocks [#1406](https://github.com/standard/standard/issues/1406)
+- Relax rule: Removed redundant `no-negated-in-lhs` rule, already enforced by `no-unsafe-negation` [eslint-config-standard/#160](https://github.com/standard/eslint-config-standard/pull/160)
+
+## [14.3.4] - 2020-05-11
+
+- Relax rule: `no-return-await` [#1442](https://github.com/standard/standard/pull/1442)
+
+## [14.3.3] - 2020-03-15
+
+- Skip running on versions of Node.js older than 8.10.0. [#1496](https://github.com/standard/standard/pull/1496)
 
 ## [14.3.2] - 2020-03-14
 
@@ -143,23 +298,18 @@ When you upgrade, consider running `standard --fix` to automatically format your
 ### New features
 
 - Update `eslint` from `~5.16.0` to `~6.0.1`
-
   - BREAKING: Node.js 6 is no longer supported
     - Node.js 6 is EOL and will no longer be receiving security updates. As a result, the eslint team has decided to drop support for it.
     - To prevent breaking CI for projects which still support Node 6, `standard` silently passes when run by an unsupported version of Node.
-
   - **For `eslint-config-standard` users only:** Plugins are no longer affected by `eslint`'s location
     - Previously, ESLint loaded plugins relative to the location of the ESLint package itself. As a result, we suggested that users with global ESLint installations should also install plugins globally, and users with local ESLint installations should install plugins locally.
     - With ESLint v6, plugins should always be installed locally, even if ESLint was installed globally. More precisely, ESLint v6 resolves plugins relative to the end user’s project by default, and always resolves shareable configs and parsers relative to the location of the config file that imports them.
     - See [migrating to ESLint 6.0.0 for more information](https://eslint.org/docs/user-guide/migrating-to-6.0.0#-plugins-and-shareable-configs-are-no-longer-affected-by-eslints-location).
-
 - The documentation is now available in Japanese 🇯🇵!
-  - Thanks to [@Munieru](https://github.com/munierujp) for the excellent work!
+  - Thanks to [@munierujp](https://github.com/munierujp) for the excellent work!
   - Other community contributed translations exist in Spanish, French, Italian, Korean, Portuguese, Simplified Chinese, and Taiwanese Mandarin.
   - More translations are always welcome!
-
 - Update `eslint-plugin-promise` from `~4.0.0` to `~4.2.1`
-
 - Update `eslint-plugin-node` from `~7.0.1` to `~9.1.0`
 
 ### New rules
@@ -500,7 +650,7 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 ### Changed rules
 
-- Relax rule: Allow template literal strings (backtick strings) to avoid escaping  [#421](https://github.com/standard/standard/issues/421)
+- Relax rule: Allow template literal strings (backtick strings) to avoid escaping [#421](https://github.com/standard/standard/issues/421)
 - Relax rule: Do not enforce spacing around \* in generator functions ([#564 (comment)](https://github.com/standard/standard/issues/564#issuecomment-234699126))
   - This is a temporary workaround for `babel` users who use async generator functions.
 
@@ -605,7 +755,7 @@ The goal of this release is to make `standard` faster to install, and simpler t
 _The percentage (%) of users that rule changes will effect, based on real-world testing of the top ~400 npm packages is denoted in brackets._
 
 - Disallow `__dirname`/`__filename` string concatenation ([#403](https://github.com/standard/standard/issues/403)) ([no-path-concat](https://eslint.org/docs/2.0.0/rules/no-path-concat)) [5%]
-- Require parens in arrow function arguments  ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](https://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
+- Require parens in arrow function arguments ([#309](https://github.com/standard/standard/issues/309)) ([arrow-parens](https://eslint.org/docs/2.0.0/rules/arrow-parens.html)) [5%]
 - Ensure that `new Promise()` is instantiated with the parameter names
   `resolve`, `reject` ([#282](https://github.com/standard/standard/issues/282)) ([promise/param-names](https://github.com/xjamundx/eslint-plugin-promise#param-names)) [1%]
 - Enforce Usage of Spacing in Template Strings ([template-curly-spacing](https://eslint.org/docs/2.0.0/rules/template-curly-spacing)) [1%]
@@ -620,7 +770,7 @@ _The percentage (%) of users that rule changes will effect, based on real-world 
 
 ### Removed Rules
 
-- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384))  ([radix](https://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
+- `parseInt()` radix rule because ES5 fixes this issue ([#384](https://github.com/standard/standard/issues/384)) ([radix](https://eslint.org/docs/2.0.0/rules/radix.html)) [0%]
 
 ### Expose eslint configuration via command line options and `package.json`
 
@@ -866,7 +1016,17 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v14.3.1...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v16.0.0...HEAD
+
+[16.0.0]: https://github.com/standard/standard/compare/v15.0.1...v16.0.0
+
+[15.0.1]: https://github.com/standard/standard/compare/v15.0.0...v15.0.1
+
+[15.0.0]: https://github.com/standard/standard/compare/v14.3.4...v15.0.0
+
+[14.3.4]: https://github.com/standard/standard/compare/v14.3.3...v14.3.4
+
+[14.3.3]: https://github.com/standard/standard/compare/v14.3.2...v14.3.3
 
 [14.3.2]: https://github.com/standard/standard/compare/v14.3.1...v14.3.2
 
