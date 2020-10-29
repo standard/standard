@@ -1558,13 +1558,6 @@
     "disable": true
   },
   {
-    "name": "pascal-case",
-    "repo": "https://github.com/blakeembrey/pascal-case",
-    "description": "Pascal case a string",
-    "dependents": 318,
-    "disable": true
-  },
-  {
     "name": "nano",
     "repo": "https://github.com/apache/couchdb-nano",
     "description": "The official CouchDB client for Node.js",
