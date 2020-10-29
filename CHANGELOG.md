@@ -11,13 +11,13 @@ We're super excited to announce `standard` 16!
 
 As with every new major release, there are lots of new rules in 16.0.0 designed
 to help catch bugs and make programmer intent more explicit. This release brings
-better JSX and React support! ⚛️
+better performance, tons of bug fixes, improved JSX, React ⚛️, and Next.js support!
 
 When you upgrade, consider running `standard --fix` to automatically format your
 code to match the newly added rules.
 
 ❤️ If you enjoy StandardJS and want to support future releases, please
-[support the maintainer](https://github.com/users/feross/sponsorship).
+[support Feross](https://github.com/users/feross/sponsorship)!
 
 ### New features
 
