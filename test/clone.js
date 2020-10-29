@@ -12,8 +12,8 @@ const minimist = require('minimist')
 const os = require('os')
 const parallelLimit = require('run-parallel-limit')
 const path = require('path')
-const standardPackages = require('standard-packages')
 const test = require('tape')
+const testPkgs = require('./test.json')
 
 const GIT = 'git'
 const STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
@@ -30,21 +30,21 @@ const argv = minimist(process.argv.slice(2), {
   ]
 })
 
-let testPackages = argv.quick
-  ? standardPackages.test.slice(0, 20)
-  : standardPackages.test
+let pkgs = argv.quick
+  ? testPkgs.slice(0, 20)
+  : testPkgs
 
-const disabledPackages = []
-testPackages = testPackages.filter(pkg => {
-  if (pkg.disable) disabledPackages.push(pkg)
+const disabledPkgs = []
+pkgs = pkgs.filter(pkg => {
+  if (pkg.disable) disabledPkgs.push(pkg)
   return !pkg.disable
 })
 
 if (argv.disabled) {
-  testPackages = disabledPackages
+  pkgs = disabledPkgs
 } else {
   test('Disabled Packages', t => {
-    disabledPackages.forEach(pkg => {
+    disabledPkgs.forEach(pkg => {
       console.log(`DISABLED: ${pkg.name}: ${pkg.disable} (${pkg.repo})`)
     })
     t.end()
@@ -52,11 +52,11 @@ if (argv.disabled) {
 }
 
 test('test github repos that use `standard`', t => {
-  t.plan(testPackages.length)
+  t.plan(pkgs.length)
 
   fs.mkdirSync(TMP, { recursive: true })
 
-  parallelLimit(testPackages.map(pkg => {
+  parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
     const url = `${pkg.repo}.git`
     const folder = path.join(TMP, name)

@@ -30,7 +30,6 @@
     "hallmark": "^3.0.0",
     "minimist": "^1.2.5",
     "run-parallel-limit": "^1.0.6",
-    "standard-packages": "^3.10.0",
     "tape": "^5.0.1"
   },
   "engines": {
