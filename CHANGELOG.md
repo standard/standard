@@ -60,6 +60,11 @@ code to match the newly added rules.
   - This pattern is particularly common in Next.js apps, e.g. `blog/[slug].js`
   - You may notice new errors in these files since they were not being linted before
 
+- Better mono-repo support: Nested `node_modules/` folders are ignored by default [#1182](https://github.com/standard/standard/issues/1182)
+
+- Remove `eslint-plugin-standard` [#1316](https://github.com/standard/standard/issues/1316)
+  - We migrated the remaining `no-callback-literal` rule into `eslint-plugin-node`
+
 ### New rules
 
 _(Estimated % of affected standard users, based on test suite in parens)_
@@ -93,7 +98,8 @@ _(Estimated % of affected standard users, based on test suite in parens)_
 
 ### Changed rules
 
-- Relax rule: Remove conflicting JSX indenting with `indent` rule [#1499](https://github.com/standard/standard/issues/1499)
+- Relax rule: JSX: Consider the global scope when checking for defined Components [#1115](https://github.com/standard/standard/issues/1115)
+- Relax rule: JSX: Remove conflicting indentation rule in `indent` [#1499](https://github.com/standard/standard/issues/1499)
 
 ## [15.0.1] - 2020-10-27
 
