@@ -17,7 +17,7 @@ However, we may occasionally release a new major version of `standard`
 which changes a rule that affects the majority of `standard` users (for example,
 transitioning from `var` to `let`/`const`). We do this only when we think the
 advantage is worth the cost and only when the rule is
-[auto-fixable](#is-there-an-automatic-formatter).
+[auto-fixable](https://standardjs.com/#is-there-an-automatic-formatter).
 
 In these situations, we have a "transition period" where the rule change is only
 a "warning". Warnings don't cause `standard` to return a non-zero (error)
@@ -29,7 +29,7 @@ The slow and careful approach is what we strive for with `standard`. We're
 generally extremely conservative in enforcing the usage of new language
 features. We want using `standard` to be light and fun and so we're careful
 about making changes that may get in your way. As always, you can
-[disable a rule](#how-do-i-disable-a-rule) at any time, if necessary.
+[disable a rule](https://standardjs.com/#how-do-i-disable-a-rule) at any time, if necessary.
 
 ## [16.0.0] - 2020-10-28
 
