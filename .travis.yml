@@ -1,8 +1,15 @@
 language: node_js
 node_js:
-  - 10.12.0
+  - 10.12.0 # This version should be fully supported
   - 10
   - 12
   - 14
 cache:
   npm: false
+jobs:
+  include:
+    # Special test for the oldest version of Node.js that we "support"
+    # even though the linter won't actually run. Test that the command
+    # line program exits cleanly.
+    - node_js: 0.10
+      script: './bin/cmd.js'
