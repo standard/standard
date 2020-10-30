@@ -4,3 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    labels:
+      - "dependency"
+    # Always increase the version requirement to match the new version.
+    versioning-strategy: increase
