@@ -5,10 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [16.1.0] - 2020-10-30
+## [16.0.1] - 2020-10-30
 
-- Introduce new "warning" system for disruptive rules (read more below)
-- Change to "warning": Require let or const instead of var ([no-var](https://eslint.org/docs/rules/no-var)) [#633](https://github.com/standard/standard/issues/633)
+- Introduce "warning" system for disruptive rules (read more below)
+- Change rule to a "warning": Require let or const instead of var ([no-var](https://eslint.org/docs/rules/no-var)) [#633](https://github.com/standard/standard/issues/633)
 
 `standard` treats all rule violations as errors, which means that `standard`
 will exit with a non-zero (error) exit code.
@@ -1043,9 +1043,9 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v16.1.0...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v16.0.1...HEAD
 
-[16.1.0]: https://github.com/standard/standard/compare/v16.0.0...v16.1.0
+[16.0.1]: https://github.com/standard/standard/compare/v16.0.0...v16.0.1
 
 [16.0.0]: https://github.com/standard/standard/compare/v15.0.1...v16.0.0
 
