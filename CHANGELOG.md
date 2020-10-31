@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [16.0.1] - 2020-10-30
+
+- Introduce "warning" system for disruptive rules (read more below)
+- Change rule to a "warning": Require let or const instead of var ([no-var](https://eslint.org/docs/rules/no-var)) [#633](https://github.com/standard/standard/issues/633)
+
+`standard` treats all rule violations as errors, which means that `standard`
+will exit with a non-zero (error) exit code.
+
+However, we may occasionally release a new major version of `standard`
+which changes a rule that affects the majority of `standard` users (for example,
+transitioning from `var` to `let`/`const`). We do this only when we think the
+advantage is worth the cost and only when the rule is
+[auto-fixable](https://standardjs.com/#is-there-an-automatic-formatter).
+
+In these situations, we have a "transition period" where the rule change is only
+a "warning". Warnings don't cause `standard` to return a non-zero (error)
+exit code. However, a warning message will still print to the console. During
+the transition period, `using standard --fix` will update your code so that it's
+ready for the next major version.
+
+The slow and careful approach is what we strive for with `standard`. We're
+generally extremely conservative in enforcing the usage of new language
+features. We want using `standard` to be light and fun and so we're careful
+about making changes that may get in your way. As always, you can
+[disable a rule](https://standardjs.com/#how-do-i-disable-a-rule) at any time, if necessary.
+
 ## [16.0.0] - 2020-10-28
 
 We're super excited to announce `standard` 16!
@@ -26,10 +52,10 @@ code to match the newly added rules.
 
 - 🌟 Support the `.gitignore` ignore syntax from the command line [#1117](https://github.com/standard/standard/issues/1117)
   - In older versions, the command `standard src` would not lint the `src/` folder
-  - Instead, a glob pattern needed like `standard src/**/*.js` was required
+  - Instead, a glob pattern like `standard src/**/*.js` was required
   - This is now fixed! You can run `standard src` to lint the `src/` folder!
 
-- 🌟 Support relative paths from the command line (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
+- 🌟 Support relative paths from the command line in more situations (e.g. `standard ../src/*.js`) [#1384](https://github.com/standard/standard/issues/1384)
 
 - 🌟 New `extensions` option for linting additional extensions besides `.js`, `.jsx`, `.mjs`, and `.cjs`
   - Can be configured with the `--ext` command line flag or in `package.json`:
@@ -47,13 +73,14 @@ code to match the newly added rules.
     }
     ```
 
+- 🌟 New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
+
 ### Changed features
 
 - Update `eslint` from `~7.11.0` to `~7.12.1`
 
 - Update `standard-engine` from `^12` to `^14`
-  - Fix inaccurate `--help` command which indicates that `bundle.js` is automatically ignored when it is not [standard-engine/#224](https://github.com/standard/standard-engine/pull/224)
-  - New cache directory location, respecting `XDG_CACHE_HOME` preference, with fallback to `~/.cache/standard` [standard-engine/#214](https://github.com/standard/standard-engine/pull/214)
+  - Fix inaccurate `--help` command which indicates that `bundle.js` is automatically ignored when it is not anymore [standard-engine/#224](https://github.com/standard/standard-engine/pull/224)
   - Remove `deglob` package and use built-in ESLint folder-traversal support
 
 - Paths with square brackets (e.g. `[` and `]`) are no longer skipped [#1333](https://github.com/standard/standard/issues/1333)
@@ -1016,7 +1043,9 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v16.0.0...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v16.0.1...HEAD
+
+[16.0.1]: https://github.com/standard/standard/compare/v16.0.0...v16.0.1
 
 [16.0.0]: https://github.com/standard/standard/compare/v15.0.1...v16.0.0
 
