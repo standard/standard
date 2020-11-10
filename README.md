@@ -541,56 +541,16 @@ Or, add this to `package.json`:
 
 ### TypeScript
 
-To use TypeScript, you need to run `standard` with `@typescript-eslint/parser` as the parser,
-`@typescript-eslint/eslint-plugin` as a plugin, and tell standard to lint `**/*.ts` files (since it
-doesn't by default).
+There are two officially supported methods of using standard with typescript files.
 
-Unfortunately, there's an outstanding [issue](https://github.com/standard/standard/issues/1283)
-with `standard` and Typescript where `standard` would incorrectly emit unused-variable errors
-(e.g: when you import interfaces). And as a workaround, you need to use
-[standardx](https://github.com/standard/standardx) instead:sweat_smile:.
+**[`ts-standard`](https://github.com/standard/ts-standard)**
 
-```bash
-npm install standardx @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
-```
+Like `standard` but with typescript
+specific cli options and rules. The project uses `eslint-config-standard-with-typescript` for rules.
 
-Then run:
+**[`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)**
 
-```bash
-$ standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
-```
-
-Or, add this to `package.json`:
-
-```json
-{
-  "eslintConfig": {
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error",
-      "no-useless-constructor": "off",
-      "@typescript-eslint/no-useless-constructor": "error"
-    }
-  },
-  "standardx": {
-    "parser": "@typescript-eslint/parser",
-    "plugins": [ "@typescript-eslint/eslint-plugin" ]
-  }
-}
-```
-
-With that in `package.json`, you can run:
-
-```bash
-standardx **/*.ts
-```
-
-And you probably should remove `standard` too to avoid confusion where it's used by mistake
-instead of `standardx`.
-
-```bash
-npm uninstall standard
-```
+An eslint configuration file with standard style javascript and typescript rules.
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
 
