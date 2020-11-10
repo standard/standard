@@ -659,7 +659,12 @@ $ standard --plugin html '**/*.html'
 
 ## Is there a Git `pre-commit` hook?
 
-Funny you should ask!
+Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo. 
+Never give style feedback on a pull request again!
+
+You even have a choice...
+
+### Install your own hook
 
 ```bash
 #!/bin/bash
@@ -677,6 +682,38 @@ if [[ $? -ne 0 ]]; then
   echo 'JavaScript Standard Style errors were detected. Aborting commit.'
   exit 1
 fi
+```
+
+### Use a `pre-commit` hook
+
+The [pre-commit](https://pre-commit.com/) library allows hooks to be declared within a `.pre-commit-config.yaml` configuration file in the repo, and therefore more easily maintained across a team.
+
+Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml` files:
+```yaml
+  - repo: https://github.com/standard/standard
+    rev: master
+    hooks:
+      - id: standard
+```
+
+Alternatively, for more advanced styling configurations (like plugins for React packages), use `standard` as a plugin within an `eslint` configuration:
+```yaml
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: master
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$  # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
+        additional_dependencies:
+          - eslint@latest
+          - eslint-plugin-standard@latest
+          # and whatever other plugins, like these ones for a react setup...
+          - eslint-plugin-react-hooks@latest
+          - eslint-config-react-app@latest
+          - eslint-plugin-react@latest
+          - eslint-plugin-import@latest
+          - eslint-plugin-flowtype@latest
+          - eslint-plugin-jsx-a11y@latest
 ```
 
 ## How do I make the output all colorful and pretty?
