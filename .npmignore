@@ -13,3 +13,4 @@ sticker.svg
 test/
 tmp/
 tools/
+*.code-workspace
