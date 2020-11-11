@@ -15,6 +15,7 @@ while (<>) {
   next if /(ahmad\@codeinchaos.com)/;
   next if /(emanuele.stoppa\@baml.com)/;
   next if /(wayou )/;
+  next if /(dependabot\[bot\])/;
   $seen{$_} = push @authors, "- ", $_;
 }
 END {
