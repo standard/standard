@@ -688,7 +688,7 @@ fi
 
 The [pre-commit](https://pre-commit.com/) library allows hooks to be declared within a `.pre-commit-config.yaml` configuration file in the repo, and therefore more easily maintained across a team.
 
-Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml` files:
+Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml` file, which will automatically fix `.js`, `.jsx`, `.ts`, `.tsx`, `.mjs` and `.cjs` files:
 ```yaml
   - repo: https://github.com/standard/standard
     rev: master
@@ -696,7 +696,7 @@ Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml`
       - id: standard
 ```
 
-Alternatively, for more advanced styling configurations (like plugins for React packages), use `standard` as a plugin within an `eslint` configuration:
+Alternatively, for more advanced styling configurations, use `standard` within the [eslint hook](https://github.com/pre-commit/mirrors-eslint):
 ```yaml
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: master
@@ -706,14 +706,8 @@ Alternatively, for more advanced styling configurations (like plugins for React 
         types: [file]
         additional_dependencies:
           - eslint@latest
-          - eslint-plugin-standard@latest
-          # and whatever other plugins, like these ones for a react setup...
-          - eslint-plugin-react-hooks@latest
-          - eslint-config-react-app@latest
-          - eslint-plugin-react@latest
-          - eslint-plugin-import@latest
-          - eslint-plugin-flowtype@latest
-          - eslint-plugin-jsx-a11y@latest
+          - eslint-config-standard@latest
+          # and whatever other plugins...
 ```
 
 ## How do I make the output all colorful and pretty?
