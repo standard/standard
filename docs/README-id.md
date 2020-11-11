@@ -600,7 +600,7 @@ function xargs-r() {
   # Versi portable dari "xargs -r". Tanda -r adalah ekstensi GNU yang
   # menghindari xargs untuk berjalan jika tidak ada berkas yang dimasukan.
   if IFS= read -r -d $'\n' path; then
-    { echo "$path"; cat; } | xargs $@
+    echo "$path" | cat - | xargs "$@"
   fi
 }
 git diff --name-only --cached --relative | grep '\.jsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t standard
