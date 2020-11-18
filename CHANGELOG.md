@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [16.0.3] - 2020-11-17
+
+- Update `eslint` from `~7.12.1` to `~7.13.0`
+- Relax rule: Enforce default parameters to be last [#1414](https://github.com/standard/standard/issues/1414)
+
 ## [16.0.2] - 2020-11-11
 
 - Allow `standard` to run on Node 11, even though it's not officially supported [#1597](https://github.com/standard/standard/pull/1597)
@@ -1043,7 +1048,9 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v16.0.2...HEAD
+[unreleased]: https://github.com/standard/standard/compare/v16.0.3...HEAD
+
+[16.0.3]: https://github.com/standard/standard/compare/v16.0.2...v16.0.3
 
 [16.0.2]: https://github.com/standard/standard/compare/v16.0.1...v16.0.2
 
