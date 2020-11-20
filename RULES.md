@@ -212,6 +212,8 @@ your code.
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
+  Note: `␊` represents a line feed.
+
   ```js
   // ✓ ok
   var value = 'hello world'
@@ -221,8 +223,8 @@ your code.
   ```js
   // ✗ avoid
   var value = 'hello world'
-
-
+  ␊
+  ␊
   console.log(value)
   ```
 
@@ -415,7 +417,7 @@ your code.
       this.legs = 4
     }
   }
-  
+
   class Dog extends Animal {
     constructor () {      // ✗ avoid
       this.legs = 4
