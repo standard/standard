@@ -1048,8 +1048,6 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v3.9.0...v4.0.0)
 
-[unreleased]: https://github.com/standard/standard/compare/v16.0.3...HEAD
-
 [16.0.3]: https://github.com/standard/standard/compare/v16.0.2...v16.0.3
 
 [16.0.2]: https://github.com/standard/standard/compare/v16.0.1...v16.0.2
