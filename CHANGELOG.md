@@ -859,7 +859,7 @@ In `package.json`, use the "standard" property:
 
 ### Added
 
-- eslint-config-standard-react@1.2.0
+- `eslint-config-standard-react@1.2.0`
   - Disallow duplicate JSX properties
 
 ## [5.3.1] - 2015-09-18
@@ -868,7 +868,7 @@ In `package.json`, use the "standard" property:
 
 ### Changed
 
-- eslint-plugin-react@3.4.2
+- `eslint-plugin-react@3.4.2`
 
 ## [5.3.0] - 2015-09-16
 
@@ -876,13 +876,13 @@ In `package.json`, use the "standard" property:
 
 ### Changed
 
-- eslint-config-standard@4.4.0 ([history][eslint-config-standard])
+- `eslint-config-standard@4.4.0` ([history][eslint-config-standard])
   - **New rule:** must have space after semicolon in for-loop ([commit](https://github.com/standard/eslint-config-standard/commit/6e5025eef8900f686e19b4a31836743d98323119))
   - **New rule:** No default assignment with ternary operator ([commit](https://github.com/standard/eslint-config-standard/commit/0903c19ca6a8bc0c8625c41ca844ee69968bf948))
   - **New rule:** Require spaces before keywords ([commit](https://github.com/standard/eslint-config-standard/commit/656ba93cda9cd4ab38e032649aafb795993d5176))
-- eslint-config-standard-react@1.1.0 ([history][eslint-config-standard-react])
-- eslint-plugin-react@3.4.0 ([history][eslint-plugin-react])
-- eslint-plugin-standard@1.3.1 ([history][eslint-plugin-standard])
+- `eslint-config-standard-react@1.1.0` ([history][eslint-config-standard-react])
+- `eslint-plugin-react@3.4.0` ([history][eslint-plugin-react])
+- `eslint-plugin-standard@1.3.1` ([history][eslint-plugin-standard])
 
 ## [5.2.2] - 2015-09-08
 
@@ -900,12 +900,12 @@ In `package.json`, use the "standard" property:
 
 ### Changed
 
-- eslint-config-standard@4.3.1 ([history][eslint-config-standard])
+- `eslint-config-standard@4.3.1` ([history][eslint-config-standard])
   - **Revert rule**: Disallow unncessary concatenation of strings
 
 ### Fixed
 
-- eslint-config-standard@4.3.1 ([history][eslint-config-standard])
+- `eslint-config-standard@4.3.1` ([history][eslint-config-standard])
   - fix regression with ternary operator handling
 
 ## [5.2.0] - 2015-09-03
@@ -914,7 +914,7 @@ In `package.json`, use the "standard" property:
 
 ### Added
 
-- eslint-config-standard@4.3.0 ([history][eslint-config-standard])
+- `eslint-config-standard@4.3.0` ([history][eslint-config-standard])
   - **New rule:** Disallow unncessary concatenation of strings
   - **New rule:** Disallow duplicate name in class members
   - **New rule:** enforce spaces inside of single line blocks
@@ -923,12 +923,12 @@ In `package.json`, use the "standard" property:
 ### Changed
 
 - Bump `eslint` from 1.1.0 to 1.3.1 ([CHANGELOG][eslint])
-- eslint-plugin-standard@1.3.0 ([history][eslint-plugin-standard])
+- `eslint-plugin-standard@1.3.0` ([history][eslint-plugin-standard])
   - A small change to make the plugin compatible with browserify which does not affect behavior.
 
 ### Fixed
 
-- eslint-plugin-react@3.3.1 ([CHANGELOG][eslint-plugin-react])
+- `eslint-plugin-react@3.3.1` ([CHANGELOG][eslint-plugin-react])
   - Fix object rest/spread handling.
 - Added white background to badge.svg to make it work with dark backgrounds ([Closes #234](https://github.com/standard/standard/issues/234))
 - Minor updates to README.md
@@ -950,9 +950,9 @@ In `package.json`, use the "standard" property:
 
 ### Fixed
 
-- eslint-config-standard@4.1.0 ([history][eslint-config-standard])
+- `eslint-config-standard@4.1.0` ([history][eslint-config-standard])
   - Added rest/spread feature to `eslintrc.json` to fix [#226](https://github.com/standard/standard/issues/226) and [eslint-plugin-standard#3](https://github.com/xjamundx/eslint-plugin-standard/issues/3)
-- eslint-plugin-react@3.2.2 ([CHANGELOG][eslint-plugin-react])
+- `eslint-plugin-react@3.2.2` ([CHANGELOG][eslint-plugin-react])
   - Fix crash when propTypes don't have any parent
   - Fix jsx-no-literals reporting errors outside JSX
 
@@ -968,7 +968,7 @@ In `package.json`, use the "standard" property:
 
 ### Changed
 
-- eslint-config-standard-react@1.0.4 ([history][eslint-config-standard-react])
+- `eslint-config-standard-react@1.0.4` ([history][eslint-config-standard-react])
   - **Disable Rule:** react/wrap-multilines
 - Minor README updates
 
