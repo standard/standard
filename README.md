@@ -48,49 +48,53 @@ Give it a try by running `npx standard --fix` right now!
 
 <details><summary>Click to expand</summary>
 
-- [Install](#install)
-- [Usage](#usage)
-- [What you might do if you're clever](#what-you-might-do-if-youre-clever)
-- [Why should I use JavaScript Standard Style?](#why-should-i-use-javascript-standard-style)
-- [Who uses JavaScript Standard Style?](#who-uses-javascript-standard-style)
-- [Are there text editor plugins?](#are-there-text-editor-plugins)
-  - [Sublime Text](#sublime-text)
-  - [Atom](#atom)
-  - [Visual Studio Code](#visual-studio-code)
-  - [Vim](#vim)
-  - [Emacs](#emacs)
-  - [Brackets](#brackets)
-  - [WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains, etc.)](#webstorm-phpstorm-intellij-rubymine-jetbrains-etc)
-- [Is there a readme badge?](#is-there-a-readme-badge)
-- [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
-- [But this isn't a real web standard!](#but-this-isnt-a-real-web-standard)
-- [Is there an automatic formatter?](#is-there-an-automatic-formatter)
-- [How do I ignore files?](#how-do-i-ignore-files)
-- [How do I disable a rule?](#how-do-i-disable-a-rule)
-- [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
-- [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
-- [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
-  - [Flow](#flow)
-  - [TypeScript](#typescript)
-- [What about Mocha, Jest, Jasmine, QUnit, etc?](#what-about-mocha-jest-jasmine-qunit-etc)
-- [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
-- [What is the difference between warnings and errors?](#what-is-the-difference-between-warnings-and-errors)
-- [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
-- [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [Install your own hook](#install-your-own-hook)
-  - [Use a `pre-commit` hook](#use-a-pre-commit-hook)
-- [How do I make the output all colorful and pretty?](#how-do-i-make-the-output-all-colorful-and-pretty)
-- [Is there a Node.js API?](#is-there-a-nodejs-api)
-  - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
-  - [`results = standard.lintTextSync(text, [opts])`](#results--standardlinttextsynctext-opts)
-  - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [How do I contribute to StandardJS?](#how-do-i-contribute-to-standardjs)
+- [Quick start](#quick-start)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [What you might do if you're clever](#what-you-might-do-if-youre-clever)
+- [FAQ](#faq)
+  - [Why should I use JavaScript Standard Style?](#why-should-i-use-javascript-standard-style)
+  - [Who uses JavaScript Standard Style?](#who-uses-javascript-standard-style)
+  - [Are there text editor plugins?](#are-there-text-editor-plugins)
+    - [Sublime Text](#sublime-text)
+    - [Atom](#atom)
+    - [Visual Studio Code](#visual-studio-code)
+    - [Vim](#vim)
+    - [Emacs](#emacs)
+    - [Brackets](#brackets)
+    - [WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains, etc.)](#webstorm-phpstorm-intellij-rubymine-jetbrains-etc)
+  - [Is there a readme badge?](#is-there-a-readme-badge)
+  - [I disagree with rule X, can you change it?](#i-disagree-with-rule-x-can-you-change-it)
+  - [But this isn't a real web standard!](#but-this-isnt-a-real-web-standard)
+  - [Is there an automatic formatter?](#is-there-an-automatic-formatter)
+  - [How do I ignore files?](#how-do-i-ignore-files)
+  - [How do I disable a rule?](#how-do-i-disable-a-rule)
+  - [I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
+  - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
+  - [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
+    - [Flow](#flow)
+    - [TypeScript](#typescript)
+  - [What about Mocha, Jest, Jasmine, QUnit, etc?](#what-about-mocha-jest-jasmine-qunit-etc)
+  - [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
+  - [What is the difference between warnings and errors?](#what-is-the-difference-between-warnings-and-errors)
+  - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
+  - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
+    - [Install your own hook](#install-your-own-hook)
+    - [Use a `pre-commit` hook](#use-a-pre-commit-hook)
+  - [How do I make the output all colorful and pretty?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [Is there a Node.js API?](#is-there-a-nodejs-api)
+    - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
+    - [`results = standard.lintTextSync(text, [opts])`](#results--standardlinttextsynctext-opts)
+    - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
+  - [How do I contribute to StandardJS?](#how-do-i-contribute-to-standardjs)
 - [Security Policies and Procedures](#security-policies-and-procedures)
 - [License](#license)
 
 </details>
 
-## Install
+## Quick start
+
+### Install
 
 The easiest way to use JavaScript Standard Style is to install it globally as a
 Node command line program. Run the following command in Terminal:
@@ -107,7 +111,7 @@ $ npm install standard --save-dev
 
 _Note: To run the preceding commands, [Node.js](http://nodejs.org) and [npm](https://npmjs.com) must be installed._
 
-## Usage
+### Usage
 
 After you've installed `standard`, you should be able to use the `standard` program. The
 simplest use case would be checking the style of all JavaScript files in the
@@ -136,7 +140,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 **Note:** by default `standard` will look for all files matching the patterns:
 `**/*.js`, `**/*.jsx`.
 
-## What you might do if you're clever
+### What you might do if you're clever
 
 1. Add it to `package.json`
 
@@ -162,7 +166,9 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. Never give style feedback on a pull request again!
 
-## Why should I use JavaScript Standard Style?
+## FAQ
+
+### Why should I use JavaScript Standard Style?
 
 The beauty of JavaScript Standard Style is that it's simple. No one wants to
 maintain multiple hundred-line style configuration files for every module/project
@@ -188,7 +194,7 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). In this talk, you'll lear
 about linting, when to use `standard` versus `eslint`, and how `prettier` compares
 to `standard`.
 
-## Who uses JavaScript Standard Style?
+### Who uses JavaScript Standard Style?
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -236,11 +242,11 @@ to list here.
 `standard` is also the top-starred linter in GitHub's
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) showcase.
 
-## Are there text editor plugins?
+### Are there text editor plugins?
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
 
-### Sublime Text
+#### Sublime Text
 
 Using **[Package Control][sublime-1]**, install **[SublimeLinter][sublime-2]** and
 **[SublimeLinter-contrib-standard][sublime-3]**.
@@ -255,7 +261,7 @@ For automatic formatting on save, install **[StandardFormat][sublime-4]**.
 
 [sublime-4]: https://packagecontrol.io/packages/StandardFormat
 
-### Atom
+#### Atom
 
 Install **[linter-js-standard][atom-1]**.
 
@@ -277,7 +283,7 @@ install **[standardjs-snippets][atom-3]**.
 
 [atom-5]: https://github.com/standard/standard-engine
 
-### Visual Studio Code
+#### Visual Studio Code
 
 Install **[vscode-standardjs][vscode-1]**. (Includes support for automatic formatting.)
 
@@ -289,7 +295,7 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 [vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
-### Vim
+#### Vim
 
 Install **[ale][vim-1]**. And add these lines to your `.vimrc` file.
 
@@ -315,7 +321,7 @@ Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3],
 
 [vim-3]: https://github.com/vim-syntastic/syntastic
 
-### Emacs
+#### Emacs
 
 Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
 how to enable it in your projects.
@@ -324,13 +330,13 @@ how to enable it in your projects.
 
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
-### Brackets
+#### Brackets
 
 Search the extension registry for **["Standard Code Style"][brackets-1]** and click "Install".
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
-### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains, etc.)
+#### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains, etc.)
 
 WebStorm [recently announced native support](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
 for `standard` directly in the IDE.
@@ -339,7 +345,7 @@ If you still prefer to configure `standard` manually, [follow this guide][websto
 
 [webstorm-1]: docs/webstorm.md
 
-## Is there a readme badge?
+### Is there a readme badge?
 
 Yes! If you use `standard` in your project, you can include one of these badges in
 your readme to let people know that your code is using the standard style.
@@ -356,7 +362,7 @@ your readme to let people know that your code is using the standard style.
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ```
 
-## I disagree with rule X, can you change it?
+### I disagree with rule X, can you change it?
 
 No. The whole point of `standard` is to save you time by avoiding
 [bikeshedding][bikeshedding] about code style. There are lots of debates online about
@@ -383,7 +389,7 @@ could spend your time solving! :P
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
-## But this isn't a real web standard!
+### But this isn't a real web standard!
 
 Of course it's not! The style laid out here is not affiliated with any official web
 standards groups, which is why this repo is called `standard/standard` and not
@@ -394,7 +400,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 - This module helps hold our code to a high _standard of quality_.
 - This module ensures that new contributors follow some basic _style standards_.
 
-## Is there an automatic formatter?
+### Is there an automatic formatter?
 
 Yes! You can use `standard --fix` to fix most issues automatically.
 
@@ -406,7 +412,7 @@ To save you time, `standard` outputs the message "`Run standard --fix to
 automatically fix some problems`" when it detects problems that can be fixed
 automatically.
 
-## How do I ignore files?
+### How do I ignore files?
 
 Certain paths (`node_modules/`, `coverage/`, `vendor/`, `*.min.js`,
 and files/folders that begin with `.` like `.git/`) are automatically ignored.
@@ -427,7 +433,7 @@ that, add a `standard.ignore` property to `package.json`:
 }
 ```
 
-## How do I disable a rule?
+### How do I disable a rule?
 
 In rare cases, you'll need to break a rule and hide the error generated by
 `standard`.
@@ -465,7 +471,7 @@ console.log('offending code goes here...')
 /* eslint-enable no-use-before-define */
 ```
 
-## I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
+### I use a library that pollutes the global namespace. How do I prevent "variable is not defined" errors?
 
 Some packages (e.g. `mocha`) put their functions (e.g. `describe`, `it`) on the
 global object (poor form!). Since these functions are not defined or `require`'d
@@ -499,7 +505,7 @@ Or, add this to `package.json`:
 
 _Note: `global` and `globals` are equivalent._
 
-## How do I use experimental JavaScript (ES Next) features?
+### How do I use experimental JavaScript (ES Next) features?
 
 `standard` supports the latest ECMAScript features, ES8 (ES2017), including
 language feature proposals that are in "Stage 4" of the proposal process.
@@ -530,7 +536,7 @@ Or, add this to `package.json`:
 }
 ```
 
-## Can I use a JavaScript language variant, like Flow or TypeScript?
+### Can I use a JavaScript language variant, like Flow or TypeScript?
 
 `standard` supports the latest ECMAScript features. However, Flow and TypeScript add new
 syntax to the language, so they are not supported out-of-the-box.
@@ -539,7 +545,7 @@ To support JavaScript language variants, `standard` supports specifying a custom
 parser as well as an ESLint plugin to handle the changed syntax. Before using a JavaScript
 language variant, consider whether the added complexity is worth it.
 
-### Flow
+#### Flow
 
 To use Flow, you need to run `standard` with `babel-eslint` as the parser and
 `eslint-plugin-flowtype` as a plugin.
@@ -567,7 +573,7 @@ Or, add this to `package.json`:
 
 _Note: `plugin` and `plugins` are equivalent._
 
-### TypeScript
+#### TypeScript
 
 There are two officially supported methods of using standard with typescript files.
 
@@ -580,7 +586,7 @@ specific cli options and rules. The project uses `eslint-config-standard-with-ty
 
 An eslint configuration file with standard style javascript and typescript rules.
 
-## What about Mocha, Jest, Jasmine, QUnit, etc?
+### What about Mocha, Jest, Jasmine, QUnit, etc?
 
 To support mocha in test files, add this to the top of the test files:
 
@@ -604,7 +610,7 @@ module.
 
 _Note: `env` and `envs` are equivalent._
 
-## What about Web Workers and Service Workers?
+### What about Web Workers and Service Workers?
 
 Add this to the top of web worker files:
 
@@ -621,7 +627,7 @@ For Service workers, add this instead:
 /* eslint-env serviceworker */
 ```
 
-## What is the difference between warnings and errors?
+### What is the difference between warnings and errors?
 
 `standard` treats all rule violations as errors, which means that `standard`
 will exit with a non-zero (error) exit code.
@@ -644,7 +650,7 @@ features. We want using `standard` to be light and fun and so we're careful
 about making changes that may get in your way. As always, you can
 [disable a rule](#how-do-i-disable-a-rule) at any time, if necessary.
 
-## Can I check code inside of Markdown or HTML files?
+### Can I check code inside of Markdown or HTML files?
 
 To check code inside Markdown files, use [`standard-markdown`](https://www.npmjs.com/package/standard-markdown).
 
@@ -675,14 +681,14 @@ Then, to check JS that appears inside `<script>` tags, run:
 $ standard --plugin html '**/*.html'
 ```
 
-## Is there a Git `pre-commit` hook?
+### Is there a Git `pre-commit` hook?
 
-Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo. 
+Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo.
 Never give style feedback on a pull request again!
 
 You even have a choice...
 
-### Install your own hook
+#### Install your own hook
 
 ```bash
 #!/bin/bash
@@ -702,7 +708,7 @@ if [[ $? -ne 0 ]]; then
 fi
 ```
 
-### Use a `pre-commit` hook
+#### Use a `pre-commit` hook
 
 The [pre-commit](https://pre-commit.com/) library allows hooks to be declared within a `.pre-commit-config.yaml` configuration file in the repo, and therefore more easily maintained across a team.
 
@@ -730,7 +736,7 @@ Alternatively, for more advanced styling configurations, use `standard` within t
           # and whatever other plugins...
 ```
 
-## How do I make the output all colorful and pretty?
+### How do I make the output all colorful and pretty?
 
 The built-in output is simple and straightforward, but if you like shiny things,
 install [snazzy](https://www.npmjs.com/package/snazzy):
@@ -750,11 +756,11 @@ There's also [standard-tap](https://www.npmjs.com/package/standard-tap),
 [standard-reporter](https://www.npmjs.com/package/standard-reporter), and
 [standard-summary](https://www.npmjs.com/package/standard-summary).
 
-## Is there a Node.js API?
+### Is there a Node.js API?
 
 Yes!
 
-### `standard.lintText(text, [opts], callback)`
+#### `standard.lintText(text, [opts], callback)`
 
 Lint the provided source `text`. An `opts` object may be provided:
 
@@ -795,12 +801,12 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
+#### `results = standard.lintTextSync(text, [opts])`
 
 Synchronous version of `standard.lintText()`. If an error occurs, an exception is
 thrown. Otherwise, a `results` object is returned.
 
-### `standard.lintFiles(files, [opts], callback)`
+#### `standard.lintFiles(files, [opts], callback)`
 
 Lint the provided `files` globs. An `opts` object may be provided:
 
@@ -818,7 +824,7 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
-## How do I contribute to StandardJS?
+### How do I contribute to StandardJS?
 
 Contributions are welcome! Check out the [issues](https://github.com/standard/standard/issues) or the [PRs](https://github.com/standard/standard/pulls), and make your own if you want something that you don't see there.
 
