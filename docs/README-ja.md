@@ -57,18 +57,18 @@
   - [でもこれは本当のウェブ標準ではありません！](#but-this-isnt-a-real-web-standard)
   - [自動フォーマッターはありますか？](#is-there-an-automatic-formatter)
   - [ファイルを無視するには？](#how-do-i-ignore-files)
-  - [特定の警告を非表示にするには？](#how-do-i-hide-a-certain-warning)
+  - [ルールを無効にするには？](#how-do-i-disable-a-rule)
   - [私はグローバル名前空間を汚染するライブラリを使用しています。"variable is not defined"というエラーを防ぐには？](#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors)
   - [実験的なJavaScriptの機能（ES Next）を使用するには？](#how-do-i-use-experimental-javascript-es-next-features)
   - [FlowやTypeScriptのようなJavaScriptの代替言語を使用できますか？](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [Mocha、Jest、Jasmine、QUnitなどはどうすれば？](#what-about-mocha-jest-jasmine-qunit-etc)
   - [Web WorkersとService Workersはどうすれば？](#what-about-web-workers-and-service-workers)
+  - [警告とエラーの違いは？](#what-is-the-difference-between-warnings-and-errors)
   - [MarkdownやHTMLファイル内のコードをチェックできますか？](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Gitの`pre-commit`フックはありますか？](#is-there-a-git-pre-commit-hook)
   - [出力をすべてカラフルで綺麗にするには？](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Node.jsのAPIはありますか？](#is-there-a-nodejs-api)
   - [StandardJSにコントリビュートするには？](#how-do-i-contribute-to-standardjs)
-- [ライセンス](#license)
 
 <h2 id="install">インストール</h2>
 
@@ -350,11 +350,11 @@ Pro tip: ただ`standard`を使っていってください。時間をかけて�
 }
 ```
 
-<h2 id="how-do-i-hide-a-certain-warning">特定の警告を非表示にするには？</h2>
+<h2 id="how-do-i-disable-a-rule">ルールを無効にするには？</h2>
 
-まれにルールを破り、`standard`によって生成された警告を非表示にする必要があるでしょう。
+まれにルールを破り、`standard`によって生成されたエラーを非表示にする必要があるでしょう。
 
-JavaScript Standard Styleは内部で[ESLint](http://eslint.org/)を使用していますが、ESLintを直接使用した場合、通常どおり警告を非表示にすることができます。
+JavaScript Standard Styleは内部で[ESLint](http://eslint.org/)を使用していますが、ESLintを直接使用した場合、通常どおりエラーを非表示にすることができます。
 
 （無視するルール名を見つけるために）詳細な出力を得るには：
 
@@ -477,48 +477,15 @@ $ standard --parser babel-eslint --plugin flowtype
 
 ### TypeScript
 
-TypeScriptを使用するには、`@typescript-eslint/parser`をパーサとして、`@typescript-eslint/eslint-plugin`をプラグインとして`standard`を実行し、`**/*.ts`ファイルをリントするようにstandardに伝える必要があります（デフォルトではリントされないため）。
+standardをTypeScriptファイルで使用するには、公式にサポートされた2つの方法があります。
 
-残念ながら、`standard`とTypeScriptには、`standard`が誤って`unused-variable`のエラーを出すという未解決の[イシュー](https://github.com/standard/standard/issues/1283)があります（例：インターフェースをインポートするとき）。その回避策として、かわりに[standardx](https://github.com/standard/standardx)を使う必要があります:sweat_smile:
+**[`ts-standard`](https://github.com/standard/ts-standard)**
 
-```bash
-npm install standardx @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
-```
+`standard`に似ていますが、TypeScript固有のCLIオプションとルールを持っています。このプロジェクトでは、ルールとして`eslint-config-standard-with-typescript`を使用しています。
 
-そして、次のコマンドを実行します。：
+**[`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)**
 
-```bash
-$ standardx --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin **/*.ts
-```
-
-あるいは、次の内容を`package.json`に追加してください。：
-
-```json
-{
-  "eslintConfig": {
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error"
-    }
-  },
-  "standardx": {
-    "parser": "@typescript-eslint/parser",
-    "plugins": [ "@typescript-eslint/eslint-plugin" ]
-  }
-}
-```
-
-`package.json`にこれを追加すると、次のコマンドが実行できます。：
-
-```bash
-standardx **/*.ts
-```
-
-また、`standardx`のかわりに誤って使われるのを避けるために、`standard`の削除もすべきでしょう。
-
-```bash
-npm uninstall standard
-```
+standardスタイルのJavaScriptとTypeScriptのルールを持ったESLint設定ファイルです。
 
 <h2 id="what-about-mocha-jest-jasmine-qunit-etc">Mocha、Jest、Jasmine、QUnitなどはどうすれば？</h2>
 
@@ -554,6 +521,16 @@ Service workersには、かわりに次のコメントを追加してくださ�
 /* eslint-env serviceworker */
 ```
 
+<h2 id="what-is-the-difference-between-warnings-and-errors">警告とエラーの違いは？</h2>
+
+`standard`は、すべてのルール違反をエラーとして扱います。つまり、0以外の終了コード（エラー）で終了するということです。
+
+しかしながら、我々はときどき`standard`のユーザーの大多数に影響を与えうるルールを変更するような、新しいメジャーバージョンをリリースすることがあります（たとえば、`var`から`let`、`const`への移行など）。これを行なうのは、利点がコストに見合うと考えられ、かつルールが[自動修正可能](#is-there-an-automatic-formatter)な場合に限られます。
+
+このような状況では、ルールの変更を「警告」に留めた「移行期間」を設けています。警告は、`standard`に0以外の終了コード（エラー）に返させません。しかしながら、警告メッセージは依然としてコンソールに表示されます。移行期間中に`standard --fix`を使うと、次のメジャーバージョンに備えてあなたのコードが更新されます。
+
+我々は、`standard`でゆっくりと慎重なアプローチに励んでいます。我々は一般的に、新しい言語機能の使用を強制することに関して極めて保守的です。我々は`standard`を気軽で楽しいものにしたいので、あなたの妨げになるような変更には気をつけています。いつも通り、必要に応じていつでもルールを無効にすることができます。
+
 <h2 id="can-i-check-code-inside-of-markdown-or-html-files">MarkdownやHTMLファイル内のコードをチェックできますか？</h2>
 
 Markdownファイル内のコードをチェックするには、[`standard-markdown`](https://www.npmjs.com/package/standard-markdown)を使用してください。
@@ -586,6 +563,13 @@ $ standard --plugin html '**/*.html'
 
 <h2 id="is-there-a-git-pre-commit-hook">Gitの<code>pre-commit</code>フックはありますか？</h2>
 
+はい！フックは、スタイルが適用されていないコードがリポジトリに含まれないことを確実にするのに最適です。
+もう二度とプルリクエストでスタイルのフィードバックをさせないでください！
+
+選択肢があります……
+
+### 独自のフックをインストール
+
 ```bash
 #!/bin/bash
 
@@ -602,6 +586,34 @@ if [[ $? -ne 0 ]]; then
   echo 'JavaScript Standard Style errors were detected. Aborting commit.'
   exit 1
 fi
+```
+
+### `pre-commit`フックを使用
+
+[pre-commit](https://pre-commit.com/)ライブラリを使うとリポジトリ内の`.pre-commit-config.yaml`ファイルでフックを宣言できるようになるので、チーム全体でより簡単に管理できます。
+
+pre-commitのユーザーは、`.pre-commit-config.yaml`ファイルに`standard`を追加するだけで、`.js`、`.jsx`、`.ts`、`.tsx`、`.mjs`、`.cjs`ファイルが自動的に修正されます。：
+
+```yaml
+  - repo: https://github.com/standard/standard
+    rev: master
+    hooks:
+      - id: standard
+```
+
+あるいは、より高度なスタイル設定のために[eslint hook](https://github.com/pre-commit/mirrors-eslint)の中で`standard`を使用します。：
+
+```yaml
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: master
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$  # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
+        additional_dependencies:
+          - eslint@latest
+          - eslint-config-standard@latest
+          # and whatever other plugins...
 ```
 
 <h2 id="how-do-i-make-the-output-all-colorful-and-pretty">出力をすべてカラフルで綺麗にするには？</h2>
@@ -698,7 +710,6 @@ var opts = {
   - **[standard-engine](https://github.com/standard/standard-engine)** - 任意のESLintルールのCLIエンジン
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - standardのESLintルール
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - standardのESLintルール（JSX）
-  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - standardのカスタムESlintルール（ESLintのコアの一部ではない）
   - **[eslint](https://github.com/eslint/eslint)** - standardを動作させるリンター
 - **[snazzy](https://github.com/standard/snazzy)** - standardのきれいなターミナル出力
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com のコード
