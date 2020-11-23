@@ -651,7 +651,8 @@
     "name": "simple-websocket",
     "repo": "https://github.com/feross/simple-websocket",
     "description": "Simple, EventEmitter API for WebSockets (browser)",
-    "dependents": 4
+    "dependents": 4,
+    "install": true
   },
   {
     "name": "is-installed",
@@ -1046,11 +1047,13 @@
   },
   {
     "name": "bitmidi.com",
-    "repo": "https://github.com/feross/bitmidi.com"
+    "repo": "https://github.com/feross/bitmidi.com",
+    "install": true
   },
   {
     "name": "speakeasyjs.com",
-    "repo": "https://github.com/feross/speakeasyjs.com"
+    "repo": "https://github.com/feross/speakeasyjs.com",
+    "install": true
   },
   {
     "name": "request",
