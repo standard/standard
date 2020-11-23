@@ -1037,7 +1037,8 @@
   },
   {
     "name": "webtorrent-desktop",
-    "repo": "https://github.com/webtorrent/webtorrent-desktop"
+    "repo": "https://github.com/webtorrent/webtorrent-desktop",
+    "install": true
   },
   {
     "name": "instant.io",

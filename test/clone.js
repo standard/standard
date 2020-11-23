@@ -16,6 +16,7 @@ const test = require('tape')
 const testPkgs = require('./test.json')
 
 const GIT = 'git'
+const NPM = 'npm'
 const STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
 const TMP = path.join(__dirname, '..', 'tmp')
 const PARALLEL_LIMIT = Math.ceil(os.cpus().length / 2)
@@ -76,7 +77,14 @@ test('test github repos that use `standard`', t => {
           const downloadPackage = err ? gitClone : gitPull
           downloadPackage(err => {
             if (err) return cb(err)
-            runStandard(cb)
+            if (pkg.install) {
+              npmInstall(err => {
+                if (err) return cb(err)
+                runStandard(cb)
+              })
+            } else {
+              runStandard(cb)
+            }
           })
         }
 
@@ -92,6 +100,14 @@ test('test github repos that use `standard`', t => {
           const args = ['pull']
           spawn(GIT, args, { cwd: folder, stdio: 'ignore' }, err => {
             if (err) err.message += ` (git pull) (${name})`
+            cb(err)
+          })
+        }
+
+        function npmInstall (cb) {
+          const args = ['install']
+          spawn(NPM, args, { cwd: folder, stdio: 'ignore' }, err => {
+            if (err) err.message += ` (npm install) (${name})`
             cb(err)
           })
         }
