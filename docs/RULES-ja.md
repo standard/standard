@@ -407,13 +407,21 @@
   ```js
   class Dog {
     constructor () {
-      super()   // ✗ avoid
+      super()             // ✗ avoid
+      this.legs = 4
     }
   }
 
-  class Dog extends Mammal {
+  class Dog extends Animal {
+    constructor () {      // ✗ avoid
+      this.legs = 4
+    }
+  }
+
+  class Dog extends Animal {
     constructor () {
-      super()   // ✓ ok
+      super()             // ✓ ok
+      this.legs = 4
     }
   }
   ```
