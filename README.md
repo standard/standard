@@ -818,3 +818,4 @@ The `standard` team and community take all security bugs in `standard` seriously
 ## License
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).
+modification du fichier README
