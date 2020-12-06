@@ -546,11 +546,11 @@ Pour les Service workers, ajoutez ça:
 
 `standard` traite toutes les violations de règles comme des erreurs, ce qui veut dire que `standard` quittera avec un code de sortie non nul (erreur).
 
-Cependant, nous pouvons occasionnellement sortir une nouvelle version majeure de `standard` qui change des règles qui affecte la majorité des utilisateurs `standard` (par exemple, la transition de `var` à `let`/`const`). Nous faisons ça seulement quand nous pensons que l'avantage vaut le coup et que la règle peut se [fixer automatiquement](https://standardjs.com/readme-en.html#is-there-an-automatic-formatter).
+Cependant, nous pouvons occasionnellement sortir une nouvelle version majeure de `standard` qui change des règles qui affecte la majorité des utilisateurs `standard` (par exemple, la transition de `var` à `let`/`const`). Nous faisons ça seulement quand nous pensons que ça vaut le coup et que la règle peut se [fixer automatiquement](https://standardjs.com/readme-en.html#is-there-an-automatic-formatter).
 
-Dans ses situations, nous avons une période de transition, dans laquelle, la règle changé est seulement un "avertissement". Les avertissements ne font pas quitter `standard` avec un code de sortie non nul (erreur). Toutefois, un message sera affiché dans la console. Durant cette période de transition, l'utilisation de `standard --fix` va mettre à jour votre code pour que ça soit pour la prochaine mise à jour majeur.
+Dans ses situations, nous avons une période de transition, dans laquelle, la règle changé est seulement un "avertissement". Les avertissements ne font pas quitter `standard` avec un code de sortie non nul (erreur). Toutefois, un message sera affiché dans la console. Durant cette période de transition, l'utilisation de `standard --fix` va mettre à jour votre code pour que ça soit prêt pour la prochaine mise à jour majeur.
 
-L'approche lente et prudente est ce que nous recherchons avec `standard`. Nous sommes généralement extrêmement prudents dans l'application de l'utilisation des nouvelles fonctionnalités du langage. Nous voulons que l'utilisation de la norme soit légère et amusante, c'est pourquoi nous prenons soin d'apporter des modifications qui pourraient vous gêner. Comme toujours, vous pouvez [désactiver une règle](https://standardjs.com/readme-en.html#how-do-i-disable-a-rule) à tout moment, si nécessaire.
+L'approche lente et prudente est ce que nous recherchons avec `standard`. Nous sommes généralement extrêmement prudents dans l'application de l'utilisation des nouvelles fonctionnalités du langage. Nous voulons que l'utilisation de `standard` soit légère et amusante, c'est pourquoi nous prenons soin d'apporter des modifications qui pourraient vous gêner. Comme toujours, vous pouvez [désactiver une règle](https://standardjs.com/readme-en.html#how-do-i-disable-a-rule) à tout moment, si nécessaire.
 
 ## Puis-je vérifier le code dans les fichiers Markdown ou HTML?
 
