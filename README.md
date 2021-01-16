@@ -507,9 +507,45 @@ Or, add this to `package.json`:
 `standard` supports the latest ECMAScript features. However, Flow and TypeScript add new
 syntax to the language, so they are not supported out-of-the-box.
 
-To support JavaScript language variants, `standard` supports specifying a custom JavaScript
+For TypeScript, an official variant `ts-standard` is supported and maintained that provides a very
+similar experience to `standard`.
+
+For other JavaScript language variants, `standard` supports specifying a custom JavaScript
 parser as well as an ESLint plugin to handle the changed syntax. Before using a JavaScript
 language variant, consider whether the added complexity is worth it.
+
+### TypeScript
+
+[`ts-standard`](https://github.com/standard/ts-standard) is the officially supported variant for
+TypeScript. `ts-standard` supports all the same rules and options as `standard` and includes
+additional TypeScript specific rules. `ts-standard` will even lint regular `javascript` files
+by setting the configuration in `tsconfig.json`.
+
+```bash
+npm install ts-standard --save-dev
+```
+
+Then run (where `tsconfig.json` is located in the working directory):
+
+```bash
+$ ts-standard
+```
+
+Or, add this to `package.json`:
+
+```json
+{
+  "ts-standard": {
+    "project": "./tsconfig.json"
+  }
+}
+```
+
+*Note: To include additional files in linting such as test files, create a `tsconfig.eslint.json` file to use instead.*
+
+If you really want to configure hundreds of ESLint rules individually, you can always use eslint
+directly with [`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)
+to layer your changes on top.
 
 ### Flow
 
@@ -538,19 +574,6 @@ Or, add this to `package.json`:
 ```
 
 *Note: `plugin` and `plugins` are equivalent.*
-
-### TypeScript
-
-There are two officially supported methods of using standard with typescript files.
-
-**[`ts-standard`](https://github.com/standard/ts-standard)**
-
-Like `standard` but with typescript
-specific cli options and rules. The project uses `eslint-config-standard-with-typescript` for rules.
-
-**[`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)**
-
-An eslint configuration file with standard style javascript and typescript rules.
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
 
@@ -649,7 +672,7 @@ $ standard --plugin html '**/*.html'
 
 ## Is there a Git `pre-commit` hook?
 
-Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo. 
+Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo.
 Never give style feedback on a pull request again!
 
 You even have a choice...
