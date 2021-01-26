@@ -1,0 +1,30 @@
+# Special test for the oldest version of Node.js that we "support"
+# even though the linter won't actually run. Test that the command
+# line program exits cleanly.
+
+name: Old Node CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [0.10]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - name: Test that the command line program exits cleanly.
+        run: ./bin/cmd.js
+        shell: bash
