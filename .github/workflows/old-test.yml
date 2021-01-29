@@ -1,4 +1,8 @@
-name: Node CI
+# Special test for the oldest version of Node.js that we "support"
+# even though the linter won't actually run. Test that the command
+# line program exits cleanly.
+
+name: Old test
 
 on:
   push:
@@ -12,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [0.10.48]
 
     steps:
       - name: Checkout project
@@ -34,5 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Test that the command line program exits cleanly.
+        run: ./bin/cmd.js
+        shell: bash
