@@ -8,3 +8,10 @@ updates:
       - "dependency"
     # Always increase the version requirement to match the new version.
     versioning-strategy: increase
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "github-actions"
