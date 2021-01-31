@@ -284,7 +284,7 @@ untuk `standard` langsung didalam IDE.
 
 Jika kamu lebih suka untuk mengkonfigurasi `standard` secara manual, [ikuti arahan disini][webstorm-1]. Arahan tersebuh dapat diaplikasikan kedalam seluruh produk JetBrains, termasuk PhpStorm, IntelliJ, RubyMine, etc.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## Apakah terdapat badge readme?
 

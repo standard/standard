@@ -302,7 +302,7 @@ WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본�
 
 만약 수동으로 `standard`를 구성하려면 [안내서]([webstorm-1])를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## readme에 넣을 수 있는 뱃지로고가 있나요?
 

@@ -282,7 +282,7 @@ WebStormでは、IDEで`standard`が[ネイティブサポートされるよう�
 
 `standard`を手動で設定したい場合、[こちらのガイド][webstorm-1]に従ってください。これは、PhpStorm、IntelliJ、RubyMineなど、すべてのJetBrains製品に適用されます。
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 <h2 id="is-there-a-readme-badge">readme用のバッジはありますか？</h2>
 
