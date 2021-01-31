@@ -300,7 +300,7 @@ extension registry에서 **["Standard Code Style"][brackets-1]** 을 검색하�
 
 WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본적인 지원에 관한 최근 발표](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) 했습니다.
 
-만약 수동으로 `standard`를 구성하려면 [안내서]([webstorm-1])를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
+만약 수동으로 `standard`를 구성하려면 [안내서][webstorm-1]를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
 
 [webstorm-1]: webstorm.md
 
