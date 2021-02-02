@@ -259,7 +259,7 @@ Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/standard/standard/blob/master/docs/webstorm.md
+[webstorm-2]: webstorm.md
 
 ## FAQ
 

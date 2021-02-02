@@ -315,7 +315,7 @@ Busque el registro de extension para **["Standard Code Style"][brackets-1]**.
 
 WebStorm [recientemente anuncio soporte nativo](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) para `standard` directamente en el IDE.
 
-Si aun prefieres configurar `standard` manualmente [sigue esta guía](webstorm-2). Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
+Si aun prefieres configurar `standard` manualmente [sigue esta guía][webstorm-2]. Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: webstorm.md

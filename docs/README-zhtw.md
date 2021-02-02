@@ -289,7 +289,7 @@ WebStorm [近期發佈了原生支援](https://blog.jetbrains.com/webstorm/2017/
 
 如果你還是傾向要手動設定 `standard`，[可以參考這個教學][webstorm-1]。這可以套用至所有 JetBrains 的產品，包括 PhpStorm、IntelliJ、RubyMine 等等。
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## 有 README 專用的 standard 徽章嗎？
 
