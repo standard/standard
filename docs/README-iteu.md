@@ -312,7 +312,7 @@ per `standard` direttamente nell'IDE.
 
 Se preferisci configurare `standard` manualmente, [segui questa guida][webstorm-1]. Questa guida va bene per tutti i prodotti JetBrains, come ad esempio PhpStorm, IntelliJ, RubyMine, ecc.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## Esiste un banner?
 
