@@ -427,10 +427,10 @@ $ standard --global myVar1 --global myVar2
 
 為了支援實驗性質的語法，`standard` 支援客製化 JavaScript 語法解析器。在使用客製化語法解析器前，請考慮清楚是否值得去增加這些複雜度。
 
-要使用客製化語法解析器，可以從 npm 安裝（比如說：`npm install babel-eslint`），然後執行：
+要使用客製化語法解析器，可以從 npm 安裝（比如說：`npm install @babel/eslint-parser`），然後執行：
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 或在 `package.json` 中加入：
@@ -438,12 +438,12 @@ $ standard --parser babel-eslint
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-如果你是把 `standard` 裝在全域下（就是 `npm install standard --global`），那麼請確保 `babel-eslint` 也是用 `npm install babel-eslint --global` 裝在全域下。
+如果你是把 `standard` 裝在全域下（就是 `npm install standard --global`），那麼請確保 `@babel/eslint-parser` 也是用 `npm install @babel/eslint-parser --global` 裝在全域下。
 
 ## 我可以使用 JavaScript 的變體，像是 Flow 嗎？
 
@@ -579,7 +579,7 @@ var opts = {
   globals: [],  // 會用到的全域變數
   plugins: [],  // eslint 外掛
   envs: [],     // eslint 環境
-  parser: ''    // javascript 語法解析器 （比如說 babel-eslint）
+  parser: ''    // javascript 語法解析器 （比如說 @babel/eslint-parser）
 }
 ```
 
@@ -614,7 +614,7 @@ var opts = {
   globals: [],  // 會用到的全域變數
   plugins: [],  // eslint 外掛
   envs: [],     // eslint 環境
-  parser: ''    // javascript 語法解析器 （比如說 babel-eslint）
+  parser: ''    // javascript 語法解析器 （比如說 @babel/eslint-parser）
 }
 ```
 

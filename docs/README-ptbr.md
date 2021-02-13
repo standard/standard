@@ -381,17 +381,17 @@ Se você possui centenas de arquivos, adicionar comentários em cada um pode fic
 Antes de usar um custom parser, considere se a complexidade a mais no seu código faz com que o processo valha a pena.
 
 `standard` suporta custom JS parsers. Para usar um custom parser, instale via npm
-(por exemplo: `npm install babel-eslint`) e adicione isso ao seu `package.json`:
+(por exemplo: `npm install @babel/eslint-parser`) e adicione isso ao seu `package.json`:
 
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `babel-eslint` globalmente como `npm install babel-eslint -g`.
+Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `@babel/eslint-parser` globalmente como `npm install @babel/eslint-parser -g`.
 
 ### Posso usar uma linguagem variante de JavaScript, tipo Flow?
 
@@ -402,7 +402,7 @@ Antes de usar uma variante de JS customizada, considere se a complexidade a mais
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [
       "flowtype"
     ]
@@ -506,7 +506,7 @@ var opts = {
   globals: [],  // declaração de variáveis globais
   plugins: [],  // plugins eslint
   envs: [],     // ambiente eslint
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -541,7 +541,7 @@ var opts = {
   globals: [],  // variáveis globais para declarar
   plugins: [],  // plugins eslint
   envs: [],     // ambiente eslint
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
