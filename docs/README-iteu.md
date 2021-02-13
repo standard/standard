@@ -445,10 +445,10 @@ Oppure aggiungi questo al tuo `package.json`:
 
 Per supportare funzionalità sperimentali, `standard` permette di configurare uno perser JavaScript su misura (custom). Prima di aggiungere un diverso parser, considera se la complessità che si andrà ad aggiungere ne valga la pena.
 
-Per usare un parser su misura (custom), installalo da npm (esempio: `npm install --save-dev babel-eslint`) ed esegui:
+Per usare un parser su misura (custom), installalo da npm (esempio: `npm install --save-dev @babel/eslint-parser`) ed esegui:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 Oppure aggiungi questo al tuo `package.json`:
@@ -456,13 +456,13 @@ Oppure aggiungi questo al tuo `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-Se `standard` è installato globalmente (i.e. `npm install standard --global`), allora assicurati che anche `babel-eslint` sia installato globalmente, con
-`npm install babel-eslint --global`.
+Se `standard` è installato globalmente (i.e. `npm install standard --global`), allora assicurati che anche `@babel/eslint-parser` sia installato globalmente, con
+`npm install @babel/eslint-parser --global`.
 
 ## Posso usare varianti di JavaScript come Flow?
 
@@ -484,10 +484,10 @@ Oppure aggiungi questo al tuo `package.json`:
 }
 ```
 
-Per usare Flow, hai bisogno di usare `babel-eslint` come parser, Quindi, esegui `npm install eslint-plugin-flowtype babel-eslint` e dopo di che esegui:
+Per usare Flow, hai bisogno di usare `@babel/eslint-parser` come parser, Quindi, esegui `npm install eslint-plugin-flowtype @babel/eslint-parser` e dopo di che esegui:
 
 ```bash
-$ standard --plugin flowtype --parser babel-eslint
+$ standard --plugin flowtype --parser @babel/eslint-parser
 ```
 
 Oppure aggiungi questo al tuo `package.json`:
@@ -496,7 +496,7 @@ Oppure aggiungi questo al tuo `package.json`:
 {
   "standard": {
     "plugins": [ "flowtype" ],
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
@@ -623,7 +623,7 @@ Esegue il lint sul parametro passato come input `text`. Il parametro `opts` è u
   globals: [],  // particolari variabili globali da dichiarare
   plugins: [],  // particolari plugin eslint
   envs: [],     // particolari eslint environments
-  parser: ''    // particolari parser JavaScript (es. babel-eslint)
+  parser: ''    // particolari parser JavaScript (es. @babel/eslint-parser)
 }
 ```
 
@@ -667,7 +667,7 @@ var opts = {
   globals: [],  // particolari variabili globali da dichiarare
   plugins: [],  // particolari plugin eslint
   envs: [],     // particolari eslint environments
-  parser: ''    // particolari parser JavaScript (es. babel-eslint)
+  parser: ''    // particolari parser JavaScript (es. @babel/eslint-parser)
 }
 ```
 

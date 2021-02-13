@@ -484,13 +484,13 @@ complexity is worth it.
 To use a custom parser, first install it from npm:
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 Or, add this to `package.json`:
@@ -498,7 +498,7 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
@@ -550,17 +550,17 @@ to layer your changes on top.
 
 ### Flow
 
-To use Flow, you need to run `standard` with `babel-eslint` as the parser and
+To use Flow, you need to run `standard` with `@babel/eslint-parser` as the parser and
 `eslint-plugin-flowtype` as a plugin.
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 Or, add this to `package.json`:
@@ -568,7 +568,7 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
@@ -760,7 +760,7 @@ Lint the provided source `text`. An `opts` object may be provided:
   globals: [],  // custom global variables to declare
   plugins: [],  // custom eslint plugins
   envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  parser: ''    // custom js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -806,7 +806,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 

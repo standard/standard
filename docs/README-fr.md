@@ -467,13 +467,13 @@ Pour supporter les fonctionalités expérimentales, `standard` supporte la spéc
 Pour utiliser un autre parseur, installez-le d'abord avec npm:
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 Ensuite éxécutez:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 Ou, ajoutez ça au `package.json`:
@@ -481,13 +481,13 @@ Ou, ajoutez ça au `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-Si `standard` est installé globalement (`npm install standard --global`), soyez surs d'installer `babel-eslint` globalement aussi, avec
-`npm install babel-eslint --global`.
+Si `standard` est installé globalement (`npm install standard --global`), soyez surs d'installer `@babel/eslint-parser` globalement aussi, avec
+`npm install @babel/eslint-parser --global`.
 
 ## Puis-je utiliser une variation du langage JavaScript, comme Flow ou TypeScript?
 
@@ -497,17 +497,17 @@ Pour supporter les variations, `standard` supporte la spécification d'un parseu
 
 ### Flow
 
-Pour utiliser Flow, vous allez devoir éxécuter `standard` avec `babel-eslint` comme parseur et
+Pour utiliser Flow, vous allez devoir éxécuter `standard` avec `@babel/eslint-parser` comme parseur et
 `eslint-plugin-flowtype` comme plugin.
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 Ensuite éxécutez:
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 Ou, ajoutez ça au `package.json`:
@@ -515,7 +515,7 @@ Ou, ajoutez ça au `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
@@ -523,8 +523,8 @@ Ou, ajoutez ça au `package.json`:
 
 *Note: `plugin` et `plugins` sont équivalents.*
 
-Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `babel-eslint` et `eslint-plugin-flowtype` globalement aussi, avec
-`npm install babel-eslint eslint-plugin-flowtype --global`.
+Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `@babel/eslint-parser` et `eslint-plugin-flowtype` globalement aussi, avec
+`npm install @babel/eslint-parser eslint-plugin-flowtype --global`.
 
 ### TypeScript
 
@@ -681,7 +681,7 @@ Lint le texte fourni. Un objet `opts` peut être fourni:
   globals: [],  // custom global variables to declare
   plugins: [],  // custom eslint plugins
   envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  parser: ''    // custom js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -725,7 +725,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
