@@ -30,7 +30,7 @@
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
     "simple-get": "^4.0.0",
-    "tape": "^5.1.1"
+    "tape": "^5.2.0"
   },
   "engines": {
     "node": ">=10.12.0"
