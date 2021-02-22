@@ -282,7 +282,7 @@ WebStormでは、IDEで`standard`が[ネイティブサポートされるよう�
 
 `standard`を手動で設定したい場合、[こちらのガイド][webstorm-1]に従ってください。これは、PhpStorm、IntelliJ、RubyMineなど、すべてのJetBrains製品に適用されます。
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 <h2 id="is-there-a-readme-badge">readme用のバッジはありますか？</h2>
 
@@ -423,13 +423,13 @@ $ standard --global myVar1 --global myVar2
 カスタムパーサーを使用するには、まずnpmから以下をインストールしてください。：
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -437,7 +437,7 @@ $ standard --parser babel-eslint
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
@@ -450,16 +450,16 @@ JavaScriptの代替言語をサポートするため、`standard`は変更され
 
 ### Flow
 
-Flowを使用するには、`babel-eslint`をパーサとして、`eslint-plugin-flowtype`をプラグインとして`standard`を実行する必要があります。
+Flowを使用するには、`@babel/eslint-parser`をパーサとして、`eslint-plugin-flowtype`をプラグインとして`standard`を実行する必要があります。
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 あるいは、次の内容を`package.json`に追加してください。：
@@ -467,7 +467,7 @@ $ standard --parser babel-eslint --plugin flowtype
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
@@ -648,7 +648,7 @@ $ standard --verbose | snazzy
   globals: [],  // custom global variables to declare
   plugins: [],  // custom eslint plugins
   envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  parser: ''    // custom js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -692,7 +692,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 

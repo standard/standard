@@ -427,10 +427,10 @@ $ standard --global myVar1 --global myVar2
 
 为了支持实验性的特性，`standard` 支持自定义 JavaScript 解析器。添加自定义解析器前请思考一下必要性。
 
-从 npm 安装并使用自定义的解析器（示例：`npm install babel-eslint`）：
+从 npm 安装并使用自定义的解析器（示例：`npm install @babel/eslint-parser`）：
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 或者将其添加到  `package.json` 配置中：
@@ -438,12 +438,12 @@ $ standard --parser babel-eslint
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-如果全局安装（`npm install standard --global`）了 `standard` 的话，那么请确保 `babel-eslint` 也用 `npm install babel-eslint --global` 全局安装。
+如果全局安装（`npm install standard --global`）了 `standard` 的话，那么请确保 `@babel/eslint-parser` 也用 `npm install @babel/eslint-parser --global` 全局安装。
 
 ## 我能使用其他 JavaScript 变种吗，例如 Flow？
 
@@ -587,7 +587,7 @@ $ standard --verbose | snazzy
   globals: [],  // 声明需要跳过检测的定义全局变量
   plugins: [],  // 自定义的 eslint 插件列表
   envs: [],     // 自定义的 eslint 环境
-  parser: ''    // 自定义的 js 解析器（例如 babel-eslint）
+  parser: ''    // 自定义的 js 解析器（例如 @babel/eslint-parser）
 }
 ```
 
@@ -631,7 +631,7 @@ var opts = {
   globals: [],  // 声明需要跳过检测的定义全局变量
   plugins: [],  // eslint 插件列表
   envs: [],     // eslint 环境
-  parser: ''    // js 解析器（例如 babel-eslint）
+  parser: ''    // js 解析器（例如 @babel/eslint-parser）
 }
 ```
 

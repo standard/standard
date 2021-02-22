@@ -8,7 +8,8 @@
 
 <p align="center">
   <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
-  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
+  <a href="https://github.com/standard/standard/actions?query=workflow%3ATest"><img src="https://github.com/standard/standard/workflows/Test/badge.svg" alt="status badge Node tests"></a>
+  <a href="https://github.com/standard/standard/actions?query=workflow%3A%22Old+test%22"><img src="https://github.com/standard/standard/workflows/Old%20test/badge.svg" alt="status badge old Node test"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
@@ -483,13 +484,13 @@ complexity is worth it.
 To use a custom parser, first install it from npm:
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 Or, add this to `package.json`:
@@ -497,7 +498,7 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
@@ -507,23 +508,59 @@ Or, add this to `package.json`:
 `standard` supports the latest ECMAScript features. However, Flow and TypeScript add new
 syntax to the language, so they are not supported out-of-the-box.
 
-To support JavaScript language variants, `standard` supports specifying a custom JavaScript
+For TypeScript, an official variant `ts-standard` is supported and maintained that provides a very
+similar experience to `standard`.
+
+For other JavaScript language variants, `standard` supports specifying a custom JavaScript
 parser as well as an ESLint plugin to handle the changed syntax. Before using a JavaScript
 language variant, consider whether the added complexity is worth it.
 
+### TypeScript
+
+[`ts-standard`](https://github.com/standard/ts-standard) is the officially supported variant for
+TypeScript. `ts-standard` supports all the same rules and options as `standard` and includes
+additional TypeScript specific rules. `ts-standard` will even lint regular `javascript` files
+by setting the configuration in `tsconfig.json`.
+
+```bash
+npm install ts-standard --save-dev
+```
+
+Then run (where `tsconfig.json` is located in the working directory):
+
+```bash
+$ ts-standard
+```
+
+Or, add this to `package.json`:
+
+```json
+{
+  "ts-standard": {
+    "project": "./tsconfig.json"
+  }
+}
+```
+
+*Note: To include additional files in linting such as test files, create a `tsconfig.eslint.json` file to use instead.*
+
+If you really want to configure hundreds of ESLint rules individually, you can always use eslint
+directly with [`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)
+to layer your changes on top.
+
 ### Flow
 
-To use Flow, you need to run `standard` with `babel-eslint` as the parser and
+To use Flow, you need to run `standard` with `@babel/eslint-parser` as the parser and
 `eslint-plugin-flowtype` as a plugin.
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 Then run:
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 Or, add this to `package.json`:
@@ -531,26 +568,13 @@ Or, add this to `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
 ```
 
 *Note: `plugin` and `plugins` are equivalent.*
-
-### TypeScript
-
-There are two officially supported methods of using standard with typescript files.
-
-**[`ts-standard`](https://github.com/standard/ts-standard)**
-
-Like `standard` but with typescript
-specific cli options and rules. The project uses `eslint-config-standard-with-typescript` for rules.
-
-**[`eslint-config-standard-with-typescript`](https://github.com/standard/eslint-config-standard-with-typescript)**
-
-An eslint configuration file with standard style javascript and typescript rules.
 
 ## What about Mocha, Jest, Jasmine, QUnit, etc?
 
@@ -649,7 +673,7 @@ $ standard --plugin html '**/*.html'
 
 ## Is there a Git `pre-commit` hook?
 
-Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo. 
+Yes! Hooks are great for ensuring that unstyled code never even makes it into your repo.
 Never give style feedback on a pull request again!
 
 You even have a choice...
@@ -736,7 +760,7 @@ Lint the provided source `text`. An `opts` object may be provided:
   globals: [],  // custom global variables to declare
   plugins: [],  // custom eslint plugins
   envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. babel-eslint)
+  parser: ''    // custom js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -782,7 +806,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 

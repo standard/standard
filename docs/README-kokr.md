@@ -300,9 +300,9 @@ extension registry에서 **["Standard Code Style"][brackets-1]** 을 검색하�
 
 WebStrom은 `standard`가 직접적으로 IDE에서 사용가능다고 [기본적인 지원에 관한 최근 발표](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) 했습니다.
 
-만약 수동으로 `standard`를 구성하려면 [안내서]([webstorm-1])를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
+만약 수동으로 `standard`를 구성하려면 [안내서][webstorm-1]를 따르십시오. 이것은 PhpStorm, IntelliJ, RubyMine 등 모든 JetBrains 제품에 적용됩니다.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## readme에 넣을 수 있는 뱃지로고가 있나요?
 
@@ -441,13 +441,13 @@ $ standard --global myVar1 --global myVar2
 커스텀파서를 사용하기 전에 먼저 npm모듈을 설치합니다.
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 다음을 수행합니다.
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 혹은, `package.json`에 아래코드를 추가하세요.
@@ -455,12 +455,12 @@ $ standard --parser babel-eslint
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-`standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `babel-eslint`를 `npm install babel-eslint --global`과 함께 설치하십시오.
+`standard'가 전역으로 설치되면 (즉,`npm install standard --global`), `@babel/eslint-parser`를 `npm install @babel/eslint-parser --global`과 함께 설치하십시오.
 
 ## JavaScript와 다른 Flow 또는 TypeScript에서도 사용할 수 있나요?
 
@@ -470,16 +470,16 @@ JavaScript 언어 변형을 지원하기 위해 `standard`는 변경된 구문�
 
 ### Flow
 
-Flow를 사용하려면`babel-eslint`를 파서로 사용하고`eslint-plugin-flowtype`을 플러그인으로 사용하여`standard`를 실행해야합니다.
+Flow를 사용하려면`@babel/eslint-parser`를 파서로 사용하고`eslint-plugin-flowtype`을 플러그인으로 사용하여`standard`를 실행해야합니다.
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 다음을 실행하세요.
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 아니면, `package.json`에 아래 코드를 추가하세요.
@@ -487,7 +487,7 @@ $ standard --parser babel-eslint --plugin flowtype
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
@@ -495,7 +495,7 @@ $ standard --parser babel-eslint --plugin flowtype
 
 *주의 :`plugin`과 `plugins`는 동일합니다.*
 
-만약`standard`가 전역 적으로 설치된다면 (즉,`npm install standard - global`), `babel-eslint`와`eslint-plugin-flowtype`도 함께 설치해야 합니다. `npm install babel-eslint eslint-plugin-flowtype --global`.
+만약`standard`가 전역 적으로 설치된다면 (즉,`npm install standard - global`), `@babel/eslint-parser`와`eslint-plugin-flowtype`도 함께 설치해야 합니다. `npm install @babel/eslint-parser eslint-plugin-flowtype --global`.
 
 ### TypeScript
 
@@ -646,7 +646,7 @@ $ standard --verbose | snazzy
   globals: [],  // 선언할 커스텀 글로벌 변수
   plugins: [],  // 커스텀 eslint 플러그인
   envs: [],     // 커스텀 eslint 환경
-  parser: ''    // 커스텀 js 파서  (예: babel-eslint)
+  parser: ''    // 커스텀 js 파서  (예: @babel/eslint-parser)
 }
 ```
 
@@ -690,7 +690,7 @@ var opts = {
   globals: [],  // 선언할 글로벌 변수
   plugins: [],  // eslint 플러그인
   envs: [],     // eslint 환경
-  parser: ''    // js 파서 (예: babel-eslint)
+  parser: ''    // js 파서 (예: @babel/eslint-parser)
 }
 ```
 

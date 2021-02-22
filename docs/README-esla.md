@@ -315,7 +315,7 @@ Busque el registro de extension para **["Standard Code Style"][brackets-1]**.
 
 WebStorm [recientemente anuncio soporte nativo](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/) para `standard` directamente en el IDE.
 
-Si aun prefieres configurar `standard` manualmente [sigue esta guía](webstorm-2). Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
+Si aun prefieres configurar `standard` manualmente [sigue esta guía][webstorm-2]. Esto se aplica a todos los productos de JetBrains, incluyendo PhpStorm, IntelliJ, RubyMine y etc.
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: webstorm.md
@@ -459,10 +459,10 @@ de las propuestas que estan en "Stage 4" del proceso de propuestas.
 
 Para soportar características experimentales del lenguaje, `standard` soporta especificar un parser JS customizado. Antes de que uses un parser customizado, considera si la complejidad agregada vale la pena.
 
-Para usar un parser customizado, instálalo desde npm (ejemplo: `npm install babel-eslint`) y ejecuta esto:
+Para usar un parser customizado, instálalo desde npm (ejemplo: `npm install @babel/eslint-parser`) y ejecuta esto:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 O, agrega esto a `package.json`:
@@ -470,12 +470,12 @@ O, agrega esto a `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-Si `standard` está instalado globalmente (ej: `npm install standard --global`), entonces asegúrate de instalar `babel-eslint` globalmente también com `npm install babel-eslint --global`.
+Si `standard` está instalado globalmente (ej: `npm install standard --global`), entonces asegúrate de instalar `@babel/eslint-parser` globalmente también com `npm install @babel/eslint-parser --global`.
 
 ## ¿Puedo usar una variación de lenguaje JavaScript, como Flow?
 
@@ -494,7 +494,7 @@ O, agrega esto a `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [
       "flowtype"
     ]
@@ -623,7 +623,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -659,7 +659,7 @@ var opts = {
   globals: [],  // global variables to declare
   plugins: [],  // eslint plugins
   envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
