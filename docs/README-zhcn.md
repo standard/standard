@@ -250,13 +250,13 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 ### Visual Studio Code
 
-安装 **[vscode-standardjs][vscode-1]**（已经包含了自动格式化）。
+安装 **[vscode-standard][vscode-1]**（已经包含了自动格式化）。
 
 安装 **[vscode-standardjs-snippets][vscode-2]** 以获得 JS snippets。安装 **[vscode-react-standard][vscode-3]** 以获得 React snippets。
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 

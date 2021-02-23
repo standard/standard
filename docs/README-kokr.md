@@ -256,13 +256,13 @@ JavaScript Standard Style의 장점은 간단하다는 것입니다. 어느 누�
 
 ### Visual Studio Code
 
-**[vscode-standardjs][vscode-1]** 를 설치합니다. (자동포멧을 지원합니다.)
+**[vscode-standard][vscode-1]** 를 설치합니다. (자동포멧을 지원합니다.)
 
 JS 스니펫의 경우 **[vscode-standardjs-snippets][vscode-2]** 을 설치합니다. React 스니펫의 경우 **[vscode-react-standard][vscode-3]** 를 설치합니다.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 

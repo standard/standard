@@ -247,12 +247,12 @@ Selecione o registro da extensão do **["Standard Code Style"][brackets-1]**.
 
 #### [Visual Studio Code](https://code.visualstudio.com/)
 
-Instale **[vscode-standardjs][vscode-1]**. (Inclui suporte para formatação automática.)
+Instale **[vscode-standard][vscode-1]**. (Inclui suporte para formatação automática.)
 
 Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
-[vscode-2]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
+[vscode-2]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 #### [WebStorm/PhpStorm][webstorm-1]
 

@@ -230,13 +230,13 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk)をご覧ください。こ
 
 ### Visual Studio Code
 
-**[vscode-standardjs][vscode-1]** をインストールしてください（自動フォーマットもサポートしています）。
+**[vscode-standard][vscode-1]** をインストールしてください（自動フォーマットもサポートしています）。
 
 JavaScriptのスニペットには、 **[vscode-standardjs-snippets][vscode-2]** をインストールしてください。Reactのスニペットには、 **[vscode-react-standard][vscode-3]** をインストールしてください。
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 

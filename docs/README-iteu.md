@@ -267,13 +267,13 @@ installa **[standardjs-snippets][atom-3]**.
 
 ### Visual Studio Code
 
-Installa **[vscode-standardjs][vscode-1]**. (Include supporto per la formattazione automatica.)
+Installa **[vscode-standard][vscode-1]**. (Include supporto per la formattazione automatica.)
 
 Per JS snippets, installa: **[vscode-standardjs-snippets][vscode-2]**. Per ReactJS snippets, installa **[vscode-react-standard][vscode-3]**.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 
