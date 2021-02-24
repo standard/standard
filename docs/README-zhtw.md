@@ -245,13 +245,13 @@ JavaScript Standard Style 的美來自於它的簡單，沒有人想要在每個
 
 ### Visual Studio Code
 
-安裝 **[vscode-standardjs][vscode-1]**. (包含自動修改樣式的支援。)
+安裝 **[vscode-standard][vscode-1]**. (包含自動修改樣式的支援。)
 
 需要 JS 自動補完，可以安裝： **[vscode-standardjs-snippets][vscode-2]**。 需要 React 自動補完，可以安裝： **[vscode-react-standard][vscode-3]**。
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 

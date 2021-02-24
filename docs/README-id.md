@@ -232,13 +232,13 @@ Untuk formating otomatis, pasang **[standard-formatter][atom-2]**. Untuk snippet
 
 ### Visual Studio Code
 
-Pasang **[vscode-standardjs][vscode-1]**. (Sudah termasuk dukungan untuk pem-format otomatis.)
+Pasang **[vscode-standard][vscode-1]**. (Sudah termasuk dukungan untuk pem-format otomatis.)
 
 Snippets untuk JS, pasang **[vscode-standardjs-snippets][vscode-2]**. Snippets untuk React, pasang **[vscode-react-standard][vscode-3]**.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 
