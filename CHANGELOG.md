@@ -980,6 +980,21 @@ In `package.json`, use the "standard" property:
 
 [view diff](https://github.com/standard/standard/compare/v4.5.4...v5.0.0)
 
+eslint v1.0.0 is released! eslint added some new rules that are nice, and lots of existing rules have subtle behavior changes designed to catch more errors.
+
+Let's talk about the next version of standard! We bumped the major version to v5.0.0 to pull in these improvements.
+
+#### New rules:
+- space before/after arrow functions (https://github.com/feross/eslint-config-standard/commit/cf31561306f102b0772de55cd410b20912e733ee)
+- indent switch "case" sections (https://github.com/feross/eslint-config-standard/commit/c6b10f68aa31e323933b14e04b50d8c1075ef28c)
+- don't reassign class variable names (https://github.com/feross/eslint-config-standard/commit/96c727fdf917f213e23320cc9971a0e2e5bf2b7b)
+- don't reassign const variables (https://github.com/feross/eslint-config-standard/commit/2dd1a09edcff6656731a394231e93850e55cc39d)
+- don't use .call() or .apply() to invoke a function unless it's necessary (https://github.com/feross/eslint-config-standard/commit/6fba6e34d9281a716bf7ffc9fc5d804f6403f505)
+
+#### Changed rules:
+- use `no-extra-parens` instead of the deprecated `no-wrap-func` rule (https://github.com/feross/eslint-config-standard/commit/fc8a076c156d949b0b6046281f2e5f5c91e7da62)
+- `indent` got stricter and catches errors in object literal indentation. 12/131 repos in the test suite started failing after this rule was improved.
+
 ## [4.5.4] - 2015-07-13
 
 [view diff](https://github.com/standard/standard/compare/v4.5.3...v4.5.4)
