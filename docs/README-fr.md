@@ -87,7 +87,7 @@ _Note: Pour executer les commandes précédentes, [Node.js](http://nodejs.org) e
 
 ## Utilisation
 
-Apres avoir installé `standard`, vous devriez pouvoir l'utiliser. Le cas le plus facile serait de verifier le style de tous les fichiers JavaScrtipt dans le dossier actuellement utilisé:
+Apres avoir installé `standard`, vous devriez pouvoir l'utiliser. Le cas le plus facile serait de verifier le style de tous les fichiers JavaScript dans le dossier actuellement utilisé:
 
 ```bash
 $ standard
