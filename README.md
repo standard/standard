@@ -16,7 +16,7 @@
 </p>
 
 <h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wormhole.app/?utm_medium=sponsorship&utm_source=standard&utm_campaign=feross"><img src="/images/wormhole.png" alt="Wormhole" height=50 valign="middle"></a>
 </h5>
 
 <p align="center">
@@ -176,7 +176,7 @@ to `standard`.
 [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
 |---|---|---|---|
 
-[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
+[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png>](https://wormhole.app) |
 |---|---|---|---|
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) |
@@ -211,7 +211,7 @@ to `standard`.
 |---|---|---|---|
 
 
-| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | Your logo here | Your logo here |
 |---|---|---|---|
 
 
