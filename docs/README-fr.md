@@ -206,7 +206,7 @@ En plus de ces entreprises, beaucoup de membres de la communauté utilisent `sta
 pour les lister ici.
 
 `standard` est aussi le top linteur sur le showcase
-[Clean Code linter](https://github.com/showcases/clean-code-linters) de Github.
+[Clean Code linter](https://github.com/showcases/clean-code-linters) de GitHub.
 
 ## Il y a-t-il des plugins pour les éditeurs de texte?
 
