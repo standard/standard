@@ -221,8 +221,8 @@ your code.
   ```js
   // ✗ avoid
   var value = 'hello world'
-
-
+  // blank line
+  // blank line
   console.log(value)
   ```
 
@@ -415,7 +415,7 @@ your code.
       this.legs = 4
     }
   }
-  
+
   class Dog extends Animal {
     constructor () {      // ✗ avoid
       this.legs = 4
