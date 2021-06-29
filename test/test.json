@@ -913,7 +913,8 @@
     "name": "url-mapper",
     "repo": "https://github.com/cerebral/url-mapper",
     "description": "Two way `URL` <==> `route(params)` converter with mapper",
-    "dependents": 3
+    "dependents": 3,
+    "disable": true
   },
   {
     "name": "is-ci",
