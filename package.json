@@ -14,7 +14,7 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "~7.18.0",
+    "eslint": "~7.31.0",
     "eslint-config-standard": "16.0.3",
     "eslint-config-standard-jsx": "10.0.0",
     "eslint-plugin-import": "~2.23.4",
