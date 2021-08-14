@@ -1,4 +1,4 @@
-name: Test
+name: Test External
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  test-external:
     runs-on: ubuntu-latest
 
     strategy:
@@ -35,5 +35,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Run external tests
+        run: npm run test-external
