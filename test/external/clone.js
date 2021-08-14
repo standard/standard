@@ -17,8 +17,8 @@ const testPkgs = require('./test.json')
 
 const GIT = 'git'
 const NPM = 'npm'
-const STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
-const TMP = path.join(__dirname, '..', 'tmp')
+const STANDARD = path.join(__dirname, '..', '..', 'bin', 'cmd.js')
+const TMP = path.join(__dirname, '..', '..', 'tmp')
 const PARALLEL_LIMIT = Math.ceil(os.cpus().length / 2)
 
 const argv = minimist(process.argv.slice(2), {

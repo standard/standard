@@ -68,7 +68,9 @@
     "url": "git://github.com/standard/standard.git"
   },
   "scripts": {
-    "test": "./bin/cmd.js --verbose && tape test/*.js",
+    "test": "npm run test-internal && npm run test-external",
+    "test-internal": "./bin/cmd.js --verbose && tape test/*.js",
+    "test-external": "tape test/external/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
   "funding": [
