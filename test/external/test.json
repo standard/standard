@@ -1049,7 +1049,8 @@
   {
     "name": "bitmidi.com",
     "repo": "https://github.com/feross/bitmidi.com",
-    "install": true
+    "install": true,
+    "disable": true
   },
   {
     "name": "speakeasyjs.com",
