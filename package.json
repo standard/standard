@@ -20,7 +20,7 @@
     "eslint-plugin-import": "~2.24.0",
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~5.1.0",
-    "eslint-plugin-react": "~7.21.5",
+    "eslint-plugin-react": "~7.24.0",
     "standard-engine": "^14.0.1"
   },
   "devDependencies": {
