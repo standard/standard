@@ -17,7 +17,7 @@
     "eslint": "~7.18.0",
     "eslint-config-standard": "16.0.3",
     "eslint-config-standard-jsx": "10.0.0",
-    "eslint-plugin-import": "~2.24.0",
+    "eslint-plugin-import": "~2.24.2",
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~5.1.0",
     "eslint-plugin-react": "~7.25.1",
