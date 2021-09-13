@@ -6,20 +6,24 @@
  * VERSION BUMP.)
  */
 
-const crossSpawn = require('cross-spawn')
-const fs = require('fs')
-const minimist = require('minimist')
-const os = require('os')
-const parallelLimit = require('run-parallel-limit')
-const path = require('path')
-const test = require('tape')
-const testPkgs = require('./test.json')
+import { cpus } from 'node:os'
+import { join, dirname } from 'node:path'
+import { readFileSync, mkdirSync, access, R_OK, W_OK, writeFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import crossSpawn from 'cross-spawn'
+import minimist from 'minimist'
+import parallelLimit from 'run-parallel-limit'
+import test from 'tape'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const json = readFileSync(join(__dirname, 'test.json'), 'utf8')
+const testPkgs = JSON.parse(json)
 
 const GIT = 'git'
 const NPM = 'npm'
-const STANDARD = path.join(__dirname, '..', '..', 'bin', 'cmd.js')
-const TMP = path.join(__dirname, '..', '..', 'tmp')
-const PARALLEL_LIMIT = Math.ceil(os.cpus().length / 2)
+const STANDARD = join(__dirname, '..', '..', 'bin', 'cmd.js')
+const TMP = join(__dirname, '..', '..', 'tmp')
+const PARALLEL_LIMIT = Math.ceil(cpus().length / 2)
 
 const argv = minimist(process.argv.slice(2), {
   boolean: [
@@ -60,14 +64,14 @@ if (!argv.disabled) {
 test('test github repos that use `standard`', t => {
   t.plan(pkgs.length)
 
-  fs.mkdirSync(TMP, { recursive: true })
+  mkdirSync(TMP, { recursive: true })
 
   parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
     const url = `${pkg.repo}.git`
-    const folder = path.join(TMP, name)
+    const folder = join(TMP, name)
     return cb => {
-      fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, err => {
+      access(join(TMP, name), R_OK | W_OK, err => {
         if (argv.offline && err) {
           t.pass(`SKIPPING (offline): ${name} (${pkg.repo})`)
           cb(null)
@@ -89,7 +93,7 @@ test('test github repos that use `standard`', t => {
         }
 
         function gitClone (cb) {
-          const args = ['clone', '--depth', 1, url, path.join(TMP, name)]
+          const args = ['clone', '--depth', 1, url, join(TMP, name)]
           spawn(GIT, args, { stdio: 'ignore' }, err => {
             if (err) err.message += ` (git clone) (${name})`
             cb(err)
@@ -164,8 +168,8 @@ test('test github repos that use `standard`', t => {
   }), PARALLEL_LIMIT, err => {
     if (err) throw err
     if (argv.write) {
-      fs.writeFileSync(
-        path.join(__dirname, 'test.json'),
+      writeFileSync(
+        join(__dirname, 'test.json'),
         JSON.stringify(testPkgs, null, 2)
       )
     }

@@ -2,9 +2,11 @@
  * Sanity check that all repos in test.json actually exist on GitHub
  */
 
-const get = require('simple-get')
-const testPkgs = require('../test/test.json')
-const series = require('run-series')
+import get from 'simple-get'
+import series from 'run-series'
+import { readFileSync } from 'fs'
+
+const testPkgs = JSON.parse(readFileSync('../test/test.json', 'utf8'))
 
 series(testPkgs.map(function (pkg) {
   return function (cb) {

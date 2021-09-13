@@ -5,8 +5,12 @@ var match = process.version.match(/v(\d+)\.(\d+)/)
 var major = parseInt(match[1], 10)
 var minor = parseInt(match[2], 10)
 
-if (major >= 11 || (major === 10 && minor >= 12)) {
-  require('standard-engine').cli(require('../options'))
+if (major >= 12 || (major === 12 && minor >= 20)) {
+  import('standard-engine').then(mod => {
+    import('../options.js').then(({ default: options }) => {
+      mod.cli(options)
+    })
+  })
 } else {
-  console.error('standard: Node 10.12.0 or greater is required. `standard` did not run.')
+  console.error('standard: Node 12.20.0 or greater is required. `standard` did not run.')
 }

@@ -1,15 +1,21 @@
-const eslint = require('eslint')
-const path = require('path')
-const pkg = require('./package.json')
+import { dirname, join } from 'node:path'
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import eslint from 'eslint'
 
-module.exports = {
-  bugs: pkg.bugs.url,
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const json = readFileSync('./package.json', 'utf8')
+const pkg = JSON.parse(json)
+const { bugs, homepage, version } = pkg
+
+export default {
+  bugs: bugs.url,
   cmd: 'standard',
   eslint,
   eslintConfig: {
-    configFile: path.join(__dirname, 'eslintrc.json')
+    configFile: join(__dirname, 'eslintrc.json')
   },
-  homepage: pkg.homepage,
+  homepage: homepage,
   tagline: 'Use JavaScript Standard Style',
-  version: pkg.version
+  version: version
 }

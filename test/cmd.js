@@ -1,8 +1,11 @@
-const path = require('path')
-const test = require('tape')
-const crossSpawn = require('cross-spawn')
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import test from 'tape'
+import crossSpawn from 'cross-spawn'
 
-const CMD_PATH = path.join(__dirname, '..', 'bin', 'cmd.js')
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const CMD_PATH = join(__dirname, '..', 'bin', 'cmd.js')
 
 test('command line usage: --help', t => {
   t.plan(1)
