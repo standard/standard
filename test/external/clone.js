@@ -7,22 +7,23 @@
  */
 
 import { cpus } from 'node:os'
-import { join, dirname } from 'node:path'
 import { readFileSync, mkdirSync, access, R_OK, W_OK, writeFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
 import crossSpawn from 'cross-spawn'
 import minimist from 'minimist'
 import parallelLimit from 'run-parallel-limit'
 import test from 'tape'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const json = readFileSync(join(__dirname, 'test.json'), 'utf8')
+const getAbsolutePath = (path, pwd = import.meta.url) =>
+  new URL(path, pwd).toString().slice(7)
+
+const testJsonPath = getAbsolutePath('test.json')
+const json = readFileSync(testJsonPath, 'utf8')
 const testPkgs = JSON.parse(json)
 
 const GIT = 'git'
 const NPM = 'npm'
-const STANDARD = join(__dirname, '..', '..', 'bin', 'cmd.js')
-const TMP = join(__dirname, '..', '..', 'tmp')
+const STANDARD = getAbsolutePath('../../bin/cmd.js')
+const TMP = getAbsolutePath('../../tmp/')
 const PARALLEL_LIMIT = Math.ceil(cpus().length / 2)
 
 const argv = minimist(process.argv.slice(2), {
@@ -69,9 +70,9 @@ test('test github repos that use `standard`', t => {
   parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
     const url = `${pkg.repo}.git`
-    const folder = join(TMP, name)
+    const folder = new URL(name, `file://${TMP}`)
     return cb => {
-      access(join(TMP, name), R_OK | W_OK, err => {
+      access(folder, R_OK | W_OK, err => {
         if (argv.offline && err) {
           t.pass(`SKIPPING (offline): ${name} (${pkg.repo})`)
           cb(null)
@@ -93,7 +94,7 @@ test('test github repos that use `standard`', t => {
         }
 
         function gitClone (cb) {
-          const args = ['clone', '--depth', 1, url, join(TMP, name)]
+          const args = ['clone', '--depth', 1, url, folder]
           spawn(GIT, args, { stdio: 'ignore' }, err => {
             if (err) err.message += ` (git clone) (${name})`
             cb(err)
@@ -169,7 +170,7 @@ test('test github repos that use `standard`', t => {
     if (err) throw err
     if (argv.write) {
       writeFileSync(
-        join(__dirname, 'test.json'),
+        testJsonPath,
         JSON.stringify(testPkgs, null, 2)
       )
     }

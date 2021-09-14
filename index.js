@@ -2,4 +2,6 @@
 import engine from 'standard-engine'
 import options from './options.js'
 
-export default new engine.linter(options)
+const Linter = engine.linter
+
+export default new Linter(options)
