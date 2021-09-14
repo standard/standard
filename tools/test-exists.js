@@ -2,9 +2,9 @@
  * Sanity check that all repos in test.json actually exist on GitHub
  */
 
+import { readFileSync } from 'node:fs'
 import get from 'simple-get'
 import series from 'run-series'
-import { readFileSync } from 'fs'
 
 const testPkgs = JSON.parse(readFileSync('../test/test.json', 'utf8'))
 
