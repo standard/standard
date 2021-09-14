@@ -1,21 +1,19 @@
-import { dirname, join } from 'node:path'
+import { join } from 'node:path'
 import { readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
 import eslint from 'eslint'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const json = readFileSync('./package.json', 'utf8')
-const pkg = JSON.parse(json)
-const { bugs, homepage, version } = pkg
+const pkgURL = new URL('./package.json', import.meta.url)
+const pkgJSON = readFileSync(pkgURL, { encoding: 'utf-8' })
+const pkg = JSON.parse(pkgJSON)
 
 export default {
-  bugs: bugs.url,
+  bugs: pkg.bugs.url,
   cmd: 'standard',
   eslint,
   eslintConfig: {
     configFile: join(__dirname, 'eslintrc.json')
   },
-  homepage: homepage,
+  homepage: pkg.homepage,
   tagline: 'Use JavaScript Standard Style',
-  version: version
+  version: pkg.version
 }
