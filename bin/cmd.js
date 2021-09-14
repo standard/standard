@@ -6,9 +6,9 @@ var major = parseInt(match[1], 10)
 var minor = parseInt(match[2], 10)
 
 if (major >= 12 || (major === 12 && minor >= 20)) {
-  import('standard-engine').then(mod => {
-    import('../options.js').then(({ default: options }) => {
-      mod.cli(options)
+  import('standard-engine').then(function (standardEngine) {
+    import('../options.js').then(function (options) {
+      standardEngine.cli(options.default)
     })
   })
 } else {
