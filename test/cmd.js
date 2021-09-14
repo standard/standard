@@ -1,7 +1,7 @@
 import test from 'tape'
 import crossSpawn from 'cross-spawn'
 
-const CMD_PATH = new URL('../bin/cmd.js', import.meta.url)
+const CMD_PATH = new URL('../bin/cmd.js', import.meta.url).toString().slice(7)
 
 test('command line usage: --help', t => {
   t.plan(1)

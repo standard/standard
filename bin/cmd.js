@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-/* eslint-disable no-var */
+/* eslint-disable no-var, no-eval */
 
 var match = process.version.match(/v(\d+)\.(\d+)/)
 var major = parseInt(match[1], 10)
 var minor = parseInt(match[2], 10)
 
 if (major >= 12 || (major === 12 && minor >= 20)) {
-  import('standard-engine').then(function (standardEngine) {
-    import('../options.js').then(function (options) {
+  eval('import("standard-engine")').then(function (standardEngine) {
+    eval('import("../options.js")').then(function (options) {
       standardEngine.cli(options.default)
     })
   })
