@@ -34,7 +34,7 @@
     "tape": "^5.3.1"
   },
   "engines": {
-    "node": ">=12.20.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "homepage": "https://standardjs.com",
   "keywords": [
