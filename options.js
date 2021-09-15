@@ -1,8 +1,9 @@
 import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import eslint from 'eslint'
 
 // eslintConfig.configFile have problem reading URLs and file:///
-const configFile = new URL('./eslintrc.json', import.meta.url).toString().slice(7)
+const configFile = fileURLToPath(new URL('./eslintrc.json', import.meta.url))
 const pkgURL = new URL('./package.json', import.meta.url)
 const pkgJSON = readFileSync(pkgURL, { encoding: 'utf-8' })
 const pkg = JSON.parse(pkgJSON)

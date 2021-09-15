@@ -7,23 +7,21 @@
  */
 
 import { cpus } from 'node:os'
+import { fileURLToPath } from 'node:url'
 import { readFileSync, mkdirSync, access, R_OK, W_OK, writeFileSync } from 'node:fs'
 import crossSpawn from 'cross-spawn'
 import minimist from 'minimist'
 import parallelLimit from 'run-parallel-limit'
 import test from 'tape'
 
-const getAbsolutePath = (path, pwd = import.meta.url) =>
-  new URL(path, pwd).toString().slice(7)
-
-const testJsonPath = getAbsolutePath('test.json')
+const testJsonPath = new URL('test.json', import.meta.url)
 const json = readFileSync(testJsonPath, 'utf8')
 const testPkgs = JSON.parse(json)
 
 const GIT = 'git'
 const NPM = 'npm'
-const STANDARD = getAbsolutePath('../../bin/cmd.js')
-const TMP = getAbsolutePath('../../tmp/')
+const STANDARD = fileURLToPath(new URL('../../bin/cmd.js', import.meta.url))
+const TMP = new URL('../../tmp/', import.meta.url)
 const PARALLEL_LIMIT = Math.ceil(cpus().length / 2)
 
 const argv = minimist(process.argv.slice(2), {
@@ -70,7 +68,7 @@ test('test github repos that use `standard`', t => {
   parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
     const url = `${pkg.repo}.git`
-    const folder = new URL(name, `file://${TMP}`)
+    const folder = fileURLToPath(new URL(name, TMP))
     return cb => {
       access(folder, R_OK | W_OK, err => {
         if (argv.offline && err) {
