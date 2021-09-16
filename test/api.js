@@ -1,5 +1,5 @@
-const standard = require('../')
-const test = require('tape')
+import test from 'tape'
+import standard from '../index.js'
 
 test('api: lintFiles', t => {
   t.plan(3)

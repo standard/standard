@@ -10,6 +10,7 @@
   "bin": {
     "standard": "bin/cmd.js"
   },
+  "type": "module",
   "bugs": {
     "url": "https://github.com/standard/standard/issues"
   },
@@ -33,7 +34,7 @@
     "tape": "^5.3.1"
   },
   "engines": {
-    "node": ">=10.12.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "homepage": "https://standardjs.com",
   "keywords": [

@@ -1,12 +1,16 @@
 #!/usr/bin/env node
-/* eslint-disable no-var */
+/* eslint-disable no-var, no-eval */
 
 var match = process.version.match(/v(\d+)\.(\d+)/)
 var major = parseInt(match[1], 10)
 var minor = parseInt(match[2], 10)
 
-if (major >= 11 || (major === 10 && minor >= 12)) {
-  require('standard-engine').cli(require('../options'))
+if (major >= 12 || (major === 12 && minor >= 20)) {
+  eval('import("standard-engine")').then(function (standardEngine) {
+    eval('import("../options.js")').then(function (options) {
+      standardEngine.cli(options.default)
+    })
+  })
 } else {
-  console.error('standard: Node 10.12.0 or greater is required. `standard` did not run.')
+  console.error('standard: Node 12.20.0 or greater is required. `standard` did not run.')
 }
