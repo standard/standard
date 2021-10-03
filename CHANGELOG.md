@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [16.0.4] - 2021-10-03
+
+- Update `eslint` from `~7.13.1` to `~7.18.0`
+- Update `eslint-config-standard` from `16.0.2` to `16.0.3`
+- Update `eslint-plugin-import` from `~2.22.1` to `~2.24.2`
+- Update `eslint-plugin-promise` from `~4.2.1` to `~5.1.0`
+- Update `eslint-plugin-react` from `~7.21.5` to `~7.25.1`
+
 ## [16.0.3] - 2020-11-17
 
 - Update `eslint` from `~7.12.1` to `~7.13.0`
