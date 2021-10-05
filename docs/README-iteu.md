@@ -160,6 +160,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
       "test": "standard && node my-tests.js"
     }
   }
+  ```
 
 2. Lo stile del tuo codice verrà controllato automaticamente quando esegui `npm test`
   ```bash
@@ -167,6 +168,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
   Error: Use JavaScript Standard Style
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
+
 3. Mai più suggerimenti riguardo lo stile del tuo codice durante le pull request!
 
 ## Perchè dovrei usare JavaScript Standard Style?
