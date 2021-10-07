@@ -59,7 +59,7 @@ Essayez-le dès maintenant en exécutant `npx standard --fix`
   - [Comment cacher certains avertissements?](#comment-cacher-certains-avertissements)
   - [J'utilise une bibliothèque logicielle qui pollue l'espace de noms global. Comment puis-je éviter les erreurs "variable is not defined"?](#jutilise-une-bibliothèque-logicielle-qui-pollue-lespace-de-noms-global-comment-puis-je-éviter-les-erreurs-variable-is-not-defined)
   - [Comment puis-je utiliser les fonctionalités expérimentales de JavaScript (ES Next)?](#comment-puis-je-utiliser-les-fonctionalités-expérimentales-de-javascriptes-next)
-  - [Puis-je utiliser une variation du language JavaScript, comme Flow ou TypeScript?](#puis-je-utiliser-une-variation-du-langage-javascript-comme-flow-ou-typescript)
+  - [Puis-je utiliser une variation du langage JavaScript, comme Flow ou TypeScript?](#puis-je-utiliser-une-variation-du-langage-javascript-comme-flow-ou-typescript)
   - [Et Mocha, Jasmine, QUnit, etc?](#et-mocha-jasmine-qunit-etc)
   - [Et les Web Workers?](#et-les-web-workers)
   - [Quelle est la différence entre les avertissements et les erreurs ?](#quelle-est-la-différence-entre-les-avertissements-et-les-erreurs-)
