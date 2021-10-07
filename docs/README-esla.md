@@ -32,7 +32,7 @@
 
 ## Guía de estilos JavaScript, con linter y corrección automática de código
 
-Este módulo te ahorra tiempo a ti (y otros) tres maneras:
+Este módulo te ahorra tiempo a ti (y a otros) de tres maneras:
 
 - **Sin configuración.** La manera más fácil de usar estilos consistentes
   en tu proyecto.
@@ -55,12 +55,12 @@ npm install standard --save-dev
 - **No dejar variables sin usar** – esta captura *toneladas* de bugs!
 - **Sin punto y coma** – [Está][1] [bien.][2] [¡En serio!][3]
 - **Nunca empezar una línea con `(`, `[`, o `` ` ``**
-  - Este es el **único** problema al evitar punto y coma – *automáticamente verificado para ti!*
+  - Este es el **único** problema al evitar punto y coma – *¡automáticamente verificado para ti!*
   - [Más detalles][4]
 - **Espacio después de las palabras claves** `if (condition) { ... }`
 - **Espacio después del nombre de función** `function name (arg) { ... }`
 - Usar siempre `===` en vez de `==` – pero `obj == null` está permitido para verificar `null || undefined`.
-- Gestionar siempre el parámetro de función `err` de node.js
+- Gestionar siempre el parámetro de función `err` de Node.js
 - Usar siempre el prefijo `window` en los globales del navegador – A excepción de `document` y `navigator` esto está bien
   - Previene el uso accidental de mal-llamados globales del navegador como `open`, `length`,
     `event`, y `name`.
@@ -74,7 +74,7 @@ npm install standard --save-dev
 
 Para una mejor idea, mira este
 [archivo de ejemplo](https://github.com/expressjs/body-parser/blob/master/index.js) escrito
-en JavaScript Standard Style. O, mira alguno de los
+en JavaScript Standard Style, o mira alguno de los
 [miles de proyectos](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 que usan `standard`!
 
@@ -86,25 +86,26 @@ que usan `standard`!
   - [Lo que podrías hacer si eres inteligente](#lo-que-podrías-hacer-si-eres-inteligente)
 
 - FAQ
-  - [¿Por qué debería usar JavaScript Standard Style?](#por-qué-deberia-usar-javascript-standard-style)
-  - [¿Quién usa JavaScript Standard Style?](#quién-usa-javascript-standard-style)
-  - [¿Hay plugins para editores de textos?](#hay-plugins-para-editores-de-textos)
-  - [¿Hay alguna medalla para al readme?](#hay-alguna-medalla-para-al-readme)
-  - [No estoy de acuerdo con la regla X, ¿la puedo cambiar?](#no-estoy-de-acuerdo-con-la-regla-x-la-puedo-cambiar)
-  - [¡Pero esto no un estandar web real!](#pero-esto-no-un-estandar-web-real)
-  - [¿Hay algún formateador automático?](#hay-algún-formateador-automático)
-  - [¿Cómo hago para ignorar archivos?](#cómo-hago-para-ignorar-archivos)
-  - [¿Cómo oculto cierta alerta?](#cómo-oculto-cierta-alerta)
-  - [Yo uso una librería que contamina el espacio de nombres global. ¿Cómo puedo evitar los errores "variable is not defined"?](#yo-uso-una-librería-que-contamina-el-espacio-de-nombres-global-cómo-puedo-evitar-los-errores--variable-is-not-defined)
-  - [¿Puedo usar un parser JavaScript que soporte ES última-generación?](#puedo-usar-un-parser-javascript-que-soporte-es-última-generación)
-  - [¿Puedo usar una variación de lenguaje JavaScript, como Flow?](#puedo-usar-una-variación-de-lenguaje-javascript-como-flow)
-  - [¿Qué pasa con Mocha, Jasmine, QUnit y etc?](#qué-pasa-con-mocha-jasmine-qunit-y-etc)
-  - [¿Qué pasa con Web Workers?](#qué-pasa-con-web-workers)
-  - [¿Puedo verificar código dentro de archivos Markdown o HTML?](#puedo-verificar-codigo-dentro-de-archivos-markdown-o-html)
-  - [¿Hay algún gancho git `pre-commit`?](#hay-algún-gancho-git-pre-commit)
-  - [¿Cómo hago la salida (output) toda colorida y *bonita*?](#cómo-hago-la-salida-output-toda-colorida-y-bonita)
+  - [¿Por qué debería usar JavaScript Standard Style?](#¿por-qué-debería-usar-javascript-standard-style)
+  - [¿Quién usa JavaScript Standard Style?](#¿quién-usa-javascript-standard-style)
+  - [¿Hay plugins para editores de textos?](#¿hay-plugins-para-editores-de-textos)
+  - [¿Hay alguna medalla para el readme?](#hay-alguna-medalla-para-al-readme)
+  - [No estoy de acuerdo con la regla X, ¿la puedo cambiar?](#no-estoy-de-acuerdo-con-la-regla-x-¿la-puedo-cambiar)
+  - [¡Pero esto no un estandar web real!](#¡pero-esto-no-es-un-estandar-web-real)
+  - [¿Hay algún formateador automático?](#¿hay-algún-formateador-automático)
+  - [¿Cómo hago para ignorar archivos?](#¿cómo-hago-para-ignorar-archivos)
+  - [¿Cómo oculto cierta alerta?](#¿cómo-oculto-cierta-alerta)
+  - [Yo uso una librería que contamina el espacio de nombres global. ¿Cómo puedo evitar los errores "variable is not defined"?](#yo-uso-una-librería-que-contamina-el-espacio-de-nombres-global-¿cómo-puedo-evitar-los-errores-variable-is-not-defined)
+  - [¿Cómo puedo usar características experimentales JavaScript (ES Next)?](#¿cómo-puedo-usar-características-experimentales-javascript-es-next)
+  - [¿Puedo usar un parser de JavaScript que soporte ES última-generación?](#puedo-usar-un-parser-javascript-que-soporte-es-última-generación)
+  - [¿Puedo usar una variación de lenguaje JavaScript, como Flow?](#¿puedo-usar-una-variación-de-lenguaje-javascript-como-flow)
+  - [¿Qué pasa con Mocha, Jasmine, QUnit y etc?](#¿qué-pasa-con-mocha-jasmine-qunit-y-etc)
+  - [¿Qué pasa con Web Workers?](#¿qué-pasa-con-web-workers)
+  - [¿Puedo verificar código dentro de archivos Markdown o HTML?](#¿puedo-verificar-código-dentro-de-archivos-markdown-o-html)
+  - [¿Hay algún gancho git `pre-commit`?](#¿hay-algún-gancho-git-pre-commit)
+  - [¿Cómo hago la salida (output) toda colorida y *bonita*?](#¿cómo-hago-la-salida-output-toda-colorida-y-bonita)
   - [Node.js API](#nodejs-api)
-  - [¿Cómo puedo contribuir a `standard`?](#cómo-puedo-contribuir-a-standard)
+  - [¿Cómo puedo contribuir a `standard`?](#¿cómo-puedo-contribuir-a-standard)
 
 - [Licencia](#licencia)
 
@@ -169,7 +170,7 @@ $ standard "src/util/**/*.js" "test/**/*.js"
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
-3. No vuelvas a dar feedback de estilos en una PR jamás!
+3. ¡No vuelvas a dar feedback de estilos en una PR jamás!
 
 ## ¿Por qué debería usar JavaScript Standard Style?
 
@@ -320,9 +321,9 @@ Si aun prefieres configurar `standard` manualmente [sigue esta guía][webstorm-2
 [webstorm-1]: https://www.jetbrains.com/webstorm/
 [webstorm-2]: webstorm.md
 
-## Hay alguna medalla para readme?
+## Hay alguna medalla para el readme?
 
-Si! Si estas usando `standard` en tu proyecto, puedes incluir una de estas en tu readme para
+¡Si! Si estas usando `standard` en tu proyecto, puedes incluir una de estas en tu readme para
 hacerle saber a las personas que en tu código estas usando estilos standard.
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
