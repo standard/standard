@@ -86,7 +86,7 @@ Para ter uma idéia melhor, dê uma olhada
   - [Existe um formatador automático?](#existe-um-formatador-autom%C3%A1tico)
   - [Como ignoro arquivos?](#como-ignoro-arquivos)
   - [Como escondo um determinado aviso?](#como-escondo-um-determinado-aviso)
-  - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-definedfunctions)
+  - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-defined)
   - [Posso usar um custom parser de JS novinho em folha que saiu ontem para suporte ao ES Next?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
   - [Posso usar uma linguagem variante de JavaScript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
   - [Você pode tornar regra X configurável?](#voc%C3%AA-pode-tornar-regra-x-configur%C3%A1vel)
@@ -98,7 +98,7 @@ Para ter uma idéia melhor, dê uma olhada
 - [Node.js API](#nodejs-api)
   - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
   - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [Licensa](#licensa)
+- [Licença](#licen%C3%A7a)
 
 ## Instalação
 
@@ -570,6 +570,6 @@ Há vários **[plugins de editores](#text-editor-plugins)**, uma lista de
 e uma awesome list de
 **[packages do ecossistema `standard` ](https://github.com/standard/awesome-standard)**.
 
-## License
+## Licença
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](http://feross.org).
