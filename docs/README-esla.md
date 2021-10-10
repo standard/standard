@@ -86,7 +86,7 @@ que usan `standard`!
   - [Lo que podrías hacer si eres inteligente](#lo-que-podrías-hacer-si-eres-inteligente)
 
 - FAQ
-  - [¿Por qué debería usar JavaScript Standard Style?](#¿por-qué-debería-usar-javascript-standard-style)
+  - [¿Por qué debería usar JavaScript Standard Style?](#por-qué-deber%C3%ADa-usar-javascript-standard-style)
   - [¿Quién usa JavaScript Standard Style?](#¿quién-usa-javascript-standard-style)
   - [¿Hay plugins para editores de textos?](#¿hay-plugins-para-editores-de-textos)
   - [¿Hay alguna medalla para el readme?](#hay-alguna-medalla-para-al-readme)
