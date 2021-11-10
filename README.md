@@ -354,7 +354,7 @@ you migrate from `standard` to `eslint` and `eslint-config-standard`.
 Pro tip: Just use `standard` and move on. There are actual real problems that you
 could spend your time solving! :P
 
-[bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
+[bikeshedding]: https://docs.freebsd.org/en/books/faq/#bikeshed-painting
 
 ## But this isn't a real web standard!
 
