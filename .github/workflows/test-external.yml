@@ -5,6 +5,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  schedule:
+    - cron: '47 4 1/3 * *'
 
 jobs:
   test-external:
