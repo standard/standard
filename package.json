@@ -22,7 +22,8 @@
     "eslint-plugin-n": "^14.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "standard-engine": "^15.0.0-0"
+    "standard-engine": "^15.0.0-0",
+    "tap-github-actions": "^0.2.3"
   },
   "devDependencies": {
     "cross-spawn": "^7.0.3",
@@ -31,7 +32,7 @@
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
     "simple-get": "^4.0.0",
-    "tape": "^5.3.2"
+    "tape": "^5.5.0"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
@@ -72,6 +73,7 @@
     "test": "npm run test-internal && npm run test-external",
     "test-internal": "./bin/cmd.js --verbose && tape test/*.js",
     "test-external": "tape test/external/*.js",
+    "test-external-ci": "tape test/external/*.js | tap-github-actions",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
   "funding": [
