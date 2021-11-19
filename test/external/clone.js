@@ -60,9 +60,7 @@ if (!argv.disabled) {
   })
 }
 
-test('test github repos that use `standard`', t => {
-  t.plan(pkgs.length)
-
+test('test github repos that use `standard`', outerT => {
   mkdirSync(TMP, { recursive: true })
 
   parallelLimit(pkgs.map(pkg => {
@@ -72,7 +70,7 @@ test('test github repos that use `standard`', t => {
     return cb => {
       access(folder, R_OK | W_OK, err => {
         if (argv.offline && err) {
-          t.pass(`SKIPPING (offline): ${name} (${pkg.repo})`)
+          outerT.pass(`SKIPPING (offline): ${name} (${pkg.repo})`)
           cb(null)
         } else if (argv.offline) {
           runStandard(cb)
@@ -116,26 +114,29 @@ test('test github repos that use `standard`', t => {
         }
 
         function runStandard (cb) {
-          const args = [STANDARD, '--verbose']
-          if (pkg.args) args.push(...pkg.args)
-          spawn('node', args, { cwd: folder }, err => {
-            const str = `${name} (${pkg.repo})`
-            if (err && argv.fix) {
-              t.comment(`Attempting --fix on ${str}`)
-              runStandardFix(cb)
-            } else if (err) {
-              markDisabled(name, true)
-              t.fail(str)
-              cb(null)
-            } else {
-              markDisabled(name, false)
-              t.pass(str)
-              cb(null)
-            }
+          outerT.test(`test repo "${pkg.name}"`, t => {
+            t.plan(1);
+            const args = [STANDARD, '--verbose']
+            if (pkg.args) args.push(...pkg.args)
+            spawn('node', args, { cwd: folder }, err => {
+              const str = `${name} (${pkg.repo})`
+              if (err && argv.fix) {
+                t.comment(`Attempting --fix on ${str}`)
+                runStandardFix(t, cb)
+              } else if (err) {
+                markDisabled(name, true)
+                t.fail(str)
+                cb(null)
+              } else {
+                markDisabled(name, false)
+                t.pass(str)
+                cb(null)
+              }
+            })
           })
         }
 
-        function runStandardFix (cb) {
+        function runStandardFix (t, cb) {
           const args = [STANDARD, '--fix', '--verbose']
           if (pkg.args) args.push(...pkg.args)
           spawn('node', args, { cwd: folder }, err => {
