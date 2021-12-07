@@ -359,14 +359,6 @@ Didalam kasus yang jarang terjadi, kamu perlu keluar dari aturan dan menyembunyi
 
 Javascript Standard Style menggunakan [ESLint](http://eslint.org/) didalamnya dan kamu bisa menyembunyikan peringatan seperti saat kamu menggunakan ESLint secara langsung.
 
-Untuk mendapatkan output yang bertele-tele (jadi kamu bisa menemukan nama aturan untuk diabaikan), jalankan:
-
-```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
-  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
-```
-
 Nonaktifkan **semua aturan** didalam baris tertentu:
 
 ```js
@@ -621,7 +613,7 @@ $ npm install snazzy
 Dan jalankan:
 
 ```bash
-$ standard --verbose | snazzy
+$ standard | snazzy
 ```
 
 Juga ada [standard-tap](https://www.npmjs.com/package/standard-tap),
@@ -633,29 +625,34 @@ Juga ada [standard-tap](https://www.npmjs.com/package/standard-tap),
 
 Ya!
 
-### `standard.lintText(text, [opts], callback)`
+### `async standard.lintText(text, [opts])`
 
 Lint sumber `text` yang disediakan. Objek `opts` bisa juga disediakan:
 
 ```js
 {
-  cwd: '',      // direktori yang sedang digunakan (default: process.cwd())
-  filename: '', // path dari berkas yang mengandung text yang sedang di lint (opsional, walaupun didalam beberapa plugin eslint harus ada)
-  fix: false,   // secara otomatis memperbaiki masalah
-  globals: [],  // variabel global kustom untuk dideklarasikan
-  plugins: [],  // plugin eslint kustom
-  envs: [],     // environment kustom eslint
-  parser: ''    // parser js kustom (e.g. @babel/eslint-parser)
+  // unique to lintText
+  filename: '',         // path of file containing the text being linted
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
-Option tambahan mungkin di ambil dari `package.json` jika ditemukan didalam direktori yang sedang digunakan.
 
-`callback` akan dipanggil dengan sebuah objek `Error` dan `results`.
+Option tambahan mungkin di ambil dari `package.json` jika ditemukan didalam direktori yang sedang digunakan.
 
 Objek `results` akan mengandung properti berikut:
 
 ```js
-var results = {
+const results = {
   results: [
     {
       filePath: '',
@@ -664,7 +661,7 @@ var results = {
       ],
       errorCount: 0,
       warningCount: 0,
-      output: '' // source kode tetap (hanya ada dengan option {fix: true})
+      output: '' // fixed source code (only present with {fix: true} option)
     }
   ],
   errorCount: 0,
@@ -672,27 +669,29 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
-
-Versi singkronus dari `standard.lintText()`. Jika sebuah error muncul, sebuah exception akan dikeluarkan. Sebaliknya, sebuah objek `results` akan dikembalikan.
-
-### `standard.lintFiles(files, [opts], callback)`
+### `async standard.lintFiles(files, [opts])`
 
 Lint globs `files` yang disediakan. Sebuah objek `opts` bisa disediakan:
 
 ```js
-var opts = {
-  ignore: [],   // berkas globs untuk diabaikan (memiliki nilai default)
-  cwd: '',      // direktori yang sedang digunakan (default: process.cwd())
-  fix: false,   // secara otomatis memperbaiki kesalahan
-  globals: [],  // variabel global untuk dideklarasikan
-  plugins: [],  // plugin eslint
-  envs: [],     // environment eslint
-  parser: ''    // parser js (e.g. @babel/eslint-parser)
+{
+  // unique to lintFiles
+  ignore: [],           // file globs to ignore (has sane defaults)
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
-`callback`nya akan dipanggil dengan sebuah objek `Error` dan `results` (sama seperti diatas).
+Objek `results` (sama seperti diatas).
 
 ## Bagaimana caranya saya berkonstribusi kepada StandardJS?
 

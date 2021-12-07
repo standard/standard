@@ -363,14 +363,6 @@ automatically fix some problems`" 。
 
 JavaScript Standard Style 底層是使用 [ESLint](http://eslint.org/)，所以你可以直接使用 ESLint 的語法隱藏。
 
-為了拿到詳細的輸出（讓你知道特定規則的名稱好去忽略），可以執行：
-
-```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
-  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
-```
-
 在特定行數忽略 **所有規則**：
 
 ```js
@@ -560,7 +552,7 @@ $ npm install snazzy
 然後執行：
 
 ```bash
-$ standard --verbose | snazzy
+$ standard | snazzy
 ```
 
 也可以使用 [standard-tap](https://www.npmjs.com/package/standard-tap)、[standard-json](https://www.npmjs.com/package/standard-json)、[standard-reporter](https://www.npmjs.com/package/standard-reporter) 和 [standard-summary](https://www.npmjs.com/package/standard-summary)。
@@ -569,24 +561,32 @@ $ standard --verbose | snazzy
 
 有！
 
-### `standard.lintText(text, [opts], callback)`
+### `async standard.lintText(text, [opts])`
 
 把輸入的 `text` 檢查 JavaScript Standard Style，可加入 `opts` 選項。
 
 ```js
-var opts = {
-  fix: false,   // 自動修正問題
-  globals: [],  // 會用到的全域變數
-  plugins: [],  // eslint 外掛
-  envs: [],     // eslint 環境
-  parser: ''    // javascript 語法解析器 （比如說 @babel/eslint-parser）
+{
+  // unique to lintText
+  filename: '',         // path of file containing the text being linted
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
-`callback` 會被執行，並給予 `Error` 和 `results` 參數：
+`results` 參數：
 
 ```js
-var results = {
+const results = {
   results: [
     {
       filePath: '',
@@ -594,7 +594,8 @@ var results = {
         { ruleId: '', message: '', line: 0, column: 0 }
       ],
       errorCount: 0,
-      warningCount: 0
+      warningCount: 0,
+      output: '' // fixed source code (only present with {fix: true} option)
     }
   ],
   errorCount: 0,
@@ -602,23 +603,29 @@ var results = {
 }
 ```
 
-### `standard.lintFiles(files, [opts], callback)`
+### `async standard.lintFiles(files, [opts])`
 
 把輸入的 `files` 檢查 JavaScript Standard Style，可加入 `opts` 選項。
 
 ```js
-var opts = {
-  ignore: [],   // 需要忽略的檔案（有跟原本相同的預設值）
-  cwd: '',      // 當前目錄（預設：process.cwd()）
-  fix: false,   // 自動修正問題
-  globals: [],  // 會用到的全域變數
-  plugins: [],  // eslint 外掛
-  envs: [],     // eslint 環境
-  parser: ''    // javascript 語法解析器 （比如說 @babel/eslint-parser）
+{
+  // unique to lintFiles
+  ignore: [],           // file globs to ignore (has sane defaults)
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
-`callback` 會被執行，並給予 `Error` 和 `results` 參數（和上面相同）。
+`results` 參數（和上面相同）。
 
 ## 如何貢獻 `standard`？
 

@@ -356,14 +356,6 @@ Pro tip: ただ`standard`を使っていってください。時間をかけて�
 
 JavaScript Standard Styleは内部で[ESLint](http://eslint.org/)を使用していますが、ESLintを直接使用した場合、通常どおりエラーを非表示にすることができます。
 
-（無視するルール名を見つけるために）詳細な出力を得るには：
-
-```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
-  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
-```
-
 特定の行の **すべてのルール** を無効にするには：
 
 ```js
@@ -627,7 +619,7 @@ $ npm install snazzy
 そして、次のコマンドを実行します。：
 
 ```bash
-$ standard --verbose | snazzy
+$ standard | snazzy
 ```
 
 [standard-tap](https://www.npmjs.com/package/standard-tap)、[standard-json](https://www.npmjs.com/package/standard-json)、[standard-reporter](https://www.npmjs.com/package/standard-reporter)、[standard-summary](https://www.npmjs.com/package/standard-summary)もあります。
@@ -636,30 +628,34 @@ $ standard --verbose | snazzy
 
 はい！
 
-### `standard.lintText(text, [opts], callback)`
+### `async standard.lintText(text, [opts])`
 
 渡された`text`をリントします。`opts`オブジェクトを指定できます。：
 
 ```js
 {
-  cwd: '',      // current working directory (default: process.cwd())
-  filename: '', // path of the file containing the text being linted (optional, though some eslint plugins require it)
-  fix: false,   // automatically fix problems
-  globals: [],  // custom global variables to declare
-  plugins: [],  // custom eslint plugins
-  envs: [],     // custom eslint environment
-  parser: ''    // custom js parser (e.g. @babel/eslint-parser)
+  // unique to lintText
+  filename: '',         // path of file containing the text being linted
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
 現在の作業ディレクトリ内に`package.json`があれば、追加のオプションが読み込まれます。
 
-`callback`は、`Error`オブジェクトと`results`オブジェクトを引数として実行されます。
-
 `results`オブジェクトは、次のプロパティを含みます。：
 
 ```js
-var results = {
+const results = {
   results: [
     {
       filePath: '',
@@ -676,27 +672,29 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
-
-`standard.lintText()`の同期バージョンです。エラーが発生すると、例外がスローされます。それ以外の場合は、`results`オブジェクトが返されます。
-
-### `standard.lintFiles(files, [opts], callback)`
+### `async standard.lintFiles(files, [opts])`
 
 渡された`files`をリントします。`opts`オブジェクトを指定できます。：
 
 ```js
-var opts = {
-  ignore: [],   // file globs to ignore (has sane defaults)
-  cwd: '',      // current working directory (default: process.cwd())
-  fix: false,   // automatically fix problems
-  globals: [],  // global variables to declare
-  plugins: [],  // eslint plugins
-  envs: [],     // eslint environment
-  parser: ''    // js parser (e.g. @babel/eslint-parser)
+{
+  // unique to lintFiles
+  ignore: [],           // file globs to ignore (has sane defaults)
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
-`callback`は、`Error`オブジェクトと`results`オブジェクトを引数として実行されます（上記と同じ）。
+`results` オブジェクトを引数として実行されます（上記と同じ）。
 
 <h2 id="how-do-i-contribute-to-standardjs">StandardJSにコントリビュートするには？</h2>
 
