@@ -385,14 +385,6 @@ In rari casi, avarai la necessità di rompere le regole e nascondere l'avviso ge
 
 JavaScript Standard Style usa [ESLint](http://eslint.org/) al di sotto del suo engine e puoi nascondere gli avvisi come se lo facessi direttamente per ESLint.
 
-Per avere un output più verboso (e così avere accesso al nome della regola), esegui:
-
-```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
-  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
-```
-
 Disabilita **tutte le regole** in una specifica riga:
 
 ```js
@@ -602,7 +594,7 @@ $ npm install snazzy
 Ed esegui:
 
 ```bash
-$ standard --verbose | snazzy
+$ standard | snazzy
 ```
 
 Ci sono anche [standard-tap](https://www.npmjs.com/package/standard-tap),
@@ -614,30 +606,34 @@ Ci sono anche [standard-tap](https://www.npmjs.com/package/standard-tap),
 
 Sì!
 
-### `standard.lintText(text, [opts], callback)`
+### `async standard.lintText(text, [opts])`
 
 Esegue il lint sul parametro passato come input `text`. Il parametro `opts` è un oggetto con le seguenti opzioni:
 
 ```js
 {
-  cwd: '',      // l'attuale cartella del tuo progetto (default: process.cwd())
-  filename: '', // percorso del file al quale verrà eseguito il lint (opzionale, visto che alcuni plugin ne hanno bisogno)
-  fix: false,   // corregge gli errori automaticamente
-  globals: [],  // particolari variabili globali da dichiarare
-  plugins: [],  // particolari plugin eslint
-  envs: [],     // particolari eslint environments
-  parser: ''    // particolari parser JavaScript (es. @babel/eslint-parser)
+  // unique to lintText
+  filename: '',         // path of file containing the text being linted
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
 Ulteriori opzioni possono essere caricate usando `package.json` se si trova all'interno della cartella del tuo progetto.
 
-Il parametro `callback` sarà chiamato con un `Error` ed un oggetto `results`.
-
 L'oggetto `results` conterrà se seguenti proprietà:
 
 ```js
-var results = {
+const results = {
   results: [
     {
       filePath: '',
@@ -646,7 +642,7 @@ var results = {
       ],
       errorCount: 0,
       warningCount: 0,
-      output: '' // codice sorgente fissato (accessibile solo con opzione {fix: true})
+      output: '' // fixed source code (only present with {fix: true} option)
     }
   ],
   errorCount: 0,
@@ -654,28 +650,29 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
-
-Versione sincrona di `standard.lintText()`. Se si verifica un errore, viene lanciata un'eccezione. Altrimenti viene ritornato l'oggetto `results`.
-
-### `standard.lintFiles(files, [opts], callback)`
+### `async standard.lintFiles(files, [opts])`
 
 Esegue il lint sui `files` glob. È possibile passare un oggetto `opts`:
 
 ```js
-var opts = {
-  ignore: [],   // file globs da ignorare (ha alcuni defaults)
-  cwd: '',      // l'attuale cartella del tuo progetto (default: process.cwd())
-  fix: false,   // corregge gli errori automaticamente
-  globals: [],  // particolari variabili globali da dichiarare
-  plugins: [],  // particolari plugin eslint
-  envs: [],     // particolari eslint environments
-  parser: ''    // particolari parser JavaScript (es. @babel/eslint-parser)
+{
+  // unique to lintFiles
+  ignore: [],           // file globs to ignore (has sane defaults)
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
-Il parametro `callback` sarà chiamato con un `Error` ed un oggetto `results`. (lo stesso di prima).
-
+Oggetto `results`. (lo stesso di prima).
 
 ## Come posso contribuire a `standard`?
 

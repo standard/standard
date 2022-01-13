@@ -366,14 +366,6 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 JavaScript Standard 代码规范底层使用的是 [ESLint](http://eslint.org/)。所以如果你想隐藏某些警告，方法和使用 ESLint 时一样。
 
-打印详细信息（这样你就能找到你想隐藏的警告在配置中对应的名称了）：
-
-```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
-  routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
-```
-
 对某一行禁用**所有规则**：
 ```js
 file = 'I know what I am doing' // eslint-disable-line
@@ -563,7 +555,7 @@ $ npm install snazzy
 然后运行：
 
 ```bash
-$ standard --verbose | snazzy
+$ standard | snazzy
 ```
 
 还有 [standard-tap](https://www.npmjs.com/package/standard-tap)、
@@ -575,30 +567,34 @@ $ standard --verbose | snazzy
 
 有！
 
-### `standard.lintText(text, [opts], callback)`
+### `async standard.lintText(text, [opts])`
 
 检查传入的  `text`。需要提供一个 `opts` 配置参数：
 
 ```js
 {
-  cwd: '',      // 当前工作目录（默认为：process.cwd()）
-  filename: '', // 需要检查的文件的路径（可选，虽然有些 eslint 插件需要该参数）
-  fix: false,   // 是否自动修复问题
-  globals: [],  // 声明需要跳过检测的定义全局变量
-  plugins: [],  // 自定义的 eslint 插件列表
-  envs: [],     // 自定义的 eslint 环境
-  parser: ''    // 自定义的 js 解析器（例如 @babel/eslint-parser）
+  // unique to lintText
+  filename: '',         // path of file containing the text being linted
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 
 如果 `package.json` 有相应配置也会自动被读取到。
 
-完成后会调用 `callback` 回调并传入  `Error` 和 `results`。
-
 包含结果的  `results` 包含如下属性：
 
 ```js
-var results = {
+const results = {
   results: [
     {
       filePath: '',
@@ -615,23 +611,25 @@ var results = {
 }
 ```
 
-### `results = standard.lintTextSync(text, [opts])`
-
-`standard.lintText()` 的同步版本。如果运行出错，会抛出异常。否则返回 `results`。
-
-### `standard.lintFiles(files, [opts], callback)`
+### `async standard.lintFiles(files, [opts])`
 
 检查以 glob 形式指定的 `files` 参数所匹配到的所有文件。可以传入一个 `opts` 配置参数：
 
 ```js
-var opts = {
-  ignore: [],   // glob 形式的排除列表 (一般无须配置)
-  cwd: '',      // 当前工作目录（默认为：process.cwd()）
-  fix: false,   // 是否自动修复问题
-  globals: [],  // 声明需要跳过检测的定义全局变量
-  plugins: [],  // eslint 插件列表
-  envs: [],     // eslint 环境
-  parser: ''    // js 解析器（例如 @babel/eslint-parser）
+{
+  // unique to lintFiles
+  ignore: [],           // file globs to ignore (has sane defaults)
+
+  // common to lintText and lintFiles
+  cwd: '',              // current working directory (default: process.cwd())
+  fix: false,           // automatically fix problems
+  extensions: [],       // file extensions to lint (has sane defaults)
+  globals: [],          // custom global variables to declare
+  plugins: [],          // custom eslint plugins
+  envs: [],             // custom eslint environment
+  parser: '',           // custom js parser (e.g. babel-eslint)
+  usePackageJson: true, // use options from nearest package.json?
+  useGitIgnore: true    // use file ignore patterns from .gitignore?
 }
 ```
 

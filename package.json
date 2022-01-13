@@ -22,7 +22,7 @@
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~5.1.1",
     "eslint-plugin-react": "~7.27.0",
-    "standard-engine": "^14.0.1"
+    "standard-engine": "^15.0.0-0"
   },
   "devDependencies": {
     "cross-spawn": "^7.0.3",
