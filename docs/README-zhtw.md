@@ -645,8 +645,8 @@ const results = {
 - **[standard-www](https://github.com/standard/standard-www)** - https://standardjs.com 網站程式
 - **[semistandard](https://github.com/standard/semistandard)** - standard，含分號版本（如果你真的真的必須要加分號）
 
-也有非常多的 **[編輯器外掛](#text-editor-plugins)**、
-**[有使用 `standard` 的 npm 套件清單](https://github.com/standard/standard-packages)**和 **[`standard` 生態系的清單](https://github.com/standard/awesome-standard)**。
+也有非常多的 **[編輯器外掛](#有文字編輯器的外掛嗎)**、
+**[有使用 `standard` 的 npm 套件清單](https://github.com/standard/standard-packages)** 和 **[`standard` 生態系的清單](https://github.com/standard/awesome-standard)**。
 
 ## 授權
 
