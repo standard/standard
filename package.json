@@ -1,7 +1,7 @@
 {
   "name": "standard",
   "description": "JavaScript Standard Style",
-  "version": "17.0.0-0",
+  "version": "17.0.0-1",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "eslint": "^8.8.0",
-    "eslint-config-standard": "17.0.0-0",
+    "eslint-config-standard": "17.0.0-1",
     "eslint-config-standard-jsx": "11.0.0-0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-n": "^14.0.0",

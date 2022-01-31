@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.0.0-1] - 2022-01-31
+
+- Fix: Ensure we support all of the latest syntax that ESLint 8 includes, such as top level `await` #1548
+
 ## [17.0.0-0] - 2022-01-31
 
 We're finally able to offer a pre-release of ESLint 8 based `standard` 17!
