@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.0.0-0] - 2022-01-31
+
+We're finally able to offer a pre-release of ESLint 8 based `standard` 17!
+
+This major release fully focuses on getting in sync with the wider ESLint ecosystem
+and doesn't in itself introduce any new rules or features.
+
+This pre-release exists to test out the ESLint 8 related changes and discover
+possible backwards incompatible changes that comes with it and mitigate
+unintended such before a stable release.
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the current set of rules.
+
+### Changed features
+
+- Update `eslint` from `~7.18.0` to `^8.8.0`
+- Update `eslint-config-standard` from `16.0.3` to `17.0.0-0` to adapt to ESLint 8
+- Update `eslint-config-standard-jsx` from `10.0.0` to `11.0.0-0` to adapt to ESLint 8
+- Update `standard-engine` from `^14` to `^15.0.0-0` to adapt to ESLint 8, see [its `CHANGELOG`](https://github.com/standard/standard-engine/blob/master/CHANGELOG.md#1500-0-2021-11-30)
+
 ## [16.0.4] - 2021-10-03
 
 - Update `eslint` from `~7.13.1` to `~7.18.0`
