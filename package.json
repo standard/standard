@@ -15,13 +15,13 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "~7.18.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-config-standard-jsx": "10.0.0",
-    "eslint-plugin-import": "~2.25.3",
-    "eslint-plugin-node": "~11.1.0",
-    "eslint-plugin-promise": "~5.1.1",
-    "eslint-plugin-react": "~7.27.0",
+    "eslint": "^8.7.0",
+    "eslint-config-standard": "^17.0.0-0",
+    "eslint-config-standard-jsx": "^11.0.0-0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-n": "^14.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.28.0",
     "standard-engine": "^15.0.0-0"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "tape": "^5.3.2"
   },
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
   },
   "homepage": "https://standardjs.com",
   "keywords": [
