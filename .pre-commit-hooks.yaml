@@ -1,5 +1,6 @@
 - id: standard
   name: standard
+  description: JavaScript style guide, linter, and formatter
   entry: standard --fix
   language: node
   files: "\\.(\
