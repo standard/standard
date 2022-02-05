@@ -22,7 +22,7 @@ const GIT = 'git'
 const NPM = 'npm'
 const STANDARD = fileURLToPath(new URL('../../bin/cmd.js', import.meta.url))
 const TMP = new URL('../../tmp/', import.meta.url)
-const PARALLEL_LIMIT = Math.ceil(cpus().length / 2)
+const PARALLEL_LIMIT = Math.max(2, cpus().length - 1)
 
 const argv = minimist(process.argv.slice(2), {
   boolean: [
@@ -62,6 +62,8 @@ if (!argv.disabled) {
 
 test('test github repos that use `standard`', outerT => {
   mkdirSync(TMP, { recursive: true })
+
+  outerT.comment(`Testing ${PARALLEL_LIMIT} repos in parallell`)
 
   parallelLimit(pkgs.map(pkg => {
     const name = pkg.name
