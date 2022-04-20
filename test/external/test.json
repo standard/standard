@@ -228,7 +228,8 @@
     "dependents": 17,
     "args": [
       "bin/index.js"
-    ]
+    ],
+    "disable": true
   },
   {
     "name": "run-waterfall",
@@ -612,12 +613,6 @@
     "name": "fill-keys",
     "repo": "https://github.com/bendrucker/fill-keys",
     "description": "Fill keys in a destination that are defined on the source",
-    "dependents": 5
-  },
-  {
-    "name": "libp2p-tcp",
-    "repo": "https://github.com/libp2p/js-libp2p-tcp",
-    "description": "Node.js implementation of the TCP module that libp2p uses, which implements the abstract-connection interface",
     "dependents": 5
   },
   {
@@ -1363,7 +1358,8 @@
     "name": "yargs-parser",
     "repo": "https://github.com/yargs/yargs-parser",
     "description": "the mighty option parser used by yargs",
-    "dependents": 591
+    "dependents": 591,
+    "disable": true
   },
   {
     "name": "mathjs",
