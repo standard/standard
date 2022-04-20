@@ -125,7 +125,8 @@
     "name": "simple-get",
     "repo": "https://github.com/feross/simple-get",
     "description": "Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in < 100 lines.",
-    "dependents": 33
+    "dependents": 33,
+    "disable": true
   },
   {
     "name": "is-generator",
@@ -411,7 +412,8 @@
     "name": "chrome-net",
     "repo": "https://github.com/feross/chrome-net",
     "description": "Use the Node `net` API in Chrome Apps",
-    "dependents": 7
+    "dependents": 7,
+    "disable": true
   },
   {
     "name": "subcommand",
@@ -1031,7 +1033,8 @@
   },
   {
     "name": "studynotes.org",
-    "repo": "https://github.com/feross/studynotes.org"
+    "repo": "https://github.com/feross/studynotes.org",
+    "disable": true
   },
   {
     "name": "webtorrent.io",
@@ -1257,7 +1260,8 @@
     "name": "safe-buffer",
     "repo": "https://github.com/feross/safe-buffer",
     "description": "Safer Node.js Buffer API",
-    "dependents": 897
+    "dependents": 897,
+    "disable": true
   },
   {
     "name": "levelup",
@@ -1442,7 +1446,8 @@
     "name": "extract-zip",
     "repo": "https://github.com/maxogden/extract-zip",
     "description": "unzip a zip file into a directory using 100% javascript",
-    "dependents": 467
+    "dependents": 467,
+    "disable": true
   },
   {
     "name": "assets-webpack-plugin",
