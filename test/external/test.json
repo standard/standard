@@ -218,7 +218,8 @@
     "name": "webtorrent",
     "repo": "https://github.com/webtorrent/webtorrent",
     "description": "Streaming torrent client",
-    "dependents": 17
+    "dependents": 17,
+    "disable": true
   },
   {
     "name": "html-pdf",
@@ -1395,7 +1396,8 @@
     "name": "leveldown",
     "repo": "https://github.com/Level/leveldown",
     "description": "A low-level Node.js LevelDB binding",
-    "dependents": 534
+    "dependents": 534,
+    "disable": true
   },
   {
     "name": "memdown",
