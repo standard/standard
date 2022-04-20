@@ -650,7 +650,8 @@
     "repo": "https://github.com/feross/simple-websocket",
     "description": "Simple, EventEmitter API for WebSockets (browser)",
     "dependents": 4,
-    "install": true
+    "install": true,
+    "disable": true
   },
   {
     "name": "is-installed",
