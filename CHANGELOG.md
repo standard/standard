@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [17.0.0] - 2022-04-20
+
+We're super excited to announce `standard` 17!
+
+This major release fully focuses on getting in sync with the wider ESLint ecosystem
+and doesn't in itself introduce any new rules or features.
+
+When you upgrade, consider running `standard --fix` to automatically format your
+code to match the current set of rules.
+
+This is the first release by two of our `standard` co-maintainers @Divlo and @voxpelli. Buy them a cake if you run into them, thanks for getting this release out!
+
+### Major changes
+
+- `eslint-config-node` has been replaced with the up to date fork `eslint-config-n`. If you have used comments like `// eslint-disable-line node/no-deprecated-api` you now have to reference the `n/` rules instead.
+- [`object-shorthand` rule](https://github.com/standard/eslint-config-standard/pull/166) (as warning)
+- Use of ESLint 8, which allows for support for all of the latest syntax that ESLint 8 includes, such as top level `await` #1548 #1775
+- `--verbose` by default
+
+### Changed features
+
+- Update `eslint` from `~7.18.0` to `^8.13.0`
+- Update `eslint-config-standard` from `16.0.3` to `17.0.0` to adapt to ESLint 8
+- Update `eslint-config-standard-jsx` from `10.0.0` to `^11.0.0` to adapt to ESLint 8
+- Update `standard-engine` from `^14` to `^15.0.0` to adapt to ESLint 8, see [its `CHANGELOG`](https://github.com/standard/standard-engine/blob/master/CHANGELOG.md#1500-0-2021-11-30)
+- Move from `eslint-plugin-node@~11.1.0` to `eslint-plugin-n@^15.1.0` to adapt to ESLint 8
+- Update `eslint-plugin-import` from `~2.24.2` to `^2.26.0`
+- Update `eslint-plugin-promise` from `~5.1.0` to `^6.0.0`
+- Update `eslint-plugin-react` from `~7.25.1` to `^7.28.0`
+
 ## [17.0.0-2] - 2022-02-03
 
 - Fix: Follow up to the fix of #1548 in `17.0.0-1` #1775
