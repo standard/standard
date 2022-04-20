@@ -30,7 +30,7 @@
     "minimist": "^1.2.5",
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
-    "simple-get": "^4.0.0",
+    "simple-get": "^4.0.1",
     "tape": "^5.5.3"
   },
   "engines": {
