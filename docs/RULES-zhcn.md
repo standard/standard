@@ -205,8 +205,8 @@
   ```js
   // ✗ avoid
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 

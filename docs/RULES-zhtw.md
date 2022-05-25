@@ -203,8 +203,8 @@
   ```js
   // ✗ avoid
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 * **三元運算子（ternary operator）** 在多行的情況下，把 `?` 和 `:` 和後面敘述放在同一行。

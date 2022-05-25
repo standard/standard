@@ -179,8 +179,8 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
   ```js
   // ✗ evite
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 

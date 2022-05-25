@@ -219,8 +219,8 @@ Cara terbaik untuk belajar tentang `standard` adalah dengan memasangnya pada pro
   ```js
   // ✗ hindari
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 
