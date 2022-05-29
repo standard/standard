@@ -203,8 +203,8 @@
   ```js
   // ✗ 피하세요
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 

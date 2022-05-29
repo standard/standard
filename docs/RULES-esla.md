@@ -203,8 +203,8 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```js
   // ✗ evitar
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 

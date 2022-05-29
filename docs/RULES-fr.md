@@ -213,8 +213,8 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
   ```js
   // ✗ avoid
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 

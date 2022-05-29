@@ -202,8 +202,8 @@ Il modo migliore per imparare `standard` è quello di installarlo e provarlo sul
   ```js
   // ✗ evita
   var value = 'hello world'
-
-
+  
+  
   console.log(value)
   ```
 
