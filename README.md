@@ -584,6 +584,16 @@ Or, run:
 $ standard --env mocha
 ```
 
+Or, add this to `package.json`:
+
+```json
+{
+  "standard": {
+    "env": ["mocha"]
+  }
+}
+```
+
 Where `mocha` can be one of `jest`, `jasmine`, `qunit`, `phantomjs`, and so on. To see a
 full list, check ESLint's
 [specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
