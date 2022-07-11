@@ -696,7 +696,7 @@ fi
 
 The [pre-commit](https://pre-commit.com/) library allows hooks to be declared within a `.pre-commit-config.yaml` configuration file in the repo, and therefore more easily maintained across a team.
 
-Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml` file, which will automatically fix `.js`, `.jsx`, `.ts`, `.tsx`, `.mjs` and `.cjs` files:
+Users of pre-commit can simply add `standard` to their `.pre-commit-config.yaml` file, which will automatically fix `.js`, `.jsx`, `.mjs` and `.cjs` files:
 ```yaml
   - repo: https://github.com/standard/standard
     rev: master
