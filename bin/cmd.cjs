@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('version-guard')('../cli.js', 12, 22)
+require('version-guard')('../lib/cli.js', 12, 22)
