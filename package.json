@@ -8,7 +8,7 @@
     "url": "https://feross.org"
   },
   "bin": {
-    "standard": "bin/cmd.js"
+    "standard": "bin/cmd.cjs"
   },
   "type": "module",
   "bugs": {
@@ -22,7 +22,8 @@
     "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "standard-engine": "^15.0.0"
+    "standard-engine": "^15.0.0",
+    "version-guard": "^1.1.0"
   },
   "devDependencies": {
     "cross-spawn": "^7.0.3",
@@ -70,7 +71,7 @@
   },
   "scripts": {
     "test": "npm run test-internal && npm run test-external",
-    "test-internal": "./bin/cmd.js --verbose && tape test/*.js",
+    "test-internal": "./bin/cmd.cjs --verbose && tape test/*.js",
     "test-external": "tape test/external/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },

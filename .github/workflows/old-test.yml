@@ -42,5 +42,5 @@ jobs:
         run: npm install
 
       - name: Test that the command line program exits cleanly.
-        run: ./bin/cmd.js
+        run: ./bin/cmd.cjs
         shell: bash
