@@ -20,7 +20,7 @@ const testPkgs = JSON.parse(json)
 
 const GIT = 'git'
 const NPM = 'npm'
-const STANDARD = fileURLToPath(new URL('../../bin/cmd.js', import.meta.url))
+const STANDARD = fileURLToPath(new URL('../../bin/cmd.cjs', import.meta.url))
 const TMP = new URL('../../tmp/', import.meta.url)
 const PARALLEL_LIMIT = Math.ceil(cpus().length / 2)
 

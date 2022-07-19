@@ -3,7 +3,7 @@ import standard from '../index.js'
 
 test('api: lintFiles', async (t) => {
   t.plan(2)
-  const [result] = await standard.lintFiles(['bin/cmd.js'])
+  const [result] = await standard.lintFiles(['bin/cmd.cjs'])
   t.equal(typeof result, 'object', 'result is an object')
   t.equal(result.errorCount, 0)
 })

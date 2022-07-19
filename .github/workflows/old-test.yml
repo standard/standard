@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [0.10.48]
+        node-version: [0.10.48, 4]
 
     steps:
       - name: Checkout project
@@ -30,17 +30,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache Node dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Install dependencies
-        run: npm install
+        run: npm install --production
 
       - name: Test that the command line program exits cleanly.
-        run: ./bin/cmd.js
+        run: ./bin/cmd.cjs
         shell: bash

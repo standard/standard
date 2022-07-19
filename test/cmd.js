@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 import test from 'tape'
 import crossSpawn from 'cross-spawn'
 
-const CMD_PATH = fileURLToPath(new URL('../bin/cmd.js', import.meta.url))
+const CMD_PATH = fileURLToPath(new URL('../bin/cmd.cjs', import.meta.url))
 
 test('command line usage: --help', t => {
   t.plan(1)
