@@ -179,8 +179,8 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
   ```js
   // ✗ evite
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 
@@ -232,7 +232,7 @@ A melhor forma de aprender sobre o `standard` é instalar e usar no seu código.
 
 ## Ponto-e-vírgula
 
-* Não use. (veja: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Não use. (veja: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   ```js
   window.alert('hi')   // ✓ ok
@@ -338,5 +338,5 @@ A vantagem disso é que prefixos são mais fáceis de perceber, uma vez que voc�
 *Fim da citação de "An Open Letter to JavaScript Leaders Regarding Semicolons".*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I

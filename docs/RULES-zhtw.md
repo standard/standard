@@ -203,8 +203,8 @@
   ```js
   // ✗ avoid
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 * **三元運算子（ternary operator）** 在多行的情況下，把 `?` 和 `:` 和後面敘述放在同一行。
@@ -1292,7 +1292,7 @@
 
 ## 分號
 
-* 不要加分號。 (詳見： [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* 不要加分號。 (詳見： [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1399,5 +1399,5 @@
 > 這樣的好處是這些前綴字是很好被察覺的，你可以很容易發現那些 `(` 或 `[` 開頭而沒有分號的地方。
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I

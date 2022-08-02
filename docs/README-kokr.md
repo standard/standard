@@ -65,7 +65,7 @@ npm install standard --save-dev
 - **[더 많은 장점][5]이 있습니다.** - *`standard`를 시도해보세요!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
 [4]: RULES-kokr.md#semicolons
 [5]: RULES-kokr.md#javascript-standard-style

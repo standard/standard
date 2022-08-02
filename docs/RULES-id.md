@@ -219,8 +219,8 @@ Cara terbaik untuk belajar tentang `standard` adalah dengan memasangnya pada pro
   ```js
   // ✗ hindari
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 
@@ -414,7 +414,7 @@ Cara terbaik untuk belajar tentang `standard` adalah dengan memasangnya pada pro
       this.legs = 4
     }
   }
-  
+
   class Dog extends Animal {
     constructor () {      // ✗ hindari
       this.legs = 4
@@ -1320,7 +1320,7 @@ Cara terbaik untuk belajar tentang `standard` adalah dengan memasangnya pada pro
 
 ## Semicolons
 
-* Tidak ada _semicolons_. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Tidak ada _semicolons_. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1435,5 +1435,5 @@ Seluruh _minifier_ kode yang terkenal dan digunakan sekarang menggunakan _AST-ba
 > Keuntungannya adalah _prefix_nya mudah untuk diperhatikan, sekalinya kamu telah terbiasa melihat baris yang dimulai tanpa `(` atau `[` tanpa semicolon.
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I

@@ -61,7 +61,7 @@ npm install standard --save-dev
 - **還有 [更多更多的好處][5]** － *今天就來試試 `standard` 吧！*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
 [4]: RULES-zhtw.md#semicolons
 [5]: RULES-zhtw.md#javascript-standard-style

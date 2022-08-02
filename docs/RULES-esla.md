@@ -203,8 +203,8 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```js
   // ✗ evitar
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 
@@ -1281,7 +1281,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
 
 ## Puntos y comas (semicolons)
 
-* Sin puntos y comas. (ver: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Sin puntos y comas. (ver: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1393,5 +1393,5 @@ La ventaja es que los prefijos son fáciles de notar, una vez te acostumbras a v
 *Fin de la cita de "An Open Letter to JavaScript Leaders Regarding Semicolons".*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I

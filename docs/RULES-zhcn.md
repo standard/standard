@@ -205,8 +205,8 @@
   ```js
   // ✗ avoid
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 
@@ -1295,7 +1295,7 @@
 
 ## 关于分号
 
-* 不要使用分号。 (参见：[1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)，[2](http://inimino.org/%7Einimino/blog/javascript_semicolons)，[3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* 不要使用分号。 (参见：[1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)，[2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons)，[3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1402,5 +1402,5 @@
 > 后者的好处是分号比较瞩目，一旦习惯后便再也不会看到以 `(` 和 `[` 开头又不带分号的语句了。
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
