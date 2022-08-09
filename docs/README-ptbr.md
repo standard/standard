@@ -62,7 +62,7 @@ npm install standard
 - **E [mais benefícios][5]** – *dê uma chance para  `standard` hoje!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
 [4]: RULES-ptbr.md#ponto-e-v%C3%ADrgula
 [5]: RULES-ptbr.md#javascript-standard-style

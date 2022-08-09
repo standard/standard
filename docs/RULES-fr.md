@@ -213,8 +213,8 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
   ```js
   // ✗ avoid
   var value = 'hello world'
-  
-  
+
+
   console.log(value)
   ```
 
@@ -1304,7 +1304,7 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
 
 ## Point-virgules
 
-* Pas de point-virgules. (voir: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Pas de point-virgules. (voir: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
@@ -1415,5 +1415,5 @@ Tous les minificateurs populaires de code utilisés aujourd'hui utilisent la min
 > L'avantage c'est que les prefixes sont plus faciles à remarquer, quand vous êtes habitués à ne jamais voir de lignes commencant par `(` ou `[` sans point-virgules.
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
