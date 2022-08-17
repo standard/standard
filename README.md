@@ -848,3 +848,4 @@ The `standard` team and community take all security bugs in `standard` seriously
 ## License
 
 [MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).
+[![bip39 Versions](https://badges.openbase.com/js/versions/bip39.svg?token=wtxKVIwOLQ7xj7MxEc2ZRka/16bdUjSIE/4Izf72rV4=)](https://openbase.com/js/bip39?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
