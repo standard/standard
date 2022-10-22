@@ -958,12 +958,6 @@
     "dependents": 3
   },
   {
-    "name": "unique-filename",
-    "repo": "https://github.com/npm/unique-filename",
-    "description": "Generate a unique filename for use in temporary directories or caches.",
-    "dependents": 3
-  },
-  {
     "name": "hash-index",
     "repo": "https://github.com/watson/hash-index",
     "description": "A hashing function which returns integers with a possible max value",
@@ -1123,13 +1117,6 @@
     "disable": true
   },
   {
-    "name": "npm",
-    "repo": "https://github.com/npm/cli",
-    "description": "a package manager for JavaScript",
-    "dependents": 3868,
-    "disable": true
-  },
-  {
     "name": "fast-sass-loader",
     "repo": "https://github.com/yibn2008/fast-sass-loader",
     "description": "fast sass loader for webpack",
@@ -1177,13 +1164,6 @@
     "disable": true
   },
   {
-    "name": "npmlog",
-    "repo": "https://github.com/npm/npmlog",
-    "description": "logger for npm",
-    "dependents": 1114,
-    "disable": true
-  },
-  {
     "name": "budo",
     "repo": "https://github.com/mattdesl/budo",
     "description": "a browserify server for rapid prototyping",
@@ -1202,13 +1182,6 @@
     "repo": "https://github.com/hubotio/hubot",
     "description": "A simple helpful robot for your Company",
     "dependents": 1080,
-    "disable": true
-  },
-  {
-    "name": "validate-npm-package-name",
-    "repo": "https://github.com/npm/validate-npm-package-name",
-    "description": "Give me a string and I'll tell you if it's a valid npm package name",
-    "dependents": 1064,
     "disable": true
   },
   {
@@ -1413,13 +1386,6 @@
     "repo": "https://github.com/electron-userland/electron-prebuilt",
     "description": "Install prebuilt electron binaries for the command-line using npm",
     "dependents": 515,
-    "disable": true
-  },
-  {
-    "name": "fstream",
-    "repo": "https://github.com/npm/fstream",
-    "description": "Advanced file system stream things",
-    "dependents": 514,
     "disable": true
   },
   {
