@@ -586,7 +586,7 @@ $ standard --env mocha
 
 Where `mocha` can be one of `jest`, `jasmine`, `qunit`, `phantomjs`, and so on. To see a
 full list, check ESLint's
-[specifying environments](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
+[specifying environments](https://eslint.org/docs/latest/use/configure/language-options#specifying-environments)
 documentation. For a list of what globals are available for these environments,
 check the
 [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm
