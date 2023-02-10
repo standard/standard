@@ -28,7 +28,7 @@
   "devDependencies": {
     "cross-spawn": "^7.0.3",
     "hallmark": "^4.1.0",
-    "minimist": "^1.2.6",
+    "minimist": "^1.2.8",
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
     "simple-get": "^4.0.1",
