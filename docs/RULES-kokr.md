@@ -203,12 +203,12 @@
   ```js
   // ✗ 피하세요
   var value = 'hello world'
-
-
+  // blank line
+  // blank line
   console.log(value)
   ```
 
-여러 줄의 **삼항 연산자** 를 사용할 경우 `?`와 `:`를 각각의 행으로 처리해야합니다.
+* 여러 줄의 **삼항 연산자** 를 사용할 경우 `?`와 `:`를 각각의 행으로 처리해야합니다.
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
