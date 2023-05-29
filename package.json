@@ -15,24 +15,24 @@
     "url": "https://github.com/standard/standard/issues"
   },
   "dependencies": {
-    "eslint": "^8.13.0",
-    "eslint-config-standard": "17.0.0",
+    "eslint": "^8.41.0",
+    "eslint-config-standard": "17.1.0",
     "eslint-config-standard-jsx": "^11.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.5.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "standard-engine": "^15.0.0",
-    "version-guard": "^1.1.0"
+    "version-guard": "^1.1.1"
   },
   "devDependencies": {
     "cross-spawn": "^7.0.3",
-    "hallmark": "^4.1.0",
-    "minimist": "^1.2.6",
+    "hallmark": "^4.2.0",
+    "minimist": "^1.2.8",
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
     "simple-get": "^4.0.1",
-    "tape": "^5.5.3"
+    "tape": "^5.6.3"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
