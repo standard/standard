@@ -213,7 +213,7 @@ to `standard`.
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/peek.png>](https://www.peek.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dotenv.png>](https://www.dotenv.org) |
 |---|---|---|---|
 
-| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | Your Logo Here |  |  |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://www.pitsdatarecovery.net/wp-content/uploads/2020/09/pits-logo.svg>](https://www.pitsdatarecovery.net/) | Your Logo Here |  |
 |---|---|---|---|
 
 
