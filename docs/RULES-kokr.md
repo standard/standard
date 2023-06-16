@@ -487,7 +487,7 @@
   }
   ```
 
-** **변수에 `delete` 연산자는 없습니다.**
+* **변수에 `delete` 연산자는 없습니다.**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
