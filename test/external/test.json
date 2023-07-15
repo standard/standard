@@ -325,7 +325,8 @@
     "name": "simple-bin-help",
     "repo": "https://github.com/bahmutov/simple-bin-help",
     "description": "Simple help and sanity checks for Node CLI bin scripts",
-    "dependents": 10
+    "dependents": 10,
+    "disable": true
   },
   {
     "name": "supertest-koa-agent",
