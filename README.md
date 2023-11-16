@@ -823,7 +823,7 @@ Returns a `Promise` resolving to the `results` or rejected with an `Error` (same
 
 Contributions are welcome! Check out the [issues](https://github.com/standard/standard/issues) or the [PRs](https://github.com/standard/standard/pulls), and make your own if you want something that you don't see there.
 
-Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
+Want to chat? [Join contributors on Discord](https://discord.gg/Jxjejujpmc).
 
 Here are some important packages in the `standard` ecosystem:
 
