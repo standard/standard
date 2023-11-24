@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783" alt="discord"></a>
+  <a href="https://discord.gg/ZegqCBr"><img src="https://img.shields.io/discord/612704110008991783?logo=discord&logoColor=white&label=Discord&color=5865F2" alt="discord"></a>
   <a href="https://github.com/standard/standard/actions/workflows/test-external.yml"><img src="https://github.com/standard/standard/actions/workflows/test-external.yml/badge.svg?branch=master" alt="External tests"></a>
   <a href="https://github.com/standard/standard/actions/workflows/test-internal.yml"><img src="https://github.com/standard/standard/actions/workflows/test-internal.yml/badge.svg?branch=master" alt="Internal tests"></a>
   <a href="https://github.com/standard/standard/actions?query=workflow%3A%22Old+test%22"><img src="https://github.com/standard/standard/workflows/Old%20test/badge.svg" alt="status badge old Node test"></a>
@@ -822,7 +822,7 @@ Returns a `Promise` resolving to the `results` or rejected with an `Error` (same
 
 Contributions are welcome! Check out the [issues](https://github.com/standard/standard/issues) or the [PRs](https://github.com/standard/standard/pulls), and make your own if you want something that you don't see there.
 
-Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
+Want to chat? [Join contributors on Discord](https://discord.gg/Jxjejujpmc).
 
 Here are some important packages in the `standard` ecosystem:
 
