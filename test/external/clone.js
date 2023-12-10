@@ -120,13 +120,9 @@ test('test github repos that use `standard`', t => {
           if (pkg.args) args.push(...pkg.args)
           spawn('node', args, { cwd: folder }, err => {
             const str = `${name} (${pkg.repo})`
-            if (err && argv.fix) {
+            if (err) {
               t.comment(`Attempting --fix on ${str}`)
               runStandardFix(cb)
-            } else if (err) {
-              markDisabled(name, true)
-              t.fail(str)
-              cb(null)
             } else {
               markDisabled(name, false)
               t.pass(str)
@@ -140,7 +136,14 @@ test('test github repos that use `standard`', t => {
           if (pkg.args) args.push(...pkg.args)
           spawn('node', args, { cwd: folder }, err => {
             const str = `${name} (${pkg.repo}) ** with --fix`
-            if (err) { t.fail(str) } else { t.pass(str) }
+            if (err) {
+              t.fail(str)
+              markDisabled(name, true)
+              cb(null)
+            } else {
+              t.pass(str)
+              cb(null)
+            }
             runGitReset(cb)
           })
         }
