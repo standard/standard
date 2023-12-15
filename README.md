@@ -752,7 +752,7 @@ Lint the provided source `text`. An `opts` object may be provided:
   filename: '',         // path of file containing the text being linted
 
   // common to lintText and lintFiles
-  cwd: '',              // current working directory (default: process.cwd())
+  cwd: '',              // current working directory (default: process.cwd() at import time)
   fix: false,           // automatically fix problems
   extensions: [],       // file extensions to lint (has sane defaults)
   globals: [],          // custom global variables to declare
@@ -800,7 +800,7 @@ Lint the provided `files` globs. An `opts` object may be provided:
   ignore: [],           // file globs to ignore (has sane defaults)
 
   // common to lintText and lintFiles
-  cwd: '',              // current working directory (default: process.cwd())
+  cwd: '',              // current working directory (default: process.cwd() at import time)
   fix: false,           // automatically fix problems
   extensions: [],       // file extensions to lint (has sane defaults)
   globals: [],          // custom global variables to declare
