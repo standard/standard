@@ -6,13 +6,14 @@
  * VERSION BUMP.)
  */
 
+import assert from 'node:assert'
 import { cpus } from 'node:os'
 import { fileURLToPath } from 'node:url'
+import test from 'node:test'
 import { readFileSync, mkdirSync, access, R_OK, W_OK, writeFileSync } from 'node:fs'
 import crossSpawn from 'cross-spawn'
 import minimist from 'minimist'
 import parallelLimit from 'run-parallel-limit'
-import test from 'tape'
 
 const testJsonPath = new URL('test.json', import.meta.url)
 const json = readFileSync(testJsonPath, 'utf8')
@@ -56,13 +57,11 @@ if (!argv.disabled) {
     disabledPkgs.forEach(pkg => {
       console.log(`DISABLED: ${pkg.name}: ${pkg.disable} (${pkg.repo})`)
     })
-    t.end()
+    t.skip()
   })
 }
 
 test('test github repos that use `standard`', t => {
-  t.plan(pkgs.length)
-
   mkdirSync(TMP, { recursive: true })
 
   parallelLimit(pkgs.map(pkg => {
@@ -72,7 +71,7 @@ test('test github repos that use `standard`', t => {
     return cb => {
       access(folder, R_OK | W_OK, err => {
         if (argv.offline && err) {
-          t.pass(`SKIPPING (offline): ${name} (${pkg.repo})`)
+          t.skip(`SKIPPING (offline): ${name} (${pkg.repo})`)
           cb(null)
         } else if (argv.offline) {
           runStandard(cb)
@@ -121,15 +120,15 @@ test('test github repos that use `standard`', t => {
           spawn('node', args, { cwd: folder }, err => {
             const str = `${name} (${pkg.repo})`
             if (err && argv.fix) {
-              t.comment(`Attempting --fix on ${str}`)
+              t.diagnostic(`Attempting --fix on ${str}`)
               runStandardFix(cb)
             } else if (err) {
               markDisabled(name, true)
-              t.fail(str)
               cb(null)
+              assert.fail(str)
             } else {
               markDisabled(name, false)
-              t.pass(str)
+              assert.ok(str)
               cb(null)
             }
           })
@@ -140,7 +139,7 @@ test('test github repos that use `standard`', t => {
           if (pkg.args) args.push(...pkg.args)
           spawn('node', args, { cwd: folder }, err => {
             const str = `${name} (${pkg.repo}) ** with --fix`
-            if (err) { t.fail(str) } else { t.pass(str) }
+            if (err) { assert.fail(str) } else { assert.ok(str) }
             runGitReset(cb)
           })
         }

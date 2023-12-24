@@ -71,8 +71,8 @@
   },
   "scripts": {
     "test": "npm run test-internal && npm run test-external",
-    "test-internal": "./bin/cmd.cjs --verbose && tape test/*.js",
-    "test-external": "tape test/external/*.js",
+    "test-internal": "./bin/cmd.cjs --verbose && node --test test/*.js",
+    "test-external": "node --test test/external/*.js",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
   "funding": [
