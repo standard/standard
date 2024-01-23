@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="/docs/RULES-en.md">English</a> •
+  <a href="/docs/RULES-de.md">Deutsch</a> •
   <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/RULES-fr.md">Français</a> •
   <a href="/docs/RULES-id.md">Bahasa Indonesia</a> •

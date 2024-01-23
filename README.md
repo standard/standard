@@ -22,6 +22,7 @@
 
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
+  <a href="/docs/README-de.md">Deutsch</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
   <a href="/docs/README-id.md">Bahasa Indonesia</a> •

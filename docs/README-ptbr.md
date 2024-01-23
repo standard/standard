@@ -19,6 +19,7 @@
 
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
+  <a href="/docs/README-de.md">Deutsch</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
   <a href="/docs/README-id.md">Bahasa Indonesia</a> •
@@ -74,31 +75,40 @@ Para ter uma idéia melhor, dê uma olhada
 
 ## Índice
 
-- [Instalação](#instala%C3%A7%C3%A3o)
+- [Índice](#índice)
+- [Instalação](#instalação)
 - [Uso](#uso)
-  - [O que você pode fazer se for espertinho](#o-que-voc%C3%AA-pode-fazer-se-for-espertinho)
-  - [Insígnia](#ins%C3%ADgnia)
+  - [O que você pode fazer se for espertinho](#o-que-você-pode-fazer-se-for-espertinho)
+  - [Insígnia](#insígnia)
   - [Plugins de Editores de Texto](#plugins-de-editores-de-texto)
+    - [Sublime Text](#sublime-text)
+    - [Atom](#atom)
+    - [Vim](#vim)
+    - [Emacs](#emacs)
+    - [Brackets](#brackets)
+    - [Visual Studio Code](#visual-studio-code)
+    - [WebStorm/PhpStorm](#webstormphpstorm)
 - [FAQ](#faq)
   - [Por que eu deveria usar o JavaScript Standard Style?](#por-que-eu-deveria-usar-o-javascript-standard-style)
-  - [Discordo da regra X, você pode mudá-la?](#discordo-da-regra-x-voc%C3%AA-pode-mud%C3%A1-la)
-  - [Mas isso não é um padrão legítimo!](#mas-isso-n%C3%A3o-%C3%A9-um-padr%C3%A3o-leg%C3%ADtimo)
-  - [Existe um formatador automático?](#existe-um-formatador-autom%C3%A1tico)
+  - [Discordo da regra X, você pode mudá-la?](#discordo-da-regra-x-você-pode-mudá-la)
+  - [Mas isso não é um padrão legítimo!](#mas-isso-não-é-um-padrão-legítimo)
+  - [Existe um formatador automático?](#existe-um-formatador-automático)
   - [Como ignoro arquivos?](#como-ignoro-arquivos)
   - [Como escondo um determinado aviso?](#como-escondo-um-determinado-aviso)
   - [Eu uso uma biblioteca que polui o namespace global. Como eu previno erros de "variable is not defined"?](#eu-uso-uma-biblioteca-que-polui-o-namespace-global-como-eu-previno-erros-de-variable-is-not-defined)
   - [Posso usar um custom parser de JS novinho em folha que saiu ontem para suporte ao ES Next?](#posso-usar-um-custom-parser-de-js-novinho-em-folha-que-saiu-ontem-para-suporte-ao-es-next)
   - [Posso usar uma linguagem variante de JavaScript, tipo Flow?](#posso-usar-uma-linguagem-variante-de-javascript-tipo-flow)
-  - [Você pode tornar regra X configurável?](#voc%C3%AA-pode-tornar-regra-x-configur%C3%A1vel)
+  - [Você pode tornar regra X configurável?](#você-pode-tornar-regra-x-configurável)
   - [E os Web Workers?](#e-os-web-workers)
   - [E a respeito de Mocha, Jasmine, QUnit, etc?](#e-a-respeito-de-mocha-jasmine-qunit-etc)
   - [Existe um hook `pre-commit` para Git?](#existe-um-hook-pre-commit-para-git)
   - [Como eu deixo o output todo coloridinho e *bonitinho*?](#como-eu-deixo-o-output-todo-coloridinho-e-bonitinho)
-  - [Quero contribuir com o `standard`. Quais packages eu devo conhecer?](#quero-contribuir-com-o-standard-quais-packages-eu-devo-conhecer)
 - [Node.js API](#nodejs-api)
-  - [`standard.lintText(text, [opts], callback)`](#standardlinttexttext-opts-callback)
-  - [`standard.lintFiles(files, [opts], callback)`](#standardlintfilesfiles-opts-callback)
-- [Licença](#licen%C3%A7a)
+  - [`async standard.lintText(text, [opts])`](#async-standardlinttexttext-opts)
+  - [`async standard.lintFiles(files, [opts])`](#async-standardlintfilesfiles-opts)
+- [Contribuições](#contribuições)
+  - [Quero contribuir com o `standard`. Quais packages eu devo conhecer?](#quero-contribuir-com-o-standard-quais-packages-eu-devo-conhecer)
+- [Licença](#licença)
 
 ## Instalação
 
