@@ -163,9 +163,51 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 3. Nunca dê feedback de estilo num pull request de novo!
 
+## Quem usa o JavaScript Standard Style?
 
+[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png>](https://wormhole.app) |
+|---|---|---|---|
 
-### Insígnia
+[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) | [<img width=190 src=https://assets.vercel.com/image/upload/v1621541666/front/assets/logotype-black-on-white.png>](https://vercel.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/socket.png>](https://socket.dev) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/heroku.png>](https://www.heroku.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/saucelabs.png>](https://saucelabs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/automattic.png>](https://automattic.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/godaddy.png>](https://www.godaddy.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) | [<img width=190 alt="College essays, AP notes" src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/aragon.png>](https://aragon.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/puma-browser.png>](https://www.pumabrowser.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webstorm.png>](https://www.jetbrains.com/webstorm/) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/fastify.png>](https://www.fastify.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/scuttlebutt.png>](https://www.scuttlebutt.nz) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/solid.png>](https://solid.inrupt.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/grab.png>](https://www.grab.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/peek.png>](https://www.peek.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dotenv.png>](https://www.dotenv.org) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | Your Logo Here |  |  |
+|---|---|---|---|
+
+## Insígnia
 
 Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme para que as pessoas saibam que seu código está em standard style.
 
@@ -182,11 +224,11 @@ Está usando em um dos seus projetos? Inclua uma dessas insígnias no seu readme
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
 ```
 
-### Plugins de Editores de Texto
+## Plugins de Editores de Texto
 
 Primeiro, instale `standard`. Então, instale  o plugin apropriado para o seu editor.
 
-#### [Sublime Text](https://www.sublimetext.com/)
+### [Sublime Text](https://www.sublimetext.com/)
 
 Usando **[Package Control][sublime-1]**, instale **[SublimeLinter][sublime-2]** e
 **[SublimeLinter-contrib-standard][sublime-3]**.
@@ -198,7 +240,7 @@ Para formatação automática ao salvar, instale **[StandardFormat][sublime-4]**
 [sublime-3]: https://packagecontrol.io/packages/SublimeLinter-contrib-standard
 [sublime-4]: https://packagecontrol.io/packages/StandardFormat
 
-#### [Atom](https://atom.io)
+### [Atom](https://atom.io)
 
 Instale **[linter-js-standard][atom-1]**.
 
@@ -209,7 +251,7 @@ installe **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 
-#### [Vim](http://www.vim.org/)
+### [Vim](http://www.vim.org/)
 
 Instale **[Syntastic][vim-1]** e adicione essa linha ao seu `.vimrc`:
 
@@ -232,20 +274,20 @@ set autoread
 
 [vim-1]: https://github.com/scrooloose/syntastic
 
-#### [Emacs](https://www.gnu.org/software/emacs/)
+### [Emacs](https://www.gnu.org/software/emacs/)
 
 Instale **[Flycheck][emacs-1]** e cheque o  **[manual][emacs-2]** para aprender a habilitar nos seus projetos.
 
 [emacs-1]: http://www.flycheck.org
 [emacs-2]: http://www.flycheck.org/en/latest/user/installation.html
 
-#### [Brackets](http://brackets.io/)
+### [Brackets](http://brackets.io/)
 
 Selecione o registro da extensão do **["Standard Code Style"][brackets-1]**.
 
 [brackets-1]: https://github.com/ishamf/brackets-standard/
 
-#### [Visual Studio Code](https://code.visualstudio.com/)
+### [Visual Studio Code](https://code.visualstudio.com/)
 
 Instale **[vscode-standard][vscode-1]**. (Inclui suporte para formatação automática.)
 
@@ -254,7 +296,7 @@ Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 [vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
-#### [WebStorm/PhpStorm][webstorm-1]
+### [WebStorm/PhpStorm][webstorm-1]
 
 Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm-2].
 
