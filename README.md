@@ -213,8 +213,9 @@ to `standard`.
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/peek.png>](https://www.peek.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dotenv.png>](https://www.dotenv.org) |
 |---|---|---|---|
 
-| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/searchapi.png>](https://www.searchapi.io/) | Your Logo Here |  |
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/searchapi.png>](https://www.searchapi.io/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/testingbot.png>](https://testingbot.com/) | Your Logo Here |
 |---|---|---|---|
+
 
 
 In addition to companies, many community members use `standard` on packages that
