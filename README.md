@@ -224,6 +224,12 @@ to list here.
 `standard` is also the top-starred linter in GitHub's
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) showcase.
 
+[Usage Trend of standard](https://npm-compare.com/standard#timeRange=FIVE_YEARS):
+  
+<a href="https://npm-compare.com/standard#timeRange=FIVE_YEARS" target="_blank">
+  <img src="https://npm-compare.com/img/npm-trend/FIVE_YEARS/standard.png" width="868px" alt="NPM Usage Trend of standard" />
+</a>
+
 ## Are there text editor plugins?
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
