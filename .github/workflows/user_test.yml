@@ -27,5 +27,4 @@ jobs:
         with:
           node-version: latest
 
-      - name: ${{ runner.command }}
-        run: ${{ runner.command }}
+      - run: ${{ runner.command }}
