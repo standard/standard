@@ -1,0 +1,31 @@
+# Install standard as end users would do in GitHub Actions.
+
+name: User Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  user-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        command:
+          - "npm install standard"
+          - "yarn add standard"
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+
+      - name: ${{ runner.command }}
+        run: ${{ runner.command }}
