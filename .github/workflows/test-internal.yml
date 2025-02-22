@@ -15,20 +15,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.22, 14.17, 16.0.0, 18.0.0, latest]
+        node-version: [12.x, 14.x, 16.x, 18.x, 20.x, 22.x, latest]
       fail-fast: false
 
     steps:
       - name: Checkout project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache Node dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
