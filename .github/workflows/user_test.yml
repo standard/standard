@@ -18,6 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        node-version: [18.x, 20.x, "lts/*", latest]
         command:
           - "npm install standard"
           - "yarn add standard"
@@ -26,5 +27,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: latest
-
-      - run: ${{ runner.command }}
+      - run: |
+          ${{ matrix.command }}
+          standard --version || true  # Fails with: 'standard: command not found'
