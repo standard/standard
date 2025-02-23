@@ -29,4 +29,4 @@ jobs:
           node-version: latest
       - run: |
           ${{ matrix.command }}
-          standard --version || true  # Fails with: 'standard: command not found'
+          node_modules/.bin/standard --version
