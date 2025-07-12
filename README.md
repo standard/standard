@@ -291,6 +291,22 @@ Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3],
 [vim-2]: https://github.com/neomake/neomake
 [vim-3]: https://github.com/vim-syntastic/syntastic
 
+Note that Vim >9.0 includes a so-called "compiler script" for standard.
+
+- Enable the compiler:
+
+  ```vim
+  :compiler standard
+  ```
+
+- Use it on the current buffer:
+
+  ```vim
+  :make %
+  ```
+
+See `:help quickfix`.
+
 ### Emacs
 
 Install **[Flycheck][emacs-1]** and check out the **[manual][emacs-2]** to learn
