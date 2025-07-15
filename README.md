@@ -144,33 +144,76 @@ $ standard "src/util/**/*.js" "test/**/*.js"
      lib/torrent.js:950:11: Expected '===' and instead saw '=='.
    ```
 
-3. Never give style feedback on a pull request again!
+---
 
-## Why should I use JavaScript Standard Style?
+### 3. Say Goodbye to Style Debates in Code Reviews
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to
-maintain multiple hundred-line style configuration files for every module/project
-they work on. Enough of this madness!
+#### Why Adopt JavaScript Standard Style?
 
-This module saves you (and others!) time in three ways:
+Maintaining consistent code style across a team or open source project can be an exhausting and often unnecessary burden. JavaScript Standard Style is designed to simplify your development workflow by removing the need for complex configuration and endless discussions about formatting choices.
 
-- **No configuration.** The easiest way to enforce consistent style in your
-  project. Just drop it in.
-- **Automatically format code.** Just run `standard --fix` and say goodbye to
-  messy or inconsistent code.
-- **Catch style issues & programmer errors early.** Save precious code review
-  time by eliminating back-and-forth between reviewer & contributor.
+**Here’s why using JavaScript Standard Style is a smart move:**
 
-Adopting `standard` style means ranking the importance of code clarity and
-community conventions higher than personal style. This might not make sense for
-100% of projects and development cultures, however open source can be a hostile
-place for newbies. Setting up clear, automated contributor expectations makes a
-project healthier.
+---
 
-For more info, see the conference talk ["Write Perfect Code with Standard and
-ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). In this talk, you'll learn
-about linting, when to use `standard` versus `eslint`, and how `prettier` compares
-to `standard`.
+#### ✅ **Zero Configuration Required**
+
+With Standard, there are no lengthy `.eslintrc` or `.prettierrc` files to tweak or maintain. By enforcing a widely-accepted set of conventions out of the box, you can start using it immediately — no setup necessary. Just install it, and you’re ready to go.
+
+```bash
+npm install standard --save-dev
+```
+
+---
+
+#### ✨ **Effortless Code Formatting**
+
+Tired of manually cleaning up code style issues? Run:
+
+```bash
+npx standard --fix
+```
+
+This command automatically formats your code to comply with Standard’s rules — saving you from nitpicking over indentation, spacing, or semicolon usage. Developers can stay focused on writing logic rather than worrying about formatting trivia.
+
+---
+
+#### 🚫 **Eliminate Style Arguments in Code Reviews**
+
+Pull requests should focus on functionality, performance, and logic — not the number of spaces or whether to use single vs. double quotes. Standard helps teams avoid wasting time debating subjective style preferences by applying consistent rules uniformly across your codebase. This results in cleaner code reviews and a more pleasant collaboration experience.
+
+---
+
+#### 🔍 **Catch Bugs Before They Happen**
+
+Standard includes sensible linting rules that go beyond mere formatting. It helps catch potentially dangerous code patterns and programming errors early in the development cycle — reducing the chance of bugs making it into production.
+
+---
+
+#### 💬 **Encourage Inclusive Contribution**
+
+Especially in open source, welcoming new contributors is essential. Complex or undocumented style rules can discourage participation. By using a clear, community-vetted, and automated style system like Standard, you lower the barrier to entry and set transparent expectations for everyone — no matter their background or experience level.
+
+---
+
+> *“Style is not a matter of personal taste in a team environment — it’s a matter of collective efficiency.”*
+
+---
+
+#### Want to Learn More?
+
+For a deep dive into JavaScript linting, style enforcement, and how Standard compares to tools like ESLint and Prettier, check out the conference talk:
+📺 [**Write Perfect Code with Standard and ESLint**](https://www.youtube.com/watch?v=kuHfMw8j4xk)
+
+This talk covers:
+
+* When and why to choose Standard over ESLint or Prettier
+* How to integrate automatic linting into your CI/CD pipelines
+* How a consistent codebase helps teams scale
+
+---
+
+By adopting JavaScript Standard Style, you’re choosing clarity, speed, and collaboration over configuration headaches and subjective debates. Whether you’re a solo developer or leading a large open source project, it’s a pragmatic choice that pays off in the long run.
 
 ## Who uses JavaScript Standard Style?
 
