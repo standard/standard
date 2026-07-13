@@ -165,7 +165,7 @@ Adopting `standard` style means ranking the importance of code clarity and
 community conventions higher than personal style. This might not make sense for
 100% of projects and development cultures, however open source can be a hostile
 place for newbies. Setting up clear, automated contributor expectations makes a
-project healthier.
+project healtheir.
 
 For more info, see the conference talk ["Write Perfect Code with Standard and
 ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). In this talk, you'll learn
