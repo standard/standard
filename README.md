@@ -223,6 +223,9 @@ to list here.
 `standard` is also the top-starred linter in GitHub's
 [Clean Code Linter](https://github.com/showcases/clean-code-linters) showcase.
 
+It also runs out of the box in [MegaLinter](https://megalinter.io/), an open-source
+linters aggregator for CI ([standard documentation page](https://megalinter.io/latest/descriptors/javascript_standard/)).
+
 ## Are there text editor plugins?
 
 First, install `standard`. Then, install the appropriate plugin for your editor:
