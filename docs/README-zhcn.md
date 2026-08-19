@@ -14,7 +14,7 @@
 </p>
 
 <h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://socket.dev"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/socket.png" alt="Socket – Supply Chain Dependency Security for JavaScript and npm" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wormhole.app/?utm_medium=sponsorship&utm_source=standard&utm_campaign=feross"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png" alt="Wormhole" height=50 valign="middle"></a>
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://socket.dev"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/socket.png" alt="Socket – Supply Chain Dependency Security for JavaScript and npm" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wormhole.app/?utm_medium=sponsorship&utm_source=standard&utm_campaign=feross"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png" alt="Wormhole" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://serpapi.com/"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/serpapi.png" height=35 valign="middle"></a>
 </h5>
 
 <p align="center">
@@ -50,10 +50,10 @@ npm install standard --save-dev
 
 - **使用两个空格** – 进行缩进
 - **字符串使用单引号** – 需要转义的地方除外
-- **不再有冗余的变量** – 这是导致 *大量* bug 的源头!
+- **不再有冗余的变量** – 这是导致 _大量_ bug 的源头!
 - **无分号** – [这][1][没什么不好。][2][不骗你！][3]
 - **行首不要以 `(`, `[`, or `` ` `` 开头**
-  - 这是省略分号时**唯一**会造成问题的地方 – *工具里已加了自动检测！*
+  - 这是省略分号时**唯一**会造成问题的地方 – _工具里已加了自动检测！_
   - [详情][4]
 - **关键字后加空格** `if (condition) { ... }`
 - **函数名后加空格** `function name (arg) { ... }`
@@ -62,7 +62,7 @@ npm install standard --save-dev
 - 使用浏览器全局变量时加上 `window` 前缀 – `document` 和 `navigator` 除外
   - 避免无意中使用到了这些命名看上去很普通的全局变量， `open`, `length`,
     `event` 还有 `name`。
-- **[查看更多][5]** – *为何不试试 `standard` 规范呢！*
+- **[查看更多][5]** – _为何不试试 `standard` 规范呢！_
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
@@ -114,7 +114,7 @@ $ npm install standard --global
 $ npm install standard --save-dev
 ```
 
-*注意：运行以上命令的前提是已经安装了 [Node.js](http://nodejs.org) 和 [npm](https://npmjs.com) 。*
+_注意：运行以上命令的前提是已经安装了 [Node.js](http://nodejs.org) 和 [npm](https://npmjs.com) 。_
 
 ## 使用
 
@@ -138,25 +138,25 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 1. 添加配置到 `package.json`
 
-  ```json
-  {
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "*"
-    },
-    "scripts": {
-      "test": "standard && node my-tests.js"
-    }
+```json
+{
+  "name": "my-cool-package",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
   }
-  ```
+}
+```
 
 2. 这样检查工作就会在运行 `npm test` 自动进行
 
-  ```bash
-  $ npm test
-  Error: Use JavaScript Standard Style
-    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
-  ```
+```bash
+$ npm test
+Error: Use JavaScript Standard Style
+  lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+```
 
 3. 从此告别在提 PR 时的代码风格的问题！
 
@@ -170,53 +170,50 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 - **自动的代码格式化。** 只需运行 `standard --fix` 从此和脏乱差的代码说再见。
 - **提前发现风格及程序问题。** 减少代码审查时的反反复复修改过程，节约时间。
 
-一旦使用 `standard` 规范表明代码的简明性及社区的约定要高于个人的编码风格。这不一定100%适用于所有项目和多元的编程文化，但开源项目代码容易受到新手的影响。把规范讲明，严格执行对于项目的长远维护不无裨益。
+一旦使用 `standard` 规范表明代码的简明性及社区的约定要高于个人的编码风格。这不一定 100%适用于所有项目和多元的编程文化，但开源项目代码容易受到新手的影响。把规范讲明，严格执行对于项目的长远维护不无裨益。
 
 ## 谁在用 JavaScript Standard 规范？
 
 我们是有群众基础的！
 
-[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
-|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 
-[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
-|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) |
-|---|---|---|---|
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/heroku.png>](https://www.heroku.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/saucelabs.png>](https://saucelabs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/automattic.png>](https://automattic.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/godaddy.png>](https://www.godaddy.com) |
-|---|---|---|---|
+| ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
-|---|---|---|---|
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) | [<img width=190 alt="College essays, AP notes" src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) |
-|---|---|---|---|
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
-|---|---|---|---|
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/aragon.png>](https://aragon.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/puma-browser.png>](https://www.pumabrowser.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webstorm.png>](https://www.jetbrains.com/webstorm/) |
-|---|---|---|---|
-
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/fastify.png>](https://www.fastify.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/scuttlebutt.png>](https://www.scuttlebutt.nz) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/solid.png>](https://solid.inrupt.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/grab.png>](https://www.grab.com) |
-|---|---|---|---|
-
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
-|---|---|---|---|
-
+| ---------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | -------------- |
 
 除公司组织外，[很多个人](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)也在项目中使用，这里就不一一罗列了。
 
@@ -291,7 +288,7 @@ set autoread
 ### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
 
 WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)在其 IDE 中
- 自带 `standard` 规范。
+自带 `standard` 规范。
 
 但是如果你仍然想自己动手配置，[那么请看此教程][webstorm-1]。此教程适用于 JetBrains 全家桶，包括 PhpStorm、IntelliJ、RubyMine 等。
 
@@ -320,7 +317,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 如果你非要自己去配置成百上千项的 ESLint 规则，那你可以直接使用
 [eslint-config-standard](https://github.com/standard/eslint-config-standard) 来将个人配置包装在上层。
 
-小贴士：选择 `standard` 然后保持吧。把时间留下来解决其他有意义的问题！\(^____^)/
+小贴士：选择 `standard` 然后保持吧。把时间留下来解决其他有意义的问题！\(^\_\_\_\_^)/
 
 [bikeshedding]: https://www.freebsd.org/doc/en/books/faq/misc.html#bikeshed-painting
 
@@ -367,21 +364,24 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 JavaScript Standard 代码规范底层使用的是 [ESLint](http://eslint.org/)。所以如果你想隐藏某些警告，方法和使用 ESLint 时一样。
 
 对某一行禁用**所有规则**：
+
 ```js
-file = 'I know what I am doing' // eslint-disable-line
+file = "I know what I am doing"; // eslint-disable-line
 ```
 
 或者，**只禁**用 `"no-use-before-define"` 这条规则：
+
 ```js
-file = 'I know what I am doing' // eslint-disable-line no-use-before-define
+file = "I know what I am doing"; // eslint-disable-line no-use-before-define
 ```
 
 或者，对**多行**禁用 `"no-use-before-define"` 这一规则：
+
 ```js
 /* eslint-disable no-use-before-define */
-console.log('offending code goes here...')
-console.log('offending code goes here...')
-console.log('offending code goes here...')
+console.log("offending code goes here...");
+console.log("offending code goes here...");
+console.log("offending code goes here...");
 /* eslint-enable no-use-before-define */
 ```
 
@@ -406,12 +406,12 @@ $ standard --global myVar1 --global myVar2
 ```json
 {
   "standard": {
-    "globals": [ "myVar1", "myVar2" ]
+    "globals": ["myVar1", "myVar2"]
   }
 }
 ```
 
-*注意：`global` 和 `globals` 效果一样*
+_注意：`global` 和 `globals` 效果一样_
 
 ## 如何才能使用处于实验阶段的 JavaScript 特性（譬如 ES Next）？
 
@@ -425,7 +425,7 @@ $ standard --global myVar1 --global myVar2
 $ standard --parser @babel/eslint-parser
 ```
 
-或者将其添加到  `package.json` 配置中：
+或者将其添加到 `package.json` 配置中：
 
 ```json
 {
@@ -452,14 +452,14 @@ $ standard --plugin flowtype
 ```json
 {
   "standard": {
-    "plugins": [ "flowtype" ]
+    "plugins": ["flowtype"]
   }
 }
 ```
 
 如果全局安装（`npm install standard --global`）了 `standard` 的话，那么请确保 `eslint-plugin-flowtype` 也用 `npm install eslint-plugin-flowtype --global` 全局安装。
 
-*注意：`plugin` 和 `plugins` 等价*
+_注意：`plugin` 和 `plugins` 等价_
 
 ## 如何与 Mocha，Jasmine 和 QUnit 这些测试工具搭配工作?
 
@@ -478,9 +478,9 @@ $ standard --env mocha
 上面 `mocha` 也可以是 `jasmine`, `qunit`, `phantomjs` 等同类工具。这里有个来自 ESLint 的完整列表
 [环境配置](http://eslint.org/docs/user-guide/configuring.html#specifying-environments)
 文档。环境中所有可用的全局变量可以这个
-[globals](https://github.com/sindresorhus/globals/blob/master/globals.json)  npm 包中查到。
+[globals](https://github.com/sindresorhus/globals/blob/master/globals.json) npm 包中查到。
 
-*注意: `env` 与 `envs` 用哪个都一样。*
+_注意: `env` 与 `envs` 用哪个都一样。_
 
 ## Web Workers 有考虑过么？
 
@@ -569,7 +569,7 @@ $ standard | snazzy
 
 ### `async standard.lintText(text, [opts])`
 
-检查传入的  `text`。需要提供一个 `opts` 配置参数：
+检查传入的 `text`。需要提供一个 `opts` 配置参数：
 
 ```js
 {
@@ -591,24 +591,22 @@ $ standard | snazzy
 
 如果 `package.json` 有相应配置也会自动被读取到。
 
-包含结果的  `results` 包含如下属性：
+包含结果的 `results` 包含如下属性：
 
 ```js
 const results = {
   results: [
     {
-      filePath: '',
-      messages: [
-        { ruleId: '', message: '', line: 0, column: 0 }
-      ],
+      filePath: "",
+      messages: [{ ruleId: "", message: "", line: 0, column: 0 }],
       errorCount: 0,
       warningCount: 0,
-      output: '' // fixed source code (only present with {fix: true} option)
-    }
+      output: "", // fixed source code (only present with {fix: true} option)
+    },
   ],
   errorCount: 0,
-  warningCount: 0
-}
+  warningCount: 0,
+};
 ```
 
 ### `async standard.lintFiles(files, [opts])`

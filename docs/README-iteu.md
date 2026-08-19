@@ -14,7 +14,7 @@
 </p>
 
 <h5 align="center">
-  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://socket.dev"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/socket.png" alt="Socket – Supply Chain Dependency Security for JavaScript and npm" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wormhole.app/?utm_medium=sponsorship&utm_source=standard&utm_campaign=feross"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png" alt="Wormhole" height=50 valign="middle"></a>
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://socket.dev"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/socket.png" alt="Socket – Supply Chain Dependency Security for JavaScript and npm" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wormhole.app/?utm_medium=sponsorship&utm_source=standard&utm_campaign=feross"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/wormhole.png" alt="Wormhole" height=50 valign="middle"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://serpapi.com/"><img src="https://cdn.rawgit.com/standard/standard/master/docs/logos/serpapi.png" height=35 valign="middle"></a>
 </h5>
 
 <p align="center">
@@ -54,10 +54,10 @@ npm install standard --save-dev
 
 - **2 spazi** per indentare
 - **Singolo apostrofo per le stringhe** - eccetto per evitare l'escaping
-- **Nessuna variabile non utilizzata** - questo cattura *molti* errori!
+- **Nessuna variabile non utilizzata** - questo cattura _molti_ errori!
 - **Nessun punto e virgola** [È][1] [OK.][2] [Davvero!][3]
 - **Mai iniziare una linea di codice con `(`, `[`, or `` ` ``**
-  - Questa è l'unica scappatoia per omettere i punto e virgola *automaticamente controllato per te!*
+  - Questa è l'unica scappatoia per omettere i punto e virgola _automaticamente controllato per te!_
   - [Maggiori dettagli][4]
 - **Spazio dopo le parole chiave** `if (condition) { ... }`
 - **Spazio dopo il nome di una funzione** `function name (arg) { ... }`
@@ -66,7 +66,7 @@ npm install standard --save-dev
 - Usare sempre il prefisso per le variabili globali del browser con `window` - eccezione per `document` e `navigator`
   - Previene l'uso di nomi riservati per le variabili globali del browser, come ad esempio `open`, `length`,
     `event`, e `name`.
-- **E [ancora di più][5]** *prova `standard`, oggi!*
+- **E [ancora di più][5]** _prova `standard`, oggi!_
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: https://web.archive.org/web/20201206065632/http://inimino.org/~inimino/blog/javascript_semicolons
@@ -104,7 +104,7 @@ che usano `standard`!
   - [Riguardo Web Workers?](#riguardo-web-workers)
   - [Posso controllare codice dentro file di tipo Markdown o HTML?](#posso-controllare-codice-dentro-file-di-tipo-markdown-o-html)
   - [C'è un hook Git per `pre-commit`?](#cè-un-hook-git-per-pre-commit)
-  - [Come posso mostrare l'output del mio codice colorato e *carino*?](#come-posso-mostrare-loutput-del-mio-codice-colorato-e-carino)
+  - [Come posso mostrare l'output del mio codice colorato e _carino_?](#come-posso-mostrare-loutput-del-mio-codice-colorato-e-carino)
   - [C'è un API per Node.js?](#cè-un-api-per-nodejs)
   - [Come posso contribuire a `standard`?](#come-posso-contribuire-a-standard)
 - [Licenza](#licenza)
@@ -123,8 +123,8 @@ O, se vuoi installare `standard` localmente, da utilizzare in un singolo progett
 $ npm install standard --save-dev
 ```
 
-*Nota: per eseguire i precedenti comandi, [Node.js](http://nodejs.org) and [npm](https://npmjs.com) deve essere già installato
-sulla propria macchina.*
+_Nota: per eseguire i precedenti comandi, [Node.js](http://nodejs.org) and [npm](https://npmjs.com) deve essere già installato
+sulla propria macchina._
 
 ## Utilizzo
 
@@ -151,24 +151,25 @@ $ standard "src/util/**/*.js" "test/**/*.js"
 
 1. Aggiungerlo al tuo `package.json`
 
-  ```json
-  {
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "*"
-    },
-    "scripts": {
-      "test": "standard && node my-tests.js"
-    }
+```json
+{
+  "name": "my-cool-package",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
   }
-  ```
+}
+```
 
 2. Lo stile del tuo codice verrà controllato automaticamente quando esegui `npm test`
-  ```bash
-  $ npm test
-  Error: Use JavaScript Standard Style
-    lib/torrent.js:950:11: Expected '===' and instead saw '=='.
-  ```
+
+```bash
+$ npm test
+Error: Use JavaScript Standard Style
+  lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+```
 
 3. Mai più suggerimenti riguardo lo stile del tuo codice durante le pull request!
 
@@ -191,47 +192,44 @@ Questo modulo fa risparmiare tempo a te (e altri!) in tre modi:
 
 Un sacco di gente!
 
-[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
-|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 
-[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
-|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) |
-|---|---|---|---|
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/heroku.png>](https://www.heroku.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/saucelabs.png>](https://saucelabs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/automattic.png>](https://automattic.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/godaddy.png>](https://www.godaddy.com) |
-|---|---|---|---|
+| ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
-|---|---|---|---|
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) | [<img width=190 alt="College essays, AP notes" src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) |
-|---|---|---|---|
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
-|---|---|---|---|
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
-|---|---|---|---|
+| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/aragon.png>](https://aragon.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/puma-browser.png>](https://www.pumabrowser.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webstorm.png>](https://www.jetbrains.com/webstorm/) |
-|---|---|---|---|
-
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/fastify.png>](https://www.fastify.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/scuttlebutt.png>](https://www.scuttlebutt.nz) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/solid.png>](https://solid.inrupt.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/grab.png>](https://www.grab.com) |
-|---|---|---|---|
-
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 
 | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jublia.png>](https://jublia.com/) | Your logo here | Your logo here | Your logo here |
-|---|---|---|---|
-
+| ---------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | -------------- |
 
 Oltre alle aziende, anche molti membri della comunità usano `standard` su pacchetti che sono [troppo numerosi](https://raw.githubusercontent.com/standard/standard-packages/master/all.json) da mostrare qui.
 
@@ -332,6 +330,7 @@ Sì! Se usi `standard` nel tuo progetto, puoi includere uno di questi banner nel
 ```md
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ```
+
 ## Non sono d'accordo con la regola X, posso cambiarla?
 
 No. Il punto essenziale di `standard` è di aiutarti a salvare tempo evitando [bikeshedding][bikeshedding] (discussioni su piccole cose mentre la cosa più importante non è terminata) sullo stile del codice. Ci sono un sacco di grandi discussioni riguardo tabs vs. spazi, ecc. che non saranno mai risolte. Queste discussioni semplicemente fanno perdere tempo. Alla fine, quello che ti rimane da fare è solamente 'scegli qualcosa', è questa la filosofia di `standard` - un sensato insieme di opinioni di 'scegli qualcosa'. Con un po' di fiducia, gli utenti vedranno il valore in ciò invece di difendere il proprie opinioni personali.
@@ -348,8 +347,8 @@ Ovvio che no! Lo stile presentato qui non è affiliato con nessuno degli gruppi 
 
 La parola "standard" signica più di un "web standard" :-) Per esempio:
 
-- Questo module aiuta a tenere il codice vicino ad uno *standard di qualità*
-- Questo module assicura che nuovi contribtori seguano gli *stili standard*
+- Questo module aiuta a tenere il codice vicino ad uno _standard di qualità_
+- Questo module assicura che nuovi contribtori seguano gli _stili standard_
 
 ## Esiste un formattatore automatico?
 
@@ -366,7 +365,7 @@ e file/cartelle the iniziano con `.` come `.git/`) sono automaticamente ignorati
 
 Anche i percorsi specificati all'interno del file `.gitignore` sono automaticamente ignorati.
 
-Alle volte hai bisogno di ignorare file minificati o cartelle in più.  Per farlo, aggiungi la proprietà `standard.ignore` all'interno di `package.json`:
+Alle volte hai bisogno di ignorare file minificati o cartelle in più. Per farlo, aggiungi la proprietà `standard.ignore` all'interno di `package.json`:
 
 ```json
 "standard": {
@@ -388,22 +387,22 @@ JavaScript Standard Style usa [ESLint](http://eslint.org/) al di sotto del suo e
 Disabilita **tutte le regole** in una specifica riga:
 
 ```js
-file = 'So cosa sto facendo' // eslint-disable-line
+file = "So cosa sto facendo"; // eslint-disable-line
 ```
 
 O, disabilita **solo** la regola `"no-use-before-define"`:
 
 ```js
-file = 'So cosa sto facendo'  // eslint-disable-line no-use-before-define
+file = "So cosa sto facendo"; // eslint-disable-line no-use-before-define
 ```
 
 O, disabilita la regola `"no-use-before-define"` per **più righe**:
 
 ```js
 /* eslint-disable no-use-before-define */
-console.log('offending code goes here...')
-console.log('offending code goes here...')
-console.log('offending code goes here...')
+console.log("offending code goes here...");
+console.log("offending code goes here...");
+console.log("offending code goes here...");
 /* eslint-enable no-use-before-define */
 ```
 
@@ -411,7 +410,7 @@ console.log('offending code goes here...')
 
 Alcune librerie (es. `mocha`) mettono le loro funzionalità (es. `describe`, `it`) nell'oggetto globale. Considerato il fatto che queste funzioni definite o non sono importate usando il `require` all'interno del tuo codice, `standard` vi avviserà che stai per utilizzare una variabile che non è non stata definita. (di solito questa regola è utile per trovare errori di scrittura!). Ma vogliamo disabilitarlo per questi oggetti globali.
 
-Per permettere a `standard` (anche per quando qualcun altro leggerà il tuo codice) di far sapere che certe variabili  sono globali all'interno del tuo codice, aggiungi questo all'inizio del tuo file:
+Per permettere a `standard` (anche per quando qualcun altro leggerà il tuo codice) di far sapere che certe variabili sono globali all'interno del tuo codice, aggiungi questo all'inizio del tuo file:
 
 ```js
 /* global myVar1, myVar2 */
@@ -428,11 +427,12 @@ Oppure aggiungi questo al tuo `package.json`:
 ```json
 {
   "standard": {
-    "globals": [ "myVar1", "myVar2" ]
+    "globals": ["myVar1", "myVar2"]
   }
 }
 ```
-*Nota: `global` e `globals` sono equivalenti.*
+
+_Nota: `global` e `globals` sono equivalenti._
 
 ## Come posso usare funzionalità sperimentali di JavaScript (ES Next)?
 
@@ -474,7 +474,7 @@ Oppure aggiungi questo al tuo `package.json`:
 ```json
 {
   "standard": {
-    "plugins": [ "PLUGIN_NAME" ]
+    "plugins": ["PLUGIN_NAME"]
   }
 }
 ```
@@ -490,7 +490,7 @@ Oppure aggiungi questo al tuo `package.json`:
 ```json
 {
   "standard": {
-    "plugins": [ "flowtype" ],
+    "plugins": ["flowtype"],
     "parser": "@babel/eslint-parser"
   }
 }
@@ -499,7 +499,7 @@ Oppure aggiungi questo al tuo `package.json`:
 Se `standard` è installato globalmente (es. `npm install standard --global`), allora assicurati che anche `eslint-plugin-flowtype` sia installato globalmente, con
 `npm install eslint-plugin-flowtype --global`.
 
-*Nota: `plugin` e `plugins` sono equivalenti.*
+_Nota: `plugin` e `plugins` sono equivalenti._
 
 ## Riguardo Mocha, Jasmine, QUnit, ecc.?
 
@@ -519,7 +519,7 @@ Dove `mocha` può essere anche `jasmine`, `qunit`, `phantomjs`, e così via. Per
 [specificare degli ambienti](http://eslint.org/docs/user-guide/configuring.html#specifying-environments). Per una lista completa degli oggetti globali a disposizione degli ambienti, controlla la sezione
 [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) del modulo npm.
 
-*Nota: `env` e `envs` sono equivalenti.*
+_Nota: `env` e `envs` sono equivalenti._
 
 ## Riguardo Web Workers?
 
@@ -528,6 +528,7 @@ Aggiungi questo all'inizio del tuo file:
 ```js
 /* eslint-env serviceworker */
 ```
+
 Per permettere a `standard` (anche per quando qualcun altro leggerà il tuo codice) di far sapere
 che `self` è un oggetto globale all'interno del codice del tuo web worker.
 
@@ -583,7 +584,7 @@ if [[ $? -ne 0 ]]; then
 fi
 ```
 
-## Come posso mostrare l'output del mio codice colorato e *carino*?
+## Come posso mostrare l'output del mio codice colorato e _carino_?
 
 L'output all'interno della libreria è alquanto basilare, ma se ti piacciono le cose sfarzose, allora installa [snazzy](https://www.npmjs.com/package/snazzy):
 
@@ -636,18 +637,16 @@ L'oggetto `results` conterrà se seguenti proprietà:
 const results = {
   results: [
     {
-      filePath: '',
-      messages: [
-        { ruleId: '', message: '', line: 0, column: 0 }
-      ],
+      filePath: "",
+      messages: [{ ruleId: "", message: "", line: 0, column: 0 }],
       errorCount: 0,
       warningCount: 0,
-      output: '' // fixed source code (only present with {fix: true} option)
-    }
+      output: "", // fixed source code (only present with {fix: true} option)
+    },
   ],
   errorCount: 0,
-  warningCount: 0
-}
+  warningCount: 0,
+};
 ```
 
 ### `async standard.lintFiles(files, [opts])`
